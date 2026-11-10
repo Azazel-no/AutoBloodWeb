@@ -30,7 +30,7 @@ AutoBloodWeb levels the Dead by Daylight Bloodweb for you. You pick the items, a
 
 ![Decisive Strike timer: a red fill around the perk diamond next to the unhooked survivor](docs/screenshots/ds_timer.gif)
 
-*A red fill goes clockwise around the perk diamond while Decisive Strike can be active.*
+*A red fill goes clockwise around after unhook while Decisive Strike can be active.*
 
 ## Requirements
 
