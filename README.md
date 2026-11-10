@@ -86,7 +86,7 @@ The builds are made with PyInstaller, which some antivirus engines flag by mista
 
 ## Ban risk
 
-Read this before you use it. Behaviour Interactive's EULA forbids automation and macro software, and **using AutoBloodWeb may violate the game's rules**. The app doesn't inject code or read memory, but that doesn't make it allowed. A ban is possible, even if unlikely; there are no guarantees. The overlays and especially the crosshair may also be treated as an unfair advantage. You use it at your own risk and are responsible for the consequences.
+Read this before you use it. Behaviour Interactive's EULA forbids automation and macro software, and **using AutoBloodWeb may violate the game's rules**. The app doesn't inject code or read memory, but that doesn't make it allowed. A ban is possible, but very unlikely unless you record the gameplay with decisive strike timer or the use of autoleveling.
 
 ## Building from source
 
