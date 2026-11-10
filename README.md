@@ -22,15 +22,15 @@ AutoBloodWeb levels the Dead by Daylight Bloodweb for you. You pick the items, a
 
 ### Teammate perks overlay
 
-![Teammate perks overlay](docs/screenshots/teammate_perks.png)
+![Teammate perks overlay: each survivor's four perks shown next to their HUD portrait](docs/screenshots/teammate_perks.png)
 
 *After you press Tab, each teammate's perks appear next to their HUD portrait.*
 
 ### Decisive Strike timer
 
-![Decisive Strike timer](docs/screenshots/ds_timer.gif)
+![Decisive Strike timer: a red fill around the perk diamond next to the unhooked survivor](docs/screenshots/ds_timer.gif)
 
-*In killer matches, the timer counts down next to the survivor who has just been unhooked.*
+*A red fill goes clockwise around the perk diamond while Decisive Strike can be active.*
 
 ## Requirements
 
