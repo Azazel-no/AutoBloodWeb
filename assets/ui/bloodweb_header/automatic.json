@@ -1,0 +1,29 @@
+{
+  "title": {
+    "source": "references/bloodweb/v48_f412772c/unvalidated_raw_0.png",
+    "source_sha256": "2a73fcacbddf946520e68b8e1809a7fad3e46ec8b6f5ca623f37a4a740b32b31",
+    "box": [
+      768,
+      571,
+      173,
+      18
+    ],
+    "path": "assets/ui/bloodweb_header/auto_title.png",
+    "sha256": "276255d33d2472680b1c6a803495c2e9a9f64553498dd2c54bd6e53dfd13f528"
+  },
+  "description": {
+    "source": "references/bloodweb/v48_f412772c/unvalidated_raw_0.png",
+    "source_sha256": "2a73fcacbddf946520e68b8e1809a7fad3e46ec8b6f5ca623f37a4a740b32b31",
+    "box": [
+      766,
+      591,
+      461,
+      37
+    ],
+    "path": "assets/ui/bloodweb_header/auto_description.png",
+    "sha256": "2752ea5a3d555a4d4d9c0b0aed6759b5fb9f8a0837ee32972beb65d49b178ee0"
+  },
+  "reference_height": 1080,
+  "statement": "AUTOMATIC UNLOCK; prioritizes perks, otherwise nearest cheapest nodes; observed tooltip on The Singularity level1",
+  "input": false
+}

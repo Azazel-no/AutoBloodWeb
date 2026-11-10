@@ -1,0 +1,124 @@
+{
+  "owner": "autobloodweb_v43",
+  "pinned": false,
+  "phase": "recovering",
+  "reason": null,
+  "mode": "normal",
+  "frame": {
+    "window": {
+      "hwnd": 132224,
+      "title": "DeadByDaylight  ",
+      "client": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "monitor": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "dpi": 96,
+      "foreground": true,
+      "pid": 3348
+    },
+    "roi": {
+      "x": 228,
+      "y": 106,
+      "width": 911,
+      "height": 911
+    },
+    "image_size": [
+      911,
+      911
+    ],
+    "provider": "mss",
+    "live": true,
+    "bloodpoints": 775504,
+    "captured_at": 7566.475313,
+    "visibility": {
+      "window": {
+        "hwnd": 132224,
+        "title": "DeadByDaylight  ",
+        "client": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "monitor": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "dpi": 96,
+        "foreground": true,
+        "pid": 3348
+      },
+      "provider": "mss",
+      "captured_at": 7566.475313,
+      "roi": {
+        "x": 228,
+        "y": 106,
+        "width": 911,
+        "height": 911
+      },
+      "occlusions": [],
+      "center": [
+        684,
+        562,
+        40
+      ]
+    },
+    "level": 35,
+    "level_confidence": 0.9852941176470589,
+    "probe_only": false,
+    "pipeline": {
+      "mode": "FAST_FRAME_CHECK",
+      "generation": 2,
+      "visual_version": "v59-pinned-ui-1",
+      "capture_seconds": 0.2293982999999571,
+      "stats": {
+        "masked_full_copies": 0,
+        "roi_copies": 0,
+        "text_normalizations": 1,
+        "ui_candidate_searches": 2,
+        "ui_candidate_positions": 89,
+        "ui_exhaustive_searches": 2,
+        "center_local_searches": 1,
+        "detector_ui_reuses": 1,
+        "center_reuses": 1
+      }
+    }
+  },
+  "analysis_id": "1792509182832992800_ca753d82",
+  "files": {
+    "analysis.json": "f384c443036f79ec208e6d121252148a6c4b8456e558e63d4439511675bc4103"
+  },
+  "route": {
+    "next_node": 21,
+    "route": [
+      21
+    ],
+    "target_icon": "any_perk",
+    "reason": "smart_priority",
+    "benefit": 8.0,
+    "cost_units": 1,
+    "risk": 0.0,
+    "assumptions": [
+      "cost_in_purchases_not_bloodpoints",
+      "hypothetical_adjacency_unlock",
+      "entity_future_unknown"
+    ]
+  },
+  "screen": "bloodweb",
+  "diagnostics": [
+    "static_read_only",
+    "level_ocr_unavailable",
+    "uncertain_icons:11"
+  ],
+  "total_bytes": 136820
+}

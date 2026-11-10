@@ -1,0 +1,590 @@
+{
+  "schema": 1,
+  "characters": [
+    {
+      "killer_id": "animatronic",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Animatronic",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/animatronic",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Animatronic"
+      }
+    },
+    {
+      "killer_id": "artist",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Artist",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/artist",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Artist"
+      }
+    },
+    {
+      "killer_id": "blight",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+      "page_mapping": "known_canonical",
+      "folder": "assets/killers/characters/blight",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes"
+      }
+    },
+    {
+      "killer_id": "cannibal",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Cannibal",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/cannibal",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Cannibal"
+      }
+    },
+    {
+      "killer_id": "cenobite",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Cenobite",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/cenobite",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Cenobite"
+      }
+    },
+    {
+      "killer_id": "clown",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Clown",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/clown",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Clown"
+      }
+    },
+    {
+      "killer_id": "dark_lord",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Dark_Lord",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/dark_lord",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Dark_Lord"
+      }
+    },
+    {
+      "killer_id": "deathslinger",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Deathslinger",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/deathslinger",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Deathslinger"
+      }
+    },
+    {
+      "killer_id": "demogorgon",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Demogorgon",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/demogorgon",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Demogorgon"
+      }
+    },
+    {
+      "killer_id": "doctor",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Doctor",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/doctor",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Doctor"
+      }
+    },
+    {
+      "killer_id": "dredge",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Dredge",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/dredge",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Dredge"
+      }
+    },
+    {
+      "killer_id": "executioner",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Executioner",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/executioner",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Executioner"
+      }
+    },
+    {
+      "killer_id": "first",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_First",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/first",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_First"
+      }
+    },
+    {
+      "killer_id": "ghost_face",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Ghost_Face",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/ghost_face",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Ghost_Face"
+      }
+    },
+    {
+      "killer_id": "ghoul",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Ghoul",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/ghoul",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Ghoul"
+      }
+    },
+    {
+      "killer_id": "good_guy",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Good_Guy",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/good_guy",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Good_Guy"
+      }
+    },
+    {
+      "killer_id": "hag",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Hag",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/hag",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Hag"
+      }
+    },
+    {
+      "killer_id": "hillbilly",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Hillbilly",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/hillbilly",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Hillbilly"
+      }
+    },
+    {
+      "killer_id": "houndmaster",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Houndmaster",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/houndmaster",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Houndmaster"
+      }
+    },
+    {
+      "killer_id": "huntress",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Huntress",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/huntress",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Huntress"
+      }
+    },
+    {
+      "killer_id": "judgment",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Judgment",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/judgment",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Judgment"
+      }
+    },
+    {
+      "killer_id": "knight",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Knight",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/knight",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Knight"
+      }
+    },
+    {
+      "killer_id": "krasue",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Krasue",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/krasue",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Krasue"
+      }
+    },
+    {
+      "killer_id": "legion",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Legion",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/legion",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Legion"
+      }
+    },
+    {
+      "killer_id": "lich",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Lich",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/lich",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Lich"
+      }
+    },
+    {
+      "killer_id": "mastermind",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Mastermind",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/mastermind",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Mastermind"
+      }
+    },
+    {
+      "killer_id": "nemesis",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Nemesis",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/nemesis",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Nemesis"
+      }
+    },
+    {
+      "killer_id": "nightmare",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Nightmare",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/nightmare",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Nightmare"
+      }
+    },
+    {
+      "killer_id": "nurse",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Sally_Smithson",
+      "page_mapping": "user_provided",
+      "folder": "assets/killers/characters/nurse",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/Sally_Smithson"
+      }
+    },
+    {
+      "killer_id": "oni",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Oni",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/oni",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Oni"
+      }
+    },
+    {
+      "killer_id": "onryo",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Onryo",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/onryo",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Onryo"
+      }
+    },
+    {
+      "killer_id": "pig",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Pig",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/pig",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Pig"
+      }
+    },
+    {
+      "killer_id": "plague",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Plague",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/plague",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Plague"
+      }
+    },
+    {
+      "killer_id": "shape",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Shape",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/shape",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Shape"
+      }
+    },
+    {
+      "killer_id": "singularity",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Singularity",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/singularity",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Singularity"
+      }
+    },
+    {
+      "killer_id": "skull_merchant",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Skull_Merchant",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/skull_merchant",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Skull_Merchant"
+      }
+    },
+    {
+      "killer_id": "slasher",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Slasher",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/slasher",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Slasher"
+      }
+    },
+    {
+      "killer_id": "spirit",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Spirit",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/spirit",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Spirit"
+      }
+    },
+    {
+      "killer_id": "terrifier",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Art_The_Clown",
+      "page_mapping": "known_canonical",
+      "folder": "assets/killers/characters/terrifier",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/Art_The_Clown"
+      }
+    },
+    {
+      "killer_id": "trapper",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Trapper",
+      "page_mapping": "user_provided",
+      "folder": "assets/killers/characters/trapper",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Trapper"
+      }
+    },
+    {
+      "killer_id": "trickster",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Trickster",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/trickster",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Trickster"
+      }
+    },
+    {
+      "killer_id": "twins",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Twins",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/twins",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Twins"
+      }
+    },
+    {
+      "killer_id": "unknown",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Unknown",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/unknown",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Unknown"
+      }
+    },
+    {
+      "killer_id": "wraith",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Wraith",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/wraith",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Wraith"
+      }
+    },
+    {
+      "killer_id": "xenomorph",
+      "page": "https://deadbydaylight.wiki.gg/wiki/The_Xenomorph",
+      "page_mapping": "unverified_alias",
+      "folder": "assets/killers/characters/xenomorph",
+      "verification": {
+        "addons": 20,
+        "source": "Wiki current add-on section",
+        "files_verified": true,
+        "gameplay_verified": false,
+        "page": "https://deadbydaylight.wiki.gg/wiki/The_Xenomorph"
+      }
+    }
+  ]
+}

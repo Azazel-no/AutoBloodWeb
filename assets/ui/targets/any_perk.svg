@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <path d="M64 5 L123 64 L64 123 L5 64 Z" fill="#282238" stroke="#b39fcb" stroke-width="3"/>
+  <path d="M64 15 L113 64 L64 113 L15 64 Z" fill="none" stroke="#736085" stroke-width="2"/>
+  <text x="64" y="72" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="27" font-weight="bold" fill="#ffffff">PERKS</text>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "source": "tests/fixtures/v54/tutorial_unpredictability_holdout.png",
+  "sha256": "c72b459c00335aa7709a0a533a081f1182b0e4ff3970ef23db7fdf155010b548",
+  "metadata": {
+    "source": "debug/v54/dark_lord_check_20261016/tutorial_game_1.png",
+    "sha256": "c72b459c00335aa7709a0a533a081f1182b0e4ff3970ef23db7fdf155010b548",
+    "stamp": 91098.5204529,
+    "provider": "mss",
+    "window": {
+      "hwnd": 460486,
+      "pid": 23320,
+      "client": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "dpi": 96
+    }
+  }
+}

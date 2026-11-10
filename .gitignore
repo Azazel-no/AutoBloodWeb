@@ -1,0 +1,76 @@
+# --- Python, environments, builds ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
+dist/
+*.spec
+
+# --- Logs, diagnostics, debug output (can hold screenshots with player names) ---
+debug/
+logs/
+*.log
+*.jsonl
+
+# --- User settings and runtime journals ---
+data/preferences.json
+data/preferences*.json
+data/action_outcomes.json
+data/action_outcomes.lock
+data/review_annotations.json
+data/match_overlay_own_name.png
+
+# --- Match samples (other players' nicknames), design references, saved web pages ---
+debug/match_samples/
+references/tab_screens/
+match_samples/
+debug/design_reference/
+design_reference/
+debug/otz_tierlist/
+*Otzdarva*.html
+*Otzdarva*_files/
+*_files/
+
+# --- Local developer notes and legacy files (kept on disk, not published) ---
+AGENTS.md
+CLAUDE.md
+/docs/*.md
+README_v*.md
+VALIDATION*.md
+V*_REMAINING*.md
+/AutoBloodWeb.exe
+/AutoBloodWeb-Preview.exe
+/run-hotkey-test-admin.cmd
+/*.png
+assets/app_icon_original.ico
+
+# --- scripts/: publish only the build, runtime and test helpers ---
+/scripts/*
+!/scripts/build_release.py
+!/scripts/pyinstaller_bootstrap.py
+!/scripts/windows_entry.py
+!/scripts/autostart_watcher.pyw
+!/scripts/build_otz_tierlist.py
+!/scripts/build_randomizer_data.py
+!/scripts/live_test_v47.py
+!/scripts/live_test_v48.py
+!/scripts/live_test_v53.py
+!/scripts/live_test_v54.py
+!/scripts/native_chain_v55.py
+!/scripts/native_price_v55.py
+!/scripts/audit_live_speed_v58.py
+!/scripts/bloodweb_strategy_v50.py
+!/scripts/capture_tab_screens.py
+!/scripts/inspect_opening_failure_v49.py
+!/scripts/inspect_preview_v52.py
+!/scripts/live_optimize_v55.py
+!/scripts/replay_production_v53.py
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

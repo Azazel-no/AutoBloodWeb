@@ -1,0 +1,10 @@
+{
+  "centers": [
+    {
+      "file": "center_level11.png",
+      "sha256": "dffd43709a35841e0ec0262c709e8339fdc6221e9c65ffae9247255bf22a59e6",
+      "radius": 36,
+      "note": "native pixels, DBD UI 90 %, The Unknown level 11"
+    }
+  ]
+}

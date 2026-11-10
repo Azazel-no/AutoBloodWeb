@@ -1,0 +1,4084 @@
+{
+  "width": 911,
+  "height": 911,
+  "screen_state": "bloodweb",
+  "nodes": [
+    {
+      "id": 0,
+      "x": 456,
+      "y": 456,
+      "radius": 40,
+      "state": "center",
+      "type": "bloodweb_center",
+      "icon_id": null,
+      "candidate_id": null,
+      "confidence": 0.0,
+      "state_confidence": 0.9,
+      "candidates": [],
+      "geometry_confidence": 0.9,
+      "icon_margin": 0.0,
+      "match_reason": "structural_center",
+      "rarity": "unknown",
+      "glyph_score": 0.0,
+      "ring": 0,
+      "angle": 0.0,
+      "content_radius": 0,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.0,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "unknown",
+      "top10": [],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 1,
+      "x": 456,
+      "y": 334,
+      "radius": 40,
+      "state": "available",
+      "type": "item",
+      "icon_id": "wiki_survivor_common_items_5a8bccf3f06a",
+      "candidate_id": "wiki_survivor_common_items_5a8bccf3f06a",
+      "confidence": 0.9613,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "wiki_survivor_common_items_5a8bccf3f06a",
+          0.9613
+        ],
+        [
+          "survivor_offering_023",
+          0.6465
+        ],
+        [
+          "wiki_survivor_common_addons_a25d9b8cd807",
+          0.6415
+        ]
+      ],
+      "geometry_confidence": 0.898,
+      "icon_margin": 0.3148,
+      "match_reason": "accepted",
+      "rarity": "brown",
+      "glyph_score": 0.9613,
+      "ring": 1,
+      "angle": 0.0,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.9737,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "recognized",
+      "top10": [
+        [
+          "wiki_survivor_common_items_5a8bccf3f06a",
+          0.9613
+        ],
+        [
+          "survivor_offering_023",
+          0.6465
+        ],
+        [
+          "wiki_survivor_common_addons_a25d9b8cd807",
+          0.6415
+        ],
+        [
+          "wiki_survivor_common_offerings_f5eba2e0b5e7",
+          0.6388
+        ],
+        [
+          "wiki_survivor_common_items_2dd07caa1ba8",
+          0.6368
+        ],
+        [
+          "survivor_offering_043",
+          0.635
+        ],
+        [
+          "survivor_item_005",
+          0.6342
+        ],
+        [
+          "survivor_offering_008",
+          0.6305
+        ],
+        [
+          "wiki_survivor_common_offerings_756b808a70d6",
+          0.6278
+        ],
+        [
+          "wiki_survivor_common_offerings_ffead575e245",
+          0.6252
+        ]
+      ],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 2,
+      "x": 560,
+      "y": 394,
+      "radius": 35,
+      "state": "available",
+      "type": "offering",
+      "icon_id": "survivor_offering_059",
+      "candidate_id": "survivor_offering_059",
+      "confidence": 0.985,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "survivor_offering_059",
+          0.985
+        ],
+        [
+          "survivor_item_017",
+          0.8907
+        ],
+        [
+          "survivor_offering_003",
+          0.8718
+        ]
+      ],
+      "geometry_confidence": 0.9,
+      "icon_margin": 0.0943,
+      "match_reason": "accepted",
+      "rarity": "brown",
+      "glyph_score": 0.985,
+      "ring": 1,
+      "angle": 59.19855402386317,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.8789,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "recognized",
+      "top10": [
+        [
+          "survivor_offering_059",
+          0.985
+        ],
+        [
+          "survivor_item_017",
+          0.8907
+        ],
+        [
+          "survivor_offering_003",
+          0.8718
+        ],
+        [
+          "survivor_addon_009",
+          0.8708
+        ],
+        [
+          "survivor_item_018",
+          0.8705
+        ],
+        [
+          "survivor_item_008",
+          0.8697
+        ],
+        [
+          "survivor_item_022",
+          0.8693
+        ],
+        [
+          "survivor_offering_021",
+          0.8681
+        ],
+        [
+          "survivor_offering_046",
+          0.868
+        ],
+        [
+          "survivor_offering_044",
+          0.8644
+        ]
+      ],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 3,
+      "x": 562,
+      "y": 518,
+      "radius": 40,
+      "state": "available",
+      "type": "addon",
+      "icon_id": "wiki_survivor_common_addons_cdef3ffaf8f1",
+      "candidate_id": "wiki_survivor_common_addons_cdef3ffaf8f1",
+      "confidence": 0.9631,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "wiki_survivor_common_addons_cdef3ffaf8f1",
+          0.9631
+        ],
+        [
+          "wiki_survivor_common_items_5a8bccf3f06a",
+          0.6062
+        ],
+        [
+          "wiki_survivor_common_offerings_0238dd1362c2",
+          0.6053
+        ]
+      ],
+      "geometry_confidence": 0.885,
+      "icon_margin": 0.3569,
+      "match_reason": "accepted",
+      "rarity": "brown",
+      "glyph_score": 0.9631,
+      "ring": 1,
+      "angle": 120.32360686255,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.962,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "recognized",
+      "top10": [
+        [
+          "wiki_survivor_common_addons_cdef3ffaf8f1",
+          0.9631
+        ],
+        [
+          "wiki_survivor_common_items_5a8bccf3f06a",
+          0.6062
+        ],
+        [
+          "wiki_survivor_common_offerings_0238dd1362c2",
+          0.6053
+        ],
+        [
+          "survivor_offering_008",
+          0.588
+        ],
+        [
+          "wiki_survivor_common_addons_a7fab60eaa24",
+          0.5866
+        ],
+        [
+          "wiki_survivor_common_addons_3d8af63acd10",
+          0.5828
+        ],
+        [
+          "wiki_survivor_common_addons_eb9f7e18c4e3",
+          0.5807
+        ],
+        [
+          "wiki_survivor_common_addons_c711236ae0dc",
+          0.5769
+        ],
+        [
+          "wiki_survivor_common_items_c47238bff4c4",
+          0.5765
+        ],
+        [
+          "wiki_survivor_common_items_2fca4b1c867f",
+          0.5696
+        ]
+      ],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 4,
+      "x": 456,
+      "y": 579,
+      "radius": 35,
+      "state": "available",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "survivor_item_016",
+      "confidence": 0.8493,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "survivor_item_016",
+          0.8493
+        ],
+        [
+          "wiki_survivor_common_items_d9a27ca6d874",
+          0.7785
+        ],
+        [
+          "survivor_offering_002",
+          0.7754
+        ]
+      ],
+      "geometry_confidence": 0.888,
+      "icon_margin": 0.0708,
+      "match_reason": "contour_mismatch",
+      "rarity": "brown",
+      "glyph_score": 0.8493,
+      "ring": 1,
+      "angle": 180.0,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.664,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "unknown",
+      "top10": [
+        [
+          "survivor_item_016",
+          0.8493
+        ],
+        [
+          "wiki_survivor_common_items_d9a27ca6d874",
+          0.7785
+        ],
+        [
+          "survivor_offering_002",
+          0.7754
+        ],
+        [
+          "wiki_survivor_common_items_575b346d4055",
+          0.7547
+        ],
+        [
+          "wiki_survivor_common_addons_03876b39311a",
+          0.7539
+        ],
+        [
+          "survivor_offering_011",
+          0.7307
+        ],
+        [
+          "survivor_offering_030",
+          0.7219
+        ],
+        [
+          "survivor_addon_010",
+          0.7066
+        ],
+        [
+          "wiki_survivor_common_addons_b07824b97674",
+          0.6951
+        ],
+        [
+          "survivor_item_009",
+          0.674
+        ]
+      ],
+      "reranked": [
+        {
+          "id": "wiki_survivor_common_items_575b346d4055",
+          "glyph": 0.7547,
+          "contour": 0.5372,
+          "gradient": 0.582
+        },
+        {
+          "id": "wiki_survivor_common_items_d9a27ca6d874",
+          "glyph": 0.7785,
+          "contour": 0.7086,
+          "gradient": 0.532
+        },
+        {
+          "id": "survivor_item_009",
+          "glyph": 0.674,
+          "contour": 0.5973,
+          "gradient": 0.5025
+        },
+        {
+          "id": "survivor_offering_030",
+          "glyph": 0.7219,
+          "contour": 0.5799,
+          "gradient": 0.4882
+        },
+        {
+          "id": "survivor_addon_010",
+          "glyph": 0.7066,
+          "contour": 0.5329,
+          "gradient": 0.4796
+        },
+        {
+          "id": "wiki_survivor_common_addons_03876b39311a",
+          "glyph": 0.7539,
+          "contour": 0.62,
+          "gradient": 0.4748
+        },
+        {
+          "id": "wiki_survivor_common_addons_b07824b97674",
+          "glyph": 0.6951,
+          "contour": 0.5965,
+          "gradient": 0.4675
+        },
+        {
+          "id": "survivor_item_016",
+          "glyph": 0.8493,
+          "contour": 0.664,
+          "gradient": 0.4621
+        },
+        {
+          "id": "survivor_offering_002",
+          "glyph": 0.7754,
+          "contour": 0.5405,
+          "gradient": 0.4326
+        },
+        {
+          "id": "survivor_offering_011",
+          "glyph": 0.7307,
+          "contour": 0.5535,
+          "gradient": 0.4094
+        }
+      ],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 5,
+      "x": 351,
+      "y": 518,
+      "radius": 40,
+      "state": "available",
+      "type": "addon",
+      "icon_id": "wiki_survivor_common_addons_e937c1a62807",
+      "candidate_id": "wiki_survivor_common_addons_e937c1a62807",
+      "confidence": 0.9102,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "wiki_survivor_common_addons_e937c1a62807",
+          0.9102
+        ],
+        [
+          "survivor_offering_037",
+          0.778
+        ],
+        [
+          "survivor_offering_051",
+          0.7488
+        ]
+      ],
+      "geometry_confidence": 0.883,
+      "icon_margin": 0.1322,
+      "match_reason": "accepted",
+      "rarity": "blue",
+      "glyph_score": 0.9102,
+      "ring": 1,
+      "angle": 239.43916073262847,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.8753,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "recognized",
+      "top10": [
+        [
+          "wiki_survivor_common_addons_e937c1a62807",
+          0.9102
+        ],
+        [
+          "survivor_offering_037",
+          0.778
+        ],
+        [
+          "survivor_offering_051",
+          0.7488
+        ],
+        [
+          "survivor_item_011",
+          0.7365
+        ],
+        [
+          "survivor_offering_023",
+          0.7351
+        ],
+        [
+          "survivor_offering_010",
+          0.7252
+        ],
+        [
+          "survivor_offering_043",
+          0.725
+        ],
+        [
+          "wiki_survivor_common_offerings_281092594908",
+          0.7239
+        ],
+        [
+          "wiki_survivor_common_offerings_e5ed04c75213",
+          0.7237
+        ],
+        [
+          "survivor_item_018",
+          0.7232
+        ]
+      ],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 6,
+      "x": 351,
+      "y": 393,
+      "radius": 35,
+      "state": "available",
+      "type": "offering",
+      "icon_id": "survivor_offering_036",
+      "candidate_id": "survivor_offering_036",
+      "confidence": 0.9815,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "survivor_offering_036",
+          0.9815
+        ],
+        [
+          "survivor_offering_003",
+          0.8885
+        ],
+        [
+          "survivor_offering_046",
+          0.8835
+        ]
+      ],
+      "geometry_confidence": 0.9,
+      "icon_margin": 0.093,
+      "match_reason": "accepted",
+      "rarity": "green",
+      "glyph_score": 0.9815,
+      "ring": 1,
+      "angle": 300.9637565320735,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.9361,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "recognized",
+      "top10": [
+        [
+          "survivor_offering_036",
+          0.9815
+        ],
+        [
+          "survivor_offering_003",
+          0.8885
+        ],
+        [
+          "survivor_offering_046",
+          0.8835
+        ],
+        [
+          "survivor_item_017",
+          0.8792
+        ],
+        [
+          "survivor_item_022",
+          0.8708
+        ],
+        [
+          "wiki_survivor_common_items_96ea862b3aa2",
+          0.8703
+        ],
+        [
+          "survivor_item_006",
+          0.8664
+        ],
+        [
+          "survivor_offering_040",
+          0.8654
+        ],
+        [
+          "survivor_offering_055",
+          0.8558
+        ],
+        [
+          "survivor_offering_057",
+          0.8547
+        ]
+      ],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 7,
+      "x": 632,
+      "y": 284,
+      "radius": 40,
+      "state": "locked",
+      "type": "item",
+      "icon_id": "survivor_item_016",
+      "candidate_id": "survivor_item_016",
+      "confidence": 0.966,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "survivor_item_016",
+          0.966
+        ],
+        [
+          "survivor_addon_010",
+          0.7788
+        ],
+        [
+          "wiki_survivor_common_addons_03876b39311a",
+          0.7541
+        ]
+      ],
+      "geometry_confidence": 0.675,
+      "icon_margin": 0.1872,
+      "match_reason": "accepted",
+      "rarity": "green",
+      "glyph_score": 0.966,
+      "ring": 2,
+      "angle": 45.65854317756361,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.8995,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "recognized",
+      "top10": [
+        [
+          "survivor_item_016",
+          0.966
+        ],
+        [
+          "survivor_addon_010",
+          0.7788
+        ],
+        [
+          "wiki_survivor_common_addons_03876b39311a",
+          0.7541
+        ],
+        [
+          "survivor_offering_002",
+          0.728
+        ],
+        [
+          "survivor_offering_030",
+          0.7175
+        ],
+        [
+          "wiki_survivor_common_items_600b8d427ac4",
+          0.7159
+        ],
+        [
+          "wiki_survivor_common_offerings_667c7113e8bb",
+          0.6995
+        ],
+        [
+          "wiki_survivor_common_items_d9a27ca6d874",
+          0.6993
+        ],
+        [
+          "survivor_item_021",
+          0.695
+        ],
+        [
+          "survivor_offering_013",
+          0.6915
+        ]
+      ],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 8,
+      "x": 634,
+      "y": 628,
+      "radius": 34,
+      "state": "locked",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "wiki_survivor_common_offerings_26031ccd7bf4",
+      "confidence": 0.7786,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "wiki_survivor_common_offerings_26031ccd7bf4",
+          0.7806
+        ],
+        [
+          "wiki_survivor_common_addons_7913557cb9da",
+          0.4187
+        ],
+        [
+          "wiki_survivor_common_addons_cdef3ffaf8f1",
+          0.416
+        ]
+      ],
+      "geometry_confidence": 0.68,
+      "icon_margin": 0.3629,
+      "match_reason": "low_glyph_score",
+      "rarity": "brown",
+      "glyph_score": 0.7786,
+      "ring": 2,
+      "angle": 134.01788283677584,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.9171,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "unknown",
+      "top10": [
+        [
+          "wiki_survivor_common_offerings_26031ccd7bf4",
+          0.7806
+        ],
+        [
+          "wiki_survivor_common_addons_7913557cb9da",
+          0.4187
+        ],
+        [
+          "wiki_survivor_common_addons_cdef3ffaf8f1",
+          0.416
+        ],
+        [
+          "wiki_survivor_common_addons_8e5cbcc5a2e5",
+          0.416
+        ],
+        [
+          "survivor_offering_015",
+          0.4027
+        ],
+        [
+          "wiki_survivor_common_addons_5a835dc56d8a",
+          0.3991
+        ],
+        [
+          "wiki_survivor_common_addons_e178385bb7e2",
+          0.3947
+        ],
+        [
+          "wiki_survivor_common_items_2fca4b1c867f",
+          0.3785
+        ],
+        [
+          "survivor_offering_029",
+          0.3641
+        ],
+        [
+          "wiki_survivor_common_items_c47238bff4c4",
+          0.3638
+        ]
+      ],
+      "reranked": [
+        {
+          "id": "wiki_survivor_common_offerings_26031ccd7bf4",
+          "glyph": 0.7806,
+          "contour": 0.9171,
+          "gradient": 0.7691
+        },
+        {
+          "id": "wiki_survivor_common_items_2fca4b1c867f",
+          "glyph": 0.3785,
+          "contour": 0.5645,
+          "gradient": 0.516
+        },
+        {
+          "id": "survivor_offering_029",
+          "glyph": 0.3641,
+          "contour": 0.5315,
+          "gradient": 0.4695
+        },
+        {
+          "id": "wiki_survivor_common_addons_5a835dc56d8a",
+          "glyph": 0.3991,
+          "contour": 0.6558,
+          "gradient": 0.4612
+        },
+        {
+          "id": "wiki_survivor_common_addons_8e5cbcc5a2e5",
+          "glyph": 0.416,
+          "contour": 0.6221,
+          "gradient": 0.4555
+        },
+        {
+          "id": "wiki_survivor_common_addons_cdef3ffaf8f1",
+          "glyph": 0.416,
+          "contour": 0.5803,
+          "gradient": 0.4439
+        },
+        {
+          "id": "wiki_survivor_common_addons_7913557cb9da",
+          "glyph": 0.4187,
+          "contour": 0.6514,
+          "gradient": 0.4107
+        },
+        {
+          "id": "survivor_offering_015",
+          "glyph": 0.4027,
+          "contour": 0.3931,
+          "gradient": 0.4107
+        },
+        {
+          "id": "wiki_survivor_common_addons_e178385bb7e2",
+          "glyph": 0.3947,
+          "contour": 0.5689,
+          "gradient": 0.3723
+        },
+        {
+          "id": "wiki_survivor_common_items_c47238bff4c4",
+          "glyph": 0.3638,
+          "contour": 0.4376,
+          "gradient": 0.3555
+        }
+      ],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 9,
+      "x": 519,
+      "y": 690,
+      "radius": 34,
+      "state": "locked",
+      "type": "offering",
+      "icon_id": "survivor_offering_051",
+      "candidate_id": "survivor_offering_051",
+      "confidence": 0.975,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "survivor_offering_051",
+          0.975
+        ],
+        [
+          "survivor_offering_028",
+          0.865
+        ],
+        [
+          "survivor_offering_033",
+          0.8638
+        ]
+      ],
+      "geometry_confidence": 0.701,
+      "icon_margin": 0.11,
+      "match_reason": "accepted",
+      "rarity": "brown",
+      "glyph_score": 0.975,
+      "ring": 2,
+      "angle": 164.9315118405078,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.9343,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "recognized",
+      "top10": [
+        [
+          "survivor_offering_051",
+          0.975
+        ],
+        [
+          "survivor_offering_028",
+          0.865
+        ],
+        [
+          "survivor_offering_033",
+          0.8638
+        ],
+        [
+          "survivor_offering_007",
+          0.8378
+        ],
+        [
+          "survivor_offering_025",
+          0.8366
+        ],
+        [
+          "survivor_offering_032",
+          0.833
+        ],
+        [
+          "survivor_offering_004",
+          0.8299
+        ],
+        [
+          "survivor_item_012",
+          0.8237
+        ],
+        [
+          "wiki_survivor_common_addons_93d6dee5e243",
+          0.8135
+        ],
+        [
+          "survivor_offering_056",
+          0.8101
+        ]
+      ],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 10,
+      "x": 394,
+      "y": 689,
+      "radius": 42,
+      "state": "locked",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "wiki_survivor_common_addons_c711236ae0dc",
+      "confidence": 0.8802,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "wiki_survivor_common_addons_c711236ae0dc",
+          0.8802
+        ],
+        [
+          "survivor_addon_006",
+          0.8734
+        ],
+        [
+          "wiki_survivor_common_addons_3d8af63acd10",
+          0.8714
+        ]
+      ],
+      "geometry_confidence": 0.742,
+      "icon_margin": 0.0663,
+      "match_reason": "contour_mismatch",
+      "rarity": "brown",
+      "glyph_score": 0.8802,
+      "ring": 2,
+      "angle": 194.90080228417,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.6791,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.9993429697766097,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "unknown",
+      "top10": [
+        [
+          "wiki_survivor_common_addons_c711236ae0dc",
+          0.8802
+        ],
+        [
+          "survivor_addon_006",
+          0.8734
+        ],
+        [
+          "wiki_survivor_common_addons_3d8af63acd10",
+          0.8714
+        ],
+        [
+          "wiki_survivor_common_addons_eb9f7e18c4e3",
+          0.8647
+        ],
+        [
+          "wiki_survivor_common_addons_69cf520f0aa9",
+          0.8389
+        ],
+        [
+          "wiki_survivor_common_offerings_0238dd1362c2",
+          0.8139
+        ],
+        [
+          "survivor_offering_046",
+          0.8137
+        ],
+        [
+          "wiki_survivor_common_offerings_5e435a47f246",
+          0.8102
+        ],
+        [
+          "survivor_offering_009",
+          0.8051
+        ],
+        [
+          "wiki_survivor_common_items_c1c7a2794470",
+          0.8002
+        ]
+      ],
+      "reranked": [
+        {
+          "id": "wiki_survivor_common_addons_c711236ae0dc",
+          "glyph": 0.8802,
+          "contour": 0.6791,
+          "gradient": 0.5876
+        },
+        {
+          "id": "wiki_survivor_common_addons_3d8af63acd10",
+          "glyph": 0.8714,
+          "contour": 0.6788,
+          "gradient": 0.5595
+        },
+        {
+          "id": "survivor_addon_006",
+          "glyph": 0.8734,
+          "contour": 0.6494,
+          "gradient": 0.5495
+        },
+        {
+          "id": "wiki_survivor_common_items_c1c7a2794470",
+          "glyph": 0.8002,
+          "contour": 0.6404,
+          "gradient": 0.5096
+        },
+        {
+          "id": "wiki_survivor_common_offerings_0238dd1362c2",
+          "glyph": 0.8139,
+          "contour": 0.5175,
+          "gradient": 0.4872
+        },
+        {
+          "id": "wiki_survivor_common_addons_eb9f7e18c4e3",
+          "glyph": 0.8647,
+          "contour": 0.6071,
+          "gradient": 0.4805
+        },
+        {
+          "id": "wiki_survivor_common_offerings_5e435a47f246",
+          "glyph": 0.8102,
+          "contour": 0.6505,
+          "gradient": 0.4547
+        },
+        {
+          "id": "wiki_survivor_common_addons_69cf520f0aa9",
+          "glyph": 0.8389,
+          "contour": 0.5351,
+          "gradient": 0.4468
+        },
+        {
+          "id": "survivor_offering_046",
+          "glyph": 0.8137,
+          "contour": 0.418,
+          "gradient": 0.4382
+        },
+        {
+          "id": "survivor_offering_009",
+          "glyph": 0.8051,
+          "contour": 0.5438,
+          "gradient": 0.424
+        }
+      ],
+      "recognition_method": "rarity_tie"
+    },
+    {
+      "id": 11,
+      "x": 215,
+      "y": 518,
+      "radius": 38,
+      "state": "locked",
+      "type": "offering",
+      "icon_id": "survivor_offering_043",
+      "candidate_id": "survivor_offering_043",
+      "confidence": 0.9823,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "survivor_offering_043",
+          0.9823
+        ],
+        [
+          "survivor_addon_005",
+          0.8557
+        ],
+        [
+          "wiki_survivor_common_offerings_0238dd1362c2",
+          0.841
+        ]
+      ],
+      "geometry_confidence": 0.674,
+      "icon_margin": 0.1265,
+      "match_reason": "accepted",
+      "rarity": "green",
+      "glyph_score": 0.9823,
+      "ring": 2,
+      "angle": 255.57285571945033,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.9625,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "recognized",
+      "top10": [
+        [
+          "survivor_offering_043",
+          0.9823
+        ],
+        [
+          "survivor_addon_005",
+          0.8557
+        ],
+        [
+          "wiki_survivor_common_offerings_0238dd1362c2",
+          0.841
+        ],
+        [
+          "wiki_survivor_common_addons_69cf520f0aa9",
+          0.8281
+        ],
+        [
+          "survivor_offering_037",
+          0.8246
+        ],
+        [
+          "survivor_offering_019",
+          0.8133
+        ],
+        [
+          "survivor_offering_004",
+          0.7994
+        ],
+        [
+          "survivor_offering_040",
+          0.7913
+        ],
+        [
+          "wiki_survivor_common_addons_e937c1a62807",
+          0.7828
+        ],
+        [
+          "survivor_offering_028",
+          0.7826
+        ]
+      ],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 12,
+      "x": 394,
+      "y": 223,
+      "radius": 35,
+      "state": "available",
+      "type": "addon",
+      "icon_id": "wiki_survivor_common_addons_e937c1a62807",
+      "candidate_id": "wiki_survivor_common_addons_e937c1a62807",
+      "confidence": 0.944,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "wiki_survivor_common_addons_e937c1a62807",
+          0.944
+        ],
+        [
+          "survivor_offering_037",
+          0.8177
+        ],
+        [
+          "survivor_offering_023",
+          0.7948
+        ]
+      ],
+      "geometry_confidence": 0.85,
+      "icon_margin": 0.1263,
+      "match_reason": "accepted",
+      "rarity": "blue",
+      "glyph_score": 0.944,
+      "ring": 2,
+      "angle": 345.09919771583,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.9312,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "recognized",
+      "top10": [
+        [
+          "wiki_survivor_common_addons_e937c1a62807",
+          0.944
+        ],
+        [
+          "survivor_offering_037",
+          0.8177
+        ],
+        [
+          "survivor_offering_023",
+          0.7948
+        ],
+        [
+          "survivor_offering_051",
+          0.7707
+        ],
+        [
+          "survivor_item_011",
+          0.7627
+        ],
+        [
+          "survivor_offering_010",
+          0.7622
+        ],
+        [
+          "survivor_offering_043",
+          0.7616
+        ],
+        [
+          "wiki_survivor_common_offerings_281092594908",
+          0.7511
+        ],
+        [
+          "wiki_survivor_common_offerings_b92e81b84238",
+          0.7473
+        ],
+        [
+          "wiki_survivor_common_offerings_ffead575e245",
+          0.7454
+        ]
+      ],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 13,
+      "x": 766,
+      "y": 631,
+      "radius": 40,
+      "state": "locked",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "wiki_survivor_common_items_600b8d427ac4",
+      "confidence": 0.7553,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "wiki_survivor_common_items_600b8d427ac4",
+          0.7586
+        ],
+        [
+          "survivor_item_008",
+          0.7488
+        ],
+        [
+          "survivor_offering_035",
+          0.7481
+        ]
+      ],
+      "geometry_confidence": 0.681,
+      "icon_margin": 0.0103,
+      "match_reason": "low_glyph_score",
+      "rarity": "purple",
+      "glyph_score": 0.7553,
+      "ring": 3,
+      "angle": 119.44542872992561,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.6937,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.9971048060220035,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "unknown",
+      "top10": [
+        [
+          "wiki_survivor_common_items_600b8d427ac4",
+          0.7586
+        ],
+        [
+          "survivor_item_008",
+          0.7488
+        ],
+        [
+          "survivor_offering_035",
+          0.7481
+        ],
+        [
+          "survivor_offering_053",
+          0.7223
+        ],
+        [
+          "survivor_offering_055",
+          0.7177
+        ],
+        [
+          "wiki_survivor_common_items_5c14c5301c29",
+          0.7147
+        ],
+        [
+          "survivor_offering_050",
+          0.7146
+        ],
+        [
+          "survivor_item_006",
+          0.7112
+        ],
+        [
+          "survivor_item_002",
+          0.7028
+        ],
+        [
+          "survivor_offering_041",
+          0.7005
+        ]
+      ],
+      "reranked": [
+        {
+          "id": "wiki_survivor_common_items_5c14c5301c29",
+          "glyph": 0.7147,
+          "contour": 0.6938,
+          "gradient": 0.69
+        },
+        {
+          "id": "survivor_offering_035",
+          "glyph": 0.7481,
+          "contour": 0.8139,
+          "gradient": 0.6511
+        },
+        {
+          "id": "wiki_survivor_common_items_600b8d427ac4",
+          "glyph": 0.7586,
+          "contour": 0.6972,
+          "gradient": 0.6311
+        },
+        {
+          "id": "survivor_item_008",
+          "glyph": 0.7488,
+          "contour": 0.6369,
+          "gradient": 0.6009
+        },
+        {
+          "id": "survivor_offering_055",
+          "glyph": 0.7177,
+          "contour": 0.6488,
+          "gradient": 0.5764
+        },
+        {
+          "id": "survivor_item_006",
+          "glyph": 0.7112,
+          "contour": 0.5612,
+          "gradient": 0.5727
+        },
+        {
+          "id": "survivor_offering_053",
+          "glyph": 0.7223,
+          "contour": 0.6423,
+          "gradient": 0.5438
+        },
+        {
+          "id": "survivor_offering_050",
+          "glyph": 0.7146,
+          "contour": 0.5967,
+          "gradient": 0.5431
+        },
+        {
+          "id": "survivor_offering_041",
+          "glyph": 0.7005,
+          "contour": 0.6332,
+          "gradient": 0.5254
+        },
+        {
+          "id": "survivor_item_002",
+          "glyph": 0.7028,
+          "contour": 0.5692,
+          "gradient": 0.4907
+        }
+      ],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 14,
+      "x": 637,
+      "y": 759,
+      "radius": 47,
+      "state": "locked",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "survivor_offering_005",
+      "confidence": 0.7304,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "survivor_offering_005",
+          0.7304
+        ],
+        [
+          "wiki_survivor_common_offerings_0238dd1362c2",
+          0.7039
+        ],
+        [
+          "survivor_offering_052",
+          0.6955
+        ]
+      ],
+      "geometry_confidence": 0.675,
+      "icon_margin": 0.0265,
+      "match_reason": "low_glyph_score",
+      "rarity": "blue",
+      "glyph_score": 0.7304,
+      "ring": 3,
+      "angle": 149.1476053870017,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.7704,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.622577519379845,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "unknown",
+      "top10": [
+        [
+          "survivor_offering_005",
+          0.7304
+        ],
+        [
+          "wiki_survivor_common_offerings_0238dd1362c2",
+          0.7039
+        ],
+        [
+          "survivor_offering_052",
+          0.6955
+        ],
+        [
+          "survivor_offering_054",
+          0.6942
+        ],
+        [
+          "survivor_offering_001",
+          0.6938
+        ],
+        [
+          "survivor_offering_056",
+          0.6934
+        ],
+        [
+          "wiki_survivor_common_offerings_fd8e722b7dec",
+          0.6879
+        ],
+        [
+          "survivor_offering_022",
+          0.685
+        ],
+        [
+          "survivor_addon_005",
+          0.6846
+        ],
+        [
+          "survivor_offering_042",
+          0.6823
+        ]
+      ],
+      "reranked": [
+        {
+          "id": "wiki_survivor_common_offerings_fd8e722b7dec",
+          "glyph": 0.6879,
+          "contour": 0.7273,
+          "gradient": 0.633
+        },
+        {
+          "id": "survivor_offering_005",
+          "glyph": 0.7304,
+          "contour": 0.7704,
+          "gradient": 0.5375
+        },
+        {
+          "id": "survivor_offering_022",
+          "glyph": 0.685,
+          "contour": 0.76,
+          "gradient": 0.521
+        },
+        {
+          "id": "survivor_addon_005",
+          "glyph": 0.6846,
+          "contour": 0.6765,
+          "gradient": 0.5067
+        },
+        {
+          "id": "wiki_survivor_common_offerings_0238dd1362c2",
+          "glyph": 0.7039,
+          "contour": 0.5391,
+          "gradient": 0.4932
+        },
+        {
+          "id": "survivor_offering_052",
+          "glyph": 0.6955,
+          "contour": 0.6407,
+          "gradient": 0.4919
+        },
+        {
+          "id": "survivor_offering_054",
+          "glyph": 0.6942,
+          "contour": 0.6518,
+          "gradient": 0.479
+        },
+        {
+          "id": "survivor_offering_042",
+          "glyph": 0.6823,
+          "contour": 0.6357,
+          "gradient": 0.4707
+        },
+        {
+          "id": "survivor_offering_056",
+          "glyph": 0.6934,
+          "contour": 0.7101,
+          "gradient": 0.4657
+        },
+        {
+          "id": "survivor_offering_001",
+          "glyph": 0.6938,
+          "contour": 0.6424,
+          "gradient": 0.4623
+        }
+      ],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 15,
+      "x": 456,
+      "y": 809,
+      "radius": 41,
+      "state": "locked",
+      "type": "offering",
+      "icon_id": "survivor_offering_057",
+      "candidate_id": "survivor_offering_057",
+      "confidence": 0.9764,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "survivor_offering_057",
+          0.9764
+        ],
+        [
+          "survivor_offering_053",
+          0.8962
+        ],
+        [
+          "survivor_offering_055",
+          0.8879
+        ]
+      ],
+      "geometry_confidence": 0.676,
+      "icon_margin": 0.0802,
+      "match_reason": "accepted",
+      "rarity": "brown",
+      "glyph_score": 0.9764,
+      "ring": 3,
+      "angle": 180.0,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.9521,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.9971297359357061,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "recognized",
+      "top10": [
+        [
+          "survivor_offering_057",
+          0.9764
+        ],
+        [
+          "survivor_offering_053",
+          0.8962
+        ],
+        [
+          "survivor_offering_055",
+          0.8879
+        ],
+        [
+          "survivor_offering_050",
+          0.8746
+        ],
+        [
+          "wiki_survivor_common_items_96ea862b3aa2",
+          0.8436
+        ],
+        [
+          "wiki_survivor_common_items_6a9c9ac3a1fd",
+          0.8334
+        ],
+        [
+          "survivor_item_006",
+          0.8318
+        ],
+        [
+          "survivor_offering_003",
+          0.8289
+        ],
+        [
+          "survivor_offering_036",
+          0.8244
+        ],
+        [
+          "survivor_item_003",
+          0.8234
+        ]
+      ],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 16,
+      "x": 366,
+      "y": 774,
+      "radius": 49,
+      "state": "locked",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "wiki_survivor_common_items_6a9c9ac3a1fd",
+      "confidence": 0.8833,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "wiki_survivor_common_items_6a9c9ac3a1fd",
+          0.8836
+        ],
+        [
+          "survivor_offering_003",
+          0.883
+        ],
+        [
+          "survivor_item_003",
+          0.8774
+        ]
+      ],
+      "geometry_confidence": 0.692,
+      "icon_margin": 0.0006,
+      "match_reason": "ambiguous_candidates",
+      "rarity": "brown",
+      "glyph_score": 0.8833,
+      "ring": 3,
+      "angle": 195.80251395393552,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.6577,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.9947478991596639,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "ambiguous",
+      "top10": [
+        [
+          "wiki_survivor_common_items_6a9c9ac3a1fd",
+          0.8836
+        ],
+        [
+          "survivor_offering_003",
+          0.883
+        ],
+        [
+          "survivor_item_003",
+          0.8774
+        ],
+        [
+          "wiki_survivor_common_items_96ea862b3aa2",
+          0.8774
+        ],
+        [
+          "survivor_item_020",
+          0.8732
+        ],
+        [
+          "survivor_item_007",
+          0.87
+        ],
+        [
+          "survivor_item_014",
+          0.8669
+        ],
+        [
+          "survivor_offering_046",
+          0.8644
+        ],
+        [
+          "survivor_offering_048",
+          0.8575
+        ],
+        [
+          "wiki_survivor_common_items_15df02c84fbd",
+          0.8445
+        ]
+      ],
+      "reranked": [
+        {
+          "id": "wiki_survivor_common_items_15df02c84fbd",
+          "glyph": 0.8445,
+          "contour": 0.6464,
+          "gradient": 0.5115
+        },
+        {
+          "id": "survivor_item_003",
+          "glyph": 0.8774,
+          "contour": 0.699,
+          "gradient": 0.5019
+        },
+        {
+          "id": "wiki_survivor_common_items_6a9c9ac3a1fd",
+          "glyph": 0.8836,
+          "contour": 0.6577,
+          "gradient": 0.501
+        },
+        {
+          "id": "survivor_item_007",
+          "glyph": 0.87,
+          "contour": 0.632,
+          "gradient": 0.4982
+        },
+        {
+          "id": "wiki_survivor_common_items_96ea862b3aa2",
+          "glyph": 0.8774,
+          "contour": 0.6793,
+          "gradient": 0.4811
+        },
+        {
+          "id": "survivor_item_020",
+          "glyph": 0.8732,
+          "contour": 0.6276,
+          "gradient": 0.4787
+        },
+        {
+          "id": "survivor_item_014",
+          "glyph": 0.8669,
+          "contour": 0.6004,
+          "gradient": 0.469
+        },
+        {
+          "id": "survivor_offering_003",
+          "glyph": 0.883,
+          "contour": 0.5953,
+          "gradient": 0.4596
+        },
+        {
+          "id": "survivor_offering_048",
+          "glyph": 0.8575,
+          "contour": 0.5157,
+          "gradient": 0.4446
+        },
+        {
+          "id": "survivor_offering_046",
+          "glyph": 0.8644,
+          "contour": 0.494,
+          "gradient": 0.4197
+        }
+      ],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 17,
+      "x": 276,
+      "y": 766,
+      "radius": 38,
+      "state": "locked",
+      "type": "addon",
+      "icon_id": "survivor_addon_004",
+      "candidate_id": "survivor_addon_004",
+      "confidence": 0.9458,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "survivor_addon_004",
+          0.9458
+        ],
+        [
+          "survivor_offering_012",
+          0.505
+        ],
+        [
+          "survivor_offering_035",
+          0.4784
+        ]
+      ],
+      "geometry_confidence": 0.673,
+      "icon_margin": 0.4408,
+      "match_reason": "accepted",
+      "rarity": "green",
+      "glyph_score": 0.9458,
+      "ring": 3,
+      "angle": 210.14138555207532,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.993,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.7995967741935484,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "recognized",
+      "top10": [
+        [
+          "survivor_addon_004",
+          0.9458
+        ],
+        [
+          "survivor_offering_012",
+          0.505
+        ],
+        [
+          "survivor_offering_035",
+          0.4784
+        ],
+        [
+          "survivor_addon_002",
+          0.4721
+        ],
+        [
+          "survivor_addon_007",
+          0.4667
+        ],
+        [
+          "survivor_offering_049",
+          0.4625
+        ],
+        [
+          "wiki_survivor_common_items_2dd07caa1ba8",
+          0.4583
+        ],
+        [
+          "survivor_offering_057",
+          0.4578
+        ],
+        [
+          "survivor_offering_040",
+          0.4562
+        ],
+        [
+          "wiki_survivor_common_items_2fca4b1c867f",
+          0.4549
+        ]
+      ],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 18,
+      "x": 149,
+      "y": 632,
+      "radius": 38,
+      "state": "locked",
+      "type": "addon",
+      "icon_id": "wiki_survivor_common_addons_5a835dc56d8a",
+      "candidate_id": "wiki_survivor_common_addons_5a835dc56d8a",
+      "confidence": 0.9294,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "wiki_survivor_common_addons_5a835dc56d8a",
+          0.9294
+        ],
+        [
+          "wiki_survivor_common_addons_7913557cb9da",
+          0.7665
+        ],
+        [
+          "wiki_survivor_common_addons_e178385bb7e2",
+          0.7155
+        ]
+      ],
+      "geometry_confidence": 0.67,
+      "icon_margin": 0.1629,
+      "match_reason": "accepted",
+      "rarity": "brown",
+      "glyph_score": 0.9294,
+      "ring": 3,
+      "angle": 240.17478818504713,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.9392,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "recognized",
+      "top10": [
+        [
+          "wiki_survivor_common_addons_5a835dc56d8a",
+          0.9294
+        ],
+        [
+          "wiki_survivor_common_addons_7913557cb9da",
+          0.7665
+        ],
+        [
+          "wiki_survivor_common_addons_e178385bb7e2",
+          0.7155
+        ],
+        [
+          "survivor_addon_001",
+          0.6652
+        ],
+        [
+          "wiki_survivor_common_items_2fca4b1c867f",
+          0.6407
+        ],
+        [
+          "wiki_survivor_common_addons_7c95f200a9d5",
+          0.6367
+        ],
+        [
+          "survivor_offering_015",
+          0.6304
+        ],
+        [
+          "survivor_offering_029",
+          0.6293
+        ],
+        [
+          "wiki_survivor_common_items_15df02c84fbd",
+          0.6278
+        ],
+        [
+          "survivor_offering_005",
+          0.6051
+        ]
+      ],
+      "reranked": [],
+      "recognition_method": "glyph"
+    },
+    {
+      "id": 19,
+      "x": 276,
+      "y": 151,
+      "radius": 35,
+      "state": "available",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "survivor_offering_033",
+      "confidence": 0.7663,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "survivor_addon_010",
+          0.7947
+        ],
+        [
+          "survivor_offering_051",
+          0.7853
+        ],
+        [
+          "wiki_survivor_common_items_600b8d427ac4",
+          0.7663
+        ]
+      ],
+      "geometry_confidence": 0.871,
+      "icon_margin": 0.0406,
+      "match_reason": "contour_mismatch",
+      "rarity": "blue",
+      "glyph_score": 0.7663,
+      "ring": 3,
+      "angle": 329.45242825109295,
+      "content_radius": 36,
+      "crop_path": null,
+      "normalized_path": null,
+      "contour_score": 0.4446,
+      "category_hint": "unknown",
+      "category_confidence": 0.5,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering",
+        "perk"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false,
+      "glyph_detail_score": 0.0,
+      "glyph_detail_tie_break": false,
+      "recognition_status": "unknown",
+      "top10": [
+        [
+          "survivor_addon_010",
+          0.7947
+        ],
+        [
+          "survivor_offering_051",
+          0.7853
+        ],
+        [
+          "wiki_survivor_common_items_600b8d427ac4",
+          0.7663
+        ],
+        [
+          "survivor_offering_033",
+          0.7663
+        ],
+        [
+          "survivor_offering_056",
+          0.7659
+        ],
+        [
+          "survivor_item_018",
+          0.7612
+        ],
+        [
+          "survivor_offering_047",
+          0.748
+        ],
+        [
+          "wiki_survivor_common_items_5c14c5301c29",
+          0.7471
+        ],
+        [
+          "survivor_offering_001",
+          0.7414
+        ],
+        [
+          "wiki_survivor_common_items_8a6f37f4d2c5",
+          0.7376
+        ]
+      ],
+      "reranked": [
+        {
+          "id": "wiki_survivor_common_items_600b8d427ac4",
+          "glyph": 0.7663,
+          "contour": 0.5819,
+          "gradient": 0.5007
+        },
+        {
+          "id": "survivor_item_018",
+          "glyph": 0.7612,
+          "contour": 0.4958,
+          "gradient": 0.4955
+        },
+        {
+          "id": "survivor_offering_056",
+          "glyph": 0.7659,
+          "contour": 0.6026,
+          "gradient": 0.4578
+        },
+        {
+          "id": "survivor_offering_001",
+          "glyph": 0.7414,
+          "contour": 0.5494,
+          "gradient": 0.4497
+        },
+        {
+          "id": "survivor_offering_033",
+          "glyph": 0.7663,
+          "contour": 0.4446,
+          "gradient": 0.4421
+        },
+        {
+          "id": "wiki_survivor_common_items_5c14c5301c29",
+          "glyph": 0.7471,
+          "contour": 0.4636,
+          "gradient": 0.436
+        },
+        {
+          "id": "survivor_offering_047",
+          "glyph": 0.748,
+          "contour": 0.587,
+          "gradient": 0.4318
+        },
+        {
+          "id": "wiki_survivor_common_items_8a6f37f4d2c5",
+          "glyph": 0.7376,
+          "contour": 0.7686,
+          "gradient": 0.3839
+        },
+        {
+          "id": "survivor_offering_051",
+          "glyph": 0.7853,
+          "contour": 0.5002,
+          "gradient": 0.3804
+        },
+        {
+          "id": "survivor_addon_010",
+          "glyph": 0.7947,
+          "contour": 0.6309,
+          "gradient": 0.3478
+        }
+      ],
+      "recognition_method": "rarity_tie"
+    }
+  ],
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      10
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      11
+    ],
+    [
+      6,
+      12
+    ],
+    [
+      8,
+      13
+    ],
+    [
+      9,
+      14
+    ],
+    [
+      9,
+      15
+    ],
+    [
+      10,
+      14
+    ],
+    [
+      10,
+      15
+    ],
+    [
+      10,
+      17
+    ],
+    [
+      11,
+      18
+    ],
+    [
+      12,
+      19
+    ],
+    [
+      14,
+      15
+    ]
+  ],
+  "level": 35,
+  "confidence": 0.834,
+  "safe_to_automate": false,
+  "diagnostics": [
+    "fresh_local_evidence",
+    "static_read_only"
+  ],
+  "ok_box": null,
+  "source": "live_game",
+  "debug_image": null,
+  "analysis_id": "1792509175470263600_027e4297",
+  "details": {
+    "analysis_mode": "PERSISTENT_MAP",
+    "center": [
+      456,
+      456,
+      40
+    ],
+    "node_validation": [
+      {
+        "x": 456,
+        "y": 334,
+        "radius": 40,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": true,
+        "origin": [
+          456,
+          334
+        ],
+        "stable": false,
+        "valley": 0.53125,
+        "regular": 0.9895833333333334,
+        "dark_ring": 0.84375,
+        "opposite_dark": 0.8125,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 560,
+        "y": 394,
+        "radius": 35,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": true,
+        "origin": [
+          560,
+          394
+        ],
+        "stable": false,
+        "valley": 0.6458333333333334,
+        "regular": 1.0,
+        "dark_ring": 0.9791666666666666,
+        "opposite_dark": 0.9583333333333334,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 562,
+        "y": 518,
+        "radius": 40,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": true,
+        "origin": [
+          562,
+          518
+        ],
+        "stable": false,
+        "valley": 0.4583333333333333,
+        "regular": 1.0,
+        "dark_ring": 0.8020833333333334,
+        "opposite_dark": 0.7708333333333334,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 456,
+        "y": 579,
+        "radius": 35,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": true,
+        "origin": [
+          456,
+          579
+        ],
+        "stable": false,
+        "valley": 0.5416666666666666,
+        "regular": 0.9895833333333334,
+        "dark_ring": 0.9166666666666666,
+        "opposite_dark": 0.8333333333333334,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 351,
+        "y": 518,
+        "radius": 40,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": true,
+        "origin": [
+          351,
+          518
+        ],
+        "stable": false,
+        "valley": 0.3958333333333333,
+        "regular": 0.9895833333333334,
+        "dark_ring": 0.9166666666666666,
+        "opposite_dark": 0.8333333333333334,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 351,
+        "y": 393,
+        "radius": 35,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": false,
+        "origin": [
+          351,
+          393
+        ],
+        "stable": false,
+        "valley": 0.59375,
+        "regular": 1.0,
+        "dark_ring": 0.96875,
+        "opposite_dark": 0.9375,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 632,
+        "y": 284,
+        "radius": 40,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": true,
+        "origin": [
+          632,
+          284
+        ],
+        "stable": false,
+        "valley": 0.3333333333333333,
+        "regular": 0.53125,
+        "dark_ring": 0.3020833333333333,
+        "opposite_dark": 0.125,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 634,
+        "y": 628,
+        "radius": 34,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": false,
+        "origin": [
+          634,
+          628
+        ],
+        "stable": false,
+        "valley": 0.5208333333333334,
+        "regular": 0.96875,
+        "dark_ring": 0.5625,
+        "opposite_dark": 0.3958333333333333,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 519,
+        "y": 690,
+        "radius": 34,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": false,
+        "origin": [
+          519,
+          690
+        ],
+        "stable": false,
+        "valley": 0.5625,
+        "regular": 0.9166666666666666,
+        "dark_ring": 0.4375,
+        "opposite_dark": 0.1875,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 394,
+        "y": 689,
+        "radius": 42,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": true,
+        "origin": [
+          394,
+          689
+        ],
+        "stable": false,
+        "valley": 0.4583333333333333,
+        "regular": 0.8854166666666666,
+        "dark_ring": 0.3125,
+        "opposite_dark": 0.16666666666666666,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 215,
+        "y": 518,
+        "radius": 38,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": true,
+        "origin": [
+          215,
+          518
+        ],
+        "stable": false,
+        "valley": 0.5208333333333334,
+        "regular": 0.9375,
+        "dark_ring": 0.7083333333333334,
+        "opposite_dark": 0.6041666666666666,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 394,
+        "y": 223,
+        "radius": 35,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": false,
+        "origin": [
+          394,
+          223
+        ],
+        "stable": false,
+        "valley": 0.4583333333333333,
+        "regular": 1.0,
+        "dark_ring": 0.875,
+        "opposite_dark": 0.75,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 766,
+        "y": 631,
+        "radius": 40,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": false,
+        "origin": [
+          766,
+          631
+        ],
+        "stable": false,
+        "valley": 0.3854166666666667,
+        "regular": 0.5625,
+        "dark_ring": 0.4583333333333333,
+        "opposite_dark": 0.125,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 637,
+        "y": 759,
+        "radius": 47,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": false,
+        "origin": [
+          637,
+          759
+        ],
+        "stable": false,
+        "valley": 0.2916666666666667,
+        "regular": 0.8854166666666666,
+        "dark_ring": 0.052083333333333336,
+        "opposite_dark": 0.0,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 456,
+        "y": 809,
+        "radius": 41,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": false,
+        "origin": [
+          456,
+          809
+        ],
+        "stable": false,
+        "valley": 0.3645833333333333,
+        "regular": 0.9791666666666666,
+        "dark_ring": 0.17708333333333334,
+        "opposite_dark": 0.08333333333333333,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 366,
+        "y": 774,
+        "radius": 49,
+        "accepted": true,
+        "connected": false,
+        "tile_polygon": false,
+        "origin": [
+          366,
+          774
+        ],
+        "stable": false,
+        "valley": 0.2708333333333333,
+        "regular": 0.84375,
+        "dark_ring": 0.14583333333333334,
+        "opposite_dark": 0.020833333333333332,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 276,
+        "y": 766,
+        "radius": 38,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": false,
+        "origin": [
+          276,
+          766
+        ],
+        "stable": false,
+        "valley": 0.2604166666666667,
+        "regular": 0.8229166666666666,
+        "dark_ring": 0.16666666666666666,
+        "opposite_dark": 0.0625,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 149,
+        "y": 632,
+        "radius": 38,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": true,
+        "origin": [
+          149,
+          632
+        ],
+        "stable": false,
+        "valley": 0.34375,
+        "regular": 0.5104166666666666,
+        "dark_ring": 0.34375,
+        "opposite_dark": 0.125,
+        "reason": "game_frame_and_structure"
+      },
+      {
+        "x": 276,
+        "y": 151,
+        "radius": 35,
+        "accepted": true,
+        "connected": true,
+        "tile_polygon": true,
+        "origin": [
+          276,
+          151
+        ],
+        "stable": false,
+        "valley": 0.6666666666666666,
+        "regular": 1.0,
+        "dark_ring": 0.9375,
+        "opposite_dark": 0.875,
+        "reason": "game_frame_and_structure"
+      }
+    ],
+    "full_matcher_calls": 0,
+    "local_library_matches": 0,
+    "local_matcher_calls": 3,
+    "local_certificates": [
+      {
+        "node": 8,
+        "initial_candidates": [
+          "wiki_survivor_common_offerings_26031ccd7bf4",
+          "wiki_survivor_common_addons_7913557cb9da",
+          "wiki_survivor_common_addons_cdef3ffaf8f1",
+          "wiki_survivor_common_addons_8e5cbcc5a2e5",
+          "survivor_offering_015",
+          "wiki_survivor_common_addons_5a835dc56d8a",
+          "wiki_survivor_common_addons_e178385bb7e2",
+          "wiki_survivor_common_items_2fca4b1c867f",
+          "survivor_offering_029",
+          "wiki_survivor_common_items_c47238bff4c4"
+        ],
+        "outside_upper": 0.3909159612674605,
+        "local_best": 0.7786109447479248,
+        "global_margin_lower": 0.36293888092041016,
+        "contour": 0.9171474111120282
+      },
+      {
+        "node": 13,
+        "initial_candidates": [
+          "wiki_survivor_common_items_600b8d427ac4",
+          "survivor_item_008",
+          "survivor_offering_035",
+          "survivor_offering_053",
+          "survivor_offering_055",
+          "wiki_survivor_common_items_5c14c5301c29",
+          "survivor_offering_050",
+          "survivor_item_006",
+          "survivor_item_002",
+          "survivor_offering_041"
+        ],
+        "outside_upper": 0.731163537915603,
+        "local_best": 0.7552922368049622,
+        "global_margin_lower": 0.01031649112701416,
+        "contour": 0.6936666920972612
+      },
+      {
+        "node": 16,
+        "initial_candidates": [
+          "wiki_survivor_common_items_6a9c9ac3a1fd",
+          "survivor_offering_003",
+          "survivor_item_003",
+          "wiki_survivor_common_items_96ea862b3aa2",
+          "survivor_item_020",
+          "survivor_item_007",
+          "survivor_item_014",
+          "survivor_offering_046",
+          "survivor_offering_048",
+          "wiki_survivor_common_items_15df02c84fbd"
+        ],
+        "outside_upper": 0.8407702260757595,
+        "local_best": 0.8832836747169495,
+        "global_margin_lower": 0.0006066560745239258,
+        "contour": 0.6577095766046673,
+        "gradient_scores": {
+          "wiki_survivor_common_items_6a9c9ac3a1fd": 0.498010516166687,
+          "survivor_offering_003": 0.45690980553627014,
+          "survivor_item_003": 0.4993748664855957,
+          "wiki_survivor_common_items_96ea862b3aa2": 0.4794660806655884,
+          "survivor_item_020": 0.4754360020160675,
+          "survivor_item_007": 0.49543651938438416,
+          "survivor_item_014": 0.46632763743400574,
+          "survivor_offering_046": 0.4173203706741333,
+          "survivor_offering_048": 0.44134414196014404,
+          "wiki_survivor_common_items_15df02c84fbd": 0.5101183652877808
+        },
+        "certain_top10": [
+          "survivor_item_003",
+          "survivor_item_007",
+          "survivor_item_014",
+          "survivor_item_020",
+          "survivor_offering_003",
+          "survivor_offering_046",
+          "survivor_offering_048",
+          "wiki_survivor_common_items_15df02c84fbd",
+          "wiki_survivor_common_items_6a9c9ac3a1fd",
+          "wiki_survivor_common_items_96ea862b3aa2"
+        ]
+      }
+    ],
+    "identity_cache_hits": 16,
+    "opening_queue": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18
+    ],
+    "timings": {
+      "opening_local_check": 0.1813105999999607
+    },
+    "bloodweb_memory": {
+      "generation": 9,
+      "role": "survivor",
+      "character": null,
+      "center": [
+        456,
+        456
+      ],
+      "route_plan": {
+        "map_id": "6937f64d964ad6e858a47e94",
+        "revision": 21,
+        "replans": 21,
+        "reuses": 33,
+        "reason": "remaining_route_valid",
+        "intent": "priority",
+        "priorities": [
+          "any_perk",
+          "survivor_offering_006",
+          "survivor_item_006",
+          "survivor_addon_001",
+          "survivor_addon_006",
+          "survivor_addon_008",
+          "survivor_addon_011",
+          "survivor_addon_009",
+          "survivor_item_020",
+          "wiki_survivor_common_addons_7f9a9fb8e96d",
+          "wiki_survivor_common_addons_ce2e1fb39ced",
+          "wiki_survivor_common_addons_93d6dee5e243",
+          "survivor_item_014"
+        ],
+        "remaining": [
+          {
+            "next_node": 2,
+            "route": [
+              2
+            ],
+            "target_icon": "survivor_offering_059",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 1,
+            "route": [
+              1
+            ],
+            "target_icon": "wiki_survivor_common_items_5a8bccf3f06a",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 3,
+            "route": [
+              3
+            ],
+            "target_icon": "wiki_survivor_common_addons_cdef3ffaf8f1",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 4,
+            "route": [
+              4
+            ],
+            "target_icon": null,
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 5,
+            "route": [
+              5
+            ],
+            "target_icon": "wiki_survivor_common_addons_e937c1a62807",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 6,
+            "route": [
+              6
+            ],
+            "target_icon": "survivor_offering_036",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 7,
+            "route": [
+              7
+            ],
+            "target_icon": "survivor_item_016",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 8,
+            "route": [
+              8
+            ],
+            "target_icon": null,
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 9,
+            "route": [
+              9
+            ],
+            "target_icon": "survivor_offering_051",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 10,
+            "route": [
+              10
+            ],
+            "target_icon": null,
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 11,
+            "route": [
+              11
+            ],
+            "target_icon": "survivor_offering_043",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 12,
+            "route": [
+              12
+            ],
+            "target_icon": "wiki_survivor_common_addons_e937c1a62807",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 13,
+            "route": [
+              13
+            ],
+            "target_icon": null,
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 14,
+            "route": [
+              14
+            ],
+            "target_icon": null,
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 15,
+            "route": [
+              15
+            ],
+            "target_icon": "survivor_offering_057",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 17,
+            "route": [
+              17
+            ],
+            "target_icon": "survivor_addon_004",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 18,
+            "route": [
+              18
+            ],
+            "target_icon": "wiki_survivor_common_addons_5a835dc56d8a",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          }
+        ],
+        "expected_states": {
+          "0": "center",
+          "1": "available",
+          "2": "available",
+          "3": "available",
+          "4": "available",
+          "5": "available",
+          "6": "available",
+          "7": "locked",
+          "8": "locked",
+          "9": "locked",
+          "10": "locked",
+          "11": "locked",
+          "12": "available",
+          "13": "locked",
+          "14": "locked",
+          "15": "locked",
+          "16": "locked",
+          "17": "locked",
+          "18": "locked",
+          "19": "available"
+        },
+        "evidence_stamp": 7559.7224546,
+        "physical_points": {
+          "0": [
+            684,
+            562
+          ],
+          "1": [
+            684,
+            440
+          ],
+          "2": [
+            788,
+            500
+          ],
+          "3": [
+            790,
+            624
+          ],
+          "4": [
+            684,
+            685
+          ],
+          "5": [
+            579,
+            624
+          ],
+          "6": [
+            579,
+            499
+          ],
+          "7": [
+            860,
+            390
+          ],
+          "8": [
+            862,
+            734
+          ],
+          "9": [
+            747,
+            796
+          ],
+          "10": [
+            622,
+            795
+          ],
+          "11": [
+            443,
+            624
+          ],
+          "12": [
+            622,
+            329
+          ],
+          "13": [
+            994,
+            737
+          ],
+          "14": [
+            865,
+            865
+          ],
+          "15": [
+            684,
+            915
+          ],
+          "16": [
+            594,
+            880
+          ],
+          "17": [
+            504,
+            872
+          ],
+          "18": [
+            377,
+            738
+          ],
+          "19": [
+            504,
+            257
+          ]
+        }
+      },
+      "context": [
+        [
+          132224,
+          3348,
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          96
+        ],
+        {
+          "x": 228,
+          "y": 106,
+          "width": 911,
+          "height": 911
+        },
+        [
+          911,
+          911,
+          3
+        ],
+        35
+      ],
+      "graph": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          8,
+          13
+        ],
+        [
+          9,
+          14
+        ],
+        [
+          9,
+          15
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          15
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          11,
+          18
+        ],
+        [
+          12,
+          19
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      "identity_hits": 2,
+      "identity_misses": 42,
+      "full_reason": "invalidated",
+      "nodes": [
+        {
+          "local_id": 1,
+          "point": [
+            456,
+            334
+          ],
+          "fingerprint": "601923c3a3acfc425c48290d6646c1810579b340d2046f69dedf4e2246c8df16",
+          "observations": 3,
+          "relative": [
+            0,
+            -122
+          ],
+          "physical": [
+            684,
+            440
+          ],
+          "neighbors": [
+            0,
+            2,
+            6
+          ],
+          "last_confirmed_at": 7560.5184831,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 2,
+          "point": [
+            560,
+            394
+          ],
+          "fingerprint": "1fe356bdb4bc6a8a85b5475ade87f3ae3130f9a3caf696f5dcf9c0656dc401b9",
+          "observations": 9,
+          "relative": [
+            104,
+            -62
+          ],
+          "physical": [
+            788,
+            500
+          ],
+          "neighbors": [
+            0,
+            1,
+            3,
+            7
+          ],
+          "last_confirmed_at": 7560.5184831,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 3,
+          "point": [
+            562,
+            518
+          ],
+          "fingerprint": "868c9a3a854b37cd2affb9cecccf606c2de3877c072d39da8f9037e2ec01ebb6",
+          "observations": 5,
+          "relative": [
+            106,
+            62
+          ],
+          "physical": [
+            790,
+            624
+          ],
+          "neighbors": [
+            0,
+            2,
+            4,
+            8,
+            9
+          ],
+          "last_confirmed_at": 7560.5184831,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 4,
+          "point": [
+            456,
+            579
+          ],
+          "fingerprint": "64af3ec96a2d1eafb10d44c4be5007b6f4e42eccc6e8dd0416e1edc4ffed1e5b",
+          "observations": 5,
+          "relative": [
+            0,
+            123
+          ],
+          "physical": [
+            684,
+            685
+          ],
+          "neighbors": [
+            0,
+            3,
+            5,
+            10
+          ],
+          "last_confirmed_at": null,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 5,
+          "point": [
+            351,
+            518
+          ],
+          "fingerprint": "bb99ef0ae2bc9970dd606d2c64090ce1abb168de0b069c1d4181d30315553b36",
+          "observations": 5,
+          "relative": [
+            -105,
+            62
+          ],
+          "physical": [
+            579,
+            624
+          ],
+          "neighbors": [
+            0,
+            4,
+            6
+          ],
+          "last_confirmed_at": 7560.5184831,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 6,
+          "point": [
+            351,
+            393
+          ],
+          "fingerprint": "2c530dfcee9b2821a48ab031385b30c596197cc44c6c916ebe6d6d6886676ecd",
+          "observations": 9,
+          "relative": [
+            -105,
+            -63
+          ],
+          "physical": [
+            579,
+            499
+          ],
+          "neighbors": [
+            0,
+            1,
+            5,
+            11,
+            12
+          ],
+          "last_confirmed_at": 7560.5184831,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 7,
+          "point": [
+            632,
+            284
+          ],
+          "fingerprint": "7376e293bb2fa55250f613500a48409693767321fe5427c8d995e57e9e721405",
+          "observations": 5,
+          "relative": [
+            176,
+            -172
+          ],
+          "physical": [
+            860,
+            390
+          ],
+          "neighbors": [
+            2
+          ],
+          "last_confirmed_at": 7560.5184831,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 8,
+          "point": [
+            634,
+            628
+          ],
+          "fingerprint": "50aa430213a3a368253189bba0ba39f04c78d40ca61c5ae80093c192507a035d",
+          "observations": 2,
+          "relative": [
+            178,
+            172
+          ],
+          "physical": [
+            862,
+            734
+          ],
+          "neighbors": [
+            3,
+            13
+          ],
+          "last_confirmed_at": null,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 9,
+          "point": [
+            519,
+            690
+          ],
+          "fingerprint": "6db4aa6127f4cc2036449e402a23c9d765efe4b98aa2f48a03a9dea48c043a06",
+          "observations": 5,
+          "relative": [
+            63,
+            234
+          ],
+          "physical": [
+            747,
+            796
+          ],
+          "neighbors": [
+            3,
+            14,
+            15
+          ],
+          "last_confirmed_at": 7560.5184831,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 10,
+          "point": [
+            394,
+            689
+          ],
+          "fingerprint": "68fa429593e02e2308d260340c1a79811eb75008fdbb7759687a6791af512029",
+          "observations": 5,
+          "relative": [
+            -62,
+            233
+          ],
+          "physical": [
+            622,
+            795
+          ],
+          "neighbors": [
+            4,
+            14,
+            15,
+            17
+          ],
+          "last_confirmed_at": null,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 11,
+          "point": [
+            215,
+            518
+          ],
+          "fingerprint": "ce561a5815330ee75676e4d67f695828d2e7de012c71fee202300fde23fcbb29",
+          "observations": 5,
+          "relative": [
+            -241,
+            62
+          ],
+          "physical": [
+            443,
+            624
+          ],
+          "neighbors": [
+            6,
+            18
+          ],
+          "last_confirmed_at": 7560.5184831,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 12,
+          "point": [
+            394,
+            223
+          ],
+          "fingerprint": "8dfb9ad65e05288ad5c3429ebfb87bb77152e0e24748fc65d9274c096a569731",
+          "observations": 6,
+          "relative": [
+            -62,
+            -233
+          ],
+          "physical": [
+            622,
+            329
+          ],
+          "neighbors": [
+            6,
+            19
+          ],
+          "last_confirmed_at": 7560.5184831,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 13,
+          "point": [
+            766,
+            631
+          ],
+          "fingerprint": "46a19fc51dbdc0c4b1fc919d7f067b73aad07c9ec6e76892ea95e3371881cbee",
+          "observations": 1,
+          "relative": [
+            310,
+            175
+          ],
+          "physical": [
+            994,
+            737
+          ],
+          "neighbors": [
+            8
+          ],
+          "last_confirmed_at": null,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 14,
+          "point": [
+            637,
+            759
+          ],
+          "fingerprint": "1b477281046414aa813dddeb6cdefb4f837caffab7a37fd0bb733484e5c0f9db",
+          "observations": 5,
+          "relative": [
+            181,
+            303
+          ],
+          "physical": [
+            865,
+            865
+          ],
+          "neighbors": [
+            9,
+            10,
+            15
+          ],
+          "last_confirmed_at": null,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 15,
+          "point": [
+            456,
+            809
+          ],
+          "fingerprint": "88483b1bfbaa3a867c5e9788f5f204777d1e0462682fa5a3838293e58c5e193f",
+          "observations": 3,
+          "relative": [
+            0,
+            353
+          ],
+          "physical": [
+            684,
+            915
+          ],
+          "neighbors": [
+            9,
+            10,
+            14
+          ],
+          "last_confirmed_at": 7560.5184831,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 16,
+          "point": [
+            366,
+            774
+          ],
+          "fingerprint": "bc0929174c89e2e37b6c3037f04352dbde7ac76bcb8a13fc25a7d2910737d783",
+          "observations": 1,
+          "relative": [
+            -90,
+            318
+          ],
+          "physical": [
+            594,
+            880
+          ],
+          "neighbors": [],
+          "last_confirmed_at": null,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 17,
+          "point": [
+            276,
+            766
+          ],
+          "fingerprint": "6c07308c5d4072652b95b5f2a23d0c3d3efc59e1ee1525f8aae7eee98afa734f",
+          "observations": 5,
+          "relative": [
+            -180,
+            310
+          ],
+          "physical": [
+            504,
+            872
+          ],
+          "neighbors": [
+            10
+          ],
+          "last_confirmed_at": 7560.5184831,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 18,
+          "point": [
+            149,
+            632
+          ],
+          "fingerprint": "1009aa824b72eba6617cc06e1b8e02c1b72f1a0501de602d7b21b598f194fc78",
+          "observations": 5,
+          "relative": [
+            -307,
+            176
+          ],
+          "physical": [
+            377,
+            738
+          ],
+          "neighbors": [
+            11
+          ],
+          "last_confirmed_at": 7560.5184831,
+          "capture_stamp": 7560.1559332
+        },
+        {
+          "local_id": 19,
+          "point": [
+            276,
+            151
+          ],
+          "fingerprint": "cd00769c2e9b167253934f31cfa316a0d6a9a62956a09d82d08f91b8c9f11eb9",
+          "observations": 5,
+          "relative": [
+            -180,
+            -305
+          ],
+          "physical": [
+            504,
+            257
+          ],
+          "neighbors": [
+            12
+          ],
+          "last_confirmed_at": null,
+          "capture_stamp": 7560.1559332
+        }
+      ]
+    },
+    "opening_counters": {
+      "full_scans": 21,
+      "quick_checks": 39,
+      "identity_reuses": 538,
+      "local_verifications": 100,
+      "aborts": {
+        "absorbed_state_contradiction": 4,
+        "connection_changed": 5,
+        "node_frame_changed": 1,
+        "window_roi_level_or_role_changed": 2
+      },
+      "active": true,
+      "persistent_route": {
+        "map_id": "6937f64d964ad6e858a47e94",
+        "revision": 21,
+        "replans": 21,
+        "reuses": 34,
+        "reason": "remaining_route_valid",
+        "intent": "priority",
+        "priorities": [
+          "any_perk",
+          "survivor_offering_006",
+          "survivor_item_006",
+          "survivor_addon_001",
+          "survivor_addon_006",
+          "survivor_addon_008",
+          "survivor_addon_011",
+          "survivor_addon_009",
+          "survivor_item_020",
+          "wiki_survivor_common_addons_7f9a9fb8e96d",
+          "wiki_survivor_common_addons_ce2e1fb39ced",
+          "wiki_survivor_common_addons_93d6dee5e243",
+          "survivor_item_014"
+        ],
+        "remaining": [
+          {
+            "next_node": 2,
+            "route": [
+              2
+            ],
+            "target_icon": "survivor_offering_059",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 1,
+            "route": [
+              1
+            ],
+            "target_icon": "wiki_survivor_common_items_5a8bccf3f06a",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 3,
+            "route": [
+              3
+            ],
+            "target_icon": "wiki_survivor_common_addons_cdef3ffaf8f1",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 4,
+            "route": [
+              4
+            ],
+            "target_icon": null,
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 5,
+            "route": [
+              5
+            ],
+            "target_icon": "wiki_survivor_common_addons_e937c1a62807",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 6,
+            "route": [
+              6
+            ],
+            "target_icon": "survivor_offering_036",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 7,
+            "route": [
+              7
+            ],
+            "target_icon": "survivor_item_016",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 8,
+            "route": [
+              8
+            ],
+            "target_icon": null,
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 9,
+            "route": [
+              9
+            ],
+            "target_icon": "survivor_offering_051",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 10,
+            "route": [
+              10
+            ],
+            "target_icon": null,
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 11,
+            "route": [
+              11
+            ],
+            "target_icon": "survivor_offering_043",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 12,
+            "route": [
+              12
+            ],
+            "target_icon": "wiki_survivor_common_addons_e937c1a62807",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 13,
+            "route": [
+              13
+            ],
+            "target_icon": null,
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 14,
+            "route": [
+              14
+            ],
+            "target_icon": null,
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 15,
+            "route": [
+              15
+            ],
+            "target_icon": "survivor_offering_057",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 17,
+            "route": [
+              17
+            ],
+            "target_icon": "survivor_addon_004",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          },
+          {
+            "next_node": 18,
+            "route": [
+              18
+            ],
+            "target_icon": "wiki_survivor_common_addons_5a835dc56d8a",
+            "reason": "filler",
+            "benefit": 0.0,
+            "cost_units": 0,
+            "risk": 0.0,
+            "assumptions": []
+          }
+        ],
+        "expected_states": {
+          "0": "center",
+          "1": "available",
+          "2": "available",
+          "3": "available",
+          "4": "available",
+          "5": "available",
+          "6": "available",
+          "7": "locked",
+          "8": "locked",
+          "9": "locked",
+          "10": "locked",
+          "11": "locked",
+          "12": "available",
+          "13": "locked",
+          "14": "locked",
+          "15": "locked",
+          "16": "locked",
+          "17": "locked",
+          "18": "locked",
+          "19": "available"
+        },
+        "evidence_stamp": null,
+        "physical_points": {}
+      },
+      "local_library_matches": 20
+    },
+    "scan_kind": "FAST_VERIFY",
+    "route_update": "ROUTE_REUSE"
+  },
+  "level_confidence": 0.9852941176470589
+}

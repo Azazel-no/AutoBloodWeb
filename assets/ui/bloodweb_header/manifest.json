@@ -1,0 +1,137 @@
+{
+  "reference_height": 1080,
+  "label": {
+    "source": "references/bloodweb/v48_4585d2d0/raw_0.png",
+    "source_sha256": "64c04dbccf9068ca51af5519b01219baa41df6aa3fe5a931fa3806c2a6eeff82",
+    "box": [
+      380,
+      76,
+      164,
+      18
+    ],
+    "path": "assets/ui/bloodweb_header/label.png",
+    "sha256": "eeff920db6a1016fd83660661f53538f20e4656aa23726ca5561a0c89cf6144e"
+  },
+  "digits": {
+    "1": {
+      "source": "references/bloodweb/v48_4585d2d0/raw_0.png",
+      "source_sha256": "64c04dbccf9068ca51af5519b01219baa41df6aa3fe5a931fa3806c2a6eeff82",
+      "box": [
+        551,
+        75,
+        10,
+        18
+      ],
+      "path": "assets/ui/bloodweb_header/digit_1.png",
+      "sha256": "1cc1f6e45d81c2a3eaa9a297b383554fc303f2c6442fc4323940f2ed399f93b9"
+    },
+    "3": {
+      "source": "tests/fixtures/v46/captures/artist_17f243fa1218.png",
+      "source_sha256": "0a1d4f7aaa821ecc801e93dbbf739b0701463b13d0a154050865076e37424e54",
+      "box": [
+        550,
+        75,
+        13,
+        18
+      ],
+      "path": "assets/ui/bloodweb_header/digit_3.png",
+      "sha256": "ace563e154f677cfcad7cec3998b1825d1404dc8301877f179639c0c0d8e1898"
+    },
+    "2": {
+      "source": "tests/fixtures/v46/captures/artist_17f243fa1218.png",
+      "source_sha256": "0a1d4f7aaa821ecc801e93dbbf739b0701463b13d0a154050865076e37424e54",
+      "box": [
+        561,
+        75,
+        14,
+        18
+      ],
+      "path": "assets/ui/bloodweb_header/digit_2.png",
+      "sha256": "dec8a248b8d7cea4eace7581075c9d77d14a407f38d935e943ddc19ef22053f6"
+    },
+    "4": {
+      "source": "tests/fixtures/v46/captures/clown_796d9e56007d.png",
+      "source_sha256": "25b73438bcba6823f06d047c7a6547b4b812412b4a38e9e57119b21f13a38f05",
+      "box": [
+        561,
+        75,
+        14,
+        18
+      ],
+      "path": "assets/ui/bloodweb_header/digit_4.png",
+      "sha256": "f2b57522244b4602a3dc497d1d95235a4e56a49bd6567ac9ba03a2636ff725c6"
+    },
+    "9": {
+      "source": "tests/fixtures/v46/captures/slasher_aeeb9ef59969.png",
+      "source_sha256": "66d4bac8c4148415a4ccd0afab186d943b29d0d0b984983744b101ccaf30eaf2",
+      "box": [
+        561,
+        75,
+        13,
+        18
+      ],
+      "path": "assets/ui/bloodweb_header/digit_9.png",
+      "sha256": "5d21b1d36930e9bee66c9de3eae283657d98a4d937cd24ce36348c9c5106061f"
+    },
+    "5": {
+      "source": "tests/fixtures/v46/captures/spirit_95203fc51064.png",
+      "source_sha256": "a502e68ad2e81f68dcd120d47dc4c0c6c018002884d59e2282deb9df780f9fbf",
+      "box": [
+        561,
+        75,
+        13,
+        18
+      ],
+      "path": "assets/ui/bloodweb_header/digit_5.png",
+      "sha256": "eba15c07cb61b7ef1e80da775a1dabad1f06e5363d1db2810fffbfd3d73276f6"
+    },
+    "6": {
+      "source": "tests/fixtures/v46/captures/wraith_3cbbffd0456a.png",
+      "source_sha256": "cc7fcb57adf195bda9666a4a1b3211567ecb2391d30d8576776930d46f411fbc",
+      "box": [
+        561,
+        75,
+        14,
+        18
+      ],
+      "path": "assets/ui/bloodweb_header/digit_6.png",
+      "sha256": "d85b857a0223def0c25a3e3fe574186a31ffff0af25e4d0fea9862f5cf0a3d3b"
+    },
+    "7": {
+      "source": "tests/fixtures/v47/restart_cheryl37.png",
+      "source_sha256": "5179adb21e4e836bec56926075df15287f7b76c4c69058e836f561125222b18c",
+      "box": [
+        561,
+        75,
+        13,
+        18
+      ],
+      "path": "assets/ui/bloodweb_header/digit_7.png",
+      "sha256": "887f217422659e4dbc636025a0c0fcc689117d0908b7c1742f432ddf154d4f70"
+    },
+    "8": {
+      "source": "tests/fixtures/v45/level48_development.png",
+      "source_sha256": "aaa433f128f103cbf58a887465a6244837eaa09dc634f4fd0ea9751c80dae20f",
+      "box": [
+        561,
+        75,
+        13,
+        18
+      ],
+      "path": "assets/ui/bloodweb_header/digit_8.png",
+      "sha256": "06a6fcfdded5830e815da8c00c5d9daa0ddeaf9f02b4344a2d497e67f84b4ea5"
+    },
+    "0": {
+      "source": "references/bloodweb/bloodweb_level50_start.png",
+      "source_sha256": "d93cd68e022a6ffcb8cd5fb47aff883a264108abddddc5567e3fc2bb42d63720",
+      "box": [
+        336,
+        55,
+        13,
+        18
+      ],
+      "path": "assets/ui/bloodweb_header/digit_0.png",
+      "sha256": "652df526b33e2f9d84593ce8c990964a491a71121ed7d067415c7eaf8c868872"
+    }
+  }
+}

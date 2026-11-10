@@ -1,0 +1,5456 @@
+{
+  "schema": 1,
+  "version": "v4_user_native",
+  "entries": [
+    {
+      "old_id": "killer_blight_addon_001",
+      "active_id": "killer_blight_addon_001",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        14,
+        9,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_001.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          14,
+          9,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_002",
+      "active_id": "killer_blight_addon_002",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        141,
+        9,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_002.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          141,
+          9,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_003",
+      "active_id": "killer_blight_addon_003",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        268,
+        9,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_003.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          268,
+          9,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_004",
+      "active_id": "killer_blight_addon_004",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        396,
+        9,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_004.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          396,
+          9,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_005",
+      "active_id": "killer_blight_addon_005",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        524,
+        9,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_005.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          524,
+          9,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_006",
+      "active_id": "killer_blight_addon_006",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        14,
+        121,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_006.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          14,
+          121,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_007",
+      "active_id": "killer_blight_addon_007",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        141,
+        121,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_007.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          141,
+          121,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_008",
+      "active_id": "killer_blight_addon_008",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        268,
+        121,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_008.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          268,
+          121,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_009",
+      "active_id": "killer_blight_addon_009",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        396,
+        121,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_009.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          396,
+          121,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_010",
+      "active_id": "killer_blight_addon_010",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        524,
+        121,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_010.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          524,
+          121,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_011",
+      "active_id": "killer_blight_addon_011",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        14,
+        233,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_011.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          14,
+          233,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_012",
+      "active_id": "killer_blight_addon_012",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        141,
+        233,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_012.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          141,
+          233,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_013",
+      "active_id": "killer_blight_addon_013",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        268,
+        233,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_013.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          268,
+          233,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_014",
+      "active_id": "killer_blight_addon_014",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        396,
+        233,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_014.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          396,
+          233,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_015",
+      "active_id": "killer_blight_addon_015",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        524,
+        233,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_015.png",
+      "native_reference": {
+        "source": "references/inventory/killer_blight_addons_01.png",
+        "box": [
+          524,
+          233,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_016",
+      "active_id": "killer_blight_addon_016",
+      "source": "references/inventory/- killer_blight_addons_02.png",
+      "box": [
+        20,
+        9,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_016.png",
+      "native_reference": {
+        "source": "references/inventory/- killer_blight_addons_02.png",
+        "box": [
+          20,
+          9,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_017",
+      "active_id": "killer_blight_addon_017",
+      "source": "references/inventory/- killer_blight_addons_02.png",
+      "box": [
+        148,
+        9,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_017.png",
+      "native_reference": {
+        "source": "references/inventory/- killer_blight_addons_02.png",
+        "box": [
+          148,
+          9,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_018",
+      "active_id": "killer_blight_addon_018",
+      "source": "references/inventory/- killer_blight_addons_02.png",
+      "box": [
+        276,
+        9,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_018.png",
+      "native_reference": {
+        "source": "references/inventory/- killer_blight_addons_02.png",
+        "box": [
+          276,
+          9,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_019",
+      "active_id": "killer_blight_addon_019",
+      "source": "references/inventory/- killer_blight_addons_02.png",
+      "box": [
+        403,
+        9,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_019.png",
+      "native_reference": {
+        "source": "references/inventory/- killer_blight_addons_02.png",
+        "box": [
+          403,
+          9,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_blight_addon_020",
+      "active_id": "killer_blight_addon_020",
+      "source": "references/inventory/- killer_blight_addons_02.png",
+      "box": [
+        530,
+        9,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/killers/characters/blight/addons/killer_blight_addon_020.png",
+      "native_reference": {
+        "source": "references/inventory/- killer_blight_addons_02.png",
+        "box": [
+          530,
+          9,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_001",
+      "active_id": "killer_offering_001",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        19,
+        8,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_001.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          19,
+          8,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_002",
+      "active_id": "killer_offering_002",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        148,
+        8,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_002.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          148,
+          8,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_003",
+      "active_id": "killer_offering_003",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        277,
+        8,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_003.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          277,
+          8,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_004",
+      "active_id": "killer_offering_004",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        406,
+        8,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_004.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          406,
+          8,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_005",
+      "active_id": "killer_offering_005",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        535,
+        8,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_005.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          535,
+          8,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_006",
+      "active_id": "killer_offering_006",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        84,
+        117,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_006.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          84,
+          117,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_007",
+      "active_id": "killer_offering_007",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        212,
+        117,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_007.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          212,
+          117,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_008",
+      "active_id": "killer_offering_008",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        342,
+        117,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_008.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          342,
+          117,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_009",
+      "active_id": "killer_offering_009",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        470,
+        117,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_009.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          470,
+          117,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_010",
+      "active_id": "killer_offering_010",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        600,
+        117,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_010.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          600,
+          117,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_011",
+      "active_id": "killer_offering_011",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        19,
+        226,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_011.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          19,
+          226,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_012",
+      "active_id": "killer_offering_012",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        148,
+        226,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_012.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          148,
+          226,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_013",
+      "active_id": "killer_offering_013",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        277,
+        226,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_013.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          277,
+          226,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_014",
+      "active_id": "killer_offering_014",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        406,
+        226,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_014.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          406,
+          226,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_015",
+      "active_id": "killer_offering_015",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        535,
+        226,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_015.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_01.png",
+        "box": [
+          535,
+          226,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_016",
+      "active_id": "killer_offering_016",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        37,
+        14,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_016.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          37,
+          14,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_017",
+      "active_id": "killer_offering_017",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        166,
+        14,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_017.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          166,
+          14,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_018",
+      "active_id": "killer_offering_018",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        295,
+        14,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_018.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          295,
+          14,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_019",
+      "active_id": "killer_offering_019",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        424,
+        14,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_019.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          424,
+          14,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_020",
+      "active_id": "killer_offering_020",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        553,
+        14,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_020.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          553,
+          14,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_021",
+      "active_id": "killer_offering_021",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        102,
+        123,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_021.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          102,
+          123,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_022",
+      "active_id": "killer_offering_022",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        230,
+        123,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_022.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          230,
+          123,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_023",
+      "active_id": "killer_offering_023",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        360,
+        123,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_023.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          360,
+          123,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_024",
+      "active_id": "killer_offering_024",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        488,
+        123,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_024.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          488,
+          123,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_025",
+      "active_id": "killer_offering_025",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        618,
+        123,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_025.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          618,
+          123,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_026",
+      "active_id": "killer_offering_026",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        37,
+        232,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_026.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          37,
+          232,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_027",
+      "active_id": "killer_offering_027",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        166,
+        232,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_027.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          166,
+          232,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_028",
+      "active_id": "killer_offering_028",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        295,
+        232,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_028.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          295,
+          232,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_029",
+      "active_id": "killer_offering_029",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        424,
+        232,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_029.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          424,
+          232,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_030",
+      "active_id": "killer_offering_030",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        553,
+        232,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_030.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_02.png",
+        "box": [
+          553,
+          232,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_031",
+      "active_id": "killer_offering_031",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        23,
+        9,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_031.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          23,
+          9,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_032",
+      "active_id": "killer_offering_032",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        152,
+        9,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_032.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          152,
+          9,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_033",
+      "active_id": "killer_offering_033",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        281,
+        9,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_033.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          281,
+          9,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_034",
+      "active_id": "killer_offering_034",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        410,
+        9,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_034.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          410,
+          9,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_035",
+      "active_id": "killer_offering_035",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        539,
+        9,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_035.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          539,
+          9,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_036",
+      "active_id": "killer_offering_036",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        88,
+        118,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_036.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          88,
+          118,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_037",
+      "active_id": "killer_offering_037",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        216,
+        118,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_037.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          216,
+          118,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_038",
+      "active_id": "killer_offering_038",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        346,
+        118,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_038.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          346,
+          118,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_039",
+      "active_id": "killer_offering_039",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        474,
+        118,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_039.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          474,
+          118,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_040",
+      "active_id": "killer_offering_040",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        604,
+        118,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_040.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          604,
+          118,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_041",
+      "active_id": "killer_offering_041",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        23,
+        227,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_041.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          23,
+          227,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_042",
+      "active_id": "killer_offering_042",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        152,
+        227,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_042.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          152,
+          227,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_043",
+      "active_id": "killer_offering_043",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        281,
+        227,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_043.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          281,
+          227,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_044",
+      "active_id": "killer_offering_044",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        410,
+        227,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_044.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          410,
+          227,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_045",
+      "active_id": "killer_offering_045",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        539,
+        227,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_045.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_03.png",
+        "box": [
+          539,
+          227,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_046",
+      "active_id": "killer_offering_046",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        29,
+        11,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_046.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_04.png",
+        "box": [
+          29,
+          11,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_047",
+      "active_id": "killer_offering_047",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        158,
+        11,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_047.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_04.png",
+        "box": [
+          158,
+          11,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_048",
+      "active_id": "killer_offering_048",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        287,
+        11,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_048.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_04.png",
+        "box": [
+          287,
+          11,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_049",
+      "active_id": "killer_offering_049",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        416,
+        11,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_049.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_04.png",
+        "box": [
+          416,
+          11,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_050",
+      "active_id": "killer_offering_050",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        545,
+        11,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_050.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_04.png",
+        "box": [
+          545,
+          11,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_051",
+      "active_id": "killer_offering_051",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        94,
+        120,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_051.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_04.png",
+        "box": [
+          94,
+          120,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_052",
+      "active_id": "killer_offering_052",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        222,
+        120,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_052.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_04.png",
+        "box": [
+          222,
+          120,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "killer_offering_053",
+      "active_id": "killer_offering_053",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        352,
+        120,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/killers/offerings/killer_offering_053.png",
+      "native_reference": {
+        "source": "references/inventory/killer_offerings_04.png",
+        "box": [
+          352,
+          120,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_addon_001",
+      "active_id": "survivor_addon_001",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        19,
+        8,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/addons/survivor_addon_001.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_addons_01.png",
+        "box": [
+          19,
+          8,
+          99,
+          99
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_addon_002",
+      "active_id": "survivor_addon_002",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        146,
+        8,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/addons/survivor_addon_002.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_addons_01.png",
+        "box": [
+          146,
+          8,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_addon_003",
+      "active_id": "survivor_addon_003",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        274,
+        8,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/addons/survivor_addon_003.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_addons_01.png",
+        "box": [
+          274,
+          8,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_addon_004",
+      "active_id": "survivor_addon_004",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        401,
+        8,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/addons/survivor_addon_004.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_addons_01.png",
+        "box": [
+          401,
+          8,
+          99,
+          99
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_addon_005",
+      "active_id": "survivor_addon_005",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        528,
+        8,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/addons/survivor_addon_005.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_addons_01.png",
+        "box": [
+          528,
+          8,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_addon_006",
+      "active_id": "survivor_addon_006",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        19,
+        120,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/addons/survivor_addon_006.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_addons_01.png",
+        "box": [
+          19,
+          120,
+          99,
+          99
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_addon_007",
+      "active_id": "survivor_addon_007",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        146,
+        120,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/addons/survivor_addon_007.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_addons_01.png",
+        "box": [
+          146,
+          120,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_addon_008",
+      "active_id": "survivor_addon_008",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        274,
+        120,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/addons/survivor_addon_008.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_addons_01.png",
+        "box": [
+          274,
+          120,
+          99,
+          99
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_addon_009",
+      "active_id": "survivor_addon_009",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        401,
+        120,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/addons/survivor_addon_009.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_addons_01.png",
+        "box": [
+          401,
+          120,
+          99,
+          99
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_addon_010",
+      "active_id": "survivor_addon_010",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        528,
+        120,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/addons/survivor_addon_010.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_addons_01.png",
+        "box": [
+          528,
+          120,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_addon_011",
+      "active_id": "survivor_addon_011",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        19,
+        232,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/addons/survivor_addon_011.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_addons_01.png",
+        "box": [
+          19,
+          232,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_001",
+      "active_id": "survivor_item_001",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        29,
+        17,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_001.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          29,
+          17,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_002",
+      "active_id": "survivor_item_002",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        156,
+        17,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_002.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          156,
+          17,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_003",
+      "active_id": "survivor_item_003",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        284,
+        17,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_003.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          284,
+          17,
+          99,
+          99
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_004",
+      "active_id": "survivor_item_004",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        411,
+        17,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_004.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          411,
+          17,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_005",
+      "active_id": "survivor_item_005",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        538,
+        17,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_005.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          538,
+          17,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_006",
+      "active_id": "survivor_item_006",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        29,
+        129,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_006.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          29,
+          129,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_007",
+      "active_id": "survivor_item_007",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        156,
+        129,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_007.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          156,
+          129,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_008",
+      "active_id": "survivor_item_008",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        284,
+        129,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_008.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          284,
+          129,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_009",
+      "active_id": "survivor_item_009",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        411,
+        129,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_009.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          411,
+          129,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_010",
+      "active_id": "survivor_item_010",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        538,
+        129,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_010.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          538,
+          129,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_011",
+      "active_id": "survivor_item_011",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        29,
+        241,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_011.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          29,
+          241,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_012",
+      "active_id": "survivor_item_012",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        156,
+        241,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_012.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          156,
+          241,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_013",
+      "active_id": "survivor_item_013",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        284,
+        241,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_013.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          284,
+          241,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_014",
+      "active_id": "survivor_item_014",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        411,
+        241,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_014.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          411,
+          241,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_015",
+      "active_id": "survivor_item_015",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        538,
+        241,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_015.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_01.png",
+        "box": [
+          538,
+          241,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_016",
+      "active_id": "survivor_item_016",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        20,
+        12,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_016.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_02.png",
+        "box": [
+          20,
+          12,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_017",
+      "active_id": "survivor_item_017",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        147,
+        12,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_017.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_02.png",
+        "box": [
+          147,
+          12,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_018",
+      "active_id": "survivor_item_018",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        274,
+        12,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_018.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_02.png",
+        "box": [
+          274,
+          12,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_019",
+      "active_id": "survivor_item_019",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        402,
+        12,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_019.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_02.png",
+        "box": [
+          402,
+          12,
+          99,
+          99
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_020",
+      "active_id": "survivor_item_020",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        529,
+        12,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_020.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_02.png",
+        "box": [
+          529,
+          12,
+          99,
+          99
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_021",
+      "active_id": "survivor_item_021",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        20,
+        124,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_021.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_02.png",
+        "box": [
+          20,
+          124,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_item_022",
+      "active_id": "survivor_item_022",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        147,
+        124,
+        99,
+        99
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        99,
+        99
+      ],
+      "original": "assets/survivors/items/survivor_item_022.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_items_02.png",
+        "box": [
+          147,
+          124,
+          99,
+          99
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_001",
+      "active_id": "survivor_offering_001",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        34,
+        15,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_001.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          34,
+          15,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_002",
+      "active_id": "survivor_offering_002",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        162,
+        15,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_002.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          162,
+          15,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_003",
+      "active_id": "survivor_offering_003",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        291,
+        15,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_003.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          291,
+          15,
+          93,
+          105
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_004",
+      "active_id": "survivor_offering_004",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        420,
+        15,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_004.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          420,
+          15,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_005",
+      "active_id": "survivor_offering_005",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        548,
+        15,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_005.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          548,
+          15,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_006",
+      "active_id": "survivor_offering_006",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        98,
+        124,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_006.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          98,
+          124,
+          93,
+          105
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_007",
+      "active_id": "survivor_offering_007",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        227,
+        124,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_007.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          227,
+          124,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_008",
+      "active_id": "survivor_offering_008",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        355,
+        124,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_008.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          355,
+          124,
+          93,
+          105
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_009",
+      "active_id": "survivor_offering_009",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        484,
+        124,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_009.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          484,
+          124,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_010",
+      "active_id": "survivor_offering_010",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        613,
+        124,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_010.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          613,
+          124,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_011",
+      "active_id": "survivor_offering_011",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        34,
+        233,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_011.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          34,
+          233,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_012",
+      "active_id": "survivor_offering_012",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        162,
+        233,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_012.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          162,
+          233,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_013",
+      "active_id": "survivor_offering_013",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        291,
+        233,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_013.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          291,
+          233,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_014",
+      "active_id": "survivor_offering_014",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        420,
+        233,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_014.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          420,
+          233,
+          93,
+          105
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_015",
+      "active_id": "survivor_offering_015",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        548,
+        233,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_015.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_01.png",
+        "box": [
+          548,
+          233,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_016",
+      "active_id": "survivor_offering_016",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        16,
+        8,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_016.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          16,
+          8,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_017",
+      "active_id": "survivor_offering_017",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        145,
+        8,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_017.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          145,
+          8,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_018",
+      "active_id": "survivor_offering_018",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        274,
+        8,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_018.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          274,
+          8,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_019",
+      "active_id": "survivor_offering_019",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        403,
+        8,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_019.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          403,
+          8,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_020",
+      "active_id": "survivor_offering_020",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        532,
+        8,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_020.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          532,
+          8,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_021",
+      "active_id": "survivor_offering_021",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        81,
+        117,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_021.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          81,
+          117,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_022",
+      "active_id": "survivor_offering_022",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        210,
+        117,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_022.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          210,
+          117,
+          93,
+          105
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_023",
+      "active_id": "survivor_offering_023",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        338,
+        117,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_023.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          338,
+          117,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_024",
+      "active_id": "survivor_offering_024",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        467,
+        117,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_024.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          467,
+          117,
+          93,
+          105
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_025",
+      "active_id": "survivor_offering_025",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        596,
+        117,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_025.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          596,
+          117,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_026",
+      "active_id": "survivor_offering_026",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        16,
+        226,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_026.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          16,
+          226,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_027",
+      "active_id": "survivor_offering_027",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        145,
+        226,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_027.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          145,
+          226,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_028",
+      "active_id": "survivor_offering_028",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        274,
+        226,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_028.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          274,
+          226,
+          93,
+          105
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_029",
+      "active_id": "survivor_offering_029",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        403,
+        226,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_029.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          403,
+          226,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_030",
+      "active_id": "survivor_offering_030",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        532,
+        226,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_030.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_02.png",
+        "box": [
+          532,
+          226,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_031",
+      "active_id": "survivor_offering_031",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        30,
+        12,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_031.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          30,
+          12,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_032",
+      "active_id": "survivor_offering_032",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        159,
+        12,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_032.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          159,
+          12,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_033",
+      "active_id": "survivor_offering_033",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        288,
+        12,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_033.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          288,
+          12,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_034",
+      "active_id": "survivor_offering_034",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        417,
+        12,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_034.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          417,
+          12,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_035",
+      "active_id": "survivor_offering_035",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        546,
+        12,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_035.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          546,
+          12,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_036",
+      "active_id": "survivor_offering_036",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        94,
+        121,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_036.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          94,
+          121,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_037",
+      "active_id": "survivor_offering_037",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        224,
+        121,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_037.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          224,
+          121,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_038",
+      "active_id": "survivor_offering_038",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        352,
+        121,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_038.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          352,
+          121,
+          93,
+          105
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_039",
+      "active_id": "survivor_offering_039",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        482,
+        121,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_039.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          482,
+          121,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_040",
+      "active_id": "survivor_offering_040",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        610,
+        121,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_040.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          610,
+          121,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_041",
+      "active_id": "survivor_offering_041",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        30,
+        230,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_041.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          30,
+          230,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_042",
+      "active_id": "survivor_offering_042",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        159,
+        230,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_042.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          159,
+          230,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_043",
+      "active_id": "survivor_offering_043",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        288,
+        230,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_043.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          288,
+          230,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_044",
+      "active_id": "survivor_offering_044",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        417,
+        230,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_044.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          417,
+          230,
+          93,
+          105
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_045",
+      "active_id": "survivor_offering_045",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        546,
+        230,
+        93,
+        105
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        105
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_045.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_03.png",
+        "box": [
+          546,
+          230,
+          93,
+          105
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_046",
+      "active_id": "survivor_offering_046",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        34,
+        0,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_046.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          34,
+          0,
+          93,
+          106
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_047",
+      "active_id": "survivor_offering_047",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        163,
+        0,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_047.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          163,
+          0,
+          93,
+          106
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_048",
+      "active_id": "survivor_offering_048",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        292,
+        0,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_048.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          292,
+          0,
+          93,
+          106
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_049",
+      "active_id": "survivor_offering_049",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        421,
+        0,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_049.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          421,
+          0,
+          93,
+          106
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_050",
+      "active_id": "survivor_offering_050",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        550,
+        0,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_050.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          550,
+          0,
+          93,
+          106
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_051",
+      "active_id": "survivor_offering_051",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        98,
+        110,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_051.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          98,
+          110,
+          93,
+          106
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_052",
+      "active_id": "survivor_offering_052",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        228,
+        110,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_052.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          228,
+          110,
+          93,
+          106
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_053",
+      "active_id": "survivor_offering_053",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        356,
+        110,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_053.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          356,
+          110,
+          93,
+          106
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_054",
+      "active_id": "survivor_offering_054",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        486,
+        110,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_054.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          486,
+          110,
+          93,
+          106
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_055",
+      "active_id": "survivor_offering_055",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        614,
+        110,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_055.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          614,
+          110,
+          93,
+          106
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_056",
+      "active_id": "survivor_offering_056",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        34,
+        220,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_056.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          34,
+          220,
+          93,
+          106
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_057",
+      "active_id": "survivor_offering_057",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        163,
+        220,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_057.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          163,
+          220,
+          93,
+          106
+        ]
+      },
+      "identity_review": "not_manually_confirmed",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_058",
+      "active_id": "survivor_offering_058",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        292,
+        220,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_058.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          292,
+          220,
+          93,
+          106
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    },
+    {
+      "old_id": "survivor_offering_059",
+      "active_id": "survivor_offering_059",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        421,
+        220,
+        93,
+        106
+      ],
+      "source_crop_hash_valid": true,
+      "cached_tile_reproducible": true,
+      "source_resolution": [
+        93,
+        106
+      ],
+      "original": "assets/survivors/offerings/survivor_offering_059.png",
+      "native_reference": {
+        "source": "references/inventory/survivor_offerings_04.png",
+        "box": [
+          421,
+          220,
+          93,
+          106
+        ]
+      },
+      "identity_review": "confirmed_on_labeled_bloodweb",
+      "wiki_id": null,
+      "wiki_comparison": "mapping_review_pending",
+      "keep_legacy_tile": true,
+      "use_native_detail": true,
+      "issues": []
+    }
+  ],
+  "count": 165,
+  "structurally_valid": 165,
+  "identity_checked": 22,
+  "wiki_originals": 1136,
+  "limitations": "Structural crop checks do not prove the identity of every unlabeled icon."
+}

@@ -1,0 +1,67 @@
+{
+  "labels": [
+    {
+      "path": "assets/ui/bloodweb_header/label_ui90.png",
+      "sha256": "8469f35f05833c0ee131718b3ce5b8151813b03cc6a6eb5d015fe49ad96e98b2",
+      "source_rect": [
+        342,
+        67,
+        148,
+        17
+      ],
+      "note": "native pixels, DBD UI 90 %, 1920x1080"
+    }
+  ],
+  "digits": {
+    "1": {
+      "path": "assets/ui/bloodweb_header/digit_ui90_1.png",
+      "sha256": "5bdb8e7839e9d11c44d229fae79c6c66f45bb76c4c401576f3d90af60fa34c40",
+      "source": "The Unknown level 11"
+    },
+    "2": {
+      "path": "assets/ui/bloodweb_header/digit_ui90_2.png",
+      "sha256": "e2cd7cd1c6fc4e38950788ba4fe24a77d107eaabd7ed3c7f73f26014e4486e40",
+      "source": "The Unknown level 12"
+    },
+    "3": {
+      "path": "assets/ui/bloodweb_header/digit_ui90_3.png",
+      "sha256": "97e3ff084cc942a3953c6794f18a2cb7b8f455e6292e09c5a73e39beab20169f",
+      "source": "The Unknown level 13"
+    },
+    "4": {
+      "path": "assets/ui/bloodweb_header/digit_ui90_4.png",
+      "sha256": "36f18fff2454096459303140167da9923f4f5101d0f95bd2d2b492e2cf8babf6",
+      "source": "The Unknown level 14"
+    },
+    "5": {
+      "path": "assets/ui/bloodweb_header/digit_ui90_5.png",
+      "sha256": "62c9bda7525b75480cd627dce0cf7fa52c0e95da492cf434c19d443225026f20",
+      "source": "The Unknown level 15"
+    },
+    "6": {
+      "path": "assets/ui/bloodweb_header/digit_ui90_6.png",
+      "sha256": "76c995c464b0672fbbb94a94bb4dbf7c11f9eab1a9d42ee9d7e8322c3b27f0d2",
+      "source": "The Unknown level 16"
+    },
+    "7": {
+      "path": "assets/ui/bloodweb_header/digit_ui90_7.png",
+      "sha256": "5808f39868363ffbd7f93acd9df466827bbbf86520b36b479f2e921b9d22923f",
+      "source": "The Unknown level 17"
+    },
+    "8": {
+      "path": "assets/ui/bloodweb_header/digit_ui90_8.png",
+      "sha256": "87c94757fa1afd3de615b532363b215a107086111d7d3630c21e6351926aff2a",
+      "source": "The Unknown level 18"
+    },
+    "9": {
+      "path": "assets/ui/bloodweb_header/digit_ui90_9.png",
+      "sha256": "eab03d1557a29b9050672d396d4ad4ae536346aea47e0393f4e6c64c50f82942",
+      "source": "The Unknown level 19"
+    },
+    "0": {
+      "path": "assets/ui/bloodweb_header/digit_ui90_0.png",
+      "sha256": "4c59b9a91d95901e751d0b568d9a18ba53316f0f2b005cefc60eb0d339d54024",
+      "source": "The Unknown level 20"
+    }
+  }
+}

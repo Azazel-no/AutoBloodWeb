@@ -1,0 +1,18 @@
+PAIRS={
+ 'session_emergency_timeout':('Проверка остановки в DBD не завершена за 15 с. Повторите Старт, нажмите и отпустите клавишу остановки.','The Stop check in DBD did not finish within 15 s. Press Start again, then press and release the Stop key.'),
+ 'recognized':('Распознан','Recognized'), 'ambiguous':('Неоднозначно','Ambiguous'),
+ 'gradient_evidence':('Повторная проверка градиентов. Δ относится к этому сравнению.','Gradient re-ranking. Δ refers to this comparison.'),
+ 'loading_next_bloodweb':('Загрузка следующей паутины','Loading next Bloodweb'),
+ 'wait_next_bloodweb':('Загрузка следующей паутины','Loading next Bloodweb'),
+ 'next_bloodweb_timeout':('Следующая паутина не появилась. Проверьте состояние игры.','The next Bloodweb did not appear. Check the game.'),
+ 'player_action_required':('Требуется действие игрока: завершите престиж в игре.','Player action required: complete prestige in the game.'),
+ 'manual_action':('Требуется действие игрока','Player action required'),
+ 'continue_upgrading':('Продолжение прокачки','Continuing upgrades'),
+ 'transition_timeout':('Ожидание новой паутины, максимум секунд','Next Bloodweb wait, maximum seconds'),
+ 'auto_start_f9':('Нажмите {shortcut} в DBD для проверки остановки. После проверки запуск продолжится автоматически.','Press {shortcut} in DBD to verify Stop. Start will continue automatically afterward.'),
+ 'auto_start_scanning':('Автоматическая проверка игры','Checking the game automatically'),
+ 'auto_start_switch':('Переключитесь в DBD','Switch to DBD'),
+ 'settings_menu':('Настройки','Settings'),
+ 'priority_left':('←','←'), 'priority_right':('→','→'),
+ 'level_changed_unconfirmed':('Новый уровень подтверждён; последняя покупка не засчитана без двух красных кадров.','New level confirmed; last purchase not counted without two red frames.'),
+}

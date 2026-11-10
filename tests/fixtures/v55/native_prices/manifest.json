@@ -1,0 +1,116 @@
+{
+  "currency": {
+    "source": "debug\\v55\\optimization_20261016\\price_review_006\\node_3_0.png",
+    "source_sha256": "c85e5ea9203ba669e911fcdd2cdc3e0aa93f539214d6fe767aee6dda2839bee1",
+    "box": [
+      1157,
+      662,
+      28,
+      29
+    ],
+    "path": "tests\\fixtures\\v55\\native_prices\\currency.png",
+    "sha256": "60f6b2eaf91c25a2f734eebe59bfb2b2ddb2654c5277c2de08295e622e70deb4"
+  },
+  "faint": {
+    "source": "debug\\v55\\optimization_20261016\\price_review_004\\node_2_0.png",
+    "source_sha256": "68fceb6e9043173b9656aea0cb7f8e8fb7af64c9ef898dc0ee090f735c0e0efd",
+    "box": [
+      1200,
+      600,
+      230,
+      120
+    ],
+    "path": "tests\\fixtures\\v55\\native_prices\\faint.png",
+    "sha256": "52e1b6ccaaa6b58c76ec202c51e4e4c164cd7a359c7920bb147ef41522b2aad0"
+  },
+  "serum_first": {
+    "source": "debug\\v55\\optimization_20261016\\price_review_005\\node_3_0.png",
+    "source_sha256": "446f918ec29f89b1e6aa030682e7233d7f9f125c5643af5a281ea18c89820eb3",
+    "box": [
+      1100,
+      640,
+      280,
+      150
+    ],
+    "path": "tests\\fixtures\\v55\\native_prices\\serum_first.png",
+    "sha256": "ee1909727c0d10b89a11683540cb6d5619697f811ec9c21c0a46dca88101173d"
+  },
+  "serum_second": {
+    "source": "debug\\v55\\optimization_20261016\\price_review_006\\node_3_1.png",
+    "source_sha256": "9ef36578d75534ece11cc1ef67be79771615dc9103efc7282bb70ea8f93268ea",
+    "box": [
+      1100,
+      620,
+      220,
+      140
+    ],
+    "path": "tests\\fixtures\\v55\\native_prices\\serum_second.png",
+    "sha256": "90afa1b96734afe1a2a5180b009f411cb1bec9ede97c331aed7fabade8022b54"
+  },
+  "clean": {
+    "source": "debug\\v55\\optimization_20261016\\price_review_006\\clean.png",
+    "source_sha256": "607dd0122f76e3934bbaab54b74aaa12d1203f94820203f50e81fa682baf74b5",
+    "box": [
+      1100,
+      620,
+      220,
+      140
+    ],
+    "path": "tests\\fixtures\\v55\\native_prices\\clean.png",
+    "sha256": "1952959db0d7793ccbac4929c34c8e1cade31f776b867f40f9b82ddd3dfba571"
+  },
+  "event_card": {
+    "path": "tests\\fixtures\\v55\\native_prices\\event_card.png",
+    "sha256": "c4e7a1fc2e49aee6b9d1030a87d70fea7be376fba3c6271e18e2bd58612976ec",
+    "source": "debug\\v55\\optimization_20261016\\price_review_012\\node_9_0.png",
+    "source_sha256": "e7cc0850ccc016825fcc65fb4b445b0df6e78ecb46f879f2bfdc07b0a4b98908",
+    "box": [
+      630,
+      315,
+      550,
+      430
+    ],
+    "tooltip": [
+      639,
+      366,
+      524,
+      714
+    ]
+  },
+  "event_card_threshold": {
+    "path": "tests\\fixtures\\v55\\native_prices\\event_card_threshold.png",
+    "sha256": "7e0ae99fba775e153f92d8167e43f2e5b30334964a2d3e378d77dd10692c3836",
+    "source": "debug\\v55\\optimization_20261016\\price_review_018\\node_4_1.png",
+    "source_sha256": "f7b0377a0d9550b8f71297648d74383d1e1fb42abcf12f9b2459adfe80fc65ca",
+    "box": [
+      750,
+      350,
+      570,
+      450
+    ],
+    "tooltip": [
+      754,
+      399,
+      519,
+      681
+    ]
+  },
+  "faint_card": {
+    "path": "tests\\fixtures\\v55\\native_prices\\faint_card.png",
+    "sha256": "7b3cd5acea72e6b65203f246c43e699759d064443c08f8eac551d06eee10507b",
+    "source": "debug\\v55\\optimization_20261016\\price_review_021\\node_4_0.png",
+    "source_sha256": "34043b15ad37742b932d46e8b3e263e55d8aa0ca2420741fa33b8a2eb3bf59a2",
+    "box": [
+      640,
+      470,
+      550,
+      270
+    ],
+    "tooltip": [
+      642,
+      518,
+      410,
+      562
+    ]
+  }
+}

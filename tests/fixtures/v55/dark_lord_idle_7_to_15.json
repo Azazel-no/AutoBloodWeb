@@ -1,0 +1,4221 @@
+{
+  "old_scene": {
+    "window": {
+      "hwnd": 460486,
+      "title": "DeadByDaylight  ",
+      "client": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "monitor": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "dpi": 96,
+      "foreground": true,
+      "pid": 23320
+    },
+    "attempted": [
+      [
+        684,
+        685
+      ],
+      [
+        579,
+        624
+      ]
+    ],
+    "level": 7,
+    "level_confidence": 0.9791666666666666,
+    "nodes": [
+      {
+        "point": [
+          684,
+          562
+        ],
+        "radius": 37,
+        "state": "center",
+        "icon": null
+      },
+      {
+        "point": [
+          684,
+          440
+        ],
+        "radius": 40,
+        "state": "available",
+        "icon": "killer_offering_038"
+      },
+      {
+        "point": [
+          685,
+          685
+        ],
+        "radius": 31,
+        "state": "purchased",
+        "icon": null
+      },
+      {
+        "point": [
+          579,
+          624
+        ],
+        "radius": 40,
+        "state": "available",
+        "icon": "wiki_killer_dark_lord_addons_91a238e129fd"
+      },
+      {
+        "point": [
+          442,
+          623
+        ],
+        "radius": 41,
+        "state": "locked",
+        "icon": "killer_offering_049"
+      },
+      {
+        "point": [
+          504,
+          386
+        ],
+        "radius": 39,
+        "state": "locked",
+        "icon": "wiki_killer_common_addons_9e8a96f5954c"
+      },
+      {
+        "point": [
+          371,
+          389
+        ],
+        "radius": 40,
+        "state": "locked",
+        "icon": null
+      }
+    ],
+    "pending": null
+  },
+  "analysis": {
+    "width": 959,
+    "height": 959,
+    "screen_state": "bloodweb",
+    "nodes": [
+      {
+        "id": 0,
+        "x": 480,
+        "y": 480,
+        "radius": 43,
+        "state": "center",
+        "type": "bloodweb_center",
+        "icon_id": null,
+        "candidate_id": null,
+        "confidence": 0.0,
+        "state_confidence": 0.9,
+        "candidates": [],
+        "geometry_confidence": 0.9,
+        "icon_margin": 0.0,
+        "match_reason": "structural_center",
+        "rarity": "unknown",
+        "glyph_score": 0.0,
+        "ring": 0,
+        "angle": 0.0,
+        "content_radius": 0,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\000_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\000_normalized.png",
+        "contour_score": 0.0,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.0,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 1,
+        "x": 585,
+        "y": 419,
+        "radius": 39,
+        "state": "available",
+        "type": "addon",
+        "icon_id": "wiki_killer_dark_lord_addons_8c17e9c10ce9",
+        "candidate_id": "wiki_killer_dark_lord_addons_8c17e9c10ce9",
+        "confidence": 0.9297,
+        "state_confidence": 0.9,
+        "candidates": [
+          [
+            "wiki_killer_dark_lord_addons_8c17e9c10ce9",
+            0.9297
+          ],
+          [
+            "wiki_killer_dark_lord_addons_1eeebc3f37b8",
+            0.7521
+          ],
+          [
+            "killer_offering_044",
+            0.6819
+          ]
+        ],
+        "geometry_confidence": 0.865,
+        "icon_margin": 0.1776,
+        "match_reason": "accepted",
+        "rarity": "brown",
+        "glyph_score": 0.9297,
+        "ring": 1,
+        "angle": 59.84545208208383,
+        "content_radius": 40,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\001_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\001_normalized.png",
+        "contour_score": 0.9135,
+        "category_hint": "unknown",
+        "category_confidence": 0.5,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 1.0,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "wiki_killer_dark_lord_addons_8c17e9c10ce9",
+            0.9297
+          ],
+          [
+            "wiki_killer_dark_lord_addons_1eeebc3f37b8",
+            0.7521
+          ],
+          [
+            "killer_offering_044",
+            0.6819
+          ],
+          [
+            "wiki_killer_dark_lord_addons_60c332c8de57",
+            0.6799
+          ],
+          [
+            "wiki_killer_dark_lord_addons_a81714bc419c",
+            0.6768
+          ],
+          [
+            "wiki_killer_common_offerings_756b808a70d6",
+            0.6765
+          ],
+          [
+            "killer_offering_027",
+            0.6682
+          ],
+          [
+            "killer_offering_048",
+            0.6632
+          ],
+          [
+            "killer_offering_017",
+            0.6561
+          ],
+          [
+            "killer_offering_024",
+            0.6473
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 2,
+        "x": 585,
+        "y": 542,
+        "radius": 40,
+        "state": "available",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "killer_offering_037",
+        "confidence": 0.9863,
+        "state_confidence": 0.9,
+        "candidates": [
+          [
+            "killer_offering_037",
+            0.9863
+          ],
+          [
+            "killer_offering_004",
+            0.9854
+          ],
+          [
+            "killer_offering_045",
+            0.9834
+          ]
+        ],
+        "geometry_confidence": 0.9,
+        "icon_margin": 0.0009,
+        "match_reason": "ambiguous_candidates",
+        "rarity": "brown",
+        "glyph_score": 0.9863,
+        "ring": 1,
+        "angle": 120.56083926737153,
+        "content_radius": 40,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\002_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\002_normalized.png",
+        "contour_score": 0.9777,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 1.0,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "ambiguous",
+        "top10": [
+          [
+            "killer_offering_037",
+            0.9863
+          ],
+          [
+            "killer_offering_004",
+            0.9854
+          ],
+          [
+            "killer_offering_045",
+            0.9834
+          ],
+          [
+            "killer_offering_046",
+            0.9767
+          ],
+          [
+            "killer_offering_048",
+            0.8262
+          ],
+          [
+            "wiki_killer_dark_lord_addons_1a282d09584f",
+            0.8195
+          ],
+          [
+            "killer_offering_002",
+            0.8034
+          ],
+          [
+            "killer_offering_022",
+            0.797
+          ],
+          [
+            "killer_offering_001",
+            0.7831
+          ],
+          [
+            "killer_offering_019",
+            0.7793
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "killer_offering_004",
+            "glyph": 0.9854,
+            "contour": 0.9626,
+            "gradient": 0.9575
+          },
+          {
+            "id": "killer_offering_046",
+            "glyph": 0.9767,
+            "contour": 0.9854,
+            "gradient": 0.9558
+          },
+          {
+            "id": "killer_offering_037",
+            "glyph": 0.9863,
+            "contour": 0.9777,
+            "gradient": 0.9541
+          },
+          {
+            "id": "killer_offering_045",
+            "glyph": 0.9834,
+            "contour": 0.9713,
+            "gradient": 0.9317
+          },
+          {
+            "id": "killer_offering_048",
+            "glyph": 0.8262,
+            "contour": 0.6343,
+            "gradient": 0.5645
+          },
+          {
+            "id": "killer_offering_022",
+            "glyph": 0.797,
+            "contour": 0.6442,
+            "gradient": 0.5611
+          },
+          {
+            "id": "killer_offering_002",
+            "glyph": 0.8034,
+            "contour": 0.6629,
+            "gradient": 0.5515
+          },
+          {
+            "id": "killer_offering_001",
+            "glyph": 0.7831,
+            "contour": 0.625,
+            "gradient": 0.5512
+          },
+          {
+            "id": "killer_offering_019",
+            "glyph": 0.7793,
+            "contour": 0.6849,
+            "gradient": 0.5479
+          },
+          {
+            "id": "wiki_killer_dark_lord_addons_1a282d09584f",
+            "glyph": 0.8195,
+            "contour": 0.6136,
+            "gradient": 0.3853
+          }
+        ],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 3,
+        "x": 480,
+        "y": 603,
+        "radius": 40,
+        "state": "available",
+        "type": "addon",
+        "icon_id": "wiki_killer_common_addons_9e8a96f5954c",
+        "candidate_id": "wiki_killer_common_addons_9e8a96f5954c",
+        "confidence": 0.9672,
+        "state_confidence": 0.9,
+        "candidates": [
+          [
+            "wiki_killer_common_addons_9e8a96f5954c",
+            0.9672
+          ],
+          [
+            "killer_offering_020",
+            0.7474
+          ],
+          [
+            "killer_offering_025",
+            0.7248
+          ]
+        ],
+        "geometry_confidence": 0.883,
+        "icon_margin": 0.2198,
+        "match_reason": "accepted",
+        "rarity": "brown",
+        "glyph_score": 0.9672,
+        "ring": 1,
+        "angle": 180.0,
+        "content_radius": 40,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\003_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\003_normalized.png",
+        "contour_score": 0.9643,
+        "category_hint": "unknown",
+        "category_confidence": 0.5,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 1.0,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "wiki_killer_common_addons_9e8a96f5954c",
+            0.9672
+          ],
+          [
+            "killer_offering_020",
+            0.7474
+          ],
+          [
+            "killer_offering_025",
+            0.7248
+          ],
+          [
+            "killer_offering_038",
+            0.7186
+          ],
+          [
+            "killer_offering_005",
+            0.7122
+          ],
+          [
+            "wiki_killer_common_offerings_0238dd1362c2",
+            0.7019
+          ],
+          [
+            "killer_offering_001",
+            0.7011
+          ],
+          [
+            "killer_offering_039",
+            0.6986
+          ],
+          [
+            "killer_offering_021",
+            0.6982
+          ],
+          [
+            "wiki_killer_common_offerings_b92e81b84238",
+            0.6954
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 4,
+        "x": 375,
+        "y": 542,
+        "radius": 35,
+        "state": "available",
+        "type": "addon",
+        "icon_id": "wiki_killer_dark_lord_addons_a81714bc419c",
+        "candidate_id": "wiki_killer_dark_lord_addons_a81714bc419c",
+        "confidence": 0.9364,
+        "state_confidence": 0.9,
+        "candidates": [
+          [
+            "wiki_killer_dark_lord_addons_a81714bc419c",
+            0.9364
+          ],
+          [
+            "killer_offering_030",
+            0.8247
+          ],
+          [
+            "killer_offering_024",
+            0.7905
+          ]
+        ],
+        "geometry_confidence": 0.86,
+        "icon_margin": 0.1117,
+        "match_reason": "accepted",
+        "rarity": "green",
+        "glyph_score": 0.9364,
+        "ring": 1,
+        "angle": 239.43916073262847,
+        "content_radius": 40,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\004_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\004_normalized.png",
+        "contour_score": 0.9251,
+        "category_hint": "unknown",
+        "category_confidence": 0.5,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 1.0,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "wiki_killer_dark_lord_addons_a81714bc419c",
+            0.9364
+          ],
+          [
+            "killer_offering_030",
+            0.8247
+          ],
+          [
+            "killer_offering_024",
+            0.7905
+          ],
+          [
+            "killer_offering_045",
+            0.7794
+          ],
+          [
+            "killer_offering_004",
+            0.7779
+          ],
+          [
+            "killer_offering_046",
+            0.7747
+          ],
+          [
+            "killer_offering_037",
+            0.7702
+          ],
+          [
+            "killer_offering_048",
+            0.7679
+          ],
+          [
+            "wiki_killer_dark_lord_addons_60c332c8de57",
+            0.7629
+          ],
+          [
+            "wiki_killer_dark_lord_addons_1eeebc3f37b8",
+            0.7601
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 5,
+        "x": 375,
+        "y": 419,
+        "radius": 40,
+        "state": "available",
+        "type": "addon",
+        "icon_id": "wiki_killer_dark_lord_addons_9408efa15287",
+        "candidate_id": "wiki_killer_dark_lord_addons_9408efa15287",
+        "confidence": 0.9122,
+        "state_confidence": 0.9,
+        "candidates": [
+          [
+            "wiki_killer_dark_lord_addons_9408efa15287",
+            0.9122
+          ],
+          [
+            "killer_offering_028",
+            0.5934
+          ],
+          [
+            "killer_offering_016",
+            0.5511
+          ]
+        ],
+        "geometry_confidence": 0.888,
+        "icon_margin": 0.3188,
+        "match_reason": "accepted",
+        "rarity": "brown",
+        "glyph_score": 0.9122,
+        "ring": 1,
+        "angle": 300.15454791791615,
+        "content_radius": 40,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\005_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\005_normalized.png",
+        "contour_score": 0.9406,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 1.0,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "wiki_killer_dark_lord_addons_9408efa15287",
+            0.9122
+          ],
+          [
+            "killer_offering_028",
+            0.5934
+          ],
+          [
+            "killer_offering_016",
+            0.5511
+          ],
+          [
+            "killer_offering_052",
+            0.5455
+          ],
+          [
+            "killer_offering_031",
+            0.5434
+          ],
+          [
+            "wiki_killer_dark_lord_addons_830ea2cf57d0",
+            0.5378
+          ],
+          [
+            "killer_offering_017",
+            0.5296
+          ],
+          [
+            "killer_offering_007",
+            0.5258
+          ],
+          [
+            "wiki_killer_common_offerings_756b808a70d6",
+            0.5239
+          ],
+          [
+            "killer_offering_013",
+            0.523
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 6,
+        "x": 479,
+        "y": 358,
+        "radius": 39,
+        "state": "available",
+        "type": "addon",
+        "icon_id": "wiki_killer_dark_lord_addons_91a238e129fd",
+        "candidate_id": "wiki_killer_dark_lord_addons_91a238e129fd",
+        "confidence": 0.9718,
+        "state_confidence": 0.9,
+        "candidates": [
+          [
+            "wiki_killer_dark_lord_addons_91a238e129fd",
+            0.9718
+          ],
+          [
+            "wiki_killer_common_offerings_1b5343f5958e",
+            0.6836
+          ],
+          [
+            "killer_offering_030",
+            0.6695
+          ]
+        ],
+        "geometry_confidence": 0.871,
+        "icon_margin": 0.2882,
+        "match_reason": "accepted",
+        "rarity": "brown",
+        "glyph_score": 0.9718,
+        "ring": 1,
+        "angle": 359.53037298031035,
+        "content_radius": 40,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\006_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\006_normalized.png",
+        "contour_score": 0.9648,
+        "category_hint": "unknown",
+        "category_confidence": 0.5,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 1.0,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "wiki_killer_dark_lord_addons_91a238e129fd",
+            0.9718
+          ],
+          [
+            "wiki_killer_common_offerings_1b5343f5958e",
+            0.6836
+          ],
+          [
+            "killer_offering_030",
+            0.6695
+          ],
+          [
+            "wiki_killer_dark_lord_addons_60c332c8de57",
+            0.6658
+          ],
+          [
+            "wiki_killer_common_offerings_667c7113e8bb",
+            0.6656
+          ],
+          [
+            "wiki_killer_dark_lord_addons_0ee05d4aca95",
+            0.645
+          ],
+          [
+            "killer_offering_026",
+            0.644
+          ],
+          [
+            "killer_offering_006",
+            0.6353
+          ],
+          [
+            "killer_offering_032",
+            0.6299
+          ],
+          [
+            "wiki_killer_dark_lord_addons_a81714bc419c",
+            0.6125
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 7,
+        "x": 719,
+        "y": 542,
+        "radius": 41,
+        "state": "locked",
+        "type": "addon",
+        "icon_id": "wiki_killer_dark_lord_addons_8c17e9c10ce9",
+        "candidate_id": "wiki_killer_dark_lord_addons_8c17e9c10ce9",
+        "confidence": 0.9325,
+        "state_confidence": 0.78,
+        "candidates": [
+          [
+            "wiki_killer_dark_lord_addons_8c17e9c10ce9",
+            0.9325
+          ],
+          [
+            "wiki_killer_dark_lord_addons_1eeebc3f37b8",
+            0.7466
+          ],
+          [
+            "wiki_killer_dark_lord_addons_60c332c8de57",
+            0.68
+          ]
+        ],
+        "geometry_confidence": 0.673,
+        "icon_margin": 0.1859,
+        "match_reason": "accepted",
+        "rarity": "brown",
+        "glyph_score": 0.9325,
+        "ring": 2,
+        "angle": 104.54277449089449,
+        "content_radius": 41,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\007_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\007_normalized.png",
+        "contour_score": 0.9124,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.9979381443298969,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "wiki_killer_dark_lord_addons_8c17e9c10ce9",
+            0.9325
+          ],
+          [
+            "wiki_killer_dark_lord_addons_1eeebc3f37b8",
+            0.7466
+          ],
+          [
+            "wiki_killer_dark_lord_addons_60c332c8de57",
+            0.68
+          ],
+          [
+            "killer_offering_044",
+            0.6796
+          ],
+          [
+            "wiki_killer_common_offerings_756b808a70d6",
+            0.675
+          ],
+          [
+            "wiki_killer_dark_lord_addons_a81714bc419c",
+            0.6737
+          ],
+          [
+            "killer_offering_027",
+            0.6707
+          ],
+          [
+            "killer_offering_048",
+            0.6636
+          ],
+          [
+            "killer_offering_017",
+            0.6556
+          ],
+          [
+            "wiki_killer_dark_lord_addons_1a282d09584f",
+            0.6434
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 8,
+        "x": 420,
+        "y": 716,
+        "radius": 41,
+        "state": "locked",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "wiki_killer_dark_lord_addons_9cfb1147b63c",
+        "confidence": 0.4501,
+        "state_confidence": 0.78,
+        "candidates": [
+          [
+            "killer_offering_008",
+            0.4766
+          ],
+          [
+            "killer_offering_009",
+            0.4531
+          ],
+          [
+            "wiki_killer_dark_lord_addons_9cfb1147b63c",
+            0.4501
+          ]
+        ],
+        "geometry_confidence": 0.716,
+        "icon_margin": 0.0431,
+        "match_reason": "contour_mismatch",
+        "rarity": "green",
+        "glyph_score": 0.4501,
+        "ring": 2,
+        "angle": 194.2645122980799,
+        "content_radius": 41,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\008_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\008_normalized.png",
+        "contour_score": 0.6222,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.9317325800376648,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [
+          [
+            "killer_offering_008",
+            0.4766
+          ],
+          [
+            "killer_offering_009",
+            0.4531
+          ],
+          [
+            "wiki_killer_dark_lord_addons_9cfb1147b63c",
+            0.4501
+          ],
+          [
+            "wiki_killer_common_offerings_b92e81b84238",
+            0.4431
+          ],
+          [
+            "killer_offering_051",
+            0.4414
+          ],
+          [
+            "wiki_killer_dark_lord_addons_1fc74591f67d",
+            0.4394
+          ],
+          [
+            "killer_offering_026",
+            0.436
+          ],
+          [
+            "wiki_killer_common_offerings_5e435a47f246",
+            0.4333
+          ],
+          [
+            "killer_offering_017",
+            0.4299
+          ],
+          [
+            "wiki_killer_dark_lord_addons_f7021af239b8",
+            0.4292
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "killer_offering_008",
+            "glyph": 0.4766,
+            "contour": 0.7215,
+            "gradient": 0.5362
+          },
+          {
+            "id": "killer_offering_009",
+            "glyph": 0.4531,
+            "contour": 0.724,
+            "gradient": 0.5302
+          },
+          {
+            "id": "wiki_killer_common_offerings_b92e81b84238",
+            "glyph": 0.4431,
+            "contour": 0.5979,
+            "gradient": 0.5253
+          },
+          {
+            "id": "killer_offering_026",
+            "glyph": 0.436,
+            "contour": 0.71,
+            "gradient": 0.5185
+          },
+          {
+            "id": "killer_offering_051",
+            "glyph": 0.4414,
+            "contour": 0.7126,
+            "gradient": 0.4775
+          },
+          {
+            "id": "wiki_killer_dark_lord_addons_9cfb1147b63c",
+            "glyph": 0.4501,
+            "contour": 0.6222,
+            "gradient": 0.4415
+          },
+          {
+            "id": "killer_offering_017",
+            "glyph": 0.4299,
+            "contour": 0.5668,
+            "gradient": 0.4339
+          },
+          {
+            "id": "wiki_killer_common_offerings_5e435a47f246",
+            "glyph": 0.4333,
+            "contour": 0.6304,
+            "gradient": 0.3864
+          },
+          {
+            "id": "wiki_killer_dark_lord_addons_1fc74591f67d",
+            "glyph": 0.4394,
+            "contour": 0.623,
+            "gradient": 0.3824
+          },
+          {
+            "id": "wiki_killer_dark_lord_addons_f7021af239b8",
+            "glyph": 0.4292,
+            "contour": 0.6014,
+            "gradient": 0.3473
+          }
+        ],
+        "recognition_method": "rarity_tie"
+      },
+      {
+        "id": 9,
+        "x": 238,
+        "y": 545,
+        "radius": 38,
+        "state": "locked",
+        "type": "addon",
+        "icon_id": "wiki_killer_common_addons_9e8a96f5954c",
+        "candidate_id": "wiki_killer_common_addons_9e8a96f5954c",
+        "confidence": 0.9439,
+        "state_confidence": 0.78,
+        "candidates": [
+          [
+            "wiki_killer_common_addons_9e8a96f5954c",
+            0.9439
+          ],
+          [
+            "killer_offering_020",
+            0.7003
+          ],
+          [
+            "killer_offering_025",
+            0.6784
+          ]
+        ],
+        "geometry_confidence": 0.707,
+        "icon_margin": 0.2436,
+        "match_reason": "accepted",
+        "rarity": "brown",
+        "glyph_score": 0.9439,
+        "ring": 2,
+        "angle": 254.96547998801057,
+        "content_radius": 40,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\009_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\009_normalized.png",
+        "contour_score": 0.9739,
+        "category_hint": "unknown",
+        "category_confidence": 0.5,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.9987531172069826,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "wiki_killer_common_addons_9e8a96f5954c",
+            0.9439
+          ],
+          [
+            "killer_offering_020",
+            0.7003
+          ],
+          [
+            "killer_offering_025",
+            0.6784
+          ],
+          [
+            "killer_offering_021",
+            0.6707
+          ],
+          [
+            "killer_offering_039",
+            0.6643
+          ],
+          [
+            "wiki_killer_common_offerings_fd8e722b7dec",
+            0.6621
+          ],
+          [
+            "killer_offering_001",
+            0.6615
+          ],
+          [
+            "killer_offering_005",
+            0.6606
+          ],
+          [
+            "killer_offering_007",
+            0.6562
+          ],
+          [
+            "killer_offering_038",
+            0.6561
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 10,
+        "x": 302,
+        "y": 307,
+        "radius": 34,
+        "state": "locked",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "wiki_killer_common_offerings_26031ccd7bf4",
+        "confidence": 0.7651,
+        "state_confidence": 0.78,
+        "candidates": [
+          [
+            "wiki_killer_common_offerings_26031ccd7bf4",
+            0.7651
+          ],
+          [
+            "killer_offering_050",
+            0.4704
+          ],
+          [
+            "killer_offering_016",
+            0.4199
+          ]
+        ],
+        "geometry_confidence": 0.683,
+        "icon_margin": 0.2947,
+        "match_reason": "low_glyph_score",
+        "rarity": "brown",
+        "glyph_score": 0.7651,
+        "ring": 2,
+        "angle": 314.1838760044144,
+        "content_radius": 40,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\010_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\010_normalized.png",
+        "contour_score": 0.8958,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.9984019176987615,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [
+          [
+            "wiki_killer_common_offerings_26031ccd7bf4",
+            0.7651
+          ],
+          [
+            "killer_offering_050",
+            0.4704
+          ],
+          [
+            "killer_offering_016",
+            0.4199
+          ],
+          [
+            "wiki_killer_dark_lord_addons_1fc74591f67d",
+            0.4182
+          ],
+          [
+            "killer_offering_047",
+            0.3832
+          ],
+          [
+            "wiki_killer_common_offerings_1b5343f5958e",
+            0.3803
+          ],
+          [
+            "killer_offering_051",
+            0.3789
+          ],
+          [
+            "killer_offering_026",
+            0.3753
+          ],
+          [
+            "wiki_killer_dark_lord_addons_91a238e129fd",
+            0.3746
+          ],
+          [
+            "wiki_killer_dark_lord_addons_d2075a7351a5",
+            0.3724
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "wiki_killer_common_offerings_26031ccd7bf4",
+            "glyph": 0.7651,
+            "contour": 0.8958,
+            "gradient": 0.7472
+          },
+          {
+            "id": "wiki_killer_dark_lord_addons_d2075a7351a5",
+            "glyph": 0.3724,
+            "contour": 0.4839,
+            "gradient": 0.4926
+          },
+          {
+            "id": "killer_offering_026",
+            "glyph": 0.3753,
+            "contour": 0.5294,
+            "gradient": 0.4651
+          },
+          {
+            "id": "wiki_killer_dark_lord_addons_1fc74591f67d",
+            "glyph": 0.4182,
+            "contour": 0.6134,
+            "gradient": 0.4169
+          },
+          {
+            "id": "wiki_killer_common_offerings_1b5343f5958e",
+            "glyph": 0.3803,
+            "contour": 0.5881,
+            "gradient": 0.4127
+          },
+          {
+            "id": "killer_offering_016",
+            "glyph": 0.4199,
+            "contour": 0.4447,
+            "gradient": 0.3839
+          },
+          {
+            "id": "killer_offering_047",
+            "glyph": 0.3832,
+            "contour": 0.572,
+            "gradient": 0.3787
+          },
+          {
+            "id": "wiki_killer_dark_lord_addons_91a238e129fd",
+            "glyph": 0.3746,
+            "contour": 0.5265,
+            "gradient": 0.3744
+          },
+          {
+            "id": "killer_offering_050",
+            "glyph": 0.4704,
+            "contour": 0.5764,
+            "gradient": 0.365
+          },
+          {
+            "id": "killer_offering_051",
+            "glyph": 0.3789,
+            "contour": 0.5633,
+            "gradient": 0.2989
+          }
+        ],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 11,
+        "x": 479,
+        "y": 833,
+        "radius": 34,
+        "state": "locked",
+        "type": "perk",
+        "icon_id": null,
+        "candidate_id": null,
+        "confidence": 0.0,
+        "state_confidence": 0.78,
+        "candidates": [],
+        "geometry_confidence": 0.684,
+        "icon_margin": 0.0,
+        "match_reason": "suspected_perk",
+        "rarity": "blue",
+        "glyph_score": 0.0,
+        "ring": 3,
+        "angle": 180.16231055593667,
+        "content_radius": 40,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\011_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\011_normalized.png",
+        "contour_score": 0.0,
+        "category_hint": "perk",
+        "category_confidence": 0.95,
+        "category_candidates": [
+          "perk"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.0,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 12,
+        "x": 310,
+        "y": 786,
+        "radius": 44,
+        "state": "locked",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "killer_offering_012",
+        "confidence": 0.5635,
+        "state_confidence": 0.78,
+        "candidates": [
+          [
+            "killer_offering_012",
+            0.5635
+          ],
+          [
+            "killer_offering_031",
+            0.5275
+          ],
+          [
+            "wiki_killer_dark_lord_addons_1fc74591f67d",
+            0.486
+          ]
+        ],
+        "geometry_confidence": 0.73,
+        "icon_margin": 0.0359,
+        "match_reason": "contour_mismatch",
+        "rarity": "brown",
+        "glyph_score": 0.5635,
+        "ring": 3,
+        "angle": 209.05460409907715,
+        "content_radius": 44,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\012_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\012_normalized.png",
+        "contour_score": 0.4931,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.9591509811774129,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [
+          [
+            "killer_offering_012",
+            0.5635
+          ],
+          [
+            "killer_offering_031",
+            0.5275
+          ],
+          [
+            "wiki_killer_dark_lord_addons_1fc74591f67d",
+            0.486
+          ],
+          [
+            "wiki_killer_dark_lord_addons_91a238e129fd",
+            0.4742
+          ],
+          [
+            "wiki_killer_common_offerings_5e435a47f246",
+            0.4719
+          ],
+          [
+            "killer_offering_010",
+            0.4473
+          ],
+          [
+            "wiki_killer_dark_lord_addons_227efd908ac1",
+            0.4455
+          ],
+          [
+            "killer_offering_011",
+            0.4401
+          ],
+          [
+            "killer_offering_026",
+            0.4314
+          ],
+          [
+            "killer_offering_009",
+            0.4313
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "wiki_killer_dark_lord_addons_1fc74591f67d",
+            "glyph": 0.486,
+            "contour": 0.4748,
+            "gradient": 0.4516
+          },
+          {
+            "id": "killer_offering_031",
+            "glyph": 0.5275,
+            "contour": 0.5019,
+            "gradient": 0.4223
+          },
+          {
+            "id": "killer_offering_010",
+            "glyph": 0.4473,
+            "contour": 0.5295,
+            "gradient": 0.4111
+          },
+          {
+            "id": "wiki_killer_dark_lord_addons_227efd908ac1",
+            "glyph": 0.4455,
+            "contour": 0.4715,
+            "gradient": 0.4035
+          },
+          {
+            "id": "killer_offering_026",
+            "glyph": 0.4314,
+            "contour": 0.4182,
+            "gradient": 0.3993
+          },
+          {
+            "id": "killer_offering_011",
+            "glyph": 0.4401,
+            "contour": 0.5408,
+            "gradient": 0.3914
+          },
+          {
+            "id": "killer_offering_009",
+            "glyph": 0.4313,
+            "contour": 0.5268,
+            "gradient": 0.3856
+          },
+          {
+            "id": "killer_offering_012",
+            "glyph": 0.5635,
+            "contour": 0.4931,
+            "gradient": 0.3637
+          },
+          {
+            "id": "wiki_killer_common_offerings_5e435a47f246",
+            "glyph": 0.4719,
+            "contour": 0.4239,
+            "gradient": 0.324
+          },
+          {
+            "id": "wiki_killer_dark_lord_addons_91a238e129fd",
+            "glyph": 0.4742,
+            "contour": 0.3706,
+            "gradient": 0.3097
+          }
+        ],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 13,
+        "x": 384,
+        "y": 896,
+        "radius": 38,
+        "state": "locked",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "killer_offering_036",
+        "confidence": 0.3807,
+        "state_confidence": 0.78,
+        "candidates": [
+          [
+            "killer_offering_036",
+            0.3807
+          ],
+          [
+            "killer_offering_041",
+            0.3764
+          ],
+          [
+            "wiki_killer_dark_lord_addons_341e99ae6cb2",
+            0.3727
+          ]
+        ],
+        "geometry_confidence": 0.694,
+        "icon_margin": 0.0043,
+        "match_reason": "contour_mismatch",
+        "rarity": "brown",
+        "glyph_score": 0.3807,
+        "ring": 4,
+        "angle": 192.9946167919165,
+        "content_radius": 40,
+        "crop_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\013_original.png",
+        "normalized_path": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route_nodes\\013_normalized.png",
+        "contour_score": 0.4801,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.719768283852281,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [
+          [
+            "killer_offering_036",
+            0.3807
+          ],
+          [
+            "killer_offering_041",
+            0.3764
+          ],
+          [
+            "wiki_killer_dark_lord_addons_341e99ae6cb2",
+            0.3727
+          ],
+          [
+            "wiki_killer_dark_lord_addons_f7021af239b8",
+            0.3721
+          ],
+          [
+            "killer_offering_028",
+            0.3636
+          ],
+          [
+            "wiki_killer_dark_lord_addons_a69e8b1cf563",
+            0.3464
+          ],
+          [
+            "killer_offering_021",
+            0.3419
+          ],
+          [
+            "killer_offering_031",
+            0.3359
+          ],
+          [
+            "killer_offering_044",
+            0.3295
+          ],
+          [
+            "killer_offering_033",
+            0.3279
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "wiki_killer_dark_lord_addons_a69e8b1cf563",
+            "glyph": 0.3464,
+            "contour": 0.442,
+            "gradient": 0.4279
+          },
+          {
+            "id": "killer_offering_021",
+            "glyph": 0.3419,
+            "contour": 0.3775,
+            "gradient": 0.2958
+          },
+          {
+            "id": "killer_offering_031",
+            "glyph": 0.3359,
+            "contour": 0.5678,
+            "gradient": 0.2849
+          },
+          {
+            "id": "killer_offering_044",
+            "glyph": 0.3295,
+            "contour": 0.4015,
+            "gradient": 0.2826
+          },
+          {
+            "id": "killer_offering_033",
+            "glyph": 0.3279,
+            "contour": 0.446,
+            "gradient": 0.2462
+          },
+          {
+            "id": "killer_offering_041",
+            "glyph": 0.3764,
+            "contour": 0.6174,
+            "gradient": 0.2449
+          },
+          {
+            "id": "wiki_killer_dark_lord_addons_341e99ae6cb2",
+            "glyph": 0.3727,
+            "contour": 0.4596,
+            "gradient": 0.2444
+          },
+          {
+            "id": "wiki_killer_dark_lord_addons_f7021af239b8",
+            "glyph": 0.3721,
+            "contour": 0.4939,
+            "gradient": 0.2378
+          },
+          {
+            "id": "killer_offering_036",
+            "glyph": 0.3807,
+            "contour": 0.4801,
+            "gradient": 0.1905
+          },
+          {
+            "id": "killer_offering_028",
+            "glyph": 0.3636,
+            "contour": 0.5284,
+            "gradient": 0.1846
+          }
+        ],
+        "recognition_method": "glyph"
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        11,
+        13
+      ]
+    ],
+    "level": 15,
+    "confidence": 0.84,
+    "safe_to_automate": false,
+    "diagnostics": [
+      "static_read_only",
+      "level_ocr_unavailable",
+      "uncertain_icons:5"
+    ],
+    "ok_box": null,
+    "source": "live_game",
+    "debug_image": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route.png",
+    "analysis_id": "1792154120664796600_6c9ea60b",
+    "details": {
+      "candidates": [
+        {
+          "circle": [
+            480,
+            603,
+            40
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 156.0,
+          "red": 0.0,
+          "gold": 0.9166666666666666
+        },
+        {
+          "circle": [
+            479,
+            358,
+            39
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 222.0,
+          "red": 0.0,
+          "gold": 0.8541666666666666
+        },
+        {
+          "circle": [
+            585,
+            542,
+            40
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 223.0,
+          "red": 0.0,
+          "gold": 1.0
+        },
+        {
+          "circle": [
+            375,
+            419,
+            40
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 218.20000000000005,
+          "red": 0.0,
+          "gold": 0.9375
+        },
+        {
+          "circle": [
+            585,
+            419,
+            39
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 224.0,
+          "red": 0.0,
+          "gold": 0.8229166666666666
+        },
+        {
+          "circle": [
+            302,
+            307,
+            34
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 73.0,
+          "red": 0.0,
+          "gold": 0.010416666666666666
+        },
+        {
+          "circle": [
+            375,
+            542,
+            35
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 217.0,
+          "red": 0.0,
+          "gold": 0.8020833333333334
+        },
+        {
+          "circle": [
+            886,
+            865,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            863,
+            807,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            895,
+            747,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            789,
+            841,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            833,
+            758,
+            55
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 44.0,
+          "red": 0.65625,
+          "gold": 0.052083333333333336
+        },
+        {
+          "circle": [
+            420,
+            716,
+            41
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 110.0,
+          "red": 0.0,
+          "gold": 0.21875
+        },
+        {
+          "circle": [
+            805,
+            657,
+            55
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 109.0,
+          "red": 0.3229166666666667,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            409,
+            816,
+            54
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 45.0,
+          "red": 0.16666666666666666,
+          "gold": 0.28125
+        },
+        {
+          "circle": [
+            479,
+            833,
+            34
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 111.0,
+          "red": 0.03125,
+          "gold": 0.041666666666666664
+        },
+        {
+          "circle": [
+            775,
+            769,
+            55
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 65.0,
+          "red": 0.4479166666666667,
+          "gold": 0.020833333333333332
+        },
+        {
+          "circle": [
+            501,
+            751,
+            55
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 62.0,
+          "red": 0.020833333333333332,
+          "gold": 0.13541666666666666
+        },
+        {
+          "circle": [
+            870,
+            659,
+            55
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 40.0,
+          "red": 0.46875,
+          "gold": 0.03125
+        },
+        {
+          "circle": [
+            310,
+            786,
+            44
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 113.0,
+          "red": 0.03125,
+          "gold": 0.28125
+        },
+        {
+          "circle": [
+            161,
+            887,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            221,
+            876,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            719,
+            542,
+            41
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 112.0,
+          "red": 0.0,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            481,
+            694,
+            55
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 43.0,
+          "red": 0.0,
+          "gold": 0.3333333333333333
+        },
+        {
+          "circle": [
+            238,
+            545,
+            38
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 91.0,
+          "red": 0.0,
+          "gold": 0.0625
+        },
+        {
+          "circle": [
+            67,
+            826,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            758,
+            691,
+            54
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 41.0,
+          "red": 0.22916666666666666,
+          "gold": 0.15625
+        },
+        {
+          "circle": [
+            162,
+            64,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            573,
+            859,
+            55
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 51.0,
+          "red": 0.09375,
+          "gold": 0.10416666666666667
+        },
+        {
+          "circle": [
+            829,
+            885,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            128,
+            817,
+            53
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            921,
+            806,
+            47
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            332,
+            851,
+            55
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 51.0,
+          "red": 0.15625,
+          "gold": 0.1875
+        },
+        {
+          "circle": [
+            443,
+            544,
+            43
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            709,
+            821,
+            53
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 73.0,
+          "red": 0.052083333333333336,
+          "gold": 0.041666666666666664
+        },
+        {
+          "circle": [
+            841,
+            609,
+            54
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 49.0,
+          "red": 0.125,
+          "gold": 0.052083333333333336
+        },
+        {
+          "circle": [
+            412,
+            894,
+            52
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 83.0,
+          "red": 0.2604166666666667,
+          "gold": 0.08333333333333333
+        },
+        {
+          "circle": [
+            545,
+            799,
+            52
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 65.0,
+          "red": 0.09375,
+          "gold": 0.125
+        },
+        {
+          "circle": [
+            516,
+            557,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            516,
+            411,
+            44
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            208,
+            809,
+            54
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 70.0,
+          "red": 0.09375,
+          "gold": 0.3020833333333333
+        },
+        {
+          "circle": [
+            313,
+            914,
+            49
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            939,
+            886,
+            54
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            45,
+            886,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            412,
+            480,
+            37
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            443,
+            411,
+            43
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            553,
+            480,
+            44
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            853,
+            117,
+            38
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            868,
+            559,
+            53
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 68.0,
+          "red": 0.53125,
+          "gold": 0.052083333333333336
+        },
+        {
+          "circle": [
+            796,
+            574,
+            52
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 37.0,
+          "red": 0.17708333333333334,
+          "gold": 0.03125
+        },
+        {
+          "circle": [
+            931,
+            657,
+            53
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            684,
+            890,
+            50
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            105,
+            912,
+            43
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            909,
+            601,
+            38
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 61.0,
+          "red": 0.14583333333333334,
+          "gold": 0.14583333333333334
+        },
+        {
+          "circle": [
+            481,
+            480,
+            36
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            695,
+            747,
+            42
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 25.0,
+          "red": 0.17708333333333334,
+          "gold": 0.13541666666666666
+        },
+        {
+          "circle": [
+            518,
+            886,
+            55
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 52.0,
+          "red": 0.16666666666666666,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            713,
+            614,
+            55
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 19.0,
+          "red": 0.0,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            277,
+            870,
+            36
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 51.0,
+          "red": 0.08333333333333333,
+          "gold": 0.2604166666666667
+        },
+        {
+          "circle": [
+            332,
+            707,
+            53
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 36.0,
+          "red": 0.0,
+          "gold": 0.03125
+        },
+        {
+          "circle": [
+            309,
+            584,
+            43
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 11.0,
+          "red": 0.0,
+          "gold": 0.13541666666666666
+        },
+        {
+          "circle": [
+            254,
+            925,
+            32
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            893,
+            497,
+            34
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 42.0,
+          "red": 0.5416666666666666,
+          "gold": 0.010416666666666666
+        },
+        {
+          "circle": [
+            201,
+            752,
+            41
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 41.0,
+          "red": 0.03125,
+          "gold": 0.052083333333333336
+        },
+        {
+          "circle": [
+            571,
+            727,
+            41
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 43.0,
+          "red": 0.0,
+          "gold": 0.16666666666666666
+        },
+        {
+          "circle": [
+            892,
+            922,
+            30
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            361,
+            755,
+            31
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 28.0,
+          "red": 0.0,
+          "gold": 0.2916666666666667
+        },
+        {
+          "circle": [
+            895,
+            897,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            900,
+            824,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            837,
+            775,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            905,
+            722,
+            52
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            870,
+            551,
+            55
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 50.0,
+          "red": 0.5,
+          "gold": 0.11458333333333333
+        },
+        {
+          "circle": [
+            842,
+            839,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            893,
+            491,
+            47
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 43.0,
+          "red": 0.4791666666666667,
+          "gold": 0.09375
+        },
+        {
+          "circle": [
+            817,
+            892,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            945,
+            769,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            832,
+            703,
+            55
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 65.0,
+          "red": 0.46875,
+          "gold": 0.0625
+        },
+        {
+          "circle": [
+            879,
+            656,
+            55
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 51.0,
+          "red": 0.4895833333333333,
+          "gold": 0.010416666666666666
+        },
+        {
+          "circle": [
+            780,
+            760,
+            55
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 52.0,
+          "red": 0.46875,
+          "gold": 0.052083333333333336
+        },
+        {
+          "circle": [
+            476,
+            481,
+            33
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            789,
+            816,
+            41
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            958,
+            867,
+            49
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            146,
+            824,
+            31
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            190,
+            898,
+            55
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            868,
+            948,
+            54
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            122,
+            881,
+            46
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            760,
+            873,
+            49
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            805,
+            494,
+            55
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 23.0,
+          "red": 0.20833333333333334,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            745,
+            667,
+            50
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 33.0,
+          "red": 0.3125,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            958,
+            701,
+            33
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            424,
+            846,
+            47
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 68.0,
+          "red": 0.22916666666666666,
+          "gold": 0.2916666666666667
+        },
+        {
+          "circle": [
+            945,
+            925,
+            31
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            954,
+            524,
+            44
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            568,
+            870,
+            44
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 61.0,
+          "red": 0.16666666666666666,
+          "gold": 0.020833333333333332
+        },
+        {
+          "circle": [
+            933,
+            637,
+            53
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            723,
+            753,
+            54
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 34.0,
+          "red": 0.2604166666666667,
+          "gold": 0.08333333333333333
+        },
+        {
+          "circle": [
+            818,
+            587,
+            39
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 43.0,
+          "red": 0.2604166666666667,
+          "gold": 0.0625
+        },
+        {
+          "circle": [
+            384,
+            896,
+            38
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 68.60000000000002,
+          "red": 0.2916666666666667,
+          "gold": 0.09375
+        },
+        {
+          "circle": [
+            243,
+            923,
+            44
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            438,
+            925,
+            46
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            340,
+            859,
+            41
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 48.0,
+          "red": 0.1875,
+          "gold": 0.20833333333333334
+        },
+        {
+          "circle": [
+            516,
+            430,
+            46
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            406,
+            474,
+            43
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            441,
+            424,
+            39
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            65,
+            802,
+            30
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            540,
+            769,
+            46
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 44.0,
+          "red": 0.09375,
+          "gold": 0.25
+        }
+      ],
+      "center": [
+        480,
+        480,
+        45
+      ],
+      "geometry_channels_reused": 0,
+      "gold_radius_corrections": [],
+      "node_validation": [
+        {
+          "x": 302,
+          "y": 307,
+          "radius": 34,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": false,
+          "origin": [
+            302,
+            307
+          ],
+          "stable": false,
+          "valley": 0.5520833333333334,
+          "regular": 0.9895833333333334,
+          "dark_ring": 0.5416666666666666,
+          "opposite_dark": 0.25,
+          "reason": "game_frame_and_structure"
+        },
+        {
+          "x": 479,
+          "y": 358,
+          "radius": 39,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": true,
+          "origin": [
+            479,
+            358
+          ],
+          "stable": false,
+          "valley": 0.6145833333333334,
+          "regular": 0.9895833333333334,
+          "dark_ring": 0.90625,
+          "opposite_dark": 0.8125,
+          "reason": "game_frame_and_structure"
+        },
+        {
+          "x": 375,
+          "y": 419,
+          "radius": 40,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": true,
+          "origin": [
+            375,
+            419
+          ],
+          "stable": false,
+          "valley": 0.6145833333333334,
+          "regular": 0.9895833333333334,
+          "dark_ring": 0.875,
+          "opposite_dark": 0.75,
+          "reason": "game_frame_and_structure"
+        },
+        {
+          "x": 585,
+          "y": 419,
+          "radius": 39,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": true,
+          "origin": [
+            585,
+            419
+          ],
+          "stable": false,
+          "valley": 0.4166666666666667,
+          "regular": 0.9791666666666666,
+          "dark_ring": 0.8854166666666666,
+          "opposite_dark": 0.7708333333333334,
+          "reason": "game_frame_and_structure"
+        },
+        {
+          "x": 238,
+          "y": 545,
+          "radius": 38,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": true,
+          "origin": [
+            238,
+            545
+          ],
+          "stable": false,
+          "valley": 0.3645833333333333,
+          "regular": 0.8645833333333334,
+          "dark_ring": 0.2708333333333333,
+          "opposite_dark": 0.0625,
+          "reason": "game_frame_and_structure"
+        },
+        {
+          "x": 375,
+          "y": 542,
+          "radius": 35,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": true,
+          "origin": [
+            375,
+            542
+          ],
+          "stable": false,
+          "valley": 0.6666666666666666,
+          "regular": 0.9791666666666666,
+          "dark_ring": 0.9166666666666666,
+          "opposite_dark": 0.8333333333333334,
+          "reason": "game_frame_and_structure"
+        },
+        {
+          "x": 585,
+          "y": 542,
+          "radius": 40,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": true,
+          "origin": [
+            585,
+            542
+          ],
+          "stable": false,
+          "valley": 0.6770833333333334,
+          "regular": 1.0,
+          "dark_ring": 1.0,
+          "opposite_dark": 1.0,
+          "reason": "game_frame_and_structure"
+        },
+        {
+          "x": 719,
+          "y": 542,
+          "radius": 41,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": true,
+          "origin": [
+            719,
+            542
+          ],
+          "stable": false,
+          "valley": 0.3229166666666667,
+          "regular": 0.4895833333333333,
+          "dark_ring": 0.4479166666666667,
+          "opposite_dark": 0.16666666666666666,
+          "reason": "game_frame_and_structure"
+        },
+        {
+          "x": 868,
+          "y": 559,
+          "radius": 53,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            868,
+            559
+          ],
+          "stable": false,
+          "valley": 0.17708333333333334,
+          "regular": 0.5520833333333334,
+          "dark_ring": 0.041666666666666664,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 480,
+          "y": 603,
+          "radius": 40,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": true,
+          "origin": [
+            480,
+            603
+          ],
+          "stable": false,
+          "valley": 0.4895833333333333,
+          "regular": 0.9895833333333334,
+          "dark_ring": 0.8229166666666666,
+          "opposite_dark": 0.7916666666666666,
+          "reason": "game_frame_and_structure"
+        },
+        {
+          "x": 818,
+          "y": 587,
+          "radius": 39,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            818,
+            587
+          ],
+          "stable": false,
+          "valley": 0.19791666666666666,
+          "regular": 0.4479166666666667,
+          "dark_ring": 0.0625,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 909,
+          "y": 601,
+          "radius": 38,
+          "accepted": false,
+          "connected": true,
+          "tile_polygon": false,
+          "origin": [
+            909,
+            601
+          ],
+          "stable": false,
+          "valley": 0.13541666666666666,
+          "regular": 0.5833333333333334,
+          "dark_ring": 0.03125,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 758,
+          "y": 691,
+          "radius": 54,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            758,
+            691
+          ],
+          "stable": false,
+          "valley": 0.1875,
+          "regular": 0.5,
+          "dark_ring": 0.09375,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 805,
+          "y": 657,
+          "radius": 55,
+          "accepted": false,
+          "connected": true,
+          "tile_polygon": false,
+          "origin": [
+            805,
+            657
+          ],
+          "stable": false,
+          "valley": 0.20833333333333334,
+          "regular": 0.5208333333333334,
+          "dark_ring": 0.07291666666666667,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 832,
+          "y": 703,
+          "radius": 55,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            832,
+            703
+          ],
+          "stable": false,
+          "valley": 0.20833333333333334,
+          "regular": 0.5625,
+          "dark_ring": 0.0625,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 361,
+          "y": 755,
+          "radius": 31,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            361,
+            755
+          ],
+          "stable": false,
+          "valley": 0.13541666666666666,
+          "regular": 0.5729166666666666,
+          "dark_ring": 0.125,
+          "opposite_dark": 0.0625,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 420,
+          "y": 716,
+          "radius": 41,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": false,
+          "origin": [
+            420,
+            716
+          ],
+          "stable": false,
+          "valley": 0.34375,
+          "regular": 0.8125,
+          "dark_ring": 0.5104166666666666,
+          "opposite_dark": 0.22916666666666666,
+          "reason": "game_frame_and_structure"
+        },
+        {
+          "x": 501,
+          "y": 751,
+          "radius": 55,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            501,
+            751
+          ],
+          "stable": false,
+          "valley": 0.23958333333333334,
+          "regular": 0.6458333333333334,
+          "dark_ring": 0.10416666666666667,
+          "opposite_dark": 0.041666666666666664,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 571,
+          "y": 727,
+          "radius": 41,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            571,
+            727
+          ],
+          "stable": false,
+          "valley": 0.17708333333333334,
+          "regular": 0.5208333333333334,
+          "dark_ring": 0.03125,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 775,
+          "y": 769,
+          "radius": 55,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            775,
+            769
+          ],
+          "stable": false,
+          "valley": 0.20833333333333334,
+          "regular": 0.6875,
+          "dark_ring": 0.0625,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 208,
+          "y": 809,
+          "radius": 54,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            208,
+            809
+          ],
+          "stable": false,
+          "valley": 0.15625,
+          "regular": 0.6354166666666666,
+          "dark_ring": 0.23958333333333334,
+          "opposite_dark": 0.08333333333333333,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 310,
+          "y": 786,
+          "radius": 44,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            310,
+            786
+          ],
+          "stable": false,
+          "valley": 0.2604166666666667,
+          "regular": 0.5625,
+          "dark_ring": 0.3229166666666667,
+          "opposite_dark": 0.0625,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 479,
+          "y": 833,
+          "radius": 34,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": false,
+          "origin": [
+            479,
+            833
+          ],
+          "stable": false,
+          "valley": 0.4166666666666667,
+          "regular": 0.7395833333333334,
+          "dark_ring": 0.375,
+          "opposite_dark": 0.0625,
+          "reason": "game_frame_and_structure"
+        },
+        {
+          "x": 545,
+          "y": 799,
+          "radius": 52,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            545,
+            799
+          ],
+          "stable": false,
+          "valley": 0.19791666666666666,
+          "regular": 0.5520833333333334,
+          "dark_ring": 0.11458333333333333,
+          "opposite_dark": 0.020833333333333332,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 709,
+          "y": 821,
+          "radius": 53,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            709,
+            821
+          ],
+          "stable": false,
+          "valley": 0.16666666666666666,
+          "regular": 0.6666666666666666,
+          "dark_ring": 0.16666666666666666,
+          "opposite_dark": 0.020833333333333332,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 384,
+          "y": 896,
+          "radius": 38,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": true,
+          "origin": [
+            384,
+            896
+          ],
+          "stable": false,
+          "valley": 0.20833333333333334,
+          "regular": 0.6145833333333334,
+          "dark_ring": 0.2604166666666667,
+          "opposite_dark": 0.041666666666666664,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 424,
+          "y": 846,
+          "radius": 47,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            424,
+            846
+          ],
+          "stable": false,
+          "valley": 0.21875,
+          "regular": 0.6458333333333334,
+          "dark_ring": 0.1875,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 568,
+          "y": 870,
+          "radius": 44,
+          "accepted": false,
+          "connected": true,
+          "tile_polygon": false,
+          "origin": [
+            568,
+            870
+          ],
+          "stable": false,
+          "valley": 0.14583333333333334,
+          "regular": 0.6666666666666666,
+          "dark_ring": 0.23958333333333334,
+          "opposite_dark": 0.0625,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 310,
+          "y": 786,
+          "radius": 44,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": false,
+          "origin": [
+            310,
+            786
+          ],
+          "stable": false,
+          "valley": 0.2604166666666667,
+          "regular": 0.5625,
+          "dark_ring": 0.3229166666666667,
+          "opposite_dark": 0.0625,
+          "reason": "game_frame_and_structure"
+        },
+        {
+          "x": 384,
+          "y": 896,
+          "radius": 38,
+          "accepted": true,
+          "connected": true,
+          "tile_polygon": true,
+          "origin": [
+            384,
+            896
+          ],
+          "stable": false,
+          "valley": 0.20833333333333334,
+          "regular": 0.6145833333333334,
+          "dark_ring": 0.2604166666666667,
+          "opposite_dark": 0.041666666666666664,
+          "reason": "game_frame_and_structure"
+        }
+      ],
+      "analysis_mode": "full",
+      "full_reason": "initial_or_file",
+      "rejected_structure": [
+        {
+          "x": 868,
+          "y": 559,
+          "radius": 53,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            868,
+            559
+          ],
+          "stable": false,
+          "valley": 0.17708333333333334,
+          "regular": 0.5520833333333334,
+          "dark_ring": 0.041666666666666664,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 818,
+          "y": 587,
+          "radius": 39,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            818,
+            587
+          ],
+          "stable": false,
+          "valley": 0.19791666666666666,
+          "regular": 0.4479166666666667,
+          "dark_ring": 0.0625,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 909,
+          "y": 601,
+          "radius": 38,
+          "accepted": false,
+          "connected": true,
+          "tile_polygon": false,
+          "origin": [
+            909,
+            601
+          ],
+          "stable": false,
+          "valley": 0.13541666666666666,
+          "regular": 0.5833333333333334,
+          "dark_ring": 0.03125,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 758,
+          "y": 691,
+          "radius": 54,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            758,
+            691
+          ],
+          "stable": false,
+          "valley": 0.1875,
+          "regular": 0.5,
+          "dark_ring": 0.09375,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 805,
+          "y": 657,
+          "radius": 55,
+          "accepted": false,
+          "connected": true,
+          "tile_polygon": false,
+          "origin": [
+            805,
+            657
+          ],
+          "stable": false,
+          "valley": 0.20833333333333334,
+          "regular": 0.5208333333333334,
+          "dark_ring": 0.07291666666666667,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 832,
+          "y": 703,
+          "radius": 55,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            832,
+            703
+          ],
+          "stable": false,
+          "valley": 0.20833333333333334,
+          "regular": 0.5625,
+          "dark_ring": 0.0625,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 361,
+          "y": 755,
+          "radius": 31,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            361,
+            755
+          ],
+          "stable": false,
+          "valley": 0.13541666666666666,
+          "regular": 0.5729166666666666,
+          "dark_ring": 0.125,
+          "opposite_dark": 0.0625,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 501,
+          "y": 751,
+          "radius": 55,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            501,
+            751
+          ],
+          "stable": false,
+          "valley": 0.23958333333333334,
+          "regular": 0.6458333333333334,
+          "dark_ring": 0.10416666666666667,
+          "opposite_dark": 0.041666666666666664,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 571,
+          "y": 727,
+          "radius": 41,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            571,
+            727
+          ],
+          "stable": false,
+          "valley": 0.17708333333333334,
+          "regular": 0.5208333333333334,
+          "dark_ring": 0.03125,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 775,
+          "y": 769,
+          "radius": 55,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            775,
+            769
+          ],
+          "stable": false,
+          "valley": 0.20833333333333334,
+          "regular": 0.6875,
+          "dark_ring": 0.0625,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 208,
+          "y": 809,
+          "radius": 54,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            208,
+            809
+          ],
+          "stable": false,
+          "valley": 0.15625,
+          "regular": 0.6354166666666666,
+          "dark_ring": 0.23958333333333334,
+          "opposite_dark": 0.08333333333333333,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 310,
+          "y": 786,
+          "radius": 44,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            310,
+            786
+          ],
+          "stable": false,
+          "valley": 0.2604166666666667,
+          "regular": 0.5625,
+          "dark_ring": 0.3229166666666667,
+          "opposite_dark": 0.0625,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 545,
+          "y": 799,
+          "radius": 52,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            545,
+            799
+          ],
+          "stable": false,
+          "valley": 0.19791666666666666,
+          "regular": 0.5520833333333334,
+          "dark_ring": 0.11458333333333333,
+          "opposite_dark": 0.020833333333333332,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 709,
+          "y": 821,
+          "radius": 53,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            709,
+            821
+          ],
+          "stable": false,
+          "valley": 0.16666666666666666,
+          "regular": 0.6666666666666666,
+          "dark_ring": 0.16666666666666666,
+          "opposite_dark": 0.020833333333333332,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 384,
+          "y": 896,
+          "radius": 38,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": true,
+          "origin": [
+            384,
+            896
+          ],
+          "stable": false,
+          "valley": 0.20833333333333334,
+          "regular": 0.6145833333333334,
+          "dark_ring": 0.2604166666666667,
+          "opposite_dark": 0.041666666666666664,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 424,
+          "y": 846,
+          "radius": 47,
+          "accepted": false,
+          "connected": false,
+          "tile_polygon": false,
+          "origin": [
+            424,
+            846
+          ],
+          "stable": false,
+          "valley": 0.21875,
+          "regular": 0.6458333333333334,
+          "dark_ring": 0.1875,
+          "opposite_dark": 0.0,
+          "reason": "unproven_node_frame"
+        },
+        {
+          "x": 568,
+          "y": 870,
+          "radius": 44,
+          "accepted": false,
+          "connected": true,
+          "tile_polygon": false,
+          "origin": [
+            568,
+            870
+          ],
+          "stable": false,
+          "valley": 0.14583333333333334,
+          "regular": 0.6666666666666666,
+          "dark_ring": 0.23958333333333334,
+          "opposite_dark": 0.0625,
+          "reason": "unproven_node_frame"
+        }
+      ],
+      "bloodweb_memory": {
+        "generation": 1,
+        "role": "killer",
+        "character": "dark_lord",
+        "center": [
+          480,
+          480
+        ],
+        "route_plan": null,
+        "context": [
+          [
+            8980488,
+            17280,
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            96
+          ],
+          {
+            "x": 204,
+            "y": 82,
+            "width": 959,
+            "height": 959
+          },
+          [
+            959,
+            959,
+            3
+          ],
+          15
+        ],
+        "graph": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            11,
+            13
+          ]
+        ],
+        "identity_hits": 0,
+        "identity_misses": 12,
+        "full_reason": "invalidated",
+        "nodes": [
+          {
+            "local_id": 1,
+            "point": [
+              585,
+              419
+            ],
+            "fingerprint": "4e7b21a60512ee9e176ee5f8d883cbd52bb7c032c86e674b20e6633d542cdeed",
+            "observations": 1,
+            "relative": [
+              105,
+              -61
+            ],
+            "physical": [
+              789,
+              501
+            ],
+            "neighbors": [
+              0
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          },
+          {
+            "local_id": 2,
+            "point": [
+              585,
+              542
+            ],
+            "fingerprint": "17cb6582a0779c6c5254b3b371f45bf85f6ad2a22a81d0b0b8de271740e838a0",
+            "observations": 1,
+            "relative": [
+              105,
+              62
+            ],
+            "physical": [
+              789,
+              624
+            ],
+            "neighbors": [
+              0,
+              7
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          },
+          {
+            "local_id": 3,
+            "point": [
+              480,
+              603
+            ],
+            "fingerprint": "28053cf96fadbe5db85f89d4aa852da5e19a16312a3cc875b529061fa37fcc9c",
+            "observations": 1,
+            "relative": [
+              0,
+              123
+            ],
+            "physical": [
+              684,
+              685
+            ],
+            "neighbors": [
+              0,
+              8
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          },
+          {
+            "local_id": 4,
+            "point": [
+              375,
+              542
+            ],
+            "fingerprint": "d358b376cd4d285bb70e2ea4b0a8f1c9345a7b6ce0aee87abb1d1d64e17f1adb",
+            "observations": 1,
+            "relative": [
+              -105,
+              62
+            ],
+            "physical": [
+              579,
+              624
+            ],
+            "neighbors": [
+              0,
+              9
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          },
+          {
+            "local_id": 5,
+            "point": [
+              375,
+              419
+            ],
+            "fingerprint": "eb0665e618e1d041648cc46fdce462334bbd3e532f97b65c6d31456f04a54cbd",
+            "observations": 1,
+            "relative": [
+              -105,
+              -61
+            ],
+            "physical": [
+              579,
+              501
+            ],
+            "neighbors": [
+              0
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          },
+          {
+            "local_id": 6,
+            "point": [
+              479,
+              358
+            ],
+            "fingerprint": "21c6e8063f171abf17faa90d87cdd838ecaefda46274579487be825d592a9127",
+            "observations": 1,
+            "relative": [
+              -1,
+              -122
+            ],
+            "physical": [
+              683,
+              440
+            ],
+            "neighbors": [
+              0,
+              10
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          },
+          {
+            "local_id": 7,
+            "point": [
+              719,
+              542
+            ],
+            "fingerprint": "18643973bfcbd8fa6c1aed8b3139c586db50654f3ec00b9bae45c85604c107eb",
+            "observations": 1,
+            "relative": [
+              239,
+              62
+            ],
+            "physical": [
+              923,
+              624
+            ],
+            "neighbors": [
+              2
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          },
+          {
+            "local_id": 8,
+            "point": [
+              420,
+              716
+            ],
+            "fingerprint": "80bd6f5fd77a32a14f3896a442bc9a5a20720b0eaeb8a00648318c7e64f8afd9",
+            "observations": 1,
+            "relative": [
+              -60,
+              236
+            ],
+            "physical": [
+              624,
+              798
+            ],
+            "neighbors": [
+              3,
+              11,
+              12
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          },
+          {
+            "local_id": 9,
+            "point": [
+              238,
+              545
+            ],
+            "fingerprint": "00c84ceb3012df0ba362ebe9be2c6bd1f10271745ecb1901a284bce53c50d12e",
+            "observations": 1,
+            "relative": [
+              -242,
+              65
+            ],
+            "physical": [
+              442,
+              627
+            ],
+            "neighbors": [
+              4
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          },
+          {
+            "local_id": 10,
+            "point": [
+              302,
+              307
+            ],
+            "fingerprint": "a33fdbce8cb66b7fc12f278bc25cf92cc5338cc8833ca47e881e7e1de1979274",
+            "observations": 1,
+            "relative": [
+              -178,
+              -173
+            ],
+            "physical": [
+              506,
+              389
+            ],
+            "neighbors": [
+              6
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          },
+          {
+            "local_id": 11,
+            "point": [
+              479,
+              833
+            ],
+            "fingerprint": null,
+            "observations": 1,
+            "relative": [
+              -1,
+              353
+            ],
+            "physical": [
+              683,
+              915
+            ],
+            "neighbors": [
+              8,
+              13
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          },
+          {
+            "local_id": 12,
+            "point": [
+              310,
+              786
+            ],
+            "fingerprint": "c103870f2b1b0312768cefaa29921ab614711a878e03a055764aaa09448b2111",
+            "observations": 1,
+            "relative": [
+              -170,
+              306
+            ],
+            "physical": [
+              514,
+              868
+            ],
+            "neighbors": [
+              8
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          },
+          {
+            "local_id": 13,
+            "point": [
+              384,
+              896
+            ],
+            "fingerprint": "13a09b1f56209b7f6957391cb954ca32f6c3910c4eaef842babec8010c05a18f",
+            "observations": 1,
+            "relative": [
+              -96,
+              416
+            ],
+            "physical": [
+              588,
+              978
+            ],
+            "neighbors": [
+              11
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 108860.3712631
+          }
+        ]
+      },
+      "identity_cache_hits": 0,
+      "full_matcher_calls": 12,
+      "timings": {
+        "detector_center": 0.02227899999707006,
+        "detector_tooltip": 0.014881099996273406,
+        "geometry_cache_check": 2.1500003640539944e-05,
+        "detector_nodes": 0.17446390000986867,
+        "node_validation": 0.24193550000200048,
+        "detector_states": 0.03316130003076978,
+        "detector_icons": 0.1681081999995513,
+        "recognition_stage1": 0.11990129998594057,
+        "recognition_stage2": 0.029795299968100153,
+        "memory_update": 0.0015183999930741265,
+        "detector_graph": 0.027394499993533827,
+        "detector_other": 0.102101499971468,
+        "detector_total": 0.7843250000005355
+      },
+      "opening_counters": {
+        "full_scans": 1,
+        "quick_checks": 0,
+        "identity_reuses": 0,
+        "local_verifications": 0,
+        "aborts": {},
+        "active": false,
+        "persistent_route": {
+          "map_id": null,
+          "revision": 0,
+          "replans": 0,
+          "reuses": 0,
+          "reason": "initial",
+          "intent": "fast_level",
+          "priorities": [],
+          "remaining": [],
+          "expected_states": {},
+          "evidence_stamp": null,
+          "physical_points": {}
+        },
+        "local_library_matches": 0
+      },
+      "scan_kind": "FULL_SCAN",
+      "route_update": "ROUTE_REUSE",
+      "parent_analysis_id": "1792154119088842800_f2227fca"
+    },
+    "level_confidence": 0.9777777777777777
+  },
+  "frame": {
+    "window": {
+      "hwnd": 8980488,
+      "title": "DeadByDaylight  ",
+      "client": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "monitor": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "dpi": 96,
+      "foreground": true,
+      "pid": 17280
+    },
+    "roi": {
+      "x": 204,
+      "y": 82,
+      "width": 959,
+      "height": 959
+    },
+    "image_size": [
+      959,
+      959
+    ],
+    "provider": "mss",
+    "live": true,
+    "bloodpoints": 2270248,
+    "captured_at": 108860.3712631,
+    "visibility": {
+      "window": {
+        "hwnd": 8980488,
+        "title": "DeadByDaylight  ",
+        "client": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "monitor": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "dpi": 96,
+        "foreground": true,
+        "pid": 17280
+      },
+      "provider": "mss",
+      "roi": {
+        "x": 204,
+        "y": 82,
+        "width": 959,
+        "height": 959
+      },
+      "occlusions": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        }
+      ],
+      "center": [
+        684,
+        562,
+        40
+      ]
+    },
+    "level": 15,
+    "level_confidence": 0.9777777777777777,
+    "probe_only": false
+  },
+  "provenance": {
+    "report": "debug/actions/20261016_153515_296086b4.json",
+    "analysis": "debug\\analysis_runs\\1792154120664796600_6c9ea60b\\accepted_route.json",
+    "sha256": "6aa1d0bf3a2f2c854db3281ea9c1d76f9ee27e8472adb664db47e1958f913937",
+    "raw_sha256": "c307b651d31504a90c72e3d392c8a03140b93398237f26a72a28f44476bb893a"
+  }
+}

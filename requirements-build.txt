@@ -1,0 +1,10 @@
+# Release build environment (see README, "Building from source").
+# windows-capture pulls in opencv-python; replace it with opencv-python-headless after installing.
+PySide6-Essentials==6.12.0
+opencv-python-headless==5.0.0.93
+numpy==2.5.4
+mss==10.2.0
+windows-capture==2.0.1
+Pillow==12.3.0
+pyinstaller==6.22.3
+pyinstaller-hooks-contrib==2026.8

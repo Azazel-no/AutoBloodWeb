@@ -1,0 +1,171 @@
+{
+  "reviewed": true,
+  "source": "references/bloodweb/v56_early_center/native_source.png",
+  "source_sha256": "a3c6cd4bcbe6210226ec819fb8f996524291993785f09a441f231ae28051526b",
+  "box": [
+    660,
+    538,
+    49,
+    49
+  ],
+  "glyph": "references/bloodweb/v56_early_center/glyph.png",
+  "glyph_sha256": "d04f81a818cea6d8eae3f941df20686165d4ec3c3cd1b34aff3158fbbc2875bc",
+  "radius": 40,
+  "review": "Original MSS UNKNOWN level6 central web glyph, manually inspected full client; immutable pixel crop, not generated.",
+  "holdouts": [
+    {
+      "source": "debug/analysis_runs/1792255458834435400_da8bafaf/raw.png",
+      "sha256": "56f6969216039656081714ae12218b18a22f20a581ea6808107c68465257a49d",
+      "frame": {
+        "window": {
+          "hwnd": 1114786,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 6964
+        },
+        "roi": {
+          "x": 250,
+          "y": 128,
+          "width": 867,
+          "height": 867
+        },
+        "image_size": [
+          867,
+          867
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": 2738373,
+        "captured_at": 210184.4368104,
+        "visibility": {
+          "window": {
+            "hwnd": 1114786,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 6964
+          },
+          "provider": "mss",
+          "captured_at": 210184.4368104,
+          "roi": {
+            "x": 250,
+            "y": 128,
+            "width": 867,
+            "height": 867
+          },
+          "occlusions": [],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        },
+        "level": 6,
+        "level_confidence": 0.9928057553956835,
+        "probe_only": false
+      }
+    },
+    {
+      "source": "debug/analysis_runs/1792255459076778500_c76dbcc3/raw.png",
+      "sha256": "f17a1b8f586e96816da1d430b4338679b0f1a6e228237085f70d70f1ce015250",
+      "frame": {
+        "window": {
+          "hwnd": 1114786,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 6964
+        },
+        "roi": {
+          "x": 250,
+          "y": 128,
+          "width": 867,
+          "height": 867
+        },
+        "image_size": [
+          867,
+          867
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": 2738373,
+        "captured_at": 210198.6360034,
+        "visibility": {
+          "window": {
+            "hwnd": 1114786,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 6964
+          },
+          "provider": "mss",
+          "captured_at": 210198.6360034,
+          "roi": {
+            "x": 250,
+            "y": 128,
+            "width": 867,
+            "height": 867
+          },
+          "occlusions": [],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        },
+        "level": 6,
+        "level_confidence": 0.9928057553956835,
+        "probe_only": false
+      }
+    }
+  ]
+}

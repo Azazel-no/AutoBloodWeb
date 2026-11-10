@@ -1,0 +1,144 @@
+{
+  "sources": [
+    {
+      "path": "tests/fixtures/v43/raw_1791793636036233900.png",
+      "sha256": "30e3b762700df0eba2e33a7b660c0fb88573ba42226a666016873b86219c1fff"
+    },
+    {
+      "path": "tests/fixtures/v43/raw_1791793637282311600.png",
+      "sha256": "1d7b044708bacc0346ee57d2235bc526855a965cc2557b9ef374351b8d3fcb95"
+    },
+    {
+      "path": "tests/fixtures/v43/raw_1791793638503755300.png",
+      "sha256": "e6ac7a59107f797ced26e5f4d5f3ced7eea24edcc94494423c6f92ce915fa9f9"
+    },
+    {
+      "path": "tests/fixtures/v43/raw_1791793639688910800.png",
+      "sha256": "9a0b19a056174c1537fbeb2cfb96762b63f159cc2b835ba079fd78d495590562"
+    },
+    {
+      "path": "tests/fixtures/v43/raw_1791793640865731700.png",
+      "sha256": "e30dcf1499681665540932b0c94efbcbb273d71427ac46e1ab44cdf4410b46ba"
+    },
+    {
+      "path": "tests/fixtures/v43/raw_1791793642042083800.png",
+      "sha256": "8a3b694e6b38e57af945d74e27abf80b7599e28e4e8d955f101a82df921e6a71"
+    },
+    {
+      "path": "tests/fixtures/v43/purchase_after_latest_002.png",
+      "sha256": "e5146e05174019c35fc8ed93f71fafbc91a1caf0cd9a97e9db2b2127ac730455"
+    },
+    {
+      "path": "tests/fixtures/v43/purchase_after_latest_003.png",
+      "sha256": "021acada7c5b8f07a0c2a4e8d0e2893a597540bdf25fdce13e61e3a2496f56e0"
+    },
+    {
+      "path": "tests/fixtures/v43/purchase_before.png",
+      "sha256": "68595c99bf8e193e96d29bd72872864e412c8a0aefae7568dcbf845c23a57e6c"
+    }
+  ],
+  "notes": "Unmodified user MSS captures and actual purchase snapshots. Character/UI names in raw screenshots are preserved. No detector input labels.",
+  "live_annotation": {
+    "state": "bloodweb",
+    "tolerance": 20,
+    "nodes": [
+      [
+        684,
+        562,
+        "center",
+        null
+      ],
+      [
+        684,
+        439,
+        "purchased",
+        null
+      ],
+      [
+        788,
+        622,
+        "purchased",
+        "survivor_offering_059"
+      ],
+      [
+        684,
+        686,
+        "available",
+        "survivor_offering_057"
+      ],
+      [
+        579,
+        623,
+        "purchased",
+        "survivor_addon_006"
+      ],
+      [
+        579,
+        500,
+        "purchased",
+        null
+      ],
+      [
+        862,
+        390,
+        "available",
+        "survivor_item_008"
+      ],
+      [
+        758,
+        799,
+        "locked",
+        "survivor_offering_039"
+      ],
+      [
+        622,
+        799,
+        "available",
+        null
+      ],
+      [
+        444,
+        623,
+        "purchased",
+        null
+      ],
+      [
+        622,
+        329,
+        "available",
+        "survivor_item_019"
+      ],
+      [
+        684,
+        210,
+        "locked",
+        null
+      ],
+      [
+        500,
+        869,
+        "locked",
+        null
+      ],
+      [
+        373,
+        735,
+        "available",
+        "survivor_offering_050"
+      ],
+      [
+        505,
+        261,
+        "locked",
+        "survivor_offering_003"
+      ],
+      [
+        862,
+        869,
+        "absorbed",
+        null
+      ]
+    ],
+    "notes": "16 real slots including the Entity-enveloped lower-right node. 8 IDs visually checked against original user inventory; other IDs unlabelled, not guessed. Annotation is evaluation-only."
+  }
+}

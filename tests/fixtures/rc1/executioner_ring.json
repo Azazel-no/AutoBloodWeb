@@ -1,0 +1,1116 @@
+{
+  "probe": "debug/actions/20261104_222859_50761712/chain_probe_023/probe.json",
+  "probe_sha256": "1d2fc98815eef1537147a1c63b4f70bff6c53f625afa04d242247360580c88e3",
+  "before_source": "debug/actions/20261104_222859_50761712/chain_probe_023/clean.png",
+  "before_sha256": "8d549d380c49a52b82ff198f8e6be452567d5617e55a1dbadc285b44306bb5f5",
+  "scene": {
+    "window": {
+      "hwnd": 329140,
+      "title": "DeadByDaylight  ",
+      "client": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "monitor": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "dpi": 96,
+      "foreground": true,
+      "pid": 17072
+    },
+    "attempted": [
+      [
+        790,
+        624
+      ],
+      [
+        863,
+        736
+      ],
+      [
+        867,
+        881
+      ]
+    ],
+    "level": 42,
+    "level_confidence": 0.9757015109062195,
+    "captured_at": 12774.2753012,
+    "bp_before": 3845243,
+    "nodes": [
+      {
+        "point": [
+          684,
+          562
+        ],
+        "radius": 38,
+        "state": "center",
+        "icon": null
+      },
+      {
+        "point": [
+          684,
+          440
+        ],
+        "radius": 40,
+        "state": "available",
+        "icon": "wiki_killer_executioner_addons_d73e71c673ed"
+      },
+      {
+        "point": [
+          788,
+          500
+        ],
+        "radius": 40,
+        "state": "available",
+        "icon": "killer_offering_044"
+      },
+      {
+        "point": [
+          790,
+          624
+        ],
+        "radius": 33,
+        "state": "purchased",
+        "icon": null
+      },
+      {
+        "point": [
+          684,
+          685
+        ],
+        "radius": 35,
+        "state": "available",
+        "icon": "wiki_killer_executioner_addons_be9057a4615e"
+      },
+      {
+        "point": [
+          579,
+          624
+        ],
+        "radius": 40,
+        "state": "available",
+        "icon": "wiki_killer_executioner_addons_ddf728e55dd5"
+      },
+      {
+        "point": [
+          579,
+          500
+        ],
+        "radius": 40,
+        "state": "available",
+        "icon": "wiki_killer_executioner_addons_ddf728e55dd5"
+      },
+      {
+        "point": [
+          926,
+          501
+        ],
+        "radius": 39,
+        "state": "available",
+        "icon": "wiki_killer_executioner_addons_e853f7a940bb"
+      },
+      {
+        "point": [
+          925,
+          622
+        ],
+        "radius": 39,
+        "state": "available",
+        "icon": "wiki_killer_executioner_addons_173eb3719467"
+      },
+      {
+        "point": [
+          863,
+          736
+        ],
+        "radius": 40,
+        "state": "available",
+        "icon": "wiki_killer_executioner_addons_9d2a4829fba8"
+      },
+      {
+        "point": [
+          622,
+          796
+        ],
+        "radius": 35,
+        "state": "locked",
+        "icon": "wiki_killer_executioner_addons_1723f8929c42"
+      },
+      {
+        "point": [
+          443,
+          624
+        ],
+        "radius": 34,
+        "state": "locked",
+        "icon": "killer_offering_053"
+      },
+      {
+        "point": [
+          443,
+          498
+        ],
+        "radius": 41,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          994,
+          388
+        ],
+        "radius": 34,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          867,
+          881
+        ],
+        "radius": 48,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          684,
+          914
+        ],
+        "radius": 38,
+        "state": "locked",
+        "icon": "wiki_killer_executioner_addons_5fcd9ea0e6a8"
+      },
+      {
+        "point": [
+          372,
+          737
+        ],
+        "radius": 40,
+        "state": "locked",
+        "icon": "killer_offering_005"
+      },
+      {
+        "point": [
+          324,
+          562
+        ],
+        "radius": 39,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          373,
+          388
+        ],
+        "radius": 34,
+        "state": "locked",
+        "icon": null
+      }
+    ],
+    "pending": {
+      "point": [
+        867,
+        881
+      ],
+      "radius": 48,
+      "icon": null,
+      "chain": {
+        "map_id": "52e71f393783b196f0f2b3ff",
+        "map_revision": 1,
+        "available_start": 9,
+        "terminal": 14,
+        "ordered_nodes": [
+          9,
+          14
+        ],
+        "game_preview": [
+          9,
+          14
+        ],
+        "total_bp": 7250,
+        "priorities": [
+          "any_perk",
+          "killer_offering_002",
+          "killer_offering_014",
+          "killer_offering_042",
+          "wiki_killer_executioner_addons_ec5c196732f1",
+          "wiki_killer_executioner_addons_5dd4f8f133c2",
+          "wiki_killer_executioner_addons_b2454ccbbf4c",
+          "wiki_killer_executioner_addons_9d2a4829fba8",
+          "wiki_killer_executioner_addons_1723f8929c42",
+          "wiki_killer_executioner_addons_e853f7a940bb",
+          "wiki_killer_executioner_addons_0178ac94631c",
+          "wiki_killer_executioner_addons_60ecb31a9ec9",
+          "wiki_killer_executioner_addons_e3c0fbe1fe85"
+        ],
+        "risks": [
+          "entity_interruption_unverified"
+        ],
+        "blockers": [],
+        "preview_stamps": [
+          12773.2845753,
+          12773.6342367
+        ],
+        "physical_points": [
+          [
+            863,
+            736
+          ],
+          [
+            867,
+            881
+          ]
+        ],
+        "price_provenance": "e1ffbf8d8acc287cdf7e01b9984f8ff195fda2f01a9d704e0eeb3becba299b14",
+        "hover_points": [
+          [
+            867,
+            881
+          ],
+          [
+            867,
+            881
+          ]
+        ],
+        "expected_items": 2,
+        "intermediates": [
+          9
+        ],
+        "theoretical_saved_commands": 1
+      },
+      "operation_id": "70a8cbb20d2784c67467e5c8892d4817",
+      "chain_outcome": {
+        "confirmed": [],
+        "absorbed": [],
+        "unconfirmed": [
+          9,
+          14
+        ],
+        "red_observations": {
+          "9": 0,
+          "14": 0
+        },
+        "unexpected_purchases": [
+          [
+            864,
+            867
+          ]
+        ],
+        "reason": "chain_unexpected_purchase",
+        "automatic_retry": false,
+        "cancellation_verified": false
+      },
+      "chain_blocked_reason": "chain_unexpected_purchase"
+    },
+    "transition_glyphs": [
+      {
+        "point": [
+          684,
+          440
+        ],
+        "radius": 40,
+        "icon": "wiki_killer_executioner_addons_d73e71c673ed",
+        "score": 0.9213,
+        "contour": 0.8018,
+        "margin": 0.0697,
+        "geometry": 0.883,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      },
+      {
+        "point": [
+          788,
+          500
+        ],
+        "radius": 40,
+        "icon": "killer_offering_044",
+        "score": 0.9663,
+        "contour": 0.936,
+        "margin": 0.1219,
+        "geometry": 0.9,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      },
+      {
+        "point": [
+          790,
+          624
+        ],
+        "radius": 35,
+        "icon": "killer_offering_047",
+        "score": 0.9466,
+        "contour": 0.9827,
+        "margin": 0.3372,
+        "geometry": 0.9,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      },
+      {
+        "point": [
+          684,
+          685
+        ],
+        "radius": 35,
+        "icon": "wiki_killer_executioner_addons_be9057a4615e",
+        "score": 0.9367,
+        "contour": 0.8715,
+        "margin": 0.1435,
+        "geometry": 0.888,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      },
+      {
+        "point": [
+          579,
+          624
+        ],
+        "radius": 40,
+        "icon": "wiki_killer_executioner_addons_ddf728e55dd5",
+        "score": 0.9586,
+        "contour": 0.9056,
+        "margin": 0.0904,
+        "geometry": 0.883,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      },
+      {
+        "point": [
+          579,
+          500
+        ],
+        "radius": 40,
+        "icon": "wiki_killer_executioner_addons_ddf728e55dd5",
+        "score": 0.9586,
+        "contour": 0.9056,
+        "margin": 0.0904,
+        "geometry": 0.883,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      },
+      {
+        "point": [
+          926,
+          501
+        ],
+        "radius": 39,
+        "icon": "wiki_killer_executioner_addons_e853f7a940bb",
+        "score": 0.9406,
+        "contour": 0.9281,
+        "margin": 0.1392,
+        "geometry": 0.675,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      },
+      {
+        "point": [
+          925,
+          622
+        ],
+        "radius": 39,
+        "icon": "wiki_killer_executioner_addons_173eb3719467",
+        "score": 0.9622,
+        "contour": 0.9406,
+        "margin": 0.165,
+        "geometry": 0.674,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      },
+      {
+        "point": [
+          863,
+          736
+        ],
+        "radius": 40,
+        "icon": "wiki_killer_executioner_addons_9d2a4829fba8",
+        "score": 0.9304,
+        "contour": 0.9345,
+        "margin": 0.1531,
+        "geometry": 0.674,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      },
+      {
+        "point": [
+          622,
+          796
+        ],
+        "radius": 35,
+        "icon": "wiki_killer_executioner_addons_1723f8929c42",
+        "score": 0.978,
+        "contour": 0.9023,
+        "margin": 0.2426,
+        "geometry": 0.675,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      },
+      {
+        "point": [
+          443,
+          624
+        ],
+        "radius": 34,
+        "icon": "killer_offering_053",
+        "score": 0.9843,
+        "contour": 0.8645,
+        "margin": 0.0889,
+        "geometry": 0.674,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      },
+      {
+        "point": [
+          684,
+          914
+        ],
+        "radius": 38,
+        "icon": "wiki_killer_executioner_addons_5fcd9ea0e6a8",
+        "score": 0.9338,
+        "contour": 0.8637,
+        "margin": 0.11,
+        "geometry": 0.673,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      },
+      {
+        "point": [
+          372,
+          737
+        ],
+        "radius": 40,
+        "icon": "killer_offering_005",
+        "score": 0.9487,
+        "contour": 0.8916,
+        "margin": 0.2987,
+        "geometry": 0.673,
+        "stamp": 12767.4233733,
+        "conflicted": false
+      }
+    ]
+  },
+  "after": [
+    {
+      "source": "debug/rc1/executioner_20261104_2246/after_0.png",
+      "sha256": "53f100b7aa68aa75c7a110333bc8eccb10b12895df1cb9a1fc71d014da0d35be",
+      "frame": {
+        "window": {
+          "hwnd": 329140,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 17072
+        },
+        "roi": {
+          "x": 247,
+          "y": 125,
+          "width": 873,
+          "height": 873
+        },
+        "image_size": [
+          873,
+          873
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": 3837993,
+        "captured_at": 14041.8823391,
+        "visibility": {
+          "window": {
+            "hwnd": 329140,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 17072
+          },
+          "provider": "mss",
+          "captured_at": 14041.8823391,
+          "roi": {
+            "x": 247,
+            "y": 125,
+            "width": 873,
+            "height": 873
+          },
+          "occlusions": [],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        },
+        "level": 42,
+        "level_confidence": 0.9746745228767395,
+        "probe_only": false,
+        "pipeline": {
+          "mode": "FULL_SCENE_ANALYSIS",
+          "generation": 1,
+          "visual_version": "v59-pinned-ui-1",
+          "capture_seconds": 1.129773099999511,
+          "stats": {
+            "masked_full_copies": 0,
+            "roi_copies": 0,
+            "text_normalizations": 1,
+            "ui_candidate_searches": 2,
+            "ui_candidate_positions": 88,
+            "ui_exhaustive_searches": 2,
+            "center_global_searches": 1,
+            "detector_ui_reuses": 1,
+            "center_reuses": 1
+          }
+        },
+        "confirmation_only": false
+      },
+      "nodes": [
+        {
+          "id": 0,
+          "x": 437,
+          "y": 437,
+          "radius": 39,
+          "state": "center",
+          "type": "bloodweb_center",
+          "icon_id": null,
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.9
+        },
+        {
+          "id": 1,
+          "x": 542,
+          "y": 375,
+          "radius": 40,
+          "state": "available",
+          "type": "offering",
+          "icon_id": "killer_offering_044",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.9
+        },
+        {
+          "id": 2,
+          "x": 546,
+          "y": 503,
+          "radius": 28,
+          "state": "purchased",
+          "type": "unknown",
+          "icon_id": null,
+          "state_confidence": 0.93,
+          "geometry_confidence": 0.855
+        },
+        {
+          "id": 3,
+          "x": 437,
+          "y": 560,
+          "radius": 40,
+          "state": "available",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_be9057a4615e",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.883
+        },
+        {
+          "id": 4,
+          "x": 332,
+          "y": 499,
+          "radius": 40,
+          "state": "available",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_ddf728e55dd5",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.883
+        },
+        {
+          "id": 5,
+          "x": 332,
+          "y": 376,
+          "radius": 41,
+          "state": "available",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_ddf728e55dd5",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.873
+        },
+        {
+          "id": 6,
+          "x": 436,
+          "y": 315,
+          "radius": 35,
+          "state": "available",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_d73e71c673ed",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.888
+        },
+        {
+          "id": 7,
+          "x": 678,
+          "y": 376,
+          "radius": 40,
+          "state": "available",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_e853f7a940bb",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.883
+        },
+        {
+          "id": 8,
+          "x": 678,
+          "y": 498,
+          "radius": 35,
+          "state": "available",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_173eb3719467",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.888
+        },
+        {
+          "id": 9,
+          "x": 615,
+          "y": 609,
+          "radius": 31,
+          "state": "purchased",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_9d2a4829fba8",
+          "state_confidence": 0.93,
+          "geometry_confidence": 0.892
+        },
+        {
+          "id": 10,
+          "x": 373,
+          "y": 667,
+          "radius": 38,
+          "state": "locked",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_1723f8929c42",
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.675
+        },
+        {
+          "id": 11,
+          "x": 199,
+          "y": 498,
+          "radius": 41,
+          "state": "locked",
+          "type": "offering",
+          "icon_id": "killer_offering_053",
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.674
+        },
+        {
+          "id": 12,
+          "x": 196,
+          "y": 376,
+          "radius": 34,
+          "state": "locked",
+          "type": "unknown",
+          "icon_id": null,
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.673
+        },
+        {
+          "id": 13,
+          "x": 747,
+          "y": 262,
+          "radius": 34,
+          "state": "locked",
+          "type": "perk",
+          "icon_id": null,
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.674
+        },
+        {
+          "id": 14,
+          "x": 617,
+          "y": 742,
+          "radius": 31,
+          "state": "purchased",
+          "type": "perk",
+          "icon_id": null,
+          "state_confidence": 0.93,
+          "geometry_confidence": 0.859
+        },
+        {
+          "id": 15,
+          "x": 443,
+          "y": 799,
+          "radius": 49,
+          "state": "locked",
+          "type": "unknown",
+          "icon_id": null,
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.672
+        },
+        {
+          "id": 16,
+          "x": 128,
+          "y": 611,
+          "radius": 41,
+          "state": "locked",
+          "type": "offering",
+          "icon_id": "killer_offering_005",
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.673
+        },
+        {
+          "id": 17,
+          "x": 75,
+          "y": 438,
+          "radius": 41,
+          "state": "locked",
+          "type": "unknown",
+          "icon_id": null,
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.673
+        },
+        {
+          "id": 18,
+          "x": 123,
+          "y": 265,
+          "radius": 36,
+          "state": "absorbed",
+          "type": "perk",
+          "icon_id": null,
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.658
+        }
+      ],
+      "level": 42,
+      "level_confidence": 0.9746745228767395
+    },
+    {
+      "source": "debug/rc1/executioner_20261104_2246/after_1.png",
+      "sha256": "a34824876664f9c31c41d57c85b41ff52461291b0ef8da20376223c6f4b3a8e4",
+      "frame": {
+        "window": {
+          "hwnd": 329140,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 17072
+        },
+        "roi": {
+          "x": 247,
+          "y": 125,
+          "width": 873,
+          "height": 873
+        },
+        "image_size": [
+          873,
+          873
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": 3837993,
+        "captured_at": 14045.7344259,
+        "visibility": {
+          "window": {
+            "hwnd": 329140,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 17072
+          },
+          "provider": "mss",
+          "captured_at": 14045.7344259,
+          "roi": {
+            "x": 247,
+            "y": 125,
+            "width": 873,
+            "height": 873
+          },
+          "occlusions": [],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        },
+        "level": 42,
+        "level_confidence": 0.9777626991271973,
+        "probe_only": false,
+        "pipeline": {
+          "mode": "FAST_FRAME_CHECK",
+          "generation": 1,
+          "visual_version": "v59-pinned-ui-1",
+          "capture_seconds": 0.2140414999994391,
+          "stats": {
+            "masked_full_copies": 0,
+            "roi_copies": 0,
+            "text_normalizations": 1,
+            "ui_candidate_searches": 2,
+            "ui_candidate_positions": 93,
+            "ui_exhaustive_searches": 2,
+            "center_local_searches": 1,
+            "detector_ui_reuses": 1,
+            "center_reuses": 1
+          }
+        },
+        "confirmation_only": false
+      },
+      "nodes": [
+        {
+          "id": 0,
+          "x": 437,
+          "y": 437,
+          "radius": 39,
+          "state": "center",
+          "type": "bloodweb_center",
+          "icon_id": null,
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.9
+        },
+        {
+          "id": 1,
+          "x": 542,
+          "y": 375,
+          "radius": 40,
+          "state": "available",
+          "type": "offering",
+          "icon_id": "killer_offering_044",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.9
+        },
+        {
+          "id": 2,
+          "x": 546,
+          "y": 503,
+          "radius": 28,
+          "state": "purchased",
+          "type": "unknown",
+          "icon_id": null,
+          "state_confidence": 0.93,
+          "geometry_confidence": 0.855
+        },
+        {
+          "id": 3,
+          "x": 437,
+          "y": 560,
+          "radius": 35,
+          "state": "available",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_be9057a4615e",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.888
+        },
+        {
+          "id": 4,
+          "x": 332,
+          "y": 499,
+          "radius": 40,
+          "state": "available",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_ddf728e55dd5",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.883
+        },
+        {
+          "id": 5,
+          "x": 332,
+          "y": 376,
+          "radius": 41,
+          "state": "available",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_ddf728e55dd5",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.873
+        },
+        {
+          "id": 6,
+          "x": 436,
+          "y": 315,
+          "radius": 41,
+          "state": "available",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_d73e71c673ed",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.885
+        },
+        {
+          "id": 7,
+          "x": 678,
+          "y": 376,
+          "radius": 40,
+          "state": "available",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_e853f7a940bb",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.883
+        },
+        {
+          "id": 8,
+          "x": 678,
+          "y": 498,
+          "radius": 35,
+          "state": "available",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_173eb3719467",
+          "state_confidence": 0.9,
+          "geometry_confidence": 0.888
+        },
+        {
+          "id": 9,
+          "x": 615,
+          "y": 609,
+          "radius": 32,
+          "state": "purchased",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_9d2a4829fba8",
+          "state_confidence": 0.93,
+          "geometry_confidence": 0.892
+        },
+        {
+          "id": 10,
+          "x": 376,
+          "y": 672,
+          "radius": 35,
+          "state": "locked",
+          "type": "addon",
+          "icon_id": "wiki_killer_executioner_addons_1723f8929c42",
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.675
+        },
+        {
+          "id": 11,
+          "x": 199,
+          "y": 498,
+          "radius": 41,
+          "state": "locked",
+          "type": "offering",
+          "icon_id": "killer_offering_053",
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.674
+        },
+        {
+          "id": 12,
+          "x": 196,
+          "y": 376,
+          "radius": 34,
+          "state": "locked",
+          "type": "unknown",
+          "icon_id": null,
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.673
+        },
+        {
+          "id": 13,
+          "x": 749,
+          "y": 262,
+          "radius": 34,
+          "state": "locked",
+          "type": "perk",
+          "icon_id": null,
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.674
+        },
+        {
+          "id": 14,
+          "x": 617,
+          "y": 742,
+          "radius": 31,
+          "state": "purchased",
+          "type": "perk",
+          "icon_id": null,
+          "state_confidence": 0.93,
+          "geometry_confidence": 0.859
+        },
+        {
+          "id": 15,
+          "x": 443,
+          "y": 799,
+          "radius": 49,
+          "state": "locked",
+          "type": "unknown",
+          "icon_id": null,
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.672
+        },
+        {
+          "id": 16,
+          "x": 126,
+          "y": 611,
+          "radius": 35,
+          "state": "locked",
+          "type": "offering",
+          "icon_id": "killer_offering_005",
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.674
+        },
+        {
+          "id": 17,
+          "x": 75,
+          "y": 438,
+          "radius": 41,
+          "state": "locked",
+          "type": "unknown",
+          "icon_id": null,
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.673
+        },
+        {
+          "id": 18,
+          "x": 125,
+          "y": 263,
+          "radius": 33,
+          "state": "absorbed",
+          "type": "perk",
+          "icon_id": null,
+          "state_confidence": 0.78,
+          "geometry_confidence": 0.659
+        }
+      ],
+      "level": 42,
+      "level_confidence": 0.9777626991271973
+    }
+  ],
+  "input_commands": 0
+}

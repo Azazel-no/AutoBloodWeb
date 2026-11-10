@@ -1,0 +1,2270 @@
+{
+  "schema": 1,
+  "count": 165,
+  "approved": 123,
+  "review": [
+    {
+      "old_id": "killer_blight_addon_001",
+      "active_id": "killer_blight_addon_001",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/fab1aac78f0199d9d05c4925227188982dfb676e0fc58fbeb42f6ffa712c551a.png",
+          "wiki_id": "wiki_killer_blight_addons_fab1aac78f01",
+          "sha256": "fab1aac78f0199d9d05c4925227188982dfb676e0fc58fbeb42f6ffa712c551a",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_compoundThirtyThree.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_002",
+      "active_id": "killer_blight_addon_002",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/d37c4e6b6c7cf2292d5731d0d91813f8974f2a70d2e3c81a9d0f04ea781148e3.png",
+          "wiki_id": "wiki_killer_blight_addons_d37c4e6b6c7c",
+          "sha256": "d37c4e6b6c7cf2292d5731d0d91813f8974f2a70d2e3c81a9d0f04ea781148e3",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_iridescentBlightTag.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_003",
+      "active_id": "killer_blight_addon_003",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/ee8ad8bb1d31e82e82912630ffe9fbaa58104a8dafc9f8c1fd483ece22ff5fd4.png",
+          "wiki_id": "wiki_killer_blight_addons_ee8ad8bb1d31",
+          "sha256": "ee8ad8bb1d31e82e82912630ffe9fbaa58104a8dafc9f8c1fd483ece22ff5fd4",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_alchemistsRing.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_004",
+      "active_id": "killer_blight_addon_004",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/4c90085634a3f8b51a31f2d746b86dba70b6f8cd166793a79e77dab2119da27e.png",
+          "wiki_id": "wiki_killer_blight_addons_4c90085634a3",
+          "sha256": "4c90085634a3f8b51a31f2d746b86dba70b6f8cd166793a79e77dab2119da27e",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_soulChemical.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_005",
+      "active_id": "killer_blight_addon_005",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/709bf592f8e4c5278ee2622d6ad0067fa0708b2e8c14d87daeb9095480ddefcd.png",
+          "wiki_id": "wiki_killer_blight_addons_709bf592f8e4",
+          "sha256": "709bf592f8e4c5278ee2622d6ad0067fa0708b2e8c14d87daeb9095480ddefcd",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_summoningStone.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_006",
+      "active_id": "killer_blight_addon_006",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/e0670fe0ff147c7d30b8f683d74041839af052580b0bdb83ae4484d2e3477df9.png",
+          "wiki_id": "wiki_killer_blight_addons_e0670fe0ff14",
+          "sha256": "e0670fe0ff147c7d30b8f683d74041839af052580b0bdb83ae4484d2e3477df9",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_vigosJournal.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_007",
+      "active_id": "killer_blight_addon_007",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/dad897bd8442bcc551de7544baf52c594adebec68d467aa8677fdcf7347631f0.png",
+          "wiki_id": "wiki_killer_blight_addons_dad897bd8442",
+          "sha256": "dad897bd8442bcc551de7544baf52c594adebec68d467aa8677fdcf7347631f0",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_adrenalineVial.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_008",
+      "active_id": "killer_blight_addon_008",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/7d831565fa77eb4a1556c8ba5b662d14224a9e894229e4082a4aa603475d65ee.png",
+          "wiki_id": "wiki_killer_blight_addons_7d831565fa77",
+          "sha256": "7d831565fa77eb4a1556c8ba5b662d14224a9e894229e4082a4aa603475d65ee",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_blightedCrow.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_009",
+      "active_id": "killer_blight_addon_009",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/08e19f12180f9b27ff7f4e67efc62666029b9f07a7b165032aeccec7fc2d29cf.png",
+          "wiki_id": "wiki_killer_blight_addons_08e19f12180f",
+          "sha256": "08e19f12180f9b27ff7f4e67efc62666029b9f07a7b165032aeccec7fc2d29cf",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_compoundTwentyOne.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_010",
+      "active_id": "killer_blight_addon_010",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/f387981440db9cb6022a5add26be04b7cd8a2b8a6d7c710b661abc9ea674e700.png",
+          "wiki_id": "wiki_killer_blight_addons_f387981440db",
+          "sha256": "f387981440db9cb6022a5add26be04b7cd8a2b8a6d7c710b661abc9ea674e700",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_roseTonic.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_011",
+      "active_id": "killer_blight_addon_011",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/d13ab1213af764cda88ae5fa4b1c4728fe8c4356d8ed8e00051a91ed7785f628.png",
+          "wiki_id": "wiki_killer_blight_addons_d13ab1213af7",
+          "sha256": "d13ab1213af764cda88ae5fa4b1c4728fe8c4356d8ed8e00051a91ed7785f628",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_umbraSalts.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_012",
+      "active_id": "killer_blight_addon_012",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/54a52022900e91033868a90efa8f7b160f176547ea274b6a9c272b18e238837b.png",
+          "wiki_id": "wiki_killer_blight_addons_54a52022900e",
+          "sha256": "54a52022900e91033868a90efa8f7b160f176547ea274b6a9c272b18e238837b",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_blightedRat.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_013",
+      "active_id": "killer_blight_addon_013",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/9bc86c4c3ee0c6b6051486a38b60a32c2d8703942f19e8d5e0ffe7a246572da7.png",
+          "wiki_id": "wiki_killer_blight_addons_9bc86c4c3ee0",
+          "sha256": "9bc86c4c3ee0c6b6051486a38b60a32c2d8703942f19e8d5e0ffe7a246572da7",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_cankerThorn.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_014",
+      "active_id": "killer_blight_addon_014",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/9c4e0fef479b355230847ab9bd371e4355a19e3720e61d45011484a85178273e.png",
+          "wiki_id": "wiki_killer_blight_addons_9c4e0fef479b",
+          "sha256": "9c4e0fef479b355230847ab9bd371e4355a19e3720e61d45011484a85178273e",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_plagueBile.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_015",
+      "active_id": "killer_blight_addon_015",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/a23daedd267da2c220f08e2757a4d72abe8ce163eca5795300c15b33a1454f90.png",
+          "wiki_id": "wiki_killer_blight_addons_a23daedd267d",
+          "sha256": "a23daedd267da2c220f08e2757a4d72abe8ce163eca5795300c15b33a1454f90",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_pustulaDust.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_016",
+      "active_id": "killer_blight_addon_016",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/483f8536ef8e57f004098869821de711d249c9ff65c8491f3fb01b7333ce8943.png",
+          "wiki_id": "wiki_killer_blight_addons_483f8536ef8e",
+          "sha256": "483f8536ef8e57f004098869821de711d249c9ff65c8491f3fb01b7333ce8943",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_shreddedNotes.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_017",
+      "active_id": "killer_blight_addon_017",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/34a78b16da170e489a3506e33322c50d305e9c03667841cc04fd5b69e4f56482.png",
+          "wiki_id": "wiki_killer_blight_addons_34a78b16da17",
+          "sha256": "34a78b16da170e489a3506e33322c50d305e9c03667841cc04fd5b69e4f56482",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_chippedMonocle.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_018",
+      "active_id": "killer_blight_addon_018",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/29de0e377d12f472967838b5852145289d3a46b555b5c624ae8e9ecbed166ea1.png",
+          "wiki_id": "wiki_killer_blight_addons_29de0e377d12",
+          "sha256": "29de0e377d12f472967838b5852145289d3a46b555b5c624ae8e9ecbed166ea1",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_compoundSeven.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_019",
+      "active_id": "killer_blight_addon_019",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/eabf8584ca0f459f5c3e6e69598201bb30d31b55f2d5c090f8645479060c4c76.png",
+          "wiki_id": "wiki_killer_blight_addons_eabf8584ca0f",
+          "sha256": "eabf8584ca0f459f5c3e6e69598201bb30d31b55f2d5c090f8645479060c4c76",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_foxglove.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_blight_addon_020",
+      "active_id": "killer_blight_addon_020",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/characters/blight/addons/wiki_originals/105387849868d3bd791f02328b47ac753c33432149f1f973bb89afa9a6395e29.png",
+          "wiki_id": "wiki_killer_blight_addons_105387849868",
+          "sha256": "105387849868d3bd791f02328b47ac753c33432149f1f973bb89afa9a6395e29",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_placeboTablet.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Talbot_Grimes",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_offering_001",
+      "active_id": "killer_offering_001",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/ddb972797dc46df6ac04e39db0b342153da16771d1857c11d1e502e4f4ae8e7f.png",
+          "wiki_id": "wiki_killer_common_offerings_ddb972797dc4",
+          "sha256": "ddb972797dc46df6ac04e39db0b342153da16771d1857c11d1e502e4f4ae8e7f",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_ebonyMementoMori.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_offering_002",
+      "active_id": "killer_offering_002",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_offering_003",
+      "active_id": "killer_offering_003",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/4a0ed65226e51615dfb05020c8e1c091613296c5e65ed72a9e25b7b39b39aa80.png",
+          "wiki_id": "wiki_killer_common_offerings_4a0ed65226e5",
+          "sha256": "4a0ed65226e51615dfb05020c8e1c091613296c5e65ed72a9e25b7b39b39aa80",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_cutCoin.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_offering_004",
+      "active_id": "killer_offering_004",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_000.png"
+    },
+    {
+      "old_id": "killer_offering_005",
+      "active_id": "killer_offering_005",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_006",
+      "active_id": "killer_offering_006",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/ca2ffc52127b122cb67d0b91215afd7ea83cb74bf81400796e17376c1f31b65f.png",
+          "wiki_id": "wiki_killer_common_offerings_ca2ffc52127b",
+          "sha256": "ca2ffc52127b122cb67d0b91215afd7ea83cb74bf81400796e17376c1f31b65f",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_airlockDoors.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_007",
+      "active_id": "killer_offering_007",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_008",
+      "active_id": "killer_offering_008",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_009",
+      "active_id": "killer_offering_009",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_010",
+      "active_id": "killer_offering_010",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_011",
+      "active_id": "killer_offering_011",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_012",
+      "active_id": "killer_offering_012",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/95ff0db6fbbf5d18857054df85a34d81e84d7053016d7d2741cb92d4173f5688.png",
+          "wiki_id": "wiki_killer_common_offerings_95ff0db6fbbf",
+          "sha256": "95ff0db6fbbf5d18857054df85a34d81e84d7053016d7d2741cb92d4173f5688",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_azarovsKey.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_013",
+      "active_id": "killer_offering_013",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/eb01786c107cafee0fa53ad5702f0670f7e317d87b80aa397a579b1c167e2149.png",
+          "wiki_id": "wiki_killer_common_offerings_eb01786c107c",
+          "sha256": "eb01786c107cafee0fa53ad5702f0670f7e317d87b80aa397a579b1c167e2149",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_beefTallowMixture.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_014",
+      "active_id": "killer_offering_014",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_015",
+      "active_id": "killer_offering_015",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/29d253517afdda2e7b234a0a1572dc8d984e0537e7aaf5a89561503155a8e4af.png",
+          "wiki_id": "wiki_killer_common_offerings_29d253517afd",
+          "sha256": "29d253517afdda2e7b234a0a1572dc8d984e0537e7aaf5a89561503155a8e4af",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_charredWeddingPhotograph.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_016",
+      "active_id": "killer_offering_016",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/63ae8efc0c2d84c2ddc6810ddc6d462c0bcab47927a52e798578f9016853a812.png",
+          "wiki_id": "wiki_killer_common_offerings_63ae8efc0c2d",
+          "sha256": "63ae8efc0c2d84c2ddc6810ddc6d462c0bcab47927a52e798578f9016853a812",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_crowsEye.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_017",
+      "active_id": "killer_offering_017",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/6f80796909bc05910149bd2ecbe1cc650fabbe75cdde0179583710e6ea19b8f5.png",
+          "wiki_id": "wiki_killer_common_offerings_6f80796909bc",
+          "sha256": "6f80796909bc05910149bd2ecbe1cc650fabbe75cdde0179583710e6ea19b8f5",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_damagedPhoto.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_018",
+      "active_id": "killer_offering_018",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/11bdadd10902cc7919f471da6d3f2175ff229396af66b1a595143a1c8847604f.png",
+          "wiki_id": "wiki_killer_common_offerings_11bdadd10902",
+          "sha256": "11bdadd10902cc7919f471da6d3f2175ff229396af66b1a595143a1c8847604f",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_granmasCookbook.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_019",
+      "active_id": "killer_offering_019",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/b28f64f25868327af3bb3fbdaf71a649781711835fca1840c36d64725eb8a56f.png",
+          "wiki_id": "wiki_killer_common_offerings_b28f64f25868",
+          "sha256": "b28f64f25868327af3bb3fbdaf71a649781711835fca1840c36d64725eb8a56f",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_hawkinsNationalLaboratoryID.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_020",
+      "active_id": "killer_offering_020",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/16c7fdfd4d08b6f54ce569cc26817d8dcea3cce51a0eca11ce55994058bf9479.png",
+          "wiki_id": "wiki_killer_common_offerings_16c7fdfd4d08",
+          "sha256": "16c7fdfd4d08b6f54ce569cc26817d8dcea3cce51a0eca11ce55994058bf9479",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_heartLocket.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_021",
+      "active_id": "killer_offering_021",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/f173ff4a9f3fe0b50a0152beec814d7ecf0461d3fb47a28da0eec1e2e61f931c.png",
+          "wiki_id": "wiki_killer_common_offerings_f173ff4a9f3f",
+          "sha256": "f173ff4a9f3fe0b50a0152beec814d7ecf0461d3fb47a28da0eec1e2e61f931c",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_ichorousLoam.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_022",
+      "active_id": "killer_offering_022",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/ad0c80fbef556d02ccdffecd261464d4f4b61cc4b6c931e7ba656c54f4d8011f.png",
+          "wiki_id": "wiki_killer_common_offerings_ad0c80fbef55",
+          "sha256": "ad0c80fbef556d02ccdffecd261464d4f4b61cc4b6c931e7ba656c54f4d8011f",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_ivoryMementoMori.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_023",
+      "active_id": "killer_offering_023",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/3807154ada37cb480d6b8edec24aa4b73f154bcc9a20c21562c93c5f0c380451.png",
+          "wiki_id": "wiki_killer_common_offerings_3807154ada37",
+          "sha256": "3807154ada37cb480d6b8edec24aa4b73f154bcc9a20c21562c93c5f0c380451",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_jigsawPiece.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_024",
+      "active_id": "killer_offering_024",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/fe9904fd7f14504e333dfec3ae3d839d24dec8dd377772781deb8c202f1ea307.png",
+          "wiki_id": "wiki_killer_common_offerings_fe9904fd7f14",
+          "sha256": "fe9904fd7f14504e333dfec3ae3d839d24dec8dd377772781deb8c202f1ea307",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_marysLetter.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_025",
+      "active_id": "killer_offering_025",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_026",
+      "active_id": "killer_offering_026",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/374a5b09da8f7986ea7cfd5cf06813e8ad167149b70467eec58651ed991f4421.png",
+          "wiki_id": "wiki_killer_common_offerings_374a5b09da8f",
+          "sha256": "374a5b09da8f7986ea7cfd5cf06813e8ad167149b70467eec58651ed991f4421",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_rpdBadge.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_027",
+      "active_id": "killer_offering_027",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/7514dc78d5015298c17e58eec9c7b23718069433776bac9e0266db57edae6000.png",
+          "wiki_id": "wiki_killer_common_offerings_7514dc78d501",
+          "sha256": "7514dc78d5015298c17e58eec9c7b23718069433776bac9e0266db57edae6000",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_shatteredBottle.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_028",
+      "active_id": "killer_offering_028",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/e5d4c53d83cd55d5d6ddae6978ef5a621fa839034c8faa8be9259a05f98eb474.png",
+          "wiki_id": "wiki_killer_common_offerings_e5d4c53d83cd",
+          "sha256": "e5d4c53d83cd55d5d6ddae6978ef5a621fa839034c8faa8be9259a05f98eb474",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_shatteredGlasses.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_024.png"
+    },
+    {
+      "old_id": "killer_offering_029",
+      "active_id": "killer_offering_029",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/8c024a944138a7d945213d79714b68773f6f5ba3e3b753a5084cd5994e745e7a.png",
+          "wiki_id": "wiki_killer_common_offerings_8c024a944138",
+          "sha256": "8c024a944138a7d945213d79714b68773f6f5ba3e3b753a5084cd5994e745e7a",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_theLastMask.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_030",
+      "active_id": "killer_offering_030",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/0b8a8d7aae496269a9e6c716579a19c3e2943802b1cb9b3cfa30fcb220a15749.png",
+          "wiki_id": "wiki_killer_common_offerings_0b8a8d7aae49",
+          "sha256": "0b8a8d7aae496269a9e6c716579a19c3e2943802b1cb9b3cfa30fcb220a15749",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_thePiedPiper.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_031",
+      "active_id": "killer_offering_031",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_032",
+      "active_id": "killer_offering_032",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/de99cdcec34c76a4401a79aa4cdd1f9391da3f7f06fb391a845b3b3f469b56ef.png",
+          "wiki_id": "wiki_killer_common_offerings_de99cdcec34c",
+          "sha256": "de99cdcec34c76a4401a79aa4cdd1f9391da3f7f06fb391a845b3b3f469b56ef",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_yamaokaFamilyCrest.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_033",
+      "active_id": "killer_offering_033",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_034",
+      "active_id": "killer_offering_034",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_035",
+      "active_id": "killer_offering_035",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_036",
+      "active_id": "killer_offering_036",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_037",
+      "active_id": "killer_offering_037",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_038",
+      "active_id": "killer_offering_038",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/6dbfe229ad08a495745d80a8e1980ad0de6e729f1449ca04c07b8cad953d8ae9.png",
+          "wiki_id": "wiki_killer_common_offerings_6dbfe229ad08",
+          "sha256": "6dbfe229ad08a495745d80a8e1980ad0de6e729f1449ca04c07b8cad953d8ae9",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_hollowShell.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_039",
+      "active_id": "killer_offering_039",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_040",
+      "active_id": "killer_offering_040",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/9e93418153b3667474ae9e1254a16c5d9d24c233f1314818d9623425ca1223be.png",
+          "wiki_id": "wiki_killer_common_offerings_9e93418153b3",
+          "sha256": "9e93418153b3667474ae9e1254a16c5d9d24c233f1314818d9623425ca1223be",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_scratchedCoin.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_041",
+      "active_id": "killer_offering_041",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_042",
+      "active_id": "killer_offering_042",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/7c033793e2ddd7f015c540e831c45ab7e3b4b88dd6a700c90be6b736e96bdc90.png",
+          "wiki_id": "wiki_killer_common_offerings_7c033793e2dd",
+          "sha256": "7c033793e2ddd7f015c540e831c45ab7e3b4b88dd6a700c90be6b736e96bdc90",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_survivorPudding.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_043",
+      "active_id": "killer_offering_043",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/982183020daaa6bbc9cda7df22d35ee89034a7d127a0e69be052369967f4aada.png",
+          "wiki_id": "wiki_killer_common_offerings_982183020daa",
+          "sha256": "982183020daaa6bbc9cda7df22d35ee89034a7d127a0e69be052369967f4aada",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_annotatedBlueprint.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_044",
+      "active_id": "killer_offering_044",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/571d6bb7e507c210d584c3729b28d0f46ea5787bef4b608f0e7fc8f2e99f95f7.png",
+          "wiki_id": "wiki_killer_common_offerings_571d6bb7e507",
+          "sha256": "571d6bb7e507c210d584c3729b28d0f46ea5787bef4b608f0e7fc8f2e99f95f7",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_bloodiedBlueprint.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_045",
+      "active_id": "killer_offering_045",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_046",
+      "active_id": "killer_offering_046",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_047",
+      "active_id": "killer_offering_047",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_048",
+      "active_id": "killer_offering_048",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_049",
+      "active_id": "killer_offering_049",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_050",
+      "active_id": "killer_offering_050",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_051",
+      "active_id": "killer_offering_051",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_052",
+      "active_id": "killer_offering_052",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/d86fbe4601f7a114e25dc3e1fcd6eb763ea988675556bb7deaf6619865f94935.png",
+          "wiki_id": "wiki_killer_common_offerings_d86fbe4601f7",
+          "sha256": "d86fbe4601f7a114e25dc3e1fcd6eb763ea988675556bb7deaf6619865f94935",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_tornBlueprint.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_048.png"
+    },
+    {
+      "old_id": "killer_offering_053",
+      "active_id": "killer_offering_053",
+      "wiki_reference": [
+        {
+          "source": "assets/killers/offerings/wiki_originals/3635c775bac22af399938f9877abe8893735aa62ca9eeb990ac0d4c446c166fd.png",
+          "wiki_id": "wiki_killer_common_offerings_3635c775bac2",
+          "sha256": "3635c775bac22af399938f9877abe8893735aa62ca9eeb990ac0d4c446c166fd",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_vigosBlueprint.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_addon_001",
+      "active_id": "survivor_addon_001",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/addons/wiki_originals/3b040311b798369dc184b77162e3004faa3b2b4bea0d8fd99a19ef6dfa18443f.png",
+          "wiki_id": "wiki_survivor_common_addons_3b040311b798",
+          "sha256": "3b040311b798369dc184b77162e3004faa3b2b4bea0d8fd99a19ef6dfa18443f",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_brandNewPart.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_addon_002",
+      "active_id": "survivor_addon_002",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/addons/wiki_originals/dd371c6abf5fbf0419832d95448a19ccabf6c048b6061b60d784d2480611b788.png",
+          "wiki_id": "wiki_survivor_common_addons_dd371c6abf5f",
+          "sha256": "dd371c6abf5fbf0419832d95448a19ccabf6c048b6061b60d784d2480611b788",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_gripWrench.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_addon_003",
+      "active_id": "survivor_addon_003",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/addons/wiki_originals/d34f57c5ffbe27e1384219ca0fce7b8eba242c1f60da2a4772b4fceb407a558c.png",
+          "wiki_id": "wiki_survivor_common_addons_d34f57c5ffbe",
+          "sha256": "d34f57c5ffbe27e1384219ca0fce7b8eba242c1f60da2a4772b4fceb407a558c",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_hacksaw.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_addon_004",
+      "active_id": "survivor_addon_004",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/addons/wiki_originals/d4ab6ea8cf0371bb71b5e33e7d0fab27809d3a5227cea00197efe73a290ef6ee.png",
+          "wiki_id": "wiki_survivor_common_addons_d4ab6ea8cf03",
+          "sha256": "d4ab6ea8cf0371bb71b5e33e7d0fab27809d3a5227cea00197efe73a290ef6ee",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_cuttingWire.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_addon_005",
+      "active_id": "survivor_addon_005",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/addons/wiki_originals/6a10661594c40f0319554014ebf3f334f63d722e948f144d3f37f6a1fad2763f.png",
+          "wiki_id": "wiki_survivor_common_addons_6a10661594c4",
+          "sha256": "6a10661594c40f0319554014ebf3f334f63d722e948f144d3f37f6a1fad2763f",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_protectiveGloves.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_addon_006",
+      "active_id": "survivor_addon_006",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/addons/wiki_originals/3f77db467516d1161beb91d4728a6ff28aaf19016bf6d46c99c810cbffde79ee.png",
+          "wiki_id": "wiki_survivor_common_addons_3f77db467516",
+          "sha256": "3f77db467516d1161beb91d4728a6ff28aaf19016bf6d46c99c810cbffde79ee",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_socketSwivels.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_addon_007",
+      "active_id": "survivor_addon_007",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/addons/wiki_originals/bbd6b95df1d475fc103b2a5570c7610479aacc377b08ced509a6c4445f210439.png",
+          "wiki_id": "wiki_survivor_common_addons_bbd6b95df1d4",
+          "sha256": "bbd6b95df1d475fc103b2a5570c7610479aacc377b08ced509a6c4445f210439",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_springClamp.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_addon_008",
+      "active_id": "survivor_addon_008",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/addons/wiki_originals/f7f7ce3527bbf47afac67c8027e6eb33042de6f4e86df12c23033a352fc38baa.png",
+          "wiki_id": "wiki_survivor_common_addons_f7f7ce3527bb",
+          "sha256": "f7f7ce3527bbf47afac67c8027e6eb33042de6f4e86df12c23033a352fc38baa",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_wireSpool.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_addon_009",
+      "active_id": "survivor_addon_009",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/addons/wiki_originals/ba84dfd1776864213cabb6cebb2f44dfc9367242e5376e08e96932becee2ede2.png",
+          "wiki_id": "wiki_survivor_common_addons_ba84dfd17768",
+          "sha256": "ba84dfd1776864213cabb6cebb2f44dfc9367242e5376e08e96932becee2ede2",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_cleanRag.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_addon_010",
+      "active_id": "survivor_addon_010",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/addons/wiki_originals/6a8086194470d0c35c5a9db88d3966cedc198cae8cc69790d947c4c5595a7bb0.png",
+          "wiki_id": "wiki_survivor_common_addons_6a8086194470",
+          "sha256": "6a8086194470d0c35c5a9db88d3966cedc198cae8cc69790d947c4c5595a7bb0",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_instructions.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_addon_011",
+      "active_id": "survivor_addon_011",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/addons/wiki_originals/a3148e76d81f97924e21e6319b5831105704f57bb3d33c13d7fd80c079078c3a.png",
+          "wiki_id": "wiki_survivor_common_addons_a3148e76d81f",
+          "sha256": "a3148e76d81f97924e21e6319b5831105704f57bb3d33c13d7fd80c079078c3a",
+          "url": "https://deadbydaylight.wiki.gg/images/IconAddon_scraps.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_001",
+      "active_id": "survivor_item_001",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/0325aecc3219d3682ba9a4f8c1f972a8781054851aa84dc2ae021a2037737c3d.png",
+          "wiki_id": "wiki_survivor_common_items_0325aecc3219",
+          "sha256": "0325aecc3219d3682ba9a4f8c1f972a8781054851aa84dc2ae021a2037737c3d",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_alexsToolbox.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_002",
+      "active_id": "survivor_item_002",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_003",
+      "active_id": "survivor_item_003",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/2c3c591ddb13a93bcb97bad50b09b6cdb4890381b42d6e0c9559d07bc26aef2e.png",
+          "wiki_id": "wiki_survivor_common_items_2c3c591ddb13",
+          "sha256": "2c3c591ddb13a93bcb97bad50b09b6cdb4890381b42d6e0c9559d07bc26aef2e",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_rangerMedKit.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_004",
+      "active_id": "survivor_item_004",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/872b3b179cc2ed3cbbf6e0b5a89534d92694ba67801dcab351d5ac0688285228.png",
+          "wiki_id": "wiki_survivor_common_items_872b3b179cc2",
+          "sha256": "872b3b179cc2ed3cbbf6e0b5a89534d92694ba67801dcab351d5ac0688285228",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_utilityFlashlight.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_005",
+      "active_id": "survivor_item_005",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/c8e439025897178e21761992ec8e1b6859d1be0068fe04ee35fa854c099e1b7a.png",
+          "wiki_id": "wiki_survivor_common_items_c8e439025897",
+          "sha256": "c8e439025897178e21761992ec8e1b6859d1be0068fe04ee35fa854c099e1b7a",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_rainbowMap.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_006",
+      "active_id": "survivor_item_006",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/b40bb48448567babcdce9280c56e6a4755a22de6527cb76f883e7758684c79e0.png",
+          "wiki_id": "wiki_survivor_common_items_b40bb4844856",
+          "sha256": "b40bb48448567babcdce9280c56e6a4755a22de6527cb76f883e7758684c79e0",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_commodiousToolbox.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_007",
+      "active_id": "survivor_item_007",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/7c1d69869f4f1a3849c2c88d6f82f9e8bc8a9052832f4b77ab097a845ac064b9.png",
+          "wiki_id": "wiki_survivor_common_items_7c1d69869f4f",
+          "sha256": "7c1d69869f4f1a3849c2c88d6f82f9e8bc8a9052832f4b77ab097a845ac064b9",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_emergencyMedKit.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_008",
+      "active_id": "survivor_item_008",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/5325b6915806a41ff1de53a75f82ac871b3ac03db6b4a54ced24e22e52c93696.png",
+          "wiki_id": "wiki_survivor_common_items_5325b6915806",
+          "sha256": "5325b6915806a41ff1de53a75f82ac871b3ac03db6b4a54ced24e22e52c93696",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_mechanicsToolbox.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_009",
+      "active_id": "survivor_item_009",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/71e09fe2eaed3812dd5a5786d547d75218c77267f8449cfb99e510fcd1ed39e3.png",
+          "wiki_id": "wiki_survivor_common_items_71e09fe2eaed",
+          "sha256": "71e09fe2eaed3812dd5a5786d547d75218c77267f8449cfb99e510fcd1ed39e3",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_key.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_010",
+      "active_id": "survivor_item_010",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/acecdaa0bc2c952f9fe6e6f8e657dfe98c5ba6f00775f1e1c17011b7a4f3db75.png",
+          "wiki_id": "wiki_survivor_common_items_acecdaa0bc2c",
+          "sha256": "acecdaa0bc2c952f9fe6e6f8e657dfe98c5ba6f00775f1e1c17011b7a4f3db75",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_sportFlashlight.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_011",
+      "active_id": "survivor_item_011",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/b8fbbbd74357ecaa87de436db02480c0d45781de08b6dd14e4523386c3321d02.png",
+          "wiki_id": "wiki_survivor_common_items_b8fbbbd74357",
+          "sha256": "b8fbbbd74357ecaa87de436db02480c0d45781de08b6dd14e4523386c3321d02",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_vigosFogVial.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_012",
+      "active_id": "survivor_item_012",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/72a5801842da2d8349ecb762d64180c5bf95cffc94a7435ddabb52fc695d33b8.png",
+          "wiki_id": "wiki_survivor_common_items_72a5801842da",
+          "sha256": "72a5801842da2d8349ecb762d64180c5bf95cffc94a7435ddabb52fc695d33b8",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_artisansFogVial.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_072.png"
+    },
+    {
+      "old_id": "survivor_item_013",
+      "active_id": "survivor_item_013",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/4634bbbc35e58d3a4caf4b30aa350453041ae82388265f80b3638cc0f48f8975.png",
+          "wiki_id": "wiki_survivor_common_items_4634bbbc35e5",
+          "sha256": "4634bbbc35e58d3a4caf4b30aa350453041ae82388265f80b3638cc0f48f8975",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_dullKey.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_item_014",
+      "active_id": "survivor_item_014",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/dcd36b8829392dc59d8ceeabcf748ff49946f2fc4d3234da33e1cdfb35043676.png",
+          "wiki_id": "wiki_survivor_common_items_dcd36b882939",
+          "sha256": "dcd36b8829392dc59d8ceeabcf748ff49946f2fc4d3234da33e1cdfb35043676",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_firstAidKit.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_item_015",
+      "active_id": "survivor_item_015",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/9014814e11b5ff648d328fcf8cf11816bc67931d612999aa5b88a854e26e7c27.png",
+          "wiki_id": "wiki_survivor_common_items_9014814e11b5",
+          "sha256": "9014814e11b5ff648d328fcf8cf11816bc67931d612999aa5b88a854e26e7c27",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_flashlight.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_item_016",
+      "active_id": "survivor_item_016",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/27dab13d1afc51c476a1b5b3156cfacbe3eff23d5ec71e22325d723fe871ceb4.png",
+          "wiki_id": "wiki_survivor_common_items_27dab13d1afc",
+          "sha256": "27dab13d1afc51c476a1b5b3156cfacbe3eff23d5ec71e22325d723fe871ceb4",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_map.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_item_017",
+      "active_id": "survivor_item_017",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/792a63b6c0da1ac383da8388de3f0c0897fb156603e3c7e9d4de0a1a8a11dda7.png",
+          "wiki_id": "wiki_survivor_common_items_792a63b6c0da",
+          "sha256": "792a63b6c0da1ac383da8388de3f0c0897fb156603e3c7e9d4de0a1a8a11dda7",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_wornOutTools.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_item_018",
+      "active_id": "survivor_item_018",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/ffd7f8b5d4bfcb248123e733f1e239eec07a69acbffef80df9b7b6c159e6d49b.png",
+          "wiki_id": "wiki_survivor_common_items_ffd7f8b5d4bf",
+          "sha256": "ffd7f8b5d4bfcb248123e733f1e239eec07a69acbffef80df9b7b6c159e6d49b",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_apprenticesFogVial.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_item_019",
+      "active_id": "survivor_item_019",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/46f3d8dad6e70bba54b51388f0106bdd4e14a9085fec90f62f8ee36f6fa519aa.png",
+          "wiki_id": "wiki_survivor_common_items_46f3d8dad6e7",
+          "sha256": "46f3d8dad6e70bba54b51388f0106bdd4e14a9085fec90f62f8ee36f6fa519aa",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_brokenKey.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_item_020",
+      "active_id": "survivor_item_020",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/items/wiki_originals/282549e478a84327a1b5a250aed9a7f86c95a85e6d3bfd2204767cefa8c883fb.png",
+          "wiki_id": "wiki_survivor_common_items_282549e478a8",
+          "sha256": "282549e478a84327a1b5a250aed9a7f86c95a85e6d3bfd2204767cefa8c883fb",
+          "url": "https://deadbydaylight.wiki.gg/images/IconItems_campingAidKit.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_item_021",
+      "active_id": "survivor_item_021",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_item_022",
+      "active_id": "survivor_item_022",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_001",
+      "active_id": "survivor_offering_001",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/2e07a47dc76356754683343d1158c0696e6d650e134ec9f2971acc390baf63eb.png",
+          "wiki_id": "wiki_survivor_common_offerings_2e07a47dc763",
+          "sha256": "2e07a47dc76356754683343d1158c0696e6d650e134ec9f2971acc390baf63eb",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_murkyReagent.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_002",
+      "active_id": "survivor_offering_002",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_003",
+      "active_id": "survivor_offering_003",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/a9d1f7e1dcf059596e4baa2900832d14e541c0f0fc04f9a8732725f551611ce0.png",
+          "wiki_id": "wiki_survivor_common_offerings_a9d1f7e1dcf0",
+          "sha256": "a9d1f7e1dcf059596e4baa2900832d14e541c0f0fc04f9a8732725f551611ce0",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_shinyCoin.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_004",
+      "active_id": "survivor_offering_004",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_005",
+      "active_id": "survivor_offering_005",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/679d198f4ddff19f2ad77d2724046559f6c9ca09012fc75a1b6d8d322fdf747d.png",
+          "wiki_id": "wiki_survivor_common_offerings_679d198f4ddf",
+          "sha256": "679d198f4ddff19f2ad77d2724046559f6c9ca09012fc75a1b6d8d322fdf747d",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_vigosJarOfSaltyLips.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_006",
+      "active_id": "survivor_offering_006",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_007",
+      "active_id": "survivor_offering_007",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/ca2ffc52127b122cb67d0b91215afd7ea83cb74bf81400796e17376c1f31b65f.png",
+          "wiki_id": "wiki_survivor_common_offerings_ca2ffc52127b",
+          "sha256": "ca2ffc52127b122cb67d0b91215afd7ea83cb74bf81400796e17376c1f31b65f",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_airlockDoors.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_008",
+      "active_id": "survivor_offering_008",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_009",
+      "active_id": "survivor_offering_009",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/95ff0db6fbbf5d18857054df85a34d81e84d7053016d7d2741cb92d4173f5688.png",
+          "wiki_id": "wiki_survivor_common_offerings_95ff0db6fbbf",
+          "sha256": "95ff0db6fbbf5d18857054df85a34d81e84d7053016d7d2741cb92d4173f5688",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_azarovsKey.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_010",
+      "active_id": "survivor_offering_010",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/eb01786c107cafee0fa53ad5702f0670f7e317d87b80aa397a579b1c167e2149.png",
+          "wiki_id": "wiki_survivor_common_offerings_eb01786c107c",
+          "sha256": "eb01786c107cafee0fa53ad5702f0670f7e317d87b80aa397a579b1c167e2149",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_beefTallowMixture.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_011",
+      "active_id": "survivor_offering_011",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/00ae14471fbf8dc56beb4d5671db893e3da39284ee30e2e56846f7c96df6d9b6.png",
+          "wiki_id": "wiki_survivor_common_offerings_00ae14471fbf",
+          "sha256": "00ae14471fbf8dc56beb4d5671db893e3da39284ee30e2e56846f7c96df6d9b6",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_blackSaltStatuette.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_012",
+      "active_id": "survivor_offering_012",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_013",
+      "active_id": "survivor_offering_013",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/0a6f030aa136a20088f32fefb0c1d709761867aebb36d821b5e2d97b8738843a.png",
+          "wiki_id": "wiki_survivor_common_offerings_0a6f030aa136",
+          "sha256": "0a6f030aa136a20088f32fefb0c1d709761867aebb36d821b5e2d97b8738843a",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_boundEnvelope.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_014",
+      "active_id": "survivor_offering_014",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/29d253517afdda2e7b234a0a1572dc8d984e0537e7aaf5a89561503155a8e4af.png",
+          "wiki_id": "wiki_survivor_common_offerings_29d253517afd",
+          "sha256": "29d253517afdda2e7b234a0a1572dc8d984e0537e7aaf5a89561503155a8e4af",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_charredWeddingPhotograph.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_096.png"
+    },
+    {
+      "old_id": "survivor_offering_015",
+      "active_id": "survivor_offering_015",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/63ae8efc0c2d84c2ddc6810ddc6d462c0bcab47927a52e798578f9016853a812.png",
+          "wiki_id": "wiki_survivor_common_offerings_63ae8efc0c2d",
+          "sha256": "63ae8efc0c2d84c2ddc6810ddc6d462c0bcab47927a52e798578f9016853a812",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_crowsEye.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_016",
+      "active_id": "survivor_offering_016",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/6f80796909bc05910149bd2ecbe1cc650fabbe75cdde0179583710e6ea19b8f5.png",
+          "wiki_id": "wiki_survivor_common_offerings_6f80796909bc",
+          "sha256": "6f80796909bc05910149bd2ecbe1cc650fabbe75cdde0179583710e6ea19b8f5",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_damagedPhoto.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_017",
+      "active_id": "survivor_offering_017",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/6d13f9243a249f940e3c893bef9eb9fcd893de3684e071df16f11379c9120ff4.png",
+          "wiki_id": "wiki_survivor_common_offerings_6d13f9243a24",
+          "sha256": "6d13f9243a249f940e3c893bef9eb9fcd893de3684e071df16f11379c9120ff4",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_fragrantBogLaurel.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_018",
+      "active_id": "survivor_offering_018",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_019",
+      "active_id": "survivor_offering_019",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/66a89d5dc96ccc0c3519e36787065cf27994ff6709c1dc06ae3401db80608aa1.png",
+          "wiki_id": "wiki_survivor_common_offerings_66a89d5dc96c",
+          "sha256": "66a89d5dc96ccc0c3519e36787065cf27994ff6709c1dc06ae3401db80608aa1",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_fragrantPrimroseBlossom.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_020",
+      "active_id": "survivor_offering_020",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/53974db43c4a27ec88b578dfee95e345c942c83c0ee3d01596cc3e2c47064a24.png",
+          "wiki_id": "wiki_survivor_common_offerings_53974db43c4a",
+          "sha256": "53974db43c4a27ec88b578dfee95e345c942c83c0ee3d01596cc3e2c47064a24",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_fragrantSweetWilliam.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_021",
+      "active_id": "survivor_offering_021",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/11bdadd10902cc7919f471da6d3f2175ff229396af66b1a595143a1c8847604f.png",
+          "wiki_id": "wiki_survivor_common_offerings_11bdadd10902",
+          "sha256": "11bdadd10902cc7919f471da6d3f2175ff229396af66b1a595143a1c8847604f",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_granmasCookbook.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_022",
+      "active_id": "survivor_offering_022",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/b28f64f25868327af3bb3fbdaf71a649781711835fca1840c36d64725eb8a56f.png",
+          "wiki_id": "wiki_survivor_common_offerings_b28f64f25868",
+          "sha256": "b28f64f25868327af3bb3fbdaf71a649781711835fca1840c36d64725eb8a56f",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_hawkinsNationalLaboratoryID.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_023",
+      "active_id": "survivor_offering_023",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/16c7fdfd4d08b6f54ce569cc26817d8dcea3cce51a0eca11ce55994058bf9479.png",
+          "wiki_id": "wiki_survivor_common_offerings_16c7fdfd4d08",
+          "sha256": "16c7fdfd4d08b6f54ce569cc26817d8dcea3cce51a0eca11ce55994058bf9479",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_heartLocket.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_024",
+      "active_id": "survivor_offering_024",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/f173ff4a9f3fe0b50a0152beec814d7ecf0461d3fb47a28da0eec1e2e61f931c.png",
+          "wiki_id": "wiki_survivor_common_offerings_f173ff4a9f3f",
+          "sha256": "f173ff4a9f3fe0b50a0152beec814d7ecf0461d3fb47a28da0eec1e2e61f931c",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_ichorousLoam.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_025",
+      "active_id": "survivor_offering_025",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/ef62cf43ce314e878de3cfa2763f41e19ef72547d52055e2751bb7591de729eb.png",
+          "wiki_id": "wiki_survivor_common_offerings_ef62cf43ce31",
+          "sha256": "ef62cf43ce314e878de3cfa2763f41e19ef72547d52055e2751bb7591de729eb",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_ivoryChalkPouch.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_026",
+      "active_id": "survivor_offering_026",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/3807154ada37cb480d6b8edec24aa4b73f154bcc9a20c21562c93c5f0c380451.png",
+          "wiki_id": "wiki_survivor_common_offerings_3807154ada37",
+          "sha256": "3807154ada37cb480d6b8edec24aa4b73f154bcc9a20c21562c93c5f0c380451",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_jigsawPiece.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_027",
+      "active_id": "survivor_offering_027",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/59256ab1cc02f72cd7bb8b33eb4ebb796081207fca4d033093c1a1176bdfb590.png",
+          "wiki_id": "wiki_survivor_common_offerings_59256ab1cc02",
+          "sha256": "59256ab1cc02f72cd7bb8b33eb4ebb796081207fca4d033093c1a1176bdfb590",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_macMillansPhalanxBone.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_028",
+      "active_id": "survivor_offering_028",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/fe9904fd7f14504e333dfec3ae3d839d24dec8dd377772781deb8c202f1ea307.png",
+          "wiki_id": "wiki_survivor_common_offerings_fe9904fd7f14",
+          "sha256": "fe9904fd7f14504e333dfec3ae3d839d24dec8dd377772781deb8c202f1ea307",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_marysLetter.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_029",
+      "active_id": "survivor_offering_029",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/374a5b09da8f7986ea7cfd5cf06813e8ad167149b70467eec58651ed991f4421.png",
+          "wiki_id": "wiki_survivor_common_offerings_374a5b09da8f",
+          "sha256": "374a5b09da8f7986ea7cfd5cf06813e8ad167149b70467eec58651ed991f4421",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_rpdBadge.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_030",
+      "active_id": "survivor_offering_030",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/7514dc78d5015298c17e58eec9c7b23718069433776bac9e0266db57edae6000.png",
+          "wiki_id": "wiki_survivor_common_offerings_7514dc78d501",
+          "sha256": "7514dc78d5015298c17e58eec9c7b23718069433776bac9e0266db57edae6000",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_shatteredBottle.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_031",
+      "active_id": "survivor_offering_031",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/e5d4c53d83cd55d5d6ddae6978ef5a621fa839034c8faa8be9259a05f98eb474.png",
+          "wiki_id": "wiki_survivor_common_offerings_e5d4c53d83cd",
+          "sha256": "e5d4c53d83cd55d5d6ddae6978ef5a621fa839034c8faa8be9259a05f98eb474",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_shatteredGlasses.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_032",
+      "active_id": "survivor_offering_032",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/8c024a944138a7d945213d79714b68773f6f5ba3e3b753a5084cd5994e745e7a.png",
+          "wiki_id": "wiki_survivor_common_offerings_8c024a944138",
+          "sha256": "8c024a944138a7d945213d79714b68773f6f5ba3e3b753a5084cd5994e745e7a",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_theLastMask.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_033",
+      "active_id": "survivor_offering_033",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/0b8a8d7aae496269a9e6c716579a19c3e2943802b1cb9b3cfa30fcb220a15749.png",
+          "wiki_id": "wiki_survivor_common_offerings_0b8a8d7aae49",
+          "sha256": "0b8a8d7aae496269a9e6c716579a19c3e2943802b1cb9b3cfa30fcb220a15749",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_thePiedPiper.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_034",
+      "active_id": "survivor_offering_034",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_035",
+      "active_id": "survivor_offering_035",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/de99cdcec34c76a4401a79aa4cdd1f9391da3f7f06fb391a845b3b3f469b56ef.png",
+          "wiki_id": "wiki_survivor_common_offerings_de99cdcec34c",
+          "sha256": "de99cdcec34c76a4401a79aa4cdd1f9391da3f7f06fb391a845b3b3f469b56ef",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_yamaokaFamilyCrest.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_036",
+      "active_id": "survivor_offering_036",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/2fb8c681ba889a0611c238fe47a112d1c906c64a4c9af55f2f983263ca7045ce.png",
+          "wiki_id": "wiki_survivor_common_offerings_2fb8c681ba88",
+          "sha256": "2fb8c681ba889a0611c238fe47a112d1c906c64a4c9af55f2f983263ca7045ce",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_creamChalkPouch.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_037",
+      "active_id": "survivor_offering_037",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/6bcafadea8ad8e3640972ce54d121abf2c31a3c518cf7d2a6072d0d05e9a78a8.png",
+          "wiki_id": "wiki_survivor_common_offerings_6bcafadea8ad",
+          "sha256": "6bcafadea8ad8e3640972ce54d121abf2c31a3c518cf7d2a6072d0d05e9a78a8",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_escapeCake.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_038",
+      "active_id": "survivor_offering_038",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/fe7a137e13d933de6568026a798552316f523ef11315abac5e00577711f12beb.png",
+          "wiki_id": "wiki_survivor_common_offerings_fe7a137e13d9",
+          "sha256": "fe7a137e13d933de6568026a798552316f523ef11315abac5e00577711f12beb",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_freshBogLaurel.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_120.png"
+    },
+    {
+      "old_id": "survivor_offering_039",
+      "active_id": "survivor_offering_039",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/3ec9888a3ae672c4061d1ec49ea54a1661dfee321aedc976f267e099ecde68c6.png",
+          "wiki_id": "wiki_survivor_common_offerings_3ec9888a3ae6",
+          "sha256": "3ec9888a3ae672c4061d1ec49ea54a1661dfee321aedc976f267e099ecde68c6",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_freshCrispleafAmaranth.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_040",
+      "active_id": "survivor_offering_040",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/1568c7574f5e5e38d1ff843850b1cb6b68356c26b4cfdd36db2b729a85b441ba.png",
+          "wiki_id": "wiki_survivor_common_offerings_1568c7574f5e",
+          "sha256": "1568c7574f5e5e38d1ff843850b1cb6b68356c26b4cfdd36db2b729a85b441ba",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_freshPrimroseBlossom.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_041",
+      "active_id": "survivor_offering_041",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/328191ed19500031fb3c6d77ce727a248e305936741f15ac4815d9f0dad71442.png",
+          "wiki_id": "wiki_survivor_common_offerings_328191ed1950",
+          "sha256": "328191ed19500031fb3c6d77ce727a248e305936741f15ac4815d9f0dad71442",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_freshSweetWilliam.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_042",
+      "active_id": "survivor_offering_042",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_043",
+      "active_id": "survivor_offering_043",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/c83822c3e217d7ffeef9742403d5e4cb85e8ea31c818144fbf0c3602884350a8.png",
+          "wiki_id": "wiki_survivor_common_offerings_c83822c3e217",
+          "sha256": "c83822c3e217d7ffeef9742403d5e4cb85e8ea31c818144fbf0c3602884350a8",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_saltPouch.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_044",
+      "active_id": "survivor_offering_044",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/b397feb47c6819e68e75b0ae348d27407082ebfe5b3908ee30af9fe0841d1122.png",
+          "wiki_id": "wiki_survivor_common_offerings_b397feb47c68",
+          "sha256": "b397feb47c6819e68e75b0ae348d27407082ebfe5b3908ee30af9fe0841d1122",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_sealedEnvelope.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_045",
+      "active_id": "survivor_offering_045",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_046",
+      "active_id": "survivor_offering_046",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/ce2e66e41a462e1aac61cdd44da76d3ffea647edb5626642d935389dd7af074f.png",
+          "wiki_id": "wiki_survivor_common_offerings_ce2e66e41a46",
+          "sha256": "ce2e66e41a462e1aac61cdd44da76d3ffea647edb5626642d935389dd7af074f",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_tarnishedCoin.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_047",
+      "active_id": "survivor_offering_047",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_048",
+      "active_id": "survivor_offering_048",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/982183020daaa6bbc9cda7df22d35ee89034a7d127a0e69be052369967f4aada.png",
+          "wiki_id": "wiki_survivor_common_offerings_982183020daa",
+          "sha256": "982183020daaa6bbc9cda7df22d35ee89034a7d127a0e69be052369967f4aada",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_annotatedBlueprint.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_049",
+      "active_id": "survivor_offering_049",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/571d6bb7e507c210d584c3729b28d0f46ea5787bef4b608f0e7fc8f2e99f95f7.png",
+          "wiki_id": "wiki_survivor_common_offerings_571d6bb7e507",
+          "sha256": "571d6bb7e507c210d584c3729b28d0f46ea5787bef4b608f0e7fc8f2e99f95f7",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_bloodiedBlueprint.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_050",
+      "active_id": "survivor_offering_050",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/f20b777ae55ee6d44399f09fada53c50371e2b27e476758812483ef63299b5c9.png",
+          "wiki_id": "wiki_survivor_common_offerings_f20b777ae55e",
+          "sha256": "f20b777ae55ee6d44399f09fada53c50371e2b27e476758812483ef63299b5c9",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_bogLaurelSachet.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_051",
+      "active_id": "survivor_offering_051",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/11355bc13192402361e15a40e879d150aeb8b3d4cd9edf4bdbd83170ebd66154.png",
+          "wiki_id": "wiki_survivor_common_offerings_11355bc13192",
+          "sha256": "11355bc13192402361e15a40e879d150aeb8b3d4cd9edf4bdbd83170ebd66154",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_chalkPouch.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_052",
+      "active_id": "survivor_offering_052",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_053",
+      "active_id": "survivor_offering_053",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/cae161a757e57e855ba607c83221cb25cc5b3dd5b372d20313d22d9905d79d07.png",
+          "wiki_id": "wiki_survivor_common_offerings_cae161a757e5",
+          "sha256": "cae161a757e57e855ba607c83221cb25cc5b3dd5b372d20313d22d9905d79d07",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_crispleafAmaranthSachet.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_054",
+      "active_id": "survivor_offering_054",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_055",
+      "active_id": "survivor_offering_055",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/e4507fcd37eb2b0dafa99eb194b2338d833a432b038ac603523bd72a8ab41f91.png",
+          "wiki_id": "wiki_survivor_common_offerings_e4507fcd37eb",
+          "sha256": "e4507fcd37eb2b0dafa99eb194b2338d833a432b038ac603523bd72a8ab41f91",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_primroseBlossomSachet.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_056",
+      "active_id": "survivor_offering_056",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_057",
+      "active_id": "survivor_offering_057",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/d58a080a7575a994ecc039a11764e242546d4218031af7c04ad1bcf3ec7bff39.png",
+          "wiki_id": "wiki_survivor_common_offerings_d58a080a7575",
+          "sha256": "d58a080a7575a994ecc039a11764e242546d4218031af7c04ad1bcf3ec7bff39",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_sweetWilliamSachet.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_058",
+      "active_id": "survivor_offering_058",
+      "wiki_reference": null,
+      "decision": "keep_user_templates_mapping_unconfirmed",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    },
+    {
+      "old_id": "survivor_offering_059",
+      "active_id": "survivor_offering_059",
+      "wiki_reference": [
+        {
+          "source": "assets/survivors/offerings/wiki_originals/3635c775bac22af399938f9877abe8893735aa62ca9eeb990ac0d4c446c166fd.png",
+          "wiki_id": "wiki_survivor_common_offerings_3635c775bac2",
+          "sha256": "3635c775bac22af399938f9877abe8893735aa62ca9eeb990ac0d4c446c166fd",
+          "url": "https://deadbydaylight.wiki.gg/images/IconFavors_vigosBlueprint.png",
+          "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+          "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        }
+      ],
+      "decision": "add_original_same_id_keep_user_templates",
+      "contact_sheet": "debug/v4/wiki_review/legacy_144.png"
+    }
+  ],
+  "limitations": "Visual identity review, not killer Bloodweb gameplay verification."
+}

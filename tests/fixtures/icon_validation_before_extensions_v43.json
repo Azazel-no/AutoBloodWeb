@@ -1,0 +1,29 @@
+{
+  "bloodweb_level43_start.png": {
+    "icons": [[282,362,"survivor_item_020"],[461,409,"survivor_offering_022"],
+      [219,470,"survivor_addon_001"],[357,469,"survivor_addon_009"],
+      [567,469,"survivor_offering_044"],[283,703,"survivor_item_003"],
+      [707,469,"survivor_addon_004"],[222,592,"survivor_offering_008"],
+      [644,706,"survivor_offering_058"],
+      [282,226,null],[644,228,null],[151,357,null],[640,359,null],
+      [101,532,null],[357,593,null],[567,593,null],[463,654,null],[151,705,null]]
+  },
+  "bloodweb_level43_entity_progress.png": {
+    "icons": [[285,365,"survivor_item_020"],[464,415,"survivor_offering_022"],
+      [568,475,"survivor_offering_044"],[223,597,"survivor_offering_008"],
+      [287,708,"survivor_item_003"]]
+  },
+  "bloodweb_level1_after_prestige.png": {
+    "icons": [[454,420,"survivor_item_019"],[559,480,"survivor_offering_053"]]
+  },
+  "bloodweb_level44_start.png": {"icons": [[403,329,"survivor_offering_006"]]},
+  "bloodweb_level50_start.png": {
+    "icons": [[354,482,null],[394,308,"survivor_offering_059"],
+      [770,370,"survivor_offering_049"],[218,478,"survivor_offering_038"],
+      [565,482,"survivor_addon_009"],[218,605,"survivor_offering_024"],
+      [458,666,"survivor_addon_008"],[279,714,"survivor_offering_028"],
+      [640,715,"survivor_offering_014"],[93,544,"survivor_offering_050"],
+      [520,777,"survivor_addon_006"],[281,848,null],
+      [456,895,"survivor_offering_003"]]
+  }
+}

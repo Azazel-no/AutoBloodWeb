@@ -1,0 +1,2662 @@
+{
+  "schema_version": 1,
+  "extractor_version": 2,
+  "sources": {
+    "references/inventory/killer_blight_addons_01.png": "b9cf4ea1c31d04f1b83edbea86098ee84c201072e113d5713b25ba6726394f41",
+    "references/inventory/- killer_blight_addons_02.png": "39c357b8cee53ff8a85b38ce529aa9dd10d06b9c689f5448a209cd08964d73b9",
+    "references/inventory/killer_offerings_01.png": "edfa97fe7eadbfb0b96fa3adfe6ed296f8fac2eab36e747a428b87ebbdbebfdc",
+    "references/inventory/killer_offerings_02.png": "54354a7dc986ea8a8eb19ed5ab99fac3cc3a3fd363733cf1a4be611feb94c043",
+    "references/inventory/killer_offerings_03.png": "2c44f3c9646b349d4477bb6a71f5b3560288e4f3993e1f16c70123d3c1ba2be0",
+    "references/inventory/killer_offerings_04.png": "7fc0ff52908bab4f169b968ddda4291f63cd7640b73d09543ac4271d33b7c8e7",
+    "references/inventory/survivor_addons_01.png": "e9069500bb1e5c68b5884104beb276f88c7d86d3a9c2baa9e79553c61e251d37",
+    "references/inventory/survivor_items_01.png": "8517c157349572c392b7a3136163c4f69e82a9c8dbb68361c896972884861821",
+    "references/inventory/survivor_items_02.png": "74282ee7b77f4ae2df5b0ad5130822e79d3f82bb833dc27b595108950ffbefe8",
+    "references/inventory/survivor_offerings_01.png": "cf43e777095a279fe9bd31a9d0403f39eeb59630cd94618ad1c659da1420655f",
+    "references/inventory/survivor_offerings_02.png": "c476a998f8f4006e6f5a68ad0c79f7a342f713a3086762a6ad7cdfe91530eaa3",
+    "references/inventory/survivor_offerings_03.png": "c96305c52b45774ca923a8e37975167c76ba77df0a27014e4b9f118d8caeb776",
+    "references/inventory/survivor_offerings_04.png": "25ba4bdd5624a8331a04b1d69456ef4ce4219dae1cc0ad4685091bfe8d166a24"
+  },
+  "warnings": [],
+  "icons": [
+    {
+      "id": "killer_blight_addon_001",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_001.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        14,
+        9,
+        99,
+        99
+      ],
+      "rarity": "pink",
+      "fingerprint": "fdc6bddd4a003cfc5da632ab9b2ec760e9f238a51c433dfaeca81f85231fabbb"
+    },
+    {
+      "id": "killer_blight_addon_002",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_002.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        141,
+        9,
+        99,
+        99
+      ],
+      "rarity": "pink",
+      "fingerprint": "05be4e3aeb3b30d04ce55c7997b7d6c7dffe17a0f4d2db598ee6324566e812a5"
+    },
+    {
+      "id": "killer_blight_addon_003",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_003.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        268,
+        9,
+        99,
+        99
+      ],
+      "rarity": "purple",
+      "fingerprint": "256e766d1ab5308df6804b7e05af8c4d85de78505835f05c8b95d2da234b3524"
+    },
+    {
+      "id": "killer_blight_addon_004",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_004.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        396,
+        9,
+        99,
+        99
+      ],
+      "rarity": "purple",
+      "fingerprint": "c46a605174ad6f8fd57617e4cd1e53209a18ef6a00000b1e8c1bce6a2faf3d3f"
+    },
+    {
+      "id": "killer_blight_addon_005",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_005.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        524,
+        9,
+        99,
+        99
+      ],
+      "rarity": "purple",
+      "fingerprint": "9d353883774de78bbc8b520b1f7a14c1ea388c53de8d4290f8520663ed96f506"
+    },
+    {
+      "id": "killer_blight_addon_006",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_006.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        14,
+        121,
+        99,
+        99
+      ],
+      "rarity": "purple",
+      "fingerprint": "a18822bfce747a9817a27766125f8617a3b9f45db2588e8f83a1b1e89eb54c35"
+    },
+    {
+      "id": "killer_blight_addon_007",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_007.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        141,
+        121,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "43f798beb5d5f410febb4f3b6985de7da45b445c3ad5a957b48d2518813625e6"
+    },
+    {
+      "id": "killer_blight_addon_008",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_008.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        268,
+        121,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "61abb64bbe170faf36e2e15bd824185566437f48abc6431d238502d1871ae8b5"
+    },
+    {
+      "id": "killer_blight_addon_009",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_009.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        396,
+        121,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "5bed31624fdc3e96e6ea7f0c6b06846497534754d36358e0d6a515d307626702"
+    },
+    {
+      "id": "killer_blight_addon_010",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_010.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        524,
+        121,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "f10115ec756e1f26c533e14a7f338f1ed7306551e73bc4d00f64524f31000c38"
+    },
+    {
+      "id": "killer_blight_addon_011",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_011.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        14,
+        233,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "1d11d55b77ee741a7f0a3b726bd597c46b38bd0343437d955ffb0263f51d9f38"
+    },
+    {
+      "id": "killer_blight_addon_012",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_012.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        141,
+        233,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "890a61268c6ebce6d06f87bc6e796902963b1a3fd76d12684cabc8e0409eb1f7"
+    },
+    {
+      "id": "killer_blight_addon_013",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_013.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        268,
+        233,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "370444eee94580ce6da9979ca92139a5f1eb21765e3031a1920fafab579e2d8b"
+    },
+    {
+      "id": "killer_blight_addon_014",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_014.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        396,
+        233,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "62052bc66e1e90c34358576661b9a03bf4cc7b9a61289c486a2fe1d26b4fb4d4"
+    },
+    {
+      "id": "killer_blight_addon_015",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_015.png",
+      "source": "references/inventory/killer_blight_addons_01.png",
+      "box": [
+        524,
+        233,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "e3c64de9f3b96790a468112032e482cb1a29d8099d23acb92c631b082489e039"
+    },
+    {
+      "id": "killer_blight_addon_016",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_016.png",
+      "source": "references/inventory/- killer_blight_addons_02.png",
+      "box": [
+        20,
+        9,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "dcaec75eadb2e2bd10e8d9663de534891c99b91729fe296721a0212dfffb6499"
+    },
+    {
+      "id": "killer_blight_addon_017",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_017.png",
+      "source": "references/inventory/- killer_blight_addons_02.png",
+      "box": [
+        148,
+        9,
+        99,
+        99
+      ],
+      "rarity": "brown",
+      "fingerprint": "29436d713cc7d16de4bcd79ddd3bed8ed7edea61cff8d1d674b4a6e5c1e2e75f"
+    },
+    {
+      "id": "killer_blight_addon_018",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_018.png",
+      "source": "references/inventory/- killer_blight_addons_02.png",
+      "box": [
+        276,
+        9,
+        99,
+        99
+      ],
+      "rarity": "brown",
+      "fingerprint": "996b4d1d87e063b8ecb34aca082062db1ba57a93499d2bd3dd0f6dea0645c1a0"
+    },
+    {
+      "id": "killer_blight_addon_019",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_019.png",
+      "source": "references/inventory/- killer_blight_addons_02.png",
+      "box": [
+        403,
+        9,
+        99,
+        99
+      ],
+      "rarity": "brown",
+      "fingerprint": "d7cef421222d9b125b80a153743af156364397dbad08509de336a22dbab4c366"
+    },
+    {
+      "id": "killer_blight_addon_020",
+      "role": "killer",
+      "category": "addons",
+      "character": "blight",
+      "image": "assets/killers/characters/blight/addons/killer_blight_addon_020.png",
+      "source": "references/inventory/- killer_blight_addons_02.png",
+      "box": [
+        530,
+        9,
+        99,
+        99
+      ],
+      "rarity": "brown",
+      "fingerprint": "3398c7882fbb9bf38745cfb6fd81644030580f6260d376aa8f3fd864f9575f16"
+    },
+    {
+      "id": "killer_offering_001",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_001.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        19,
+        8,
+        93,
+        105
+      ],
+      "rarity": "pink",
+      "fingerprint": "38b218bb8ef1624e4e80f9cc910ad65b047c1d377e94f745c734215bfe3e0aa2"
+    },
+    {
+      "id": "killer_offering_002",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_002.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        148,
+        8,
+        93,
+        105
+      ],
+      "rarity": "purple",
+      "fingerprint": "bad511c152b61da6d048df6b1f34c652d6bb83ddd4c6c6803c94cd94fcce2cd1"
+    },
+    {
+      "id": "killer_offering_003",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_003.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        277,
+        8,
+        93,
+        105
+      ],
+      "rarity": "purple",
+      "fingerprint": "9d7f269788d7d765eb7334169d52e95045596e8451043b9349164e7d42eb0bf4"
+    },
+    {
+      "id": "killer_offering_004",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_004.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        406,
+        8,
+        93,
+        105
+      ],
+      "rarity": "purple",
+      "fingerprint": "3b83f2ab2a565dc7528261c4b45f51c9cd2d5c4755286f6f5f371e634f9c67a4"
+    },
+    {
+      "id": "killer_offering_005",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_005.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        535,
+        8,
+        93,
+        105
+      ],
+      "rarity": "purple",
+      "fingerprint": "6cf254f4dab6bd339086e7ab1282bc3d84535426d94f75e34aad3cc401da2722"
+    },
+    {
+      "id": "killer_offering_006",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_006.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        84,
+        117,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "601d0f6ff13c6cfb45479a90076a2e432ec7ff822080f56a1cd2ca8940e22f25"
+    },
+    {
+      "id": "killer_offering_007",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_007.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        212,
+        117,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "c631bc7f14ac4dddc034006738302f9fb6e7f1f8910e4f74db62e7c40cb757e9"
+    },
+    {
+      "id": "killer_offering_008",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_008.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        342,
+        117,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "765e35acf606bb58a04e2b4d7cc0c448c120efe233d79a0e589efaed1ec6594a"
+    },
+    {
+      "id": "killer_offering_009",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_009.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        470,
+        117,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "2523200e7dfa678ea09445f58cf28542be9a1eaf496efc96c17a2996baeb13a0"
+    },
+    {
+      "id": "killer_offering_010",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_010.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        600,
+        117,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "4993440ddafdc2471c160008c64766f0f03df7a01ac1f80cdfc4d588269096d5"
+    },
+    {
+      "id": "killer_offering_011",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_011.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        19,
+        226,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "2f199f92d7f4bd5fa4df6eded6f5f79919ea6f47ad0d27c78094ef9f4881490c"
+    },
+    {
+      "id": "killer_offering_012",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_012.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        148,
+        226,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "deb643dec1f57c4c2737ddf8f591f4070262807014ce2a2b9df5c844354c0677"
+    },
+    {
+      "id": "killer_offering_013",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_013.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        277,
+        226,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "4735436747dc98d79d06f4594a7d1ecd4bdb4f9a43fb813cac4257df780fba69"
+    },
+    {
+      "id": "killer_offering_014",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_014.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        406,
+        226,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "61a82ac319f2fed127e6f9d07da51dffbc503d1e43ccdccdcddb54c4bf27e180"
+    },
+    {
+      "id": "killer_offering_015",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_015.png",
+      "source": "references/inventory/killer_offerings_01.png",
+      "box": [
+        535,
+        226,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "2479a36f1ec302ff54b1acf02076a2748197124c4d1ef3ba8c95a415124bac4d"
+    },
+    {
+      "id": "killer_offering_016",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_016.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        37,
+        14,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "5055c6bbf714c0e2a1ffdad5b497ab91516cf367bcd535c19b7952b4a1401c5a"
+    },
+    {
+      "id": "killer_offering_017",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_017.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        166,
+        14,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "b3375ed7d3b800c658e109c00ee10d42cebba71ccb5a8afe3ecee539d250c0fd"
+    },
+    {
+      "id": "killer_offering_018",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_018.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        295,
+        14,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "eb6793cd8575307735f408f081f5d3bd07c30b03c49dcec0a131987f8f538a1e"
+    },
+    {
+      "id": "killer_offering_019",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_019.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        424,
+        14,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "eb9d3796a5322acdc6e2cf9f753dfb75fc4eb0ad5fc8f9f6c82f03ae3774a836"
+    },
+    {
+      "id": "killer_offering_020",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_020.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        553,
+        14,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "86c54df05d1269b88237b54f6cf50630f994abcd8d6c6874c7c1f390960b7fc2"
+    },
+    {
+      "id": "killer_offering_021",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_021.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        102,
+        123,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "e078d6db530238acd1ed48d79fa02a79e4b0c3e68939107a251f8621bfb84208"
+    },
+    {
+      "id": "killer_offering_022",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_022.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        230,
+        123,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "68990aa913f4b6506bb2897d91c67788a94eb6c3376a9a0e6f0d853219d370d9"
+    },
+    {
+      "id": "killer_offering_023",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_023.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        360,
+        123,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "87177d60e40c42cdc689b910dea14ccd00f446daa21b82cc54931cd2f4239131"
+    },
+    {
+      "id": "killer_offering_024",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_024.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        488,
+        123,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "ff104b8451999601affe66f7230fa872fef18d130e023fd7bea73db738beeed6"
+    },
+    {
+      "id": "killer_offering_025",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_025.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        618,
+        123,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "5eac6d3e30659e6ab5bd2f190a7bc3dc80f78ae57e972d30e71ea8c00e15a1ef"
+    },
+    {
+      "id": "killer_offering_026",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_026.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        37,
+        232,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "3ef06358084930902de94b7cd66f7aedee6cb63eff80a0b1d4e8086022c7f4ee"
+    },
+    {
+      "id": "killer_offering_027",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_027.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        166,
+        232,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "6505259243660dd083eff49eeb9ac4c290ad8c8a3016dad4cefd26083c710baf"
+    },
+    {
+      "id": "killer_offering_028",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_028.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        295,
+        232,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "3f91ec176318383a78effc39f1f0f2ba2572ff780240e8570d1a6ab2aa40dadc"
+    },
+    {
+      "id": "killer_offering_029",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_029.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        424,
+        232,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "2f3dbb17e88daca0a562640c832f9d827f65860fb2aa6f9695de933022ad3ab8"
+    },
+    {
+      "id": "killer_offering_030",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_030.png",
+      "source": "references/inventory/killer_offerings_02.png",
+      "box": [
+        553,
+        232,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "8d16ffa7de94b8f404abdf77809a73f71cc72a88f7e50f4a75a0ad3f0b4478cf"
+    },
+    {
+      "id": "killer_offering_031",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_031.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        23,
+        9,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "6fa04ee60ae8ada772d637ee8501cf929aa8127d8d54828518423df9dcc7bfc5"
+    },
+    {
+      "id": "killer_offering_032",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_032.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        152,
+        9,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "1e680ab8a8d4a95f6f494cd724f83a78f8e25da433bb429f5944b64c2d8162c6"
+    },
+    {
+      "id": "killer_offering_033",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_033.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        281,
+        9,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "c48735a5ae603ae2c42a594c9865ef9558fa0712e322fd8ebff5aea97415fbd5"
+    },
+    {
+      "id": "killer_offering_034",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_034.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        410,
+        9,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "9a647599a1cc6781728736da25c09b702cb3961237eced9943b73edc39295901"
+    },
+    {
+      "id": "killer_offering_035",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_035.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        539,
+        9,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "f98de6491427f12b1fff6a1345e8ed1f18fe718053a7a121996c75a3ceb35c87"
+    },
+    {
+      "id": "killer_offering_036",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_036.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        88,
+        118,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "07ccfee7aca9a12bfb074828e0e7f4d6bfabc6f4100b3017228e76d9ea92c855"
+    },
+    {
+      "id": "killer_offering_037",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_037.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        216,
+        118,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "a9aca4b4656ac1c6d1ebe52086f7bc8762feba50901f8b8ac7b3ced4369cc642"
+    },
+    {
+      "id": "killer_offering_038",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_038.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        346,
+        118,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "b48b8cef5361e14b9473eb51e9658cebb47c9ae3bfd3459a590cad6323293961"
+    },
+    {
+      "id": "killer_offering_039",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_039.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        474,
+        118,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "aa64297f2347d8a3b29c9a90ec64950c79bee9da3dfddeb29a13df07a8473c2b"
+    },
+    {
+      "id": "killer_offering_040",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_040.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        604,
+        118,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "05105958e065937018cdf461df164872ba964007ed25acbc69ca98d016a1cffb"
+    },
+    {
+      "id": "killer_offering_041",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_041.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        23,
+        227,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "b8d3d0090140125b53d8af607af6dc1a758f6a38aa5bd1ab58ed702f97f3f3d6"
+    },
+    {
+      "id": "killer_offering_042",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_042.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        152,
+        227,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "c3df916b0998c169f15893c64e75dd8ba571ba7e34461f96b60a16c5d8f0b34f"
+    },
+    {
+      "id": "killer_offering_043",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_043.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        281,
+        227,
+        93,
+        105
+      ],
+      "rarity": "brown",
+      "fingerprint": "782d50cfea705cf059da19452f44fb597ac8e64ec9a0796e1c7d6a2097c3211d"
+    },
+    {
+      "id": "killer_offering_044",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_044.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        410,
+        227,
+        93,
+        105
+      ],
+      "rarity": "brown",
+      "fingerprint": "87fb1c59b35e2ac8540d9de0e0d402f4e346725d1a6215fe7c2ce8092315530e"
+    },
+    {
+      "id": "killer_offering_045",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_045.png",
+      "source": "references/inventory/killer_offerings_03.png",
+      "box": [
+        539,
+        227,
+        93,
+        105
+      ],
+      "rarity": "brown",
+      "fingerprint": "7edfb14a0b78bc5e36f69464879e61f7517ae56954a63e8413508fd33a02a84d"
+    },
+    {
+      "id": "killer_offering_046",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_046.png",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        29,
+        11,
+        93,
+        105
+      ],
+      "rarity": "brown",
+      "fingerprint": "5a55b8221aa879c9d2e8e6aba2ebe5944a46ddcede4d88991bda6e70a3f9b20a"
+    },
+    {
+      "id": "killer_offering_047",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_047.png",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        158,
+        11,
+        93,
+        105
+      ],
+      "rarity": "brown",
+      "fingerprint": "534baae5ebdb1e81aa0a29d1dc96fb333c6439fc8af0a22daacae9afb9c683b3"
+    },
+    {
+      "id": "killer_offering_048",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_048.png",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        287,
+        11,
+        93,
+        105
+      ],
+      "rarity": "brown",
+      "fingerprint": "2a04684e8edab1238a65b4f2260b2b70eed008a519f14d3bc12895a94a314d22"
+    },
+    {
+      "id": "killer_offering_049",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_049.png",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        416,
+        11,
+        93,
+        105
+      ],
+      "rarity": "brown",
+      "fingerprint": "91f3114f72f0c0cc113fb26bcbe8015470b2a3df8b36d59a61ca2ce84dc85ad0"
+    },
+    {
+      "id": "killer_offering_050",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_050.png",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        545,
+        11,
+        93,
+        105
+      ],
+      "rarity": "brown",
+      "fingerprint": "2542baec05bd6dfcadde6906928e46718345e6ca5612d101c6f22dd2a918db5c"
+    },
+    {
+      "id": "killer_offering_051",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_051.png",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        94,
+        120,
+        93,
+        105
+      ],
+      "rarity": "brown",
+      "fingerprint": "5c0ab46addbd1f87734cd0ecc30735298ba3a4d61ecfb4863805d9a613a858e2"
+    },
+    {
+      "id": "killer_offering_052",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_052.png",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        222,
+        120,
+        93,
+        105
+      ],
+      "rarity": "brown",
+      "fingerprint": "2bfd0d868d631022224c74ce3378baf91633d735353c5cfaa9d0b76e0850f847"
+    },
+    {
+      "id": "killer_offering_053",
+      "role": "killer",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/killers/offerings/killer_offering_053.png",
+      "source": "references/inventory/killer_offerings_04.png",
+      "box": [
+        352,
+        120,
+        93,
+        105
+      ],
+      "rarity": "brown",
+      "fingerprint": "e1f4575e90e07820ba5004a92daf459b03f85c34f21e6d9a656b7c9849d29fbe"
+    },
+    {
+      "id": "survivor_addon_001",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/survivor_addon_001.png",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        19,
+        8,
+        99,
+        99
+      ],
+      "rarity": "pink",
+      "fingerprint": "1f192c702a3c01ba1b6a1798c5f2c92711a2e745f2da23d4c8f8a605fca12efc"
+    },
+    {
+      "id": "survivor_addon_002",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/survivor_addon_002.png",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        146,
+        8,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "41d8857801995e6fcfba3486a5cb729af4453302319e7490dd86ec84b69cfd60"
+    },
+    {
+      "id": "survivor_addon_003",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/survivor_addon_003.png",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        274,
+        8,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "e9e4423c2d1c5d5d9c787da74b22e17b65567dc89d800d0ba7dd31c0c4b0aa56"
+    },
+    {
+      "id": "survivor_addon_004",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/survivor_addon_004.png",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        401,
+        8,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "a1164d937b641379e9f6c6275f7335b9119af405faea8ab14142722f1942bf73"
+    },
+    {
+      "id": "survivor_addon_005",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/survivor_addon_005.png",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        528,
+        8,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "0eb3a78e4518da30eb66a2cacdce7733edab6ba0e0dc783e08b03e32c5dc46d3"
+    },
+    {
+      "id": "survivor_addon_006",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/survivor_addon_006.png",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        19,
+        120,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "7906d8dab79c24c0150300cd596be9e9dad9ba377bdafc6ba075a4d5f6d85a17"
+    },
+    {
+      "id": "survivor_addon_007",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/survivor_addon_007.png",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        146,
+        120,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "c0bb0b4e5c8897c6ea5fd3cf3deb71fad17a108cd5775b965f08bcb064cc382f"
+    },
+    {
+      "id": "survivor_addon_008",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/survivor_addon_008.png",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        274,
+        120,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "f96e877206010ae956659fe0c4f59eb34cb683ad94bfd7cf69a7261a3958bec7"
+    },
+    {
+      "id": "survivor_addon_009",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/survivor_addon_009.png",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        401,
+        120,
+        99,
+        99
+      ],
+      "rarity": "brown",
+      "fingerprint": "74efc822194242bac91367295349165eb4a8c5e94e7b997ed3614a0f94b2b765"
+    },
+    {
+      "id": "survivor_addon_010",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/survivor_addon_010.png",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        528,
+        120,
+        99,
+        99
+      ],
+      "rarity": "brown",
+      "fingerprint": "9d57aa324d979b82665754886a5f4b4b04213ba677b8ae19bc2ce6cf6a52682a"
+    },
+    {
+      "id": "survivor_addon_011",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/survivor_addon_011.png",
+      "source": "references/inventory/survivor_addons_01.png",
+      "box": [
+        19,
+        232,
+        99,
+        99
+      ],
+      "rarity": "brown",
+      "fingerprint": "cfe1b258e1c31eaa8a242b986c81199bd2716dc430e1d4cf90547e94ebcef9f2"
+    },
+    {
+      "id": "survivor_item_001",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_001.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        29,
+        17,
+        99,
+        99
+      ],
+      "rarity": "purple",
+      "fingerprint": "ee8d31ce43983afaf0a9cdfdb9c6ecc22fac9309a9adf748d108b0b5b0dde2b0"
+    },
+    {
+      "id": "survivor_item_002",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_002.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        156,
+        17,
+        99,
+        99
+      ],
+      "rarity": "purple",
+      "fingerprint": "5c8802968cbfecfa6d8233dc6a10e772d40c1584e8c5788019f898fefd283c0b"
+    },
+    {
+      "id": "survivor_item_003",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_003.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        284,
+        17,
+        99,
+        99
+      ],
+      "rarity": "purple",
+      "fingerprint": "61d01d7aa71468e399b4250548c229cc50bcb663264ca4a42ed835ed743187e1"
+    },
+    {
+      "id": "survivor_item_004",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_004.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        411,
+        17,
+        99,
+        99
+      ],
+      "rarity": "purple",
+      "fingerprint": "3a7c67bdd9acf4b7e990c8462a97f5a22e05a676a09d94ce4935e41a619acf04"
+    },
+    {
+      "id": "survivor_item_005",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_005.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        538,
+        17,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "b2b4e62faa75f88fc45f8145b5a8db11715f59335bd9d37728a1bc98b694ce3f"
+    },
+    {
+      "id": "survivor_item_006",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_006.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        29,
+        129,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "a48fd52211f2ebc15b8f99255d19f752302ae4cb0db54868e520fe850a741d6e"
+    },
+    {
+      "id": "survivor_item_007",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_007.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        156,
+        129,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "d2e5bc01f94a9c3c3789e4ae17d8ac73cc1e0692afa0213d6d6b1d9c7d63b4f9"
+    },
+    {
+      "id": "survivor_item_008",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_008.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        284,
+        129,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "ba77cb8ba51782ab4fe976bd88601ad85f96a8921916d6651ecf9be8a856d5a0"
+    },
+    {
+      "id": "survivor_item_009",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_009.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        411,
+        129,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "ad01e947e6b6d60d4977cf2fd482a3496d347cb55572909e1ed5ca5ae78bdd88"
+    },
+    {
+      "id": "survivor_item_010",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_010.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        538,
+        129,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "056c1b0707220fc14f61dadfddd356d1084d645e6d1aa834f313d81ecd8ee127"
+    },
+    {
+      "id": "survivor_item_011",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_011.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        29,
+        241,
+        99,
+        99
+      ],
+      "rarity": "blue",
+      "fingerprint": "208196bc9393597b74abfc5b5c2b370cf4da7eab112098fbc5963290dc4979b9"
+    },
+    {
+      "id": "survivor_item_012",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_012.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        156,
+        241,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "c3ad69f13594f2c0abddeeb43836f0ec1dd79238f35f286e630d8177ea9ddb0a"
+    },
+    {
+      "id": "survivor_item_013",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_013.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        284,
+        241,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "2207bb7d1f09e5ccb3d60db33ad11d2b7ebc217383aedadbff6f1bff8ea1b61e"
+    },
+    {
+      "id": "survivor_item_014",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_014.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        411,
+        241,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "e603bc3ca06b598f0bbb67171bbb52580cc7d2fcb4ce399704d9c72405a964a8"
+    },
+    {
+      "id": "survivor_item_015",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_015.png",
+      "source": "references/inventory/survivor_items_01.png",
+      "box": [
+        538,
+        241,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "fa0a7f5ee28ab106ce6908ef4f22b543363b0b0a22c47f2c8c6976ec07abff2f"
+    },
+    {
+      "id": "survivor_item_016",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_016.png",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        20,
+        12,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "c84af660688a3c08ad354e1f67695d5af9ae00b4a01038eef4adcddf93c93560"
+    },
+    {
+      "id": "survivor_item_017",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_017.png",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        147,
+        12,
+        99,
+        99
+      ],
+      "rarity": "green",
+      "fingerprint": "14e4d57924a2ab1517ea3ba3322690813933166c1fd591f618f810a54b8c7ced"
+    },
+    {
+      "id": "survivor_item_018",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_018.png",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        274,
+        12,
+        99,
+        99
+      ],
+      "rarity": "brown",
+      "fingerprint": "823226a328af97285219e3fbbff7e96781a6c6ab91eb0f2e2a3908b2143bd5f7"
+    },
+    {
+      "id": "survivor_item_019",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_019.png",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        402,
+        12,
+        99,
+        99
+      ],
+      "rarity": "brown",
+      "fingerprint": "2c242dbd308b63e8e6d2bcf8004071a40159bda5fae21d941c4d7f5645f755d7"
+    },
+    {
+      "id": "survivor_item_020",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_020.png",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        529,
+        12,
+        99,
+        99
+      ],
+      "rarity": "brown",
+      "fingerprint": "cd937dec406977412efe3e649676edbabb1e8b86a00d58a516be03c29d2a91d0"
+    },
+    {
+      "id": "survivor_item_021",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_021.png",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        20,
+        124,
+        99,
+        99
+      ],
+      "rarity": "brown",
+      "fingerprint": "fdb793394920dd07ef0ce32483b6f0f26759b7a14147d11776bf236315b9266e"
+    },
+    {
+      "id": "survivor_item_022",
+      "role": "survivor",
+      "category": "items",
+      "character": null,
+      "image": "assets/survivors/items/survivor_item_022.png",
+      "source": "references/inventory/survivor_items_02.png",
+      "box": [
+        147,
+        124,
+        99,
+        99
+      ],
+      "rarity": "brown",
+      "fingerprint": "7cc6c42129f7abc500df3ff147402b214810f41d1fb07cf5a05b34ab9c9b017c"
+    },
+    {
+      "id": "survivor_offering_001",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_001.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        34,
+        15,
+        93,
+        105
+      ],
+      "rarity": "purple",
+      "fingerprint": "a9085b4b5c4f192df39de1ce0afbb8cfdc0df05e3b19c3a8eb362e1aa32ae698"
+    },
+    {
+      "id": "survivor_offering_002",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_002.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        162,
+        15,
+        93,
+        105
+      ],
+      "rarity": "purple",
+      "fingerprint": "25f1a4feda39b152b14b7e6fe87d886dda1bd57972ccf283f80f291483fa89c3"
+    },
+    {
+      "id": "survivor_offering_003",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_003.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        291,
+        15,
+        93,
+        105
+      ],
+      "rarity": "purple",
+      "fingerprint": "90120a25f40802faa8d98c487673f40f67d6b6469f420be6bc7f7e474b8bd6ce"
+    },
+    {
+      "id": "survivor_offering_004",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_004.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        420,
+        15,
+        93,
+        105
+      ],
+      "rarity": "purple",
+      "fingerprint": "1a1c11fb50ca0b8f1c5aa3c55cb054403f769f3ff2851b3256a52d26532723e6"
+    },
+    {
+      "id": "survivor_offering_005",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_005.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        548,
+        15,
+        93,
+        105
+      ],
+      "rarity": "purple",
+      "fingerprint": "376ea11e8f850425cb979aeb584a76e84890e3ca88747c6d3d8ae7828c249abc"
+    },
+    {
+      "id": "survivor_offering_006",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_006.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        98,
+        124,
+        93,
+        105
+      ],
+      "rarity": "purple",
+      "fingerprint": "f2b2841e0ded24e92e096d3dfeb3126cd69eb3215855f07d2386c357f312af9c"
+    },
+    {
+      "id": "survivor_offering_007",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_007.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        227,
+        124,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "0d88c8cb04508e6745847cf02510b02fdcf1150d1b0fa53adbc2cedb2916387f"
+    },
+    {
+      "id": "survivor_offering_008",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_008.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        355,
+        124,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "f8f101687b5fff45c5bc77a605348b0c08c8bff1c7f17d8b0b2ebc099f3d1b5b"
+    },
+    {
+      "id": "survivor_offering_009",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_009.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        484,
+        124,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "2f46466c77cb5e810539766e7060d6dbf44510b5504474c3c189ddc6e2a8d040"
+    },
+    {
+      "id": "survivor_offering_010",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_010.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        613,
+        124,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "6078b470d2d4ffda3517c147475d76c79e5348740ff61462ecda8e4f82b5ba07"
+    },
+    {
+      "id": "survivor_offering_011",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_011.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        34,
+        233,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "2edf871f0297891415bb5b471b49f826ecc2b4bc945cc824b16dc84ce67e8918"
+    },
+    {
+      "id": "survivor_offering_012",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_012.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        162,
+        233,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "a5ca20e9313aae3903b2de38d18dfb05ddde965d155a7c279286e0bec8286e43"
+    },
+    {
+      "id": "survivor_offering_013",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_013.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        291,
+        233,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "1e9619e4fb52562622374f75b5dd6080aa701f7c76093fbcd4af861de72b2853"
+    },
+    {
+      "id": "survivor_offering_014",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_014.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        420,
+        233,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "a572f71a66bb1d523b6a44d349191c37fe19e4da50175c861e826cae2ee91d45"
+    },
+    {
+      "id": "survivor_offering_015",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_015.png",
+      "source": "references/inventory/survivor_offerings_01.png",
+      "box": [
+        548,
+        233,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "5398b5e3cec5c75c80c633e84a2b6f46e2a433a3e2cf0fa0563c08b3b42a3a0e"
+    },
+    {
+      "id": "survivor_offering_016",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_016.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        16,
+        8,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "544b6f22e975d5eab41a540d52f316635d24c8ff3903c9a667c22d2db6d5bb1d"
+    },
+    {
+      "id": "survivor_offering_017",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_017.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        145,
+        8,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "d90282a22d7b610c5cea025e2173da35a95a72176adc48e3f5832c8e9cc07591"
+    },
+    {
+      "id": "survivor_offering_018",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_018.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        274,
+        8,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "2924cec7c55355968ec9fb9f74ab1cebc06bbfa34f4976bf9805fcc5c316b4f2"
+    },
+    {
+      "id": "survivor_offering_019",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_019.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        403,
+        8,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "48e642a8a108d239642cd7e77c46efa1ec7b3e27abefe04e7330576b20a436c8"
+    },
+    {
+      "id": "survivor_offering_020",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_020.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        532,
+        8,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "e032498bfe322dc23ff3b9f1c4200eabd13e4dec98e184acaf538981c47ec5b7"
+    },
+    {
+      "id": "survivor_offering_021",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_021.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        81,
+        117,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "625d5eb2450b4abc41a1b5930a7df0b5a22a18aa29082e833a4010431dc882b2"
+    },
+    {
+      "id": "survivor_offering_022",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_022.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        210,
+        117,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "3c5728e051ed6a30094a3516d609971813bfdfe8ee1e9e830209a8bbab970253"
+    },
+    {
+      "id": "survivor_offering_023",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_023.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        338,
+        117,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "5ccf3933527f31ff3661e79e23eb3f52fc7868641bc439d3febe31c72a2e1c52"
+    },
+    {
+      "id": "survivor_offering_024",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_024.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        467,
+        117,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "804b5ff21548d0e28dc5f2a600f0997dce8f1119030cb9eb0d8aba13d7483f05"
+    },
+    {
+      "id": "survivor_offering_025",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_025.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        596,
+        117,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "74f29a01c99ea996db74d0909668a9330fedd166b0c6153b176a00a8b0861c66"
+    },
+    {
+      "id": "survivor_offering_026",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_026.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        16,
+        226,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "d746f811490323cf23a861371b96bf52c1963449b577f1e0d282aa51b3554ced"
+    },
+    {
+      "id": "survivor_offering_027",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_027.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        145,
+        226,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "9e3dd22265be328e204c8dafb94c7f85d414c92bcef86e564d9ad6ff7d41ac1b"
+    },
+    {
+      "id": "survivor_offering_028",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_028.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        274,
+        226,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "78f417d557048796b5804d5bafba05266c89fe1a22b16a0005adcc937e98d41b"
+    },
+    {
+      "id": "survivor_offering_029",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_029.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        403,
+        226,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "5cc64ddd4b120b5f05ff0c54054413d015297a3b1e210a0836c66bc949308a6b"
+    },
+    {
+      "id": "survivor_offering_030",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_030.png",
+      "source": "references/inventory/survivor_offerings_02.png",
+      "box": [
+        532,
+        226,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "2f8358ae0bf85f09f4a6c4f4e4fa1cd33f3b96f573e9cceea46f74c1a474a562"
+    },
+    {
+      "id": "survivor_offering_031",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_031.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        30,
+        12,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "3b74894c101ffc25f18ea1a95e273ac227c01c5ccd90c1a59f16b57bb30c6ada"
+    },
+    {
+      "id": "survivor_offering_032",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_032.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        159,
+        12,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "5aeaee56f2c7865578bd214d1f9661b334c5a9e0ea0646d9e66029cc844a08be"
+    },
+    {
+      "id": "survivor_offering_033",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_033.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        288,
+        12,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "acad8e0c80d7b60135faf4e38489de505fa19cb35bf17b5a6425b0b07e0ed0e5"
+    },
+    {
+      "id": "survivor_offering_034",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_034.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        417,
+        12,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "5f8be38dc94c78bc0bd3db776726b489da4d9df65a5cd2b65650961ae3ce3dd1"
+    },
+    {
+      "id": "survivor_offering_035",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_035.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        546,
+        12,
+        93,
+        105
+      ],
+      "rarity": "blue",
+      "fingerprint": "6d8405a2de3e9c0dbaf72e8435d25fc2f5dd752704b64420d061ea3510efab62"
+    },
+    {
+      "id": "survivor_offering_036",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_036.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        94,
+        121,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "5a3fa982ad013a8763039fa53827e62cc8ff160e99388a6f51064bade07a8599"
+    },
+    {
+      "id": "survivor_offering_037",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_037.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        224,
+        121,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "6606d7ee340274a78677301167f0c40e843863c867004bf1c72a80729f08a9a8"
+    },
+    {
+      "id": "survivor_offering_038",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_038.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        352,
+        121,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "b5e4bd8c757ed48afa33542b6478d4e2724c4a13fbf6c4da572778ec46b4a166"
+    },
+    {
+      "id": "survivor_offering_039",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_039.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        482,
+        121,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "a9f3f55b6bb10c55c3bdf038ff6bded1d857d4e0f90ef76fbd3b672ec438cd2f"
+    },
+    {
+      "id": "survivor_offering_040",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_040.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        610,
+        121,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "a8ce796a5fd68c48237120242cbd595f76921c058dfe921a4ffc4581cb6a81c5"
+    },
+    {
+      "id": "survivor_offering_041",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_041.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        30,
+        230,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "8efbb46f4953e1542e40025bcfd073914297b7e52e7846f91a7d29d9140ba832"
+    },
+    {
+      "id": "survivor_offering_042",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_042.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        159,
+        230,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "f92f644069e523ede46281e19465e489035b47c2e182592a8147b28f8b668758"
+    },
+    {
+      "id": "survivor_offering_043",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_043.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        288,
+        230,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "7de0622e52e64b95b0563460001859ad695bcd81d2224458bd2c87928a9e9beb"
+    },
+    {
+      "id": "survivor_offering_044",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_044.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        417,
+        230,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "295b6edfe60e663ebe3329ae52f522cf88d9f204c3d8b3db03d23d3ad8181e97"
+    },
+    {
+      "id": "survivor_offering_045",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_045.png",
+      "source": "references/inventory/survivor_offerings_03.png",
+      "box": [
+        546,
+        230,
+        93,
+        105
+      ],
+      "rarity": "green",
+      "fingerprint": "e27987ed396e6ce5cda75e27e731d9dd43cdd59b7fe39b6b84a1cc744f88c070"
+    },
+    {
+      "id": "survivor_offering_046",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_046.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        34,
+        0,
+        93,
+        106
+      ],
+      "rarity": "green",
+      "fingerprint": "037cea507bae68e4de5cd810abf3cc920abaab52313f0f1c186a741c92709502"
+    },
+    {
+      "id": "survivor_offering_047",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_047.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        163,
+        0,
+        93,
+        106
+      ],
+      "rarity": "green",
+      "fingerprint": "8d43668bf66fa8c41c973f60cd5de35e83b55dde6ac0f045238acd89ef72c8da"
+    },
+    {
+      "id": "survivor_offering_048",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_048.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        292,
+        0,
+        93,
+        106
+      ],
+      "rarity": "brown",
+      "fingerprint": "aadce611865d58666f04922a0da0a0f6f94667ac25ea638e84da9fcdbb914914"
+    },
+    {
+      "id": "survivor_offering_049",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_049.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        421,
+        0,
+        93,
+        106
+      ],
+      "rarity": "brown",
+      "fingerprint": "d43a7b4891ebd413dc7396e053b9878dcda1b7e6b823e475a24b002201ad3a27"
+    },
+    {
+      "id": "survivor_offering_050",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_050.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        550,
+        0,
+        93,
+        106
+      ],
+      "rarity": "brown",
+      "fingerprint": "5f7d0f418ec91a1fade42cdd17bb33e881eeff4e1428f9beab9aba8ef6f7d020"
+    },
+    {
+      "id": "survivor_offering_051",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_051.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        98,
+        110,
+        93,
+        106
+      ],
+      "rarity": "brown",
+      "fingerprint": "8a304a9ac8223ea10356bee280fb2b0b0daaaa107154fafd82d97937c0bfb3a6"
+    },
+    {
+      "id": "survivor_offering_052",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_052.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        228,
+        110,
+        93,
+        106
+      ],
+      "rarity": "brown",
+      "fingerprint": "d283aab34c32dd707caee00bbaa86202d1e9a0088274a5b8e45f5097b7c067f5"
+    },
+    {
+      "id": "survivor_offering_053",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_053.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        356,
+        110,
+        93,
+        106
+      ],
+      "rarity": "brown",
+      "fingerprint": "5b018e5192c62d5db59d0d80dd73d82020daaa98a94b3dc060ef61eb4a2742ac"
+    },
+    {
+      "id": "survivor_offering_054",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_054.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        486,
+        110,
+        93,
+        106
+      ],
+      "rarity": "brown",
+      "fingerprint": "27f3655f491c3efd04957d469127022152c138c65ac94bc65c2d8e53508b6708"
+    },
+    {
+      "id": "survivor_offering_055",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_055.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        614,
+        110,
+        93,
+        106
+      ],
+      "rarity": "brown",
+      "fingerprint": "7a3c96f603b0709907e9e0355b08bc0f57f58f62e84ae0cdf3c63a6f85112637"
+    },
+    {
+      "id": "survivor_offering_056",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_056.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        34,
+        220,
+        93,
+        106
+      ],
+      "rarity": "brown",
+      "fingerprint": "3fba274efe22cbdbff12a04d25f113496c4b37df53e5308417adb385e3960ec2"
+    },
+    {
+      "id": "survivor_offering_057",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_057.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        163,
+        220,
+        93,
+        106
+      ],
+      "rarity": "brown",
+      "fingerprint": "5b53e366743ca2a178699f89b52cfbef97511e50c06f7b64bd7c5e34594a7843"
+    },
+    {
+      "id": "survivor_offering_058",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_058.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        292,
+        220,
+        93,
+        106
+      ],
+      "rarity": "brown",
+      "fingerprint": "ed34563948e4716b8cf8192ef0253c87a5f444a4dee359a3ae51e7b795077528"
+    },
+    {
+      "id": "survivor_offering_059",
+      "role": "survivor",
+      "category": "offerings",
+      "character": null,
+      "image": "assets/survivors/offerings/survivor_offering_059.png",
+      "source": "references/inventory/survivor_offerings_04.png",
+      "box": [
+        421,
+        220,
+        93,
+        106
+      ],
+      "rarity": "brown",
+      "fingerprint": "ed609d9ef7166caff580f917fd5426e712da52e7ea73356fcc3f8f91d36de12d"
+    }
+  ]
+}

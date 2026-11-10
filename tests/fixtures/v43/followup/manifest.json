@@ -1,0 +1,29 @@
+{
+  "sources": [
+    {
+      "path": "tests\\fixtures\\v43\\followup\\outer_before.png",
+      "sha256": "529eb40fb6a4b355e2556661b99fb92c79d04766f87313443b83a79669c4a283",
+      "analysis_id": "1791805932866448800_9a6c65df"
+    },
+    {
+      "path": "tests\\fixtures\\v43\\followup\\purple_tooltip.png",
+      "sha256": "37def82086d0881a02182639a4f4f21efb4274cc01cbb84b8287ffc725e901b5",
+      "analysis_id": "1791805938910886000_9a364952"
+    },
+    {
+      "path": "tests\\fixtures\\v43\\followup\\brown_tooltip.png",
+      "sha256": "a131d17c214addf58192c77e848b3c4e03ec7edd9f13e9fc14273783b303cb07",
+      "analysis_id": "1791806071671035600_17f07145"
+    },
+    {
+      "path": "tests\\fixtures\\v43\\followup\\red_connection_1.png",
+      "sha256": "088b520a166766ad85ea3f0720dfc36d199e51b91e27ab9aa4bff0871757b006",
+      "analysis_id": "1791806073338010400_4d38ee7a"
+    },
+    {
+      "path": "tests\\fixtures\\v43\\followup\\red_connection_2.png",
+      "sha256": "18d7ea0637384f07c1a4fac48d6bb312233797c1ddabdb6c9ed9de4e5adc918c",
+      "analysis_id": "1791806074536272600_a71cc1b1"
+    }
+  ]
+}

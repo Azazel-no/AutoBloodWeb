@@ -1,0 +1,184 @@
+{
+  "input": false,
+  "focus_changed": false,
+  "observations": [
+    {
+      "source": "references/bloodweb/v48_ed1ee9ac/raw_1.png",
+      "sha256": "56120c6791ed4918b712bdeed4f9804f091cfe9e2b8aeba84057c0223314d31d",
+      "frame": {
+        "window": {
+          "hwnd": 198428,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 17416
+        },
+        "roi": {
+          "x": 264,
+          "y": 142,
+          "width": 840,
+          "height": 840
+        },
+        "image_size": [
+          840,
+          840
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": null,
+        "captured_at": 92859.2677106,
+        "visibility": {
+          "window": {
+            "hwnd": 198428,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 17416
+          },
+          "provider": "mss",
+          "roi": {
+            "x": 264,
+            "y": 142,
+            "width": 840,
+            "height": 840
+          },
+          "occlusions": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        },
+        "level": 40,
+        "level_confidence": 0.991869918699187,
+        "probe_only": false
+      }
+    },
+    {
+      "source": "references/bloodweb/v48_ed1ee9ac/raw_2.png",
+      "sha256": "2c318c3157afe1b5950af2ec990344f15ca4fa2f731a7a3231db1713e47a36be",
+      "frame": {
+        "window": {
+          "hwnd": 198428,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 17416
+        },
+        "roi": {
+          "x": 264,
+          "y": 142,
+          "width": 840,
+          "height": 840
+        },
+        "image_size": [
+          840,
+          840
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": null,
+        "captured_at": 92860.1594057,
+        "visibility": {
+          "window": {
+            "hwnd": 198428,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 17416
+          },
+          "provider": "mss",
+          "roi": {
+            "x": 264,
+            "y": 142,
+            "width": 840,
+            "height": 840
+          },
+          "occlusions": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        },
+        "level": 40,
+        "level_confidence": 0.991869918699187,
+        "probe_only": false
+      }
+    }
+  ]
+}

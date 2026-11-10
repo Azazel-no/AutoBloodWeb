@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "chapter": "Terrifier",
+  "status": "PTB data, verify after release",
+  "verify_after": "2026-11-24",
+  "source": "https://deadbydaylight.wiki.gg/wiki/Art_The_Clown",
+  "killer": {
+    "id": "terrifier",
+    "name": "Art the Clown",
+    "power": "Bag of Toys",
+    "perks": [
+      "Funny Business",
+      "Kill Spree",
+      "Laughingstock"
+    ]
+  },
+  "survivor": {
+    "name": "Sienna Shaw",
+    "perks": [
+      "Valkyrie's Rage",
+      "Shared Trauma",
+      "Best Gift Ever"
+    ]
+  },
+  "note": "Names, numbers and icons may change at release. Re-run --sync-wiki, --verify-wiki, --sync-perks and --sync-items, then scripts/build_otz_tierlist.py when Art is on the list."
+}

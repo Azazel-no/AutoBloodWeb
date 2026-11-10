@@ -1,0 +1,27 @@
+{
+  "input": false,
+  "focus_changed": false,
+  "observations": [
+    {
+      "error": "bloodweb_not_found",
+      "detail": "central_glyph_not_visible",
+      "source": "references/bloodweb/v48_f412772c/unvalidated_raw_0.png",
+      "sha256": "2a73fcacbddf946520e68b8e1809a7fad3e46ec8b6f5ca623f37a4a740b32b31",
+      "valid_for_input": false
+    },
+    {
+      "error": "bloodweb_not_found",
+      "detail": "central_glyph_not_visible",
+      "source": "references/bloodweb/v48_f412772c/unvalidated_raw_1.png",
+      "sha256": "d04a8bdce5c8937add32d0c83755aed87a6bc3814277752ee21d82fe5fc9a5ed",
+      "valid_for_input": false
+    },
+    {
+      "error": "bloodweb_not_found",
+      "detail": "central_glyph_not_visible",
+      "source": "references/bloodweb/v48_f412772c/unvalidated_raw_2.png",
+      "sha256": "d6899bbd709bc5dd28085d559f1912a13c64b195db4fb0743fdaea8f55414048",
+      "valid_for_input": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "Saved original live node crops from 2026-10-11 20:16:52; never used to select v4 badge or source-reference changes. Not a fresh capture or another computer.",
+  "source": "debug/results/live_current_screen_survivor.json",
+  "review_method": "Visual comparison of original glyphs with inventory sheets. Unresolved identities are excluded from recall, not labeled as absent templates.",
+  "expected": {
+    "1": "survivor_item_013",
+    "3": "survivor_offering_055",
+    "5": "survivor_addon_005",
+    "6": "survivor_offering_028",
+    "10": "survivor_offering_023",
+    "11": "survivor_offering_044",
+    "13": "survivor_offering_019",
+    "15": "survivor_offering_023",
+    "16": "survivor_offering_034",
+    "21": "survivor_offering_051",
+    "22": "survivor_item_015"
+  },
+  "structural_excluded": [0],
+  "unresolved": [2,4,7,8,9,12,14,17,18,19,20,23]
+}

@@ -1,0 +1,747 @@
+{
+  "source": "debug/actions/20261012_221840_5fee4be1.json",
+  "sha256": "94d1342d607d7252674835935b12327544ef56e94d3a17190d0fe79a00d75dfd",
+  "entries": [
+    {
+      "time": "2026-10-12T19:19:11.428444+00:00",
+      "stage": "analysis",
+      "state": "entity",
+      "frame": {
+        "window": {
+          "hwnd": 2032950,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 18596
+        },
+        "roi": {
+          "x": 258,
+          "y": 136,
+          "width": 851,
+          "height": 851
+        },
+        "image_size": [
+          851,
+          851
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": null,
+        "captured_at": 46716.0858182,
+        "visibility": {
+          "window": {
+            "hwnd": 2032950,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 18596
+          },
+          "provider": "mss",
+          "roi": {
+            "x": 258,
+            "y": 136,
+            "width": 851,
+            "height": 851
+          },
+          "occlusions": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 1281,
+              "y": 10,
+              "width": 656,
+              "height": 1047
+            }
+          ],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        }
+      },
+      "screen": "bloodweb",
+      "next_node": 3,
+      "nodes": [
+        {
+          "id": 0,
+          "x": 426,
+          "y": 426,
+          "type": "bloodweb_center",
+          "state": "center",
+          "geometry": 0.9,
+          "state_score": 0.9,
+          "icon": null,
+          "reason": "structural_center"
+        },
+        {
+          "id": 1,
+          "x": 531,
+          "y": 365,
+          "type": "unknown",
+          "state": "purchased",
+          "geometry": 0.854,
+          "state_score": 0.93,
+          "icon": null,
+          "reason": "contour_mismatch"
+        },
+        {
+          "id": 2,
+          "x": 531,
+          "y": 488,
+          "type": "unknown",
+          "state": "purchased",
+          "geometry": 0.9,
+          "state_score": 0.93,
+          "icon": null,
+          "reason": "low_glyph_score"
+        },
+        {
+          "id": 3,
+          "x": 426,
+          "y": 549,
+          "type": "offering",
+          "state": "available",
+          "geometry": 0.9,
+          "state_score": 0.9,
+          "icon": "survivor_offering_037",
+          "reason": "accepted"
+        },
+        {
+          "id": 4,
+          "x": 322,
+          "y": 488,
+          "type": "unknown",
+          "state": "purchased",
+          "geometry": 0.857,
+          "state_score": 0.93,
+          "icon": null,
+          "reason": "low_glyph_score"
+        },
+        {
+          "id": 5,
+          "x": 321,
+          "y": 365,
+          "type": "unknown",
+          "state": "available",
+          "geometry": 0.888,
+          "state_score": 0.9,
+          "icon": null,
+          "reason": "contour_mismatch"
+        },
+        {
+          "id": 6,
+          "x": 423,
+          "y": 304,
+          "type": "unknown",
+          "state": "purchased",
+          "geometry": 0.89,
+          "state_score": 0.93,
+          "icon": null,
+          "reason": "contour_mismatch"
+        },
+        {
+          "id": 7,
+          "x": 488,
+          "y": 192,
+          "type": "unknown",
+          "state": "available",
+          "geometry": 0.883,
+          "state_score": 0.9,
+          "icon": null,
+          "reason": "contour_mismatch"
+        },
+        {
+          "id": 8,
+          "x": 667,
+          "y": 366,
+          "type": "offering",
+          "state": "purchased",
+          "geometry": 0.857,
+          "state_score": 0.93,
+          "icon": "survivor_offering_006",
+          "reason": "accepted"
+        },
+        {
+          "id": 9,
+          "x": 248,
+          "y": 598,
+          "type": "offering",
+          "state": "locked",
+          "geometry": 0.673,
+          "state_score": 0.78,
+          "icon": "survivor_offering_048",
+          "reason": "accepted"
+        },
+        {
+          "id": 10,
+          "x": 185,
+          "y": 487,
+          "type": "unknown",
+          "state": "available",
+          "geometry": 0.849,
+          "state_score": 0.9,
+          "icon": null,
+          "reason": "contour_mismatch"
+        },
+        {
+          "id": 11,
+          "x": 185,
+          "y": 365,
+          "type": "unknown",
+          "state": "available",
+          "geometry": 0.9,
+          "state_score": 0.9,
+          "icon": null,
+          "reason": "ambiguous_candidates"
+        },
+        {
+          "id": 12,
+          "x": 248,
+          "y": 255,
+          "type": "unknown",
+          "state": "available",
+          "geometry": 0.875,
+          "state_score": 0.9,
+          "icon": null,
+          "reason": "contour_mismatch"
+        },
+        {
+          "id": 13,
+          "x": 364,
+          "y": 192,
+          "type": "offering",
+          "state": "available",
+          "geometry": 0.9,
+          "state_score": 0.9,
+          "icon": "survivor_offering_051",
+          "reason": "accepted"
+        },
+        {
+          "id": 14,
+          "x": 427,
+          "y": 80,
+          "type": "unknown",
+          "state": "absorbed",
+          "geometry": 0.7,
+          "state_score": 0.78,
+          "icon": null,
+          "reason": "low_glyph_score"
+        },
+        {
+          "id": 15,
+          "x": 607,
+          "y": 122,
+          "type": "unknown",
+          "state": "locked",
+          "geometry": 0.673,
+          "state_score": 0.78,
+          "icon": null,
+          "reason": "contour_mismatch"
+        },
+        {
+          "id": 16,
+          "x": 786,
+          "y": 426,
+          "type": "offering",
+          "state": "available",
+          "geometry": 0.9,
+          "state_score": 0.9,
+          "icon": "survivor_offering_003",
+          "reason": "accepted"
+        },
+        {
+          "id": 17,
+          "x": 115,
+          "y": 600,
+          "type": "addon",
+          "state": "locked",
+          "geometry": 0.676,
+          "state_score": 0.78,
+          "icon": "wiki_survivor_common_addons_eb9f7e18c4e3",
+          "reason": "accepted"
+        },
+        {
+          "id": 18,
+          "x": 67,
+          "y": 426,
+          "type": "item",
+          "state": "locked",
+          "geometry": 0.675,
+          "state_score": 0.78,
+          "icon": "survivor_item_020",
+          "reason": "accepted"
+        },
+        {
+          "id": 19,
+          "x": 245,
+          "y": 122,
+          "type": "addon",
+          "state": "locked",
+          "geometry": 0.67,
+          "state_score": 0.78,
+          "icon": "wiki_survivor_common_addons_e10c205baa56",
+          "reason": "accepted"
+        }
+      ],
+      "analysis_id": "1791832751318447800_42c77497"
+    },
+    {
+      "time": "2026-10-12T19:18:46.999680+00:00",
+      "stage": "before_purchase",
+      "state": "automation_ready",
+      "node": 3,
+      "position": [
+        525,
+        482
+      ],
+      "before": "available"
+    },
+    {
+      "time": "2026-10-12T19:18:47.064496+00:00",
+      "stage": "GetPhysicalCursorPos",
+      "state": "purchasing",
+      "actual": [
+        789,
+        624
+      ],
+      "requested": [
+        789,
+        624
+      ],
+      "result": 1,
+      "win32_error": 0
+    },
+    {
+      "time": "2026-10-12T19:18:47.070864+00:00",
+      "stage": "SendInput",
+      "state": "purchasing",
+      "flag": 2,
+      "result": 1,
+      "win32_error": 0,
+      "size": 40
+    },
+    {
+      "time": "2026-10-12T19:18:47.138878+00:00",
+      "stage": "SendInput",
+      "state": "purchasing",
+      "flag": 4,
+      "result": 1,
+      "win32_error": 0,
+      "size": 40
+    },
+    {
+      "time": "2026-10-12T19:18:47.140607+00:00",
+      "stage": "physical_action_complete",
+      "state": "purchasing",
+      "mouse_released": true
+    },
+    {
+      "time": "2026-10-12T19:18:52.011241+00:00",
+      "stage": "purchase_observation",
+      "state": "recovering",
+      "node": 3,
+      "after": "purchased",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:18:52.542106+00:00",
+      "stage": "purchase_observation",
+      "state": "recovering",
+      "node": 3,
+      "after": "purchased",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:18:53.141246+00:00",
+      "stage": "before_purchase",
+      "state": "automation_ready",
+      "node": 8,
+      "position": [
+        663,
+        361
+      ],
+      "before": "available"
+    },
+    {
+      "time": "2026-10-12T19:18:53.162853+00:00",
+      "stage": "GetPhysicalCursorPos",
+      "state": "purchasing",
+      "actual": [
+        925,
+        501
+      ],
+      "requested": [
+        925,
+        501
+      ],
+      "result": 1,
+      "win32_error": 0
+    },
+    {
+      "time": "2026-10-12T19:18:53.179847+00:00",
+      "stage": "SendInput",
+      "state": "purchasing",
+      "flag": 2,
+      "result": 1,
+      "win32_error": 0,
+      "size": 40
+    },
+    {
+      "time": "2026-10-12T19:18:53.247296+00:00",
+      "stage": "SendInput",
+      "state": "purchasing",
+      "flag": 4,
+      "result": 1,
+      "win32_error": 0,
+      "size": 40
+    },
+    {
+      "time": "2026-10-12T19:18:53.249239+00:00",
+      "stage": "physical_action_complete",
+      "state": "purchasing",
+      "mouse_released": true
+    },
+    {
+      "time": "2026-10-12T19:18:58.140317+00:00",
+      "stage": "purchase_observation",
+      "state": "recovering",
+      "node": 8,
+      "after": "purchased",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:18:58.728830+00:00",
+      "stage": "purchase_observation",
+      "state": "recovering",
+      "node": 8,
+      "after": "purchased",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:18:59.308988+00:00",
+      "stage": "before_purchase",
+      "state": "automation_ready",
+      "node": 1,
+      "position": [
+        420,
+        298
+      ],
+      "before": "available"
+    },
+    {
+      "time": "2026-10-12T19:18:59.367022+00:00",
+      "stage": "GetPhysicalCursorPos",
+      "state": "purchasing",
+      "actual": [
+        684,
+        440
+      ],
+      "requested": [
+        684,
+        440
+      ],
+      "result": 1,
+      "win32_error": 0
+    },
+    {
+      "time": "2026-10-12T19:18:59.371701+00:00",
+      "stage": "SendInput",
+      "state": "purchasing",
+      "flag": 2,
+      "result": 1,
+      "win32_error": 0,
+      "size": 40
+    },
+    {
+      "time": "2026-10-12T19:18:59.435471+00:00",
+      "stage": "SendInput",
+      "state": "purchasing",
+      "flag": 4,
+      "result": 1,
+      "win32_error": 0,
+      "size": 40
+    },
+    {
+      "time": "2026-10-12T19:18:59.437459+00:00",
+      "stage": "physical_action_complete",
+      "state": "purchasing",
+      "mouse_released": true
+    },
+    {
+      "time": "2026-10-12T19:19:04.260796+00:00",
+      "stage": "purchase_observation",
+      "state": "recovering",
+      "node": 1,
+      "after": "purchased",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:04.775708+00:00",
+      "stage": "purchase_observation",
+      "state": "recovering",
+      "node": 1,
+      "after": "purchased",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:05.360671+00:00",
+      "stage": "before_purchase",
+      "state": "automation_ready",
+      "node": 1,
+      "position": [
+        531,
+        365
+      ],
+      "before": "available"
+    },
+    {
+      "time": "2026-10-12T19:19:05.380464+00:00",
+      "stage": "GetPhysicalCursorPos",
+      "state": "purchasing",
+      "actual": [
+        789,
+        501
+      ],
+      "requested": [
+        789,
+        501
+      ],
+      "result": 1,
+      "win32_error": 0
+    },
+    {
+      "time": "2026-10-12T19:19:05.385001+00:00",
+      "stage": "SendInput",
+      "state": "purchasing",
+      "flag": 2,
+      "result": 1,
+      "win32_error": 0,
+      "size": 40
+    },
+    {
+      "time": "2026-10-12T19:19:05.440921+00:00",
+      "stage": "SendInput",
+      "state": "purchasing",
+      "flag": 4,
+      "result": 1,
+      "win32_error": 0,
+      "size": 40
+    },
+    {
+      "time": "2026-10-12T19:19:05.443160+00:00",
+      "stage": "physical_action_complete",
+      "state": "purchasing",
+      "mouse_released": true
+    },
+    {
+      "time": "2026-10-12T19:19:10.322899+00:00",
+      "stage": "purchase_observation",
+      "state": "recovering",
+      "node": 1,
+      "after": "purchased",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:10.945566+00:00",
+      "stage": "purchase_observation",
+      "state": "recovering",
+      "node": 1,
+      "after": "purchased",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:11.441432+00:00",
+      "stage": "before_purchase",
+      "state": "automation_ready",
+      "node": 3,
+      "position": [
+        426,
+        549
+      ],
+      "before": "available"
+    },
+    {
+      "time": "2026-10-12T19:19:11.507963+00:00",
+      "stage": "GetPhysicalCursorPos",
+      "state": "purchasing",
+      "actual": [
+        684,
+        685
+      ],
+      "requested": [
+        684,
+        685
+      ],
+      "result": 1,
+      "win32_error": 0
+    },
+    {
+      "time": "2026-10-12T19:19:11.513410+00:00",
+      "stage": "SendInput",
+      "state": "purchasing",
+      "flag": 2,
+      "result": 1,
+      "win32_error": 0,
+      "size": 40
+    },
+    {
+      "time": "2026-10-12T19:19:11.581856+00:00",
+      "stage": "SendInput",
+      "state": "purchasing",
+      "flag": 4,
+      "result": 1,
+      "win32_error": 0,
+      "size": 40
+    },
+    {
+      "time": "2026-10-12T19:19:11.585021+00:00",
+      "stage": "physical_action_complete",
+      "state": "purchasing",
+      "mouse_released": true
+    },
+    {
+      "time": "2026-10-12T19:19:12.310736+00:00",
+      "stage": "purchase_observation",
+      "state": "wait_purchase",
+      "node": 3,
+      "after": "absorbed",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:12.966747+00:00",
+      "stage": "purchase_observation",
+      "state": "entity",
+      "node": 3,
+      "after": "available",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:13.673880+00:00",
+      "stage": "purchase_observation",
+      "state": "entity",
+      "node": 3,
+      "after": "available",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:14.332353+00:00",
+      "stage": "purchase_observation",
+      "state": "entity",
+      "node": 3,
+      "after": "available",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:14.993019+00:00",
+      "stage": "purchase_observation",
+      "state": "entity",
+      "node": 3,
+      "after": "available",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:15.692439+00:00",
+      "stage": "purchase_observation",
+      "state": "entity",
+      "node": 3,
+      "after": "available",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:16.393279+00:00",
+      "stage": "purchase_observation",
+      "state": "entity",
+      "node": 3,
+      "after": "available",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:17.100778+00:00",
+      "stage": "purchase_observation",
+      "state": "entity",
+      "node": 3,
+      "after": "available",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:17.778476+00:00",
+      "stage": "purchase_observation",
+      "state": "entity",
+      "node": 3,
+      "after": "available",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:18.416766+00:00",
+      "stage": "purchase_observation",
+      "state": "entity",
+      "node": 3,
+      "after": "available",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:19.058257+00:00",
+      "stage": "purchase_observation",
+      "state": "entity",
+      "node": 3,
+      "after": "available",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:19.699362+00:00",
+      "stage": "purchase_observation",
+      "state": "entity",
+      "node": 3,
+      "after": "available",
+      "screen": "bloodweb"
+    },
+    {
+      "time": "2026-10-12T19:19:19.757832+00:00",
+      "stage": "failure",
+      "state": "entity",
+      "reason": "purchase_not_confirmed",
+      "detail": ""
+    }
+  ]
+}

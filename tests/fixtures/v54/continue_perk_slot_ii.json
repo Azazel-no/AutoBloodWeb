@@ -1,0 +1,26 @@
+{
+  "source": "tests/fixtures/v54/continue_perk_slot_ii.png",
+  "sha256": "b4f716cb59fc48419953e2c7f8be65cf8e8dda71b6bcd511940036e2173f6f23",
+  "window": {
+    "hwnd": 460486,
+    "title": "DeadByDaylight  ",
+    "client": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "monitor": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "dpi": 96,
+    "foreground": true,
+    "pid": 23320
+  },
+  "provider": "mss",
+  "captured_at": 93451.561062,
+  "origin": "debug/v54/continue_check_20261016/perk_slot_ii_1.png"
+}

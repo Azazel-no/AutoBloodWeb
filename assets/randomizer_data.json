@@ -1,0 +1,449 @@
+{
+ "schema": 1,
+ "source": "https://deadbydaylight.wiki.gg",
+ "license": "Dead by Daylight Wiki, CC BY-SA",
+ "addon_types": {
+  "Name": "fog_vial",
+  "Battery": "flashlight",
+  "Leather Grip": "flashlight",
+  "Power Bulb": "flashlight",
+  "Wide Lens": "flashlight",
+  "Focus Lens": "flashlight",
+  "Heavy Duty Battery": "flashlight",
+  "Low Amp Filament": "flashlight",
+  "Rubber Grip": "flashlight",
+  "TIR Optic": "flashlight",
+  "Intense Halogen": "flashlight",
+  "Long Life Battery": "flashlight",
+  "High-End Sapphire Lens": "flashlight",
+  "Odd Bulb": "flashlight",
+  "Broken Bulb": "flashlight",
+  "Friendship Charm": "key",
+  "Shrill Whistle": "key",
+  "Braided Bauble": "key",
+  "Unique Wedding Ring": "key",
+  "Blood Amber": "key",
+  "Glowing Ink": "map",
+  "Gnarled Compass": "map",
+  "Battered Tape": "map",
+  "Sharpened Flint": "map",
+  "Crimson Stamp": "map",
+  "Bandages": "medkit",
+  "Butterfly Tape": "medkit",
+  "Rubber Gloves": "medkit",
+  "Medical Scissors": "medkit",
+  "Needle & Thread": "medkit",
+  "Self Adherent Wrap": "medkit",
+  "Sponge": "medkit",
+  "Gauze Roll": "medkit",
+  "Surgical Suture": "medkit",
+  "Abdominal Dressing": "medkit",
+  "Styptic Agent": "medkit",
+  "Anti-Exhaustion Syringe": "medkit",
+  "Gel Dressings": "medkit",
+  "Refined Serum": "medkit",
+  "Clean Rag": "toolbox",
+  "Instructions": "toolbox",
+  "Scraps": "toolbox",
+  "Cutting Wire": "toolbox",
+  "Protective Gloves": "toolbox",
+  "Socket Swivels": "toolbox",
+  "Spring Clamp": "toolbox",
+  "Wire Spool": "toolbox",
+  "Grip Wrench": "toolbox",
+  "Hacksaw": "toolbox",
+  "Brand New Part": "toolbox",
+  "Volcanic Stone": "fog_vial",
+  "Reactive Compound": "fog_vial",
+  "Oily Sap": "fog_vial",
+  "Mushroom Formula": "fog_vial",
+  "Potent Extract": "fog_vial"
+ },
+ "survivors": [
+  {
+   "id": "dwight_fairfield",
+   "name": "Dwight Fairfield",
+   "image": "assets/ui/survivors/dwight_fairfield.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S01_DwightFairfield_Portrait.png",
+   "sha256": "327fea89de4158e7a2d18125dcd0e938865f8b7609daafa6a4bab89cef0db31e"
+  },
+  {
+   "id": "meg_thomas",
+   "name": "Meg Thomas",
+   "image": "assets/ui/survivors/meg_thomas.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S02_MegThomas_Portrait.png",
+   "sha256": "5a9ed4ffa622e040ea69a4ff730e7ce14208f912c9f2e0588b5df2327e04faf0"
+  },
+  {
+   "id": "claudette_morel",
+   "name": "Claudette Morel",
+   "image": "assets/ui/survivors/claudette_morel.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S03_ClaudetteMorel_Portrait.png",
+   "sha256": "3e39f05115bd3ada58223ecd5f1727b0074a008f62ef0dd56c3588566626afee"
+  },
+  {
+   "id": "jake_park",
+   "name": "Jake Park",
+   "image": "assets/ui/survivors/jake_park.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S04_JakePark_Portrait.png",
+   "sha256": "c0e27f69701ef71ce9d18cd4676b5be13b86487a6453b640a230c7085f162b98"
+  },
+  {
+   "id": "nea_karlsson",
+   "name": "Nea Karlsson",
+   "image": "assets/ui/survivors/nea_karlsson.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S05_NeaKarlsson_Portrait.png",
+   "sha256": "d6303de64055631f34cc379cce7239062fba856ed88e4dab84f3c4d10cf6f772"
+  },
+  {
+   "id": "laurie_strode",
+   "name": "Laurie Strode",
+   "image": "assets/ui/survivors/laurie_strode.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S06_LaurieStrode_Portrait.png",
+   "sha256": "c5eff4dd38dc2bc27b7f5c21d71b458d9bfb11032d7212317c65da4afd44175b"
+  },
+  {
+   "id": "ace_visconti",
+   "name": "Ace Visconti",
+   "image": "assets/ui/survivors/ace_visconti.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S07_AceVisconti_Portrait.png",
+   "sha256": "c5597aab2e464f18242a4dde9c70b6281b3673e542c02db71ced61c8a61a965d"
+  },
+  {
+   "id": "bill_overbeck",
+   "name": "Bill Overbeck",
+   "image": "assets/ui/survivors/bill_overbeck.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S08_BillOverbeck_Portrait.png",
+   "sha256": "2123082284dbf8ab5c7d3191bfdf97b2db49345577226f7d9393c6a5464abf3d"
+  },
+  {
+   "id": "feng_min",
+   "name": "Feng Min",
+   "image": "assets/ui/survivors/feng_min.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S09_FengMin_Portrait.png",
+   "sha256": "666dc294ebbfdfd8572fcc3972f42f7d49db9ca1f6218bfd4014dd7aa012f720"
+  },
+  {
+   "id": "david_king",
+   "name": "David King",
+   "image": "assets/ui/survivors/david_king.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S10_DavidKing_Portrait.png",
+   "sha256": "b18a43d99e8ff9d37c6df495f1ca1f29a296bab2aa7892f46e12c31263406db7"
+  },
+  {
+   "id": "quentin_smith",
+   "name": "Quentin Smith",
+   "image": "assets/ui/survivors/quentin_smith.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S11_QuentinSmith_Portrait.png",
+   "sha256": "1e704399660b28b81619665573a75bdde4f4adc159bccee6ec0b873d95c0377f"
+  },
+  {
+   "id": "david_tapp",
+   "name": "David Tapp",
+   "image": "assets/ui/survivors/david_tapp.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S12_DavidTapp_Portrait.png",
+   "sha256": "c2578dcb7bd62879a0c85681fdacffe2becc5dc2a8ede41abd8265f80e497343"
+  },
+  {
+   "id": "kate_denson",
+   "name": "Kate Denson",
+   "image": "assets/ui/survivors/kate_denson.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S13_KateDenson_Portrait.png",
+   "sha256": "ff1600ea346b81a28a9234b138ecc1026aa3c78efdb43e14039fda45807c53ec"
+  },
+  {
+   "id": "adam_francis",
+   "name": "Adam Francis",
+   "image": "assets/ui/survivors/adam_francis.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S14_AdamFrancis_Portrait.png",
+   "sha256": "db5ada9572c1b00e5378e10dcefbf16577195a441aa41f3edb9491eb534f963b"
+  },
+  {
+   "id": "jeff_johansen",
+   "name": "Jeff Johansen",
+   "image": "assets/ui/survivors/jeff_johansen.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S15_JeffJohansen_Portrait.png",
+   "sha256": "f4c6caa399664f8b96b61deb3e7fa0c8e7bc1af7de12bcbc5ac0dde04929f471"
+  },
+  {
+   "id": "jane_romero",
+   "name": "Jane Romero",
+   "image": "assets/ui/survivors/jane_romero.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S16_JaneRomero_Portrait.png",
+   "sha256": "de4dc6b7ef5e2c1423ff3e8b8b529ec0596636d30c3cde0a7330b9cd195f8274"
+  },
+  {
+   "id": "ash_williams",
+   "name": "Ash Williams",
+   "image": "assets/ui/survivors/ash_williams.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S17_AshWilliams_Portrait.png",
+   "sha256": "de516fa32ffbc3510c5a9ebd73fbc6ceab9fc4afe4af37915bbf05b52edd9837"
+  },
+  {
+   "id": "nancy_wheeler",
+   "name": "Nancy Wheeler",
+   "image": "assets/ui/survivors/nancy_wheeler.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S18_NancyWheeler_Portrait.png",
+   "sha256": "e9f2a94b6a21dce75c0b40c7e66d26814c93c5c57e04fa2a25144d2e0d5a0442"
+  },
+  {
+   "id": "steve_harrington",
+   "name": "Steve Harrington",
+   "image": "assets/ui/survivors/steve_harrington.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S19_SteveHarrington_Portrait.png",
+   "sha256": "da70f41f4109a34bcf5c23de70170c411052f136fd4ec995748c16b0782a28aa"
+  },
+  {
+   "id": "yui_kimura",
+   "name": "Yui Kimura",
+   "image": "assets/ui/survivors/yui_kimura.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S20_YuiKimura_Portrait.png",
+   "sha256": "c735ebc6f776040eee1fe013b78791dd01d647542bb7bd244e2dc91996536ae8"
+  },
+  {
+   "id": "zarina_kassir",
+   "name": "Zarina Kassir",
+   "image": "assets/ui/survivors/zarina_kassir.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S21_ZarinaKassir_Portrait.png",
+   "sha256": "b1b104f526898a07e73fc1f1fc091ed5a6cf256ab1a0dbe0ed9ee5b94b94bafc"
+  },
+  {
+   "id": "cheryl_mason",
+   "name": "Cheryl Mason",
+   "image": "assets/ui/survivors/cheryl_mason.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S22_CherylMason_Portrait.png",
+   "sha256": "d09754267734c73dafbea27acdace6c48c2217de8afcde6f9e3962d7f01a0ae0"
+  },
+  {
+   "id": "felix_richter",
+   "name": "Felix Richter",
+   "image": "assets/ui/survivors/felix_richter.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S23_FelixRichter_Portrait.png",
+   "sha256": "218c09e6804cf14b107f3b682c5fc460206ee9273793001799f71ea2992dd3be"
+  },
+  {
+   "id": "elodie_rakoto",
+   "name": "Elodie Rakoto",
+   "image": "assets/ui/survivors/elodie_rakoto.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S24_ElodieRakoto_Portrait.png",
+   "sha256": "b091603a16599ef51efb315b6fe9b7935a243a0f96c0b93188e637e3f29484cb"
+  },
+  {
+   "id": "lee_yun_jin",
+   "name": "Lee Yun-jin",
+   "image": "assets/ui/survivors/lee_yun_jin.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S25_LeeYun-jin_Portrait.png",
+   "sha256": "4e9574db0f27cf2d3f8e3c74ad984eb3292296d66ea327fbdd5b0ae50ef044f9"
+  },
+  {
+   "id": "jill_valentine",
+   "name": "Jill Valentine",
+   "image": "assets/ui/survivors/jill_valentine.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S26_JillValentine_Portrait.png",
+   "sha256": "6b843f6a7f313ebf7564bb78b0e09f1582a68d9df8fb211c3a7014cf72ea95c8"
+  },
+  {
+   "id": "leon_scott_kennedy",
+   "name": "Leon Scott Kennedy",
+   "image": "assets/ui/survivors/leon_scott_kennedy.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S27_LeonScottKennedy_Portrait.png",
+   "sha256": "5c78a0c8a6b92f524cded8ca7d9985fbd89a01feca2dbc76172367c547cde022"
+  },
+  {
+   "id": "mikaela_reid",
+   "name": "Mikaela Reid",
+   "image": "assets/ui/survivors/mikaela_reid.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S28_MikaelaReid_Portrait.png",
+   "sha256": "77e30ede7c7ab8cadefbf7c90d25ac21a6d72b07d0a2c67bd8fd82e7e5fef982"
+  },
+  {
+   "id": "jonah_vasquez",
+   "name": "Jonah Vasquez",
+   "image": "assets/ui/survivors/jonah_vasquez.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S29_JonahVasquez_Portrait.png",
+   "sha256": "37211c0868c4f56747add963a52ac6daac1c3900a6ca6671eab8d74688fde3ca"
+  },
+  {
+   "id": "yoichi_asakawa",
+   "name": "Yoichi Asakawa",
+   "image": "assets/ui/survivors/yoichi_asakawa.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S30_YoichiAsakawa_Portrait.png",
+   "sha256": "3aeeeb94c646a72736e1ea5d6d02077b85e4ecc19a0573185c3ca078b6acab8d"
+  },
+  {
+   "id": "haddie_kaur",
+   "name": "Haddie Kaur",
+   "image": "assets/ui/survivors/haddie_kaur.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S31_HaddieKaur_Portrait.png",
+   "sha256": "c805e48ff6a5d6bf96d190a6f3d41483244a37d5fb0e9b3a79688efb183fc44a"
+  },
+  {
+   "id": "ada_wong",
+   "name": "Ada Wong",
+   "image": "assets/ui/survivors/ada_wong.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S32_AdaWong_Portrait.png",
+   "sha256": "b2ec660edcbdfd48fe4200b25362a05a53b413044a79c0d451915550605b14d9"
+  },
+  {
+   "id": "rebecca_chambers",
+   "name": "Rebecca Chambers",
+   "image": "assets/ui/survivors/rebecca_chambers.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S33_RebeccaChambers_Portrait.png",
+   "sha256": "1c1521d4df41d57829f7434a5d3c308a14e610717b7b676c5af3efae0816cb3b"
+  },
+  {
+   "id": "vittorio_toscano",
+   "name": "Vittorio Toscano",
+   "image": "assets/ui/survivors/vittorio_toscano.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S34_VittorioToscano_Portrait.png",
+   "sha256": "5ce707ca88a96e3275a56eff381ca0a607d4605f83d8bf3f7b608cfba43d08e3"
+  },
+  {
+   "id": "thalita_lyra",
+   "name": "Thalita Lyra",
+   "image": "assets/ui/survivors/thalita_lyra.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S35_ThalitaLyra_Portrait.png",
+   "sha256": "9e253ec906c2ee7388f255c9fc525b89e88417e5a985e472a845e91c529d0b0c"
+  },
+  {
+   "id": "renato_lyra",
+   "name": "Renato Lyra",
+   "image": "assets/ui/survivors/renato_lyra.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S36_RenatoLyra_Portrait.png",
+   "sha256": "db434c79f9652b298f570a8c5004695c73bb604a2117e71d3629557fcd3a0332"
+  },
+  {
+   "id": "gabriel_soma",
+   "name": "Gabriel Soma",
+   "image": "assets/ui/survivors/gabriel_soma.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S37_GabrielSoma_Portrait.png",
+   "sha256": "44e7e79d4c80dde5c506cffa67510713f1b9e24d6297f123d0f93c3d9b742732"
+  },
+  {
+   "id": "nicolas_cage",
+   "name": "Nicolas Cage",
+   "image": "assets/ui/survivors/nicolas_cage.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S38_NicolasCage_Portrait.png",
+   "sha256": "f4327ccea8e604585fb2bac65b800e57d11d0a25eff978aa4755e6c51e4ce7c6"
+  },
+  {
+   "id": "ellen_ripley",
+   "name": "Ellen Ripley",
+   "image": "assets/ui/survivors/ellen_ripley.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S39_EllenRipley_Portrait.png",
+   "sha256": "1fb7fa346376139942855b1c282f31b91af04de7b09eddde82e32deea8a4728a"
+  },
+  {
+   "id": "alan_wake",
+   "name": "Alan Wake",
+   "image": "assets/ui/survivors/alan_wake.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S40_AlanWake_Portrait.png",
+   "sha256": "4d4da6a9ed733c6a49400b489485cab5ff710a23693465ccc27067a84cc73034"
+  },
+  {
+   "id": "sable_ward",
+   "name": "Sable Ward",
+   "image": "assets/ui/survivors/sable_ward.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S41_SableWard_Portrait.png",
+   "sha256": "b7e8467bfbbd19ac5ba1118aae63ebcce9e8da89b3f3e21ad10890b794e516b6"
+  },
+  {
+   "id": "the_troupe",
+   "name": "The Troupe",
+   "image": "assets/ui/survivors/the_troupe.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S42_TheTroupe_Portrait.png",
+   "sha256": "48cd87985458a2d7a1875e6e9bcb95d4308ee7df13a62d287008cc283ba9b72a"
+  },
+  {
+   "id": "lara_croft",
+   "name": "Lara Croft",
+   "image": "assets/ui/survivors/lara_croft.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S43_LaraCroft_Portrait.png",
+   "sha256": "3acdc5f05cd35b520421a6fc48c7191d3fcfd901963f8c23824640b1a221b023"
+  },
+  {
+   "id": "trevor_belmont",
+   "name": "Trevor Belmont",
+   "image": "assets/ui/survivors/trevor_belmont.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S44_TrevorBelmont_Portrait.png",
+   "sha256": "e092b6f8aa39889aedde4093d8d9981d3ae2865b24b34ef24682b7b269bfd99e"
+  },
+  {
+   "id": "taurie_cain",
+   "name": "Taurie Cain",
+   "image": "assets/ui/survivors/taurie_cain.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S45_TaurieCain_Portrait.png",
+   "sha256": "ae1daa926b50e4b5ba0ad57fae2989d1c005c7ec4c7a3f8f52c836078ac7b50e"
+  },
+  {
+   "id": "orela_rose",
+   "name": "Orela Rose",
+   "image": "assets/ui/survivors/orela_rose.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S46_OrelaRose_Portrait.png",
+   "sha256": "148436e28499d9f43a1b746dc475e6f93afcfe6c0b822293ab04348b967d2003"
+  },
+  {
+   "id": "rick_grimes",
+   "name": "Rick Grimes",
+   "image": "assets/ui/survivors/rick_grimes.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S47_RickGrimes_Portrait.png",
+   "sha256": "34ca26c3ade65cc2ff6d4a845ab9b4e67d71997511118f190e92fe9d96cf0c87"
+  },
+  {
+   "id": "michonne_grimes",
+   "name": "Michonne Grimes",
+   "image": "assets/ui/survivors/michonne_grimes.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S48_MichonneGrimes_Portrait.png",
+   "sha256": "876ed37a4afd78019d9c129f9ca7f0ea0728134ae7855dd359110bc813b760a9"
+  },
+  {
+   "id": "vee_boonyasak",
+   "name": "Vee Boonyasak",
+   "image": "assets/ui/survivors/vee_boonyasak.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S49_VeeBoonyasak_Portrait.png",
+   "sha256": "ef39d84539415537d92970f9794207d193f404dc42b6ba13fc0b2d3a96444ff2"
+  },
+  {
+   "id": "dustin_henderson",
+   "name": "Dustin Henderson",
+   "image": "assets/ui/survivors/dustin_henderson.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S50_DustinHenderson_Portrait.png",
+   "sha256": "228c5696c33521f7331ced22042435f86e693692df4efee6a06f0ca17b15af9f"
+  },
+  {
+   "id": "eleven",
+   "name": "Eleven",
+   "image": "assets/ui/survivors/eleven.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S51_Eleven_Portrait.png",
+   "sha256": "0e59f7d49bc02e0318378b65bd175326258145646138682dc280bc7b8e5a38f0"
+  },
+  {
+   "id": "kwon_tae_young",
+   "name": "Kwon Tae-young",
+   "image": "assets/ui/survivors/kwon_tae_young.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S52_KwonTae-young_Portrait.png",
+   "sha256": "c61279956e997eebc047ccb99572b999aeab13f7c3144df2111aac05e98ae703"
+  },
+  {
+   "id": "shane_wiigwaas",
+   "name": "Shane Wiigwaas",
+   "image": "assets/ui/survivors/shane_wiigwaas.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S53_ShaneWiigwaas_Portrait.png",
+   "sha256": "ce13eb92dfd9ed3729a1ac0cacf2da147f7a148110a348c7099aec855fa17314"
+  },
+  {
+   "id": "aurora_stardotter",
+   "name": "Aurora Stardotter",
+   "image": "assets/ui/survivors/aurora_stardotter.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S54_AuroraStardotter_Portrait.png",
+   "sha256": "bdada1f683f165c7e40817bf806209ce86468b5e846230912477ba058002cfc6"
+  },
+  {
+   "id": "sienna_shaw",
+   "name": "Sienna Shaw",
+   "image": "assets/ui/survivors/sienna_shaw.png",
+   "url": "https://deadbydaylight.wiki.gg/images/S55_SiennaShaw_Portrait.png",
+   "sha256": "8feefedbac52ff2f8ea5905bc64c6d8afbee2c883d23bab43cc6b0766f0d95ae"
+  }
+ ]
+}

@@ -1,0 +1,3749 @@
+{
+  "scope": "Actual last old graph + two independently captured next-level raw frames.\nOld raw pixels were not saved on the normal path; no reconstructed image.\n",
+  "action_report": "debug/actions/20261013_181344_7790623e.json",
+  "before": {
+    "time": "2026-10-13T15:14:34.238599+00:00",
+    "stage": "analysis",
+    "state": "recovering",
+    "frame": {
+      "window": {
+        "hwnd": 394682,
+        "title": "DeadByDaylight  ",
+        "client": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "monitor": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "dpi": 96,
+        "foreground": true,
+        "pid": 3376
+      },
+      "roi": {
+        "x": 261,
+        "y": 139,
+        "width": 845,
+        "height": 845
+      },
+      "image_size": [
+        845,
+        845
+      ],
+      "provider": "mss",
+      "live": true,
+      "bloodpoints": 1567134,
+      "captured_at": 35701.12455,
+      "visibility": {
+        "window": {
+          "hwnd": 394682,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 3376
+        },
+        "provider": "mss",
+        "roi": {
+          "x": 261,
+          "y": 139,
+          "width": 845,
+          "height": 845
+        },
+        "occlusions": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          }
+        ],
+        "center": [
+          684,
+          562,
+          40
+        ]
+      }
+    },
+    "screen": "bloodweb",
+    "next_node": 12,
+    "nodes": [
+      {
+        "id": 0,
+        "x": 423,
+        "y": 423,
+        "type": "bloodweb_center",
+        "state": "center",
+        "geometry": 0.9,
+        "state_score": 0.9,
+        "icon": null,
+        "reason": "structural_center"
+      },
+      {
+        "id": 1,
+        "x": 525,
+        "y": 361,
+        "type": "unknown",
+        "state": "purchased",
+        "geometry": 0.888,
+        "state_score": 0.93,
+        "icon": null,
+        "reason": "contour_mismatch"
+      },
+      {
+        "id": 2,
+        "x": 529,
+        "y": 485,
+        "type": "unknown",
+        "state": "purchased",
+        "geometry": 0.857,
+        "state_score": 0.93,
+        "icon": null,
+        "reason": "low_glyph_score"
+      },
+      {
+        "id": 3,
+        "x": 419,
+        "y": 545,
+        "type": "offering",
+        "state": "purchased",
+        "geometry": 0.858,
+        "state_score": 0.93,
+        "icon": "survivor_offering_050",
+        "reason": "accepted"
+      },
+      {
+        "id": 4,
+        "x": 320,
+        "y": 488,
+        "type": "unknown",
+        "state": "purchased",
+        "geometry": 0.896,
+        "state_score": 0.93,
+        "icon": null,
+        "reason": "contour_mismatch"
+      },
+      {
+        "id": 5,
+        "x": 317,
+        "y": 361,
+        "type": "addon",
+        "state": "purchased",
+        "geometry": 0.854,
+        "state_score": 0.93,
+        "icon": "wiki_survivor_common_addons_c682bf377adf",
+        "reason": "accepted"
+      },
+      {
+        "id": 6,
+        "x": 417,
+        "y": 302,
+        "type": "unknown",
+        "state": "absorbed",
+        "geometry": 0.658,
+        "state_score": 0.78,
+        "icon": null,
+        "reason": "contour_mismatch"
+      },
+      {
+        "id": 7,
+        "x": 485,
+        "y": 190,
+        "type": "unknown",
+        "state": "absorbed",
+        "geometry": 0.7,
+        "state_score": 0.78,
+        "icon": null,
+        "reason": "contour_mismatch"
+      },
+      {
+        "id": 8,
+        "x": 664,
+        "y": 362,
+        "type": "unknown",
+        "state": "purchased",
+        "geometry": 0.882,
+        "state_score": 0.93,
+        "icon": null,
+        "reason": "low_glyph_score"
+      },
+      {
+        "id": 9,
+        "x": 485,
+        "y": 662,
+        "type": "offering",
+        "state": "purchased",
+        "geometry": 0.857,
+        "state_score": 0.93,
+        "icon": "survivor_offering_045",
+        "reason": "accepted"
+      },
+      {
+        "id": 10,
+        "x": 360,
+        "y": 657,
+        "type": "unknown",
+        "state": "purchased",
+        "geometry": 0.896,
+        "state_score": 0.93,
+        "icon": null,
+        "reason": "contour_mismatch"
+      },
+      {
+        "id": 11,
+        "x": 177,
+        "y": 488,
+        "type": "offering",
+        "state": "absorbed",
+        "geometry": 0.657,
+        "state_score": 0.78,
+        "icon": "survivor_offering_059",
+        "reason": "accepted"
+      },
+      {
+        "id": 12,
+        "x": 245,
+        "y": 251,
+        "type": "offering",
+        "state": "available",
+        "geometry": 0.9,
+        "state_score": 0.9,
+        "icon": "survivor_offering_039",
+        "reason": "accepted"
+      },
+      {
+        "id": 13,
+        "x": 730,
+        "y": 248,
+        "type": "item",
+        "state": "absorbed",
+        "geometry": 0.658,
+        "state_score": 0.78,
+        "icon": "survivor_item_022",
+        "reason": "accepted"
+      },
+      {
+        "id": 14,
+        "x": 782,
+        "y": 422,
+        "type": "item",
+        "state": "purchased",
+        "geometry": 0.859,
+        "state_score": 0.93,
+        "icon": "survivor_item_006",
+        "reason": "accepted"
+      },
+      {
+        "id": 15,
+        "x": 603,
+        "y": 729,
+        "type": "unknown",
+        "state": "purchased",
+        "geometry": 0.858,
+        "state_score": 0.93,
+        "icon": null,
+        "reason": "ambiguous_candidates"
+      },
+      {
+        "id": 16,
+        "x": 104,
+        "y": 664,
+        "type": "unknown",
+        "state": "locked",
+        "geometry": 0.622,
+        "state_score": 0.78,
+        "icon": null,
+        "reason": "contour_mismatch"
+      }
+    ],
+    "analysis_id": "1791904474232774300_78941aad"
+  },
+  "before_analysis": {
+    "width": 845,
+    "height": 845,
+    "screen_state": "bloodweb",
+    "nodes": [
+      {
+        "id": 0,
+        "x": 423,
+        "y": 423,
+        "radius": 38,
+        "state": "center",
+        "type": "bloodweb_center",
+        "icon_id": null,
+        "candidate_id": null,
+        "confidence": 0.0,
+        "state_confidence": 0.9,
+        "candidates": [],
+        "geometry_confidence": 0.9,
+        "icon_margin": 0.0,
+        "match_reason": "structural_center",
+        "rarity": "unknown",
+        "glyph_score": 0.0,
+        "ring": 0,
+        "angle": 0.0,
+        "content_radius": 0,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.0,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.0,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 1,
+        "x": 525,
+        "y": 361,
+        "radius": 32,
+        "state": "purchased",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "survivor_offering_013",
+        "confidence": 0.8472,
+        "state_confidence": 0.93,
+        "candidates": [
+          [
+            "survivor_offering_013",
+            0.8472
+          ],
+          [
+            "survivor_item_006",
+            0.8364
+          ],
+          [
+            "survivor_addon_008",
+            0.8329
+          ]
+        ],
+        "geometry_confidence": 0.888,
+        "icon_margin": 0.0108,
+        "match_reason": "contour_mismatch",
+        "rarity": "brown",
+        "glyph_score": 0.8472,
+        "ring": 1,
+        "angle": 58.70696100407981,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.6437,
+        "category_hint": "unknown",
+        "category_confidence": 0.5,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.5176174496644296,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [
+          [
+            "survivor_offering_013",
+            0.8472
+          ],
+          [
+            "survivor_item_006",
+            0.8364
+          ],
+          [
+            "survivor_addon_008",
+            0.8329
+          ],
+          [
+            "survivor_item_017",
+            0.8299
+          ],
+          [
+            "survivor_offering_059",
+            0.8294
+          ],
+          [
+            "survivor_offering_003",
+            0.8291
+          ],
+          [
+            "survivor_offering_048",
+            0.8275
+          ],
+          [
+            "survivor_offering_044",
+            0.8246
+          ],
+          [
+            "survivor_item_008",
+            0.8207
+          ],
+          [
+            "survivor_offering_046",
+            0.8107
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "survivor_addon_008",
+            "glyph": 0.8329,
+            "contour": 0.5686,
+            "gradient": 0.5189
+          },
+          {
+            "id": "survivor_offering_059",
+            "glyph": 0.8294,
+            "contour": 0.4878,
+            "gradient": 0.4782
+          },
+          {
+            "id": "survivor_offering_013",
+            "glyph": 0.8472,
+            "contour": 0.6437,
+            "gradient": 0.4429
+          },
+          {
+            "id": "survivor_offering_048",
+            "glyph": 0.8275,
+            "contour": 0.3701,
+            "gradient": 0.4249
+          },
+          {
+            "id": "survivor_item_017",
+            "glyph": 0.8299,
+            "contour": 0.4245,
+            "gradient": 0.4057
+          },
+          {
+            "id": "survivor_offering_046",
+            "glyph": 0.8107,
+            "contour": 0.486,
+            "gradient": 0.4057
+          },
+          {
+            "id": "survivor_item_006",
+            "glyph": 0.8364,
+            "contour": 0.3738,
+            "gradient": 0.3994
+          },
+          {
+            "id": "survivor_offering_003",
+            "glyph": 0.8291,
+            "contour": 0.4262,
+            "gradient": 0.3786
+          },
+          {
+            "id": "survivor_offering_044",
+            "glyph": 0.8246,
+            "contour": 0.5573,
+            "gradient": 0.3647
+          },
+          {
+            "id": "survivor_item_008",
+            "glyph": 0.8207,
+            "contour": 0.4634,
+            "gradient": 0.345
+          }
+        ],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 2,
+        "x": 529,
+        "y": 485,
+        "radius": 31,
+        "state": "purchased",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "survivor_offering_029",
+        "confidence": 0.6898,
+        "state_confidence": 0.93,
+        "candidates": [
+          [
+            "survivor_offering_029",
+            0.6898
+          ],
+          [
+            "survivor_offering_041",
+            0.6607
+          ],
+          [
+            "survivor_offering_003",
+            0.6427
+          ]
+        ],
+        "geometry_confidence": 0.857,
+        "icon_margin": 0.0291,
+        "match_reason": "low_glyph_score",
+        "rarity": "brown",
+        "glyph_score": 0.6898,
+        "ring": 1,
+        "angle": 120.32360686255,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.7602,
+        "category_hint": "unknown",
+        "category_confidence": 0.5,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.4839527027027027,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [
+          [
+            "survivor_offering_029",
+            0.6898
+          ],
+          [
+            "survivor_offering_041",
+            0.6607
+          ],
+          [
+            "survivor_offering_003",
+            0.6427
+          ],
+          [
+            "survivor_offering_048",
+            0.6424
+          ],
+          [
+            "survivor_offering_051",
+            0.6421
+          ],
+          [
+            "survivor_addon_008",
+            0.6389
+          ],
+          [
+            "survivor_offering_007",
+            0.6328
+          ],
+          [
+            "wiki_survivor_common_addons_b07824b97674",
+            0.6241
+          ],
+          [
+            "survivor_offering_032",
+            0.6215
+          ],
+          [
+            "survivor_offering_014",
+            0.6212
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "survivor_offering_041",
+            "glyph": 0.6607,
+            "contour": 0.6476,
+            "gradient": 0.5385
+          },
+          {
+            "id": "survivor_offering_029",
+            "glyph": 0.6898,
+            "contour": 0.7602,
+            "gradient": 0.5353
+          },
+          {
+            "id": "survivor_offering_007",
+            "glyph": 0.6328,
+            "contour": 0.6272,
+            "gradient": 0.4507
+          },
+          {
+            "id": "wiki_survivor_common_addons_b07824b97674",
+            "glyph": 0.6241,
+            "contour": 0.6489,
+            "gradient": 0.4492
+          },
+          {
+            "id": "survivor_offering_014",
+            "glyph": 0.6212,
+            "contour": 0.7264,
+            "gradient": 0.4396
+          },
+          {
+            "id": "survivor_offering_048",
+            "glyph": 0.6424,
+            "contour": 0.3782,
+            "gradient": 0.4394
+          },
+          {
+            "id": "survivor_addon_008",
+            "glyph": 0.6389,
+            "contour": 0.6588,
+            "gradient": 0.428
+          },
+          {
+            "id": "survivor_offering_051",
+            "glyph": 0.6421,
+            "contour": 0.5002,
+            "gradient": 0.3947
+          },
+          {
+            "id": "survivor_offering_032",
+            "glyph": 0.6215,
+            "contour": 0.5392,
+            "gradient": 0.3933
+          },
+          {
+            "id": "survivor_offering_003",
+            "glyph": 0.6427,
+            "contour": 0.448,
+            "gradient": 0.3264
+          }
+        ],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 3,
+        "x": 419,
+        "y": 545,
+        "radius": 28,
+        "state": "purchased",
+        "type": "offering",
+        "icon_id": "survivor_offering_050",
+        "candidate_id": "survivor_offering_050",
+        "confidence": 0.9763,
+        "state_confidence": 0.93,
+        "candidates": [
+          [
+            "survivor_offering_050",
+            0.9763
+          ],
+          [
+            "survivor_offering_055",
+            0.8912
+          ],
+          [
+            "survivor_offering_053",
+            0.8719
+          ]
+        ],
+        "geometry_confidence": 0.858,
+        "icon_margin": 0.085,
+        "match_reason": "accepted",
+        "rarity": "brown",
+        "glyph_score": 0.9763,
+        "ring": 1,
+        "angle": 181.87787744728536,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.833,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.23109540636042403,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "survivor_offering_050",
+            0.9763
+          ],
+          [
+            "survivor_offering_055",
+            0.8912
+          ],
+          [
+            "survivor_offering_053",
+            0.8719
+          ],
+          [
+            "survivor_offering_057",
+            0.857
+          ],
+          [
+            "survivor_offering_028",
+            0.8531
+          ],
+          [
+            "survivor_offering_033",
+            0.8483
+          ],
+          [
+            "survivor_offering_007",
+            0.8413
+          ],
+          [
+            "survivor_item_018",
+            0.8215
+          ],
+          [
+            "survivor_offering_003",
+            0.8198
+          ],
+          [
+            "wiki_survivor_common_addons_ce2e1fb39ced",
+            0.8188
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 4,
+        "x": 320,
+        "y": 488,
+        "radius": 29,
+        "state": "purchased",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "survivor_addon_005",
+        "confidence": 0.744,
+        "state_confidence": 0.93,
+        "candidates": [
+          [
+            "survivor_addon_005",
+            0.744
+          ],
+          [
+            "survivor_offering_047",
+            0.7269
+          ],
+          [
+            "survivor_offering_005",
+            0.7235
+          ]
+        ],
+        "geometry_confidence": 0.896,
+        "icon_margin": 0.0171,
+        "match_reason": "contour_mismatch",
+        "rarity": "brown",
+        "glyph_score": 0.744,
+        "ring": 1,
+        "angle": 237.74528947313286,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.6255,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.40984483681112893,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [
+          [
+            "survivor_addon_005",
+            0.744
+          ],
+          [
+            "survivor_offering_047",
+            0.7269
+          ],
+          [
+            "survivor_offering_005",
+            0.7235
+          ],
+          [
+            "survivor_offering_029",
+            0.7154
+          ],
+          [
+            "survivor_offering_004",
+            0.7089
+          ],
+          [
+            "survivor_offering_033",
+            0.7062
+          ],
+          [
+            "survivor_offering_043",
+            0.7005
+          ],
+          [
+            "survivor_offering_019",
+            0.6975
+          ],
+          [
+            "survivor_offering_007",
+            0.6974
+          ],
+          [
+            "survivor_offering_038",
+            0.6959
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "survivor_offering_029",
+            "glyph": 0.7154,
+            "contour": 0.8573,
+            "gradient": 0.5942
+          },
+          {
+            "id": "survivor_offering_019",
+            "glyph": 0.6975,
+            "contour": 0.6539,
+            "gradient": 0.5856
+          },
+          {
+            "id": "survivor_offering_038",
+            "glyph": 0.6959,
+            "contour": 0.6994,
+            "gradient": 0.5555
+          },
+          {
+            "id": "survivor_offering_005",
+            "glyph": 0.7235,
+            "contour": 0.7331,
+            "gradient": 0.5349
+          },
+          {
+            "id": "survivor_offering_047",
+            "glyph": 0.7269,
+            "contour": 0.6791,
+            "gradient": 0.5343
+          },
+          {
+            "id": "survivor_offering_007",
+            "glyph": 0.6974,
+            "contour": 0.5497,
+            "gradient": 0.5056
+          },
+          {
+            "id": "survivor_offering_033",
+            "glyph": 0.7062,
+            "contour": 0.5628,
+            "gradient": 0.4572
+          },
+          {
+            "id": "survivor_offering_004",
+            "glyph": 0.7089,
+            "contour": 0.575,
+            "gradient": 0.4349
+          },
+          {
+            "id": "survivor_addon_005",
+            "glyph": 0.744,
+            "contour": 0.6255,
+            "gradient": 0.4177
+          },
+          {
+            "id": "survivor_offering_043",
+            "glyph": 0.7005,
+            "contour": 0.45,
+            "gradient": 0.3551
+          }
+        ],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 5,
+        "x": 317,
+        "y": 361,
+        "radius": 31,
+        "state": "purchased",
+        "type": "addon",
+        "icon_id": "wiki_survivor_common_addons_c682bf377adf",
+        "candidate_id": "wiki_survivor_common_addons_c682bf377adf",
+        "confidence": 0.9695,
+        "state_confidence": 0.93,
+        "candidates": [
+          [
+            "wiki_survivor_common_addons_c682bf377adf",
+            0.9695
+          ],
+          [
+            "survivor_offering_027",
+            0.7572
+          ],
+          [
+            "survivor_addon_006",
+            0.6724
+          ]
+        ],
+        "geometry_confidence": 0.854,
+        "icon_margin": 0.2123,
+        "match_reason": "accepted",
+        "rarity": "purple",
+        "glyph_score": 0.9695,
+        "ring": 1,
+        "angle": 300.32360686255,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.9564,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.43027129938124703,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "wiki_survivor_common_addons_c682bf377adf",
+            0.9695
+          ],
+          [
+            "survivor_offering_027",
+            0.7572
+          ],
+          [
+            "survivor_addon_006",
+            0.6724
+          ],
+          [
+            "wiki_survivor_common_addons_3d8af63acd10",
+            0.6644
+          ],
+          [
+            "wiki_survivor_common_addons_c711236ae0dc",
+            0.6602
+          ],
+          [
+            "survivor_addon_005",
+            0.6512
+          ],
+          [
+            "wiki_survivor_common_addons_eb9f7e18c4e3",
+            0.6502
+          ],
+          [
+            "survivor_item_010",
+            0.6494
+          ],
+          [
+            "survivor_item_005",
+            0.6447
+          ],
+          [
+            "survivor_offering_023",
+            0.6408
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 6,
+        "x": 417,
+        "y": 302,
+        "radius": 36,
+        "state": "absorbed",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "survivor_item_014",
+        "confidence": 0.8809,
+        "state_confidence": 0.78,
+        "candidates": [
+          [
+            "survivor_item_014",
+            0.8809
+          ],
+          [
+            "survivor_offering_003",
+            0.8764
+          ],
+          [
+            "survivor_item_020",
+            0.8535
+          ]
+        ],
+        "geometry_confidence": 0.658,
+        "icon_margin": 0.0045,
+        "match_reason": "contour_mismatch",
+        "rarity": "brown",
+        "glyph_score": 0.8809,
+        "ring": 1,
+        "angle": 357.1612121589946,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.6254,
+        "category_hint": "unknown",
+        "category_confidence": 0.5,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.9427230046948357,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [
+          [
+            "survivor_item_014",
+            0.8809
+          ],
+          [
+            "survivor_offering_003",
+            0.8764
+          ],
+          [
+            "survivor_item_020",
+            0.8535
+          ],
+          [
+            "survivor_item_007",
+            0.8523
+          ],
+          [
+            "survivor_offering_048",
+            0.8488
+          ],
+          [
+            "survivor_item_002",
+            0.8468
+          ],
+          [
+            "survivor_item_003",
+            0.845
+          ],
+          [
+            "survivor_item_006",
+            0.8368
+          ],
+          [
+            "survivor_offering_046",
+            0.8359
+          ],
+          [
+            "survivor_item_008",
+            0.8338
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "survivor_item_003",
+            "glyph": 0.845,
+            "contour": 0.5295,
+            "gradient": 0.6868
+          },
+          {
+            "id": "survivor_item_007",
+            "glyph": 0.8523,
+            "contour": 0.5775,
+            "gradient": 0.6755
+          },
+          {
+            "id": "survivor_item_014",
+            "glyph": 0.8809,
+            "contour": 0.6254,
+            "gradient": 0.6561
+          },
+          {
+            "id": "survivor_item_020",
+            "glyph": 0.8535,
+            "contour": 0.5253,
+            "gradient": 0.5457
+          },
+          {
+            "id": "survivor_offering_048",
+            "glyph": 0.8488,
+            "contour": 0.429,
+            "gradient": 0.4946
+          },
+          {
+            "id": "survivor_item_006",
+            "glyph": 0.8368,
+            "contour": 0.4241,
+            "gradient": 0.4503
+          },
+          {
+            "id": "survivor_item_002",
+            "glyph": 0.8468,
+            "contour": 0.6183,
+            "gradient": 0.4469
+          },
+          {
+            "id": "survivor_offering_046",
+            "glyph": 0.8359,
+            "contour": 0.4949,
+            "gradient": 0.4394
+          },
+          {
+            "id": "survivor_item_008",
+            "glyph": 0.8338,
+            "contour": 0.5025,
+            "gradient": 0.3849
+          },
+          {
+            "id": "survivor_offering_003",
+            "glyph": 0.8764,
+            "contour": 0.5158,
+            "gradient": 0.3787
+          }
+        ],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 7,
+        "x": 485,
+        "y": 190,
+        "radius": 32,
+        "state": "absorbed",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "survivor_offering_023",
+        "confidence": 0.7891,
+        "state_confidence": 0.78,
+        "candidates": [
+          [
+            "survivor_offering_023",
+            0.7891
+          ],
+          [
+            "survivor_offering_044",
+            0.7873
+          ],
+          [
+            "survivor_item_012",
+            0.7861
+          ]
+        ],
+        "geometry_confidence": 0.7,
+        "icon_margin": 0.0018,
+        "match_reason": "contour_mismatch",
+        "rarity": "brown",
+        "glyph_score": 0.7891,
+        "ring": 2,
+        "angle": 14.900802284170009,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.5503,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.9770290964777948,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [
+          [
+            "survivor_offering_023",
+            0.7891
+          ],
+          [
+            "survivor_offering_044",
+            0.7873
+          ],
+          [
+            "survivor_item_012",
+            0.7861
+          ],
+          [
+            "survivor_addon_009",
+            0.786
+          ],
+          [
+            "survivor_offering_013",
+            0.7846
+          ],
+          [
+            "survivor_offering_049",
+            0.779
+          ],
+          [
+            "survivor_offering_016",
+            0.7743
+          ],
+          [
+            "survivor_offering_020",
+            0.7702
+          ],
+          [
+            "survivor_addon_008",
+            0.7661
+          ],
+          [
+            "survivor_offering_059",
+            0.7612
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "survivor_item_012",
+            "glyph": 0.7861,
+            "contour": 0.6836,
+            "gradient": 0.5925
+          },
+          {
+            "id": "survivor_offering_049",
+            "glyph": 0.779,
+            "contour": 0.6404,
+            "gradient": 0.5758
+          },
+          {
+            "id": "survivor_offering_016",
+            "glyph": 0.7743,
+            "contour": 0.6865,
+            "gradient": 0.574
+          },
+          {
+            "id": "survivor_offering_020",
+            "glyph": 0.7702,
+            "contour": 0.6945,
+            "gradient": 0.5641
+          },
+          {
+            "id": "survivor_offering_023",
+            "glyph": 0.7891,
+            "contour": 0.5503,
+            "gradient": 0.5593
+          },
+          {
+            "id": "survivor_offering_059",
+            "glyph": 0.7612,
+            "contour": 0.4951,
+            "gradient": 0.4973
+          },
+          {
+            "id": "survivor_addon_008",
+            "glyph": 0.7661,
+            "contour": 0.64,
+            "gradient": 0.4809
+          },
+          {
+            "id": "survivor_addon_009",
+            "glyph": 0.786,
+            "contour": 0.5165,
+            "gradient": 0.4516
+          },
+          {
+            "id": "survivor_offering_044",
+            "glyph": 0.7873,
+            "contour": 0.5176,
+            "gradient": 0.3829
+          },
+          {
+            "id": "survivor_offering_013",
+            "glyph": 0.7846,
+            "contour": 0.4928,
+            "gradient": 0.3444
+          }
+        ],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 8,
+        "x": 664,
+        "y": 362,
+        "radius": 32,
+        "state": "purchased",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "survivor_item_009",
+        "confidence": 0.5586,
+        "state_confidence": 0.93,
+        "candidates": [
+          [
+            "survivor_item_009",
+            0.5586
+          ],
+          [
+            "wiki_survivor_common_addons_2edd7c2a0a77",
+            0.5532
+          ],
+          [
+            "wiki_survivor_common_addons_b07824b97674",
+            0.5002
+          ]
+        ],
+        "geometry_confidence": 0.882,
+        "icon_margin": 0.0054,
+        "match_reason": "low_glyph_score",
+        "rarity": "brown",
+        "glyph_score": 0.5586,
+        "ring": 2,
+        "angle": 75.79606204648597,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.7318,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.47529514648010496,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [
+          [
+            "survivor_item_009",
+            0.5586
+          ],
+          [
+            "wiki_survivor_common_addons_2edd7c2a0a77",
+            0.5532
+          ],
+          [
+            "wiki_survivor_common_addons_b07824b97674",
+            0.5002
+          ],
+          [
+            "survivor_offering_030",
+            0.482
+          ],
+          [
+            "survivor_item_016",
+            0.4808
+          ],
+          [
+            "survivor_offering_002",
+            0.4694
+          ],
+          [
+            "wiki_survivor_common_addons_03876b39311a",
+            0.4135
+          ],
+          [
+            "survivor_offering_011",
+            0.4099
+          ],
+          [
+            "survivor_addon_010",
+            0.3795
+          ],
+          [
+            "survivor_item_011",
+            0.3537
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "survivor_item_009",
+            "glyph": 0.5586,
+            "contour": 0.7318,
+            "gradient": 0.5451
+          },
+          {
+            "id": "wiki_survivor_common_addons_2edd7c2a0a77",
+            "glyph": 0.5532,
+            "contour": 0.6604,
+            "gradient": 0.4539
+          },
+          {
+            "id": "wiki_survivor_common_addons_b07824b97674",
+            "glyph": 0.5002,
+            "contour": 0.5234,
+            "gradient": 0.4418
+          },
+          {
+            "id": "survivor_item_011",
+            "glyph": 0.3537,
+            "contour": 0.425,
+            "gradient": 0.376
+          },
+          {
+            "id": "survivor_offering_011",
+            "glyph": 0.4099,
+            "contour": 0.4783,
+            "gradient": 0.3517
+          },
+          {
+            "id": "survivor_offering_002",
+            "glyph": 0.4694,
+            "contour": 0.3504,
+            "gradient": 0.3419
+          },
+          {
+            "id": "survivor_addon_010",
+            "glyph": 0.3795,
+            "contour": 0.4265,
+            "gradient": 0.3252
+          },
+          {
+            "id": "survivor_offering_030",
+            "glyph": 0.482,
+            "contour": 0.4827,
+            "gradient": 0.3149
+          },
+          {
+            "id": "wiki_survivor_common_addons_03876b39311a",
+            "glyph": 0.4135,
+            "contour": 0.5767,
+            "gradient": 0.2706
+          },
+          {
+            "id": "survivor_item_016",
+            "glyph": 0.4808,
+            "contour": 0.3904,
+            "gradient": 0.2294
+          }
+        ],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 9,
+        "x": 485,
+        "y": 662,
+        "radius": 27,
+        "state": "purchased",
+        "type": "offering",
+        "icon_id": "survivor_offering_045",
+        "candidate_id": "survivor_offering_045",
+        "confidence": 0.9746,
+        "state_confidence": 0.93,
+        "candidates": [
+          [
+            "survivor_offering_045",
+            0.9746
+          ],
+          [
+            "survivor_offering_001",
+            0.8337
+          ],
+          [
+            "survivor_offering_054",
+            0.8245
+          ]
+        ],
+        "geometry_confidence": 0.857,
+        "icon_margin": 0.1409,
+        "match_reason": "accepted",
+        "rarity": "green",
+        "glyph_score": 0.9746,
+        "ring": 2,
+        "angle": 165.45722550910554,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.9386,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.39216799091940974,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "survivor_offering_045",
+            0.9746
+          ],
+          [
+            "survivor_offering_001",
+            0.8337
+          ],
+          [
+            "survivor_offering_054",
+            0.8245
+          ],
+          [
+            "survivor_offering_052",
+            0.823
+          ],
+          [
+            "survivor_offering_042",
+            0.8172
+          ],
+          [
+            "survivor_addon_005",
+            0.7708
+          ],
+          [
+            "survivor_offering_056",
+            0.7706
+          ],
+          [
+            "survivor_item_012",
+            0.7658
+          ],
+          [
+            "survivor_offering_006",
+            0.7622
+          ],
+          [
+            "survivor_offering_047",
+            0.7619
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 10,
+        "x": 360,
+        "y": 657,
+        "radius": 31,
+        "state": "purchased",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "wiki_survivor_common_addons_c711236ae0dc",
+        "confidence": 0.8728,
+        "state_confidence": 0.93,
+        "candidates": [
+          [
+            "wiki_survivor_common_addons_c711236ae0dc",
+            0.8728
+          ],
+          [
+            "survivor_addon_006",
+            0.8693
+          ],
+          [
+            "wiki_survivor_common_addons_3d8af63acd10",
+            0.8617
+          ]
+        ],
+        "geometry_confidence": 0.896,
+        "icon_margin": 0.0035,
+        "match_reason": "contour_mismatch",
+        "rarity": "brown",
+        "glyph_score": 0.8728,
+        "ring": 2,
+        "angle": 195.0684881594922,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.6147,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.3988905698436712,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [
+          [
+            "wiki_survivor_common_addons_c711236ae0dc",
+            0.8728
+          ],
+          [
+            "survivor_addon_006",
+            0.8693
+          ],
+          [
+            "wiki_survivor_common_addons_3d8af63acd10",
+            0.8617
+          ],
+          [
+            "wiki_survivor_common_addons_eb9f7e18c4e3",
+            0.8603
+          ],
+          [
+            "wiki_survivor_common_addons_69cf520f0aa9",
+            0.8279
+          ],
+          [
+            "survivor_offering_009",
+            0.8059
+          ],
+          [
+            "survivor_offering_046",
+            0.7975
+          ],
+          [
+            "survivor_offering_027",
+            0.7858
+          ],
+          [
+            "survivor_offering_003",
+            0.7761
+          ],
+          [
+            "survivor_offering_021",
+            0.7708
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "wiki_survivor_common_addons_3d8af63acd10",
+            "glyph": 0.8617,
+            "contour": 0.6495,
+            "gradient": 0.5887
+          },
+          {
+            "id": "survivor_addon_006",
+            "glyph": 0.8693,
+            "contour": 0.6572,
+            "gradient": 0.5875
+          },
+          {
+            "id": "wiki_survivor_common_addons_c711236ae0dc",
+            "glyph": 0.8728,
+            "contour": 0.6147,
+            "gradient": 0.5788
+          },
+          {
+            "id": "wiki_survivor_common_addons_eb9f7e18c4e3",
+            "glyph": 0.8603,
+            "contour": 0.6182,
+            "gradient": 0.4914
+          },
+          {
+            "id": "survivor_offering_009",
+            "glyph": 0.8059,
+            "contour": 0.5922,
+            "gradient": 0.4532
+          },
+          {
+            "id": "survivor_offering_027",
+            "glyph": 0.7858,
+            "contour": 0.5713,
+            "gradient": 0.4344
+          },
+          {
+            "id": "survivor_offering_021",
+            "glyph": 0.7708,
+            "contour": 0.495,
+            "gradient": 0.412
+          },
+          {
+            "id": "survivor_offering_046",
+            "glyph": 0.7975,
+            "contour": 0.4756,
+            "gradient": 0.4105
+          },
+          {
+            "id": "wiki_survivor_common_addons_69cf520f0aa9",
+            "glyph": 0.8279,
+            "contour": 0.4975,
+            "gradient": 0.3574
+          },
+          {
+            "id": "survivor_offering_003",
+            "glyph": 0.7761,
+            "contour": 0.4419,
+            "gradient": 0.3541
+          }
+        ],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 11,
+        "x": 177,
+        "y": 488,
+        "radius": 40,
+        "state": "absorbed",
+        "type": "offering",
+        "icon_id": "survivor_offering_059",
+        "candidate_id": "survivor_offering_059",
+        "confidence": 0.9743,
+        "state_confidence": 0.78,
+        "candidates": [
+          [
+            "survivor_offering_059",
+            0.9743
+          ],
+          [
+            "survivor_item_017",
+            0.8921
+          ],
+          [
+            "survivor_offering_003",
+            0.8695
+          ]
+        ],
+        "geometry_confidence": 0.657,
+        "icon_margin": 0.0822,
+        "match_reason": "accepted",
+        "rarity": "brown",
+        "glyph_score": 0.9743,
+        "ring": 2,
+        "angle": 255.19912994167802,
+        "content_radius": 40,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.8367,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.0,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "survivor_offering_059",
+            0.9743
+          ],
+          [
+            "survivor_item_017",
+            0.8921
+          ],
+          [
+            "survivor_offering_003",
+            0.8695
+          ],
+          [
+            "survivor_item_022",
+            0.8688
+          ],
+          [
+            "survivor_item_018",
+            0.8664
+          ],
+          [
+            "survivor_offering_021",
+            0.8657
+          ],
+          [
+            "survivor_item_008",
+            0.865
+          ],
+          [
+            "survivor_addon_009",
+            0.8625
+          ],
+          [
+            "survivor_offering_046",
+            0.861
+          ],
+          [
+            "survivor_item_006",
+            0.8593
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 12,
+        "x": 245,
+        "y": 251,
+        "radius": 40,
+        "state": "available",
+        "type": "offering",
+        "icon_id": "survivor_offering_039",
+        "candidate_id": "survivor_offering_039",
+        "confidence": 0.9767,
+        "state_confidence": 0.9,
+        "candidates": [
+          [
+            "survivor_offering_039",
+            0.9767
+          ],
+          [
+            "survivor_offering_018",
+            0.7744
+          ],
+          [
+            "wiki_survivor_common_addons_93d6dee5e243",
+            0.7148
+          ]
+        ],
+        "geometry_confidence": 0.9,
+        "icon_margin": 0.2023,
+        "match_reason": "accepted",
+        "rarity": "green",
+        "glyph_score": 0.9767,
+        "ring": 2,
+        "angle": 314.0178828367758,
+        "content_radius": 40,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.9918,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 1.0,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "survivor_offering_039",
+            0.9767
+          ],
+          [
+            "survivor_offering_018",
+            0.7744
+          ],
+          [
+            "wiki_survivor_common_addons_93d6dee5e243",
+            0.7148
+          ],
+          [
+            "survivor_offering_059",
+            0.7016
+          ],
+          [
+            "survivor_offering_008",
+            0.6926
+          ],
+          [
+            "survivor_offering_025",
+            0.6802
+          ],
+          [
+            "wiki_survivor_common_addons_e10c205baa56",
+            0.6659
+          ],
+          [
+            "survivor_offering_017",
+            0.6651
+          ],
+          [
+            "survivor_offering_034",
+            0.6631
+          ],
+          [
+            "survivor_offering_038",
+            0.6564
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 13,
+        "x": 730,
+        "y": 248,
+        "radius": 36,
+        "state": "absorbed",
+        "type": "item",
+        "icon_id": "survivor_item_022",
+        "candidate_id": "survivor_item_022",
+        "confidence": 0.9634,
+        "state_confidence": 0.78,
+        "candidates": [
+          [
+            "survivor_item_022",
+            0.9634
+          ],
+          [
+            "survivor_item_017",
+            0.9526
+          ],
+          [
+            "survivor_item_006",
+            0.9177
+          ]
+        ],
+        "geometry_confidence": 0.658,
+        "icon_margin": 0.0964,
+        "match_reason": "accepted",
+        "rarity": "brown",
+        "glyph_score": 0.9634,
+        "ring": 3,
+        "angle": 60.31545119691846,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.8584,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.7358490566037735,
+        "rarity_tie_break": true,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "survivor_item_022",
+            0.9634
+          ],
+          [
+            "survivor_item_017",
+            0.9526
+          ],
+          [
+            "survivor_item_006",
+            0.9177
+          ],
+          [
+            "survivor_item_008",
+            0.8954
+          ],
+          [
+            "survivor_item_002",
+            0.8921
+          ],
+          [
+            "survivor_offering_003",
+            0.8807
+          ],
+          [
+            "survivor_item_001",
+            0.8696
+          ],
+          [
+            "survivor_offering_059",
+            0.867
+          ],
+          [
+            "survivor_offering_044",
+            0.8648
+          ],
+          [
+            "survivor_offering_046",
+            0.8647
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "rarity_tie"
+      },
+      {
+        "id": 14,
+        "x": 782,
+        "y": 422,
+        "radius": 32,
+        "state": "purchased",
+        "type": "item",
+        "icon_id": "survivor_item_006",
+        "candidate_id": "survivor_item_006",
+        "confidence": 0.9765,
+        "state_confidence": 0.93,
+        "candidates": [
+          [
+            "survivor_item_006",
+            0.9765
+          ],
+          [
+            "survivor_item_008",
+            0.9438
+          ],
+          [
+            "survivor_item_017",
+            0.9309
+          ]
+        ],
+        "geometry_confidence": 0.859,
+        "icon_margin": 0.0478,
+        "match_reason": "accepted",
+        "rarity": "blue",
+        "glyph_score": 0.9765,
+        "ring": 3,
+        "angle": 89.84040214115332,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.8891,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.3324235807860262,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.9274918205195524,
+        "glyph_detail_tie_break": true,
+        "recognition_status": "recognized",
+        "top10": [
+          [
+            "survivor_item_006",
+            0.9765
+          ],
+          [
+            "survivor_item_008",
+            0.9438
+          ],
+          [
+            "survivor_item_017",
+            0.9309
+          ],
+          [
+            "survivor_item_022",
+            0.9158
+          ],
+          [
+            "survivor_offering_044",
+            0.8889
+          ],
+          [
+            "survivor_item_020",
+            0.8876
+          ],
+          [
+            "survivor_item_002",
+            0.8845
+          ],
+          [
+            "wiki_survivor_common_addons_ce2e1fb39ced",
+            0.8776
+          ],
+          [
+            "survivor_offering_013",
+            0.8757
+          ],
+          [
+            "survivor_offering_059",
+            0.8751
+          ]
+        ],
+        "reranked": [],
+        "recognition_method": "fine_glyph"
+      },
+      {
+        "id": 15,
+        "x": 603,
+        "y": 729,
+        "radius": 31,
+        "state": "purchased",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "survivor_item_022",
+        "confidence": 0.9617,
+        "state_confidence": 0.93,
+        "candidates": [
+          [
+            "survivor_item_022",
+            0.9617
+          ],
+          [
+            "survivor_item_017",
+            0.9426
+          ],
+          [
+            "survivor_item_006",
+            0.8914
+          ]
+        ],
+        "geometry_confidence": 0.858,
+        "icon_margin": 0.0191,
+        "match_reason": "ambiguous_candidates",
+        "rarity": "pink",
+        "glyph_score": 0.9617,
+        "ring": 3,
+        "angle": 149.53445508054014,
+        "content_radius": 36,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.8627,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.7045324153757889,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "ambiguous",
+        "top10": [
+          [
+            "survivor_item_022",
+            0.9617
+          ],
+          [
+            "survivor_item_017",
+            0.9426
+          ],
+          [
+            "survivor_item_006",
+            0.8914
+          ],
+          [
+            "survivor_item_002",
+            0.8753
+          ],
+          [
+            "survivor_item_008",
+            0.8716
+          ],
+          [
+            "survivor_item_001",
+            0.8567
+          ],
+          [
+            "survivor_offering_059",
+            0.8539
+          ],
+          [
+            "survivor_offering_003",
+            0.8483
+          ],
+          [
+            "survivor_offering_046",
+            0.8441
+          ],
+          [
+            "survivor_item_003",
+            0.8435
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "survivor_item_022",
+            "glyph": 0.9617,
+            "contour": 0.8627,
+            "gradient": 0.8704
+          },
+          {
+            "id": "survivor_item_017",
+            "glyph": 0.9426,
+            "contour": 0.6738,
+            "gradient": 0.7711
+          },
+          {
+            "id": "survivor_item_002",
+            "glyph": 0.8753,
+            "contour": 0.7054,
+            "gradient": 0.7084
+          },
+          {
+            "id": "survivor_item_001",
+            "glyph": 0.8567,
+            "contour": 0.6203,
+            "gradient": 0.5904
+          },
+          {
+            "id": "survivor_item_003",
+            "glyph": 0.8435,
+            "contour": 0.6606,
+            "gradient": 0.5292
+          },
+          {
+            "id": "survivor_item_006",
+            "glyph": 0.8914,
+            "contour": 0.5068,
+            "gradient": 0.525
+          },
+          {
+            "id": "survivor_offering_046",
+            "glyph": 0.8441,
+            "contour": 0.569,
+            "gradient": 0.4961
+          },
+          {
+            "id": "survivor_offering_059",
+            "glyph": 0.8539,
+            "contour": 0.5477,
+            "gradient": 0.4943
+          },
+          {
+            "id": "survivor_offering_003",
+            "glyph": 0.8483,
+            "contour": 0.5104,
+            "gradient": 0.4557
+          },
+          {
+            "id": "survivor_item_008",
+            "glyph": 0.8716,
+            "contour": 0.6891,
+            "gradient": 0.4446
+          }
+        ],
+        "recognition_method": "glyph"
+      },
+      {
+        "id": 16,
+        "x": 104,
+        "y": 664,
+        "radius": 46,
+        "state": "locked",
+        "type": "unknown",
+        "icon_id": null,
+        "candidate_id": "survivor_offering_003",
+        "confidence": 0.9156,
+        "state_confidence": 0.78,
+        "candidates": [
+          [
+            "survivor_offering_003",
+            0.9156
+          ],
+          [
+            "survivor_offering_028",
+            0.9066
+          ],
+          [
+            "wiki_survivor_common_addons_ce2e1fb39ced",
+            0.903
+          ]
+        ],
+        "geometry_confidence": 0.622,
+        "icon_margin": 0.009,
+        "match_reason": "contour_mismatch",
+        "rarity": "pink",
+        "glyph_score": 0.9156,
+        "ring": 4,
+        "angle": 232.9294676281628,
+        "content_radius": 46,
+        "crop_path": null,
+        "normalized_path": null,
+        "contour_score": 0.5853,
+        "category_hint": "unknown",
+        "category_confidence": 0.0,
+        "category_candidates": [
+          "item",
+          "addon",
+          "offering"
+        ],
+        "event_offering": false,
+        "event_confidence": 0.0,
+        "orange_background": false,
+        "rarity_confidence": 0.5592885375494071,
+        "rarity_tie_break": false,
+        "glyph_detail_score": 0.0,
+        "glyph_detail_tie_break": false,
+        "recognition_status": "unknown",
+        "top10": [
+          [
+            "survivor_offering_003",
+            0.9156
+          ],
+          [
+            "survivor_offering_028",
+            0.9066
+          ],
+          [
+            "wiki_survivor_common_addons_ce2e1fb39ced",
+            0.903
+          ],
+          [
+            "survivor_item_003",
+            0.8832
+          ],
+          [
+            "survivor_offering_048",
+            0.878
+          ],
+          [
+            "survivor_item_014",
+            0.8771
+          ],
+          [
+            "survivor_item_006",
+            0.8748
+          ],
+          [
+            "survivor_item_020",
+            0.8729
+          ],
+          [
+            "survivor_offering_046",
+            0.8725
+          ],
+          [
+            "survivor_item_007",
+            0.8672
+          ]
+        ],
+        "reranked": [
+          {
+            "id": "wiki_survivor_common_addons_ce2e1fb39ced",
+            "glyph": 0.903,
+            "contour": 0.6229,
+            "gradient": 0.5196
+          },
+          {
+            "id": "survivor_item_007",
+            "glyph": 0.8672,
+            "contour": 0.5096,
+            "gradient": 0.4953
+          },
+          {
+            "id": "survivor_item_014",
+            "glyph": 0.8771,
+            "contour": 0.5366,
+            "gradient": 0.4943
+          },
+          {
+            "id": "survivor_offering_003",
+            "glyph": 0.9156,
+            "contour": 0.5853,
+            "gradient": 0.4894
+          },
+          {
+            "id": "survivor_item_003",
+            "glyph": 0.8832,
+            "contour": 0.5452,
+            "gradient": 0.4812
+          },
+          {
+            "id": "survivor_offering_048",
+            "glyph": 0.878,
+            "contour": 0.4968,
+            "gradient": 0.4766
+          },
+          {
+            "id": "survivor_item_006",
+            "glyph": 0.8748,
+            "contour": 0.4744,
+            "gradient": 0.438
+          },
+          {
+            "id": "survivor_item_020",
+            "glyph": 0.8729,
+            "contour": 0.5621,
+            "gradient": 0.4239
+          },
+          {
+            "id": "survivor_offering_046",
+            "glyph": 0.8725,
+            "contour": 0.4716,
+            "gradient": 0.4216
+          },
+          {
+            "id": "survivor_offering_028",
+            "glyph": 0.9066,
+            "contour": 0.5634,
+            "gradient": 0.3553
+          }
+        ],
+        "recognition_method": "glyph"
+      }
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        12
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        8,
+        14
+      ],
+      [
+        9,
+        15
+      ],
+      [
+        11,
+        16
+      ]
+    ],
+    "level": null,
+    "confidence": 0.882,
+    "safe_to_automate": false,
+    "diagnostics": [
+      "static_read_only",
+      "level_ocr_unavailable",
+      "uncertain_icons:9"
+    ],
+    "ok_box": null,
+    "source": "live_game",
+    "debug_image": null,
+    "analysis_id": "1791904474232774300_78941aad",
+    "details": {
+      "candidates": [
+        {
+          "circle": [
+            245,
+            251,
+            40
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 222.0,
+          "red": 0.0,
+          "gold": 1.0
+        },
+        {
+          "circle": [
+            54,
+            776,
+            49
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            94,
+            743,
+            49
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            133,
+            776,
+            44
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            185,
+            789,
+            43
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            791,
+            53,
+            42
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            485,
+            190,
+            32
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 174.0,
+          "red": 0.0,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            87,
+            38,
+            37
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            387,
+            362,
+            42
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 10.0,
+          "red": 0.5208333333333334,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            163,
+            729,
+            42
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            467,
+            376,
+            48
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 15.0,
+          "red": 0.2916666666666667,
+          "gold": 0.03125
+        },
+        {
+          "circle": [
+            125,
+            826,
+            42
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            730,
+            248,
+            36
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 128.0,
+          "red": 0.0,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            38,
+            720,
+            27
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            417,
+            302,
+            36
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 127.0,
+          "red": 0.0,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            177,
+            488,
+            40
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 127.0,
+          "red": 0.0,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            14,
+            806,
+            31
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            104,
+            664,
+            46
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 27.0,
+          "red": 0.0,
+          "gold": 0.03125
+        },
+        {
+          "circle": [
+            138,
+            32,
+            29
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            306,
+            784,
+            31
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 26.0,
+          "red": 0.03125,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            425,
+            427,
+            30
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            780,
+            423,
+            27
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 112.0,
+          "red": 1.0,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            237,
+            696,
+            31
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 54.0,
+          "red": 0.0,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            317,
+            361,
+            31
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 112.0,
+          "red": 0.9791666666666666,
+          "gold": 0.020833333333333332
+        },
+        {
+          "circle": [
+            360,
+            657,
+            31
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 171.0,
+          "red": 0.9791666666666666,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            107,
+            794,
+            49
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            664,
+            362,
+            32
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 70.79999999999995,
+          "red": 0.9583333333333334,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            45,
+            801,
+            43
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            782,
+            422,
+            32
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 117.0,
+          "red": 0.9895833333333334,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            603,
+            729,
+            31
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 115.0,
+          "red": 1.0,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            529,
+            485,
+            31
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 85.0,
+          "red": 1.0,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            177,
+            783,
+            49
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            419,
+            545,
+            28
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 113.0,
+          "red": 1.0,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            422,
+            426,
+            32
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            525,
+            361,
+            32
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 121.79999999999995,
+          "red": 0.9375,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            389,
+            485,
+            41
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 7.0,
+          "red": 0.78125,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            485,
+            662,
+            27
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 112.0,
+          "red": 1.0,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            145,
+            844,
+            49
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            320,
+            488,
+            29
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 164.0,
+          "red": 0.9791666666666666,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            459,
+            490,
+            46
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 7.0,
+          "red": 0.8020833333333334,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            342,
+            426,
+            46
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 6.0,
+          "red": 0.7604166666666666,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            499,
+            428,
+            43
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 8.0,
+          "red": 0.7916666666666666,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            128,
+            740,
+            48
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            419,
+            617,
+            47
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 13.0,
+          "red": 0.6979166666666666,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            78,
+            844,
+            40
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            70,
+            756,
+            31
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        },
+        {
+          "circle": [
+            461,
+            358,
+            43
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 11.0,
+          "red": 0.5,
+          "gold": 0.010416666666666666
+        },
+        {
+          "circle": [
+            386,
+            364,
+            38
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 7.0,
+          "red": 0.53125,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            227,
+            765,
+            37
+          ],
+          "accepted": true,
+          "reason": "local_content_and_circle",
+          "contrast": 60.0,
+          "red": 0.23958333333333334,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            593,
+            364,
+            41
+          ],
+          "accepted": false,
+          "reason": "insufficient_local_content",
+          "contrast": 4.0,
+          "red": 0.4375,
+          "gold": 0.0
+        },
+        {
+          "circle": [
+            232,
+            844,
+            40
+          ],
+          "accepted": false,
+          "reason": "outside_web"
+        }
+      ],
+      "center": [
+        423,
+        423,
+        40
+      ],
+      "geometry_channels_reused": 0,
+      "analysis_mode": "full",
+      "full_reason": "geometry_or_capture_changed",
+      "rejected_structure": [
+        {
+          "x": 237,
+          "y": 696,
+          "radius": 31,
+          "reason": "no_connection_and_weak_circular_border"
+        },
+        {
+          "x": 227,
+          "y": 765,
+          "radius": 37,
+          "reason": "no_connection_and_weak_circular_border"
+        }
+      ],
+      "bloodweb_memory": {
+        "generation": 4,
+        "role": "survivor",
+        "character": null,
+        "center": [
+          423,
+          423
+        ],
+        "context": [
+          [
+            394682,
+            3376,
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            96
+          ],
+          {
+            "x": 261,
+            "y": 139,
+            "width": 845,
+            "height": 845
+          },
+          [
+            845,
+            845,
+            3
+          ]
+        ],
+        "graph": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            8,
+            14
+          ],
+          [
+            9,
+            15
+          ],
+          [
+            11,
+            16
+          ]
+        ],
+        "identity_hits": 4,
+        "identity_misses": 14,
+        "full_reason": "invalidated",
+        "nodes": [
+          {
+            "local_id": 1,
+            "point": [
+              525,
+              361
+            ],
+            "fingerprint": "bd83b4449eff037613f543e4d1e8767d6c5e968200c170c9efd5a060f5773bfb",
+            "observations": 1,
+            "relative": [
+              102,
+              -62
+            ],
+            "physical": [
+              786,
+              500
+            ],
+            "neighbors": [
+              0,
+              6
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 2,
+            "point": [
+              529,
+              485
+            ],
+            "fingerprint": "a1ace1e7732b57816278aef81949118b28b968316491ad2864f6dc2861a7c276",
+            "observations": 1,
+            "relative": [
+              106,
+              62
+            ],
+            "physical": [
+              790,
+              624
+            ],
+            "neighbors": [
+              0,
+              8
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 3,
+            "point": [
+              419,
+              545
+            ],
+            "fingerprint": "19ed2ff83b7aa4736d05371937a6cdd4b5baa4a868e4678057305024a0dfd2da",
+            "observations": 12,
+            "relative": [
+              -4,
+              122
+            ],
+            "physical": [
+              680,
+              684
+            ],
+            "neighbors": [
+              0,
+              9,
+              10
+            ],
+            "last_confirmed_at": 35701.559884,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 4,
+            "point": [
+              320,
+              488
+            ],
+            "fingerprint": "56aa5709f71ec1635494cdf7dbd29c2335a1f07d614cd0fe5e4757677a9b9267",
+            "observations": 1,
+            "relative": [
+              -103,
+              65
+            ],
+            "physical": [
+              581,
+              627
+            ],
+            "neighbors": [
+              0,
+              11
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 5,
+            "point": [
+              317,
+              361
+            ],
+            "fingerprint": "99fca3c7aaaec12650692eea4b17f0d43b68d4ce8852bb9eeb5739ef67cb7920",
+            "observations": 2,
+            "relative": [
+              -106,
+              -62
+            ],
+            "physical": [
+              578,
+              500
+            ],
+            "neighbors": [
+              0,
+              6,
+              12
+            ],
+            "last_confirmed_at": 35701.559884,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 6,
+            "point": [
+              417,
+              302
+            ],
+            "fingerprint": "f077a923c5ddbc9b764e2ed3bb5105f1e89999ddc273bf582f18d3b1af154225",
+            "observations": 1,
+            "relative": [
+              -6,
+              -121
+            ],
+            "physical": [
+              678,
+              441
+            ],
+            "neighbors": [
+              0,
+              1,
+              5,
+              7
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 7,
+            "point": [
+              485,
+              190
+            ],
+            "fingerprint": "4ca12cec26eab47ad57a4159262a92522dbe0b7975cab3d15edaab3af1680aac",
+            "observations": 1,
+            "relative": [
+              62,
+              -233
+            ],
+            "physical": [
+              746,
+              329
+            ],
+            "neighbors": [
+              6
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 8,
+            "point": [
+              664,
+              362
+            ],
+            "fingerprint": "05313f4705f81899e0c640143274898a3bbff02dfe391a482c589b6bfe05d0f9",
+            "observations": 1,
+            "relative": [
+              241,
+              -61
+            ],
+            "physical": [
+              925,
+              501
+            ],
+            "neighbors": [
+              2,
+              13,
+              14
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 9,
+            "point": [
+              485,
+              662
+            ],
+            "fingerprint": "35fdb493e99bfc856251fb0cda20e7343aa700aff8abfa3b94df061a8c653898",
+            "observations": 11,
+            "relative": [
+              62,
+              239
+            ],
+            "physical": [
+              746,
+              801
+            ],
+            "neighbors": [
+              3,
+              15
+            ],
+            "last_confirmed_at": 35701.559884,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 10,
+            "point": [
+              360,
+              657
+            ],
+            "fingerprint": "c6686a5f3822b8569631aa96db50b125fc54287e25e566e85128504fa0e21b43",
+            "observations": 1,
+            "relative": [
+              -63,
+              234
+            ],
+            "physical": [
+              621,
+              796
+            ],
+            "neighbors": [
+              3
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 11,
+            "point": [
+              177,
+              488
+            ],
+            "fingerprint": "f4b3e258f5cef353d48ab329a01aeedef4623afcec3409ed789971c320d6d270",
+            "observations": 1,
+            "relative": [
+              -246,
+              65
+            ],
+            "physical": [
+              438,
+              627
+            ],
+            "neighbors": [
+              4,
+              16
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 12,
+            "point": [
+              245,
+              251
+            ],
+            "fingerprint": "dc3493a382e7889d876a73cb4c01fd61a9022ca4f8abb35d9b22fb838cb85d30",
+            "observations": 3,
+            "relative": [
+              -178,
+              -172
+            ],
+            "physical": [
+              506,
+              390
+            ],
+            "neighbors": [
+              5
+            ],
+            "last_confirmed_at": 35701.559884,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 13,
+            "point": [
+              730,
+              248
+            ],
+            "fingerprint": "ee108e8d81674a8652a62c0687b362989c13f43d11d22dfd4f3f598b8c16b493",
+            "observations": 2,
+            "relative": [
+              307,
+              -175
+            ],
+            "physical": [
+              991,
+              387
+            ],
+            "neighbors": [
+              8
+            ],
+            "last_confirmed_at": 35701.559884,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 14,
+            "point": [
+              782,
+              422
+            ],
+            "fingerprint": "9b0e5c1ad3de974232003b3bd46d1b18a58a503781d0405dfdcad4c5ab5540d9",
+            "observations": 9,
+            "relative": [
+              359,
+              -1
+            ],
+            "physical": [
+              1043,
+              561
+            ],
+            "neighbors": [
+              8
+            ],
+            "last_confirmed_at": 35701.559884,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 15,
+            "point": [
+              603,
+              729
+            ],
+            "fingerprint": "c495fb50eddecad8e08c8e9aca2e29b79df153cfb8ba16e912b0fa93a6d37622",
+            "observations": 1,
+            "relative": [
+              180,
+              306
+            ],
+            "physical": [
+              864,
+              868
+            ],
+            "neighbors": [
+              9
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 35701.12455
+          },
+          {
+            "local_id": 16,
+            "point": [
+              104,
+              664
+            ],
+            "fingerprint": "4e32a16ceb0a79fa3645bba8a11200f7c38d6a0641d3fdea964433ff16a00b1d",
+            "observations": 1,
+            "relative": [
+              -319,
+              241
+            ],
+            "physical": [
+              365,
+              803
+            ],
+            "neighbors": [
+              11
+            ],
+            "last_confirmed_at": null,
+            "capture_stamp": 35701.12455
+          }
+        ]
+      },
+      "identity_cache_hits": 0,
+      "timings": {
+        "detector_center": 0.001549100001284387,
+        "detector_tooltip": 0.007054299996525515,
+        "geometry_cache_check": 0.00034109999251086265,
+        "detector_nodes": 0.07340230000409065,
+        "detector_states": 0.02991090001887642,
+        "detector_icons": 0.1867194000078598,
+        "recognition_stage1": 0.14639329999045003,
+        "recognition_stage2": 0.020654300002206583,
+        "memory_update": 0.0029895000043325126,
+        "detector_graph": 0.052501199999824166,
+        "detector_other": 0.006350199975713622,
+        "detector_total": 0.35748740000417456
+      }
+    }
+  },
+  "frames": [
+    {
+      "source": "tests/fixtures/v47/level39_after_001.png",
+      "sha256": "d2b15be0942587984fbedb76289440c5f9d00f41d2414bf84dee63bcb6e56863",
+      "frame": {
+        "window": {
+          "hwnd": 394682,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 3376
+        },
+        "roi": {
+          "x": 257,
+          "y": 135,
+          "width": 853,
+          "height": 853
+        },
+        "image_size": [
+          853,
+          853
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": 1564634,
+        "captured_at": 35708.47131,
+        "visibility": {
+          "window": {
+            "hwnd": 394682,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 3376
+          },
+          "provider": "mss",
+          "roi": {
+            "x": 257,
+            "y": 135,
+            "width": 853,
+            "height": 853
+          },
+          "occlusions": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        }
+      },
+      "analysis_id": "1791904483018453200_5e13a76c"
+    },
+    {
+      "source": "tests/fixtures/v47/level39_after_002.png",
+      "sha256": "66cf2220f9d40b75f4c64d17b58a6e99a0b2eb3f95f3cddc2facb61d05022b64",
+      "frame": {
+        "window": {
+          "hwnd": 394682,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 3376
+        },
+        "roi": {
+          "x": 257,
+          "y": 135,
+          "width": 853,
+          "height": 853
+        },
+        "image_size": [
+          853,
+          853
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": 1564634,
+        "captured_at": 35709.0639594,
+        "visibility": {
+          "window": {
+            "hwnd": 394682,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 3376
+          },
+          "provider": "mss",
+          "roi": {
+            "x": 257,
+            "y": 135,
+            "width": 853,
+            "height": 853
+          },
+          "occlusions": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        }
+      },
+      "analysis_id": "1791904483570911000_dc954da3"
+    }
+  ]
+}

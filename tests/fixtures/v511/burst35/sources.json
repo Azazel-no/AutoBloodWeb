@@ -1,0 +1,153 @@
+{
+  "kind": "real_serialized_maps_no_generated_pixels",
+  "sources": [
+    {
+      "copy": "tests\\fixtures\\v511\\burst35\\0_analysis.json",
+      "source": "debug\\analysis_runs\\1792509175470263600_027e4297\\analysis.json",
+      "sha256": "bb1a2879d50d4d6478943959f8ac6f9554f25e02a48662d18d766394caff68de"
+    },
+    {
+      "copy": "tests\\fixtures\\v511\\burst35\\0_manifest.json",
+      "source": "debug\\analysis_runs\\1792509175470263600_027e4297\\manifest.json",
+      "sha256": "62bf72cb5150fecf25cb2f33bf716fea731f1a6398393eef00a9071ebbc23b08"
+    },
+    {
+      "copy": "tests\\fixtures\\v511\\burst35\\1_analysis.json",
+      "source": "debug\\analysis_runs\\1792509181356083200_364e1b1f\\analysis.json",
+      "sha256": "e73bec6e42c76fbbf8d3508e6f8da44fdc6cd21de4d8e1c4a6e12cb70ce48933"
+    },
+    {
+      "copy": "tests\\fixtures\\v511\\burst35\\1_manifest.json",
+      "source": "debug\\analysis_runs\\1792509181356083200_364e1b1f\\manifest.json",
+      "sha256": "ccfef8093f2875217f9540b7734b6c6cff15186e6fea4ea8c9531ca7ff236bf6"
+    },
+    {
+      "copy": "tests\\fixtures\\v511\\burst35\\2_analysis.json",
+      "source": "debug\\analysis_runs\\1792509182832992800_ca753d82\\analysis.json",
+      "sha256": "f384c443036f79ec208e6d121252148a6c4b8456e558e63d4439511675bc4103"
+    },
+    {
+      "copy": "tests\\fixtures\\v511\\burst35\\2_manifest.json",
+      "source": "debug\\analysis_runs\\1792509182832992800_ca753d82\\manifest.json",
+      "sha256": "6c065de426fecdf0bba87faafe3c3454b6966dc97e4f341f730c6d06268141c2"
+    }
+  ],
+  "actual_group": {
+    "session": 3288,
+    "time": "2026-10-20T15:12:55.532924+00:00",
+    "stage": "group_before",
+    "state": "automation_ready",
+    "operation_id": "0723d726cd1114c06dd77f1de9b5dbae",
+    "points": [
+      [
+        684,
+        440
+      ],
+      [
+        788,
+        500
+      ],
+      [
+        579,
+        624
+      ],
+      [
+        579,
+        499
+      ],
+      [
+        622,
+        329
+      ]
+    ]
+  },
+  "before_frame": {
+    "window": {
+      "hwnd": 132224,
+      "title": "DeadByDaylight  ",
+      "client": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "monitor": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "dpi": 96,
+      "foreground": true,
+      "pid": 3348
+    },
+    "roi": {
+      "x": 228,
+      "y": 106,
+      "width": 911,
+      "height": 911
+    },
+    "image_size": [
+      911,
+      911
+    ],
+    "provider": "mss",
+    "live": true,
+    "bloodpoints": 789754,
+    "captured_at": 7560.1559332,
+    "visibility": {
+      "window": {
+        "hwnd": 132224,
+        "title": "DeadByDaylight  ",
+        "client": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "monitor": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "dpi": 96,
+        "foreground": true,
+        "pid": 3348
+      },
+      "provider": "mss",
+      "captured_at": 7560.1559332,
+      "roi": {
+        "x": 228,
+        "y": 106,
+        "width": 911,
+        "height": 911
+      },
+      "occlusions": [],
+      "center": [
+        684,
+        562,
+        40
+      ]
+    },
+    "level": 35,
+    "level_confidence": 0.9852941176470589,
+    "probe_only": false,
+    "pipeline": {
+      "mode": "FAST_FRAME_CHECK",
+      "generation": 2,
+      "visual_version": "v59-pinned-ui-1",
+      "capture_seconds": 0.21260090000032505,
+      "stats": {
+        "masked_full_copies": 0,
+        "roi_copies": 0,
+        "text_normalizations": 1,
+        "ui_candidate_searches": 2,
+        "ui_candidate_positions": 103,
+        "ui_exhaustive_searches": 2,
+        "center_local_searches": 1,
+        "center_reuses": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,1902 @@
+{
+  "width": 851,
+  "height": 851,
+  "screen_state": "bloodweb",
+  "nodes": [
+    {
+      "id": 0,
+      "x": 426,
+      "y": 426,
+      "radius": 38,
+      "state": "center",
+      "type": "bloodweb_center",
+      "icon_id": null,
+      "candidate_id": null,
+      "confidence": 0.0,
+      "state_confidence": 0.9,
+      "candidates": [],
+      "geometry_confidence": 0.9,
+      "icon_margin": 0.0,
+      "match_reason": "structural_center",
+      "rarity": "unknown",
+      "glyph_score": 0.0,
+      "ring": 0,
+      "angle": 0.0,
+      "content_radius": 0,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\000_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\000_normalized.png",
+      "contour_score": 0.0,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.0,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 1,
+      "x": 426,
+      "y": 305,
+      "radius": 32,
+      "state": "purchased",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "survivor_offering_007",
+      "confidence": 0.693,
+      "state_confidence": 0.93,
+      "candidates": [
+        [
+          "survivor_offering_007",
+          0.693
+        ],
+        [
+          "survivor_item_014",
+          0.6858
+        ],
+        [
+          "survivor_item_020",
+          0.685
+        ]
+      ],
+      "geometry_confidence": 0.894,
+      "icon_margin": 0.0072,
+      "match_reason": "contour_mismatch",
+      "rarity": "green",
+      "glyph_score": 0.693,
+      "ring": 1,
+      "angle": 0.0,
+      "content_radius": 36,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\001_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\001_normalized.png",
+      "contour_score": 0.65,
+      "category_hint": "unknown",
+      "category_confidence": 0.5,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.4481818181818182,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 2,
+      "x": 531,
+      "y": 365,
+      "radius": 31,
+      "state": "purchased",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "wiki_survivor_common_addons_b07824b97674",
+      "confidence": 0.6135,
+      "state_confidence": 0.93,
+      "candidates": [
+        [
+          "wiki_survivor_common_addons_b07824b97674",
+          0.6135
+        ],
+        [
+          "survivor_addon_009",
+          0.5514
+        ],
+        [
+          "survivor_offering_030",
+          0.5347
+        ]
+      ],
+      "geometry_confidence": 0.854,
+      "icon_margin": 0.0621,
+      "match_reason": "contour_mismatch",
+      "rarity": "pink",
+      "glyph_score": 0.6135,
+      "ring": 1,
+      "angle": 59.84545208208383,
+      "content_radius": 36,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\002_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\002_normalized.png",
+      "contour_score": 0.5071,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.6958499147242752,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 3,
+      "x": 531,
+      "y": 488,
+      "radius": 31,
+      "state": "purchased",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "wiki_survivor_common_addons_03876b39311a",
+      "confidence": 0.7912,
+      "state_confidence": 0.93,
+      "candidates": [
+        [
+          "wiki_survivor_common_addons_03876b39311a",
+          0.7912
+        ],
+        [
+          "survivor_item_016",
+          0.7074
+        ],
+        [
+          "survivor_offering_011",
+          0.7019
+        ]
+      ],
+      "geometry_confidence": 0.9,
+      "icon_margin": 0.0837,
+      "match_reason": "low_glyph_score",
+      "rarity": "brown",
+      "glyph_score": 0.7912,
+      "ring": 1,
+      "angle": 120.56083926737153,
+      "content_radius": 36,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\003_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\003_normalized.png",
+      "contour_score": 0.7885,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.41058304752572267,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 4,
+      "x": 426,
+      "y": 549,
+      "radius": 40,
+      "state": "available",
+      "type": "offering",
+      "icon_id": "survivor_offering_037",
+      "candidate_id": "survivor_offering_037",
+      "confidence": 0.9671,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "survivor_offering_037",
+          0.9671
+        ],
+        [
+          "wiki_survivor_common_addons_e937c1a62807",
+          0.8414
+        ],
+        [
+          "survivor_offering_043",
+          0.7995
+        ]
+      ],
+      "geometry_confidence": 0.9,
+      "icon_margin": 0.1257,
+      "match_reason": "accepted",
+      "rarity": "green",
+      "glyph_score": 0.9671,
+      "ring": 1,
+      "angle": 180.0,
+      "content_radius": 40,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\004_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\004_normalized.png",
+      "contour_score": 0.9576,
+      "category_hint": "offering",
+      "category_confidence": 0.95,
+      "category_candidates": [
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 5,
+      "x": 323,
+      "y": 488,
+      "radius": 31,
+      "state": "purchased",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "survivor_offering_058",
+      "confidence": 0.8106,
+      "state_confidence": 0.93,
+      "candidates": [
+        [
+          "survivor_offering_058",
+          0.8106
+        ],
+        [
+          "survivor_addon_009",
+          0.7865
+        ],
+        [
+          "survivor_offering_049",
+          0.7498
+        ]
+      ],
+      "geometry_confidence": 0.857,
+      "icon_margin": 0.0241,
+      "match_reason": "low_glyph_score",
+      "rarity": "pink",
+      "glyph_score": 0.8106,
+      "ring": 1,
+      "angle": 238.95450917313684,
+      "content_radius": 36,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\005_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\005_normalized.png",
+      "contour_score": 0.7479,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.7720540888602705,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 6,
+      "x": 321,
+      "y": 365,
+      "radius": 40,
+      "state": "available",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "survivor_offering_025",
+      "confidence": 0.8294,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "survivor_offering_025",
+          0.8294
+        ],
+        [
+          "survivor_item_012",
+          0.824
+        ],
+        [
+          "survivor_offering_032",
+          0.8189
+        ]
+      ],
+      "geometry_confidence": 0.888,
+      "icon_margin": 0.0054,
+      "match_reason": "contour_mismatch",
+      "rarity": "green",
+      "glyph_score": 0.8294,
+      "ring": 1,
+      "angle": 300.15454791791615,
+      "content_radius": 40,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\006_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\006_normalized.png",
+      "contour_score": 0.5371,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.9802043422733078,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 7,
+      "x": 488,
+      "y": 192,
+      "radius": 35,
+      "state": "available",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "survivor_offering_025",
+      "confidence": 0.8697,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "survivor_offering_025",
+          0.8697
+        ],
+        [
+          "wiki_survivor_common_addons_ce2e1fb39ced",
+          0.8492
+        ],
+        [
+          "survivor_offering_028",
+          0.8479
+        ]
+      ],
+      "geometry_confidence": 0.883,
+      "icon_margin": 0.0204,
+      "match_reason": "contour_mismatch",
+      "rarity": "brown",
+      "glyph_score": 0.8697,
+      "ring": 2,
+      "angle": 14.839939161912914,
+      "content_radius": 36,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\007_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\007_normalized.png",
+      "contour_score": 0.6073,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 8,
+      "x": 667,
+      "y": 366,
+      "radius": 32,
+      "state": "purchased",
+      "type": "offering",
+      "icon_id": "survivor_offering_006",
+      "candidate_id": "survivor_offering_006",
+      "confidence": 0.9744,
+      "state_confidence": 0.93,
+      "candidates": [
+        [
+          "survivor_offering_006",
+          0.9744
+        ],
+        [
+          "survivor_offering_056",
+          0.821
+        ],
+        [
+          "survivor_offering_001",
+          0.8135
+        ]
+      ],
+      "geometry_confidence": 0.857,
+      "icon_margin": 0.1535,
+      "match_reason": "accepted",
+      "rarity": "purple",
+      "glyph_score": 0.9744,
+      "ring": 2,
+      "angle": 76.01970942396733,
+      "content_radius": 36,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\008_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\008_normalized.png",
+      "contour_score": 0.9641,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.4269610145608267,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 9,
+      "x": 247,
+      "y": 597,
+      "radius": 41,
+      "state": "locked",
+      "type": "offering",
+      "icon_id": "survivor_offering_048",
+      "candidate_id": "survivor_offering_048",
+      "confidence": 0.9861,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "survivor_offering_048",
+          0.9861
+        ],
+        [
+          "survivor_offering_003",
+          0.916
+        ],
+        [
+          "survivor_item_003",
+          0.8863
+        ]
+      ],
+      "geometry_confidence": 0.673,
+      "icon_margin": 0.0701,
+      "match_reason": "accepted",
+      "rarity": "brown",
+      "glyph_score": 0.9861,
+      "ring": 2,
+      "angle": 226.30938981941054,
+      "content_radius": 41,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\009_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\009_normalized.png",
+      "contour_score": 0.8289,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.9940476190476191,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 10,
+      "x": 185,
+      "y": 487,
+      "radius": 40,
+      "state": "available",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "survivor_item_013",
+      "confidence": 0.3612,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "survivor_item_013",
+          0.3612
+        ],
+        [
+          "survivor_addon_003",
+          0.3192
+        ],
+        [
+          "survivor_item_010",
+          0.2618
+        ]
+      ],
+      "geometry_confidence": 0.849,
+      "icon_margin": 0.0421,
+      "match_reason": "contour_mismatch",
+      "rarity": "blue",
+      "glyph_score": 0.3612,
+      "ring": 2,
+      "angle": 255.79606204648596,
+      "content_radius": 40,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\010_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\010_normalized.png",
+      "contour_score": 0.5704,
+      "category_hint": "unknown",
+      "category_confidence": 0.5,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 11,
+      "x": 185,
+      "y": 365,
+      "radius": 39,
+      "state": "available",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "survivor_offering_052",
+      "confidence": 0.9915,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "survivor_offering_052",
+          0.9915
+        ],
+        [
+          "survivor_offering_054",
+          0.9866
+        ],
+        [
+          "survivor_offering_042",
+          0.9769
+        ]
+      ],
+      "geometry_confidence": 0.9,
+      "icon_margin": 0.0049,
+      "match_reason": "ambiguous_candidates",
+      "rarity": "brown",
+      "glyph_score": 0.9915,
+      "ring": 2,
+      "angle": 284.203937953514,
+      "content_radius": 39,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\011_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\011_normalized.png",
+      "contour_score": 0.9787,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.9993815708101422,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 12,
+      "x": 248,
+      "y": 255,
+      "radius": 40,
+      "state": "available",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "survivor_item_011",
+      "confidence": 0.5079,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "survivor_item_011",
+          0.5079
+        ],
+        [
+          "wiki_survivor_common_addons_e937c1a62807",
+          0.5072
+        ],
+        [
+          "survivor_offering_023",
+          0.4879
+        ]
+      ],
+      "geometry_confidence": 0.888,
+      "icon_margin": 0.0007,
+      "match_reason": "contour_mismatch",
+      "rarity": "blue",
+      "glyph_score": 0.5079,
+      "ring": 2,
+      "angle": 313.85095505267384,
+      "content_radius": 40,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\012_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\012_normalized.png",
+      "contour_score": 0.544,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.9824824824824825,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 13,
+      "x": 364,
+      "y": 192,
+      "radius": 41,
+      "state": "available",
+      "type": "offering",
+      "icon_id": "survivor_offering_051",
+      "candidate_id": "survivor_offering_051",
+      "confidence": 0.9748,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "survivor_offering_051",
+          0.9748
+        ],
+        [
+          "survivor_offering_028",
+          0.8657
+        ],
+        [
+          "survivor_offering_033",
+          0.8648
+        ]
+      ],
+      "geometry_confidence": 0.9,
+      "icon_margin": 0.1091,
+      "match_reason": "accepted",
+      "rarity": "brown",
+      "glyph_score": 0.9748,
+      "ring": 2,
+      "angle": 345.1600608380871,
+      "content_radius": 41,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\013_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\013_normalized.png",
+      "contour_score": 0.9343,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 14,
+      "x": 606,
+      "y": 119,
+      "radius": 40,
+      "state": "locked",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "survivor_offering_027",
+      "confidence": 0.6779,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "survivor_offering_027",
+          0.6779
+        ],
+        [
+          "wiki_survivor_common_addons_e937c1a62807",
+          0.6222
+        ],
+        [
+          "survivor_offering_024",
+          0.6117
+        ]
+      ],
+      "geometry_confidence": 0.672,
+      "icon_margin": 0.0556,
+      "match_reason": "contour_mismatch",
+      "rarity": "purple",
+      "glyph_score": 0.6779,
+      "ring": 3,
+      "angle": 30.383915427014887,
+      "content_radius": 40,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\014_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\014_normalized.png",
+      "contour_score": 0.6241,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.999474513925381,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 15,
+      "x": 786,
+      "y": 426,
+      "radius": 40,
+      "state": "available",
+      "type": "offering",
+      "icon_id": "survivor_offering_003",
+      "candidate_id": "survivor_offering_003",
+      "confidence": 0.9816,
+      "state_confidence": 0.9,
+      "candidates": [
+        [
+          "survivor_offering_003",
+          0.9816
+        ],
+        [
+          "survivor_offering_046",
+          0.9615
+        ],
+        [
+          "survivor_offering_048",
+          0.9168
+        ]
+      ],
+      "geometry_confidence": 0.9,
+      "icon_margin": 0.0797,
+      "match_reason": "accepted",
+      "rarity": "purple",
+      "glyph_score": 0.9816,
+      "ring": 3,
+      "angle": 90.0,
+      "content_radius": 40,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\015_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\015_normalized.png",
+      "contour_score": 0.9542,
+      "category_hint": "offering",
+      "category_confidence": 0.95,
+      "category_candidates": [
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": true
+    },
+    {
+      "id": 16,
+      "x": 115,
+      "y": 601,
+      "radius": 42,
+      "state": "locked",
+      "type": "addon",
+      "icon_id": "wiki_survivor_common_addons_eb9f7e18c4e3",
+      "candidate_id": "wiki_survivor_common_addons_eb9f7e18c4e3",
+      "confidence": 0.9847,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "wiki_survivor_common_addons_eb9f7e18c4e3",
+          0.9847
+        ],
+        [
+          "survivor_addon_006",
+          0.8453
+        ],
+        [
+          "survivor_offering_027",
+          0.8108
+        ]
+      ],
+      "geometry_confidence": 0.675,
+      "icon_margin": 0.1394,
+      "match_reason": "accepted",
+      "rarity": "blue",
+      "glyph_score": 0.9847,
+      "ring": 3,
+      "angle": 240.63350034530703,
+      "content_radius": 42,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\016_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\016_normalized.png",
+      "contour_score": 0.9678,
+      "category_hint": "unknown",
+      "category_confidence": 0.5,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 17,
+      "x": 67,
+      "y": 425,
+      "radius": 42,
+      "state": "locked",
+      "type": "item",
+      "icon_id": "survivor_item_020",
+      "candidate_id": "survivor_item_020",
+      "confidence": 0.9752,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "survivor_item_020",
+          0.9752
+        ],
+        [
+          "survivor_item_014",
+          0.9355
+        ],
+        [
+          "survivor_item_007",
+          0.9192
+        ]
+      ],
+      "geometry_confidence": 0.674,
+      "icon_margin": 0.0397,
+      "match_reason": "accepted",
+      "rarity": "brown",
+      "glyph_score": 0.9752,
+      "ring": 3,
+      "angle": 270.15959785884667,
+      "content_radius": 42,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\017_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\017_normalized.png",
+      "contour_score": 0.9097,
+      "category_hint": "unknown",
+      "category_confidence": 0.0,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.9929292929292929,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 18,
+      "x": 246,
+      "y": 120,
+      "radius": 34,
+      "state": "locked",
+      "type": "addon",
+      "icon_id": "wiki_survivor_common_addons_e10c205baa56",
+      "candidate_id": "wiki_survivor_common_addons_e10c205baa56",
+      "confidence": 0.9589,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "wiki_survivor_common_addons_e10c205baa56",
+          0.9589
+        ],
+        [
+          "survivor_offering_034",
+          0.7342
+        ],
+        [
+          "survivor_item_015",
+          0.7325
+        ]
+      ],
+      "geometry_confidence": 0.672,
+      "icon_margin": 0.2248,
+      "match_reason": "accepted",
+      "rarity": "blue",
+      "glyph_score": 0.9589,
+      "ring": 3,
+      "angle": 329.5344550805401,
+      "content_radius": 36,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\018_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\018_normalized.png",
+      "contour_score": 0.9785,
+      "category_hint": "unknown",
+      "category_confidence": 0.5,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 1.0,
+      "rarity_tie_break": false
+    },
+    {
+      "id": 19,
+      "x": 420,
+      "y": 73,
+      "radius": 38,
+      "state": "absorbed",
+      "type": "unknown",
+      "icon_id": null,
+      "candidate_id": "wiki_survivor_common_addons_5a835dc56d8a",
+      "confidence": 0.7559,
+      "state_confidence": 0.78,
+      "candidates": [
+        [
+          "wiki_survivor_common_addons_5a835dc56d8a",
+          0.7559
+        ],
+        [
+          "wiki_survivor_common_addons_7913557cb9da",
+          0.7044
+        ],
+        [
+          "survivor_offering_015",
+          0.6896
+        ]
+      ],
+      "geometry_confidence": 0.7,
+      "icon_margin": 0.0515,
+      "match_reason": "low_glyph_score",
+      "rarity": "purple",
+      "glyph_score": 0.7559,
+      "ring": 3,
+      "angle": 359.02622782750245,
+      "content_radius": 38,
+      "crop_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\019_original.png",
+      "normalized_path": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route_nodes\\019_normalized.png",
+      "contour_score": 0.7958,
+      "category_hint": "unknown",
+      "category_confidence": 0.5,
+      "category_candidates": [
+        "item",
+        "addon",
+        "offering"
+      ],
+      "event_offering": false,
+      "event_confidence": 0.0,
+      "orange_background": false,
+      "rarity_confidence": 0.9666048237476809,
+      "rarity_tie_break": false
+    }
+  ],
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      12
+    ],
+    [
+      1,
+      13
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      7,
+      19
+    ],
+    [
+      8,
+      15
+    ],
+    [
+      9,
+      16
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      17
+    ],
+    [
+      12,
+      18
+    ]
+  ],
+  "level": null,
+  "confidence": 0.871,
+  "safe_to_automate": false,
+  "diagnostics": [
+    "static_read_only",
+    "level_ocr_unavailable",
+    "uncertain_icons:11"
+  ],
+  "ok_box": null,
+  "source": "live_game",
+  "debug_image": "debug\\analysis_runs\\1791832760347526200_1017e3a5\\accepted_route.png",
+  "analysis_id": "1791832760347526200_1017e3a5",
+  "details": {
+    "candidates": [
+      {
+        "circle": [
+          185,
+          487,
+          40
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 44.200000000000045,
+        "red": 0.0,
+        "gold": 0.9166666666666666
+      },
+      {
+        "circle": [
+          786,
+          426,
+          40
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 220.8,
+        "red": 0.0,
+        "gold": 1.0
+      },
+      {
+        "circle": [
+          488,
+          192,
+          35
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 217.0,
+        "red": 0.0,
+        "gold": 0.9166666666666666
+      },
+      {
+        "circle": [
+          426,
+          549,
+          40
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 222.0,
+        "red": 0.0,
+        "gold": 1.0
+      },
+      {
+        "circle": [
+          185,
+          365,
+          39
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 222.0,
+        "red": 0.0,
+        "gold": 1.0
+      },
+      {
+        "circle": [
+          248,
+          255,
+          40
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 218.20000000000005,
+        "red": 0.0,
+        "gold": 0.9375
+      },
+      {
+        "circle": [
+          364,
+          192,
+          41
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 223.0,
+        "red": 0.0,
+        "gold": 1.0
+      },
+      {
+        "circle": [
+          107,
+          785,
+          49
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          321,
+          365,
+          40
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 222.0,
+        "red": 0.0,
+        "gold": 0.9375
+      },
+      {
+        "circle": [
+          56,
+          773,
+          49
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          67,
+          425,
+          42
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 114.0,
+        "red": 0.0,
+        "gold": 0.0
+      },
+      {
+        "circle": [
+          115,
+          601,
+          42
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 114.0,
+        "red": 0.0,
+        "gold": 0.0
+      },
+      {
+        "circle": [
+          247,
+          597,
+          41
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 112.0,
+        "red": 0.0,
+        "gold": 0.0
+      },
+      {
+        "circle": [
+          606,
+          119,
+          40
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 107.0,
+        "red": 0.0,
+        "gold": 0.0
+      },
+      {
+        "circle": [
+          145,
+          751,
+          46
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          246,
+          120,
+          34
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 108.0,
+        "red": 0.0,
+        "gold": 0.0
+      },
+      {
+        "circle": [
+          225,
+          796,
+          49
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          140,
+          434,
+          47
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 5.0,
+        "red": 0.0,
+        "gold": 0.19791666666666666
+      },
+      {
+        "circle": [
+          89,
+          734,
+          40
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          256,
+          483,
+          47
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 31.0,
+        "red": 0.15625,
+        "gold": 0.17708333333333334
+      },
+      {
+        "circle": [
+          361,
+          435,
+          47
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 11.0,
+        "red": 0.3229166666666667,
+        "gold": 0.3333333333333333
+      },
+      {
+        "circle": [
+          213,
+          426,
+          32
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 9.0,
+        "red": 0.0,
+        "gold": 0.4375
+      },
+      {
+        "circle": [
+          245,
+          370,
+          49
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 9.0,
+        "red": 0.0,
+        "gold": 0.15625
+      },
+      {
+        "circle": [
+          425,
+          230,
+          38
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 8.0,
+        "red": 0.07291666666666667,
+        "gold": 0.5625
+      },
+      {
+        "circle": [
+          298,
+          430,
+          30
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 15.0,
+        "red": 0.11458333333333333,
+        "gold": 0.46875
+      },
+      {
+        "circle": [
+          384,
+          482,
+          43
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 9.0,
+        "red": 0.4166666666666667,
+        "gold": 0.3020833333333333
+      },
+      {
+        "circle": [
+          457,
+          491,
+          37
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 7.0,
+        "red": 0.4479166666666667,
+        "gold": 0.28125
+      },
+      {
+        "circle": [
+          288,
+          535,
+          49
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 9.0,
+        "red": 0.07291666666666667,
+        "gold": 0.08333333333333333
+      },
+      {
+        "circle": [
+          800,
+          64,
+          38
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          395,
+          362,
+          42
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 7.0,
+        "red": 0.5520833333333334,
+        "gold": 0.3333333333333333
+      },
+      {
+        "circle": [
+          366,
+          293,
+          49
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 28.0,
+        "red": 0.052083333333333336,
+        "gold": 0.21875
+      },
+      {
+        "circle": [
+          18,
+          815,
+          34
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          158,
+          800,
+          30
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          69,
+          821,
+          29
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          420,
+          73,
+          38
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 177.0,
+        "red": 0.0,
+        "gold": 0.0
+      },
+      {
+        "circle": [
+          84,
+          39,
+          32
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          426,
+          424,
+          33
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          524,
+          122,
+          44
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 5.0,
+        "red": 0.0,
+        "gold": 0.11458333333333333
+      },
+      {
+        "circle": [
+          19,
+          736,
+          29
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          414,
+          144,
+          49
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 15.0,
+        "red": 0.0,
+        "gold": 0.17708333333333334
+      },
+      {
+        "circle": [
+          287,
+          188,
+          42
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 3.0,
+        "red": 0.0,
+        "gold": 0.2708333333333333
+      },
+      {
+        "circle": [
+          139,
+          34,
+          29
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          208,
+          188,
+          42
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 3.0,
+        "red": 0.0,
+        "gold": 0.15625
+      },
+      {
+        "circle": [
+          750,
+          370,
+          41
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 16.0,
+        "red": 0.0,
+        "gold": 0.19791666666666666
+      },
+      {
+        "circle": [
+          824,
+          611,
+          32
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          488,
+          299,
+          41
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 7.0,
+        "red": 0.21875,
+        "gold": 0.0
+      },
+      {
+        "circle": [
+          29,
+          31,
+          27
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          685,
+          412,
+          35
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 7.0,
+        "red": 0.09375,
+        "gold": 0.11458333333333333
+      },
+      {
+        "circle": [
+          531,
+          365,
+          31
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 109.0,
+        "red": 1.0,
+        "gold": 0.0
+      },
+      {
+        "circle": [
+          127,
+          794,
+          49
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          667,
+          366,
+          32
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 110.0,
+        "red": 1.0,
+        "gold": 0.010416666666666666
+      },
+      {
+        "circle": [
+          67,
+          787,
+          49
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          531,
+          488,
+          31
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 170.0,
+        "red": 1.0,
+        "gold": 0.010416666666666666
+      },
+      {
+        "circle": [
+          426,
+          305,
+          32
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 170.0,
+        "red": 0.96875,
+        "gold": 0.020833333333333332
+      },
+      {
+        "circle": [
+          178,
+          777,
+          48
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          422,
+          427,
+          32
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          323,
+          488,
+          31
+        ],
+        "accepted": true,
+        "reason": "local_content_and_circle",
+        "contrast": 113.0,
+        "red": 1.0,
+        "gold": 0.041666666666666664
+      },
+      {
+        "circle": [
+          61,
+          840,
+          46
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          148,
+          848,
+          49
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          457,
+          371,
+          43
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 8.0,
+        "red": 0.7916666666666666,
+        "gold": 0.0
+      },
+      {
+        "circle": [
+          12,
+          801,
+          46
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          111,
+          730,
+          48
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          501,
+          430,
+          47
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 12.0,
+        "red": 0.7916666666666666,
+        "gold": 0.0
+      },
+      {
+        "circle": [
+          386,
+          491,
+          42
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 9.0,
+        "red": 0.5208333333333334,
+        "gold": 0.20833333333333334
+      },
+      {
+        "circle": [
+          358,
+          430,
+          38
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 6.0,
+        "red": 0.5520833333333334,
+        "gold": 0.3125
+      },
+      {
+        "circle": [
+          461,
+          485,
+          39
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 6.0,
+        "red": 0.5416666666666666,
+        "gold": 0.2604166666666667
+      },
+      {
+        "circle": [
+          199,
+          828,
+          42
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          393,
+          366,
+          40
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 6.0,
+        "red": 0.53125,
+        "gold": 0.3333333333333333
+      },
+      {
+        "circle": [
+          24,
+          747,
+          49
+        ],
+        "accepted": false,
+        "reason": "outside_web"
+      },
+      {
+        "circle": [
+          235,
+          769,
+          35
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 33.0,
+        "red": 0.22916666666666666,
+        "gold": 0.0
+      },
+      {
+        "circle": [
+          593,
+          364,
+          44
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 5.0,
+        "red": 0.4270833333333333,
+        "gold": 0.0
+      },
+      {
+        "circle": [
+          309,
+          802,
+          38
+        ],
+        "accepted": false,
+        "reason": "insufficient_local_content",
+        "contrast": 27.0,
+        "red": 0.15625,
+        "gold": 0.0
+      }
+    ],
+    "center": [
+      426,
+      426,
+      40
+    ],
+    "geometry_channels_reused": 0,
+    "analysis_mode": "full",
+    "full_reason": "initial_or_file",
+    "identity_cache_hits": 0,
+    "timings": {
+      "detector_center": 0.01665810000122292,
+      "detector_tooltip": 0.005680499998561572,
+      "geometry_cache_check": 4.400000034365803e-05,
+      "detector_nodes": 0.08743720000347821,
+      "detector_states": 0.032022700004745275,
+      "detector_icons": 0.19387430001370376,
+      "detector_graph": 0.03275009999924805,
+      "detector_other": 0.003908199978468474,
+      "detector_total": 0.37233109999942826
+    },
+    "parent_analysis_id": "1791832758945845200_c8258db0"
+  }
+}

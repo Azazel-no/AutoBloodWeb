@@ -1,0 +1,54 @@
+[
+  {
+    "path": "tests\\fixtures\\v56\\nested_price_0.png",
+    "sha256": "e18111ac21c0aa5375d28e2c215435accded6c989ec2d1d853a889fc046a4835",
+    "source": "debug\\v56\\live_20261017\\price_review_003\\current_4_0.png",
+    "source_sha256": "7cff806f118b72a0c10ae7ffa204b4c6f39bced3eb45cac2087aabab9917cf64",
+    "box": [
+      1130,
+      710,
+      250,
+      100
+    ],
+    "tooltips": [
+      [
+        770,
+        437,
+        569,
+        643
+      ],
+      [
+        811,
+        482,
+        524,
+        598
+      ]
+    ]
+  },
+  {
+    "path": "tests\\fixtures\\v56\\nested_price_1.png",
+    "sha256": "7645afedcb364f9954b73b5388d0753feee7bc0fa560f0bb4c0e1b2abc73dfd4",
+    "source": "debug\\v56\\live_20261017\\price_review_003\\current_4_1.png",
+    "source_sha256": "caf7b0d2f6311ec3e59328b33d7a1a8e3696284bcbc78a926056736df2c27c2e",
+    "box": [
+      1130,
+      710,
+      250,
+      100
+    ],
+    "tooltips": [
+      [
+        770,
+        437,
+        569,
+        643
+      ],
+      [
+        811,
+        482,
+        524,
+        598
+      ]
+    ]
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "scope": "Extract real HUD glyph crops; never synthesizes a game screenshot.",
+  "source": "tests/fixtures/v46/captures/wraith_3cbbffd0456a.png",
+  "source_sha256": "cc7fcb57adf195bda9666a4a1b3211567ecb2391d30d8576776930d46f411fbc",
+  "manually_read_value": "2026884",
+  "records": [
+    {
+      "digit": "6",
+      "path": "assets/ui/hud/digits/6.png",
+      "box": [
+        1666,
+        62,
+        10,
+        15
+      ],
+      "sha256": "8d71fa7a3432146f0cd7fe8768a7b4143898161000ed8078d66c873c3421aa0e"
+    },
+    {
+      "digit": "8",
+      "path": "assets/ui/hud/digits/8.png",
+      "box": [
+        1683,
+        62,
+        10,
+        15
+      ],
+      "sha256": "aed89b720b8a25c4222e38f34b0adb1da594450a12ac3d151973be50b2711604"
+    },
+    {
+      "digit": "4",
+      "path": "assets/ui/hud/digits/4.png",
+      "box": [
+        1707,
+        62,
+        10,
+        15
+      ],
+      "sha256": "6afe11e07e1aadeabf5276c999cd095e6405941da29904d7d72d7afef13f4a24"
+    }
+  ],
+  "anchor": {
+    "path": "assets/ui/hud/bloodpoints_anchor_v46.png",
+    "box": [
+      1592,
+      52,
+      28,
+      27
+    ],
+    "sha256": "7e0e752e9802fd18615610ad9e73a325d61e8a256b7521cb5c6403e84b932fd2"
+  }
+}

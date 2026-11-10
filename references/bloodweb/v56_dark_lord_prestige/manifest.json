@@ -1,0 +1,16 @@
+{
+  "source": "references/bloodweb/v56_dark_lord_prestige/native_ready.png",
+  "source_sha256": "ef546122ee0a97cfcd8fea8fe8a45e4c5c3ede6d5f2f0b36bcb873246388bf5a",
+  "reviewed": true,
+  "review": "Visual review of native Dark Lord50 wreath and numeral1; no input; 2026-10-17",
+  "box": [
+    624,
+    503,
+    121,
+    121
+  ],
+  "client_size": [
+    1920,
+    1080
+  ]
+}

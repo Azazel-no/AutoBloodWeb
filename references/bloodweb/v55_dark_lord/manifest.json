@@ -1,0 +1,196 @@
+[
+  {
+    "path": "references\\bloodweb\\v55_dark_lord\\pending_red_15_0.png",
+    "sha256": "c84cda5dd0e946a9b5b043c9b61061978bc6986a6522a8be26380d15b4a7bcaa",
+    "frame": {
+      "window": {
+        "hwnd": 8980488,
+        "title": "DeadByDaylight  ",
+        "client": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "monitor": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "dpi": 96,
+        "foreground": true,
+        "pid": 17280
+      },
+      "roi": {
+        "x": 127,
+        "y": 5,
+        "width": 1113,
+        "height": 1075
+      },
+      "image_size": [
+        1113,
+        1075
+      ],
+      "provider": "mss",
+      "live": true,
+      "bloodpoints": 2253248,
+      "captured_at": 112230.9335824,
+      "visibility": {
+        "window": {
+          "hwnd": 8980488,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 17280
+        },
+        "provider": "mss",
+        "captured_at": 112230.9335824,
+        "roi": {
+          "x": 127,
+          "y": 5,
+          "width": 1113,
+          "height": 1075
+        },
+        "occlusions": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          }
+        ],
+        "center": [
+          684,
+          562,
+          40
+        ]
+      },
+      "level": 15,
+      "level_confidence": 0.9852941176470589,
+      "probe_only": false
+    },
+    "source": "debug\\analysis_runs\\1792157490902637800_6ebca538\\raw.png"
+  },
+  {
+    "path": "references\\bloodweb\\v55_dark_lord\\pending_red_15_1.png",
+    "sha256": "db283e99b421b68d87eb919e332f0dba1053e5aa622a1c95dea6a0b51376f78b",
+    "frame": {
+      "window": {
+        "hwnd": 8980488,
+        "title": "DeadByDaylight  ",
+        "client": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "monitor": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "dpi": 96,
+        "foreground": true,
+        "pid": 17280
+      },
+      "roi": {
+        "x": 127,
+        "y": 5,
+        "width": 1113,
+        "height": 1075
+      },
+      "image_size": [
+        1113,
+        1075
+      ],
+      "provider": "mss",
+      "live": true,
+      "bloodpoints": 2253248,
+      "captured_at": 112232.9290207,
+      "visibility": {
+        "window": {
+          "hwnd": 8980488,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 17280
+        },
+        "provider": "mss",
+        "captured_at": 112232.9290207,
+        "roi": {
+          "x": 127,
+          "y": 5,
+          "width": 1113,
+          "height": 1075
+        },
+        "occlusions": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          }
+        ],
+        "center": [
+          684,
+          562,
+          40
+        ]
+      },
+      "level": 15,
+      "level_confidence": 0.9777777777777777,
+      "probe_only": false
+    },
+    "source": "debug\\analysis_runs\\1792157491480890000_ed69cd4f\\raw.png"
+  }
+]

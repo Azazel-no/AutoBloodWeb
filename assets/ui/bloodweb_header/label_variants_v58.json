@@ -1,0 +1,17 @@
+{
+  "labels": [
+    {
+      "path": "assets\\ui\\bloodweb_header\\label_nicolas_native_v58.png",
+      "sha256": "a5523e9169a9d2f10857a7ffff7677bc26e91ea9deff285dfb8e721bf9b85aea",
+      "source": "debug\\v58\\nicolas_20261018_181723\\initial_native.png",
+      "source_sha256": "ffefdb55fae7d33385c3d2181cdfb3959672694dbb32312609a9af836e024b27",
+      "source_rect": [
+        380,
+        76,
+        164,
+        18
+      ],
+      "unchanged_native_pixels": true
+    }
+  ]
+}

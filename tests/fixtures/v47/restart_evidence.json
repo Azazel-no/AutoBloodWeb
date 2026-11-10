@@ -1,0 +1,307 @@
+{
+  "scope": "Pin exact read-only live preflight pixels and the prior unresolved scene.",
+  "source": "tests/fixtures/v47/restart_cheryl37.png",
+  "sha256": "5179adb21e4e836bec56926075df15287f7b76c4c69058e836f561125222b18c",
+  "captured_source": "debug/v47/live_preflight_45797195/raw.png",
+  "frame": {
+    "window": {
+      "hwnd": 394682,
+      "title": "DeadByDaylight  ",
+      "client": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "monitor": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "dpi": 96,
+      "foreground": true,
+      "pid": 3376
+    },
+    "roi": {
+      "x": 264,
+      "y": 142,
+      "width": 840,
+      "height": 840
+    },
+    "image_size": [
+      840,
+      840
+    ],
+    "provider": "mss",
+    "live": true,
+    "bloodpoints": null,
+    "captured_at": 34270.9812155,
+    "visibility": {
+      "window": {
+        "hwnd": 394682,
+        "title": "DeadByDaylight  ",
+        "client": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "monitor": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "dpi": 96,
+        "foreground": true,
+        "pid": 3376
+      },
+      "provider": "mss",
+      "roi": {
+        "x": 264,
+        "y": 142,
+        "width": 840,
+        "height": 840
+      },
+      "occlusions": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        }
+      ],
+      "center": [
+        684,
+        562,
+        40
+      ]
+    }
+  },
+  "prior_source": "debug/v47/live_session_fc13df8e/preferences_before.json",
+  "prior_sha256": "0f3822dbd553dbced0c6d8b1411a579b567ae41eede50894b27bc5e027dc0c8f",
+  "prior_scene": {
+    "window": {
+      "hwnd": 527238,
+      "title": "DeadByDaylight  ",
+      "client": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "monitor": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "dpi": 96,
+      "foreground": true,
+      "pid": 13724
+    },
+    "attempted": [
+      [
+        685,
+        685
+      ],
+      [
+        684,
+        441
+      ],
+      [
+        789,
+        500
+      ],
+      [
+        789,
+        624
+      ],
+      [
+        579,
+        624
+      ],
+      [
+        579,
+        500
+      ],
+      [
+        746,
+        328
+      ],
+      [
+        622,
+        796
+      ],
+      [
+        505,
+        734
+      ],
+      [
+        503,
+        869
+      ]
+    ],
+    "nodes": [
+      {
+        "point": [
+          684,
+          562
+        ],
+        "radius": 37,
+        "state": "center",
+        "icon": null
+      },
+      {
+        "point": [
+          684,
+          441
+        ],
+        "radius": 31,
+        "state": "purchased",
+        "icon": "survivor_item_018"
+      },
+      {
+        "point": [
+          789,
+          501
+        ],
+        "radius": 31,
+        "state": "purchased",
+        "icon": "wiki_survivor_common_addons_2edd7c2a0a77"
+      },
+      {
+        "point": [
+          793,
+          627
+        ],
+        "radius": 27,
+        "state": "purchased",
+        "icon": "survivor_offering_055"
+      },
+      {
+        "point": [
+          684,
+          684
+        ],
+        "radius": 31,
+        "state": "purchased",
+        "icon": "wiki_survivor_common_addons_93d6dee5e243"
+      },
+      {
+        "point": [
+          575,
+          624
+        ],
+        "radius": 27,
+        "state": "purchased",
+        "icon": "wiki_survivor_common_addons_8e5cbcc5a2e5"
+      },
+      {
+        "point": [
+          577,
+          501
+        ],
+        "radius": 29,
+        "state": "purchased",
+        "icon": "survivor_offering_045"
+      },
+      {
+        "point": [
+          745,
+          328
+        ],
+        "radius": 31,
+        "state": "purchased",
+        "icon": "wiki_survivor_common_addons_eb9f7e18c4e3"
+      },
+      {
+        "point": [
+          622,
+          796
+        ],
+        "radius": 31,
+        "state": "purchased",
+        "icon": "survivor_addon_007"
+      },
+      {
+        "point": [
+          507,
+          730
+        ],
+        "radius": 29,
+        "state": "purchased",
+        "icon": "survivor_offering_020"
+      },
+      {
+        "point": [
+          485,
+          397
+        ],
+        "radius": 31,
+        "state": "locked",
+        "icon": "survivor_item_007"
+      },
+      {
+        "point": [
+          623,
+          330
+        ],
+        "radius": 32,
+        "state": "absorbed",
+        "icon": "wiki_survivor_common_addons_eb9f7e18c4e3"
+      },
+      {
+        "point": [
+          685,
+          920
+        ],
+        "radius": 28,
+        "state": "absorbed",
+        "icon": null
+      },
+      {
+        "point": [
+          503,
+          869
+        ],
+        "radius": 40,
+        "state": "available",
+        "icon": "survivor_offering_024"
+      },
+      {
+        "point": [
+          507,
+          257
+        ],
+        "radius": 35,
+        "state": "absorbed",
+        "icon": "survivor_offering_027"
+      },
+      {
+        "point": [
+          679,
+          211
+        ],
+        "radius": 37,
+        "state": "absorbed",
+        "icon": "survivor_offering_004"
+      }
+    ],
+    "pending": {
+      "point": [
+        503,
+        869
+      ],
+      "radius": 40,
+      "icon": "survivor_offering_024"
+    }
+  }
+}

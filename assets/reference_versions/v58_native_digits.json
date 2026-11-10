@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "digit": "4",
+      "path": "assets\\ui\\hud\\v58_digit_4.png",
+      "sha256": "590fa0e01c7ea5255757972edef665081deb8524e4a2c70ab63108b22d92a669",
+      "source": "references\\bloodweb\\v58_nicolas\\price_4000_native.png",
+      "source_sha256": "ee02133ddcc084273d1b6f10bfe53a9322ffbba70c2354827e0b392d04771186",
+      "box": [
+        1143,
+        735,
+        66,
+        32
+      ],
+      "visually_reviewed_full_price": 4000,
+      "component_index": 0,
+      "reviewed_text": "4000"
+    }
+  ]
+}

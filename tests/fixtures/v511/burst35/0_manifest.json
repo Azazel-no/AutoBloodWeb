@@ -1,0 +1,118 @@
+{
+  "owner": "autobloodweb_v43",
+  "pinned": false,
+  "phase": "automation_ready",
+  "reason": null,
+  "mode": "normal",
+  "frame": {
+    "window": {
+      "hwnd": 132224,
+      "title": "DeadByDaylight  ",
+      "client": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "monitor": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "dpi": 96,
+      "foreground": true,
+      "pid": 3348
+    },
+    "roi": {
+      "x": 228,
+      "y": 106,
+      "width": 911,
+      "height": 911
+    },
+    "image_size": [
+      911,
+      911
+    ],
+    "provider": "mss",
+    "live": true,
+    "bloodpoints": 789754,
+    "captured_at": 7560.1559332,
+    "visibility": {
+      "window": {
+        "hwnd": 132224,
+        "title": "DeadByDaylight  ",
+        "client": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "monitor": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "dpi": 96,
+        "foreground": true,
+        "pid": 3348
+      },
+      "provider": "mss",
+      "captured_at": 7560.1559332,
+      "roi": {
+        "x": 228,
+        "y": 106,
+        "width": 911,
+        "height": 911
+      },
+      "occlusions": [],
+      "center": [
+        684,
+        562,
+        40
+      ]
+    },
+    "level": 35,
+    "level_confidence": 0.9852941176470589,
+    "probe_only": false,
+    "pipeline": {
+      "mode": "FAST_FRAME_CHECK",
+      "generation": 2,
+      "visual_version": "v59-pinned-ui-1",
+      "capture_seconds": 0.21260090000032505,
+      "stats": {
+        "masked_full_copies": 0,
+        "roi_copies": 0,
+        "text_normalizations": 1,
+        "ui_candidate_searches": 2,
+        "ui_candidate_positions": 103,
+        "ui_exhaustive_searches": 2,
+        "center_local_searches": 1,
+        "center_reuses": 1
+      }
+    }
+  },
+  "analysis_id": "1792509175470263600_027e4297",
+  "files": {
+    "analysis.json": "bb1a2879d50d4d6478943959f8ac6f9554f25e02a48662d18d766394caff68de"
+  },
+  "route": {
+    "next_node": 2,
+    "route": [
+      2
+    ],
+    "target_icon": "survivor_offering_059",
+    "reason": "PERSISTENT:filler",
+    "benefit": 0.0,
+    "cost_units": 0,
+    "risk": 0.0,
+    "assumptions": []
+  },
+  "screen": "bloodweb",
+  "diagnostics": [
+    "fresh_local_evidence",
+    "static_read_only"
+  ],
+  "total_bytes": 93534
+}

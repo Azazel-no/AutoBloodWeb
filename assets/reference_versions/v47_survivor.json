@@ -1,0 +1,125 @@
+{
+  "active": true,
+  "proposals": [
+    {
+      "source": "references/bloodweb/Снимок экрана 2026-10-13 090856.png",
+      "sha256": "027d3ea3efecd0e42b2530151d39a5c53a9486f709fb91632bd2e7f124d9d627",
+      "x": 442,
+      "y": 233,
+      "radius": 36,
+      "icon": "wiki_survivor_common_addons_c682bf377adf",
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_stypticAgent.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_stypticAgent.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "c682bf377adf6d58f8b0fcc74c32e7445322ce8d53364bfc4e5965a8b0823c5f",
+        "original": "assets/survivors/addons/wiki_originals/c682bf377adf6d58f8b0fcc74c32e7445322ce8d53364bfc4e5965a8b0823c5f.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/c682bf377adf6d58f8b0fcc74c32e7445322ce8d53364bfc4e5965a8b0823c5f.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_c682bf377adf"
+      },
+      "score": 0.983,
+      "margin": 0.2234,
+      "contour": 0.9828
+    },
+    {
+      "source": "references/bloodweb/Снимок экрана 2026-10-13 090856.png",
+      "sha256": "027d3ea3efecd0e42b2530151d39a5c53a9486f709fb91632bd2e7f124d9d627",
+      "x": 442,
+      "y": 477,
+      "radius": 40,
+      "icon": "wiki_survivor_common_addons_c711236ae0dc",
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_battery.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_battery.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "c711236ae0dcb658a4427a96cf2232a7df1e07ffa8b9a34e02c19cc38146d1d9",
+        "original": "assets/survivors/addons/wiki_originals/c711236ae0dcb658a4427a96cf2232a7df1e07ffa8b9a34e02c19cc38146d1d9.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/c711236ae0dcb658a4427a96cf2232a7df1e07ffa8b9a34e02c19cc38146d1d9.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_c711236ae0dc"
+      },
+      "score": 0.98,
+      "margin": 0.0829,
+      "contour": 0.9483
+    },
+    {
+      "source": "references/bloodweb/Снимок экрана 2026-10-13 090856.png",
+      "sha256": "027d3ea3efecd0e42b2530151d39a5c53a9486f709fb91632bd2e7f124d9d627",
+      "x": 380,
+      "y": 589,
+      "radius": 39,
+      "icon": "wiki_survivor_common_addons_3d8af63acd10",
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_longLifeBattery.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_longLifeBattery.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "3d8af63acd104406b83e5c9cc5b0032fb56a8cb0101dd9036b1a11eeadf74901",
+        "original": "assets/survivors/addons/wiki_originals/3d8af63acd104406b83e5c9cc5b0032fb56a8cb0101dd9036b1a11eeadf74901.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/3d8af63acd104406b83e5c9cc5b0032fb56a8cb0101dd9036b1a11eeadf74901.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_3d8af63acd10"
+      },
+      "score": 0.9891,
+      "margin": 0.1457,
+      "contour": 0.9953
+    },
+    {
+      "source": "references/bloodweb/Снимок экрана 2026-10-13 090856.png",
+      "sha256": "027d3ea3efecd0e42b2530151d39a5c53a9486f709fb91632bd2e7f124d9d627",
+      "x": 263,
+      "y": 182,
+      "radius": 35,
+      "icon": "wiki_survivor_common_addons_8e5cbcc5a2e5",
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_gnarledCompass.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_gnarledCompass.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "8e5cbcc5a2e53e1d776a7819b627db3bce98c97b4a372a62c0d1a1913468802e",
+        "original": "assets/survivors/addons/wiki_originals/8e5cbcc5a2e53e1d776a7819b627db3bce98c97b4a372a62c0d1a1913468802e.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/8e5cbcc5a2e53e1d776a7819b627db3bce98c97b4a372a62c0d1a1913468802e.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_8e5cbcc5a2e5"
+      },
+      "score": 0.9175,
+      "margin": 0.4315,
+      "contour": 0.9577
+    }
+  ],
+  "scope": "Four glyphs visually compared against exact game crop/original/normalized template. Development source; not held-out accuracy.",
+  "manual_visual_review": true,
+  "visual_review": "debug/v47/survivor_visual_review.png",
+  "visual_review_sha256": "3fb33dd4aa798379a4c3c54f8da8e69c60b4f24304397b84b1f13c6e09fda9f1"
+}

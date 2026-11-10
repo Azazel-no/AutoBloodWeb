@@ -1,0 +1,703 @@
+{
+  "user_screens": [
+    {
+      "source": "references/bloodweb/Снимок экрана 2026-10-14 083537.png",
+      "sha256": "20a595f68170f5ba1a64c607d7133ce2338e2a19103e87ae94efd9ded0be35fb",
+      "character": "unknown",
+      "manual_geometry": [
+        [
+          455,
+          543
+        ],
+        [
+          455,
+          422
+        ],
+        [
+          350,
+          483
+        ],
+        [
+          561,
+          483
+        ],
+        [
+          350,
+          607
+        ],
+        [
+          561,
+          607
+        ],
+        [
+          455,
+          671
+        ],
+        [
+          281,
+          238
+        ],
+        [
+          145,
+          370
+        ],
+        [
+          281,
+          373
+        ],
+        [
+          640,
+          373
+        ],
+        [
+          692,
+          484
+        ],
+        [
+          819,
+          548
+        ],
+        [
+          697,
+          606
+        ],
+        [
+          641,
+          722
+        ],
+        [
+          777,
+          721
+        ],
+        [
+          523,
+          783
+        ],
+        [
+          640,
+          853
+        ],
+        [
+          456,
+          908
+        ]
+      ],
+      "split": "development_after_review",
+      "pre_tuning_split": "geometry_holdout",
+      "before": {
+        "truth": 19,
+        "found": 18,
+        "missed": [
+          [
+            456,
+            908
+          ]
+        ],
+        "false": []
+      },
+      "after": {
+        "truth": 19,
+        "found": 18,
+        "missed": [
+          [
+            456,
+            908
+          ]
+        ],
+        "false": []
+      }
+    },
+    {
+      "source": "references/bloodweb/Снимок экрана 2026-10-14 083550.png",
+      "sha256": "378f89de1966b2a9daab7eed92f2fcb7a1840b889e9600fccad0a85f17f348cb",
+      "character": "krasue",
+      "manual_geometry": [
+        [
+          454,
+          549
+        ],
+        [
+          456,
+          425
+        ],
+        [
+          350,
+          486
+        ],
+        [
+          560,
+          487
+        ],
+        [
+          350,
+          610
+        ],
+        [
+          560,
+          610
+        ],
+        [
+          454,
+          670
+        ],
+        [
+          276,
+          242
+        ],
+        [
+          145,
+          376
+        ],
+        [
+          280,
+          376
+        ],
+        [
+          396,
+          314
+        ],
+        [
+          695,
+          489
+        ],
+        [
+          775,
+          375
+        ],
+        [
+          825,
+          552
+        ],
+        [
+          701,
+          612
+        ],
+        [
+          215,
+          610
+        ],
+        [
+          143,
+          726
+        ],
+        [
+          636,
+          726
+        ],
+        [
+          776,
+          725
+        ]
+      ],
+      "split": "development_after_review",
+      "pre_tuning_split": "geometry_holdout",
+      "before": {
+        "truth": 19,
+        "found": 18,
+        "missed": [
+          [
+            776,
+            725
+          ]
+        ],
+        "false": [
+          [
+            185,
+            892,
+            41
+          ]
+        ]
+      },
+      "after": {
+        "truth": 19,
+        "found": 18,
+        "missed": [
+          [
+            776,
+            725
+          ]
+        ],
+        "false": []
+      }
+    },
+    {
+      "source": "references/bloodweb/Снимок экрана 2026-10-14 083600.png",
+      "sha256": "e70468820c2435e0b653154db8c7b2435662f1415e7e4884f26e02b9734ce51d",
+      "character": "ghoul",
+      "manual_geometry": [
+        [
+          460,
+          549
+        ],
+        [
+          460,
+          426
+        ],
+        [
+          353,
+          488
+        ],
+        [
+          566,
+          488
+        ],
+        [
+          355,
+          611
+        ],
+        [
+          568,
+          611
+        ],
+        [
+          463,
+          674
+        ],
+        [
+          461,
+          191
+        ],
+        [
+          277,
+          243
+        ],
+        [
+          398,
+          314
+        ],
+        [
+          522,
+          314
+        ],
+        [
+          643,
+          244
+        ],
+        [
+          637,
+          375
+        ],
+        [
+          100,
+          549
+        ],
+        [
+          223,
+          611
+        ],
+        [
+          706,
+          487
+        ],
+        [
+          825,
+          550
+        ],
+        [
+          707,
+          613
+        ],
+        [
+          637,
+          732
+        ],
+        [
+          779,
+          730
+        ],
+        [
+          522,
+          789
+        ],
+        [
+          398,
+          787
+        ],
+        [
+          278,
+          858
+        ],
+        [
+          460,
+          912
+        ],
+        [
+          640,
+          856
+        ]
+      ],
+      "split": "development_after_review",
+      "pre_tuning_split": "geometry_holdout",
+      "before": {
+        "truth": 25,
+        "found": 25,
+        "missed": [],
+        "false": []
+      },
+      "after": {
+        "truth": 25,
+        "found": 25,
+        "missed": [],
+        "false": []
+      }
+    },
+    {
+      "source": "references/bloodweb/Снимок экрана 2026-10-14 083613.png",
+      "sha256": "bc72cdd6adb0a41734da6f8ae4ae1677e30f021702c13697034429039d6761ad",
+      "character": "mastermind",
+      "manual_geometry": [
+        [
+          434,
+          541
+        ],
+        [
+          435,
+          418
+        ],
+        [
+          327,
+          479
+        ],
+        [
+          541,
+          479
+        ],
+        [
+          327,
+          605
+        ],
+        [
+          541,
+          605
+        ],
+        [
+          435,
+          665
+        ],
+        [
+          437,
+          186
+        ],
+        [
+          377,
+          308
+        ],
+        [
+          502,
+          308
+        ],
+        [
+          130,
+          372
+        ],
+        [
+          258,
+          372
+        ],
+        [
+          195,
+          481
+        ],
+        [
+          74,
+          543
+        ],
+        [
+          677,
+          605
+        ],
+        [
+          747,
+          714
+        ],
+        [
+          499,
+          777
+        ],
+        [
+          616,
+          845
+        ],
+        [
+          435,
+          895
+        ]
+      ],
+      "split": "development_after_review",
+      "pre_tuning_split": "geometry_holdout",
+      "before": {
+        "truth": 19,
+        "found": 19,
+        "missed": [],
+        "false": []
+      },
+      "after": {
+        "truth": 19,
+        "found": 19,
+        "missed": [],
+        "false": []
+      }
+    }
+  ],
+  "live_screens": [
+    {
+      "source": "references/bloodweb/v48_c28c47c1/raw_1.png",
+      "sha256": "4d94c4921cf2f989d148e506f6447d12b953b4b97993ae919a5fa00a93d0e093",
+      "manual_geometry": [
+        [
+          684,
+          562
+        ],
+        [
+          684,
+          440
+        ],
+        [
+          789,
+          500
+        ],
+        [
+          789,
+          624
+        ],
+        [
+          684,
+          685
+        ],
+        [
+          579,
+          624
+        ],
+        [
+          579,
+          500
+        ],
+        [
+          746,
+          327
+        ],
+        [
+          862,
+          390
+        ],
+        [
+          925,
+          501
+        ],
+        [
+          862,
+          733
+        ],
+        [
+          746,
+          796
+        ],
+        [
+          504,
+          730
+        ],
+        [
+          622,
+          329
+        ],
+        [
+          862,
+          258
+        ],
+        [
+          995,
+          388
+        ],
+        [
+          995,
+          737
+        ],
+        [
+          865,
+          868
+        ],
+        [
+          504,
+          868
+        ],
+        [
+          372,
+          737
+        ],
+        [
+          507,
+          257
+        ]
+      ],
+      "split": "development",
+      "valid_capture": true,
+      "level": 40,
+      "character": "unknown"
+    },
+    {
+      "source": "references/bloodweb/v48_c28c47c1/raw_2.png",
+      "sha256": "de720895b00276d8a067dce2e2c9d7f9bada5aab39f25cf9f59a892a94a40c6e",
+      "manual_geometry": [
+        [
+          684,
+          562
+        ],
+        [
+          684,
+          440
+        ],
+        [
+          789,
+          500
+        ],
+        [
+          789,
+          624
+        ],
+        [
+          684,
+          685
+        ],
+        [
+          579,
+          624
+        ],
+        [
+          579,
+          500
+        ],
+        [
+          746,
+          327
+        ],
+        [
+          862,
+          390
+        ],
+        [
+          925,
+          501
+        ],
+        [
+          862,
+          733
+        ],
+        [
+          746,
+          796
+        ],
+        [
+          504,
+          730
+        ],
+        [
+          622,
+          329
+        ],
+        [
+          862,
+          258
+        ],
+        [
+          995,
+          388
+        ],
+        [
+          995,
+          737
+        ],
+        [
+          865,
+          868
+        ],
+        [
+          504,
+          868
+        ],
+        [
+          372,
+          737
+        ],
+        [
+          507,
+          257
+        ]
+      ],
+      "split": "development",
+      "valid_capture": true,
+      "level": 40,
+      "character": "unknown"
+    }
+  ],
+  "input": false,
+  "focus_changed": false,
+  "pre_tuning_source_sha256": {
+    "src/app.py": "756733bd7d9e552f758e326b88c302ca4dac37743da83e794c5d08264719ece0",
+    "src/__init__.py": "a78168c2c5ba58c0745d76c3fb1604b48a53654d36e675ee504f71adb0132394",
+    "src/core/action_report.py": "980a6c120ed4479dca8d9c7db6088d8c0dc27bfd6eb6426e50ebb266013d4918",
+    "src/core/automation.py": "d191f4a1dbb3973376ec8feefa9d8890fd6b7f686a624bb9120d06f574eaab37",
+    "src/core/bloodweb_detector.py": "a873d56e6302d8bb3121b1cada5d55d3926af767c3e49d41758399684956ed49",
+    "src/core/bloodweb_header.py": "cd0b06763014ef649ad33b85b57bad8c4e45937a4a2cae2b574b0a295be0f1f0",
+    "src/core/bloodweb_memory.py": "2c82825c5715eea231b3b2647fa867a022db429c7cc4169b992119ac914dbdf4",
+    "src/core/calibration_recheck.py": "6217cae37db518c30a296fa587e992f8ef1753d2ce2b0cb3df6a25434904a110",
+    "src/core/capture.py": "96c5afecb20ff85958c97edf9d647dda51d9d17926e7ac2211d7a831903ad67b",
+    "src/core/diagnostics.py": "5c0be906b7bf29de45edbeeffadb5e78c3c4a4fef907641d6b1fcbe3ecfdd2c8",
+    "src/core/early_unlock.py": "fb65e13ac90051e5664faf9d83d17aa8ed083b4777b19d5ddf0ad224e2693ff8",
+    "src/core/evaluation.py": "6dd3c6ff1a3068a830e8d281c595c88ef0ca5a4d8b2afebcd70398781ba6a151",
+    "src/core/event_library.py": "5c3df8f5dc7d162531ea0cc6509e065d2e894ed53d69f3b56869a673a4fcdfa7",
+    "src/core/geometry.py": "b822846d45c67e68180cb1839bfef70af985a24ae014540c9c7c33c6d68af43f",
+    "src/core/hotkey_config.py": "71140d13ba2593024e11c4aaa756492ddec43c316a44a42fbb9f53bcaf79c5e4",
+    "src/core/hotkey_diagnostics.py": "8bba480ead10bfedeec0af90e830ab1ff6acb766d6bc8caed9e23c17e8d21e9e",
+    "src/core/icon_library.py": "08916b98bf11e1d90d4d3b2fd1e499512f6fe801dbbbe663c64e1d1beb674fe0",
+    "src/core/input_control.py": "ccc4df19a49ab34e85800fa722a946da6141e85c8fc6c045798fcae536233392",
+    "src/core/input_method.py": "994a1f5bb1c4222877c6a5fc36c8b06f023ed7c55a81afdc74040a43d105dd77",
+    "src/core/level_transition.py": "e6d74570e03fc9e7a39786c2a1b41d166b4cce414ba2b5fafa3a1ab6198416bc",
+    "src/core/library_audit.py": "e0ee20e553d58c59199cfdd8e75ca562f2bbed6f93586e9b9dce4c1911d54709",
+    "src/core/localization.py": "b3f035b7e52d2128e1cab444e80534fb1b47f0310cebd1c4f396d583d9818f86",
+    "src/core/models.py": "58ac5aa064a352b4e079dc1e32dbc1face44bc2b44ff81389623a8be3368c0f7",
+    "src/core/node_category.py": "4525ef9653cd3267988acdc4381274c650d9ea90037504f1c8a6b050f2e70329",
+    "src/core/node_classifier.py": "76b94dd2bf9519ce10305c1bb3cb4df3a81d1070e08026f193e5a8e1e41edf07",
+    "src/core/node_validation.py": "86542fb54e5d3e030138166db70554174cd11e34303fd924829475017d24477c",
+    "src/core/path_planner.py": "66d3fa3e2d67a48d78054f168367c0f62d9d0f22a0fd1a4c78fc207523527fc6",
+    "src/core/performance.py": "c175616e20d3569ec4b4a835852700f10e36386c355719525f06161ec315efa8",
+    "src/core/preferences.py": "c50c52a45cdba857733d90cab42bbb142cec3594d113bdd15497bf615497d647",
+    "src/core/priority_targets.py": "71977351e378069e5bc2acf6fa0ab8bc73c3426546f8a9039c0e39d000bc6dd9",
+    "src/core/process_access.py": "51c93af44cd3ea2cffb3e9cc4fd9e1710c361c8fa15a10c2e387441bc820b3d0",
+    "src/core/purchase_outcome.py": "b10127d6c9d60793c7cd0e5c0eae279e99a230c7c39d8599810d47f3b5964ed0",
+    "src/core/resources.py": "66e2ff3457df41ae04858f5dfaec5aae88a49217a2a4dae2ef21d5442d018d65",
+    "src/core/review_store.py": "06f8661ed5e37550673f718291b123611368860c3b1058f79916e6346176943d",
+    "src/core/scene_memory.py": "b5ffbeeba87d9b65408697fc993049d8e575e277792e76eae81a0f94961d81ad",
+    "src/core/screen_manager.py": "3bb2df65a237a81f00b93c7d5ccc143349ddaa68e54d2909975199cf40082f72",
+    "src/core/template_audit.py": "4842c29202aebcdbfddd687a07a491b123aab9b1ea71285c243d48e934dab0f6",
+    "src/core/v2_strings.py": "975b8eb37d5f1c41e24f182658ee9b105802eb56842da97221d9c761e52b9a13",
+    "src/core/v3_strings.py": "cf4658534c055261a24c0c026d27cc79c473432b17354f99ce9ba9a7c9632704",
+    "src/core/v42_strings.py": "988b3a583ac4e13ba8b350711af20b3c5f20e3edc59fb554e2b4667e3831dee9",
+    "src/core/v43_strings.py": "56fcdcd7b1e3e12e77bdd1bb0985fcaef9acc34a0702cf8d734a22463c92515c",
+    "src/core/v44_strings.py": "cd251cec28bf5134f09567d220056d8dd524c447e2bbf671fb5d4ca5df29b925",
+    "src/core/v45_strings.py": "4a58448abf6c24a792c22cc58b0d33b5d9607be386dd191c22243a5530494270",
+    "src/core/v46_strings.py": "8ccd363d6344a45825ca26920516f4ce1102a30321bb141cede4073525854976",
+    "src/core/v47_strings.py": "8725845e27ebb4b09fbac35559c31ca6d0a1127d4346fe308550dd8ca417971d",
+    "src/core/v48_strings.py": "e3f585c6d7de173d3227ed0df2044ed5a2701b872f46966ea5d78541ab7aa29e",
+    "src/core/v4_strings.py": "236236c09aa35e708ca90f45286a334c04f5f114c9e57c1a15e0f942d1681001",
+    "src/core/wiki_activation.py": "2f77a7d17a8baac92ea9675dc0b3e5df9b9ff9f254c29c511438030eaab536e9",
+    "src/core/wiki_assets.py": "4338f59d5253bba601bc35714504782a73772e5c5da3366b1f152da95b5ae871",
+    "src/core/wiki_fetch.py": "04de8774c6b026ed89347d09aedc3e57b17149fe32c10dc5de8b7dd25a2878ec",
+    "src/core/wiki_library.py": "ed4f7cf6b7fa7307addf161d92b8c090e62bc0f0c036857c18a1af128c82ab81",
+    "src/core/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/gui/automation_worker.py": "a9519bf210223a9e9dc47b6892b656a9ed20c0a4d88ee718a3ea707bcb15dd6f",
+    "src/gui/calibration_dialog.py": "7ac7ef4f7e0c1fca458cadca2e530298b0690477fe0d98ee749930f33a196e9d",
+    "src/gui/hotkey_diagnostics_dialog.py": "f2a9adec456fe506ea917bf997a300350d6eebde7b2dbc5cfed5a085f4b9bf85",
+    "src/gui/input_stand.py": "34f5b53038e502ada3f6e9faaf513c00cb58dc61e2c9c42efd8e44df22e06e06",
+    "src/gui/killer_selector.py": "7ec26bb6c7c28ed8600552da9b5df8ab8ea0a1b46adece9dbd866badbfc8b1c3",
+    "src/gui/main_window.py": "8aed3bc96118df8cfd4f87468ab82bbead73b66c297fa05a041d2e0664dc3565",
+    "src/gui/priority_list.py": "c6ad8b6837542a43f954b2043c55afffebbab428c10a150b45e0d934d7d8dc77",
+    "src/gui/review_dialog.py": "309d56683ffabbcfae911276147c2483c7ec72715b204fb54d4f3fc0ac5aab8c",
+    "src/gui/selector.py": "4b1d8fda463ee05e1ef5ae86c40067b06c16370e68b9274a218b161c75aaf8c7",
+    "src/gui/session_check_dialog.py": "65e8a174afb65883e3a4c9790a2aa958079aaa1fd2a8447701241134eae734d2",
+    "src/gui/widgets.py": "5f723a0c7cddc7a983f7910a58a8abe9dc2e0b30cbb74a9a723d893e6995a4f7",
+    "src/gui/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/utils/images.py": "8b21e6d075ff162b9f41278350d2cc67b0d3bb6110a4bd279ea7eb015d5268e7",
+    "src/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "note": "Manual geometry only. Two misses remain. Before tuning:80/82 true,one false. After tuning:80/82 true,zero false. Unknown40:21/21 each,zero false after correction. The first failed capture is retained as unvalidated evidence."
+}

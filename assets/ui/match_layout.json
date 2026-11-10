@@ -1,0 +1,47 @@
+{
+  "schema": 2,
+  "note": "Measured on the user's 1920x1080 samples in debug/match_samples (2026-11-07). Values are pixels at the 1080 reference height; everything scales with client height. The Tab scoreboard is centred for a 16:9 width; the HUD is anchored to the left edge.",
+  "reference_height": 1080,
+  "tab": {
+    "aspect": 1.7777777777777777,
+    "rows_y": [255, 368, 482, 596],
+    "perk_x": [744, 798, 852, 906],
+    "perk_half": 26,
+    "portrait_x": 649,
+    "portrait_dy": -22,
+    "portrait_radius": 31,
+    "row_band_x": [595, 715],
+    "row_band_dy": [-45, 25],
+    "name": {"note": "Nickname line: character name, grey nickname, ping, BOT badge. Measured on pair02-pair05.", "x": [700, 1300], "dy": -47, "half": 20}
+  },
+  "hud": {
+    "portrait_x": 128,
+    "portrait_y": [454, 543, 630, 719],
+    "portrait_radius": 36,
+    "right_x": 290,
+    "cluster_x": 50,
+    "diamond": 25,
+    "diamond_gap": 1,
+    "name": {"note": "White italic nickname right of the portrait.", "x": [180, 560], "dy": 13, "half": 16},
+    "sizes": {
+      "note": "Cluster presets. large = 1.68x normal, the biggest diamond that fits the 88 px slot pitch and stays left of the portrait.",
+      "normal": {"diamond": 25, "cluster_x": 50},
+      "large": {"diamond": 42, "cluster_x": 48}
+    }
+  },
+  "lobby": {
+    "note": "READY/CANCEL button at the bottom right of the lobby and loadout screens, anchored to the right edge. Measured on debug/match_samples/lobby_*.png: red brush 0.12-0.13, claw logo 0.11-0.17, white text 0.10-0.12, dark banner 1.0; no match HUD/Tab sample has the logo or the text.",
+    "box": [1410, 950, 1830, 1008],
+    "red_brush": [0, 240, 0.06],
+    "logo": [320, 400, 0.07],
+    "text": [10, 180, 8, 50, 0.08],
+    "dark": [240, 320, 0.9]
+  },
+  "perk_positions": {
+    "note": "Tab perk slot -> position in the game's own perk diamond HUD, measured on pair03 (own row vs bottom-right perk HUD).",
+    "1": "bottom",
+    "2": "right",
+    "3": "left",
+    "4": "top"
+  }
+}

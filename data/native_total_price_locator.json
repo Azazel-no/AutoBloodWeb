@@ -1,0 +1,20 @@
+{
+  "source": "references/bloodweb/v_rc1_ui/native_total_price_locator_source.png",
+  "sha256": "b609aeb372d58ff82c616f0eb8d691fd514128e0f194076312447215c855bc51",
+  "web_badge_box": [
+    1418,
+    684,
+    60,
+    55
+  ],
+  "currency_offset": [
+    74,
+    10
+  ],
+  "client_size": [
+    1920,
+    1080
+  ],
+  "reviewed_total_label": true,
+  "review": "Native white web badge precedes the right-hand BP total 8000; left grey 4000 is the single-item cost."
+}

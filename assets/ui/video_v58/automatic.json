@@ -1,0 +1,31 @@
+{
+  "source": "references\\bloodweb\\v58_nicolas\\automatic_native.png",
+  "source_sha256": "790f514108e46bb70b368c99c22bbdb5336505f358037cebbfc6d84b868adfbd",
+  "client_size": [
+    1920,
+    1080
+  ],
+  "origin": "visually_reviewed_native_mss_nicolas_level3",
+  "regions": {
+    "title": {
+      "box": [
+        765,
+        570,
+        176,
+        20
+      ],
+      "path": "assets\\ui\\video_v58\\automatic_title.png",
+      "sha256": "8534194772c55d5bcd0ff054c4ad6f25af695bd3f83d7350e7c254122ffa2f79"
+    },
+    "description": {
+      "box": [
+        765,
+        590,
+        463,
+        39
+      ],
+      "path": "assets\\ui\\video_v58\\automatic_description.png",
+      "sha256": "bd6a74eb17b2e538fc8e4c50d9e16b90d70631610acbebc3bb09a11e1b2fc08a"
+    }
+  }
+}

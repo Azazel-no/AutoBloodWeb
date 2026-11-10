@@ -1,0 +1,251 @@
+{
+  "web_center": {
+    "source": "references/bloodweb/v54_onryo/web_center_240.png",
+    "source_sha256": "86586546389a40c99123c845d1447fb6d566bd1d4ad0ab8839b4171bde326fad",
+    "video_sha256": "89c020d381f912208900a39dc0168bf64dfb88c7958819479e89e71bd1adf2fe",
+    "video_frame": 240,
+    "seconds": 8.0,
+    "client_size": [
+      1920,
+      1080
+    ],
+    "regions": {
+      "glyph": {
+        "box": [
+          660,
+          538,
+          49,
+          49
+        ],
+        "path": "assets/ui/video_v54/web_center_glyph.png",
+        "sha256": "7903a60f88cf566dbf595e31ec4094d1b150cceeae706ad76129f01504a3e92c"
+      }
+    }
+  },
+  "early_center": {
+    "source": "references/bloodweb/v54_onryo/early_center_1815.png",
+    "source_sha256": "96ce699a0f3ef25d798471bed4a524fcaa9bf3539b9c4e47832908394ab2dc2c",
+    "video_sha256": "89c020d381f912208900a39dc0168bf64dfb88c7958819479e89e71bd1adf2fe",
+    "video_frame": 1815,
+    "seconds": 60.5,
+    "client_size": [
+      1920,
+      1080
+    ],
+    "regions": {
+      "glyph": {
+        "box": [
+          660,
+          538,
+          49,
+          49
+        ],
+        "path": "assets/ui/video_v54/early_center_glyph.png",
+        "sha256": "c35322730c097c901871ec47a4b574d933a587c8a693b2458f27c7aace1e562c"
+      }
+    }
+  },
+  "reward": {
+    "source": "references/bloodweb/v54_onryo/reward_1530.png",
+    "source_sha256": "17f89796d796a7d6e903e6bddcca318ef14076379a5b880dbf070f1befffb006",
+    "video_sha256": "89c020d381f912208900a39dc0168bf64dfb88c7958819479e89e71bd1adf2fe",
+    "video_frame": 1530,
+    "seconds": 51.0,
+    "client_size": [
+      1920,
+      1080
+    ],
+    "regions": {
+      "title": {
+        "box": [
+          755,
+          253,
+          410,
+          39
+        ],
+        "path": "assets/ui/video_v54/reward_title.png",
+        "sha256": "58ede2e85da90e25dbfecb47c3b92817988af7ab98b8e71ea5b5bb1c23d4170e"
+      },
+      "button": {
+        "box": [
+          1666,
+          906,
+          34,
+          22
+        ],
+        "path": "assets/ui/video_v54/reward_button.png",
+        "sha256": "9da9311b6a847add3b587fdbf4263d74013cf88b13b66b243dcfad6a11acc1a6"
+      }
+    }
+  },
+  "automatic": {
+    "source": "references/bloodweb/v54_onryo/automatic_1605.png",
+    "source_sha256": "47d6237babad88782ad4ab58f12a32f8e21f044cbb54446a6d32ba925b349fca",
+    "video_sha256": "89c020d381f912208900a39dc0168bf64dfb88c7958819479e89e71bd1adf2fe",
+    "video_frame": 1605,
+    "seconds": 53.5,
+    "client_size": [
+      1920,
+      1080
+    ],
+    "regions": {
+      "title": {
+        "box": [
+          765,
+          570,
+          176,
+          20
+        ],
+        "path": "assets/ui/video_v54/automatic_title.png",
+        "sha256": "9073cc764cdf7c51ff180aa8bf494f8921d29aceff169f706038c74735ae6007"
+      },
+      "description": {
+        "box": [
+          765,
+          590,
+          463,
+          39
+        ],
+        "path": "assets/ui/video_v54/automatic_description.png",
+        "sha256": "d6d7017ce35abfcd2821cd58af8bf992507650d161a6879654aede31a41d4332"
+      }
+    }
+  },
+  "prestige": {
+    "source": "references/bloodweb/v54_onryo/prestige_1320.png",
+    "source_sha256": "9860fe7eb2db2afbf6c8dbee370d73d0caf313e5e2d3561f8b13aaf2c13fd788",
+    "video_sha256": "89c020d381f912208900a39dc0168bf64dfb88c7958819479e89e71bd1adf2fe",
+    "video_frame": 1320,
+    "seconds": 44.0,
+    "client_size": [
+      1920,
+      1080
+    ],
+    "regions": {
+      "title": {
+        "box": [
+          811,
+          434,
+          207,
+          25
+        ],
+        "path": "assets/ui/video_v54/prestige_title.png",
+        "sha256": "4377136830d672c30c6ef571a5242ecf93e380e95d3a089f295d1a58b5c289f1"
+      },
+      "price": {
+        "box": [
+          1213,
+          629,
+          72,
+          24
+        ],
+        "path": "assets/ui/video_v54/prestige_price.png",
+        "sha256": "93a8430520d195b45f94a327863818d529481909ae4cd848a717a4dd95a6de6f"
+      }
+    }
+  },
+  "prestige_ready": {
+    "source": "references/bloodweb/v54_onryo/prestige_ready_1305.png",
+    "source_sha256": "9e08d779d7e263cebb19e6fecadf728677e708deb1d4f0b7b5124f5ecb25584c",
+    "video_sha256": "89c020d381f912208900a39dc0168bf64dfb88c7958819479e89e71bd1adf2fe",
+    "video_frame": 1305,
+    "seconds": 43.5,
+    "client_size": [
+      1920,
+      1080
+    ],
+    "regions": {
+      "wreath": {
+        "box": [
+          624,
+          502,
+          121,
+          121
+        ],
+        "path": "assets/ui/video_v54/prestige_ready_wreath.png",
+        "sha256": "15edf5db50a8bb8add4514fdccd81170f5943307a03378e5c4805b62cda1fb12"
+      }
+    }
+  },
+  "prestige_price_calibration": {
+    "kind": "prestige_total_price",
+    "reviewed": true,
+    "source": "references/bloodweb/v54_onryo/prestige_1320.png",
+    "sha256": "9860fe7eb2db2afbf6c8dbee370d73d0caf313e5e2d3561f8b13aaf2c13fd788",
+    "box": [
+      1213,
+      629,
+      72,
+      24
+    ],
+    "client_size": [
+      1920,
+      1080
+    ],
+    "observed_value": 20000,
+    "video_evidence_only": true
+  },
+  "tutorial_unpredictability": {
+    "source": "references/bloodweb/v54_dark_lord/tutorial_unpredictability.png",
+    "source_sha256": "ba4e4e93ea9d484b167f8c42e1a22784d97cb5cae23a1233c720c244503cfe34",
+    "client_size": [
+      1920,
+      1080
+    ],
+    "origin": "native_mss_20261016_dark_lord_level2",
+    "capture_metadata": "debug/v54/dark_lord_check_20261016/tutorial_game.json",
+    "regions": {
+      "title": {
+        "box": [
+          538,
+          408,
+          306,
+          33
+        ],
+        "path": "assets/ui/video_v54/tutorial_title.png",
+        "sha256": "662018a0eea62897c6213734e64cb685370ae4842ff2fe30768f0ac4c71697c7"
+      },
+      "body": {
+        "box": [
+          435,
+          461,
+          510,
+          74
+        ],
+        "path": "assets/ui/video_v54/tutorial_body.png",
+        "sha256": "9c5bf0078d04a9f4ca7e738ad2dacd843ee2431af5328269005c4d80c7055e72"
+      },
+      "continue": {
+        "box": [
+          591,
+          743,
+          198,
+          24
+        ],
+        "path": "assets/ui/video_v54/tutorial_continue.png",
+        "sha256": "f893b4639e023c117b0b0b49ed3f7624ddb9e021f9bbb66d3727e9d37d83c0ad"
+      }
+    }
+  },
+  "continue": {
+    "source": "references/bloodweb/v54_dark_lord/tutorial_unpredictability.png",
+    "source_sha256": "ba4e4e93ea9d484b167f8c42e1a22784d97cb5cae23a1233c720c244503cfe34",
+    "client_size": [
+      1920,
+      1080
+    ],
+    "origin": "native_mss_20261016_dark_lord_level2",
+    "regions": {
+      "continue": {
+        "path": "assets/ui/video_v54/continue_word.png",
+        "sha256": "43c004c13d5477c4872bf8efa27d84d797bc757448aa478c55b80b758ee11850",
+        "box": [
+          686,
+          745,
+          101,
+          20
+        ]
+      }
+    }
+  }
+}

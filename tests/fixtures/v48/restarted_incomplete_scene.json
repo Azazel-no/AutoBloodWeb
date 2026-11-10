@@ -1,0 +1,487 @@
+{
+  "prior_scene": {
+    "window": {
+      "hwnd": 1443416,
+      "title": "DeadByDaylight  ",
+      "client": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "monitor": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "dpi": 96,
+      "foreground": true,
+      "pid": 16256
+    },
+    "attempted": [
+      [
+        789,
+        500
+      ],
+      [
+        789,
+        624
+      ],
+      [
+        684,
+        686
+      ],
+      [
+        579,
+        624
+      ],
+      [
+        579,
+        501
+      ],
+      [
+        683,
+        440
+      ],
+      [
+        925,
+        501
+      ],
+      [
+        622,
+        797
+      ],
+      [
+        506,
+        390
+      ]
+    ],
+    "nodes": [
+      {
+        "point": [
+          684,
+          562
+        ],
+        "radius": 40,
+        "state": "center",
+        "icon": null
+      },
+      {
+        "point": [
+          684,
+          440
+        ],
+        "radius": 31,
+        "state": "purchased",
+        "icon": "wiki_killer_unknown_addons_2f9ada0a8185"
+      },
+      {
+        "point": [
+          791,
+          501
+        ],
+        "radius": 32,
+        "state": "purchased",
+        "icon": null
+      },
+      {
+        "point": [
+          794,
+          622
+        ],
+        "radius": 29,
+        "state": "purchased",
+        "icon": "killer_offering_040"
+      },
+      {
+        "point": [
+          683,
+          684
+        ],
+        "radius": 30,
+        "state": "purchased",
+        "icon": "killer_offering_041"
+      },
+      {
+        "point": [
+          579,
+          624
+        ],
+        "radius": 31,
+        "state": "purchased",
+        "icon": null
+      },
+      {
+        "point": [
+          579,
+          501
+        ],
+        "radius": 31,
+        "state": "purchased",
+        "icon": null
+      },
+      {
+        "point": [
+          925,
+          501
+        ],
+        "radius": 31,
+        "state": "purchased",
+        "icon": "wiki_killer_unknown_addons_2f9ada0a8185"
+      },
+      {
+        "point": [
+          861,
+          737
+        ],
+        "radius": 34,
+        "state": "absorbed",
+        "icon": "wiki_killer_unknown_addons_2f9ada0a8185"
+      },
+      {
+        "point": [
+          689,
+          818
+        ],
+        "radius": 46,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          623,
+          797
+        ],
+        "radius": 32,
+        "state": "purchased",
+        "icon": null
+      },
+      {
+        "point": [
+          446,
+          620
+        ],
+        "radius": 36,
+        "state": "absorbed",
+        "icon": null
+      },
+      {
+        "point": [
+          506,
+          390
+        ],
+        "radius": 40,
+        "state": "available",
+        "icon": "wiki_killer_unknown_addons_91f9814fe9ef"
+      },
+      {
+        "point": [
+          742,
+          880
+        ],
+        "radius": 40,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          995,
+          387
+        ],
+        "radius": 35,
+        "state": "available",
+        "icon": "killer_offering_001"
+      },
+      {
+        "point": [
+          1044,
+          562
+        ],
+        "radius": 40,
+        "state": "available",
+        "icon": "wiki_killer_unknown_addons_3753f3e1ace3"
+      },
+      {
+        "point": [
+          998,
+          745
+        ],
+        "radius": 51,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          992,
+          796
+        ],
+        "radius": 28,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          902,
+          908
+        ],
+        "radius": 48,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          806,
+          919
+        ],
+        "radius": 51,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          772,
+          952
+        ],
+        "radius": 44,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          649,
+          926
+        ],
+        "radius": 50,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          480,
+          904
+        ],
+        "radius": 44,
+        "state": "locked",
+        "icon": null
+      },
+      {
+        "point": [
+          374,
+          736
+        ],
+        "radius": 33,
+        "state": "absorbed",
+        "icon": "killer_offering_040"
+      },
+      {
+        "point": [
+          324,
+          563
+        ],
+        "radius": 33,
+        "state": "absorbed",
+        "icon": null
+      }
+    ],
+    "pending": null
+  },
+  "frames": [
+    {
+      "source": "debug/v48/live_session_57a196f3/frames/1791960668331429900_336fcd29.png",
+      "sha256": "2f24192f4cf0e02040c866487c27b9dc03a10955c5d3299637007583ed0f9bb2",
+      "analysis_id": "1791960668331429900_336fcd29",
+      "frame": {
+        "window": {
+          "hwnd": 198428,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 17416
+        },
+        "roi": {
+          "x": 264,
+          "y": 142,
+          "width": 840,
+          "height": 840
+        },
+        "image_size": [
+          840,
+          840
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": null,
+        "captured_at": 91896.2957439,
+        "visibility": {
+          "window": {
+            "hwnd": 198428,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 17416
+          },
+          "provider": "mss",
+          "roi": {
+            "x": 264,
+            "y": 142,
+            "width": 840,
+            "height": 840
+          },
+          "occlusions": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 1209,
+              "y": 10,
+              "width": 565,
+              "height": 1047
+            }
+          ],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        },
+        "level": 40,
+        "level_confidence": 0.9903026819229126,
+        "probe_only": false
+      },
+      "reason": "failure"
+    },
+    {
+      "source": "debug/v48/live_session_57a196f3/frames/1791960669509993000_3b409c65.png",
+      "sha256": "487440d3a2980ef55e81c283145d91492ae6145887b714cada64ace59a9b879e",
+      "analysis_id": "1791960669509993000_3b409c65",
+      "frame": {
+        "window": {
+          "hwnd": 198428,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 17416
+        },
+        "roi": {
+          "x": 264,
+          "y": 142,
+          "width": 840,
+          "height": 840
+        },
+        "image_size": [
+          840,
+          840
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": null,
+        "captured_at": 91897.6261078,
+        "visibility": {
+          "window": {
+            "hwnd": 198428,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 17416
+          },
+          "provider": "mss",
+          "roi": {
+            "x": 264,
+            "y": 142,
+            "width": 840,
+            "height": 840
+          },
+          "occlusions": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 1209,
+              "y": 10,
+              "width": 565,
+              "height": 1047
+            }
+          ],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        },
+        "level": 40,
+        "level_confidence": 0.9881755113601685,
+        "probe_only": false
+      },
+      "reason": "failure"
+    }
+  ],
+  "input_calls": 0,
+  "scope": "Real fresh Unknown40 after accepted physical F9; old scene has12 owned/24 due extra background detections. Scene retirement is not purchase confirmation."
+}

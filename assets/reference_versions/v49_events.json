@@ -1,0 +1,3383 @@
+{
+  "checked_on": "2026-10-14",
+  "inventory": [
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/All_Hallows%27_Eve_Lunchbox",
+      "name": "All Hallows' Eve Lunchbox",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Halloween",
+      "availability": "current_unconfirmed",
+      "entries": [
+        "wiki_survivor_common_items_15df02c84fbd"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/15df02c84fbdb4b4051c69706c4ed22b375e5c42a985a0f8a10e83b322fff56e.png",
+      "normalized": "assets/survivors/items/wiki_normalized/15df02c84fbdb4b4051c69706c4ed22b375e5c42a985a0f8a10e83b322fff56e.png",
+      "sha256": "15df02c84fbdb4b4051c69706c4ed22b375e5c42a985a0f8a10e83b322fff56e",
+      "normalized_sha256": "099eeaa2b92acf1888b86b81cb785729e9b368ab0c70580e8f6e062a157c5c78",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_allHallowsEveLunchbox.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Individual infobox indicates retired availability, while the Haunted by Daylight2026 overview lists returning unlockables. Current obtainability is unconfirmed without live evidence.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/All_Hallows'_Eve_Lunchbox",
+        "source": "debug/v49/wiki/All_Hallows'_Eve_Lunchbox.html",
+        "sha256": "16b82f4e3b4cd9747975f5683bff093f2c7ad893a61685b29689a8532f2d6e4f",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/All_Hallows'_Eve_Lunchbox.txt",
+        "event_rows": [
+          {
+            "text": "   A plastic lunchbox with phosphorescent Halloween Stickers that has been packed with First-Aid equipment. Makes you considerably more visible.  Can be used to heal other Survivors:  Increased Altruistic Healing speed of +40 % .  Unlocks the Self-Heal action:  Reduced Personal Healing speed of -33 % .  Reduced Item efficiency of -33 % .  The All Hallows' Eve Lunchbox has a Capacity of 24 Charges .  The All Hallows' Eve Lunchbox is only available during Halloween Events . \"Safety first! Make sure you can be seen when trick or treating.\"   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/All_Hallows%27_Eve_Lunchbox",
+                "name": "All Hallows' Eve Lunchbox"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Halloween_Events",
+                "name": "Halloween Events"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconItems_allHallowsEveLunchbox.png?3c0bf6"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Pages using Tabber parser tag\",\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"All_Hallows'_Eve_Lunchbox\",\"wgRelevantArticleId\":12185,\"wgIsP",
+          " For unknown reasons, the 2025 iteration of the Item is of Rare Rarity, whereas all other Event Items remain Common .  All Hallows' Eve Lunchbox can only be collected during The Halloween Events . It is available for regular use in Custom Game amongst all other Event  Items .    ",
+          "ttps://deadbydaylight.wiki.gg/wiki/All_Hallows%27_Eve_Lunchbox?oldid=168010 \"  Category : Event Items Hidden category: Pages using Tabber parser tag          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of co"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Flashlight",
+      "name": "Anniversary Flashlight",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_items_2dd07caa1ba8"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/2dd07caa1ba899f1b99499b37c96438e869365f0a17c726e1219a6fd151712a9.png",
+      "normalized": "assets/survivors/items/wiki_normalized/2dd07caa1ba899f1b99499b37c96438e869365f0a17c726e1219a6fd151712a9.png",
+      "sha256": "2dd07caa1ba899f1b99499b37c96438e869365f0a17c726e1219a6fd151712a9",
+      "normalized_sha256": "2906862eae1885e8bf4e6ab00b3bac04cbf16256adf5e219158105ee14166c05",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_anniversaryFlashlight.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Flashlight",
+        "source": "debug/v49/wiki/Anniversary_Flashlight.html",
+        "sha256": "65a79e03ad300a3b9f2d5ea4ec15897d7ca4c43801396d693ba469575ee14e18",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Anniversary_Flashlight.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ITEM CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  A festive Flashlight.   Press the Use Item button to light the Flashlight for up to 8 seconds .  Explodes with confetti upon blinding the Killer. Surprise!  The Anniversary Flashlight was only available during the Fourth and Fifth Year Anniversary Events .  \"\"Happy Anniversary! Here is to many more!\" — The Dead by Daylight Team\"   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Flashlight",
+                "name": "Anniversary Flashlight"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconItems_anniversaryFlashlight.png?983482"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Anniversary_Flashlight\",\"wgRelevantArticleId\":11459,\"wgIsProb",
+          "m \" https://deadbydaylight.wiki.gg/wiki/Anniversary_Flashlight?oldid=159749 \"  Category : Event Items          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was la"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Med-Kit",
+      "name": "Anniversary Med-Kit",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_items_6a9c9ac3a1fd"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/6a9c9ac3a1fdc14f5567456702c4442b8dc95d369906b3bbe1fc6e8764937934.png",
+      "normalized": "assets/survivors/items/wiki_normalized/6a9c9ac3a1fdc14f5567456702c4442b8dc95d369906b3bbe1fc6e8764937934.png",
+      "sha256": "6a9c9ac3a1fdc14f5567456702c4442b8dc95d369906b3bbe1fc6e8764937934",
+      "normalized_sha256": "12622f499f18321bd4948549adc0ee32c82b243b4c4481735acd2d155bf96bfb",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_anniversaryMedKit.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Med-Kit",
+        "source": "debug/v49/wiki/Anniversary_Med-Kit.html",
+        "sha256": "4d15b89928d6070c8e256edb98531ac33949e0e0cd05b6d59a9bc7a9219ba185",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Anniversary_Med-Kit.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ITEM CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  A festive Med-Kit that explodes with confetti upon fully healing a Survivor. Surprise!  Increased confetti of +100 % .  Can be used to heal other Survivors:  Increased Altruistic Healing speed of +40 % .  Unlocks the Self-Heal action:  Reduced Personal Healing speed of -33 % .  Reduced Item efficiency of -33 % .  The Anniversary Med-Kit has a Capacity of 24 Charges .  The Anniversary Med-Kit was only available during the Fourth and Fifth Year Anniversary Events . \"Happy Anniversary! Here's to many more!\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Med-Kit",
+                "name": "Anniversary Med-Kit"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconItems_anniversaryMedKit.png?43eff4"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Pages using Tabber parser tag\",\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Anniversary_Med-Kit\",\"wgRelevantArticleId\":11206,\"wgIsProbabl",
+          "from \" https://deadbydaylight.wiki.gg/wiki/Anniversary_Med-Kit?oldid=159764 \"  Category : Event Items Hidden category: Pages using Tabber parser tag          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of co"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Toolbox",
+      "name": "Anniversary Toolbox",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_items_ef35061803ad"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/ef35061803ad5d890afff73ede0aca8c4cd22e9251f59aa2a1e56d8f629b7910.png",
+      "normalized": "assets/survivors/items/wiki_normalized/ef35061803ad5d890afff73ede0aca8c4cd22e9251f59aa2a1e56d8f629b7910.png",
+      "sha256": "ef35061803ad5d890afff73ede0aca8c4cd22e9251f59aa2a1e56d8f629b7910",
+      "normalized_sha256": "bcdaf6c83133812c583bee80e35016dd9ce845428dc719b055564179ad60b9f2",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_anniversaryToolbox.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Toolbox",
+        "source": "debug/v49/wiki/Anniversary_Toolbox.html",
+        "sha256": "4385da83c72f6549adffd1fbfafc2e7123ab5bc96f448ef149aa098662f855d4",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Anniversary_Toolbox.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ITEM CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  A Toolbox that is slightly explosive.  32 Charges .  Increases the Repair speed by +50 % .  Unlocks the Sabotage action.  Increases the Sabotage speed by +50 % .  Detonates a firework once depleted. Yay!  The Anniversary Toolbox was only available during the Fourth and Fifth Year Anniversary Events .  \"Nothing says happy anniversary like detonating a firework and praying the Killer does not notice. Good luck and thank you for celebrating with us!\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Toolbox",
+                "name": "Anniversary Toolbox"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconItems_anniversaryToolbox.png?692e50"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Anniversary_Toolbox\",\"wgRelevantArticleId\":12015,\"wgIsProbabl",
+          "from \" https://deadbydaylight.wiki.gg/wiki/Anniversary_Toolbox?oldid=159779 \"  Category : Event Items          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was la"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Flashlight",
+      "name": "Banquet Flashlight",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_items_b49cd0a50728"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/b49cd0a507282a91f503c4212c65fcf88e017aac757356361e1d21b55c5ab7c9.png",
+      "normalized": "assets/survivors/items/wiki_normalized/b49cd0a507282a91f503c4212c65fcf88e017aac757356361e1d21b55c5ab7c9.png",
+      "sha256": "b49cd0a507282a91f503c4212c65fcf88e017aac757356361e1d21b55c5ab7c9",
+      "normalized_sha256": "12e1a732a31c8e3f0d4da0affb442fc1dc835882097075e1224ebb08ffcbd3b5",
+      "source_url": "https://deadbydaylight.wiki.gg/images/T_UI_iconItems_flashlight_anniversary2026.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Flashlight",
+        "source": "debug/v49/wiki/Banquet_Flashlight.html",
+        "sha256": "78cd8e70b9dd059fc0bb0bfef104a4b8b41a5a7ee6756e05d1b2b54f9875bdf9",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Banquet_Flashlight.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ITEM CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  It's time to burn calories...and retinas.   Press the Use Item button to light the Flashlight for up to 8 seconds .  The Banquet Flashlight is only available during the Tenth Year Anniversary Event .  \"\"We're blinded with happiness from all of your support!\" — The Dead by Daylight Team\"   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Flashlight",
+                "name": "Banquet Flashlight"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/T_UI_iconItems_flashlight_anniversary2026.png?1caa99"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Banquet_Flashlight\",\"wgRelevantArticleId\":34750,\"wgIsProbably",
+          " from \" https://deadbydaylight.wiki.gg/wiki/Banquet_Flashlight?oldid=186472 \"  Category : Event Items          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was la"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Med-Kit",
+      "name": "Banquet Med-Kit",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_items_96ea862b3aa2"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/96ea862b3aa2113ada91d5fea0bfdfff1972b0fc2a6c67d7a780a0255989604c.png",
+      "normalized": "assets/survivors/items/wiki_normalized/96ea862b3aa2113ada91d5fea0bfdfff1972b0fc2a6c67d7a780a0255989604c.png",
+      "sha256": "96ea862b3aa2113ada91d5fea0bfdfff1972b0fc2a6c67d7a780a0255989604c",
+      "normalized_sha256": "a64dd70d5f531c1d42bb4d548b81536290946db19af20649827dd0f529fcd5b5",
+      "source_url": "https://deadbydaylight.wiki.gg/images/T_UI_iconItems_medkit_anniversary2026.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Med-Kit",
+        "source": "debug/v49/wiki/Banquet_Med-Kit.html",
+        "sha256": "383eac1a2832d0942607fae39a79158751ae18a3f75f29a491ede12b12660ba4",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Banquet_Med-Kit.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ITEM CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  Does it heal indigestion? There's only one way to find out. Can be used to heal other Survivors:  Increased Altruistic Healing speed of +40 % .  Unlocks the Self-Heal action:  Reduced Personal Healing speed of -33 % .  Reduced Item efficiency of -33 % .  The Banquet Med-Kit has a Capacity of 24 Charges .  The Banquet Med-Kit is only available during the Tenth Year Anniversary Event . \"Here's to Health!\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Med-Kit",
+                "name": "Banquet Med-Kit"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/T_UI_iconItems_medkit_anniversary2026.png?410cab"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Banquet_Med-Kit\",\"wgRelevantArticleId\":34751,\"wgIsProbablyEdi",
+          "ved from \" https://deadbydaylight.wiki.gg/wiki/Banquet_Med-Kit?oldid=186473 \"  Category : Event Items          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was la"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Toolbox",
+      "name": "Banquet Toolbox",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_items_5c14c5301c29"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/5c14c5301c29d6f8ec79d27b732a47b33d98435941d69b2edbfa99a79331b0f0.png",
+      "normalized": "assets/survivors/items/wiki_normalized/5c14c5301c29d6f8ec79d27b732a47b33d98435941d69b2edbfa99a79331b0f0.png",
+      "sha256": "5c14c5301c29d6f8ec79d27b732a47b33d98435941d69b2edbfa99a79331b0f0",
+      "normalized_sha256": "b99c69ea2080e2f43619b808ccdbe8147d59f62aaab51ce87424a1232c86e82e",
+      "source_url": "https://deadbydaylight.wiki.gg/images/T_UI_iconItems_toolbox_anniversary2026.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Toolbox",
+        "source": "debug/v49/wiki/Banquet_Toolbox.html",
+        "sha256": "65738c865ef6995dbe3d0c14f92bcda3747b1b7e42b346e2590f5495c2a76ba9",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Banquet_Toolbox.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ITEM CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  Nothing settles the stomach like manual labor.  32 Charges .  Increases the Repair speed by +50 % .  Unlocks the Sabotage action.  Increases the Sabotage speed by +50 % .  The Banquet Toolbox is only available during the Tenth Year Anniversary Event .  \"Hard to believe it's been 10 years. Thanks for keeping the Exit Gate lights on!\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Toolbox",
+                "name": "Banquet Toolbox"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/T_UI_iconItems_toolbox_anniversary2026.png?705336"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Banquet_Toolbox\",\"wgRelevantArticleId\":34752,\"wgIsProbablyEdi",
+          "ved from \" https://deadbydaylight.wiki.gg/wiki/Banquet_Toolbox?oldid=186474 \"  Category : Event Items          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was la"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Bloodsense_Map",
+      "name": "Bloodsense Map",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Spring",
+      "availability": "historical",
+      "entries": [
+        "wiki_survivor_common_items_c47238bff4c4"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/c47238bff4c4e991892b4b022a76d518fa5a8f23a9c690e66e358f85a6c9a124.png",
+      "normalized": "assets/survivors/items/wiki_normalized/c47238bff4c4e991892b4b022a76d518fa5a8f23a9c690e66e358f85a6c9a124.png",
+      "sha256": "c47238bff4c4e991892b4b022a76d518fa5a8f23a9c690e66e358f85a6c9a124",
+      "normalized_sha256": "2367d1e176b4ffb3ee6ff8465b7ef99cbd06497683b1092901fcad9668559d0b",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_bloodsenseMap.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Bloodsense_Map",
+        "source": "debug/v49/wiki/Bloodsense_Map.html",
+        "sha256": "b301dbb34f6aef1d45a87344148f4a5b024d5761421b2a8c30a49f6c34f1d7c3",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Bloodsense_Map.txt",
+        "event_rows": [],
+        "event_mentions": [
+          "\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Pages using Tabber parser tag\",\"Event Items\",\"Common Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Bloodsense_Map\",\"wgRelevantArticleId\":25405,\"w",
+          "ed from \" https://deadbydaylight.wiki.gg/wiki/Bloodsense_Map?oldid=165328 \"  Categories : Event Items Common Items Hidden category: Pages using Tabber parser tag          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to "
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Chinese_Firecracker",
+      "name": "Chinese Firecracker",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Lunar/Spring",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_items_8a6f37f4d2c5"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/8a6f37f4d2c5df8fefac41dd20c853cb4892bddf7c3f0e56cb5d4a76476c4f69.png",
+      "normalized": "assets/survivors/items/wiki_normalized/8a6f37f4d2c5df8fefac41dd20c853cb4892bddf7c3f0e56cb5d4a76476c4f69.png",
+      "sha256": "8a6f37f4d2c5df8fefac41dd20c853cb4892bddf7c3f0e56cb5d4a76476c4f69",
+      "normalized_sha256": "9a6892ac608f63d700796cf1ca3ff26a6146650e0feb3faf1540fcae840101ed",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_chineseFirecracker.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Chinese_Firecracker",
+        "source": "debug/v49/wiki/Chinese_Firecracker.html",
+        "sha256": "4144cbce985e1697db4f174fcfb424d734d33a9ee5390361ab2e97a7b2440432",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Chinese_Firecracker.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ITEM CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  A row of small explosive devices wrapped in heavy paper casing. Can be used as a distraction, as a blinding device or to celebrate.  Press the Use Item button to detonate the Firecracker .  Detonates into loud bangs and intense light flashes, temporarily blinding and deafening nearby Players.  The Chinese Firecracker is consumed on use.  The Chinese Firecracker is only available during Lunar Events .  2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Chinese_Firecracker",
+                "name": "Chinese Firecracker"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Lunar_Events",
+                "name": "Lunar Events"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconItems_chineseFirecracker.png?622685"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Pages using Tabber parser tag\",\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Chinese_Firecracker\",\"wgRelevantArticleId\":23699,\"wgIsProbabl",
+          "from \" https://deadbydaylight.wiki.gg/wiki/Chinese_Firecracker?oldid=159735 \"  Category : Event Items Hidden category: Pages using Tabber parser tag          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of co"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Festive_Toolbox",
+      "name": "Festive Toolbox",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Lunar/Spring",
+      "availability": "historical",
+      "entries": [
+        "wiki_survivor_common_items_6dab61d72040"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/6dab61d72040665e167b6b6c93d4376a7ce0595a3aacb88df68980e421bc8a5f.png",
+      "normalized": "assets/survivors/items/wiki_normalized/6dab61d72040665e167b6b6c93d4376a7ce0595a3aacb88df68980e421bc8a5f.png",
+      "sha256": "6dab61d72040665e167b6b6c93d4376a7ce0595a3aacb88df68980e421bc8a5f",
+      "normalized_sha256": "4f4c83dba1d564c1747ee1187bb9d275f79f61302fc76258cf73ac3a0105e231",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_festiveToolbox.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Festive_Toolbox",
+        "source": "debug/v49/wiki/Festive_Toolbox.html",
+        "sha256": "402ae0fbf6d050e1ee9612e535452d78692210588eff8843ab4ba64bc05a3390",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Festive_Toolbox.txt",
+        "event_rows": [
+          {
+            "text": "   A Toolbox packed to the brim with fireworks, it is prepared to celebrate all your life's successes... and failures. 32 Charges .  Increases the Repair speed by +50 % .  Unlocks the Sabotage action.  Increases the Sabotage speed by +50 % .  Succeeding a Great Skill Check detonates a small cluster of firecrackers.  Missing a Skill Check detonates fireworks.  The Festive Toolbox is only available during Spring Events .   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Festive_Toolbox",
+                "name": "Festive Toolbox"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Spring_Events",
+                "name": "Spring Events"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconItems_festiveToolbox.png?50ce71"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Festive_Toolbox\",\"wgRelevantArticleId\":14498,\"wgIsProbablyEdi",
+          "ved from \" https://deadbydaylight.wiki.gg/wiki/Festive_Toolbox?oldid=159777 \"  Category : Event Items          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was la"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Masquerade_Flashlight",
+      "name": "Masquerade Flashlight",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_items_c1c7a2794470"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/c1c7a2794470bf20e391a6c1fadd56f167c01044b03ccc45b410e9a58f81e8f0.png",
+      "normalized": "assets/survivors/items/wiki_normalized/c1c7a2794470bf20e391a6c1fadd56f167c01044b03ccc45b410e9a58f81e8f0.png",
+      "sha256": "c1c7a2794470bf20e391a6c1fadd56f167c01044b03ccc45b410e9a58f81e8f0",
+      "normalized_sha256": "babad3108725cb55e71c02aacf092d1fb9d3c0e9837dc7c95b99fd63cb896e3b",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_masqueradeFlashlight.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Masquerade_Flashlight",
+        "source": "debug/v49/wiki/Masquerade_Flashlight.html",
+        "sha256": "cc57c497787ca07ba779ce5dea6bb7cca99e0d72c3d8f2825b05287d70a50be2",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Masquerade_Flashlight.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ITEM CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  Not even a mask can protect you from this Flashlight's bright beam.  Press the Use Item button to light the Flashlight for up to 8 seconds .  The Masquerade Flashlight is only available during Anniversary Events .  \"\"Happy Anniversary! The future looks bright!\" — The Dead by Daylight Team\"   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Masquerade_Flashlight",
+                "name": "Masquerade Flashlight"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Events",
+                "name": "Anniversary Events"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconItems_masqueradeFlashlight.png?fe8294"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Masquerade_Flashlight\",\"wgRelevantArticleId\":8934,\"wgIsProbab",
+          "om \" https://deadbydaylight.wiki.gg/wiki/Masquerade_Flashlight?oldid=159753 \"  Category : Event Items          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was la"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Masquerade_Med-Kit",
+      "name": "Masquerade Med-Kit",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_items_2fca4b1c867f"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/2fca4b1c867ff6fb5353c7fc63f2055f7ce63b83ab180200527276c76c946df2.png",
+      "normalized": "assets/survivors/items/wiki_normalized/2fca4b1c867ff6fb5353c7fc63f2055f7ce63b83ab180200527276c76c946df2.png",
+      "sha256": "2fca4b1c867ff6fb5353c7fc63f2055f7ce63b83ab180200527276c76c946df2",
+      "normalized_sha256": "0301957d40c97085e0d43e314a885008b201434aa28f40c1e577295509983839",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_masqueradeMedKit.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Masquerade_Med-Kit",
+        "source": "debug/v49/wiki/Masquerade_Med-Kit.html",
+        "sha256": "da3be67006f1e6bbf6f4bcd1a2eef5499786a17a3feea1709cf65d0993721d30",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Masquerade_Med-Kit.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ITEM CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  A festive Med-Kit with a shocking surprise, giving a whole new meaning to the term \"Health Scare\".  Increased confetti of +100 % .  Can be used to heal other Survivors:  Increased Altruistic Healing speed of +40 % .  Unlocks the Self-Heal action:  Reduced Personal Healing speed of -33 % .  Reduced Item efficiency of -33 % .  The Masquerade Med-Kit has a Capacity of 24 Charges .  The Masquerade Med-Kit is only available during Anniversary Events . \"Happy Anniversary! To your health!\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Masquerade_Med-Kit",
+                "name": "Masquerade Med-Kit"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Events",
+                "name": "Anniversary Events"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconItems_masqueradeMedKit.png?1a416b"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Pages using Tabber parser tag\",\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Masquerade_Med-Kit\",\"wgRelevantArticleId\":17925,\"wgIsProbably",
+          " from \" https://deadbydaylight.wiki.gg/wiki/Masquerade_Med-Kit?oldid=159765 \"  Category : Event Items Hidden category: Pages using Tabber parser tag          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of co"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Masquerade_Toolbox",
+      "name": "Masquerade Toolbox",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_items_600b8d427ac4"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/600b8d427ac48198484a914cf6f66659e3f786314c514619a3e6bdd2e38bd345.png",
+      "normalized": "assets/survivors/items/wiki_normalized/600b8d427ac48198484a914cf6f66659e3f786314c514619a3e6bdd2e38bd345.png",
+      "sha256": "600b8d427ac48198484a914cf6f66659e3f786314c514619a3e6bdd2e38bd345",
+      "normalized_sha256": "8f41fc6fec585f1561e5cbb10aa3cd3f759f473cdd1646a9f5f031eed0dbeb5f",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_masqueradeToolbox.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Masquerade_Toolbox",
+        "source": "debug/v49/wiki/Masquerade_Toolbox.html",
+        "sha256": "a2285b61ea8b18710b89bef8ee18b39ffee9a6dff837692ea7d0db89f1fef26c",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Masquerade_Toolbox.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ITEM CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  A Toolbox with all of the standard gadgets: wrenches, screwdrivers, fireworks, a hammer...  32 Charges .  Increases the Repair speed by +50 % .  Unlocks the Sabotage action.  Increases the Sabotage speed by +50 % .  Detonates a firework once depleted. Yay!  The Masquerade Toolbox is only available during Anniversary Events .  \"Happy Anniversary! We're fixin' to have a big party!\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Masquerade_Toolbox",
+                "name": "Masquerade Toolbox"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Events",
+                "name": "Anniversary Events"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconItems_masqueradeToolbox.png?8ef654"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Masquerade_Toolbox\",\"wgRelevantArticleId\":6497,\"wgIsProbablyE",
+          " from \" https://deadbydaylight.wiki.gg/wiki/Masquerade_Toolbox?oldid=159780 \"  Category : Event Items          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was la"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Third_Year_Party_Starter",
+      "name": "Third Year Party Starter",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_items_575b346d4055"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/575b346d40557c4863962127cd1d729cb5e5a06b56f1558cb485b008d3f9fb47.png",
+      "normalized": "assets/survivors/items/wiki_normalized/575b346d40557c4863962127cd1d729cb5e5a06b56f1558cb485b008d3f9fb47.png",
+      "sha256": "575b346d40557c4863962127cd1d729cb5e5a06b56f1558cb485b008d3f9fb47",
+      "normalized_sha256": "2136c8f2a42bf70bfb60f71374003d186e3695cba81b4154b5d8711328597b1a",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_thirdYearPartyStarter.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Third_Year_Party_Starter",
+        "source": "debug/v49/wiki/Third_Year_Party_Starter.html",
+        "sha256": "948bef89719c49eb8952f24ca951e211fcf1d31279bca2a33cd707aff7f2e68b",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Third_Year_Party_Starter.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ITEM CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  A small, highly-explosive dinner table decoration. Can be used as a distraction, as a blinding device or to celebrate our three years together.  Press the Use Item button to detonate the Firecracker .  Detonates into loud bangs and intense light flashes, temporarily blinding and deafening nearby Players.  The Third Year Party Starter is consumed on use.  The Third Year Party Starter was only available during the Third Year Anniversary Event . \"\"Happy Anniversary! Here is to our three years together!\" — The Dead by Daylight Team\"   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Third_Year_Party_Starter",
+                "name": "Third Year Party Starter"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconItems_thirdYearPartyStarter.png?347e6b"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Third_Year_Party_Starter\",\"wgRelevantArticleId\":20749,\"wgIsPr",
+          "\" https://deadbydaylight.wiki.gg/wiki/Third_Year_Party_Starter?oldid=103752 \"  Category : Event Items          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was la"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Will_O%27_Wisp",
+      "name": "Will O' Wisp",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Halloween",
+      "availability": "current_unconfirmed",
+      "entries": [
+        "wiki_survivor_common_items_5a8bccf3f06a"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/5a8bccf3f06a82c27b2275a6cd3317823bf333d00e24edf7e292d5d097be5a18.png",
+      "normalized": "assets/survivors/items/wiki_normalized/5a8bccf3f06a82c27b2275a6cd3317823bf333d00e24edf7e292d5d097be5a18.png",
+      "sha256": "5a8bccf3f06a82c27b2275a6cd3317823bf333d00e24edf7e292d5d097be5a18",
+      "normalized_sha256": "52fcb399ae54d7f9034f5db3e36bda39106d716e87f6a6d8d09d3ac496b2b740",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_willOWisp.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Individual infobox indicates retired availability, while the Haunted by Daylight2026 overview lists returning unlockables. Current obtainability is unconfirmed without live evidence.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Will_O'_Wisp",
+        "source": "debug/v49/wiki/Will_O'_Wisp.html",
+        "sha256": "824e3e84eef8f46d2ebbb75b32a36b6280add71fd8f76442ef9d017ed8afb196",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Will_O'_Wisp.txt",
+        "event_rows": [
+          {
+            "text": "   A Flashlight equipped with a special lens cover that adds an orange tint and a little Ghost to the beam. Press the Use Item button to light the Flashlight for up to 8 seconds .  Causes more friendly Ghosts in your life.  The Will O' Wisp is only available during Halloween Events .  \"Happy Trick or Treating!\"   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Will_O%27_Wisp",
+                "name": "Will O' Wisp"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Halloween_Events",
+                "name": "Halloween Events"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconItems_willOWisp.png?2ee5ef"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Will_O'_Wisp\",\"wgRelevantArticleId\":7038,\"wgIsProbablyEditabl",
+          " For unknown reasons, the 2025 iteration of the Item is of Rare Rarity, whereas all other Event Items remain Common .  \" Considerably increases Friendly Ghosts in your life\" causes the flashlight to have an orange-tinted Beam and project the image of a Friendly Ghost.  Will O' Wi",
+          "eved from \" https://deadbydaylight.wiki.gg/wiki/Will_O%27_Wisp?oldid=168011 \"  Category : Event Items          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was la"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Winter_Party_Starter",
+      "name": "Winter Party Starter",
+      "category": "items",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Items",
+      "enumeration_sha256": "be31b22f3024e9ce18cd0ac6caf4ddef0c5e6e7ca9588e4c82ba8eb20647a8cd",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Winter",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_items_d9a27ca6d874"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/items/wiki_originals/d9a27ca6d87427f2fb53fad5e7c98dcffc06140b8206804350a25ebfbad7fec9.png",
+      "normalized": "assets/survivors/items/wiki_normalized/d9a27ca6d87427f2fb53fad5e7c98dcffc06140b8206804350a25ebfbad7fec9.png",
+      "sha256": "d9a27ca6d87427f2fb53fad5e7c98dcffc06140b8206804350a25ebfbad7fec9",
+      "normalized_sha256": "5d777bd0c97fce05204dee229bd7edfbb1918c9cd750e0cdfa0e66d70270559e",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconItems_winterPartyStarter.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Winter_Party_Starter",
+        "source": "debug/v49/wiki/Winter_Party_Starter.html",
+        "sha256": "b41779f6dcc96b4e5bab0e92789448359f216e25b3c80e7aecf00dbb7e7bbcd0",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Winter_Party_Starter.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ITEM CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  A small, highly-explosive dinner table decoration. Can be used as a distraction, as a blinding device or to celebrate.  Press the Use Item button to detonate the Firecracker .  Detonates into loud bangs and intense light flashes, temporarily blinding and deafening nearby Players.  The Winter Party Starter is consumed on use.  The Winter Party Starter is only available during Winter Events .  2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Winter_Party_Starter",
+                "name": "Winter Party Starter"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Winter_Events",
+                "name": "Winter Events"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconItems_winterPartyStarter.png?c4c42b"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Items\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Winter_Party_Starter\",\"wgRelevantArticleId\":204,\"wgIsProbably",
+          "rom \" https://deadbydaylight.wiki.gg/wiki/Winter_Party_Starter?oldid=159734 \"  Category : Event Items          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was la"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Blight_Serum",
+      "name": "Blight Serum",
+      "category": "addons",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Add-ons",
+      "enumeration_sha256": "beff79b25ba6ed4399a6cfd8d31b2b40c972d500a93d509e3320d248b010e850",
+      "existing": true,
+      "roles": [
+        "killer"
+      ],
+      "event": "Halloween",
+      "availability": "available_now",
+      "entries": [
+        "wiki_killer_common_addons_9e8a96f5954c"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/killers/addons/wiki_originals/9e8a96f5954cbc9f700bd5224a589931b5c572a712ae74445aaaf6d9166b938e.png",
+      "normalized": "assets/killers/addons/wiki_normalized/9e8a96f5954cbc9f700bd5224a589931b5c572a712ae74445aaaf6d9166b938e.png",
+      "sha256": "9e8a96f5954cbc9f700bd5224a589931b5c572a712ae74445aaaf6d9166b938e",
+      "normalized_sha256": "6b2c5347e44ee6d8744ba86c470dfa27a77609c423c80332ae5655dcb41f3162",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconAddon_blightSerum.png",
+      "rarity_by_role": {
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Observed on user Bloodweb pixels. This does not prove availability for every character or confirm an actual purchase.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Blight_Serum",
+        "source": "debug/v49/wiki/Blight_Serum.html",
+        "sha256": "e3253c389e7b979403b6ac1307b18cd5b5f4659b0c9b37368b9339eda2f177bd",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Blight_Serum.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ADD-ON IS NO LONGER AVAILABLE ( This Unlockable can no longer be obtained and stockpiles can no longer be used. If it is an Event Unlockable , it may return with its associated Event. )  A small amount of Compound Thirty-Four, the final serum The Blight had worked on before his transformation. Causes extreme mutations in high doses.  Playing as The Blight , you benefit from the following effect: Grants 1 additional Token towards his Power.  Playing as any other Killer, Blighted Serum temporarily replaces your Power with the Blighted Rush ability. Press the Power button to dash forwards at 200 % of your default Movement speed for 2.5 seconds .  Start the Trial with 1 Token .  Receive 1 Token each time a Survivor is hooked.   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Blight_Serum",
+                "name": "Blight Serum"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Blight",
+                "name": "Blight"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Blight",
+                "name": "Blight"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Blight",
+                "name": "Blight"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Blight",
+                "name": "Blight"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconAddon_blightSerum.png?38ab12"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Add-ons\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Blight_Serum\",\"wgRelevantArticleId\":14984,\"wgIsProbablyEdit",
+          "rieved from \" https://deadbydaylight.wiki.gg/wiki/Blight_Serum?oldid=166085 \"  Category : Event Add-ons          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was "
+        ]
+      },
+      "original_link_still_present": true,
+      "visual_confirmed_frames": [
+        {
+          "source": "debug/v49/readonly_289ca087/raw_0.png",
+          "sha256": "304c95feefdfc3c6f0d070d820f8f51eb6910a24cda219d9b2cc8673c4ee40a5",
+          "physical_point": [
+            579,
+            500
+          ],
+          "scope": "Manual original/glyph visual comparison and accepted detection; no v4.9 purchase"
+        },
+        {
+          "source": "debug/v49/readonly_289ca087/raw_1.png",
+          "sha256": "29f82d4e9ff2b1261257eb980824e385053b444675991e6d43a3c9e6f5d79bea",
+          "physical_point": [
+            579,
+            500
+          ],
+          "scope": "Manual original/glyph visual comparison and accepted detection; no v4.9 purchase"
+        }
+      ],
+      "checked_on": "2026-10-14"
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Broken_Bulb",
+      "name": "Broken Bulb",
+      "category": "addons",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Add-ons",
+      "enumeration_sha256": "beff79b25ba6ed4399a6cfd8d31b2b40c972d500a93d509e3320d248b010e850",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Halloween",
+      "availability": "current_unconfirmed",
+      "entries": [
+        "wiki_survivor_common_addons_cdef3ffaf8f1"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/addons/wiki_originals/cdef3ffaf8f1be45bacc49575747f931a4a182ee7191f545f96d9a2e2f1885a1.png",
+      "normalized": "assets/survivors/addons/wiki_normalized/cdef3ffaf8f1be45bacc49575747f931a4a182ee7191f545f96d9a2e2f1885a1.png",
+      "sha256": "cdef3ffaf8f1be45bacc49575747f931a4a182ee7191f545f96d9a2e2f1885a1",
+      "normalized_sha256": "5d3a734b23f22c77fe3742c3853193a0d3b9cea119bb4de406a67001b825333b",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconAddon_brokenBulb.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Individual infobox indicates retired availability, while the Haunted by Daylight2026 overview lists returning unlockables. Current obtainability is unconfirmed without live evidence.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Broken_Bulb",
+        "source": "debug/v49/wiki/Broken_Bulb.html",
+        "sha256": "9d44ffc0262fd804acd1943cebd7dd3866f2c417719e8af1e0f5b4da994dab7d",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Broken_Bulb.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ADD-ON IS NO LONGER AVAILABLE ( This Unlockable can no longer be obtained and stockpiles can no longer be used. If it is an Event Unlockable , it may return with its associated Event. )  A damaged bulb that causes a spooky flickering effect.  Causes the Flashlight to flicker.  Increases the brightness of the Beam by +15 % .  Increases the duration of a successful Blind by +30 % .  Increases the spookiness.  The Broken Bulb is only available during Halloween Events .   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Broken_Bulb",
+                "name": "Broken Bulb"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Halloween_Events",
+                "name": "Halloween Events"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconAddon_brokenBulb.png?ba269e"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Add-ons\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Broken_Bulb\",\"wgRelevantArticleId\":8395,\"wgIsProbablyEditab",
+          "trieved from \" https://deadbydaylight.wiki.gg/wiki/Broken_Bulb?oldid=159591 \"  Category : Event Add-ons          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was "
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Refined_Serum",
+      "name": "Refined Serum",
+      "category": "addons",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Add-ons",
+      "enumeration_sha256": "beff79b25ba6ed4399a6cfd8d31b2b40c972d500a93d509e3320d248b010e850",
+      "existing": true,
+      "roles": [
+        "survivor"
+      ],
+      "event": "Halloween",
+      "availability": "current_unconfirmed",
+      "entries": [
+        "wiki_survivor_common_addons_a25d9b8cd807"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/addons/wiki_originals/a25d9b8cd80717a72a01ab397268a596d4e5dfc1a0e7b21766d9fcc53f29f39f.png",
+      "normalized": "assets/survivors/addons/wiki_normalized/a25d9b8cd80717a72a01ab397268a596d4e5dfc1a0e7b21766d9fcc53f29f39f.png",
+      "sha256": "a25d9b8cd80717a72a01ab397268a596d4e5dfc1a0e7b21766d9fcc53f29f39f",
+      "normalized_sha256": "43b15bf6582da8566afb4feb64d4524a9d982f67213debd2844268f3d5f8404b",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconAddon_refinedSerum.png",
+      "rarity_by_role": {
+        "survivor": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Individual infobox indicates retired availability, while the Haunted by Daylight2026 overview lists returning unlockables. Current obtainability is unconfirmed without live evidence.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Refined_Serum",
+        "source": "debug/v49/wiki/Refined_Serum.html",
+        "sha256": "2679c73a585da4121aa27c9b9b7b43c3746802bca202477d9104e59dd0b963cf",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Refined_Serum.txt",
+        "event_rows": [
+          {
+            "text": "   THIS ADD-ON IS NO LONGER AVAILABLE ( This Unlockable can no longer be obtained and stockpiles can no longer be used. If it is an Event Unlockable , it may return with its associated Event. )  STOCKPILES MAY STILL BE USED IN TRIALS   \"A refined version of the Putrid Serum that is mostly safe for human consumption. Mostly.\"  While healing yourself or another Survivor with the Med-Kit , press the Secondary Action button to trigger the following effect for 16 seconds : Increases all Movement speeds by +5 % . Creates a Blight trail behind the affected Survivor.  Refined Serum consumes the Med-Kit after trigger its effect. The Refined Serum is only available during Halloween Events .  2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Refined_Serum",
+                "name": "Refined Serum"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Halloween_Events",
+                "name": "Halloween Events"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconAddon_refinedSerum.png?bbd946"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Add-ons\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Refined_Serum\",\"wgRelevantArticleId\":12262,\"wgIsProbablyEdi",
+          "ieved from \" https://deadbydaylight.wiki.gg/wiki/Refined_Serum?oldid=159641 \"  Category : Event Add-ons          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page was "
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Arcane_Dousing_Rod",
+      "name": "Arcane Dousing Rod",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Halloween",
+      "availability": "available_now",
+      "entries": [
+        "wiki_survivor_common_offerings_26031ccd7bf4",
+        "wiki_killer_common_offerings_26031ccd7bf4"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/offerings/wiki_originals/26031ccd7bf4b62fd0f7f7f9b9d6a87d59629383edd8b02b661514ccf390447c.png",
+      "normalized": "assets/survivors/offerings/wiki_normalized/26031ccd7bf4b62fd0f7f7f9b9d6a87d59629383edd8b02b661514ccf390447c.png",
+      "sha256": "26031ccd7bf4b62fd0f7f7f9b9d6a87d59629383edd8b02b661514ccf390447c",
+      "normalized_sha256": "74348216b9f31847085548275db43fd61da680b385066c8f9d1df24580d45946",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconFavors_arcaneDousingRod.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Observed on user Bloodweb pixels. This does not prove availability for every character or confirm an actual purchase.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Arcane_Dousing_Rod",
+        "source": "debug/v49/wiki/Arcane_Dousing_Rod.html",
+        "sha256": "3dcedeb483d52b654b92a075d409336b48c05a0eaf6a3a79b88c80d01c8acd76",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Arcane_Dousing_Rod.txt",
+        "event_rows": [
+          {
+            "text": "   \"Taps into the latent energy of The Entity's Realm to find even more concentrated pockets of power.\"  Modifies all Event-related Score Events with the following effect: Increases the amount of Bloodpoints they award by +100 % .  Arcane Dousing Rod is only available during the Haunted by Daylight Halloween Event and can only be used in Trials of the Event Queue.  2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Arcane_Dousing_Rod",
+                "name": "Arcane Dousing Rod"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Score_Event",
+                "name": "Score Event"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Score_Event",
+                "name": "Score Event"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Score_Event",
+                "name": "Score Event"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Score_Event",
+                "name": "Score Event"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconFavors_arcaneDousingRod.png?b14179"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Pages using Tabber parser tag\",\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Arcane_Dousing_Rod\",\"wgRelevantArticleId\":19728,\"wgIsProb",
+          "g/images/IconFavors_arcaneDousingRod.png?b14179\"},\"description\":\"Arcane Dousing Rod is an Event Offering belonging to all Players.\",\"datePublished\":\"2022-10-13T21:44:57Z\",\"author\":{\"@type\":\"Organization\",\"name\":\"Official Dead by Daylight Wiki\",\"url\":\"https://deadbydaylight.wiki.g",
+          " Common to Very Rare .    Trivia  The 2025 iteration of the Offering was the first former Event Offering using the new Rarity system that was now of Very Rare Rarity, whereas all other Event Offerings remained Common at time.  The directional audio cue used as a secondary effect ",
+          " Offering using the new Rarity system that was now of Very Rare Rarity, whereas all other Event Offerings remained Common at time.  The directional audio cue used as a secondary effect before the 2024 iteration of Haunted by Daylight used the same sound effect as the Crown Pillar",
+          " from \" https://deadbydaylight.wiki.gg/wiki/Arcane_Dousing_Rod?oldid=169527 \"  Category : Event Offerings Hidden category: Pages using Tabber parser tag          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use o"
+        ]
+      },
+      "original_link_still_present": true,
+      "visual_confirmed_frames": [
+        {
+          "source": "references/bloodweb/v48_32f8799b/raw_0.png",
+          "sha256": "bd3f127b87b8370e67a2c82423cb1d4560062076f1cafe59bedf35f1ffceefe6",
+          "physical_point": [
+            789,
+            500
+          ],
+          "scope": "Manual original/glyph visual comparison and accepted detection; no v4.9 purchase"
+        }
+      ],
+      "checked_on": "2026-10-14"
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/BBQ_Invitation",
+      "name": "BBQ Invitation",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Summer",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_offerings_667c7113e8bb",
+        "wiki_killer_common_offerings_667c7113e8bb"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/offerings/wiki_originals/667c7113e8bb3c02eb9b911028473e3b500aafdd5bb21ac9e5f4162ef7f3f26a.png",
+      "normalized": "assets/survivors/offerings/wiki_normalized/667c7113e8bb3c02eb9b911028473e3b500aafdd5bb21ac9e5f4162ef7f3f26a.png",
+      "sha256": "667c7113e8bb3c02eb9b911028473e3b500aafdd5bb21ac9e5f4162ef7f3f26a",
+      "normalized_sha256": "967bdf8ad8c383873f7515988975ec9e97abfc8f4b2b9387e626cd18253eafd6",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconFavors_bbqInvitation.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/BBQ_Invitation",
+        "source": "debug/v49/wiki/BBQ_Invitation.html",
+        "sha256": "44e121354e9d6490fe08a872a62ecb58e880b287688bc7261f2dc1b1d4272dbc",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/BBQ_Invitation.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING IS NO LONGER AVAILABLE ( This Unlockable can no longer be obtained and stockpiles can no longer be used. If it is an Event Unlockable , it may return with its associated Event. )  Has the distinct aroma of burnt flesh.  Calls upon The Entity for the following effects: Grants +100 % bonus Bloodpoints for hooking Survivors onto Summer Hooks .  Grants +100 % bonus Bloodpoints for repairing Summer Generators . The bonus Bloodpoints are applied during the Trial. BBQ Invitation was only available during the Scorching Summer BBQ 2023 Summer Event. \"Kick back and relax in the moonlight with an ice cold drink and some barbecued meat. The Entity has invited you to enjoy yourself this fine evening.\"   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/BBQ_Invitation",
+                "name": "BBQ Invitation"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconFavors_bbqInvitation.png?567a12"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Pages using Tabber parser tag\",\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"BBQ_Invitation\",\"wgRelevantArticleId\":9875,\"wgIsProbablyE",
+          ".wiki.gg/images/IconFavors_bbqInvitation.png?567a12\"},\"description\":\"BBQ Invitation is an Event Offering belonging to all Players.\\n20182023\",\"datePublished\":\"2018-07-14T21:19:48Z\",\"author\":{\"@type\":\"Organization\",\"name\":\"Official Dead by Daylight Wiki\",\"url\":\"https://deadbydayli",
+          "eved from \" https://deadbydaylight.wiki.gg/wiki/BBQ_Invitation?oldid=159928 \"  Category : Event Offerings Hidden category: Pages using Tabber parser tag          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use o"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Bloodshot_Eye",
+      "name": "Bloodshot Eye",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Spring",
+      "availability": "historical",
+      "entries": [
+        "wiki_survivor_common_offerings_f0f28345dfde",
+        "wiki_killer_common_offerings_f0f28345dfde"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/offerings/wiki_originals/f0f28345dfdedeb2647ed04020e741a120fc4ccc7d9e3f28ad11ce297ba07de3.png",
+      "normalized": "assets/survivors/offerings/wiki_normalized/f0f28345dfdedeb2647ed04020e741a120fc4ccc7d9e3f28ad11ce297ba07de3.png",
+      "sha256": "f0f28345dfdedeb2647ed04020e741a120fc4ccc7d9e3f28ad11ce297ba07de3",
+      "normalized_sha256": "67977cc66c283ec337c0dbd496d7823782bddcd9d45f0427d04debd98ff24ff6",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconFavors_bloodshotEye.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Bloodshot_Eye",
+        "source": "debug/v49/wiki/Bloodshot_Eye.html",
+        "sha256": "731b85a62700ddfb8da6747a4e7ce9f8e26077907e3bd32f0e1e4fb89143ac6e",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Bloodshot_Eye.txt",
+        "event_rows": [
+          {
+            "text": "   An eye filled with, and capable of finding, strange blood. Doubles all Bloodpoints awarded for triggering Score Events related to the Event.  The bonus Bloodpoints are applied during the Trial.  Bloodshot Eye is only available during Spring Events .  2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodshot_Eye",
+                "name": "Bloodshot Eye"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Score_Events",
+                "name": "Score Events"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconFavors_bloodshotEye.png?18eae1"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Pages using Tabber parser tag\",\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Bloodshot_Eye\",\"wgRelevantArticleId\":19847,\"wgIsProbablyE",
+          "ht.wiki.gg/images/IconFavors_bloodshotEye.png?18eae1\"},\"description\":\"Bloodshot Eye is an Event Offering belonging to all Players.\",\"datePublished\":\"2024-03-13T13:02:11Z\",\"author\":{\"@type\":\"Organization\",\"name\":\"Official Dead by Daylight Wiki\",\"url\":\"https://deadbydaylight.wiki.g",
+          "ieved from \" https://deadbydaylight.wiki.gg/wiki/Bloodshot_Eye?oldid=159926 \"  Category : Event Offerings Hidden category: Pages using Tabber parser tag          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use o"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Coconut_Scream_Pie",
+      "name": "Coconut Scream Pie",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_offerings_1b5343f5958e",
+        "wiki_killer_common_offerings_1b5343f5958e"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/offerings/wiki_originals/1b5343f5958e5e3061df67ae3f474d5c23412731dfaddd8a021ef98f46d49e32.png",
+      "normalized": "assets/survivors/offerings/wiki_normalized/1b5343f5958e5e3061df67ae3f474d5c23412731dfaddd8a021ef98f46d49e32.png",
+      "sha256": "1b5343f5958e5e3061df67ae3f474d5c23412731dfaddd8a021ef98f46d49e32",
+      "normalized_sha256": "42861cf6adde36f8fa5cd59111bd2665d98dc66f6c65a075e0dfacb026b07d90",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconsFavors_9thAnniversary.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Coconut_Scream_Pie",
+        "source": "debug/v49/wiki/Coconut_Scream_Pie.html",
+        "sha256": "b3199420faae0e1301bf33ed2639b67299d6e70b71c407fcc4fd252b8e128be7",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Coconut_Scream_Pie.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  \"A metallic taste overpowers the coconut.\"   All Players benefit from the following primary effect: Grants +109 % bonus Bloodpoints in all Scoring Categories . The bonus Bloodpoints are applied after exiting the Trial.. Additionally, you benefit from the following secondary effect: The Aura of the Invitation Pillar is revealed to you within 16 metres .  Coconut Scream Pie was only available during the Ninth Year Anniversary Anniversary Event. \"The secret ingredient is love... wait, no, that's blood. Happy Anniversary!\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Coconut_Scream_Pie",
+                "name": "Coconut Scream Pie"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Invitation_Pillar",
+                "name": "Invitation Pillar"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Invitation_Pillar",
+                "name": "Invitation Pillar"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Invitation_Pillar",
+                "name": "Invitation Pillar"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Invitation_Pillar",
+                "name": "Invitation Pillar"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconsFavors_9thAnniversary.png?21cf45"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Pages using Tabber parser tag\",\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Coconut_Scream_Pie\",\"wgRelevantArticleId\":29353,\"wgIsProb",
+          "gg/images/IconsFavors_9thAnniversary.png?21cf45\"},\"description\":\"Coconut Scream Pie is an Event Offering belonging to all Players. It is no longer available in the Bloodweb.\\n9.0.0\\nIcon\\nDescription\\nAll Players benefit from the following primary effect:\\nGrants +109 % bonus Blo",
+          " from \" https://deadbydaylight.wiki.gg/wiki/Coconut_Scream_Pie?oldid=162153 \"  Category : Event Offerings Hidden category: Pages using Tabber parser tag          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use o"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Cursed_Seed",
+      "name": "Cursed Seed",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Halloween",
+      "availability": "current_unconfirmed",
+      "entries": [
+        "wiki_survivor_common_offerings_5e435a47f246",
+        "wiki_killer_common_offerings_5e435a47f246"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/offerings/wiki_originals/5e435a47f246aab3f20c1b8bb507485daedc55a1d9db28db3d5a914eb336f4e7.png",
+      "normalized": "assets/survivors/offerings/wiki_normalized/5e435a47f246aab3f20c1b8bb507485daedc55a1d9db28db3d5a914eb336f4e7.png",
+      "sha256": "5e435a47f246aab3f20c1b8bb507485daedc55a1d9db28db3d5a914eb336f4e7",
+      "normalized_sha256": "b84d9ae64555772f168048e57884c25c847a83e6e9eb40cc16b5ac9458373bd7",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconFavors_cursedSeed.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Individual infobox indicates retired availability, while the Haunted by Daylight2026 overview lists returning unlockables. Current obtainability is unconfirmed without live evidence.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Cursed_Seed",
+        "source": "debug/v49/wiki/Cursed_Seed.html",
+        "sha256": "75ffda26bce0fc099b9500fc64ee18f8eb63b98a6854a566647b013b2175dc8c",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Cursed_Seed.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING IS NO LONGER AVAILABLE ( This Unlockable can no longer be obtained and stockpiles can no longer be used. If it is an Event Unlockable , it may return with its associated Event. )  Calls upon The Entity for the following effects:  Increases the number of Tangled Hooks in the environment by +1 .  Increases the number of Tangled Generators in the environment by +1 .  Grants bonus Bloodpoints for hooking Survivors for the first time onto a Tangled Hook .  Grants bonus Bloodpoints for repairing a Tangled Generator .  The bonus Bloodpoints are applied during the Trial.  Cursed Seed was only available during the The Midnight Grove 2021 Halloween Event. \"The seed crackles as if what is within is attempting to burst free.\"   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Cursed_Seed",
+                "name": "Cursed Seed"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconFavors_cursedSeed.png?756352"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Cursed_Seed\",\"wgRelevantArticleId\":12032,\"wgIsProbablyEdi",
+          "ylight.wiki.gg/images/IconFavors_cursedSeed.png?756352\"},\"description\":\"Cursed Seed is an Event Offering belonging to all Players. It is no longer available.\\nCursed Seed could only be collected and used during the The Midnight Grove Event, the 2021 Halloween Event.\",\"datePublish",
+          "trieved from \" https://deadbydaylight.wiki.gg/wiki/Cursed_Seed?oldid=167353 \"  Category : Event Offerings          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page wa"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Frightful_Flan",
+      "name": "Frightful Flan",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_offerings_756b808a70d6",
+        "wiki_killer_common_offerings_756b808a70d6"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/killers/offerings/wiki_originals/756b808a70d6df7611e79cca71177ef4d3e80346219d59e4a13bee94e52334ac.png",
+      "normalized": "assets/killers/offerings/wiki_normalized/756b808a70d6df7611e79cca71177ef4d3e80346219d59e4a13bee94e52334ac.png",
+      "sha256": "756b808a70d6df7611e79cca71177ef4d3e80346219d59e4a13bee94e52334ac",
+      "normalized_sha256": "637ac3e5d65da842f7b5b466863a043cf8f945086fc528ba1ca182b9911ab569",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconFavors_frightfulFlan.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Frightful_Flan",
+        "source": "debug/v49/wiki/Frightful_Flan.html",
+        "sha256": "ec7c6ab9512f16001a6b22e2e72e29a914af2019c8e9bb45b687393775253a75",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Frightful_Flan.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  It may be a masquerade ball, but there is no masking the foul odour of this quivering yellow mass. Consuming it, however, fills you with vigour.  Grants +106 % bonus Bloodpoints in all Scoring Categories to all Players. The bonus Bloodpoints are applied after exiting the Trial. Calls upon The Entity for the following effects: The Aura of the Crown Pillar is revealed to you purple within 8 metres .  Triggers a map-wide auditory cue when the Crown Pillar teleports to a new location.  Frightful Flan was only available during the Sixth Year Anniversary Anniversary Event. \"Happy Anniversary! We made you this cake/pie/pudding/unspeakable horror.\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Frightful_Flan",
+                "name": "Frightful Flan"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconFavors_frightfulFlan.png?f3fddf"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Frightful_Flan\",\"wgRelevantArticleId\":2369,\"wgIsProbablyE",
+          ".wiki.gg/images/IconFavors_frightfulFlan.png?f3fddf\"},\"description\":\"Frightful Flan is an Event Offering belonging to all Players. It is no longer available in the Bloodweb.\\nThe bonus percentage of 106 % is a reference to the Offering having been implemented to celebrate Dead by",
+          "ieved from \" https://deadbydaylight.wiki.gg/wiki/Frightful_Flan?oldid=10235 \"  Category : Event Offerings          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page wa"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Ghastly_Gateau",
+      "name": "Ghastly Gateau",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_offerings_f5eba2e0b5e7",
+        "wiki_killer_common_offerings_f5eba2e0b5e7"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/killers/offerings/wiki_originals/f5eba2e0b5e7e6dc1760787493b0f71c07ab8e797b1d3bd3deae15989266fd24.png",
+      "normalized": "assets/killers/offerings/wiki_normalized/f5eba2e0b5e7e6dc1760787493b0f71c07ab8e797b1d3bd3deae15989266fd24.png",
+      "sha256": "f5eba2e0b5e7e6dc1760787493b0f71c07ab8e797b1d3bd3deae15989266fd24",
+      "normalized_sha256": "4c204ba8e1cf3190c20e5e135dd90048875371180bfe94d828027c1cbbffc2ea",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconFavors_ghastlyGateau.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Ghastly_Gateau",
+        "source": "debug/v49/wiki/Ghastly_Gateau.html",
+        "sha256": "7e0d50f2e93580df60872ecf7088b8645dd9177d0405ad2e5c1980bf72779711",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Ghastly_Gateau.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  A spectacularly grim cake to mark our four years together.  One percent tastier than a Gruesome Gateau . Grants +104 % bonus Bloodpoints in all Scoring Categories to all Players. The bonus Bloodpoints are applied after exiting the Trial.  Ghastly Gateau was only available during the Fourth Year Anniversary Anniversary Event. \"Happy Anniversary! Here is to many more!\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Ghastly_Gateau",
+                "name": "Ghastly Gateau"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconFavors_ghastlyGateau.png?efca5e"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Ghastly_Gateau\",\"wgRelevantArticleId\":6617,\"wgIsProbablyE",
+          ".wiki.gg/images/IconFavors_ghastlyGateau.png?efca5e\"},\"description\":\"Ghastly Gateau is an Event Offering belonging to all Players. It is no longer available in the Bloodweb.\\nThe bonus percentage of 104 % is a reference to the Offering having been implemented to celebrate Dead by",
+          "ieved from \" https://deadbydaylight.wiki.gg/wiki/Ghastly_Gateau?oldid=31967 \"  Category : Event Offerings          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page wa"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Gruesome_Gateau",
+      "name": "Gruesome Gateau",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_offerings_05d81d058000",
+        "wiki_killer_common_offerings_05d81d058000"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/killers/offerings/wiki_originals/05d81d058000437bf03af8c638e2685dcb19df5e791c991481dc86f6029242ff.png",
+      "normalized": "assets/killers/offerings/wiki_normalized/05d81d058000437bf03af8c638e2685dcb19df5e791c991481dc86f6029242ff.png",
+      "sha256": "05d81d058000437bf03af8c638e2685dcb19df5e791c991481dc86f6029242ff",
+      "normalized_sha256": "748e651cf9956b4a4f53cf67c1b0bf93a246731e9ce6e8d8e56a91c5bc2c6c5f",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconFavors_gruesomeGateau.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Gruesome_Gateau",
+        "source": "debug/v49/wiki/Gruesome_Gateau.html",
+        "sha256": "13ff5c93161b223fd670a93ff6db2f16d079037d5d26dccae2a115db1afee995",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Gruesome_Gateau.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  A terrific stomach-churning cake to mark our three years together.  Grants +103 % bonus Bloodpoints in all Scoring Categories to all Players. The bonus Bloodpoints are applied after exiting the Trial.  Gruesome Gateau was only available during the Third Year Anniversary Anniversary Event. \"Happy Anniversary! Here is to our three years together!\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Gruesome_Gateau",
+                "name": "Gruesome Gateau"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconFavors_gruesomeGateau.png?344e3b"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Gruesome_Gateau\",\"wgRelevantArticleId\":16624,\"wgIsProbabl",
+          "iki.gg/images/IconFavors_gruesomeGateau.png?344e3b\"},\"description\":\"Gruesome Gateau is an Event Offering belonging to all Players. It is no longer available in the Bloodweb.\\nThe bonus percentage of 103 % is a reference to the Offering having been implemented to celebrate Dead by",
+          "eved from \" https://deadbydaylight.wiki.gg/wiki/Gruesome_Gateau?oldid=83575 \"  Category : Event Offerings          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page wa"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Mistle_Toes",
+      "name": "Mistle Toes",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Winter",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_offerings_e5ed04c75213",
+        "wiki_killer_common_offerings_e5ed04c75213"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/offerings/wiki_originals/e5ed04c752131304abf6a4af24e24aecc0a464495f1aa88645b4105a430b16ca.png",
+      "normalized": "assets/survivors/offerings/wiki_normalized/e5ed04c752131304abf6a4af24e24aecc0a464495f1aa88645b4105a430b16ca.png",
+      "sha256": "e5ed04c752131304abf6a4af24e24aecc0a464495f1aa88645b4105a430b16ca",
+      "normalized_sha256": "23ae8e60cb7802477032f427a4a122424db704d759ef32217bb413c8b078b609",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconsFavors_Winter.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Mistle_Toes",
+        "source": "debug/v49/wiki/Mistle_Toes.html",
+        "sha256": "d8612cd9f6a5f1c534f30fd0660058e46d8da36a4c5b6c6e799ee2d1729fe68b",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Mistle_Toes.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING IS NO LONGER AVAILABLE ( This Unlockable can no longer be obtained and stockpiles can no longer be used. If it is an Event Unlockable , it may return with its associated Event. )  If you see these things hanging over you, the last thing you'll want is a kiss.  Calls upon The Entity for the following effects: Start the Trial with 12  Snowskulls .  Reduces the number of Snowskulls required to charge an Icy Snowskull by -1 .  Doubles all Bloodpoints awarded for triggering Score Events related to the Event.  Increases the number of Chests in the environment by +1 . The bonus Bloodpoints are applied during the Trial. Mistle Toes is only available during the Bone Chill Winter Event.  2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Mistle_Toes",
+                "name": "Mistle Toes"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Score_Events",
+                "name": "Score Events"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Chest",
+                "name": "Chest"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Chest",
+                "name": "Chest"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Chest",
+                "name": "Chest"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Chest",
+                "name": "Chest"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconsFavors_Winter.png?2d7b0e"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Pages using Tabber parser tag\",\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Mistle_Toes\",\"wgRelevantArticleId\":28044,\"wgIsProbablyEdi",
+          "ydaylight.wiki.gg/images/IconsFavors_Winter.png?2d7b0e\"},\"description\":\"Mistle Toes is an Event Offering belonging to all Players.\",\"datePublished\":\"2024-12-13T10:48:56Z\",\"author\":{\"@type\":\"Organization\",\"name\":\"Official Dead by Daylight Wiki\",\"url\":\"https://deadbydaylight.wiki.g",
+          "trieved from \" https://deadbydaylight.wiki.gg/wiki/Mistle_Toes?oldid=169528 \"  Category : Event Offerings Hidden category: Pages using Tabber parser tag          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use o"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Pustula_Petals",
+      "name": "Pustula Petals",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Halloween",
+      "availability": "current_unconfirmed",
+      "entries": [
+        "wiki_survivor_common_offerings_a6b005b412a8",
+        "wiki_killer_common_offerings_a6b005b412a8"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/offerings/wiki_originals/a6b005b412a8c275d65a7399fe8e7af6bc13e2cd8a6a30e0ce613cc2fa6f7198.png",
+      "normalized": "assets/survivors/offerings/wiki_normalized/a6b005b412a8c275d65a7399fe8e7af6bc13e2cd8a6a30e0ce613cc2fa6f7198.png",
+      "sha256": "a6b005b412a8c275d65a7399fe8e7af6bc13e2cd8a6a30e0ce613cc2fa6f7198",
+      "normalized_sha256": "1a6363dd393f257ca9db2750b43a8cdf004e52a69307aa0cf1a8af80de37301a",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconFavors_pustulaPetals.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Individual infobox indicates retired availability, while the Haunted by Daylight2026 overview lists returning unlockables. Current obtainability is unconfirmed without live evidence.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Pustula_Petals",
+        "source": "debug/v49/wiki/Pustula_Petals.html",
+        "sha256": "c96734b9215c3ab387a038b734bc4abefd1c3e7aed1c260f1d291244cbe1c92f",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Pustula_Petals.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING IS NO LONGER AVAILABLE ( This Unlockable can no longer be obtained and stockpiles can no longer be used. If it is an Event Unlockable , it may return with its associated Event. )  Calls upon The Entity for the following effects:  Increases the number of Blighted Hooks in the environment by +1 .  Increases the number of Blighted Generators in the environment by +1 .  Grants bonus Bloodpoints for hooking Survivors for the first time onto a Blighted Hook .  Grants bonus Bloodpoints for repairing a Blighted Generator .  The bonus Bloodpoints are applied during the Trial.  Pustula Petals was only available during the The Eternal Blight 2020 Halloween Event. \"The Pustulas fill the air with a rancid odour that some may find enticing.\"   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Pustula_Petals",
+                "name": "Pustula Petals"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconFavors_pustulaPetals.png?defff7"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Pages using Tabber parser tag\",\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Pustula_Petals\",\"wgRelevantArticleId\":26861,\"wgIsProbably",
+          ".wiki.gg/images/IconFavors_pustulaPetals.png?defff7\"},\"description\":\"Pustula Petals is an Event Offering belonging to all Players. It is no longer available.\",\"datePublished\":\"2018-10-07T15:34:42Z\",\"author\":{\"@type\":\"Organization\",\"name\":\"Official Dead by Daylight Wiki\",\"url\":\"ht",
+          "eved from \" https://deadbydaylight.wiki.gg/wiki/Pustula_Petals?oldid=167354 \"  Category : Event Offerings Hidden category: Pages using Tabber parser tag          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use o"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Red_Envelope",
+      "name": "Red Envelope",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Lunar/Spring",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_offerings_0238dd1362c2",
+        "wiki_killer_common_offerings_0238dd1362c2"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/offerings/wiki_originals/0238dd1362c2b88919d9c2fb6f83a17a8309056f8d794807a56215048a1e2f95.png",
+      "normalized": "assets/survivors/offerings/wiki_normalized/0238dd1362c2b88919d9c2fb6f83a17a8309056f8d794807a56215048a1e2f95.png",
+      "sha256": "0238dd1362c2b88919d9c2fb6f83a17a8309056f8d794807a56215048a1e2f95",
+      "normalized_sha256": "c68789634c495c0d7d493bb039cce96f27a3d3f4dc94908369b3bb69608327fa",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconFavors_redEnvelope.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Red_Envelope",
+        "source": "debug/v49/wiki/Red_Envelope.html",
+        "sha256": "50a74c7aff02b628635e5dc2df01617c8f96c16a3773a6b9b09b3f2b2f043cb5",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Red_Envelope.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING IS NO LONGER AVAILABLE ( This Unlockable can no longer be obtained and stockpiles can no longer be used. If it is an Event Unlockable , it may return with its associated Event. )  A gesture of generosity to bring good fortune to the unfortunate.  Calls upon The Entity for the following effects: Spawns 1  Red Envelope per Player. The Aura of your Red Envelope is revealed to you at the start of the Trial.  Interacting with your Red Envelope reveals its Aura to all other Players in the Trial until it is claimed.  Opening another Player's Red Envelope triggers the Rabbit's Blessing Score Event, which awards a semi-random amount of Bloodpoints .  When another Player opens your Red Envelope during the Trial, you are awarded Bloodpoints and a Cosmetic from the Moonlight Burrow Collection.  As Killer, hooking a Survivor onto a Lunar Hook triggers the Lunar Celebration Hook Score Event, which awards bonus Bloodpoints.  As Survivor, finishing a Lunar Generator triggers the Lunar Celebration Generator Score Event, which awards bonus Bloodpoints. The bonus Bloodpoints are applied during the Trial. Red Envelope was only available during the Moonlight Burrow 2023 Lunar Event.  2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Red_Envelope",
+                "name": "Red Envelope"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconFavors_redEnvelope.png?9a93c6"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Pages using Tabber parser tag\",\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Red_Envelope\",\"wgRelevantArticleId\":5171,\"wgIsProbablyEdi",
+          "ight.wiki.gg/images/IconFavors_redEnvelope.png?9a93c6\"},\"description\":\"Red Envelope is an Event Offering belonging to all Players.\\nHowling Grounds (2018)Moonrise (2019)Gilded Stampede (2021)Lurking Stripes (2022)Moonlight Burrow (2023)\\nThe Rabbit's Blessing Score Event awards a",
+          "rieved from \" https://deadbydaylight.wiki.gg/wiki/Red_Envelope?oldid=167355 \"  Category : Event Offerings Hidden category: Pages using Tabber parser tag          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use o"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Sacrificial_Cake",
+      "name": "Sacrificial Cake",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_offerings_fd8e722b7dec",
+        "wiki_killer_common_offerings_fd8e722b7dec"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/killers/offerings/wiki_originals/fd8e722b7dec027c6732fd45c77ce693143fed6237710966df0eb7b3caca0524.png",
+      "normalized": "assets/killers/offerings/wiki_normalized/fd8e722b7dec027c6732fd45c77ce693143fed6237710966df0eb7b3caca0524.png",
+      "sha256": "fd8e722b7dec027c6732fd45c77ce693143fed6237710966df0eb7b3caca0524",
+      "normalized_sha256": "ae561e4c9d2df4d4eb4fe2524595cd43ec57aa4a8f4efa30d5a4591ff7cbbc2c",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconFavors_sacrificialCake.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Sacrificial_Cake",
+        "source": "debug/v49/wiki/Sacrificial_Cake.html",
+        "sha256": "dc4d1797cb234a64d50954fb35510b3c4e56b69131c818d9d1ac9c3ea6d14522",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Sacrificial_Cake.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  A revolting cake that marks our five years together. Grants +105 % bonus Bloodpoints in all Scoring Categories to all Players.  The bonus Bloodpoints are applied after exiting the Trial.  Calls upon The Entity for the following effects:  The Aura of the Crown Pillar is revealed to you in purple within 8 metres .  Triggers a map-wide auditory cue when the Crown Pillar teleports to a new location.  Sacrificial Cake was only available during the Fifth Year Anniversary Event .  \"Happy Anniversary! We are dying to celebrate many more with you!\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Sacrificial_Cake",
+                "name": "Sacrificial Cake"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconFavors_sacrificialCake.png?bcfd7d"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Sacrificial_Cake\",\"wgRelevantArticleId\":10424,\"wgIsProbab",
+          "i.gg/images/IconFavors_sacrificialCake.png?bcfd7d\"},\"description\":\"Sacrificial Cake is an Event Offering belonging to all Players. It is no longer available in the Bloodweb.\\nWhen the Crown Pillar moves location or is initially spawned, the following sound cue will play for the O",
+          "ved from \" https://deadbydaylight.wiki.gg/wiki/Sacrificial_Cake?oldid=51421 \"  Category : Event Offerings          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page wa"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Screech_Cobbler",
+      "name": "Screech Cobbler",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_offerings_b92e81b84238",
+        "wiki_killer_common_offerings_b92e81b84238"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/killers/offerings/wiki_originals/b92e81b84238c9e7f8f14f779d1894165dba3c30376748bbc0fdb5cdc981d6de.png",
+      "normalized": "assets/killers/offerings/wiki_normalized/b92e81b84238c9e7f8f14f779d1894165dba3c30376748bbc0fdb5cdc981d6de.png",
+      "sha256": "b92e81b84238c9e7f8f14f779d1894165dba3c30376748bbc0fdb5cdc981d6de",
+      "normalized_sha256": "b70aef7aee27f51bc62e6d46b08f31554a4fd03055e553db1eca49f46b531d58",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconFavors_screechCobbler.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Screech_Cobbler",
+        "source": "debug/v49/wiki/Screech_Cobbler.html",
+        "sha256": "b1e0aa6d873fadccb9898f8999fd651478e8b9bf0d220232c67070ddb609139e",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Screech_Cobbler.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  If you listen really closely, you can almost hear it screaming for more ice cream.  Grants 108 % bonus Bloodpoints in all Categories to all Players. The bonus Bloodpoints are applied after exiting the Trial. Calls upon The Entity for the following effects: Increases the Aura-reveal distance of the Masquerade Pillars by +8 metres .  Increases the number of Chests in the environment by +1 .  Screech Cobbler was only available during the Eighth Year Anniversary Event . \"Happy anniversary! Hope this comfort food isn't too... discomforting.\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Screech_Cobbler",
+                "name": "Screech Cobbler"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Chest",
+                "name": "Chest"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Chest",
+                "name": "Chest"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Chest",
+                "name": "Chest"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Chest",
+                "name": "Chest"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconFavors_screechCobbler.png?1bcdd0"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Screech_Cobbler\",\"wgRelevantArticleId\":11608,\"wgIsProbabl",
+          "iki.gg/images/IconFavors_screechCobbler.png?1bcdd0\"},\"description\":\"Screech Cobbler is an Event Offering belonging to all Players. It is no longer available in the Bloodweb.\\nThe bonus percentage of 108 % is a reference to the Offering having been implemented to celebrate Dead by",
+          "ved from \" https://deadbydaylight.wiki.gg/wiki/Screech_Cobbler?oldid=159845 \"  Category : Event Offerings          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page wa"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Terrormisu",
+      "name": "Terrormisu",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_offerings_281092594908",
+        "wiki_killer_common_offerings_281092594908"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/killers/offerings/wiki_originals/281092594908fd9fa52743eec218ac30226345070a13f5495e1990d625d8c15b.png",
+      "normalized": "assets/killers/offerings/wiki_normalized/281092594908fd9fa52743eec218ac30226345070a13f5495e1990d625d8c15b.png",
+      "sha256": "281092594908fd9fa52743eec218ac30226345070a13f5495e1990d625d8c15b",
+      "normalized_sha256": "1e57696d0c90a59724b7e9bea89760daf0b42da5587b945c1ac6f848e8bf2f24",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconFavors_terrormisu.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Terrormisu",
+        "source": "debug/v49/wiki/Terrormisu.html",
+        "sha256": "b4ed60093093911364af333390e42e89d758dabe0f933088ee6ba20c1e547192",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Terrormisu.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING CAN NO LONGER BE OBTAINED FROM THE BLOODWEB ( This Unlockable can no longer be obtained, but stockpiles may still be used in Trials. )  A celebratory dessert to be eaten during the masquerade. Each layer is more horrifying than the last.  Grants 107 % bonus Bloodpoints in all Categories to all Players. The bonus Bloodpoints are applied after exiting the Trial. Calls upon The Entity for the following effect: The Aura of the Masquerade Pillar is revealed to you in purple within 32 metres .  Terrormisu was only available during the Seventh Year Anniversary Event . \"Thanks for celebrating our Anniversary! Don't ask why it's so spongy.\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Terrormisu",
+                "name": "Terrormisu"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Entity",
+                "name": "Entity"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconFavors_terrormisu.png?165ae1"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Terrormisu\",\"wgRelevantArticleId\":20775,\"wgIsProbablyEdit",
+          "aylight.wiki.gg/images/IconFavors_terrormisu.png?165ae1\"},\"description\":\"Terrormisu is an Event Offering belonging to all Players. It is no longer available in the Bloodweb.\\nThe bonus percentage of 107 % is a reference to the Offering having been implemented to celebrate Dead by",
+          "etrieved from \" https://deadbydaylight.wiki.gg/wiki/Terrormisu?oldid=103887 \"  Category : Event Offerings          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page wa"
+        ]
+      },
+      "original_link_still_present": true
+    },
+    {
+      "page": "https://deadbydaylight.wiki.gg/wiki/Toothy_Torte",
+      "name": "Toothy Torte",
+      "category": "offerings",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Category:Event_Offerings",
+      "enumeration_sha256": "0d374456a4ac3d04696a1646c06142de3faceed4aa63e78373922a7d2761dea0",
+      "existing": true,
+      "roles": [
+        "survivor",
+        "killer"
+      ],
+      "event": "Anniversary",
+      "availability": "not_obtainable",
+      "entries": [
+        "wiki_survivor_common_offerings_ffead575e245",
+        "wiki_killer_common_offerings_ffead575e245"
+      ],
+      "name_ru": null,
+      "name_ru_status": "not_verified; official English name retained in both UI languages",
+      "original": "assets/survivors/offerings/wiki_originals/ffead575e24588e430f69c9092fae59b89f9a8913a713ee2cd03466085c3eb4d.png",
+      "normalized": "assets/survivors/offerings/wiki_normalized/ffead575e24588e430f69c9092fae59b89f9a8913a713ee2cd03466085c3eb4d.png",
+      "sha256": "ffead575e24588e430f69c9092fae59b89f9a8913a713ee2cd03466085c3eb4d",
+      "normalized_sha256": "eb1476fe764091457ce4f9a9cbae0f526442d32699b300409c5dfa36b45b247e",
+      "source_url": "https://deadbydaylight.wiki.gg/images/IconsFavors_10thAnniversary.png",
+      "rarity_by_role": {
+        "survivor": "brown",
+        "killer": "brown"
+      },
+      "gameplay_verified": false,
+      "availability_note": "Current infobox says this unlockable is no longer available/obtainable. Historical event documentation is not evidence of current Bloodweb availability.",
+      "individual_source": {
+        "page": "https://deadbydaylight.wiki.gg/wiki/Toothy_Torte",
+        "source": "debug/v49/wiki/Toothy_Torte.html",
+        "sha256": "8553f0375866de0e976e345815038ac1dc68861947b63cb7ce6fb3214a8b64ef",
+        "category_members": [],
+        "text_source": "debug/v49/wiki/Toothy_Torte.txt",
+        "event_rows": [
+          {
+            "text": "   THIS OFFERING IS NO LONGER AVAILABLE ( This Unlockable can no longer be obtained and stockpiles can no longer be used. If it is an Event Unlockable , it may return with its associated Event. )  \"Puts the icing in sacrificing.\"   All Players benefit from the following primary effect: Grants +110 % bonus Bloodpoints in all Scoring Categories . The bonus Bloodpoints are applied after exiting the Trial.. Additionally, you benefit from the following secondary effect: The Aura of the Banquet Table is revealed to you within 16 metres .  Killer : start with maximum Poison charges.  Survivor : start with a Morsel .  Toothy Torte is only available during the Tenth Year Anniversary Anniversary Event. \"Chew fast, or it'll chew you right back. Thanks for celebrating with us!\" — The Dead by Daylight Team   2,000 ",
+            "links": [
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Toothy_Torte",
+                "name": "Toothy Torte"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Bloodpoints",
+                "name": "Bloodpoints"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Aura",
+                "name": "Aura"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Killer",
+                "name": "Killer"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Killer",
+                "name": "Killer"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Killer",
+                "name": "Killer"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Killer",
+                "name": "Killer"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Survivor",
+                "name": "Survivor"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Survivor",
+                "name": "Survivor"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Survivor",
+                "name": "Survivor"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/Survivor",
+                "name": "Survivor"
+              },
+              {
+                "page": "https://deadbydaylight.wiki.gg/wiki/File:IconHelp_bloodpoints.png",
+                "name": ""
+              }
+            ],
+            "images": [
+              "/images/IconsFavors_10thAnniversary.png?c0ec5b"
+            ]
+          }
+        ],
+        "event_mentions": [
+          "Redirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Event Offerings\"],\"wgPageViewLanguage\":\"en-gb\",\"wgPageContentLanguage\":\"en-gb\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"Toothy_Torte\",\"wgRelevantArticleId\":34753,\"wgIsProbablyEd",
+          "wiki.gg/images/IconsFavors_10thAnniversary.png?c0ec5b\"},\"description\":\"Toothy Torte is an Event Offering belonging to all Players.\",\"datePublished\":\"2026-06-27T13:03:29Z\",\"author\":{\"@type\":\"Organization\",\"name\":\"Official Dead by Daylight Wiki\",\"url\":\"https://deadbydaylight.wiki.g",
+          "rieved from \" https://deadbydaylight.wiki.gg/wiki/Toothy_Torte?oldid=186475 \"  Category : Event Offerings          Report bad advertisement           Cookies help us deliver our services. By using our services, you agree to our use of cookies. More information OK     This page wa"
+        ]
+      },
+      "original_link_still_present": true
+    }
+  ],
+  "new_missing": [],
+  "general_tables_and_event_overviews": [
+    {
+      "name": "Chinese Firecracker",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Chinese_Firecracker",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_chineseFirecracker.png?622685"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Third Year Party Starter",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Third_Year_Party_Starter",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_thirdYearPartyStarter.png?347e6b"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Winter Party Starter",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Winter_Party_Starter",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_winterPartyStarter.png?c4c42b"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Anniversary Flashlight",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Flashlight",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_anniversaryFlashlight.png?983482"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Banquet Flashlight",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Flashlight",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/T_UI_iconItems_flashlight_anniversary2026.png?1caa99"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Masquerade Flashlight",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Masquerade_Flashlight",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_masqueradeFlashlight.png?fe8294"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Will O' Wisp",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Will_O%27_Wisp",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_willOWisp.png?2ee5ef"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "All Hallows' Eve Lunchbox",
+      "page": "https://deadbydaylight.wiki.gg/wiki/All_Hallows%27_Eve_Lunchbox",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_allHallowsEveLunchbox.png?3c0bf6"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Anniversary Med-Kit",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Med-Kit",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_anniversaryMedKit.png?43eff4"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Banquet Med-Kit",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Med-Kit",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/T_UI_iconItems_medkit_anniversary2026.png?410cab"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Masquerade Med-Kit",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Masquerade_Med-Kit",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_masqueradeMedKit.png?1a416b"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Anniversary Toolbox",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Anniversary_Toolbox",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_anniversaryToolbox.png?692e50"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Banquet Toolbox",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Toolbox",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/T_UI_iconItems_toolbox_anniversary2026.png?705336"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Festive Toolbox",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Festive_Toolbox",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_festiveToolbox.png?50ce71"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Masquerade Toolbox",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Masquerade_Toolbox",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_masqueradeToolbox.png?8ef654"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Blood Can",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Blood_Can",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/T_UI_iconItems_LimitedJerryCan.png?ba5ae1"
+      ],
+      "catalog_present": false,
+      "scope": "review required; may be Trial-only, obsolete or ordinary rarity"
+    },
+    {
+      "name": "Void Crystal",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Void_Crystal",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Items",
+      "images": [
+        "/images/IconItems_voidCrystal.png?730b51"
+      ],
+      "catalog_present": false,
+      "scope": "review required; may be Trial-only, obsolete or ordinary rarity"
+    },
+    {
+      "name": "Blight Serum",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Blight_Serum",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+      "images": [
+        "/images/IconAddon_blightSerum.png?38ab12"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Broken Bulb",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Broken_Bulb",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+      "images": [
+        "/images/IconAddon_brokenBulb.png?ba269e"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Refined Serum",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Refined_Serum",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+      "images": [
+        "/images/IconAddon_refinedSerum.png?bbd946"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Coconut Scream Pie",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Coconut_Scream_Pie",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconsFavors_9thAnniversary.png?21cf45"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Frightful Flan",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Frightful_Flan",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconFavors_frightfulFlan.png?f3fddf"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Ghastly Gateau",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Ghastly_Gateau",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconFavors_ghastlyGateau.png?efca5e"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Gruesome Gateau",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Gruesome_Gateau",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconFavors_gruesomeGateau.png?344e3b"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Sacrificial Cake",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Sacrificial_Cake",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconFavors_sacrificialCake.png?bcfd7d"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Screech Cobbler",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Screech_Cobbler",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconFavors_screechCobbler.png?1bcdd0"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Terrormisu",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Terrormisu",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconFavors_terrormisu.png?165ae1"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Toothy Torte",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Toothy_Torte",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconsFavors_10thAnniversary.png?c0ec5b"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Arcane Dousing Rod",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Arcane_Dousing_Rod",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconFavors_arcaneDousingRod.png?b14179"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Cursed Seed",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Cursed_Seed",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconFavors_cursedSeed.png?756352"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Pustula Petals",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Pustula_Petals",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconFavors_pustulaPetals.png?defff7"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Red Envelope",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Red_Envelope",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconFavors_redEnvelope.png?9a93c6"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Bloodshot Eye",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Bloodshot_Eye",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconFavors_bloodshotEye.png?18eae1"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "BBQ Invitation",
+      "page": "https://deadbydaylight.wiki.gg/wiki/BBQ_Invitation",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Offerings",
+      "images": [
+        "/images/IconFavors_bbqInvitation.png?567a12"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Coconut Scream Pie",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Coconut_Scream_Pie",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Anniversaries",
+      "images": [
+        "/images/IconsFavors_9thAnniversary.png?21cf45"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Frightful Flan",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Frightful_Flan",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Anniversaries",
+      "images": [
+        "/images/IconFavors_frightfulFlan.png?f3fddf"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Ghastly Gateau",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Ghastly_Gateau",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Anniversaries",
+      "images": [
+        "/images/IconFavors_ghastlyGateau.png?efca5e"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Gruesome Gateau",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Gruesome_Gateau",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Anniversaries",
+      "images": [
+        "/images/IconFavors_gruesomeGateau.png?344e3b"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Sacrificial Cake",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Sacrificial_Cake",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Anniversaries",
+      "images": [
+        "/images/IconFavors_sacrificialCake.png?bcfd7d"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Screech Cobbler",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Screech_Cobbler",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Anniversaries",
+      "images": [
+        "/images/IconFavors_screechCobbler.png?1bcdd0"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Terrormisu",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Terrormisu",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Anniversaries",
+      "images": [
+        "/images/IconFavors_terrormisu.png?165ae1"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Toothy Torte",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Toothy_Torte",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Anniversaries",
+      "images": [
+        "/images/IconsFavors_10thAnniversary.png?c0ec5b"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Blood Can",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Blood_Can",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Blood_Moon_2026",
+      "images": [
+        "/images/T_UI_iconItems_LimitedJerryCan.png?ba5ae1"
+      ],
+      "catalog_present": false,
+      "scope": "review required; may be Trial-only, obsolete or ordinary rarity"
+    },
+    {
+      "name": "Bloodshot Eye",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Bloodshot_Eye",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Blood_Moon_2026",
+      "images": [
+        "/images/IconFavors_bloodshotEye.png?18eae1"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Winter Party Starter",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Winter_Party_Starter",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Bone_Chill_2025",
+      "images": [
+        "/images/IconItems_winterPartyStarter.png?c4c42b"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Mistle Toes",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Mistle_Toes",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Bone_Chill_2025",
+      "images": [
+        "/images/IconsFavors_Winter.png?2d7b0e"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Winter Party Starter",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Winter_Party_Starter",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Bone_Chill_2026",
+      "images": [
+        "/images/IconItems_winterPartyStarter.png?c4c42b"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Mistle Toes",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Mistle_Toes",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Bone_Chill_2026",
+      "images": [
+        "/images/IconsFavors_Winter.png?2d7b0e"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "All Hallows' Eve Lunchbox",
+      "page": "https://deadbydaylight.wiki.gg/wiki/All_Hallows%27_Eve_Lunchbox",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Haunted_by_Daylight_2026",
+      "images": [
+        "/images/IconItems_allHallowsEveLunchbox.png?3c0bf6"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Will O' Wisp",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Will_O%27_Wisp",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Haunted_by_Daylight_2026",
+      "images": [
+        "/images/IconItems_willOWisp.png?2ee5ef"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Void Crystal",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Void_Crystal",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Haunted_by_Daylight_2026",
+      "images": [
+        "/images/IconItems_voidCrystal.png?730b51"
+      ],
+      "catalog_present": false,
+      "scope": "review required; may be Trial-only, obsolete or ordinary rarity"
+    },
+    {
+      "name": "Blight Serum",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Blight_Serum",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Haunted_by_Daylight_2026",
+      "images": [
+        "/images/IconAddon_blightSerum.png?38ab12"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Broken Bulb",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Broken_Bulb",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Haunted_by_Daylight_2026",
+      "images": [
+        "/images/IconAddon_brokenBulb.png?ba269e"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Refined Serum",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Refined_Serum",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Haunted_by_Daylight_2026",
+      "images": [
+        "/images/IconAddon_refinedSerum.png?bbd946"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Arcane Dousing Rod",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Arcane_Dousing_Rod",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Haunted_by_Daylight_2026",
+      "images": [
+        "/images/IconFavors_arcaneDousingRod.png?b14179"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Banquet Flashlight",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Flashlight",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Black_Banquet_2026",
+      "images": [
+        "/images/T_UI_iconItems_flashlight_anniversary2026.png?1caa99"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Banquet Med-Kit",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Med-Kit",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Black_Banquet_2026",
+      "images": [
+        "/images/T_UI_iconItems_medkit_anniversary2026.png?410cab"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Banquet Toolbox",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Banquet_Toolbox",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Black_Banquet_2026",
+      "images": [
+        "/images/T_UI_iconItems_toolbox_anniversary2026.png?705336"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    },
+    {
+      "name": "Toothy Torte",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Toothy_Torte",
+      "enumeration_source": "https://deadbydaylight.wiki.gg/wiki/Black_Banquet_2026",
+      "images": [
+        "/images/IconsFavors_10thAnniversary.png?c0ec5b"
+      ],
+      "catalog_present": true,
+      "scope": "catalog event unlockable"
+    }
+  ],
+  "counts": {
+    "items": 16,
+    "survivor_addons": 2,
+    "killer_common_addons": 1,
+    "offerings": 15,
+    "originals": 34,
+    "role_ids": 49,
+    "existing_originals": 34,
+    "new_originals": 0
+  },
+  "excluded_scope": "Limited Trial objects and cosmetics are not Bloodweb unlockables. Permanent first-anniversary introductions are audited separately.",
+  "localization_limit": "Verified RU names were not available from the official English Wiki; no invented official Russian translations.",
+  "trial_only_exclusions": [
+    {
+      "name": "Blood Can",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Blood_Can",
+      "reason": "Limited item obtained inside Trial, cannot be carried out or selected in Bloodweb"
+    },
+    {
+      "name": "Void Crystal",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Void_Crystal",
+      "reason": "Limited item obtained inside Trial, cannot be carried out or selected in Bloodweb"
+    },
+    {
+      "name": "Blood Can",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Blood_Can",
+      "reason": "Limited item obtained inside Trial, cannot be carried out or selected in Bloodweb"
+    },
+    {
+      "name": "Void Crystal",
+      "page": "https://deadbydaylight.wiki.gg/wiki/Void_Crystal",
+      "reason": "Limited item obtained inside Trial, cannot be carried out or selected in Bloodweb"
+    }
+  ],
+  "permanent_event_introductions": [
+    {
+      "name": "Escape! Cake",
+      "source": "https://deadbydaylight.wiki.gg/wiki/1_Year_Anniversary",
+      "category": "offerings",
+      "rarity": "ordinary, introduced by an event; not Event rarity",
+      "original_url": "https://deadbydaylight.wiki.gg/images/IconFavors_escapeCake.png",
+      "sha256": "6bcafadea8ad8e3640972ce54d121abf2c31a3c518cf7d2a6072d0d05e9a78a8",
+      "existing_ids": [
+        "survivor_offering_037"
+      ],
+      "original_cached": true,
+      "active": true,
+      "note": "Cached ordinary icon without a verified active ID stays pending; it is not a missing Event rarity original."
+    },
+    {
+      "name": "Survivor Pudding",
+      "source": "https://deadbydaylight.wiki.gg/wiki/1_Year_Anniversary",
+      "category": "offerings",
+      "rarity": "ordinary, introduced by an event; not Event rarity",
+      "original_url": "https://deadbydaylight.wiki.gg/images/IconFavors_survivorPudding.png",
+      "sha256": "7c033793e2ddd7f015c540e831c45ab7e3b4b88dd6a700c90be6b736e96bdc90",
+      "existing_ids": [
+        "killer_offering_042"
+      ],
+      "original_cached": true,
+      "active": true,
+      "note": "Cached ordinary icon without a verified active ID stays pending; it is not a missing Event rarity original."
+    },
+    {
+      "name": "Bloody Party Streamers",
+      "source": "https://deadbydaylight.wiki.gg/wiki/1_Year_Anniversary",
+      "category": "offerings",
+      "rarity": "ordinary, introduced by an event; not Event rarity",
+      "original_url": "https://deadbydaylight.wiki.gg/images/IconFavors_bloodyPartyStreamers.png",
+      "sha256": "d64de027f6cc66461ab020f8ac6ddcdd2e743557e9a7cd8acc85cbb299ef0662",
+      "existing_ids": [],
+      "original_cached": true,
+      "active": false,
+      "note": "Cached ordinary icon without a verified active ID stays pending; it is not a missing Event rarity original."
+    }
+  ],
+  "visual_scope": "Two event identities visually checked on real frames; gameplay_verified remains separate from visual presence."
+}

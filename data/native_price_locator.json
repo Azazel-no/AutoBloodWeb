@@ -1,0 +1,14 @@
+{
+  "source": "references/bloodweb/v_rc1_ui/native_price_locator_source.png",
+  "sha256": "c85e5ea9203ba669e911fcdd2cdc3e0aa93f539214d6fe767aee6dda2839bee1",
+  "currency_box": [
+    1157,
+    662,
+    28,
+    29
+  ],
+  "client_size": [
+    1920,
+    1080
+  ]
+}

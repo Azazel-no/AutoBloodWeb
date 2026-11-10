@@ -1,0 +1,399 @@
+{
+  "scope": "Six genuinely missing glyphs visually compared with captured crops and original/normalized Wiki files. Development, not independent accuracy.",
+  "source_proposals": "debug/v46/survivor_proposals.json",
+  "visual_review": "debug/v46/survivor_visual_review.png",
+  "visual_review_sha256": "6dc252e949f9a8dabb4734ba4f0bd1e3d684f106febabdafa1d079a46e229cff",
+  "manual_visual_review": true,
+  "proposals": [
+    {
+      "source": "tests/fixtures/v45/dwight43_holdout.png",
+      "roi": [
+        264,
+        142,
+        840,
+        840
+      ],
+      "x": 420,
+      "y": 298,
+      "node": 1,
+      "old_reason": "contour_mismatch",
+      "new": "wiki_survivor_common_addons_7c95f200a9d5",
+      "score": 0.9675,
+      "margin": 0.266,
+      "contour": 0.9923,
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_tirOptic.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_tirOptic.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "7c95f200a9d5f2001953306e1a2cda896cc17104a9d71ea2eb5a103faf466181",
+        "original": "assets/survivors/addons/wiki_originals/7c95f200a9d5f2001953306e1a2cda896cc17104a9d71ea2eb5a103faf466181.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/7c95f200a9d5f2001953306e1a2cda896cc17104a9d71ea2eb5a103faf466181.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_7c95f200a9d5"
+      }
+    },
+    {
+      "source": "tests/fixtures/v45/dwight43_holdout.png",
+      "roi": [
+        264,
+        142,
+        840,
+        840
+      ],
+      "x": 315,
+      "y": 358,
+      "node": 6,
+      "old_reason": "contour_mismatch",
+      "new": "wiki_survivor_common_addons_7f9a9fb8e96d",
+      "score": 0.9776,
+      "margin": 0.1483,
+      "contour": 0.9573,
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_selfAdherentWrap.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_selfAdherentWrap.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "7f9a9fb8e96dd0f03a855d3601f8b1e7baa4d39d61aed717e6221ca71f307c97",
+        "original": "assets/survivors/addons/wiki_originals/7f9a9fb8e96dd0f03a855d3601f8b1e7baa4d39d61aed717e6221ca71f307c97.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/7f9a9fb8e96dd0f03a855d3601f8b1e7baa4d39d61aed717e6221ca71f307c97.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_7f9a9fb8e96d"
+      }
+    },
+    {
+      "source": "tests/fixtures/v45/dwight43_holdout.png",
+      "roi": [
+        264,
+        142,
+        840,
+        840
+      ],
+      "x": 482,
+      "y": 186,
+      "node": 7,
+      "old_reason": "contour_mismatch",
+      "new": "wiki_survivor_common_addons_93d6dee5e243",
+      "score": 0.9817,
+      "margin": 0.1122,
+      "contour": 0.8659,
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_bandages.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_bandages.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "93d6dee5e243b79577fcc0d73f7cb606b324d72b5c2b9b323aee7b80c19e091e",
+        "original": "assets/survivors/addons/wiki_originals/93d6dee5e243b79577fcc0d73f7cb606b324d72b5c2b9b323aee7b80c19e091e.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/93d6dee5e243b79577fcc0d73f7cb606b324d72b5c2b9b323aee7b80c19e091e.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_93d6dee5e243"
+      }
+    },
+    {
+      "source": "tests/fixtures/v45/dwight43_holdout.png",
+      "roi": [
+        264,
+        142,
+        840,
+        840
+      ],
+      "x": 243,
+      "y": 252,
+      "node": 12,
+      "old_reason": "contour_mismatch",
+      "new": "wiki_survivor_common_addons_4735998ab839",
+      "score": 0.8911,
+      "margin": 0.3645,
+      "contour": 0.9518,
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_surgicalSuture.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_surgicalSuture.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "4735998ab8391a8c5ef632426b3c800681e6ed3f416e742a49d3ce6d71d15538",
+        "original": "assets/survivors/addons/wiki_originals/4735998ab8391a8c5ef632426b3c800681e6ed3f416e742a49d3ce6d71d15538.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/4735998ab8391a8c5ef632426b3c800681e6ed3f416e742a49d3ce6d71d15538.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_4735998ab839"
+      }
+    },
+    {
+      "source": "tests/fixtures/v45/dwight43_holdout.png",
+      "roi": [
+        264,
+        142,
+        840,
+        840
+      ],
+      "x": 420,
+      "y": 67,
+      "node": 14,
+      "old_reason": "low_glyph_score",
+      "new": "wiki_survivor_common_addons_e178385bb7e2",
+      "score": 0.911,
+      "margin": 0.1713,
+      "contour": 0.9318,
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_high-EndSapphireLens.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_high-EndSapphireLens.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "e178385bb7e222e578a6de6181fb6bd51be76e8d33914de46b9474831353c4b9",
+        "original": "assets/survivors/addons/wiki_originals/e178385bb7e222e578a6de6181fb6bd51be76e8d33914de46b9474831353c4b9.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/e178385bb7e222e578a6de6181fb6bd51be76e8d33914de46b9474831353c4b9.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_e178385bb7e2"
+      }
+    },
+    {
+      "source": "tests/fixtures/v45/dwight43_holdout.png",
+      "roi": [
+        264,
+        142,
+        840,
+        840
+      ],
+      "x": 602,
+      "y": 116,
+      "node": 15,
+      "old_reason": "contour_mismatch",
+      "new": "wiki_survivor_common_addons_a7fab60eaa24",
+      "score": 0.9659,
+      "margin": 0.288,
+      "contour": 0.9677,
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_mushroomFormula.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_mushroomFormula.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "a7fab60eaa24452f7fc675835cfcbb900c1b882b84126a8c8cf821f945f3912f",
+        "original": "assets/survivors/addons/wiki_originals/a7fab60eaa24452f7fc675835cfcbb900c1b882b84126a8c8cf821f945f3912f.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/a7fab60eaa24452f7fc675835cfcbb900c1b882b84126a8c8cf821f945f3912f.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_a7fab60eaa24"
+      }
+    },
+    {
+      "source": "tests/fixtures/v46/purchase_failure/1791832760906780700_51f8280e/input.png",
+      "roi": null,
+      "x": 426,
+      "y": 305,
+      "node": 1,
+      "old_reason": "contour_mismatch",
+      "new": "wiki_survivor_common_addons_7c95f200a9d5",
+      "score": 0.9422,
+      "margin": 0.2492,
+      "contour": 0.9727,
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_tirOptic.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_tirOptic.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "7c95f200a9d5f2001953306e1a2cda896cc17104a9d71ea2eb5a103faf466181",
+        "original": "assets/survivors/addons/wiki_originals/7c95f200a9d5f2001953306e1a2cda896cc17104a9d71ea2eb5a103faf466181.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/7c95f200a9d5f2001953306e1a2cda896cc17104a9d71ea2eb5a103faf466181.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_7c95f200a9d5"
+      }
+    },
+    {
+      "source": "tests/fixtures/v46/purchase_failure/1791832760906780700_51f8280e/input.png",
+      "roi": null,
+      "x": 321,
+      "y": 365,
+      "node": 6,
+      "old_reason": "contour_mismatch",
+      "new": "wiki_survivor_common_addons_7f9a9fb8e96d",
+      "score": 0.9774,
+      "margin": 0.148,
+      "contour": 0.9573,
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_selfAdherentWrap.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_selfAdherentWrap.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "7f9a9fb8e96dd0f03a855d3601f8b1e7baa4d39d61aed717e6221ca71f307c97",
+        "original": "assets/survivors/addons/wiki_originals/7f9a9fb8e96dd0f03a855d3601f8b1e7baa4d39d61aed717e6221ca71f307c97.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/7f9a9fb8e96dd0f03a855d3601f8b1e7baa4d39d61aed717e6221ca71f307c97.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_7f9a9fb8e96d"
+      }
+    },
+    {
+      "source": "tests/fixtures/v46/purchase_failure/1791832760906780700_51f8280e/input.png",
+      "roi": null,
+      "x": 488,
+      "y": 192,
+      "node": 7,
+      "old_reason": "contour_mismatch",
+      "new": "wiki_survivor_common_addons_93d6dee5e243",
+      "score": 0.9819,
+      "margin": 0.1123,
+      "contour": 0.8658,
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_bandages.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_bandages.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "93d6dee5e243b79577fcc0d73f7cb606b324d72b5c2b9b323aee7b80c19e091e",
+        "original": "assets/survivors/addons/wiki_originals/93d6dee5e243b79577fcc0d73f7cb606b324d72b5c2b9b323aee7b80c19e091e.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/93d6dee5e243b79577fcc0d73f7cb606b324d72b5c2b9b323aee7b80c19e091e.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_93d6dee5e243"
+      }
+    },
+    {
+      "source": "tests/fixtures/v46/purchase_failure/1791832760906780700_51f8280e/input.png",
+      "roi": null,
+      "x": 248,
+      "y": 255,
+      "node": 12,
+      "old_reason": "contour_mismatch",
+      "new": "wiki_survivor_common_addons_4735998ab839",
+      "score": 0.8641,
+      "margin": 0.3351,
+      "contour": 0.9459,
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_surgicalSuture.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_surgicalSuture.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "4735998ab8391a8c5ef632426b3c800681e6ed3f416e742a49d3ce6d71d15538",
+        "original": "assets/survivors/addons/wiki_originals/4735998ab8391a8c5ef632426b3c800681e6ed3f416e742a49d3ce6d71d15538.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/4735998ab8391a8c5ef632426b3c800681e6ed3f416e742a49d3ce6d71d15538.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_4735998ab839"
+      }
+    },
+    {
+      "source": "tests/fixtures/v46/purchase_failure/1791832760906780700_51f8280e/input.png",
+      "roi": null,
+      "x": 426,
+      "y": 74,
+      "node": 14,
+      "old_reason": "low_glyph_score",
+      "new": "wiki_survivor_common_addons_e178385bb7e2",
+      "score": 0.9084,
+      "margin": 0.1526,
+      "contour": 0.8908,
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_high-EndSapphireLens.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_high-EndSapphireLens.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "e178385bb7e222e578a6de6181fb6bd51be76e8d33914de46b9474831353c4b9",
+        "original": "assets/survivors/addons/wiki_originals/e178385bb7e222e578a6de6181fb6bd51be76e8d33914de46b9474831353c4b9.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/e178385bb7e222e578a6de6181fb6bd51be76e8d33914de46b9474831353c4b9.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_e178385bb7e2"
+      }
+    },
+    {
+      "source": "tests/fixtures/v46/purchase_failure/1791832760906780700_51f8280e/input.png",
+      "roi": null,
+      "x": 607,
+      "y": 120,
+      "node": 15,
+      "old_reason": "contour_mismatch",
+      "new": "wiki_survivor_common_addons_a7fab60eaa24",
+      "score": 0.9659,
+      "margin": 0.288,
+      "contour": 0.9677,
+      "record": {
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_mushroomFormula.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "filename": "IconAddon_mushroomFormula.png",
+        "role": "survivor",
+        "category": "addons",
+        "character": null,
+        "sha256": "a7fab60eaa24452f7fc675835cfcbb900c1b882b84126a8c8cf821f945f3912f",
+        "original": "assets/survivors/addons/wiki_originals/a7fab60eaa24452f7fc675835cfcbb900c1b882b84126a8c8cf821f945f3912f.png",
+        "normalized": "assets/survivors/addons/wiki_normalized/a7fab60eaa24452f7fc675835cfcbb900c1b882b84126a8c8cf821f945f3912f.png",
+        "original_size": [
+          256,
+          256
+        ],
+        "review_status": "pending",
+        "old_id": null,
+        "wiki_id": "wiki_survivor_common_addons_a7fab60eaa24"
+      }
+    }
+  ]
+}

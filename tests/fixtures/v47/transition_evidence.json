@@ -1,0 +1,452 @@
+{
+  "scope": "Last real old graph before final input; two raw observations of new Cheryl level34. Disappearance timestamps are logged but transition animation pixels were not preserved.",
+  "report": "debug/actions/20261013_090729_d1391792.json",
+  "report_sha256": "6b801c0ffad8c269316d0623eebab770a81020569952088f04b78421447a827e",
+  "before": {
+    "time": "2026-10-13T06:08:07.459356+00:00",
+    "stage": "analysis",
+    "state": "entity",
+    "frame": {
+      "window": {
+        "hwnd": 527238,
+        "title": "DeadByDaylight  ",
+        "client": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "monitor": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "dpi": 96,
+        "foreground": true,
+        "pid": 13724
+      },
+      "roi": {
+        "x": 264,
+        "y": 142,
+        "width": 840,
+        "height": 840
+      },
+      "image_size": [
+        840,
+        840
+      ],
+      "provider": "mss",
+      "live": true,
+      "bloodpoints": null,
+      "captured_at": 2913.0372009,
+      "visibility": {
+        "window": {
+          "hwnd": 527238,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 13724
+        },
+        "provider": "mss",
+        "roi": {
+          "x": 264,
+          "y": 142,
+          "width": 840,
+          "height": 840
+        },
+        "occlusions": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          {
+            "x": 1272,
+            "y": 12,
+            "width": 656,
+            "height": 1047
+          }
+        ],
+        "center": [
+          684,
+          562,
+          40
+        ]
+      }
+    },
+    "screen": "bloodweb",
+    "next_node": 12,
+    "nodes": [
+      {
+        "id": 0,
+        "x": 420,
+        "y": 420,
+        "type": "bloodweb_center",
+        "state": "center",
+        "geometry": 0.9,
+        "state_score": 0.9,
+        "icon": null,
+        "reason": "structural_center"
+      },
+      {
+        "id": 1,
+        "x": 420,
+        "y": 299,
+        "type": "unknown",
+        "state": "purchased",
+        "geometry": 0.894,
+        "state_score": 0.93,
+        "icon": null,
+        "reason": "ambiguous_candidates"
+      },
+      {
+        "id": 2,
+        "x": 529,
+        "y": 485,
+        "type": "offering",
+        "state": "purchased",
+        "geometry": 0.858,
+        "state_score": 0.93,
+        "icon": "survivor_offering_059",
+        "reason": "accepted"
+      },
+      {
+        "id": 3,
+        "x": 421,
+        "y": 543,
+        "type": "offering",
+        "state": "purchased",
+        "geometry": 0.858,
+        "state_score": 0.93,
+        "icon": "survivor_offering_057",
+        "reason": "accepted"
+      },
+      {
+        "id": 4,
+        "x": 316,
+        "y": 482,
+        "type": "unknown",
+        "state": "purchased",
+        "geometry": 0.896,
+        "state_score": 0.93,
+        "icon": null,
+        "reason": "ambiguous_candidates"
+      },
+      {
+        "id": 5,
+        "x": 315,
+        "y": 359,
+        "type": "unknown",
+        "state": "purchased",
+        "geometry": 0.886,
+        "state_score": 0.93,
+        "icon": null,
+        "reason": "contour_mismatch"
+      },
+      {
+        "id": 6,
+        "x": 598,
+        "y": 246,
+        "type": "item",
+        "state": "purchased",
+        "geometry": 0.859,
+        "state_score": 0.93,
+        "icon": "survivor_item_008",
+        "reason": "accepted"
+      },
+      {
+        "id": 7,
+        "x": 482,
+        "y": 653,
+        "type": "unknown",
+        "state": "purchased",
+        "geometry": 0.856,
+        "state_score": 0.93,
+        "icon": null,
+        "reason": "contour_mismatch"
+      },
+      {
+        "id": 8,
+        "x": 180,
+        "y": 481,
+        "type": "offering",
+        "state": "absorbed",
+        "geometry": 0.657,
+        "state_score": 0.78,
+        "icon": "survivor_offering_027",
+        "reason": "accepted"
+      },
+      {
+        "id": 9,
+        "x": 359,
+        "y": 186,
+        "type": "item",
+        "state": "purchased",
+        "geometry": 0.858,
+        "state_score": 0.93,
+        "icon": "survivor_item_019",
+        "reason": "accepted"
+      },
+      {
+        "id": 10,
+        "x": 421,
+        "y": 68,
+        "type": "unknown",
+        "state": "purchased",
+        "geometry": 0.892,
+        "state_score": 0.93,
+        "icon": null,
+        "reason": "contour_mismatch"
+      },
+      {
+        "id": 11,
+        "x": 600,
+        "y": 733,
+        "type": "addon",
+        "state": "absorbed",
+        "geometry": 0.7,
+        "state_score": 0.78,
+        "icon": "wiki_survivor_common_addons_93d6dee5e243",
+        "reason": "accepted"
+      },
+      {
+        "id": 12,
+        "x": 240,
+        "y": 115,
+        "type": "offering",
+        "state": "available",
+        "geometry": 0.9,
+        "state_score": 0.9,
+        "icon": "survivor_offering_003",
+        "reason": "accepted"
+      }
+    ],
+    "analysis_id": "1791871687349809300_16c36a47"
+  },
+  "frames": [
+    {
+      "source": "tests/fixtures/v47/transition_new_001.png",
+      "sha256": "4f31d915f91d5415e787e0e9920bb9ca45609ee4236fc1bb888ed769e417a810",
+      "frame": {
+        "window": {
+          "hwnd": 527238,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 13724
+        },
+        "roi": {
+          "x": 261,
+          "y": 139,
+          "width": 845,
+          "height": 845
+        },
+        "image_size": [
+          845,
+          845
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": null,
+        "captured_at": 2920.5126151,
+        "visibility": {
+          "window": {
+            "hwnd": 527238,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 13724
+          },
+          "provider": "mss",
+          "roi": {
+            "x": 261,
+            "y": 139,
+            "width": 845,
+            "height": 845
+          },
+          "occlusions": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 1272,
+              "y": 12,
+              "width": 656,
+              "height": 1047
+            }
+          ],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        }
+      },
+      "analysis_id": "1791871694870896800_13814fbd"
+    },
+    {
+      "source": "tests/fixtures/v47/transition_new_002.png",
+      "sha256": "e4c8707dee034f9317d89072e500512a7adcac074383cd9d40b8bd37b936e85c",
+      "frame": {
+        "window": {
+          "hwnd": 527238,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 13724
+        },
+        "roi": {
+          "x": 261,
+          "y": 139,
+          "width": 845,
+          "height": 845
+        },
+        "image_size": [
+          845,
+          845
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": null,
+        "captured_at": 2921.1838426,
+        "visibility": {
+          "window": {
+            "hwnd": 527238,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 13724
+          },
+          "provider": "mss",
+          "roi": {
+            "x": 261,
+            "y": 139,
+            "width": 845,
+            "height": 845
+          },
+          "occlusions": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 1272,
+              "y": 12,
+              "width": 656,
+              "height": 1047
+            }
+          ],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        }
+      },
+      "analysis_id": "1791871695546646700_0f3eabc4"
+    }
+  ]
+}

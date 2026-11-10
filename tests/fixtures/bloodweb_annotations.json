@@ -1,0 +1,42 @@
+{
+  "bloodweb_level43_start.png": {
+    "state": "bloodweb",
+    "nodes": [
+      [462, 531, "center"], [282, 226, "locked"], [644, 228, "locked"],
+      [151, 357, "locked"], [282, 362, "locked"], [640, 359, "available"],
+      [461, 409, "available"], [219, 470, "locked"], [357, 469, "available"],
+      [567, 469, "available"], [707, 469, "locked"], [101, 532, "locked"],
+      [824, 533, "locked"], [222, 592, "locked"], [357, 593, "available"],
+      [567, 593, "available"], [463, 654, "available"], [151, 705, "locked"],
+      [283, 703, "locked"], [644, 706, "locked"]
+    ],
+    "icons": [
+      [282, 362, "survivor_item_020"], [461, 409, "survivor_offering_022"],
+      [219, 470, "survivor_addon_001"], [357, 469, "survivor_addon_009"],
+      [567, 469, "survivor_offering_044"], [283, 703, "survivor_item_003"]
+    ]
+  },
+  "bloodweb_level43_entity_progress.png": {
+    "state": "bloodweb",
+    "nodes": [
+      [466, 540, "center"], [283, 232, "absorbed"], [645, 230, "absorbed"],
+      [153, 361, "available"], [285, 365, "absorbed"], [647, 362, "absorbed"],
+      [464, 415, "purchased"], [222, 471, "purchased"], [357, 476, "absorbed"],
+      [568, 475, "absorbed"], [706, 476, "absorbed"], [104, 537, "purchased"],
+      [823, 536, "absorbed"], [223, 597, "purchased"], [359, 598, "purchased"],
+      [569, 599, "purchased"], [466, 657, "purchased"], [153, 709, "purchased"],
+      [287, 708, "available"], [642, 708, "available"]
+    ],
+    "icons": [
+      [285, 365, "survivor_item_020"], [464, 415, "survivor_offering_022"],
+      [568, 475, "survivor_offering_044"], [223, 597, "survivor_offering_008"],
+      [287, 708, "survivor_item_003"]
+    ]
+  },
+  "bloodweb_level1_after_prestige.png": {
+    "state": "bloodweb", "nodes": [
+      [455, 541, "center"], [454, 420, "available"], [559, 480, "available"],
+      [559, 604, "available"], [694, 601, "locked"]
+    ], "icons": [[454, 420, "survivor_item_019"], [559, 480, "survivor_offering_053"]]
+  }
+}

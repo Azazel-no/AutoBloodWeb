@@ -1,0 +1,21 @@
+{
+  "source": "references\\bloodweb\\v57_knight\\continue_perk_slot_iii.png",
+  "source_sha256": "481bb9a1009313229deff4ea2062a7d9c84ff665910beddf4ccc94ca14e2f9df",
+  "client_size": [
+    1920,
+    1080
+  ],
+  "origin": "visually_reviewed_native_mss_knight_level10_perk_slot_iii_20261018",
+  "regions": {
+    "continue": {
+      "path": "assets\\ui\\video_v57\\continue_iii.png",
+      "box": [
+        686,
+        596,
+        101,
+        20
+      ],
+      "sha256": "ee934881b307cafd5c8e80acb9953b6e2f03d82a117b94a503a0b6789fef544a"
+    }
+  }
+}

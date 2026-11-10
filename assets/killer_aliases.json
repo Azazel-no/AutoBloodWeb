@@ -1,0 +1,723 @@
+{
+  "schema": 1,
+  "note": "Search aliases only; never changes a killer ID. Real names come from https://deadbydaylight.wiki.gg/wiki/Killers (checked 2026-11-05). Nicknames and Russian forms are curated community usage, not an official list. Add entries here, not in the GUI.",
+  "killers": {
+    "trapper": {
+      "en": [
+        "Evan MacMillan",
+        "Evan",
+        "Bear trap guy",
+        "Mr Trapper"
+      ],
+      "ru": [
+        "Эван Макмиллан",
+        "Эван",
+        "Траппер",
+        "Охотник",
+        "Зверолов",
+        "Капканщик"
+      ]
+    },
+    "wraith": {
+      "en": [
+        "Philip Ojomo",
+        "Philip",
+        "Ding Dong",
+        "Ding-Dong",
+        "Bing Bong",
+        "Wraithy",
+        "Bell guy"
+      ],
+      "ru": [
+        "Филип Оджомо",
+        "Филип",
+        "Врейт",
+        "Рейф",
+        "Звонарь",
+        "Колокольчик",
+        "Дин-дон"
+      ]
+    },
+    "hillbilly": {
+      "en": [
+        "Max Thompson",
+        "Max Thompson Jr",
+        "Billy",
+        "Chainsaw",
+        "Saw guy"
+      ],
+      "ru": [
+        "Макс Томпсон",
+        "Билли",
+        "Хиллбилли",
+        "Деревенщина",
+        "Бензопила"
+      ]
+    },
+    "nurse": {
+      "en": [
+        "Sally Smithson",
+        "Sally",
+        "Spencer's Last Breath",
+        "Nurse Sally",
+        "Blink"
+      ],
+      "ru": [
+        "Салли Смитсон",
+        "Салли",
+        "Нерс",
+        "Медсестра",
+        "Сестра",
+        "Медсестричка"
+      ]
+    },
+    "shape": {
+      "en": [
+        "Michael Myers",
+        "Michael",
+        "Myers",
+        "Mikey",
+        "Halloween"
+      ],
+      "ru": [
+        "Майкл Майерс",
+        "Майкл",
+        "Майерс",
+        "Тень",
+        "Хэллоуин"
+      ]
+    },
+    "hag": {
+      "en": [
+        "Lisa Sherwood",
+        "Lisa",
+        "Swamp witch",
+        "Trap witch"
+      ],
+      "ru": [
+        "Лиза Шервуд",
+        "Лиза",
+        "Хаг",
+        "Карга",
+        "Ведьма"
+      ]
+    },
+    "doctor": {
+      "en": [
+        "Herman Carter",
+        "Herman",
+        "Doc",
+        "Shock Doctor",
+        "Shocktor"
+      ],
+      "ru": [
+        "Герман Картер",
+        "Герман",
+        "Док",
+        "Доктор",
+        "Электрик"
+      ]
+    },
+    "huntress": {
+      "en": [
+        "Anna",
+        "Hatchet",
+        "Axe lady",
+        "Bunny"
+      ],
+      "ru": [
+        "Анна",
+        "Хантресс",
+        "Охотница",
+        "Топоры",
+        "Зайка"
+      ]
+    },
+    "cannibal": {
+      "en": [
+        "Bubba",
+        "Bubba Sawyer",
+        "Leatherface",
+        "Leather Face",
+        "Texas Chainsaw"
+      ],
+      "ru": [
+        "Буба",
+        "Бубба",
+        "Бабба",
+        "Бабба Сойер",
+        "Кожаное лицо",
+        "Кожаноликий",
+        "Каннибал",
+        "Техасская резня"
+      ]
+    },
+    "nightmare": {
+      "en": [
+        "Freddy",
+        "Freddy Krueger",
+        "Fred",
+        "Krueger",
+        "Elm Street"
+      ],
+      "ru": [
+        "Фредди",
+        "Фредди Крюгер",
+        "Крюгер",
+        "Кошмар",
+        "Вяз"
+      ]
+    },
+    "pig": {
+      "en": [
+        "Amanda Young",
+        "Amanda",
+        "Saw",
+        "Piggy",
+        "Reverse bear trap"
+      ],
+      "ru": [
+        "Аманда Янг",
+        "Аманда",
+        "Свинья",
+        "Хрюша",
+        "Пила",
+        "Пиг"
+      ]
+    },
+    "clown": {
+      "en": [
+        "Kenneth Chase",
+        "Jeffrey Hawk",
+        "Kenneth",
+        "Jeffrey",
+        "Bubbles",
+        "Gas Clown"
+      ],
+      "ru": [
+        "Кеннет Чейз",
+        "Джеффри Хок",
+        "Клоун",
+        "Газ"
+      ]
+    },
+    "spirit": {
+      "en": [
+        "Rin Yamaoka",
+        "Rin",
+        "Phase walker"
+      ],
+      "ru": [
+        "Рин Ямаока",
+        "Рин",
+        "Спирит",
+        "Дух",
+        "Призрак Рин"
+      ]
+    },
+    "legion": {
+      "en": [
+        "Frank",
+        "Frank Morrison",
+        "Julie",
+        "Julie Kostenko",
+        "Susie",
+        "Susie Lancaster",
+        "Joey"
+      ],
+      "ru": [
+        "Фрэнк",
+        "Фрэнк Моррисон",
+        "Джули",
+        "Сьюзи",
+        "Джоуи",
+        "Легион",
+        "Эмо"
+      ]
+    },
+    "plague": {
+      "en": [
+        "Adiris",
+        "Vomit Mommy",
+        "Puke",
+        "Vomit"
+      ],
+      "ru": [
+        "Адирис",
+        "Плейг",
+        "Чума",
+        "Рвота",
+        "Блюющая"
+      ]
+    },
+    "ghost_face": {
+      "en": [
+        "Ghostface",
+        "Ghost Face",
+        "Danny Johnson",
+        "Jed Olsen",
+        "Danny",
+        "Scream"
+      ],
+      "ru": [
+        "Гостфейс",
+        "Гоустфейс",
+        "Гост",
+        "Призрачное лицо",
+        "Дэнни Джонсон",
+        "Дэнни",
+        "Крик"
+      ]
+    },
+    "demogorgon": {
+      "en": [
+        "Demo",
+        "Demogorgon",
+        "Stranger Things"
+      ],
+      "ru": [
+        "Демогоргон",
+        "Демо",
+        "Очень странные дела"
+      ]
+    },
+    "oni": {
+      "en": [
+        "Kazan Yamaoka",
+        "Kazan",
+        "Blood Fury"
+      ],
+      "ru": [
+        "Казан Ямаока",
+        "Казан",
+        "Они",
+        "Демон"
+      ]
+    },
+    "deathslinger": {
+      "en": [
+        "Caleb Quinn",
+        "Caleb",
+        "Slinger",
+        "Harpoon",
+        "Cowboy"
+      ],
+      "ru": [
+        "Калеб Куинн",
+        "Калеб",
+        "Слингер",
+        "Стрелок",
+        "Гарпун",
+        "Ковбой"
+      ]
+    },
+    "executioner": {
+      "en": [
+        "Pyramid Head",
+        "Pyramidhead",
+        "PH",
+        "Red Pyramid Thing",
+        "Silent Hill"
+      ],
+      "ru": [
+        "Пирамидоголовый",
+        "Пирамидка",
+        "Пирамида",
+        "Палач",
+        "Сайлент Хилл"
+      ]
+    },
+    "blight": {
+      "en": [
+        "Talbot Grimes",
+        "Talbot",
+        "Grimes",
+        "Rush"
+      ],
+      "ru": [
+        "Талбот Граймс",
+        "Талбот",
+        "Блайт",
+        "Мор",
+        "Гниль",
+        "Порча"
+      ]
+    },
+    "twins": {
+      "en": [
+        "Charlotte",
+        "Victor",
+        "Charlotte Deshayes",
+        "Victor Deshayes",
+        "Charlotte & Victor",
+        "Baby",
+        "Victor and Charlotte"
+      ],
+      "ru": [
+        "Шарлотта",
+        "Виктор",
+        "Близнецы",
+        "Твинс",
+        "Младенец"
+      ]
+    },
+    "trickster": {
+      "en": [
+        "Hak Ji-woon",
+        "Ji-woon",
+        "Ji-Woon Hak",
+        "K-pop",
+        "Kpop",
+        "Knife guy"
+      ],
+      "ru": [
+        "Хак Чжи Ун",
+        "Чжи Ун",
+        "Трикстер",
+        "Шутник",
+        "Кей-поп",
+        "Ножи"
+      ]
+    },
+    "nemesis": {
+      "en": [
+        "Nemesis",
+        "T-Type",
+        "Tyrant",
+        "STARS",
+        "Resident Evil 3"
+      ],
+      "ru": [
+        "Немезис",
+        "Немезида",
+        "Тиран",
+        "Обитель зла"
+      ]
+    },
+    "cenobite": {
+      "en": [
+        "Pinhead",
+        "Elliot Spencer",
+        "Elliot",
+        "Hellraiser",
+        "Lament Configuration",
+        "Box"
+      ],
+      "ru": [
+        "Пинхед",
+        "Иглоголовый",
+        "Сенобит",
+        "Эллиот Спенсер",
+        "Восставший из ада",
+        "Шкатулка"
+      ]
+    },
+    "artist": {
+      "en": [
+        "Carmina Mora",
+        "Carmina",
+        "Crow lady",
+        "Birds"
+      ],
+      "ru": [
+        "Кармина Мора",
+        "Кармина",
+        "Художница",
+        "Артистка",
+        "Вороны",
+        "Птицы"
+      ]
+    },
+    "onryo": {
+      "en": [
+        "Sadako",
+        "Sadako Yamamura",
+        "Onryo",
+        "Onryō",
+        "The Ring",
+        "Samara",
+        "TV girl"
+      ],
+      "ru": [
+        "Садако",
+        "Садако Ямамура",
+        "Онрё",
+        "Онре",
+        "Звонок",
+        "Самара"
+      ]
+    },
+    "dredge": {
+      "en": [
+        "Dredge",
+        "Nightfall",
+        "Locker monster",
+        "Locker guy"
+      ],
+      "ru": [
+        "Дредж",
+        "Грязь",
+        "Шкафчик",
+        "Монстр из шкафчиков"
+      ]
+    },
+    "mastermind": {
+      "en": [
+        "Wesker",
+        "Albert Wesker",
+        "Albert",
+        "Sunglasses",
+        "Resident Evil"
+      ],
+      "ru": [
+        "Вескер",
+        "Альберт Вескер",
+        "Альберт",
+        "Вдохновитель",
+        "Обитель зла"
+      ]
+    },
+    "knight": {
+      "en": [
+        "Tarhos Kovacs",
+        "Tarhos Kovács",
+        "Tarhos",
+        "Guards"
+      ],
+      "ru": [
+        "Тархош Ковач",
+        "Тархош",
+        "Рыцарь",
+        "Найт",
+        "Стражи"
+      ]
+    },
+    "skull_merchant": {
+      "en": [
+        "Adriana Imai",
+        "Adriana",
+        "Drone lady",
+        "Drones",
+        "SM"
+      ],
+      "ru": [
+        "Адриана Имаи",
+        "Адриана",
+        "Торговка черепами",
+        "Дроны",
+        "Скал мерчант"
+      ]
+    },
+    "singularity": {
+      "en": [
+        "HUX-A7-13",
+        "HUX",
+        "Robot",
+        "Hux",
+        "Slipstream"
+      ],
+      "ru": [
+        "Сингулярность",
+        "Хакс",
+        "Робот",
+        "Камеры"
+      ]
+    },
+    "xenomorph": {
+      "en": [
+        "Alien",
+        "Xeno",
+        "Xenomorph",
+        "Queen",
+        "Facehugger"
+      ],
+      "ru": [
+        "Чужой",
+        "Ксеноморф",
+        "Ксено",
+        "Чужие"
+      ]
+    },
+    "good_guy": {
+      "en": [
+        "Chucky",
+        "Charles Lee Ray",
+        "Charles",
+        "Child's Play",
+        "Doll"
+      ],
+      "ru": [
+        "Чаки",
+        "Чарльз Ли Рэй",
+        "Детские игры",
+        "Кукла",
+        "Хороший парень"
+      ]
+    },
+    "unknown": {
+      "en": [
+        "Unknown",
+        "UVX",
+        "Weird Things",
+        "Blob",
+        "Goop"
+      ],
+      "ru": [
+        "Неизвестный",
+        "Неизвестное",
+        "Слизь",
+        "Анноун"
+      ]
+    },
+    "lich": {
+      "en": [
+        "Vecna",
+        "Dungeons and Dragons",
+        "D&D",
+        "DnD",
+        "Whispered One"
+      ],
+      "ru": [
+        "Векна",
+        "Лич",
+        "Подземелья и драконы",
+        "ДнД"
+      ]
+    },
+    "dark_lord": {
+      "en": [
+        "Dracula",
+        "Vlad",
+        "Vlad Dracula",
+        "Castlevania",
+        "Vampire"
+      ],
+      "ru": [
+        "Дракула",
+        "Влад",
+        "Тёмный Лорд",
+        "Каслвания",
+        "Вампир"
+      ]
+    },
+    "houndmaster": {
+      "en": [
+        "Portia Maye",
+        "Portia",
+        "Dog",
+        "Snug",
+        "Dog lady"
+      ],
+      "ru": [
+        "Порша Мэй",
+        "Порша",
+        "Хозяйка гончих",
+        "Псарь",
+        "Собака",
+        "Собачница"
+      ]
+    },
+    "ghoul": {
+      "en": [
+        "Ken Kaneki",
+        "Kaneki",
+        "Ken",
+        "Tokyo Ghoul",
+        "Eyepatch"
+      ],
+      "ru": [
+        "Кен Канеки",
+        "Канеки",
+        "Кен",
+        "Гуль",
+        "Токийский гуль"
+      ]
+    },
+    "animatronic": {
+      "en": [
+        "William Afton",
+        "Afton",
+        "Springtrap",
+        "FNAF",
+        "Five Nights at Freddy's",
+        "Purple Guy"
+      ],
+      "ru": [
+        "Уильям Афтон",
+        "Афтон",
+        "Спрингтрап",
+        "ФНАФ",
+        "Аниматроник",
+        "Пять ночей с Фредди"
+      ]
+    },
+    "krasue": {
+      "en": [
+        "Burong Sukapat",
+        "Burong",
+        "Flying head"
+      ],
+      "ru": [
+        "Бурун Сукапат",
+        "Бурон",
+        "Красуэ",
+        "Красуе",
+        "Летающая голова"
+      ]
+    },
+    "first": {
+      "en": [
+        "Henry Creel",
+        "Henry",
+        "Vecna Stranger Things",
+        "One"
+      ],
+      "ru": [
+        "Генри Крил",
+        "Генри",
+        "Первый"
+      ]
+    },
+    "slasher": {
+      "en": [
+        "Jason",
+        "Jason Voorhees",
+        "Voorhees",
+        "Friday the 13th",
+        "Hockey mask"
+      ],
+      "ru": [
+        "Джейсон",
+        "Джейсон Вурхиз",
+        "Вурхиз",
+        "Пятница 13",
+        "Слэшер",
+        "Хоккейная маска"
+      ]
+    },
+    "judgment": {
+      "en": [
+        "Judgment",
+        "Judgement"
+      ],
+      "ru": [
+        "Суд",
+        "Правосудие"
+      ]
+    },
+    "terrifier": {
+      "en": [
+        "Art the Clown",
+        "Art The Clown",
+        "Art",
+        "Terrifier"
+      ],
+      "ru": [
+        "Арт",
+        "Клоун Арт",
+        "Арт Клоун",
+        "Террифайер"
+      ]
+    }
+  }
+}

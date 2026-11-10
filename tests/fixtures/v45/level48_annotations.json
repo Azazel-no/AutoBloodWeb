@@ -1,0 +1,23 @@
+{
+  "scope": "Visual review of captured level 48; development data, not independent holdout. Production never reads this file.",
+  "roi": [262, 140, 843, 843],
+  "nodes": [
+    [684, 562, "center"], [504, 258, "locked"], [862, 258, "locked"],
+    [622, 327, "locked"], [378, 386, "locked"], [505, 387, "locked"],
+    [864, 386, "locked"], [999, 386, "locked"], [683, 440, "available"],
+    [580, 500, "available"], [790, 500, "available"], [929, 500, "locked"],
+    [1046, 562, "locked"], [445, 622, "locked"], [582, 622, "available"],
+    [789, 622, "available"], [925, 622, "locked"], [683, 684, "available"],
+    [379, 737, "locked"], [502, 737, "locked"], [864, 737, "locked"],
+    [996, 737, "locked"], [621, 795, "locked"], [501, 867, "locked"],
+    [862, 867, "locked"]
+  ],
+  "perks": [[504, 258], [999, 386], [501, 867]],
+  "icons": [
+    [683, 684, "wiki_survivor_common_addons_e10c205baa56"],
+    [864, 737, "wiki_survivor_common_addons_ce2e1fb39ced"],
+    [621, 795, "wiki_survivor_common_addons_b07824b97674"],
+    [996, 737, "wiki_survivor_common_addons_e937c1a62807"],
+    [378, 386, "wiki_survivor_common_addons_2edd7c2a0a77"]
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "input": false,
+  "focus_changed": false,
+  "observations": [
+    {
+      "source": "references/bloodweb/v48_deccc99c/raw_0.png",
+      "sha256": "23508e3fc0adc0ef4dc74e5dbb650ebf66f010fb3784ff717c18a33ed94febda",
+      "frame": {
+        "window": {
+          "hwnd": 1443416,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 16256
+        },
+        "roi": {
+          "x": 258,
+          "y": 136,
+          "width": 851,
+          "height": 851
+        },
+        "image_size": [
+          851,
+          851
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": null,
+        "captured_at": 41385.6387207,
+        "visibility": {
+          "window": {
+            "hwnd": 1443416,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 16256
+          },
+          "provider": "mss",
+          "roi": {
+            "x": 258,
+            "y": 136,
+            "width": 851,
+            "height": 851
+          },
+          "occlusions": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        }
+      }
+    },
+    {
+      "source": "references/bloodweb/v48_deccc99c/raw_1.png",
+      "sha256": "9cfb57d672421449c64e3b347f820c1a6bc3e944c2d06534549957ad93a61a66",
+      "frame": {
+        "window": {
+          "hwnd": 1443416,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 16256
+        },
+        "roi": {
+          "x": 258,
+          "y": 136,
+          "width": 851,
+          "height": 851
+        },
+        "image_size": [
+          851,
+          851
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": null,
+        "captured_at": 41386.6443421,
+        "visibility": {
+          "window": {
+            "hwnd": 1443416,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 16256
+          },
+          "provider": "mss",
+          "roi": {
+            "x": 258,
+            "y": 136,
+            "width": 851,
+            "height": 851
+          },
+          "occlusions": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        }
+      }
+    },
+    {
+      "source": "references/bloodweb/v48_deccc99c/raw_2.png",
+      "sha256": "b3a94eba9578dad7eaa5f5874f127bb0824b4bb8c2c26a19df31041eeaf95c7e",
+      "frame": {
+        "window": {
+          "hwnd": 1443416,
+          "title": "DeadByDaylight  ",
+          "client": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "monitor": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080
+          },
+          "dpi": 96,
+          "foreground": true,
+          "pid": 16256
+        },
+        "roi": {
+          "x": 258,
+          "y": 136,
+          "width": 851,
+          "height": 851
+        },
+        "image_size": [
+          851,
+          851
+        ],
+        "provider": "mss",
+        "live": true,
+        "bloodpoints": null,
+        "captured_at": 41387.3562142,
+        "visibility": {
+          "window": {
+            "hwnd": 1443416,
+            "title": "DeadByDaylight  ",
+            "client": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "monitor": {
+              "x": 0,
+              "y": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "dpi": 96,
+            "foreground": true,
+            "pid": 16256
+          },
+          "provider": "mss",
+          "roi": {
+            "x": 258,
+            "y": 136,
+            "width": 851,
+            "height": 851
+          },
+          "occlusions": [
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            }
+          ],
+          "center": [
+            684,
+            562,
+            40
+          ]
+        }
+      }
+    }
+  ]
+}
