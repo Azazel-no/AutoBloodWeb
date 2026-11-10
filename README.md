@@ -86,7 +86,7 @@ The builds are made with PyInstaller, which some antivirus engines flag by mista
 
 ## Ban risk
 
-Read this before you use it. Behaviour Interactive's EULA forbids automation and macro software, and **using AutoBloodWeb may violate the game's rules**. The app doesn't inject code or read memory, but that doesn't make it allowed. A ban is possible, but very unlikely unless you record the gameplay with decisive strike timer or the use of autoleveling.
+Read this before you use it. Behaviour Interactive's EULA forbids automation and macro software, and **using AutoBloodWeb may violate the game's rules**. The app doesn't inject code or read memory, but that doesn't make it allowed. A ban is possible, but very unlikely unless you record gameplay with the Decisive Strike timer or use of autoleveling.
 
 ## Building from source
 
@@ -114,17 +114,3 @@ The installer, portable zip and `SHA256SUMS.txt` appear in `build\release\`.
 ## License
 
 AutoBloodWeb is released under the [MIT License](LICENSE). Bundled libraries, wiki data (CC BY-SA) and game images keep their own licences and ownership: see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
----
-
-## По-русски
-
-AutoBloodWeb автоматически прокачивает Кровавую паутину в Dead by Daylight по вашему списку приоритетов: предметы, аддоны, подношения, перки. Есть рандомайзер билдов, необязательные оверлеи в матче (перки союзников, таймер Decisive Strike) и прицел (выключен по умолчанию). Программа только читает пиксели экрана и кликает мышью; память и файлы игры не трогает, в сеть ничего не отправляет.
-
-**Требования:** Windows 10/11, запуск от имени администратора, DBD в оконном режиме без рамки, масштаб интерфейса и HUD в игре — 100% или 90%.
-
-**Установка:** установщик `AutoBloodWeb-1.0.0-setup.exe` или портативный архив со страницы Releases. Python не нужен.
-
-**Как пользоваться:** откройте паутину персонажа, выберите значки в библиотеке, нажмите **Старт** (F8) и за 3 секунды переключитесь в игру. Мышь не трогайте. **F9 — аварийная остановка**, всегда отпускает кнопку мыши.
-
-**Риск бана.** Программа не связана с Behaviour Interactive и не одобрена ею. EULA игры запрещает программы автоматизации и макросы; использование AutoBloodWeb может нарушать правила игры. Бан маловероятен, но возможен. Используете на свой риск.
