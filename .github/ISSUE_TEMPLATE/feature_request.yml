@@ -1,0 +1,44 @@
+name: Feature request
+description: Suggest an idea or an improvement.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        AutoBloodWeb only reads screen pixels and makes normal mouse clicks. Requests that need reading game memory or files, or touching the anti-cheat, will be declined.
+  - type: dropdown
+    id: feature
+    attributes:
+      label: Area
+      options:
+        - Bloodweb
+        - Teammate perks
+        - DS timer
+        - Randomizer
+        - Crosshair
+        - App / settings
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the situation where you miss this feature.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+  - type: textarea
+    id: context
+    attributes:
+      label: Screenshots or other context

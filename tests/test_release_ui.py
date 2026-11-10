@@ -112,3 +112,17 @@ def test_stop_after_n_levels_is_visible_saved_and_passed_to_start(make_window, m
     with pytest.raises(RuntimeError):
         w.start_automation()
     assert captured[0].max_levels == 10 and captured[0].bloodpoint_checks is False
+
+
+def test_report_bug_opens_the_issue_form_and_the_log_folder(make_window, monkeypatch, tmp_path):
+    from src.gui import main_window
+    w = make_window()
+    w.root = tmp_path
+    opened = []
+    monkeypatch.setattr(main_window.QDesktopServices, 'openUrl', lambda url: opened.append(url.toString()))
+    w.page_buttons['page_report_bug'].click()
+    assert opened[0] == main_window.ISSUES_URL
+    assert opened[1].endswith('/debug') and (tmp_path / 'debug').is_dir()
+    for code in ('ru', 'en', 'es', 'de', 'fr'):
+        w.locale.language = code; w.apply_language()
+        assert w.page_buttons['page_report_bug'].text() and w.page_buttons['page_report_bug'].text() != 'page_report_bug'

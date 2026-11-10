@@ -87,6 +87,8 @@ TEXT={
  'page_hotkeys':('Atajos de teclado…', 'Tastenkürzel…', 'Raccourcis clavier…'),
  'page_overlay_key':('Tecla de detalles de partida…', 'Taste für Matchdetails…', 'Touche des détails de partie…'),
  'page_notice':('Antes de usar…', 'Vor der Nutzung…', 'Avant utilisation…'),
+ 'page_report_bug':('Informar de un error…', 'Fehler melden…', 'Signaler un bug…'),
+ 'report_bug_tip':('Abre el formulario de GitHub y la carpeta con app.log. Revisa el registro por si contiene datos personales antes de adjuntarlo.', 'Öffnet das GitHub-Formular und den Ordner mit app.log. Prüfe das Protokoll vor dem Anhängen auf persönliche Daten.', "Ouvre le formulaire GitHub et le dossier contenant app.log. Vérifiez que le journal ne contient pas de données personnelles avant de le joindre."),
  'page_developer':('Modo desarrollador', 'Entwicklermodus', 'Mode développeur'),
  'overlay_position':('Posición de la superposición','Overlay-Position','Position de la superposition'),
  'overlay_position_left':('A la izquierda del retrato','Links vom Porträt','À gauche du portrait'),

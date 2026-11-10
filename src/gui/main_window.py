@@ -34,6 +34,7 @@ from src.core.priority_targets import PERK_TARGET,perk_target_entry,perk_eligibl
 
 log=logging.getLogger(__name__)
 PTB_CHARACTERS=('terrifier',)  # Terrifier chapter: PTB data; re-check after the live release (assets/ptb_data.json).
+ISSUES_URL='https://github.com/Azazel-no/AutoBloodWeb/issues/new/choose'
 LANGUAGES=(('ru','Русский'),('en','English'),('es','Español'),('de','Deutsch'),('fr','Français'))
 
 STYLE='''
@@ -462,7 +463,7 @@ class MainWindow(QMainWindow):
         row.addWidget(self.overlay_scale,1);row.addWidget(self.overlay_scale_value);inner.addLayout(row)
         layout.addWidget(card)
         card,inner=self.card();self.page_buttons={}
-        for key,action in (('page_hotkeys',self.configure_hotkeys),('page_notice',self.show_notices)):
+        for key,action in (('page_hotkeys',self.configure_hotkeys),('page_notice',self.show_notices),('page_report_bug',self.report_bug)):
             button=BloodButton();button.setMinimumHeight(42);button.clicked.connect(action);inner.addWidget(button);self.page_buttons[key]=button
         self.page_developer=ToggleSwitch();self.page_developer.setChecked(self.prefs.settings['developer_mode'])
         self.page_developer.clicked.connect(lambda:self.developer_action.trigger());inner.addWidget(self.page_developer)
@@ -475,6 +476,11 @@ class MainWindow(QMainWindow):
 
         self.randomizer_host=QWidget();QVBoxLayout(self.randomizer_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.randomizer_host);self.randomizer_page=None
         self.crosshair_host=QWidget();QVBoxLayout(self.crosshair_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.crosshair_host);self.crosshair_page=None
+
+    def report_bug(self):
+        """Opens the GitHub issue form and the folder that holds app.log for the user to attach."""
+        folder=self.root/'debug';folder.mkdir(exist_ok=True)
+        QDesktopServices.openUrl(QUrl(ISSUES_URL));QDesktopServices.openUrl(QUrl.fromLocalFile(str(folder)))
 
     def open_page(self,index):
         """Randomizer and Crosshair are built on first use and get the whole height of the window."""
@@ -534,6 +540,7 @@ class MainWindow(QMainWindow):
         self.ds_timer.setText(t('ds_timer'));self.ds_timer.setToolTip(t('ds_timer_hint'))
         self.page_settings_title.setText(t('page_settings_title').upper());self.page_developer.setText(t('page_developer'))
         for key,button in self.page_buttons.items():button.setText(t(key))
+        self.page_buttons['page_report_bug'].setToolTip(t('report_bug_tip'))
         self.settings_menu.setTitle(t('settings_menu'));self.recalibrate_action.setText(t('recalibrate'))
         self.session_action.setText(t('session_check'))
         self.overlay_position_label.setText(t('overlay_position'));self.overlay_scale_label.setText(t('overlay_scale'));self.overlay_scale.setToolTip(t('overlay_scale_hint'));self.overlay_scale_value.setText(f'{self.overlay_scale.value()} %')

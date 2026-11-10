@@ -1,0 +1,103 @@
+name: Bug report
+description: Something in AutoBloodWeb does not work as expected.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please search the [existing issues](https://github.com/Azazel-no/AutoBloodWeb/issues) first.
+
+        **Where is the log?** In the app open **Settings → Report a bug…** (or the **Log** button in the sidebar); it opens the folder with `app.log`.
+        - Installer version: `C:\Program Files\AutoBloodWeb\debug\app.log`
+        - Portable version: `<the folder you unzipped>\debug\app.log`
+
+        **Before attaching the log or a screenshot, check them for personal information** (your Windows user name in paths, your in-game nickname, other players' names) and remove or blur it.
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: From the installer or zip file name, or Windows Settings → Apps → Installed apps.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role
+      options:
+        - Survivor
+        - Killer
+        - Not related to a role
+    validations:
+      required: true
+  - type: dropdown
+    id: feature
+    attributes:
+      label: Feature
+      options:
+        - Bloodweb
+        - Teammate perks
+        - DS timer
+        - Randomizer
+        - Crosshair
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: ui_scale
+    attributes:
+      label: DBD UI scale
+      description: Game settings → Graphics → UI Scale.
+      options:
+        - "100%"
+        - "90%"
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: hud_scale
+    attributes:
+      label: DBD HUD scale
+      description: Game settings → Graphics → HUD Scale.
+      options:
+        - "100%"
+        - "90%"
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: Press Win+R, type `winver` and copy the version line.
+      placeholder: "Windows 11 24H2 (build 26100)"
+    validations:
+      required: true
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the Bloodweb for ...
+        2. Press Start
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag and drop a screenshot of the game and/or the app. Blur nicknames first.
+  - type: textarea
+    id: log
+    attributes:
+      label: app.log
+      description: Drag and drop `app.log` here (see the top of this form for where it is). Check it for personal info first.

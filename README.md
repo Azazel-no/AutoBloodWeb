@@ -20,6 +20,18 @@ AutoBloodWeb levels the Dead by Daylight Bloodweb for you. You pick the items, a
 
 ![Settings page](docs/screenshots/settings.png)
 
+### Teammate perks overlay
+
+![Teammate perks overlay](docs/screenshots/teammate_perks.png)
+
+*After you press Tab, each teammate's perks appear next to their HUD portrait.*
+
+### Decisive Strike timer
+
+![Decisive Strike timer](docs/screenshots/ds_timer.gif)
+
+*In killer matches, the timer counts down next to the survivor who has just been unhooked.*
+
 ## Requirements
 
 - Windows 10 or Windows 11, 64-bit.
@@ -110,6 +122,10 @@ build\venv\Scripts\python.exe scripts\build_release.py
 ```
 
 The installer, portable zip and `SHA256SUMS.txt` appear in `build\release\`.
+
+## Contributing and bug reports
+
+Found a bug? In the app open **Settings → Report a bug…**: it opens the [issue form](../../issues/new/choose) and the folder with `app.log`. Check the log for personal info before you attach it. See [CONTRIBUTING.md](CONTRIBUTING.md) for pull requests and [SECURITY.md](SECURITY.md) for security problems. Everyone taking part follows the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 

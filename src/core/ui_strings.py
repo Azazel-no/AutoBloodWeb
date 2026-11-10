@@ -69,6 +69,8 @@ PAIRS={
  'page_hotkeys':('Горячие клавиши…','Hotkeys…'),
  'page_overlay_key':('Клавиша экрана матча…','Match details key…'),
  'page_notice':('Перед использованием…','Before using…'),
+ 'page_report_bug':('Сообщить об ошибке…','Report a bug…'),
+ 'report_bug_tip':('Откроет форму на GitHub и папку с app.log. Перед прикреплением лога проверьте, нет ли в нём личных данных.','Opens the GitHub issue form and the folder with app.log. Check the log for personal info before attaching it.'),
  'ds_timer':('Таймер Решающего удара (убийца)','Decisive Strike timer (killer)'),
  'ds_timer_hint':('Напоминание: после снятия с крюка ромб рядом с портретом заполняется красным за 60 с. В игре перк может закончиться раньше при явных действиях, это верхняя граница. Работает, когда выбрана роль «Убийца».','A reminder: after an unhook the diamond beside the portrait fills with red over 60 s. The perk can end earlier in game on conspicuous actions; this is an upper bound. Works while the Killer role is selected.'),
  'page_developer':('Режим разработчика','Developer mode'),
