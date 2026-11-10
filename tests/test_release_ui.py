@@ -126,3 +126,37 @@ def test_report_bug_opens_the_issue_form_and_the_log_folder(make_window, monkeyp
     for code in ('ru', 'en', 'es', 'de', 'fr'):
         w.locale.language = code; w.apply_language()
         assert w.page_buttons['page_report_bug'].text() and w.page_buttons['page_report_bug'].text() != 'page_report_bug'
+
+
+SUPPORT = 'TBgvqCy45eEcuazM32YY2vTDLvMBpPpK4W'
+
+
+def test_support_link_shows_the_address_inline_and_copies_it(make_window):
+    from PySide6.QtWidgets import QApplication
+    from src.gui import main_window
+    from pathlib import Path
+    assert main_window.SUPPORT_ADDRESS == SUPPORT
+    readme = (Path(__file__).resolve().parents[1] / 'README.md').read_text(encoding='utf-8')
+    assert '```\n' + SUPPORT + '\n```' in readme and 'docs/screenshots/usdt_trc20_qr.png" width="160"' in readme
+    w = make_window()
+    assert w.support_box.isHidden()
+    w.support_link.linkActivated.emit('#support'); QApplication.processEvents()
+    assert not w.support_box.isHidden() and w.support_address.text() == SUPPORT and w.support_address.isReadOnly()
+    w.support_copy.click()
+    assert QApplication.clipboard().text() == SUPPORT
+    for code in ('ru', 'en', 'es', 'de', 'fr'):
+        w.locale.language = code; w.apply_language()
+        for key in ('support_link', 'support_text', 'support_copy', 'support_warning'):
+            assert w.locale.text(key) != key and w.locale.text(key)
+        assert 'TRC20' in w.support_warning.text()
+    w.support_link.linkActivated.emit('#support')
+    assert w.support_box.isHidden()
+
+
+def test_support_qr_code_encodes_the_same_address():
+    import cv2
+    import numpy as np
+    from pathlib import Path
+    from PIL import Image
+    image = np.array(Image.open(Path(__file__).resolve().parents[1] / 'docs/screenshots/usdt_trc20_qr.png').convert('RGB'))[:, :, ::-1]
+    assert cv2.QRCodeDetector().detectAndDecode(image)[0] == SUPPORT

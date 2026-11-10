@@ -34,6 +34,7 @@ from src.core.priority_targets import PERK_TARGET,perk_target_entry,perk_eligibl
 
 log=logging.getLogger(__name__)
 PTB_CHARACTERS=('terrifier',)  # Terrifier chapter: PTB data; re-check after the live release (assets/ptb_data.json).
+SUPPORT_ADDRESS='TBgvqCy45eEcuazM32YY2vTDLvMBpPpK4W'  # USDT, TRC20 (Tron) only.
 ISSUES_URL='https://github.com/Azazel-no/AutoBloodWeb/issues/new/choose'
 LANGUAGES=(('ru','Русский'),('en','English'),('es','Español'),('de','Deutsch'),('fr','Français'))
 
@@ -472,10 +473,24 @@ class MainWindow(QMainWindow):
         self.ui_scale_note=QLabel();self.ui_scale_note.setObjectName('notice');self.ui_scale_note.setWordWrap(True);layout.addWidget(self.ui_scale_note)
         card,inner=self.card();self.about_title=self.section_label();inner.addWidget(self.about_title);inner.addWidget(self.separator())
         self.about_text=QLabel();self.about_text.setObjectName('muted');self.about_text.setWordWrap(True);self.about_text.setOpenExternalLinks(True);inner.addWidget(self.about_text)
+        # Optional donation details: shown inline only after the user clicks the link; no popups or reminders.
+        self.support_link=QLabel();self.support_link.setObjectName('muted');self.support_link.linkActivated.connect(self.toggle_support);inner.addWidget(self.support_link)
+        self.support_box=QWidget();box=QVBoxLayout(self.support_box);box.setContentsMargins(0,0,0,0);box.setSpacing(6)
+        self.support_text=QLabel();self.support_text.setObjectName('muted');self.support_text.setWordWrap(True);box.addWidget(self.support_text)
+        row=QHBoxLayout();self.support_address=QLineEdit(SUPPORT_ADDRESS);self.support_address.setReadOnly(True);row.addWidget(self.support_address,1)
+        self.support_copy=BloodButton();self.support_copy.clicked.connect(self.copy_support_address);row.addWidget(self.support_copy);box.addLayout(row)
+        self.support_warning=QLabel();self.support_warning.setObjectName('notice');self.support_warning.setWordWrap(True);box.addWidget(self.support_warning)
+        self.support_box.hide();inner.addWidget(self.support_box)
         layout.addWidget(card);layout.addStretch()
 
         self.randomizer_host=QWidget();QVBoxLayout(self.randomizer_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.randomizer_host);self.randomizer_page=None
         self.crosshair_host=QWidget();QVBoxLayout(self.crosshair_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.crosshair_host);self.crosshair_page=None
+
+    def toggle_support(self,_link=None):
+        self.support_box.setVisible(self.support_box.isHidden())
+
+    def copy_support_address(self):
+        QApplication.clipboard().setText(SUPPORT_ADDRESS);self.support_copy.setText(self.locale.text('support_copied'))
 
     def report_bug(self):
         """Opens the GitHub issue form and the folder that holds app.log for the user to attach."""
@@ -541,6 +556,8 @@ class MainWindow(QMainWindow):
         self.page_settings_title.setText(t('page_settings_title').upper());self.page_developer.setText(t('page_developer'))
         for key,button in self.page_buttons.items():button.setText(t(key))
         self.page_buttons['page_report_bug'].setToolTip(t('report_bug_tip'))
+        self.support_link.setText(f'<a href="#support" style="color:#ff7a86">{t("support_link")}</a>');self.support_text.setText(t('support_text'))
+        self.support_copy.setText(t('support_copy'));self.support_warning.setText(t('support_warning'))
         self.settings_menu.setTitle(t('settings_menu'));self.recalibrate_action.setText(t('recalibrate'))
         self.session_action.setText(t('session_check'))
         self.overlay_position_label.setText(t('overlay_position'));self.overlay_scale_label.setText(t('overlay_scale'));self.overlay_scale.setToolTip(t('overlay_scale_hint'));self.overlay_scale_value.setText(f'{self.overlay_scale.value()} %')

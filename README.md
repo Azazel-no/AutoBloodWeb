@@ -130,3 +130,17 @@ Found a bug? In the app open **Settings → Report a bug…**: it opens the [iss
 ## License
 
 AutoBloodWeb is released under the [MIT License](LICENSE). Bundled libraries, wiki data (CC BY-SA) and game images keep their own licences and ownership: see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Support the project
+
+AutoBloodWeb is free and every feature stays free. If it saved you time, you can support development with a donation:
+
+**USDT (TRC20 / Tron network only)**
+
+```
+TBgvqCy45eEcuazM32YY2vTDLvMBpPpK4W
+```
+
+<img src="docs/screenshots/usdt_trc20_qr.png" width="160" alt="QR code of the USDT TRC20 address">
+
+Send only USDT on the Tron (TRC20) network. Other networks or tokens will be lost.
