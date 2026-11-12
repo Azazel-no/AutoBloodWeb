@@ -17655,6 +17655,14 @@
     ],
     "survivor_item_009": [
       {
+        "source": "assets/survivors/items/wiki_originals/332c54fdb21e6f329e44418b65946e3a6e78cf2a83727cda8aa80527ba9447ff.png",
+        "wiki_id": "wiki_survivor_common_items_332c54fdb21e",
+        "sha256": "332c54fdb21e6f329e44418b65946e3a6e78cf2a83727cda8aa80527ba9447ff",
+        "url": "https://deadbydaylight.wiki.gg/images/IconItems_skeletonKey.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+        "identity_review": "visually_confirmed_contact_sheet_v101"
+      },
+      {
         "source": "assets/survivors/items/wiki_originals/71e09fe2eaed3812dd5a5786d547d75218c77267f8449cfb99e510fcd1ed39e3.png",
         "wiki_id": "wiki_survivor_common_items_71e09fe2eaed",
         "sha256": "71e09fe2eaed3812dd5a5786d547d75218c77267f8449cfb99e510fcd1ed39e3",
@@ -17735,12 +17743,12 @@
     ],
     "survivor_item_017": [
       {
-        "source": "assets/survivors/items/wiki_originals/792a63b6c0da1ac383da8388de3f0c0897fb156603e3c7e9d4de0a1a8a11dda7.png",
-        "wiki_id": "wiki_survivor_common_items_792a63b6c0da",
-        "sha256": "792a63b6c0da1ac383da8388de3f0c0897fb156603e3c7e9d4de0a1a8a11dda7",
-        "url": "https://deadbydaylight.wiki.gg/images/IconItems_wornOutTools.png",
+        "source": "assets/survivors/items/wiki_originals/c15744e5a94f1b71e774893dafcf1005362815ae40baac0b52e5bc4f5c281bce.png",
+        "wiki_id": "wiki_survivor_common_items_c15744e5a94f",
+        "sha256": "c15744e5a94f1b71e774893dafcf1005362815ae40baac0b52e5bc4f5c281bce",
+        "url": "https://deadbydaylight.wiki.gg/images/IconItems_toolbox.png",
         "page": "https://deadbydaylight.wiki.gg/wiki/Items",
-        "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+        "identity_review": "visually_confirmed_contact_sheet_v101"
       }
     ],
     "survivor_item_018": [
@@ -18221,6 +18229,46 @@
         "url": "https://deadbydaylight.wiki.gg/images/IconFavors_vigosBlueprint.png",
         "page": "https://deadbydaylight.wiki.gg/wiki/Offerings",
         "identity_review": "visually_confirmed_legacy_wiki_contact_sheet"
+      }
+    ],
+    "survivor_item_002": [
+      {
+        "source": "assets/survivors/items/wiki_originals/fc19f589e3d8d144736a47091fae036c158cbbb5a161b5aaecbb2c100dfcdeee.png",
+        "wiki_id": "wiki_survivor_common_items_fc19f589e3d8",
+        "sha256": "fc19f589e3d8d144736a47091fae036c158cbbb5a161b5aaecbb2c100dfcdeee",
+        "url": "https://deadbydaylight.wiki.gg/images/IconItems_engineersToolbox.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+        "identity_review": "visually_confirmed_contact_sheet_v101"
+      }
+    ],
+    "survivor_item_021": [
+      {
+        "source": "assets/survivors/items/wiki_originals/aa8d6947426eb913e694905ae2734cbbff020d98658c7f808392f39736a1adee.png",
+        "wiki_id": "wiki_survivor_common_items_aa8d6947426e",
+        "sha256": "aa8d6947426eb913e694905ae2734cbbff020d98658c7f808392f39736a1adee",
+        "url": "https://deadbydaylight.wiki.gg/images/IconItems_CrypticMap.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+        "identity_review": "visually_confirmed_contact_sheet_v101"
+      }
+    ],
+    "survivor_item_022": [
+      {
+        "source": "assets/survivors/items/wiki_originals/792a63b6c0da1ac383da8388de3f0c0897fb156603e3c7e9d4de0a1a8a11dda7.png",
+        "wiki_id": "wiki_survivor_common_items_792a63b6c0da",
+        "sha256": "792a63b6c0da1ac383da8388de3f0c0897fb156603e3c7e9d4de0a1a8a11dda7",
+        "url": "https://deadbydaylight.wiki.gg/images/IconItems_wornOutTools.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Items",
+        "identity_review": "visually_confirmed_contact_sheet_v101"
+      }
+    ],
+    "wiki_survivor_common_addons_66e03cc2c308": [
+      {
+        "source": "assets/survivors/addons/bloodweb_captures/needle_and_thread_v101.png",
+        "wiki_id": null,
+        "sha256": "9cc03fc45992069055c2557d0bac393ffa956794a5947ce0487f0f1032a5e7c0",
+        "url": "https://deadbydaylight.wiki.gg/images/IconAddon_needle&Thread.png",
+        "page": "https://deadbydaylight.wiki.gg/wiki/Add-ons",
+        "identity_review": "live_bloodweb_crop_v101_lee_yun_jin_level17_visually_confirmed"
       }
     ]
   },

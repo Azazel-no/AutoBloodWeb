@@ -191,6 +191,9 @@ class IconLibrary:
         if extension.is_file():
             try:
                 extra=json.loads(extension.read_text(encoding='utf-8'))
+                # 1.0.1: add-ons added from Wiki files alone also match against their composed
+                # tile rendered at node size, like event icons (no game crop exists for them).
+                self.rendered_reference_ids=frozenset(extra.get('v101_review',{}).get('ids',[]))
                 known={e.id for e in self.entries}
                 aliases={ref.get('wiki_id') for refs in self.wiki_references.values() for ref in refs}
                 for item in extra.get('entries',[]):

@@ -27,9 +27,10 @@ STABLE_READS=3
 HUD_GONE_SECONDS=8.
 
 
-def load_templates(root):
+def load_templates(root,names=(HOOKED,DEAD)):
+    """'dying' and 'carried' (1v1 timer) were cut from the 2026-11-11 killer-POV samples."""
     folder=Path(root)/'assets/ui/killer_hud'
-    return {name:cv2.imread(str(folder/f'{name}.png'),cv2.IMREAD_GRAYSCALE) for name in (HOOKED,DEAD)}
+    return {name:cv2.imread(str(folder/f'{name}.png'),cv2.IMREAD_GRAYSCALE) for name in names}
 
 
 def glyph_masks(patch):

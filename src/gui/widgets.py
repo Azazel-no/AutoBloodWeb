@@ -161,6 +161,17 @@ class IconTile(Hover,QToolButton):
         p.setBrush(gradient);p.drawRoundedRect(QRectF(self.rect()).adjusted(1,1,-1,-1),9,9)
 
 
+def gear_path(center,body=8.6,tip=12.2,tooth=4.6,teeth=8):
+    """Outline of a classic gear: a ring with `teeth` rectangular teeth, one closed path."""
+    from PySide6.QtGui import QPainterPath,QTransform
+    path=QPainterPath();path.addEllipse(center,body,body)
+    for index in range(teeth):
+        rect=QPainterPath();rect.addRoundedRect(QRectF(-tooth/2,-tip,tooth,tip-body+1.2),.8,.8)
+        transform=QTransform();transform.translate(center.x(),center.y());transform.rotate(index*360/teeth)
+        path=path.united(transform.map(rect))
+    return path.simplified()
+
+
 class NavButton(Hover,QPushButton):
     """Narrow sidebar button with a small hand-drawn glyph."""
     def __init__(self,kind,parent=None):
@@ -184,10 +195,14 @@ class NavButton(Hover,QPushButton):
         elif self.kind=='crosshair':
             p.drawEllipse(c,9,9)
             for a,b in (((24,11),(24,19)),((24,29),(24,37)),((11,24),(19,24)),((29,24),(37,24))):p.drawLine(QPointF(*a),QPointF(*b))
+        elif self.kind=='onevone':  # Stopwatch: ring, crown button and one hand.
+            p.drawEllipse(QPointF(24,26),10,10);p.drawLine(QPointF(24,13),QPointF(24,16));p.drawLine(QPointF(21,13),QPointF(27,13))
+            p.drawLine(QPointF(24,26),QPointF(24,20));p.drawLine(QPointF(24,26),QPointF(28,28))
+        elif self.kind=='maps':  # Folded map: three panels and a pin.
+            p.drawPolygon(QPolygonF([QPointF(12,16),QPointF(20,13),QPointF(28,16),QPointF(36,13),QPointF(36,33),QPointF(28,36),QPointF(20,33),QPointF(12,36)]))
+            p.drawLine(QPointF(20,13),QPointF(20,33));p.drawLine(QPointF(28,16),QPointF(28,36))
         elif self.kind=='settings':
-            for angle in range(0,360,45):
-                a=math.radians(angle);p.drawLine(QPointF(24+7.5*math.cos(a),24+7.5*math.sin(a)),QPointF(24+11.5*math.cos(a),24+11.5*math.sin(a)))
-            p.drawEllipse(c,7.5,7.5);p.drawEllipse(c,2.8,2.8)
+            p.drawPath(gear_path(c));p.drawEllipse(c,3.6,3.6)
         else:
             for y,x in ((16,33),(22,33),(28,27),(34,31)):p.drawLine(QPointF(15,y),QPointF(x,y))
 

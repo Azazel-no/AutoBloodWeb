@@ -22,6 +22,7 @@ data/action_outcomes.json
 data/action_outcomes.lock
 data/review_annotations.json
 data/match_overlay_own_name.png
+data/map_cache/
 
 # --- Match samples (other players' nicknames), design references, saved web pages ---
 debug/match_samples/

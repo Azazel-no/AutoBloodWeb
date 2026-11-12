@@ -434,6 +434,8 @@ class MainWindow(QMainWindow):
         self.apply_overlay(self.match_overlay.isChecked())
         self.apply_ds_timer(self.ds_timer.isChecked())
         self.apply_crosshair(self.prefs.settings['crosshair']['enabled'])
+        self.apply_onevone(self.prefs.settings['onevone']['enabled'])
+        self.apply_map_overlay(self.prefs.settings['map_overlay']['enabled'])
         from PySide6.QtCore import QTimer
         QTimer.singleShot(0,self.refresh_autostart_action)
 
@@ -441,7 +443,7 @@ class MainWindow(QMainWindow):
         """Sidebar: the top action panel stays; pages replace only the area below it."""
         self.nav_group=QButtonGroup(self);self.nav_group.setExclusive(True);self.nav_buttons={}
         column=QVBoxLayout(self.sidebar);column.setContentsMargins(10,16,10,16);column.setSpacing(10)
-        for index,kind in ((0,'bloodweb'),(2,'randomizer'),(3,'crosshair'),(1,'settings')):  # Page index in the stack.
+        for index,kind in ((0,'bloodweb'),(2,'randomizer'),(3,'crosshair'),(4,'onevone'),(5,'maps'),(1,'settings')):  # Page index in the stack.
             button=NavButton(kind);self.nav_group.addButton(button,index);column.addWidget(button);self.nav_buttons[kind]=button
         column.addStretch()
         self.nav_buttons['log']=NavButton('log');self.nav_buttons['log'].setCheckable(False)
@@ -485,6 +487,8 @@ class MainWindow(QMainWindow):
 
         self.randomizer_host=QWidget();QVBoxLayout(self.randomizer_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.randomizer_host);self.randomizer_page=None
         self.crosshair_host=QWidget();QVBoxLayout(self.crosshair_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.crosshair_host);self.crosshair_page=None
+        self.onevone_host=QWidget();QVBoxLayout(self.onevone_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.onevone_host);self.onevone_page=None
+        self.map_host=QWidget();QVBoxLayout(self.map_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.map_host);self.map_page=None
 
     def toggle_support(self,_link=None):
         self.support_box.setVisible(self.support_box.isHidden())
@@ -510,7 +514,17 @@ class MainWindow(QMainWindow):
             self.crosshair_page=CrosshairPage(self.prefs.settings['crosshair'],self.save_preferences,self.locale.text)
             self.crosshair_page.changed.connect(self.crosshair_config_changed);self.crosshair_page.enabled_changed.connect(self.apply_crosshair)
             self.crosshair_host.layout().addWidget(self.crosshair_page)
-        self.pages.setCurrentIndex(index);full=index in (2,3)
+        if index==4 and self.onevone_page is None:
+            from src.gui.onevone_overlay import OneVOnePage
+            self.onevone_page=OneVOnePage(self.prefs.settings['onevone'],self.save_preferences,self.locale.text)
+            self.onevone_page.enabled_changed.connect(self.apply_onevone);self.onevone_page.settings_changed.connect(self.onevone_settings_changed)
+            self.onevone_page.action.connect(self.onevone_action);self.onevone_host.layout().addWidget(self.onevone_page);self.onevone_state()
+        if index==5 and self.map_page is None:
+            from src.gui.map_overlay import MapPage
+            self.map_page=MapPage(self.root,self.prefs.settings['map_overlay'],self.save_preferences,self.locale.text)
+            self.map_page.enabled_changed.connect(self.apply_map_overlay);self.map_page.picked.connect(self.map_picked)
+            self.map_host.layout().addWidget(self.map_page);self.map_state()
+        self.pages.setCurrentIndex(index);full=index in (2,3,4,5)
         self.action_panel.setVisible(not full);self.role.setVisible(not full);self.character.setVisible(not full and self.current_role=='killer')
 
     def crosshair_settings(self):
@@ -527,6 +541,46 @@ class MainWindow(QMainWindow):
             controller=self.crosshair_controller=CrosshairController(self.root,lambda:bool(self.auto_worker),self.prefs.settings['crosshair']['key'])
             controller.window.set_config(self.crosshair_settings())
         if controller:(controller.enable if enabled else controller.disable)()
+
+    def apply_onevone(self,enabled):
+        controller=getattr(self,'onevone_controller',None)
+        if enabled and controller is None:
+            from src.gui.onevone_overlay import OneVOneController
+            controller=self.onevone_controller=OneVOneController(self.root,self.prefs.settings['onevone'],lambda:self.current_role=='killer',lambda:bool(self.auto_worker))
+            controller.changed.connect(self.onevone_state)
+        if controller:(controller.enable if enabled else controller.disable)()
+        self.onevone_state()
+
+    def apply_map_overlay(self,enabled):
+        controller=getattr(self,'map_controller',None)
+        if enabled and controller is None:
+            from src.gui.map_overlay import MapController
+            controller=self.map_controller=MapController(self.root,self.prefs.settings['map_overlay'],lambda:bool(self.auto_worker))
+            controller.changed.connect(self.map_state)
+        if controller:(controller.enable if enabled else controller.disable)()
+        self.map_state()
+
+    def map_picked(self,key):
+        controller=getattr(self,'map_controller',None)
+        if controller:controller.pick(key)
+
+    def map_state(self):
+        if self.map_page:
+            controller=getattr(self,'map_controller',None)
+            self.map_page.show_state(controller if controller and self.prefs.settings['map_overlay']['enabled'] else None)
+
+    def onevone_settings_changed(self):
+        controller=getattr(self,'onevone_controller',None)
+        if controller:controller.set_names(self.prefs.settings['onevone']['names']);controller.paint()
+
+    def onevone_action(self,name):
+        controller=getattr(self,'onevone_controller',None)
+        if controller:controller.on_key(name)
+
+    def onevone_state(self):
+        controller=getattr(self,'onevone_controller',None)
+        if self.onevone_page and controller:self.onevone_page.show_state(controller.model,controller.current_role())
+        elif self.onevone_page:self.onevone_page.state.setText(self.locale.text('vs_off'))
 
     @property
     def current_role(self): return self.role.currentData()
@@ -1080,7 +1134,11 @@ class MainWindow(QMainWindow):
             self.prefs.settings['developer_mode']=enabled;self.save_preferences()
 
     def refresh_autostart_action(self):
-        from src.core.autostart import task_installed
+        from src.core.autostart import task_installed,migrate_run_key
+        try:
+            # An old HKCU Run entry cannot start the admin app silently: replace it with the task.
+            if migrate_run_key(self.root):log.info('Start with DBD: Run-key entry moved to the logon task')
+        except OSError as exc:log.warning('Run-key migration failed: %r',exc)
         try:installed=task_installed()
         except OSError:installed=False
         self.start_with_dbd.blockSignals(True);self.start_with_dbd.setChecked(installed);self.start_with_dbd.blockSignals(False)
@@ -1200,6 +1258,8 @@ class MainWindow(QMainWindow):
         if self.worker or self.auto_worker or self.session_check: return
         if getattr(self,'overlay_controller',None):self.overlay_controller.suspend()
         if getattr(self,'crosshair_controller',None):self.crosshair_controller.window.hide()
+        if getattr(self,'onevone_controller',None):self.onevone_controller.window.hide()
+        if getattr(self,'map_controller',None):self.map_controller.window.hide()
         if self.pages.currentIndex()!=0:self.nav_buttons['bloodweb'].setChecked(True);self.open_page(0)
         calibration_window_proof=None
         if calibrate:
@@ -1499,9 +1559,15 @@ class MainWindow(QMainWindow):
             fields[action]=QLineEdit(self.prefs.settings['hotkeys'][action]); layout.addWidget(fields[action])
         layout.addWidget(QLabel(self.locale.text('cross_key_prompt')));crosshair=QLineEdit(self.prefs.settings['crosshair']['key']);layout.addWidget(crosshair)
         layout.addWidget(QLabel(self.locale.text('overlay_key_prompt')));overlay_key=QLineEdit(self.prefs.settings['overlay_key']);layout.addWidget(overlay_key)
+        from src.core.onevone import ACTIONS as VS_ACTIONS,DEFAULT_KEYS as VS_DEFAULTS
+        vs_fields={}
+        for action in VS_ACTIONS:
+            layout.addWidget(QLabel(self.locale.text('vs_key_'+action)));vs_fields[action]=QLineEdit(self.prefs.settings['onevone']['keys'][action]);layout.addWidget(vs_fields[action])
+        from src.core.map_names import DEFAULT_KEY as MAP_DEFAULT
+        layout.addWidget(QLabel(self.locale.text('map_key_prompt')));map_key=QLineEdit(self.prefs.settings['map_overlay']['key']);layout.addWidget(map_key)
         error=QLabel(); error.setWordWrap(True); layout.addWidget(error)
         reset=BloodButton(self.locale.text('reset_defaults')); layout.addWidget(reset)
-        reset.clicked.connect(lambda:[fields[k].setText(v) for k,v in DEFAULT_BINDINGS.items()])
+        reset.clicked.connect(lambda:[fields[k].setText(v) for k,v in DEFAULT_BINDINGS.items()]+[vs_fields[k].setText(v) for k,v in VS_DEFAULTS.items()]+[map_key.setText(MAP_DEFAULT)])
         check=BloodButton(self.locale.text('hotkey_diagnostics')); layout.addWidget(check)
         check.clicked.connect(self.open_hotkey_diagnostics)
         apply=BloodButton(self.locale.text('apply')); layout.addWidget(apply)
@@ -1515,8 +1581,20 @@ class MainWindow(QMainWindow):
             cross=valid_key(crosshair.text());details=overlay_key.text().strip().upper()
             try:key_code(details)
             except (ValueError,KeyError):details=None
-            if cross is None or details is None or extra_keys_conflict(bindings,cross,details):
+            vs_keys={}
+            for action,field in vs_fields.items():
+                vs_keys[action]=valid_key(field.text())
+            map_value=valid_key(map_key.text())
+            if cross is None or details is None or map_value is None or None in vs_keys.values() or extra_keys_conflict(bindings,cross,details,list(vs_keys.values())+[map_value]):
                 error.setText(self.locale.text('hotkey_conflict'));return
+            if vs_keys!=self.prefs.settings['onevone']['keys']:
+                self.prefs.settings['onevone']['keys']=vs_keys
+                if getattr(self,'onevone_controller',None):self.onevone_controller.restart_keys()
+                if self.onevone_page:self.onevone_page.publish()
+            if map_value!=self.prefs.settings['map_overlay']['key']:
+                self.prefs.settings['map_overlay']['key']=map_value
+                if getattr(self,'map_controller',None):self.map_controller.restart_key()
+                if self.map_page:self.map_page.publish()
             if cross!=self.prefs.settings['crosshair']['key']:
                 self.prefs.settings['crosshair']['key']=cross
                 if getattr(self,'crosshair_controller',None):self.crosshair_controller.set_key(cross)
@@ -1570,6 +1648,8 @@ class MainWindow(QMainWindow):
         if getattr(self,'ds_controller',None):self.ds_controller.disable()
         if getattr(self,'overlay_controller',None):self.overlay_controller.disable()
         if getattr(self,'crosshair_controller',None):self.crosshair_controller.disable()
+        if getattr(self,'onevone_controller',None):self.onevone_controller.disable()
+        if getattr(self,'map_controller',None):self.map_controller.disable()
         if getattr(self,'tray',None):self.tray.hide()
         if self.session_check:self.session_check.close()
         if self.auto_worker:

@@ -45,7 +45,7 @@ def test_catalog_and_cache(library):
 
 
 def test_roles_and_character_extension(library):
-    assert len(library.filter('survivor'))==145  # 112 preserved + 33 verified event role entries.
+    assert len(library.filter('survivor'))==166  # 112 preserved + 33 verified event role entries + 21 survivor add-ons (1.0.1).
     assert len(library.filter('killer'))==89
     assert len(library.filter('killer','addons','blight'))==21
     assert all(e.character is None for e in library.filter('killer','addons','other_character'))

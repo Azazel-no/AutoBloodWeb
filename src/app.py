@@ -41,6 +41,15 @@ def main(argv=None):
     args=parser.parse_args(argv)
     if args.smoke_gui and (not args.preferences or not args.output or args.start):
         parser.error('--smoke-gui requires --preferences and --output, and forbids --start')
+    gui=not any((args.smoke_gui,args.build_library,args.analyze,args.analyze_all,args.scan_game,args.dry_run,args.diagnose_display,
+        args.audit_libraries,args.audit_templates,args.sync_wiki,args.sync_perks,args.sync_items,args.verify_wiki,args.repair_wiki_assets,
+        args.input_self_test,args.watcher))
+    if gui and sys.platform=='win32':
+        from src.core.elevation import is_admin,relaunch_as_admin
+        if not is_admin():
+            # The exe carries a requireAdministrator manifest; this only catches starts
+            # that bypassed it. A plain message and UAC instead of a technical error.
+            relaunch_as_admin(ROOT,list(sys.argv[1:] if argv is None else argv));return 0
     if args.auto_elevate and not args.elevated:
         from src.core.screen_manager import WindowsBackend
         from src.core.elevation import needs_elevation,request_restart

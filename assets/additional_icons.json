@@ -321,6 +321,342 @@
       ],
       "rarity": "green",
       "fingerprint": "8e5cbcc5a2e53e1d776a7819b627db3bce98c97b4a372a62c0d1a1913468802e"
+    },
+    {
+      "id": "wiki_survivor_common_addons_0a0e7617a6ab",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/0a0e7617a6ab0d59f8f68923e32deee4061ab7b48509fb8992a0a3df9b87fc91.png",
+      "source": "assets/survivors/addons/wiki_originals/0a0e7617a6ab0d59f8f68923e32deee4061ab7b48509fb8992a0a3df9b87fc91.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "brown",
+      "fingerprint": "0a0e7617a6ab0d59f8f68923e32deee4061ab7b48509fb8992a0a3df9b87fc91"
+    },
+    {
+      "id": "wiki_survivor_common_addons_1a4f09c298e1",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/1a4f09c298e1cce2824aa082b84f8f481ad8e9eb6be37661a9d9306bbcf97f4d.png",
+      "source": "assets/survivors/addons/wiki_originals/1a4f09c298e1cce2824aa082b84f8f481ad8e9eb6be37661a9d9306bbcf97f4d.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "brown",
+      "fingerprint": "1a4f09c298e1cce2824aa082b84f8f481ad8e9eb6be37661a9d9306bbcf97f4d"
+    },
+    {
+      "id": "wiki_survivor_common_addons_069d1cee0caf",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/069d1cee0cafe2b4d9aed90ef4e6a84f86a92858e5aaab90a486dbb26830c3e7.png",
+      "source": "assets/survivors/addons/wiki_originals/069d1cee0cafe2b4d9aed90ef4e6a84f86a92858e5aaab90a486dbb26830c3e7.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "green",
+      "fingerprint": "069d1cee0cafe2b4d9aed90ef4e6a84f86a92858e5aaab90a486dbb26830c3e7"
+    },
+    {
+      "id": "wiki_survivor_common_addons_bdf60a5a934b",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/bdf60a5a934bf0228c3d854cf8d3430b6abab85d40252dd1b24d3cb48b8c7bb2.png",
+      "source": "assets/survivors/addons/wiki_originals/bdf60a5a934bf0228c3d854cf8d3430b6abab85d40252dd1b24d3cb48b8c7bb2.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "green",
+      "fingerprint": "bdf60a5a934bf0228c3d854cf8d3430b6abab85d40252dd1b24d3cb48b8c7bb2"
+    },
+    {
+      "id": "wiki_survivor_common_addons_0b790be5fb97",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/0b790be5fb97438745432de77cb58e2397c896c6e11cf61e6ae8faa5966edb1f.png",
+      "source": "assets/survivors/addons/wiki_originals/0b790be5fb97438745432de77cb58e2397c896c6e11cf61e6ae8faa5966edb1f.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "green",
+      "fingerprint": "0b790be5fb97438745432de77cb58e2397c896c6e11cf61e6ae8faa5966edb1f"
+    },
+    {
+      "id": "wiki_survivor_common_addons_55cbf6ad7c5e",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/55cbf6ad7c5e47168ab66e4fb4c9b302c98a7e9a60d2d92dd5142d0d4c336665.png",
+      "source": "assets/survivors/addons/wiki_originals/55cbf6ad7c5e47168ab66e4fb4c9b302c98a7e9a60d2d92dd5142d0d4c336665.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "pink",
+      "fingerprint": "55cbf6ad7c5e47168ab66e4fb4c9b302c98a7e9a60d2d92dd5142d0d4c336665"
+    },
+    {
+      "id": "wiki_survivor_common_addons_eeec30999dc0",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/eeec30999dc06c1d2f564da76173b6fbfec459eb46bc73779381c6bdbff1665b.png",
+      "source": "assets/survivors/addons/wiki_originals/eeec30999dc06c1d2f564da76173b6fbfec459eb46bc73779381c6bdbff1665b.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "brown",
+      "fingerprint": "eeec30999dc06c1d2f564da76173b6fbfec459eb46bc73779381c6bdbff1665b"
+    },
+    {
+      "id": "wiki_survivor_common_addons_b1eb7e2a6c7f",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/b1eb7e2a6c7fc471462f4efb1d9af3bd84d948a59a8e8f84fe80d465b56add3c.png",
+      "source": "assets/survivors/addons/wiki_originals/b1eb7e2a6c7fc471462f4efb1d9af3bd84d948a59a8e8f84fe80d465b56add3c.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "green",
+      "fingerprint": "b1eb7e2a6c7fc471462f4efb1d9af3bd84d948a59a8e8f84fe80d465b56add3c"
+    },
+    {
+      "id": "wiki_survivor_common_addons_9bfb24d63a5d",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/9bfb24d63a5d018d6191c9f78809673cce136acadc5d64499821d5a21e135c7b.png",
+      "source": "assets/survivors/addons/wiki_originals/9bfb24d63a5d018d6191c9f78809673cce136acadc5d64499821d5a21e135c7b.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "blue",
+      "fingerprint": "9bfb24d63a5d018d6191c9f78809673cce136acadc5d64499821d5a21e135c7b"
+    },
+    {
+      "id": "wiki_survivor_common_addons_b249f32208a8",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/b249f32208a8b96db2d159960039ae2eecc313ce75a282aefc938810df78bc5e.png",
+      "source": "assets/survivors/addons/wiki_originals/b249f32208a8b96db2d159960039ae2eecc313ce75a282aefc938810df78bc5e.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "purple",
+      "fingerprint": "b249f32208a8b96db2d159960039ae2eecc313ce75a282aefc938810df78bc5e"
+    },
+    {
+      "id": "wiki_survivor_common_addons_c68b091a93f1",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/c68b091a93f1ae7b07d2c7f60595cb9462fd05693ca734fa55153e86ca7b3b8e.png",
+      "source": "assets/survivors/addons/wiki_originals/c68b091a93f1ae7b07d2c7f60595cb9462fd05693ca734fa55153e86ca7b3b8e.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "pink",
+      "fingerprint": "c68b091a93f1ae7b07d2c7f60595cb9462fd05693ca734fa55153e86ca7b3b8e"
+    },
+    {
+      "id": "wiki_survivor_common_addons_5bfc58f8fa1e",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/5bfc58f8fa1e4c50652ae8938c809de6e787b70e8def43cd376fedd79d3ceb16.png",
+      "source": "assets/survivors/addons/wiki_originals/5bfc58f8fa1e4c50652ae8938c809de6e787b70e8def43cd376fedd79d3ceb16.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "brown",
+      "fingerprint": "5bfc58f8fa1e4c50652ae8938c809de6e787b70e8def43cd376fedd79d3ceb16"
+    },
+    {
+      "id": "wiki_survivor_common_addons_c63ca5484103",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/c63ca548410384ce88c77da53f0a8136a201f3fe3f1ce66dfb6ebcb38a6046f8.png",
+      "source": "assets/survivors/addons/wiki_originals/c63ca548410384ce88c77da53f0a8136a201f3fe3f1ce66dfb6ebcb38a6046f8.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "purple",
+      "fingerprint": "c63ca548410384ce88c77da53f0a8136a201f3fe3f1ce66dfb6ebcb38a6046f8"
+    },
+    {
+      "id": "wiki_survivor_common_addons_84be1a2c2070",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/84be1a2c207011fce86b5d74e51367c327ab5de82f0a470bd419a88571712e4a.png",
+      "source": "assets/survivors/addons/wiki_originals/84be1a2c207011fce86b5d74e51367c327ab5de82f0a470bd419a88571712e4a.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "pink",
+      "fingerprint": "84be1a2c207011fce86b5d74e51367c327ab5de82f0a470bd419a88571712e4a"
+    },
+    {
+      "id": "wiki_survivor_common_addons_c32d6f22f564",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/c32d6f22f5646f40c1880dbe1db4e12866e64ad51d1cb655db8449f3eaaaf907.png",
+      "source": "assets/survivors/addons/wiki_originals/c32d6f22f5646f40c1880dbe1db4e12866e64ad51d1cb655db8449f3eaaaf907.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "brown",
+      "fingerprint": "c32d6f22f5646f40c1880dbe1db4e12866e64ad51d1cb655db8449f3eaaaf907"
+    },
+    {
+      "id": "wiki_survivor_common_addons_66e03cc2c308",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/66e03cc2c30822538b8c214922bcee79a63fc2c41b01444e76d5dc77cdf8ce41.png",
+      "source": "assets/survivors/addons/wiki_originals/66e03cc2c30822538b8c214922bcee79a63fc2c41b01444e76d5dc77cdf8ce41.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "green",
+      "fingerprint": "66e03cc2c30822538b8c214922bcee79a63fc2c41b01444e76d5dc77cdf8ce41"
+    },
+    {
+      "id": "wiki_survivor_common_addons_0988bf92994f",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/0988bf92994f773de75ce16c30968c11d0876cc3cb323ffcc0e28312d47b8d4d.png",
+      "source": "assets/survivors/addons/wiki_originals/0988bf92994f773de75ce16c30968c11d0876cc3cb323ffcc0e28312d47b8d4d.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "green",
+      "fingerprint": "0988bf92994f773de75ce16c30968c11d0876cc3cb323ffcc0e28312d47b8d4d"
+    },
+    {
+      "id": "wiki_survivor_common_addons_45a87bf07b2e",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/45a87bf07b2ea3bef3a1e582ec06bcdfce6664667ce3f492268e781122ad5806.png",
+      "source": "assets/survivors/addons/wiki_originals/45a87bf07b2ea3bef3a1e582ec06bcdfce6664667ce3f492268e781122ad5806.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "pink",
+      "fingerprint": "45a87bf07b2ea3bef3a1e582ec06bcdfce6664667ce3f492268e781122ad5806"
+    },
+    {
+      "id": "wiki_survivor_common_addons_570ccd3f3f75",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/570ccd3f3f758590bfb044d0745e8173f6d017268d95f5e3af917566837e1787.png",
+      "source": "assets/survivors/addons/wiki_originals/570ccd3f3f758590bfb044d0745e8173f6d017268d95f5e3af917566837e1787.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "pink",
+      "fingerprint": "570ccd3f3f758590bfb044d0745e8173f6d017268d95f5e3af917566837e1787"
+    },
+    {
+      "id": "wiki_survivor_common_addons_44745fd5464a",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/44745fd5464a7a480d24be2f7a3dcd81da85db8ba6d9978888d5b6f4e92f7aea.png",
+      "source": "assets/survivors/addons/wiki_originals/44745fd5464a7a480d24be2f7a3dcd81da85db8ba6d9978888d5b6f4e92f7aea.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "brown",
+      "fingerprint": "44745fd5464a7a480d24be2f7a3dcd81da85db8ba6d9978888d5b6f4e92f7aea"
+    },
+    {
+      "id": "wiki_survivor_common_addons_e379f3bb1375",
+      "role": "survivor",
+      "category": "addons",
+      "character": null,
+      "image": "assets/survivors/addons/wiki_normalized/e379f3bb1375f5c652deabdbf4d16011b6c27a27b19bc68a8c1df0e25b542d99.png",
+      "source": "assets/survivors/addons/wiki_originals/e379f3bb1375f5c652deabdbf4d16011b6c27a27b19bc68a8c1df0e25b542d99.png",
+      "box": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "rarity": "pink",
+      "fingerprint": "e379f3bb1375f5c652deabdbf4d16011b6c27a27b19bc68a8c1df0e25b542d99"
     }
   ],
   "review": "Five genuinely missing survivor add-ons, visually reviewed against current user captures and all 11 legacy addon icons. Existing Wiki originals; no new images/duplicate IDs.",
@@ -347,5 +683,31 @@
     ],
     "proof": "assets/reference_versions/v46_survivor.json",
     "development": true
+  },
+  "v101_review": {
+    "ids": [
+      "wiki_survivor_common_addons_0a0e7617a6ab",
+      "wiki_survivor_common_addons_1a4f09c298e1",
+      "wiki_survivor_common_addons_069d1cee0caf",
+      "wiki_survivor_common_addons_bdf60a5a934b",
+      "wiki_survivor_common_addons_0b790be5fb97",
+      "wiki_survivor_common_addons_55cbf6ad7c5e",
+      "wiki_survivor_common_addons_eeec30999dc0",
+      "wiki_survivor_common_addons_b1eb7e2a6c7f",
+      "wiki_survivor_common_addons_9bfb24d63a5d",
+      "wiki_survivor_common_addons_b249f32208a8",
+      "wiki_survivor_common_addons_c68b091a93f1",
+      "wiki_survivor_common_addons_5bfc58f8fa1e",
+      "wiki_survivor_common_addons_c63ca5484103",
+      "wiki_survivor_common_addons_84be1a2c2070",
+      "wiki_survivor_common_addons_c32d6f22f564",
+      "wiki_survivor_common_addons_66e03cc2c308",
+      "wiki_survivor_common_addons_0988bf92994f",
+      "wiki_survivor_common_addons_45a87bf07b2e",
+      "wiki_survivor_common_addons_570ccd3f3f75",
+      "wiki_survivor_common_addons_44745fd5464a",
+      "wiki_survivor_common_addons_e379f3bb1375"
+    ],
+    "note": "Hotfix 1.0.1: Wiki survivor item add-ons that were downloaded and file-verified but never activated (e.g. Gel Dressings, Odd Bulb, Blood Amber). Checked for duplicates of the 11 legacy toolbox add-ons by Wiki URL and glyph similarity."
   }
 }

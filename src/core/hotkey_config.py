@@ -23,7 +23,7 @@ def validate_bindings(bindings):
     return values
 
 
-def extra_keys_conflict(bindings,crosshair,details):
-    """True when the crosshair or match-details key repeats another shortcut."""
-    keys=[bindings['toggle'].upper(),bindings['stop'].upper(),crosshair.upper(),details.upper()]
+def extra_keys_conflict(bindings,crosshair,details,others=()):
+    """True when the crosshair, match-details or 1v1 keys repeat another shortcut."""
+    keys=[bindings['toggle'].upper(),bindings['stop'].upper(),crosshair.upper(),details.upper()]+[k.upper() for k in others]
     return len(set(keys))<len(keys)

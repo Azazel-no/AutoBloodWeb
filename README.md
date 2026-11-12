@@ -14,9 +14,11 @@ AutoBloodWeb levels the Dead by Daylight Bloodweb for you. You pick the items, a
 - **Randomizer** for killer and survivor builds (perks, add-ons, offering), with exclusions.
 - **Match overlays** (off by default): teammates' perks next to their HUD portraits after you press Tab, and a Decisive Strike timer for killers.
 - **Crosshair** overlay (off by default).
+- **1v1 timer** (off by default): a scoreboard at the top centre that times each survivor's chase and keeps the score of the pair.
+- **Map overlay** (off by default): the current map's callouts in the top-left corner during a match, read from the loading screen. Map callouts by Hens333.
 - **Start with DBD**: an optional logon task that opens the app in the tray when the game starts.
 - Five interface languages: English, Russian, Spanish, German, French.
-- Works only with screen pixels and normal mouse clicks. It never reads or changes game memory or files and does not touch the anti-cheat. Nothing is sent over the network.
+- Works only with screen pixels and normal mouse clicks. It never reads or changes game memory or files and does not touch the anti-cheat. Nothing is sent over the network; the only download is the map overlay's images, once each, when you turn it on.
 
 ![Settings page](docs/screenshots/settings.png)
 
@@ -45,15 +47,17 @@ AutoBloodWeb levels the Dead by Daylight Bloodweb for you. You pick the items, a
 Download from the [Releases](../../releases) page. Check the file against `SHA256SUMS.txt` if you like:
 
 ```powershell
-Get-FileHash .\AutoBloodWeb-1.0.0-setup.exe -Algorithm SHA256
+Get-FileHash .\AutoBloodWeb-1.0.1-setup.exe -Algorithm SHA256
 ```
 
-- **Installer:** run `AutoBloodWeb-1.0.0-setup.exe`. It installs to `Program Files\AutoBloodWeb` and adds a Start menu shortcut.
-- **Portable:** unzip `AutoBloodWeb-1.0.0-portable.zip` anywhere and run `AutoBloodWeb.exe` from the `AutoBloodWeb` folder. Keep the folder together: the exe needs the `assets`, `data`, `references` and `_internal` folders next to it.
+- **Installer:** run `AutoBloodWeb-1.0.1-setup.exe`. It installs to `Program Files\AutoBloodWeb` and adds a Start menu shortcut.
+- **Portable:** unzip `AutoBloodWeb-1.0.1-portable.zip` anywhere and run `AutoBloodWeb.exe` from the `AutoBloodWeb` folder. Keep the folder together: the exe needs the `assets`, `data`, `references` and `_internal` folders next to it.
 
 The builds are not code-signed yet, so Windows SmartScreen may say "Windows protected your PC". Click **More info → Run anyway**, or build from source.
 
 No Python is needed for the installer or the portable build.
+
+Windows will ask for administrator permission each time the app starts (UAC prompt); click **Yes**.
 
 ## Usage
 
@@ -73,8 +77,11 @@ Settings, priorities and logs are stored next to the app: `data\preferences.json
 | **F9** | **Stop.** Always stops and releases the mouse button. Use it as the emergency stop. |
 | **F10** | Show or hide the crosshair (only when the Crosshair page is enabled) |
 | **Tab** (in game) | Read the scoreboard for the teammate-perk overlay |
+| **F6** | 1v1 timer: show or hide the scoreboard |
+| **F5 / F2 / F3 / F4 / F11** | 1v1 timer: stop manually / restart round / undo last round / swap sides / reset match |
+| **F1** | Map overlay: show or hide |
 
-F8 and F9 can be changed in **Settings → Hotkeys…**, the crosshair key on the **Crosshair** page.
+All of these keys can be changed in **Settings → Hotkeys…**. The overlay keys work only while DBD is the foreground window.
 
 ## FAQ
 
@@ -82,7 +89,7 @@ F8 and F9 can be changed in **Settings → Hotkeys…**, the crosshair key on th
 Check UI and HUD scale (100% or 90%), borderless or windowed fullscreen, and that nothing covers the Bloodweb, including this app's own window. Turn off ReShade, NVIDIA/AMD filters, HDR, colour mods and custom UI or texture mods: they change the pixels the app compares.
 
 **Nothing happens when I press Start.**
-Run the app as administrator. If the game runs elevated and the app doesn't, Windows blocks the clicks.
+The app needs administrator rights. If Windows asks for permission, click Yes; if you clicked No, start the app again.
 
 **Can I use another resolution or a second monitor?**
 1920×1080 is tested. Other resolutions are scaled and usually work, but less accurately.
@@ -95,6 +102,10 @@ It spends Bloodpoints the same way you would by clicking. Use **Stop after N lev
 
 **Is it a virus?**
 The builds are made with PyInstaller, which some antivirus engines flag by mistake. The source code is here; you can check the SHA-256 sums or build it yourself.
+
+### Map overlay credits
+
+Map callouts by **Hens333**. The images are not part of AutoBloodWeb: they are downloaded on first use from the public source that [DBD Map Overlay](https://github.com/LucaFontanot/dbd-map-overlay) by LucaFontanot uses, and cached in `data\map_cache`. Map names in five languages come from DBD Map Overlay (Apache-2.0).
 
 ## Ban risk
 

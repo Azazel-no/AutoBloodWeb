@@ -23,6 +23,12 @@ Reference screenshots in `references/` and `tests/fixtures/` are crops and scree
 
 Credit: Otzdarva, <https://otz-addon-tierlist.pages.dev/>. `assets/otz_tierlist.json` holds only the extracted data the app shows (add-on order, tier groups and comments). The original web page is not included.
 
+## Map overlay
+
+**Map callouts by Hens333** (<https://discord.com/invite/hens333>). These images are **not** in this repository or in the release builds: no licence that allows redistributing them was found. On first use the app downloads each image from the public `generated-pictures` branch of DBD Map Overlay (`raw.githubusercontent.com/LucaFontanot/dbd-map-overlay`), checks its MD5 against the catalog, and caches it in `data/map_cache` on the user's computer. The images remain the property of their author.
+
+**DBD Map Overlay** by LucaFontanot — <https://github.com/LucaFontanot/dbd-map-overlay> — Apache License 2.0 (`licenses/dbd-map-overlay-Apache-2.0.txt`). `assets/maps/map_names.json` is derived from its `src/i18n` files (map and realm names in English, Russian, Spanish, German and French, v1.7.2) and its image catalog (paths and MD5 sums). Changes: reorganised into realms and maps, other languages dropped. No code was copied; the matching approach (name folding, fuzzy matching, realm lines never select a map) follows its design.
+
 ## Software
 
 Versions are those of the release build environment. Licence texts are in `licenses/`; the release builds include the same folder.

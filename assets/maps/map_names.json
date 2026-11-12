@@ -1,0 +1,798 @@
+{
+ "source": "dbd-map-overlay v1.7.2 src/i18n (Apache-2.0, LucaFontanot); images: Hens333, downloaded at runtime",
+ "images_base": "https://raw.githubusercontent.com/LucaFontanot/dbd-map-overlay/refs/heads/generated-pictures/",
+ "realms": [
+  {
+   "key": "The MacMillan Estate",
+   "names": {
+    "en": "The MacMillan Estate",
+    "ru": "Поместье МакМиллан",
+    "es": "La finca Macmillan",
+    "de": "Das MacMillan-Anwesen",
+    "fr": "La propriété MacMillan"
+   },
+   "maps": [
+    {
+     "key": "Coal Tower",
+     "names": {
+      "en": "Coal Tower",
+      "ru": "Угольная Башня",
+      "es": "Torre de carbón",
+      "de": "Kohlelager",
+      "fr": "Entrepôt de charbon"
+     },
+     "hens333": "maps/Hens333/The MacMillan Estate/Coal Tower.webp",
+     "md5": "1ef86176d40330de27bca9f88f996e7b"
+    },
+    {
+     "key": "Groaning Storehouse",
+     "names": {
+      "en": "Groaning Storehouse",
+      "ru": "Стонущий Склад",
+      "es": "Almacén quejumbroso",
+      "de": "Seufzendes Lagerhaus",
+      "fr": "Entrepôt grondant"
+     },
+     "hens333": "maps/Hens333/The MacMillan Estate/Groaning Storehouse.webp",
+     "md5": "e1870e8c86cd5c9043dcf0aeb2467324"
+    },
+    {
+     "key": "Ironworks of Misery",
+     "names": {
+      "en": "Ironworks of Misery",
+      "ru": "Завод Страданий",
+      "es": "Fundición de la Miseria",
+      "de": "Eisenwerk der Qual",
+      "fr": "Fonderie de souffrance"
+     },
+     "hens333": "maps/Hens333/The MacMillan Estate/Ironworks Of Misery.webp",
+     "md5": "a7c0c01b35c7cd4be5a5b082eb6093a2"
+    },
+    {
+     "key": "Shelter Woods",
+     "names": {
+      "en": "Shelter Woods",
+      "ru": "Лесная Опушка",
+      "es": "Bosque refugio",
+      "de": "Schutzwald",
+      "fr": "Forêt profonde"
+     },
+     "hens333": "maps/Hens333/The MacMillan Estate/Shelter Woods.webp",
+     "md5": "69fb65832560a5d470cd3ae277d1f9c2"
+    },
+    {
+     "key": "Suffocation Pit",
+     "names": {
+      "en": "Suffocation Pit",
+      "ru": "Удушающая Яма",
+      "es": "Pozo de asfixia",
+      "de": "Grubenschacht",
+      "fr": "Puits d'asphyxie"
+     },
+     "hens333": "maps/Hens333/The MacMillan Estate/Suffocation Pit.webp",
+     "md5": "cdd1d51aa69ce2b606d67fd03d6f2dc9"
+    }
+   ]
+  },
+  {
+   "key": "Autohaven Wreckers",
+   "names": {
+    "en": "Autohaven Wreckers",
+    "ru": "Свалка Автохевен",
+    "es": "Desguace Autohaven",
+    "de": "Autohaven-Schrottplatz",
+    "fr": "Casse Autohaven"
+   },
+   "maps": [
+    {
+     "key": "Azarov’s Resting Place",
+     "names": {
+      "en": "Azarov’s Resting Place",
+      "ru": "Место Упокоения Азарова",
+      "es": "Lugar de descanso de Azarov",
+      "de": "Azarovs Ruhestätte",
+      "fr": "Dernière demeure d'Azarov"
+     },
+     "hens333": "maps/Hens333/Autohaven Wreckers/Azarov’s Resting Place.webp",
+     "md5": "f6f5a848e7466ac4e9aade8b36d5ad79"
+    },
+    {
+     "key": "Blood Lodge",
+     "names": {
+      "en": "Blood Lodge",
+      "ru": "Кровавая Лачуга",
+      "es": "Cabaña de sangre",
+      "de": "Bluthütte",
+      "fr": "Cabane du sang"
+     },
+     "hens333": "maps/Hens333/Autohaven Wreckers/Blood Lodge.webp",
+     "md5": "2448a1afd397490f9ade5dea7f740540"
+    },
+    {
+     "key": "Gas Heaven",
+     "names": {
+      "en": "Gas Heaven",
+      "ru": "Gas Heaven",
+      "es": "Gasolinera",
+      "de": "Sprithimmel",
+      "fr": "Gas Heaven"
+     },
+     "hens333": "maps/Hens333/Autohaven Wreckers/Gas Heaven.webp",
+     "md5": "a67ad8ea81f1e03a81e05c4860d95ba5"
+    },
+    {
+     "key": "Wreckers' Yard",
+     "names": {
+      "en": "Wreckers' Yard",
+      "ru": "Зона Свалки",
+      "es": "Desguace",
+      "de": "Schrottplatz",
+      "fr": "Terrain de la casse"
+     },
+     "hens333": "maps/Hens333/Autohaven Wreckers/Wreckers' Yard.webp",
+     "md5": "9de37617801b3c24fffa09c8c4e88998"
+    },
+    {
+     "key": "Wretched Shop",
+     "names": {
+      "en": "Wretched Shop",
+      "ru": "Магазин Барахольщика",
+      "es": "Taller ruinoso",
+      "de": "Werkstatt",
+      "fr": "Atelier misérable"
+     },
+     "hens333": "maps/Hens333/Autohaven Wreckers/Wretched Shop.webp",
+     "md5": "c9bf80688d67a4c28540f8ce2b0ce92d"
+    }
+   ]
+  },
+  {
+   "key": "Coldwind Farm",
+   "names": {
+    "en": "Coldwind Farm",
+    "ru": "Ферма Колдвинд",
+    "es": "Granja Coldwind",
+    "de": "Coldwind Farm",
+    "fr": "Coldwind Farm"
+   },
+   "maps": [
+    {
+     "key": "Fractured Cowshed",
+     "names": {
+      "en": "Fractured Cowshed",
+      "ru": "Разрушенный Хлев",
+      "es": "Establo en ruinas",
+      "de": "Verfallener Kuhstall",
+      "fr": "Étable en ruine"
+     },
+     "hens333": "maps/Hens333/Coldwind Farm/Fractured Cowshed.webp",
+     "md5": "8ea3a385bd0b6e0933fed571ca5be9c3"
+    },
+    {
+     "key": "Rancid Abattoir",
+     "names": {
+      "en": "Rancid Abattoir",
+      "ru": "Заброшенная скотобойня",
+      "es": "Matadero pestilente",
+      "de": "Widerliches Schlachthaus",
+      "fr": "Abattoir putride"
+     },
+     "hens333": "maps/Hens333/Coldwind Farm/Rancid Abbatoir.webp",
+     "md5": "40ffd69ed6889e0d1ef32e9290942fc4"
+    },
+    {
+     "key": "Rotten Fields",
+     "names": {
+      "en": "Rotten Fields",
+      "ru": "Сгнившие Поля",
+      "es": "Campos podridos",
+      "de": "Faulige Felder",
+      "fr": "Champs pourris"
+     },
+     "hens333": "maps/Hens333/Coldwind Farm/Rotten Fields.webp",
+     "md5": "e4d5df0f71ac97bf23cf64695a99519c"
+    },
+    {
+     "key": "The Thompson House",
+     "names": {
+      "en": "The Thompson House",
+      "ru": "Дом Томпсонов",
+      "es": "La casa de los Thompson",
+      "de": "Das Thompson-Haus",
+      "fr": "La ferme Thompson"
+     },
+     "hens333": "maps/Hens333/Coldwind Farm/The Thompson House.webp",
+     "md5": "0bc893df193652b4f1053fafa08d3a21"
+    },
+    {
+     "key": "Torment Creek",
+     "names": {
+      "en": "Torment Creek",
+      "ru": "Ручей Страданий",
+      "es": "Arroyo del tormento",
+      "de": "Tal der Qual",
+      "fr": "Vallon des Tourments"
+     },
+     "hens333": "maps/Hens333/Coldwind Farm/Torment Creek.webp",
+     "md5": "ea1da6ea5a2700cd5cbee381c8d93790"
+    }
+   ]
+  },
+  {
+   "key": "Crotus Prenn Asylum",
+   "names": {
+    "en": "Crotus Prenn Asylum",
+    "ru": "Психлечебница Кротус Пренн",
+    "es": "Psiquiátrico Crotus Prenn",
+    "de": "Crotus-Prenn-Anstalt",
+    "fr": "Asile de Crotus Prenn"
+   },
+   "maps": [
+    {
+     "key": "Disturbed Ward",
+     "names": {
+      "en": "Disturbed Ward",
+      "ru": "Отделение для Буйных",
+      "es": "Sala de transtornados",
+      "de": "Gestörtenabteilung",
+      "fr": "Salle des aliénés"
+     },
+     "hens333": "maps/Hens333/Crotus Prenn Asylum/Disturbed Ward.webp",
+     "md5": "ec2723738a858373559c9a362f438f89"
+    },
+    {
+     "key": "Father Campbell's Chapel",
+     "names": {
+      "en": "Father Campbell's Chapel",
+      "ru": "Часовня Отца Кэмпбелла",
+      "es": "Capilla del padre Campbell",
+      "de": "Pater Campbells Kapelle",
+      "fr": "Chapelle du père Campbell"
+     },
+     "hens333": "maps/Hens333/Crotus Prenn Asylum/Father Campbell's Chapel.webp",
+     "md5": "c4a428978cd6c0c12b5458838f499bb6"
+    }
+   ]
+  },
+  {
+   "key": "Haddonfield",
+   "names": {
+    "en": "Haddonfield",
+    "ru": "Хэддонфилд",
+    "es": "Haddonfield",
+    "de": "Haddonfield",
+    "fr": "Haddonfield"
+   },
+   "maps": [
+    {
+     "key": "Lampkin Lane",
+     "names": {
+      "en": "Lampkin Lane",
+      "ru": "Переулок Лэмпкин",
+      "es": "Avenida Lampkin",
+      "de": "Lampkin Lane",
+      "fr": "Lampkin Lane"
+     },
+     "hens333": "maps/Hens333/Haddonfield/Lampkin Lane.webp",
+     "md5": "9f221457bce105d032ba1fd43602f3cc"
+    }
+   ]
+  },
+  {
+   "key": "Backwater Swamp",
+   "names": {
+    "en": "Backwater Swamp",
+    "ru": "Гнилое Болото",
+    "es": "Pantano de aguas estancadas",
+    "de": "Backwater-Sumpf",
+    "fr": "Marais de Backwater"
+   },
+   "maps": [
+    {
+     "key": "The Pale Rose",
+     "names": {
+      "en": "The Pale Rose",
+      "ru": "Бледная Роза",
+      "es": "La rosa pálida",
+      "de": "Die Pale Rose",
+      "fr": "Le Pale Rose"
+     },
+     "hens333": "maps/Hens333/Backwater Swamp/The Pale Rose.webp",
+     "md5": "cf89ab3756d628641eef78860e80fc6d"
+    },
+    {
+     "key": "Grim Pantry",
+     "names": {
+      "en": "Grim Pantry",
+      "ru": "Чудовищная Кладовая",
+      "es": "Despensa sombría",
+      "de": "Schaurige Speisekammer",
+      "fr": "Cellier sinistre"
+     },
+     "hens333": "maps/Hens333/Backwater Swamp/Grim Pantry.webp",
+     "md5": "ecfd08116231aff6170be91eb45aa004"
+    }
+   ]
+  },
+  {
+   "key": "Léry's Memorial Institute",
+   "names": {
+    "en": "Léry's Memorial Institute",
+    "ru": "Мемориальный Институт Лэри",
+    "es": "Instituto Conmemorativo Léry",
+    "de": "Lérys Gedenkinstitut",
+    "fr": "Institut de la mémoire de Léry"
+   },
+   "maps": [
+    {
+     "key": "Treatment Theatre",
+     "names": {
+      "en": "Treatment Theatre",
+      "ru": "Театр Лечения",
+      "es": "Teatro de tratamiento",
+      "de": "Behandlungstheater",
+      "fr": "Théâtre de traitement"
+     },
+     "hens333": "maps/Hens333/Léry's Memorial Institute/Treatment Theatre.webp",
+     "md5": "c7d3935d4816aca70f9dfa1228806e98"
+    }
+   ]
+  },
+  {
+   "key": "Red Forest",
+   "names": {
+    "en": "Red Forest",
+    "ru": "Красный Лес",
+    "es": "Bosque rojo",
+    "de": "Roter Wald",
+    "fr": "Forêt rouge"
+   },
+   "maps": [
+    {
+     "key": "Mother's Dwelling",
+     "names": {
+      "en": "Mother's Dwelling",
+      "ru": "Обитель Матери",
+      "es": "Morada maternal",
+      "de": "Mutters Behausung",
+      "fr": "La maison maternelle"
+     },
+     "hens333": "maps/Hens333/Red Forest/Mother's Dwelling.webp",
+     "md5": "ef2cfa9b0a4fe57453acdf7339c7bd9e"
+    },
+    {
+     "key": "The Temple of Purgation",
+     "names": {
+      "en": "The Temple of Purgation",
+      "ru": "Храм очищения",
+      "es": "El Templo de la Purgación",
+      "de": "Der Tempel der Reinigung",
+      "fr": "Le Temple de purgation"
+     },
+     "hens333": "maps/Hens333/Red Forest/Temple of Purgation.webp",
+     "md5": "65aacdf97ef7bdb1456c3b3798d55e1a"
+    }
+   ]
+  },
+  {
+   "key": "Springwood",
+   "names": {
+    "en": "Springwood",
+    "ru": "Спрингвуд",
+    "es": "Springwood",
+    "de": "Springwood",
+    "fr": "Springwood"
+   },
+   "maps": [
+    {
+     "key": "Badham Preschool",
+     "names": {
+      "en": "Badham Preschool",
+      "ru": "Детский Сад Бэдхем",
+      "es": "Guardería Badham",
+      "de": "Badham-Vorschule",
+      "fr": "École maternelle de Badham"
+     },
+     "hens333": "maps/Hens333/Springwood/Badham Preschool.webp",
+     "md5": "a2351e1788efe42924ed027469f56369"
+    }
+   ]
+  },
+  {
+   "key": "Gideon Meat Plant",
+   "names": {
+    "en": "Gideon Meat Plant",
+    "ru": "Мясокомбинат «Гидеон»",
+    "es": "Planta procesadora de carne Gideon",
+    "de": "Gideon-Fleischfabrik",
+    "fr": "Usine de conditionnement de viande Gideon"
+   },
+   "maps": [
+    {
+     "key": "The Game",
+     "names": {
+      "en": "The Game",
+      "ru": "Игра",
+      "es": "El juego",
+      "de": "Das Spiel",
+      "fr": "Le jeu"
+     },
+     "hens333": "maps/Hens333/Gideon Meat Plant/The Game.webp",
+     "md5": "366d43bec4f31f804c697030cc1f6957"
+    }
+   ]
+  },
+  {
+   "key": "Yamaoka Estate",
+   "names": {
+    "en": "Yamaoka Estate",
+    "ru": "Поместье Ямаоки",
+    "es": "Residencia Yamaoka",
+    "de": "Yamaoka-Anwesen",
+    "fr": "Propriété Yamaoka"
+   },
+   "maps": [
+    {
+     "key": "Family Residence",
+     "names": {
+      "en": "Family Residence",
+      "ru": "Семейная Резиденция",
+      "es": "Residencia familiar",
+      "de": "Familiensitz",
+      "fr": "Résidence familiale"
+     },
+     "hens333": "maps/Hens333/Yamaoka Estate/Family Residence.webp",
+     "md5": "57b139503493d0ba239b040892c634a2"
+    },
+    {
+     "key": "Sanctum of Wrath",
+     "names": {
+      "en": "Sanctum of Wrath",
+      "ru": "Прибежище гнева",
+      "es": "Santuario de la cólera",
+      "de": "Heiligtum des Zorns",
+      "fr": "Sanctuaire du courroux"
+     },
+     "hens333": "maps/Hens333/Yamaoka Estate/Sanctum of Wrath.webp",
+     "md5": "197aef6099b34f48977f312a96d2ae12"
+    }
+   ]
+  },
+  {
+   "key": "Ormond",
+   "names": {
+    "en": "Ormond",
+    "ru": "Ормонд",
+    "es": "Ormond",
+    "de": "Ormond",
+    "fr": "Ormond"
+   },
+   "maps": [
+    {
+     "key": "Mount Ormond Resort",
+     "names": {
+      "en": "Mount Ormond Resort",
+      "ru": "Курорт «Гора Ормонд»",
+      "es": "Complejo del monte Ormond",
+      "de": "Skiort am Mount Ormond",
+      "fr": "Station du mont Ormond"
+     },
+     "hens333": "maps/Hens333/Ormond/Mount Ormond Resort.webp",
+     "md5": "17c04df5623c395ffe872b724899c992"
+    },
+    {
+     "key": "Ormond Lake Mine",
+     "names": {
+      "en": "Ormond Lake Mine",
+      "ru": "Шахта у озера Ормонд",
+      "es": "Mina del lago Ormond",
+      "de": "Mine am Ormond-See",
+      "fr": "Mine du lac d'Ormond"
+     },
+     "hens333": "maps/Hens333/Ormond/Ormond Lake Mine.webp",
+     "md5": "a4e99713acd7efcbabe16d396135b997"
+    }
+   ]
+  },
+  {
+   "key": "Hawkins National Laboratory",
+   "names": {
+    "en": "Hawkins National Laboratory",
+    "ru": "Национальная лаборатория Хоукинса",
+    "es": "Laboratorio Nacional de Hawkins",
+    "de": "Hawkins National Laboratory",
+    "fr": "Laboratoire national d’Hawkins"
+   },
+   "maps": [
+    {
+     "key": "The Underground Complex",
+     "names": {
+      "en": "The Underground Complex",
+      "ru": "Подземный комплекс",
+      "es": "El complejo subterráneo",
+      "de": "Der Untergrundkomplex",
+      "fr": "Le complexe souterrain"
+     },
+     "hens333": "maps/Hens333/Hawkins National Laboratory/The Underground Complex.webp",
+     "md5": "79a5573864caac0bb4ee397591b472d5"
+    }
+   ]
+  },
+  {
+   "key": "Grave of Glenvale",
+   "names": {
+    "en": "Grave of Glenvale",
+    "ru": "Могила в Гленвейле",
+    "es": "Tumba de Glenvale",
+    "de": "Grab von Glenvale",
+    "fr": "Tombe de Glenvale"
+   },
+   "maps": [
+    {
+     "key": "Dead Dawg Saloon",
+     "names": {
+      "en": "Dead Dawg Saloon",
+      "ru": "Салун «Мертвяк вусмерть»",
+      "es": "Salón Dead Dawg",
+      "de": "Dead Dawg Saloon",
+      "fr": "Saloon de Dead Dawg"
+     },
+     "hens333": "maps/Hens333/Grave of Glenvale/Dead Dawg Saloon.webp",
+     "md5": "e3bca6beb72d02762bdc459d899d6e95"
+    }
+   ]
+  },
+  {
+   "key": "Silent Hill",
+   "names": {
+    "en": "Silent Hill",
+    "ru": "Сайлент Хилл",
+    "es": "Silent Hill",
+    "de": "Silent Hill",
+    "fr": "Silent Hill"
+   },
+   "maps": [
+    {
+     "key": "Midwich Elementary School",
+     "names": {
+      "en": "Midwich Elementary School",
+      "ru": "Начальная школа Мидвича",
+      "es": "Escuela de primaria Midwich",
+      "de": "Midwich Elementary School",
+      "fr": "École primaire Midwich"
+     },
+     "hens333": "maps/Hens333/Silent Hill/Midwich Elementary School.webp",
+     "md5": "cbdaa6505c51e0d9dc4d8024750df8e6"
+    }
+   ]
+  },
+  {
+   "key": "Raccoon City",
+   "names": {
+    "en": "Raccoon City",
+    "ru": "Раккун-Сити",
+    "es": "Raccoon City",
+    "de": "Raccoon City",
+    "fr": "Raccoon City"
+   },
+   "maps": [
+    {
+     "key": "Raccoon City Police Station East Wing",
+     "names": {
+      "en": "Raccoon City Police Station East Wing",
+      "ru": "Восточное крыло полицейского участка Раккун-Сити",
+      "es": "Ala este de la comisaría de Raccoon City",
+      "de": "Ostflügel der Polizeistation von Raccoon City",
+      "fr": "Aile est du Commissariat de Raccoon City"
+     },
+     "hens333": "maps/Hens333/Raccoon City/Raccoon City Police Station East Wing.webp",
+     "md5": "94e92dfaa415497d3f00c0167dcaba6b"
+    },
+    {
+     "key": "Raccoon City Police Station West Wing",
+     "names": {
+      "en": "Raccoon City Police Station West Wing",
+      "ru": "Западное крыло полицейского участка Раккун-Сити",
+      "es": "Ala oeste de la comisaría de Raccoon City",
+      "de": "Westflügel der Polizeistation von Raccoon City",
+      "fr": "Aile ouest du Commissariat de Raccoon City"
+     },
+     "hens333": "maps/Hens333/Raccoon City/Raccoon City Police Station West Wing.webp",
+     "md5": "1213a0b1016759d594c9e2a40e32c31c"
+    }
+   ]
+  },
+  {
+   "key": "Forsaken Boneyard",
+   "names": {
+    "en": "Forsaken Boneyard",
+    "ru": "Заброшенное кладбище",
+    "es": "Cementerio abandonado",
+    "de": "Einsamer Friedhof",
+    "fr": "Cimetière abandonné"
+   },
+   "maps": [
+    {
+     "key": "Eyrie of Crows",
+     "names": {
+      "en": "Eyrie of Crows",
+      "ru": "Воронье гнездовье",
+      "es": "Nido de cuervos",
+      "de": "Krähenhorst",
+      "fr": "Aire de corbeaux"
+     },
+     "hens333": "maps/Hens333/Forsaken Boneyard/Eyrie of Crows.webp",
+     "md5": "3741c07c7e360749277bbb986191dd90"
+    },
+    {
+     "key": "Dead Sands",
+     "names": {
+      "en": "Dead Sands",
+      "ru": "Бесплодные пески",
+      "es": "Arenas muertas",
+      "de": "Tote Sande",
+      "fr": "Sables morts"
+     },
+     "hens333": "maps/Hens333/Forsaken Boneyard/Dead Sands.webp",
+     "md5": "24660659fd693c00924c6cacdd47b0c2"
+    }
+   ]
+  },
+  {
+   "key": "Withered Isle",
+   "names": {
+    "en": "Withered Isle",
+    "ru": "Зачахший остров",
+    "es": "Isla marchita",
+    "de": "Verkümmerte Insel",
+    "fr": "Île flétrie"
+   },
+   "maps": [
+    {
+     "key": "Garden of Joy",
+     "names": {
+      "en": "Garden of Joy",
+      "ru": "Сад Счастья",
+      "es": "Jardín del Júbilo",
+      "de": "Garten der Freude",
+      "fr": "Jardin de la joie"
+     },
+     "hens333": "maps/Hens333/Withered Isle/Garden of Joy.webp",
+     "md5": "303a6ab7c1c68705973aabfdf0809fe7"
+    },
+    {
+     "key": "Greenville Square",
+     "names": {
+      "en": "Greenville Square",
+      "ru": "Площадь Гринвилла",
+      "es": "Plaza de Greenville",
+      "de": "Hauptplatz von Greenville",
+      "fr": "Place de Greenville"
+     },
+     "hens333": "maps/Hens333/Withered Isle/Greenville Square.webp",
+     "md5": "d69ae77b0a6b0eefa53c72b175a47fcf"
+    },
+    {
+     "key": "Freddy Fazbear's Pizza",
+     "names": {
+      "en": "Freddy Fazbear's Pizza",
+      "ru": "Пиццерия Фредди Фазбера",
+      "es": "Freddy Fazbear's Pizza",
+      "de": "Freddy Fazbear’s Pizza",
+      "fr": "Freddy Fazbear's Pizza"
+     },
+     "hens333": "maps/Hens333/Withered Isle/Freddy Fazbear's Pizza.webp",
+     "md5": "3aa4acf636f221cbc8d69417588f9191"
+    },
+    {
+     "key": "Fallen Refuge",
+     "names": {
+      "en": "Fallen Refuge",
+      "ru": "Павший приют",
+      "es": "Refugio caído",
+      "de": "Gefallene Zuflucht",
+      "fr": "Refuge perdu"
+     },
+     "hens333": "maps/Hens333/Withered Isle/Fallen Refuge.webp",
+     "md5": "003bcbe45d41267f0c26f022ef8d9b8f"
+    }
+   ]
+  },
+  {
+   "key": "The Decimated Borgo",
+   "names": {
+    "en": "The Decimated Borgo",
+    "ru": "Разоренная деревушка-борго",
+    "es": "El Burgo diezmado",
+    "de": "Das dezimierte Borgo",
+    "fr": "Le Borgo décimé"
+   },
+   "maps": [
+    {
+     "key": "The Shattered Square",
+     "names": {
+      "en": "The Shattered Square",
+      "ru": "Разрушенная площадь",
+      "es": "La plaza desolada",
+      "de": "Der zerstörte Platz",
+      "fr": "La place dévastée"
+     },
+     "hens333": "maps/Hens333/The Decimated Borgo/The Shattered Square.webp",
+     "md5": "8cb71c73eb692cb382433a9244706062"
+    },
+    {
+     "key": "Forgotten Ruins",
+     "names": {
+      "en": "Forgotten Ruins",
+      "ru": "Забытые руины",
+      "es": "Ruinas olvidadas",
+      "de": "Vergessene Ruinen",
+      "fr": "Ruines oubliées"
+     },
+     "hens333": "maps/Hens333/The Decimated Borgo/Forgotten Ruins.webp",
+     "md5": "50d43f47e5610c9eecd3282a7ed6ac3b"
+    }
+   ]
+  },
+  {
+   "key": "Dvarka Deepwood",
+   "names": {
+    "en": "Dvarka Deepwood",
+    "ru": "Заросли Дварки",
+    "es": "Espesura de Dvarka",
+    "de": "Dvarka-Dschungel",
+    "fr": "Forêt profonde de Dvarka"
+   },
+   "maps": [
+    {
+     "key": "Toba Landing",
+     "names": {
+      "en": "Toba Landing",
+      "ru": "Площадка Тоба",
+      "es": "Aterrizaje en Toba",
+      "de": "Toba-Landeplatz",
+      "fr": "Site d'atterrissage de Toba"
+     },
+     "hens333": "maps/Hens333/Dvarka Deepwood/Toba Landing.webp",
+     "md5": "281fbaeefd7fa8351fb1b0e6bba66ade"
+    },
+    {
+     "key": "Nostromo Wreckage",
+     "names": {
+      "en": "Nostromo Wreckage",
+      "ru": "Крушение «Ностромо»",
+      "es": "Restos de la Nostromo",
+      "de": "Nostromo-Wrack",
+      "fr": "Épave du Nostromo"
+     },
+     "hens333": "maps/Hens333/Dvarka Deepwood/Nostromo Wreckage.webp",
+     "md5": "51298574775d9e6b2bdea9826750ea1e"
+    }
+   ]
+  },
+  {
+   "key": "Sleepless District",
+   "names": {
+    "en": "Sleepless District",
+    "ru": "Бессонный район",
+    "es": "Barrio insomne",
+    "de": "Schlafloses Viertel",
+    "fr": "Quartier qui jamais ne dort"
+   },
+   "maps": [
+    {
+     "key": "Trickster's Delusion",
+     "names": {
+      "en": "Trickster's Delusion",
+      "ru": "Морок Трюкача",
+      "es": "Delirio del Traicionero",
+      "de": "Illusion des Tricksters",
+      "fr": "Illusion du Farceur"
+     },
+     "hens333": "maps/Hens333/Sleepless District/Tricksters Delusion.webp",
+     "md5": "7b8d6c771c396c9209d786e215bd9dd5"
+    }
+   ]
+  }
+ ]
+}

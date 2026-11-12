@@ -145,6 +145,8 @@ class IconMatcher:
                     extra_feature=glyph(raw_extra[:,:,:3],raw_extra[:,:,3] if raw_extra.shape[2]==4 else None)
                     if extra_feature is not None: refs.append(extra_feature)
                 event=getattr(library,'event_metadata',{}).get(entry.id)
+                if not event and entry.id in getattr(library,'rendered_reference_ids',()) and entry.id in getattr(library,'display_images',{}):
+                    event=dict(display=library.display_images[entry.id])
                 if event:
                     # The Wiki's verified layered tile supplies realistic alpha
                     # compositing, clipping and downsampling before normalization.

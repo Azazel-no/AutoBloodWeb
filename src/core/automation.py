@@ -956,6 +956,18 @@ class Automation:
         current=(frame,result,None)
         count=getattr(self,'saved_scene_stable_count',0)+1 if self.stable_scene(previous,current) else 1
         self.saved_scene_observation=current;self.saved_scene_stable_count=count
+        if not memory.get('pending') and not getattr(self,'calibrating',False):
+            from src.core.scene_memory import foreign_web
+            reason=foreign_web(comparison,frame,result)
+            if reason:
+                # No unresolved input exists, so another web's clicks protect nothing
+                # here; two fresh reads must agree before they are dropped.
+                if count<2:return False
+                self.trace('saved_scene_other_web_retired',reason=reason,saved_level=memory.get('level'),level=result.level,
+                    attempted=memory.get('attempted'),purchase_credit=0,paid_inputs=0,analysis_id=result.analysis_id)
+                self.scene_record=None;self.persisted_scene=None;self.pending_action=False;self.attempted.clear()
+                self.saved_scene_observation=None;self.saved_scene_stable_count=0;self.saved_geometry_match=False
+                return True
         if replacement and not memory.get('pending') and self.approved:
             from src.core.window_geometry import WindowGeometryManager
             matches=WindowGeometryManager.resolved_scene_matches(comparison,frame,result)
@@ -1056,6 +1068,18 @@ class Automation:
                 self.pending_scene_confirmations=0
                 self.trace('saved_scene_header_wait',paid_inputs=0,analysis_id=result.analysis_id)
                 return False
+            if (type(memory.get('level')) is int and type(result.level) is int and abs(result.level-memory['level'])>2
+                    and result.level_confidence>=.95):
+                # Same rule as for a new game window: a click saved far from this level
+                # cannot belong to this web. Survivors share one saved scene, so after
+                # switching survivor the old one's last click was restored here (live
+                # 11.11: a level 50 centre click on another survivor's level 17).
+                if count<2:return False
+                self.trace('saved_scene_other_level_retired',saved_level=memory['level'],level=result.level,
+                    pending=pending,purchase_credit=0,paid_inputs=0,same_window=True)
+                self.scene_record=None;self.persisted_scene=None;self.pending_action=False;self.attempted.clear()
+                self.saved_scene_observation=None;self.saved_scene_stable_count=0;self.pending_scene_confirmations=0
+                return True
             if pending.get('chain') or pending.get('batch'):
                 from src.core.scene_memory import chain_state_signature
                 signature=(None if type(memory.get('level')) is int and result.level!=memory['level']

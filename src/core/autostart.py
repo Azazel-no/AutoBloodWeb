@@ -98,10 +98,50 @@ def uninstall_task(runner=None):
     if result.returncode!=0 and task_installed(runner):raise OSError(result.stderr or result.stdout or 'schtasks_failed')
 
 
-def launch_tray_app(root,popen=None):
+def launch_tray_app(root,popen=None,admin=None):
     popen=popen or subprocess.Popen
     command=[sys.executable,'--tray'] if frozen() else [str(pythonw(root)),'-m','src.app','--tray']
+    from src.core.elevation import is_admin
+    if not (is_admin() if admin is None else admin):
+        # A watcher without rights (old Run-key start) cannot CreateProcess the
+        # requireAdministrator exe (error 740): ask Windows for the normal UAC prompt.
+        shell=ctypes.WinDLL('shell32',use_last_error=True)
+        shell.ShellExecuteW.argtypes=[ctypes.c_void_p,ctypes.c_wchar_p,ctypes.c_wchar_p,ctypes.c_wchar_p,ctypes.c_wchar_p,ctypes.c_int]
+        shell.ShellExecuteW.restype=ctypes.c_void_p
+        return shell.ShellExecuteW(None,'runas',command[0],subprocess.list2cmdline(command[1:]),str(root),1)
     return popen(command,cwd=str(root),creationflags=DETACHED_PROCESS|CREATE_NO_WINDOW)
+
+
+RUN_KEY=r'Software\Microsoft\Windows\CurrentVersion\Run'
+
+
+def legacy_run_entries(registry=None):
+    """Old 'Start with DBD' values under HKCU Run (they cannot start an admin app silently)."""
+    import winreg
+    registry=registry or winreg
+    names=[]
+    try:
+        with registry.OpenKey(registry.HKEY_CURRENT_USER,RUN_KEY) as key:
+            index=0
+            while True:
+                try:name,value,_=registry.EnumValue(key,index)
+                except OSError:break
+                if 'autobloodweb' in (name+' '+str(value)).casefold():names.append(name)
+                index+=1
+    except OSError:return []
+    return names
+
+
+def migrate_run_key(root,registry=None,runner=None):
+    """Move an old Run-key entry to the logon task (highest privileges). Returns True when one was moved."""
+    import winreg
+    registry=registry or winreg
+    names=legacy_run_entries(registry)
+    if not names:return False
+    if not task_installed(runner):install_task(root,runner)
+    with registry.OpenKey(registry.HKEY_CURRENT_USER,RUN_KEY,0,registry.KEY_SET_VALUE) as key:
+        for name in names:registry.DeleteValue(key,name)
+    return True
 
 
 def watch_step(root,state,names=None,launch=None,app_running=None):

@@ -2,7 +2,7 @@
 ; AppVersion, SourceDir (the PyInstaller one-folder app) and OutputDir.
 
 #ifndef AppVersion
-  #define AppVersion "1.0.0"
+  #define AppVersion "1.0.1"
 #endif
 #ifndef SourceDir
   #define SourceDir "..\build\dist\AutoBloodWeb"
@@ -48,8 +48,16 @@ Name: "{group}\AutoBloodWeb"; Filename: "{app}\AutoBloodWeb.exe"
 Name: "{group}\{cm:UninstallProgram,AutoBloodWeb}"; Filename: "{uninstallexe}"
 Name: "{autodesktop}\AutoBloodWeb"; Filename: "{app}\AutoBloodWeb.exe"; Tasks: desktopicon
 
+[Registry]
+; Versions before 1.0.1 could leave a "Start with DBD" value under HKCU Run. It cannot
+; start the admin app silently; the app itself moves it to the logon task on start.
+Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueName: "AutoBloodWeb"; Flags: dontcreatekey uninsdeletevalue
+
 [Run]
-Filename: "{app}\AutoBloodWeb.exe"; Description: "{cm:LaunchProgram,AutoBloodWeb}"; Flags: nowait postinstall skipifsilent
+; shellexec: started through ShellExecute, so the exe's requireAdministrator manifest
+; shows the normal UAC prompt. Plain CreateProcess as the original user fails with
+; error 740 ("The requested operation requires elevation").
+Filename: "{app}\AutoBloodWeb.exe"; Description: "{cm:LaunchProgram,AutoBloodWeb}"; Flags: nowait postinstall skipifsilent shellexec
 
 [UninstallRun]
 ; Remove the "Start with DBD" logon task if the user enabled it.

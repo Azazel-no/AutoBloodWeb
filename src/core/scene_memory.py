@@ -15,6 +15,30 @@ def record_scene(frame,result,attempted,pending=None,previous=None):
     return scene
 
 
+def foreign_web(memory,frame,result):
+    """Why a saved scene cannot belong to the web on screen, or None.
+
+    Survivors share one saved scene (the app does not know which survivor is
+    open), so after switching survivor the previous one's clicks were restored
+    onto the new web: they landed on real nodes there and blocked the centre and
+    the route (live 11.11: Quentin Smith level 1 under a level 28 scene). A node
+    once bought or taken by the Entity never becomes buyable again on the same
+    web, and a confidently read level differs only on another web. Only the
+    caller decides whether such a scene may be dropped (never with a pending click).
+    """
+    from src.core.purchase_outcome import physical_node
+    level=memory.get('level')
+    if (type(level) is int and type(result.level) is int and result.level!=level
+            and result.level_confidence>=.95 and memory.get('level_confidence',0)>=.95):
+        return 'level_differs'
+    for old in memory.get('nodes',[]):
+        if old.get('state') not in (NodeState.PURCHASED.value,NodeState.ABSORBED.value):continue
+        node=physical_node(frame,result,old['point'],old.get('radius',20))
+        if node is not None and node.state in (NodeState.AVAILABLE,NodeState.LOCKED) and node.state_confidence>=.8:
+            return 'owned_node_buyable_again'
+    return None
+
+
 def transition_glyphs(previous,frame,result):
     """Historical accepted glyphs for exact-next-header comparison, never routing."""
     import copy
