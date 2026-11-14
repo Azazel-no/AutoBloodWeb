@@ -284,11 +284,17 @@ LOW_MARGIN=.05   # H3 (14.11): an accepted perk this close to the runner-up is s
 
 def save_unknown_tile(matcher,tile,result,accepted=False):
     """The unrecognised (or barely recognised) tile only, never a nickname, and its scores, once per image."""
+    try:
+        _save_tile(matcher,tile,result,accepted)
+    except Exception:   # A diagnostic file must never disturb the overlay (live 14.11: a Path error broke every Tab read).
+        import logging;logging.getLogger(__name__).exception('Saving a diagnostic perk tile failed; the read goes on')
+
+
+def _save_tile(matcher,tile,result,accepted):
     folder=getattr(matcher,'unknown_dir',None)
-    if folder is not None and accepted:folder=Path(folder)/'close_calls'
     if folder is None:return
-    import hashlib,json
-    from pathlib import Path
+    if accepted:folder=Path(folder)/'close_calls'
+    import hashlib
     from src.utils.images import write_image
     try:
         key=hashlib.sha256(tile.tobytes()).hexdigest()[:16];folder=Path(folder);path=folder/(key+'.png')

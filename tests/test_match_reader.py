@@ -144,3 +144,26 @@ def test_layout_scales_with_client_height(layout, matcher, width, height):
     image = cv2.resize(cv2.imread(str(SAMPLES / 'pair02_tab_1920x1080.png')), (width, height), interpolation=cv2.INTER_AREA)
     assert is_scoreboard(image, layout)
     assert [r.own for r in read_tab(image, matcher, layout)] == [True, False, False, False]
+
+
+# --- 14.11 regression: a Path error in the near-miss tile branch broke every Tab read ------------------
+@needs_samples
+@pytest.mark.parametrize('pair', ['pair02', 'pair03', 'pair05'])
+def test_full_tab_read_with_the_close_call_branch_on_every_tile(layout, matcher, pair, tmp_path, monkeypatch):
+    import src.core.match_reader as mr
+    from src.utils.images import read_image
+    monkeypatch.setattr(mr, 'LOW_MARGIN', 2.)                 # every accepted perk takes the close-call branch
+    monkeypatch.setattr(matcher, 'unknown_dir', tmp_path, raising=False)
+    rows = read_tab(read_image(SAMPLES / f'{pair}_tab_1920x1080.png'), matcher, layout)
+    assert len(rows) == 4 and any(s.icon_id for r in rows for s in r.slots)
+    assert list((tmp_path / 'close_calls').glob('*.png')) and list((tmp_path / 'close_calls').glob('*.json'))
+
+
+@needs_samples
+def test_a_failing_diagnostic_save_never_breaks_the_read(layout, matcher, tmp_path, monkeypatch):
+    import src.core.match_reader as mr
+    from src.utils.images import read_image
+    monkeypatch.setattr(mr, 'LOW_MARGIN', 2.); monkeypatch.setattr(matcher, 'unknown_dir', tmp_path, raising=False)
+    monkeypatch.setattr('src.utils.images.write_image', lambda *a, **k: (_ for _ in ()).throw(RuntimeError('disk gone')))
+    rows = read_tab(read_image(SAMPLES / 'pair02_tab_1920x1080.png'), matcher, layout)
+    assert len(rows) == 4 and any(s.icon_id for r in rows for s in r.slots)
