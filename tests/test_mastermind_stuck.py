@@ -231,3 +231,25 @@ def test_the_window_stays_compact_until_an_ordinary_level_is_read():
     assert reward_layout_needed(scene(ScreenState.REWARD, None, 0)) and reward_layout_needed(scene(ScreenState.PRESTIGE_READY, 50))
     assert reward_layout_needed(scene(ScreenState.BLOODWEB, 50)) and reward_layout_needed(scene(ScreenState.BLOODWEB, 12, .5))
     assert not reward_layout_needed(scene(ScreenState.BLOODWEB, 12))
+
+
+def test_a_saved_prestige_press_with_its_reward_on_screen_is_resolved_on_the_first_start(monkeypatch):
+    """Live 14.11 16:14: run 2 stopped right after its prestige press; the first Start of run 3 saw the
+    reward screen with that press still unproven and paused (scene_validation_required)."""
+    from dataclasses import asdict
+    from tests.test_v54_video import modal_runner, reward
+    from tests.test_automation import web
+    from src.core.models import NodeState
+    from dataclasses import replace
+    def level_one(a): a.level = 1; a.level_confidence = .99; return a
+    clock, d, runner = modal_runner(monkeypatch, [reward(), reward(), reward()] + [level_one(web()) for _ in range(3)] + [level_one(web(NodeState.PURCHASED)) for _ in range(2)])
+    runner.settings.max_actions = 1; runner.settings.max_input_commands = 2
+    captured = d.capture
+    d.capture = lambda: (lambda f: replace(f, level=1, level_confidence=.99) if d.last >= 3 else f)(captured())
+    frame = d.capture()
+    runner.persisted_scene = dict(level=50, window=asdict(frame.window), nodes=[],
+                                  pending=dict(point=[685, 563], radius=40, icon=None, prestige=True, price=20000, operation_id='x'))
+    runner.run()
+    stages = [e['stage'] for e in runner.report.entries]
+    assert 'external_prestige_reward_resolved' in stages and runner.persisted_scene is None
+    assert not any(e.get('reason') == 'purchase_result_unknown' for e in runner.report.entries)

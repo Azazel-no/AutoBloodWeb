@@ -1719,8 +1719,13 @@ class Automation:
             if self.persisted_scene and not self.settings.dry_run and result.screen_state==ScreenState.REWARD:
                 from src.core.scene_memory import same_window,record_scene
                 memory=self.persisted_scene;terminal=memory.get('terminal_transition') or {}
-                if (not memory.get('pending') and terminal.get('screen')=='prestige_ready'
-                        and terminal.get('level')==50 and same_window(memory,frame)):
+                pending=memory.get('pending') or {}
+                # Live 14.11 (16:14): the previous run stopped right after its prestige press; the next Start
+                # found that press unproven with the prestige reward on screen and paused. A reward screen after
+                # a saved prestige press in the same game window is the press's own result.
+                prestige_reward=bool(pending.get('prestige') and pending.get('point') and memory.get('level')==50)
+                if ((prestige_reward or (not pending and terminal.get('screen')=='prestige_ready'
+                        and terminal.get('level')==50)) and same_window(memory,frame)):
                     from src.core.modal_recovery import dismiss_reward
                     self.persisted_scene=None
                     try:queued_read=dismiss_reward(self,frame,result,external_ready=True,expected_level=1)
