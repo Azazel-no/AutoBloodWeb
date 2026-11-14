@@ -103,13 +103,41 @@ class PerkOverlay(QWidget):
         self.scale=1.           # The user's size setting, around each cluster's centre.
         self.setAttribute(Qt.WA_TranslucentBackground);self.setAttribute(Qt.WA_ShowWithoutActivating)
         self.setAttribute(Qt.WA_TransparentForMouseEvents);self.setFocusPolicy(Qt.NoFocus)
+        self.reported=False
+        # J5 (14.11): the native window is made now, at app start, with its final styles, not on the first
+        # show() in the middle of a match start (the map overlay's first appearance coincided with NVIDIA
+        # recording switching off); the first frame on screen already has no-activate/transparent/tool.
+        try:self.apply_styles()
+        except Exception:logging.getLogger(__name__).exception('Overlay window styles could not be set early')
 
-    def showEvent(self,event):
-        super().showEvent(event)
+    def apply_styles(self):
         u=ctypes.windll.user32;hwnd=int(self.winId())
         u.SetWindowLongPtrW.argtypes=[ctypes.c_void_p,ctypes.c_int,ctypes.c_ssize_t]
         u.GetWindowLongPtrW.argtypes=[ctypes.c_void_p,ctypes.c_int];u.GetWindowLongPtrW.restype=ctypes.c_ssize_t
-        u.SetWindowLongPtrW(hwnd,-20,u.GetWindowLongPtrW(hwnd,-20)|WS_EX)
+        old=u.GetWindowLongPtrW(hwnd,-20)
+        if old&WS_EX!=WS_EX:u.SetWindowLongPtrW(hwnd,-20,old|WS_EX)
+        return hwnd
+
+    def showEvent(self,event):
+        super().showEvent(event)
+        hwnd=self.apply_styles()
+        if not self.reported:
+            self.reported=True
+            try:self.report(hwnd)
+            except Exception:pass
+
+    def report(self,hwnd):
+        """Once per window: its real size and styles, and whether showing it took the focus (J5 diagnostics)."""
+        import ctypes.wintypes as W
+        u=ctypes.windll.user32;r=W.RECT();u.GetWindowRect(ctypes.c_void_p(hwnd),ctypes.byref(r))
+        u.GetWindowLongPtrW.argtypes=[ctypes.c_void_p,ctypes.c_int];u.GetWindowLongPtrW.restype=ctypes.c_ssize_t
+        u.GetForegroundWindow.restype=ctypes.c_void_p
+        w,h=r.right-r.left,r.bottom-r.top;sw,sh=u.GetSystemMetrics(0),u.GetSystemMetrics(1)
+        log=logging.getLogger(__name__)
+        log.info('Overlay window %s: %dx%d at (%d,%d), style 0x%08x, ex-style 0x%08x, screen %dx%d',type(self).__name__,w,h,r.left,r.top,
+                 u.GetWindowLongPtrW(hwnd,-16)&0xffffffff,u.GetWindowLongPtrW(hwnd,-20)&0xffffffff,sw,sh)
+        if (u.GetForegroundWindow() or 0)==hwnd:log.warning('Overlay window %s took the foreground when shown',type(self).__name__)
+        if w>=sw and h>=sh:log.warning('Overlay window %s covers the whole screen',type(self).__name__)
 
     def present(self,client,layout,slots):
         """client: physical client rect. Qt geometry is logical, hence the device ratio."""

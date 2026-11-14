@@ -15,6 +15,7 @@ from PySide6.QtCore import QObject, QPointF, QRectF, Qt, QTimer, Signal
 from PySide6.QtGui import QColor, QFont, QFontMetricsF, QGuiApplication, QImage, QPainter
 
 from src.core import chase_meme as cm
+from src.core.onevone import DOWN_STATES
 from src.core.screen_manager import Rect, ScreenError
 from src.gui.match_overlay import PerkOverlay, foreground_handle
 from src.gui.meme_audio import Sound
@@ -230,15 +231,33 @@ class ChaseController(QObject):
             region, _ = self.backend.grab(Rect(client.x + x, client.y + y, w, h)); event = self.detector.horns(self.horns.read(region), now)
         if event is None and (watch.hud_visible or self.detector.state == cm.CHASE) and now >= self.next_heart:   # also before a chase: it confirms the start (J1)
             self.next_heart = now + HEART_EVERY; x, y, w, h = cm.heart_rect(client.width, client.height)
-            region, _ = self.backend.grab(Rect(client.x + x, client.y + y, w, h)); area = cm.heart_area(region)
-            event = self.detector.heart(area >= cm.HEART_MIN * (client.height / cm.HEART_REFERENCE) ** 2, now, area)
-        if event is None and self.detector.state == cm.CHASE and watch.hud_visible and now >= self.next_down:
-            self.next_down = now + DOWN_EVERY; state = self.down.feed(self.own_status(client))
-            if state: event = self.detector.stop(now, f'own portrait shows {state}')
-        if event and event[0] == 'start': self.begin(now, event[1])
+            region, _ = self.backend.grab(Rect(client.x + x, client.y + y, w, h)); blob = cm.heart_blob(region)
+            event = self.detector.heart(cm.heart_ok(blob, client.height), now, blob[0] if blob else 0)
+        if event is None and watch.hud_visible and now >= self.next_down:   # also before a chase: a down state never starts one
+            self.next_down = now + DOWN_EVERY; status = self.own_status(client); state = self.down.feed(status)
+            self.detector.down = status in DOWN_STATES
+            if state and self.detector.state == cm.CHASE: event = self.detector.stop(now, f'own portrait shows {state}')
+        if event and event[0] == 'start': self.begin(now, event[1]); self.save_event('start', event[1])
         elif event and event[0] == 'stop': self.end(event[1], detector=False)
+        elif event and event[0] == 'rejected':
+            log.info('Chase meme start refused: %s', event[1]); self.save_event('rejected', event[1])
         if self.active: self.play(now)
         self.set_interval(TICK_CHASE if self.active or self.fading is not None else TICK_MATCH)
+
+    def save_event(self, kind, reason):
+        """Optional (off by default): a screenshot and the detector's scores at every start and refused start."""
+        if not self.settings.get('save_events') or self.watch.client is None: return
+        try:
+            import json
+            from datetime import datetime
+            from src.utils.images import write_image
+            client = self.watch.client; image, _ = self.backend.grab(Rect(client.x, client.y, client.width, client.height))
+            folder = self.root / 'debug/chase_events' / datetime.now().strftime('%Y-%m-%d'); folder.mkdir(parents=True, exist_ok=True)
+            stem = f"{datetime.now():%H%M%S_%f}"[:-3] + '_' + kind; write_image(folder / (stem + '.jpg'), image)
+            (folder / (stem + '.json')).write_text(json.dumps(dict(kind=kind, reason=reason, rejected_total=self.detector.rejected), ensure_ascii=False, indent=1), encoding='utf-8')
+            for old in sorted(folder.parent.glob('*/*.jpg'))[:-400]: old.unlink(); old.with_suffix('.json').unlink(missing_ok=True)
+        except Exception:
+            log.exception('Chase meme: the event screenshot could not be saved')
 
     def own_status(self, client):
         """The top HUD portrait's status (dying, carried, hooked, dead, other), as the 1v1 timer reads it."""

@@ -124,6 +124,9 @@ class FeatureSection(QWidget):
         layout.addLayout(grid)
         if previewable:
             self.preview_button = BloodButton(t('meme_preview')); self.preview_button.setToolTip(t('meme_preview_hint')); self.preview_button.clicked.connect(self.preview.emit); layout.addWidget(self.preview_button)
+        if name == 'chase':   # 14.11: bad cases for review
+            self.save_events = ToggleSwitch(t('meme_chase_save_events')); self.save_events.setToolTip(t('meme_chase_save_events_hint')); self.save_events.setChecked(settings.get('save_events') is True)
+            self.save_events.toggled.connect(lambda v: (self.settings.__setitem__('save_events', bool(v)), self.hub.save())); layout.addWidget(self.save_events)
         if name == 'sable':   # J3: training frames from real matches and a labelling tool
             self.collect = ToggleSwitch(t('meme_sable_collect')); self.collect.setToolTip(t('meme_sable_collect_hint')); self.collect.setChecked(settings.get('collect') is True)
             self.collect.toggled.connect(self.toggle_collect); layout.addWidget(self.collect)

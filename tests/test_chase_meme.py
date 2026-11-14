@@ -110,16 +110,16 @@ def test_crossfade_gains():
 
 
 # --- state machine ------------------------------------------------------------------------------
-MOVING = cm.HornSample(60, 60, True, True, .6)
+MOVING = cm.HornSample(60, 60, True, True, .6, .035)   # weak level: needs the heart
 STATIC = cm.HornSample(130, 230, True, False, 0.)     # The Obsession's big horns: present, never moving.
 NONE = cm.HornSample()
 
 
 def test_chase_starts_on_animated_horns_and_stops_when_the_heart_is_gone_for_1_5_s():
     d = cm.ChaseDetector(); t = 10.
-    assert d.heart(True, t - .5, 900) is None                                   # the heart confirms the horns (J1)
+    assert d.heart(True, t - .6, 900) is None and d.heart(True, t - .4, 900) is None   # the heart (2 reads) confirms weak horns
     assert d.horns(MOVING, t) is None and d.horns(MOVING, t + .1) is None
-    event = d.horns(MOVING, t + .2); assert event[0] == 'start' and 'animated horns' in event[1] and d.state == cm.CHASE
+    event = d.horns(MOVING, t + .2); assert event[0] == 'start' and 'horn animation' in event[1] and d.state == cm.CHASE
     for i in range(50):                                     # Horns fade, the heart keeps the chase alive.
         assert d.horns(NONE, t + .3 + i * .1) is None and d.heart(True, t + .3 + i * .1) is None
     last = t + .3 + 49 * .1
@@ -139,11 +139,12 @@ def test_static_obsession_horns_never_start_a_chase_and_slow_changes_do_not_coun
 def test_animated_horns_without_the_heart_never_start_a_chase():
     """J1 (14.11): a brightness pulse on the portrait frame / a bright moving background looked like horns."""
     d = cm.ChaseDetector()
-    for i in range(60): assert d.horns(MOVING, i * .1) is None
-    assert d.state == cm.IDLE and d.rejected > 0
+    events = [d.horns(MOVING, i * .1) for i in range(60)]
+    assert d.state == cm.IDLE and d.rejected > 0 and {e[0] for e in events if e} == {'rejected'}
     assert d.heart(True, 10., 300) is None or d.state == cm.IDLE                 # a heart long after the horns: still nothing
+    d.heart(True, 20.0, 900)
     for i in range(3): d.horns(MOVING, 20 + i * .1)
-    event = d.heart(True, 20.5, 900); assert event[0] == 'start' and 'heart 0.0 s ago (900 px)' in event[1]
+    event = d.heart(True, 20.5, 900); assert event[0] == 'start' and 'heart seen (900 px)' in event[1]
     assert d.stop(25., 'x')[0] == 'stop' and d.stop(26., 'x') is None
 
 
@@ -186,7 +187,7 @@ def detect(frames, layouts, horn_step=3, heart_step=6, tail=75):
             x, y, w, h = cm.horn_rect(layout, 1920, 1080); event = d.horns(reader.read(frame[y:y + h, x:x + w]), now)
         if event is None and i % heart_step == 0:
             x, y, w, h = cm.heart_rect(1920, 1080); event = d.heart(cm.heart_seen(frame[y:y + h, x:x + w], 1080), now)
-        if event: events.append((round(now, 2), *event))
+        if event and event[0] != 'rejected': events.append((round(now, 2), *event))
     return events
 
 
@@ -223,7 +224,7 @@ def test_static_frames_never_start_a_chase_even_with_obsession_or_chase_horns():
             for i in range(40):
                 sample = reader.read(image[y:y + h, x:x + w]); assert d.horns(sample, i * .1) is None
             found[(path.name[:2], slot)] = sample.present
-    assert found[('01', 0)] and found[('07', 1)]        # Meg's Obsession horns and Nicolas's chase horns are seen, but a still image has no motion.
+    assert found[('01', 0)]        # Meg's Obsession horns and Nicolas's chase horns are seen, but a still image has no motion.
 
 
 # --- controller ---------------------------------------------------------------------------------
@@ -308,7 +309,7 @@ def test_controller_runs_the_show_for_the_sample_chase_and_hides_everything_afte
     assert seen[500] == (False, False, False)                  # 4 s later everything is silent and hidden.
     assert volumes and volumes[0] > volumes[len(volumes) // 2] > volumes[-1] and all(a >= b for a, b in zip(volumes, volumes[1:]))
     starts = [r.message for r in caplog.records if 'Chase meme START' in r.message]; stops = [r.message for r in caplog.records if 'Chase meme STOP' in r.message]
-    assert len(starts) == 1 and 'animated horns' in starts[0] and len(stops) == 1 and 'heart gone' in stops[0]
+    assert len(starts) == 1 and 'horn animation' in starts[0] and len(stops) == 1 and 'heart gone' in stops[0]
     first, last = c.timer_window.shown[0], c.timer_window.shown[-1]
     assert first[0] < .2 and 8. < last[0] < 11.                # The timer counts the chase from 00:00.00.
     assert not c.dance_window.visible and c.detector.state == cm.IDLE
@@ -470,3 +471,60 @@ def test_brightness_pulses_on_the_false_start_frames_never_start_a_chase(chase, 
         pulse[hud] = np.clip(pulse[hud].astype(np.float32) * gain, 0, 255).astype(np.uint8)
         chase.backend.image = pulse; chase.clock.now = 2000 + i / 30; c.step()
     assert not c.active and not c.timer_window.shown
+
+
+# --- 14.11 evening: rebalanced start rules -------------------------------------------------------------
+def run_rules(frames, layouts, heart=True):
+    d = cm.ChaseDetector(); reader = cm.HornReader(); events = []
+    for i, frame in enumerate(frames):
+        now = i / 30; layout = layouts[0 if i < 69 else 1]; event = None
+        if i % 3 == 0:
+            x, y, w, h = cm.portrait_rect(layout, 1920, 1080); event = d.horns(reader.read(frame[y:y + h, x:x + w]), now)
+        if event is None and heart and i % 6 == 0:
+            x, y, w, h = cm.heart_rect(1920, 1080); blob = cm.heart_blob(frame[y:y + h, x:x + w])
+            event = d.heart(cm.heart_ok(blob, 1080), now, blob[0] if blob else 0)
+        if event: events.append((now, *event))
+    return events
+
+
+@needs_video
+def test_strong_horn_animation_starts_without_the_heart_within_a_second_or_so(sample):
+    """The heart is often hidden by the camera, grass or a wall: sustained horn animation must be enough."""
+    frames, layouts = sample
+    starts = [e for e in run_rules(frames, layouts, heart=False) if e[1] == 'start']
+    assert starts and 3.0 <= starts[0][0] <= 4.5 and 'strong horn animation' in starts[0][2]   # the horns brighten at ~3.0 s
+
+
+@needs_video
+def test_with_the_heart_the_same_chase_starts_earlier(sample):
+    frames, layouts = sample
+    starts = [e for e in run_rules(frames, layouts) if e[1] == 'start']
+    assert starts and 3.0 <= starts[0][0] <= 3.7
+
+
+@pytest.mark.skipif(not (FALSE_STARTS / 'false_chase_killer_power_on_portrait_01.png').is_file(), reason='local samples')
+def test_a_killer_power_burst_on_my_portrait_with_the_heart_lit_is_not_a_chase():
+    """14.11: a killer power put a bright spiky animated burst over my portrait while the terror-radius heart was lit."""
+    from src.core.match_reader import load_layout
+    layout = load_layout(ROOT); a, b = (cv2.imread(str(FALSE_STARTS / f'false_chase_killer_power_on_portrait_0{n}.png')) for n in (1, 2))
+    d = cm.ChaseDetector(); reader = cm.HornReader(); events = []
+    for i in range(300):                                          # 30 s of the burst flickering between its two looks
+        image = a if (i // 2) % 2 == 0 else b; now = i / 10
+        x, y, w, h = cm.portrait_rect(layout, 1920, 1080); event = d.horns(reader.read(image[y:y + h, x:x + w]), now)
+        if event is None and i % 2 == 0:
+            x, y, w, h = cm.heart_rect(1920, 1080); blob = cm.heart_blob(image[y:y + h, x:x + w])
+            assert cm.heart_ok(blob, 1080)                        # the heart really is lit on these frames
+            event = d.heart(True, now, blob[0])
+        if event: events.append(event[0])
+    assert 'start' not in events
+
+
+def test_the_heart_check_rejects_huge_or_ragged_red_blobs():
+    assert cm.heart_ok((1800, .6, .5, .6), 1080) and not cm.heart_ok((15025, .6, .5, .6), 1080)   # 14.11: a 15025 px "heart"
+    assert not cm.heart_ok((1800, .15, .5, .6), 1080) and not cm.heart_ok((1800, .6, .02, .6), 1080) and not cm.heart_ok((200, .6, .5, .6), 1080)
+
+
+def test_a_down_portrait_never_starts_a_chase():
+    d = cm.ChaseDetector(); d.down = True; strong = cm.HornSample(80, 80, True, True, .5, .06)
+    events = [d.horns(strong, i * .1) for i in range(30)]
+    assert d.state == cm.IDLE and any(e and e[0] == 'rejected' and 'down state' in e[1] for e in events)

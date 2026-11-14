@@ -19,6 +19,9 @@
 
 - **Prestige rewards no longer hidden by the app window.** Right after a prestige the window grew back over the bottom-right OK of the "... UNLOCKED" reward screen, so the reward could not be seen and the run paused. The window now stays compact until an ordinary level 1–49 is read again.
 - **Chase meme: no more false starts.** Animated horns start a chase only when the red heart on your back is also seen within 2 s; a bright, moving background behind the portrait no longer counts.
+- **Teammate perks read again.** A diagnostic save added the same day broke every Tab read (UnboundLocalError); a failing diagnostic save can no longer stop a read.
+- **Chase meme rebalanced.** Horns are read only in their two sectors below the portrait, from white pixels brighter than their own surroundings; coloured effects and lighting changes do not count. Strong, sustained horn animation (about 1.2 s) starts a chase on its own; weaker animation needs the heart on your character; the heart alone, a down state on your portrait, or a huge red blob (fire, blood, red light) never starts one. Optional (off): save a screenshot and the scores at every start and refused start.
+- **Overlay windows are created at app start** with their final click-through, no-activate styles, instead of on first show at match start; each logs its size and styles once.
 - **Sable Detector:** optional collection of training frames from real matches (off by default) and a labelling tool.
 - **NVIDIA recording:** the teammate-perks and Decisive Strike overlays now cover only the left half of the game and no overlay window is the size of the whole screen, which NVIDIA could take for a fullscreen non-game application.
 

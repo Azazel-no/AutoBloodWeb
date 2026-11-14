@@ -46,3 +46,33 @@ def test_no_overlay_window_is_the_size_of_the_whole_game():
     import inspect
     from src.gui import sable_overlay
     assert 'client.height - 2' in inspect.getsource(sable_overlay.SableWindow.present)
+
+
+def test_every_overlay_window_has_its_styles_before_the_first_show(app):
+    """J5 (14.11): the native window and its no-activate/transparent/tool/topmost styles exist from app start,
+    so the first show at match start does not create a new top-level window or flash an activatable one."""
+    import ctypes
+    from src.gui.match_overlay import PerkOverlay, WS_EX
+    from src.gui.map_overlay import MapWindow
+    from src.gui.onevone_overlay import ScoreWindow
+    from src.gui.chase_overlay import TimerWindow, DanceWindow
+    from src.gui.crosshair_overlay import CrosshairWindow
+    from src.gui.sable_overlay import SableWindow
+    from src.gui.ds_overlay import DsOverlay
+    u = ctypes.windll.user32; u.GetWindowLongPtrW.argtypes = [ctypes.c_void_p, ctypes.c_int]; u.GetWindowLongPtrW.restype = ctypes.c_ssize_t
+    for cls in (PerkOverlay, MapWindow, ScoreWindow, TimerWindow, DanceWindow, CrosshairWindow, SableWindow, DsOverlay):
+        window = cls(ROOT); assert not window.isVisible()
+        ex = u.GetWindowLongPtrW(int(window.winId()), -20)
+        assert ex & WS_EX == WS_EX, (cls.__name__, hex(ex))
+        window.deleteLater()
+
+
+def test_content_sized_overlay_boxes_stay_well_inside_the_game():
+    from src.gui.map_overlay import map_box
+    from src.gui.chase_overlay import timer_box, dance_box
+    from src.gui.onevone_overlay import bar_rect
+    for width, height in ((1920, 1080), (2560, 1440), (3840, 2160)):
+        _, _, side = map_box(width, height, 1.5); assert side < height * .6
+        _, _, w, h = timer_box(width, height, 2.); assert w < width / 2 and h < height / 4
+        rect = bar_rect(width, height, 1.5); assert rect.width() < width and rect.height() < height / 3
+        _, _, w, h = dance_box(width, height, dict(dance_size=60, dance_x=80, dance_y=50), 1.); assert w < width and h < height

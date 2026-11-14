@@ -18,6 +18,7 @@ portrait side 0-7 px. Heart 700-4700 px when lit (red near the killer, orange in
 
 Everything is pure logic with explicit time, so whole chases run in tests without a game.
 """
+import functools
 import math
 import random
 from dataclasses import dataclass
@@ -29,41 +30,69 @@ from src.core.match_reader import Geometry
 
 IDLE, CHASE = 'idle', 'chase'
 OWN_SLOT = 0                 # The player's own portrait is the top one.
-HORN_INNER, HORN_OUTER = 1.0, 2.0     # Horn boxes span 1..2 portrait radii left and right of the centre,
-HORN_TOP, HORN_BOTTOM = .05, 1.15     # and 0.05..1.15 radii below it.
-HORN_MIN = .02               # White pixels per side, as a share of radius squared (26 px at 100 %).
-HORN_BUSY = .30              # More white than this share of a box is a bright background, not a horn.
-HORN_MOVING = .15            # Share of the white shape that must change between two reads.
-START_WINDOW = 1.0           # seconds
-START_READS = 3              # animated reads inside the window
+# --- horns ------------------------------------------------------------------------------------
+# 14.11 (evening): the chase horns are read only where they are drawn, the sectors below-left and
+# below-right of the portrait, from white pixels brighter than their own surroundings (lighting
+# changes behind the portrait do not count), and coloured pixels are ignored. Measured on the
+# samples (share of the two sectors): real chase horns 0.049-0.067, a killer power burst on the
+# portrait 0.033, frames without a chase at most 0.029, the Obsession's static horns 0.088 (but
+# they do not move).
+PORTRAIT_REACH = 2.0          # the read region: the portrait centre +- this many radii
+SECTOR_RING = (1.0, 1.9)      # horn sectors: between these distances (in radii) from the centre,
+HORN_SECTORS = ((200, 260), (280, 340))   # at these angles (degrees, 0 = right, counter-clockwise)
+HORN_STRONG = .04             # sector share of a clearly present pair of horns
+HORN_WEAK = .03               # sector share that can count with the heart's confirmation
+HORN_MOVING = .15             # share of the horn pixels that changed since the previous read
+STRONG_WINDOW = 1.2           # seconds of reads judged for a start without the heart
+STRONG_PRESENT = .7           # ...of which this share shows strong horns
+STRONG_MOVING = .5            # ...and this share shows them moving
+START_WINDOW = 1.0            # weak evidence: animated reads inside this window...
+START_READS = 3               # ...at least this many, plus the heart
 STOP_SECONDS = 1.5
-HEART_CONFIRM = 2.0           # J1 (14.11): animated horns start a chase only with the heart seen within this many seconds
+HEART_CONFIRM = 2.0           # the heart must be seen this close to the animated horns
+HEART_READS = 2               # ...on at least 2 of the last 3 heart reads (it flickers behind grass)
 HEART_ROI = (.30, .33, .40, .52)      # x, y, w, h as fractions of the client: wherever the camera puts the character's back
-HEART_MIN = 400              # px of the largest warm blob at 1080p (real hearts: 700+); scales with the height squared
+HEART_MIN = 400               # px of the heart blob at 1080p (real hearts 700-6000); scales with the height squared
+HEART_MAX = 9000              # bigger warm blobs are fire, blood pools or a red light, not the heart (a 15025 px "heart" started a chase on 14.11)
+HEART_FILL = .3               # the heart is a compact blob: its share of its bounding box
 HEART_REFERENCE = 1080
 
 
-# --- horns ------------------------------------------------------------------------------------
-def horn_rect(layout, width, height, slot=OWN_SLOT):
-    """(x, y, w, h) inside the client: both horn boxes of one portrait and the portrait between them."""
-    g = Geometry(layout, (height, width)); h = layout['hud']; r = h['portrait_radius']
-    x0, y0 = g.hud(h['portrait_x'] - HORN_OUTER * r, h['portrait_y'][slot] + HORN_TOP * r)
-    x1, y1 = g.hud(h['portrait_x'] + HORN_OUTER * r, h['portrait_y'][slot] + HORN_BOTTOM * r)
+def portrait_rect(layout, width, height, slot=OWN_SLOT):
+    """(x, y, w, h) inside the client: the square of +-PORTRAIT_REACH radii around one HUD portrait."""
+    g = Geometry(layout, (height, width)); h = layout['hud']; r = h['portrait_radius'] * PORTRAIT_REACH
+    x0, y0 = g.hud(h['portrait_x'] - r, h['portrait_y'][slot] - r); x1, y1 = g.hud(h['portrait_x'] + r, h['portrait_y'][slot] + r)
     x0 = max(0, x0); y0 = max(0, y0)
     return x0, y0, max(1, x1 - x0), max(1, y1 - y0)
+
+
+horn_rect = portrait_rect     # the old name, kept for callers
+
+
+@functools.lru_cache(maxsize=8)
+def _sectors(size):
+    yy, xx = np.mgrid[:size, :size]; c = (size - 1) / 2; r = size / (2 * PORTRAIT_REACH)
+    dx, dy = (xx - c) / r, (yy - c) / r; d = np.hypot(dx, dy); angle = np.degrees(np.arctan2(-dy, dx)) % 360
+    ring = (d > SECTOR_RING[0]) & (d < SECTOR_RING[1])
+    return ring & np.logical_or.reduce([(angle > a) & (angle < b) for a, b in HORN_SECTORS])
 
 
 @dataclass(frozen=True)
 class HornSample:
     left: int = 0
     right: int = 0
-    present: bool = False     # white horn-sized shapes on both sides
+    present: bool = False     # horn-sized white shapes in the horn sectors (weak level)
     moving: bool = False      # ...and they changed since the previous read
     change: float = 0.
+    share: float = 0.         # white share of the horn sectors
+
+    @property
+    def strong(self):
+        return self.share >= HORN_STRONG
 
 
 class HornReader:
-    """Turns the pixels of horn_rect into a HornSample; keeps the previous mask to see motion."""
+    """Turns the pixels of portrait_rect into a HornSample; keeps the previous mask to see motion."""
     def __init__(self):
         self.previous = None
 
@@ -71,19 +100,20 @@ class HornReader:
         self.previous = None
 
     def read(self, region):
-        if region is None or region.size == 0: self.previous = None; return HornSample()
-        hsv = cv2.cvtColor(np.ascontiguousarray(region[..., :3]), cv2.COLOR_BGR2HSV)
-        white = (hsv[..., 2] > 150) & (hsv[..., 1] < 60)
-        height, width = white.shape; side = max(1, round(width * (HORN_OUTER - HORN_INNER) / (2 * HORN_OUTER)))
-        mask = np.zeros_like(white); mask[:, :side] = white[:, :side]; mask[:, width - side:] = white[:, width - side:]
-        left, right = int(mask[:, :side].sum()), int(mask[:, width - side:].sum())
-        radius = width / (2 * HORN_OUTER); minimum = HORN_MIN * radius * radius; box = side * height
-        present = min(left, right) >= minimum and max(left, right) <= HORN_BUSY * box
+        if region is None or region.size == 0 or min(region.shape[:2]) < 8: self.previous = None; return HornSample()
+        size = min(region.shape[:2]); region = cv2.resize(region[..., :3], (size, size)) if region.shape[0] != region.shape[1] else region[..., :3]
+        hsv = cv2.cvtColor(np.ascontiguousarray(region), cv2.COLOR_BGR2HSV); value = hsv[..., 2].astype(np.float32)
+        r = size / (2 * PORTRAIT_REACH); local = cv2.blur(value, (max(3, int(r * 1.2) | 1),) * 2)
+        white = (value - local > 25) & (hsv[..., 1] < 90) & (value > 110)   # brighter than its surroundings, not coloured
+        zone = _sectors(size); mask = white & zone
+        half = size // 2; left, right = int(mask[:, :half].sum()), int(mask[:, half:].sum())
+        share = float(mask.sum()) / max(1, zone.sum())
+        present = share >= HORN_WEAK and min(left, right) > 0
         change = 0.
         if present and self.previous is not None and self.previous.shape == mask.shape:
-            change = float((mask ^ self.previous).sum()) / max(1, left + right)
+            change = float((mask ^ self.previous).sum()) / max(1, (mask | self.previous).sum())
         self.previous = mask if present else None
-        return HornSample(left, right, present, present and change >= HORN_MOVING, round(change, 3))
+        return HornSample(left, right, present, present and change >= HORN_MOVING, round(change, 3), round(share, 4))
 
 
 # --- heart ------------------------------------------------------------------------------------
@@ -92,57 +122,93 @@ def heart_rect(width, height):
     return round(width * x), round(height * y), round(width * w), round(height * h)
 
 
-def heart_area(region):
-    """Pixels of the largest warm glowing blob: bright orange-white core or saturated red glow."""
-    if region is None or region.size == 0: return 0
+def heart_blob(region):
+    """(area, fill, centre x share, centre y share) of the largest warm glowing blob, or None."""
+    if region is None or region.size == 0: return None
     hsv = cv2.cvtColor(np.ascontiguousarray(region[..., :3]), cv2.COLOR_BGR2HSV); hue, sat, val = hsv[..., 0], hsv[..., 1], hsv[..., 2]
     core = (val > 225) & (hue >= 2) & (hue <= 22) & (sat > 25) & (sat < 180)
     glow = ((hue <= 18) | (hue >= 172)) & (sat > 150) & (val > 170)
     mask = (core | glow).astype(np.uint8)
-    if not mask.any(): return 0
+    if not mask.any(): return None
     mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, np.ones((5, 5), np.uint8))
-    count, _, stats, _ = cv2.connectedComponentsWithStats(mask, connectivity=8)
-    return int(stats[1:, cv2.CC_STAT_AREA].max()) if count > 1 else 0
+    count, _, stats, centroids = cv2.connectedComponentsWithStats(mask, connectivity=8)
+    if count < 2: return None
+    i = 1 + int(stats[1:, cv2.CC_STAT_AREA].argmax()); x, y, w, h, area = stats[i]
+    return int(area), float(area) / max(1, w * h), float(centroids[i][0]) / region.shape[1], float(centroids[i][1]) / region.shape[0]
+
+
+def heart_area(region):
+    blob = heart_blob(region)
+    return blob[0] if blob else 0
+
+
+def heart_ok(blob, client_height):
+    """The heart on my own character: right size for the window, compact, not at the edge of the search area."""
+    if not blob: return False
+    area, fill, x, y = blob; scale = (client_height / HEART_REFERENCE) ** 2
+    return HEART_MIN * scale <= area <= HEART_MAX * scale and fill >= HEART_FILL and .08 <= x <= .92 and .05 <= y <= .95
 
 
 def heart_seen(region, client_height):
-    scale = client_height / HEART_REFERENCE
-    return heart_area(region) >= HEART_MIN * scale * scale
+    return heart_ok(heart_blob(region), client_height)
 
 
 # --- chase state machine ----------------------------------------------------------------------
 class ChaseDetector:
-    """IDLE -> CHASE on animated horns; CHASE -> IDLE when all evidence has been gone for STOP_SECONDS.
+    """IDLE -> CHASE on horn animation; CHASE -> IDLE when all evidence has been gone for STOP_SECONDS.
 
-    Every transition returns (event, reason) so the caller can log why."""
+    Start rules (14.11 evening): strong, sustained horn animation starts on its own; weaker animation
+    needs the heart on my own character on most recent reads; the heart alone never starts a chase (it
+    shows in the terror radius); my portrait showing dying/carried/hooked/dead never starts one.
+    Every transition and every refused start returns its reason so the caller can log it."""
     def __init__(self):
         self.reset()
 
     def reset(self):
         self.state = IDLE; self.started_at = None; self.moving = []; self.horns_at = None; self.heart_at = None; self.heart_ever = False
-        self.last_heart = None; self.last_heart_area = 0; self.last_sample = None
+        self.reads = []; self.hearts = []; self.last_heart = None; self.last_heart_area = 0; self.last_sample = None; self.down = False
         if not hasattr(self, 'rejected'): self.rejected = 0
+        self.last_rejection = None
 
     def horns(self, sample, now):
+        self.reads = [r for r in self.reads if now - r[0] <= STRONG_WINDOW] + [(now, sample)]
         self.moving = [t for t in self.moving if now - t <= START_WINDOW]
         if sample.moving:
             self.moving.append(now); self.horns_at = now; self.last_sample = sample
-        if self.state == IDLE and len(self.moving) >= START_READS:
+        if self.state == IDLE and sample.moving:
             return self.try_start(now)
         return self.check(now)
 
+    def evidence(self, now):
+        reads = [s for t, s in self.reads if now - t <= STRONG_WINDOW]
+        strong = len(reads) >= 6 and sum(s.strong for s in reads) >= STRONG_PRESENT * len(reads) and sum(s.moving for s in reads) >= STRONG_MOVING * len(reads)
+        hearts = [seen for t, seen, _ in self.hearts[-3:] if now - t <= HEART_CONFIRM]
+        heart = sum(hearts) >= HEART_READS
+        weak = len(self.moving) >= START_READS
+        return dict(strong=strong, weak=weak, heart=heart, reads=len(reads), strong_reads=sum(s.strong for s in reads),
+                    moving_reads=sum(s.moving for s in reads), share=self.last_sample.share if self.last_sample else 0., heart_area=self.last_heart_area)
+
     def try_start(self, now):
-        """Animated horns alone are not a chase: a brightness pulse of the portrait frame or a bright,
-        moving background behind it looked the same (live 14.11, the timer ran with no chase). The red
-        heart on the character's back must be seen within HEART_CONFIRM seconds as well."""
-        if self.last_heart is None or abs(now - self.last_heart) > HEART_CONFIRM:
-            self.rejected += 1; return None
+        e = self.evidence(now)
+        if self.down: return self.reject(now, 'own portrait shows a down state', e)
+        if not e['weak'] and not e['strong']: return None        # too little to judge yet: not a refusal
+        if not (e['strong'] or e['heart']):
+            return self.reject(now, 'weak horn animation without the heart', e)
         sample = self.last_sample or HornSample()
-        self.state = CHASE; self.started_at = self.moving[0]; self.heart_at = self.last_heart; self.heart_ever = True
-        return 'start', (f'animated horns on {len(self.moving)} reads in {START_WINDOW:.0f} s (left {sample.left} px, right {sample.right} px, '
-                         f'change {sample.change:.0%}) and the heart {now - self.last_heart:.1f} s ago ({self.last_heart_area} px)')
+        self.state = CHASE; self.started_at = (self.moving[0] if self.moving else now); self.heart_at = self.last_heart; self.heart_ever = e['heart']
+        how = 'strong horn animation' if e['strong'] else 'horn animation confirmed by the heart'
+        return 'start', (f"{how}: {e['moving_reads']}/{e['reads']} reads moving, {e['strong_reads']} strong (share {sample.share:.3f}, "
+                         f"change {sample.change:.0%}); heart {'seen' if e['heart'] else 'not seen'} ({self.last_heart_area} px)")
+
+    def reject(self, now, why, evidence):
+        self.rejected += 1
+        if self.last_rejection is None or now - self.last_rejection[0] >= 3. or self.last_rejection[1] != why:
+            self.last_rejection = (now, why)
+            return 'rejected', f"{why}: {evidence['moving_reads']}/{evidence['reads']} reads moving, {evidence['strong_reads']} strong, share {evidence['share']:.3f}, heart {'seen' if evidence['heart'] else 'not seen'} ({evidence['heart_area']} px)"
+        return None
 
     def heart(self, seen, now, area=0):
+        self.hearts = (self.hearts + [(now, bool(seen), area)])[-6:]
         if seen:
             self.last_heart = now; self.last_heart_area = area
             if self.state == CHASE: self.heart_at = now; self.heart_ever = True
