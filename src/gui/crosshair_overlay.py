@@ -9,7 +9,7 @@ from src.core.crosshair import DEFAULT_KEY, FORBIDDEN_KEYS, PALETTE, PRESETS, ce
 from src.core.match_reader import hud_visible, is_end_scoreboard, is_lobby, is_scoreboard, load_layout
 from src.core.own_perks import crop_own, load_matchers, read_own
 from src.core.screen_manager import ScreenError, WindowsBackend
-from src.gui.match_overlay import KeyWatcher, PerkOverlay, foreground_handle, key_code
+from src.gui.match_overlay import KeyWatcher, PerkOverlay, foreground_handle, game_in_front, key_code, overlay_in_front
 from src.gui.widgets import BloodButton, ToggleSwitch
 
 log = logging.getLogger(__name__)
@@ -55,7 +55,7 @@ class CrosshairController(QObject):
         self.timer = QTimer(self);self.timer.setInterval(LOOK_MS);self.timer.timeout.connect(self.look);self.key_event.connect(self.toggle)
 
     def game_foreground(self):
-        return bool(self.game_hwnd) and foreground_handle() == self.game_hwnd
+        return game_in_front(self.game_hwnd)
 
     def enable(self):
         self.shown = True;self.timer.start()
@@ -88,7 +88,7 @@ class CrosshairController(QObject):
         if self.automation_active():  # Any window over the game counts as a cover for purchase checks.
             return self.window.hide()
         window = self.backend.info();self.game_hwnd = window.hwnd
-        if not self.shown or not window.foreground:
+        if not self.shown or not (window.foreground or overlay_in_front()):
             return self.window.hide()
         image, _ = self.backend.grab(window.client)
         if in_match(image, self.layout, self.root):

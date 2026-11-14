@@ -2,6 +2,12 @@
 LANGUAGES = ('ru', 'en', 'es', 'de', 'fr')
 TEXT = {
  'nav_memes': ('Мемы', 'Memes', 'Memes', 'Memes', 'Mèmes'),
+ 'recording_friendly': ('Режим для записи (NVIDIA и др.)', 'Recording-friendly mode (NVIDIA etc.)', 'Modo apto para grabar (NVIDIA, etc.)', 'Aufnahmefreundlicher Modus (NVIDIA usw.)', "Mode compatible avec l'enregistrement (NVIDIA, etc.)"),
+ 'recording_friendly_hint': ('Во время игры оверлеи не прячутся и не появляются, а становятся прозрачными: с HDR запись NVIDIA останавливается, когда окна поверх игры меняются.',
+                             'During play the overlays never hide or appear, they only turn transparent: with HDR on, NVIDIA recording stops when windows over the game change.',
+                             'Durante la partida los overlays no se ocultan ni aparecen, solo se vuelven transparentes: con HDR, la grabación de NVIDIA se detiene cuando cambian las ventanas sobre el juego.',
+                             'Während des Spiels werden Overlays nicht aus- oder eingeblendet, nur transparent: Mit HDR stoppt die NVIDIA-Aufnahme, wenn sich Fenster über dem Spiel ändern.',
+                             "Pendant la partie, les overlays ne se masquent ni n'apparaissent, ils deviennent transparents : avec le HDR, l'enregistrement NVIDIA s'arrête quand les fenêtres au-dessus du jeu changent."),
  'meme_volume': ('Громкость мемов', 'Meme volume', 'Volumen de los memes', 'Meme-Lautstärke', 'Volume des mèmes'),
  'meme_volume_hint': ('Отдельно от громкости игры.', 'Separate from the game volume.', 'Independiente del volumen del juego.', 'Unabhängig von der Spiellautstärke.', 'Indépendant du volume du jeu.'),
  'meme_mute': ('Без звука ({hotkey})', 'Mute memes ({hotkey})', 'Silenciar memes ({hotkey})', 'Memes stumm ({hotkey})', 'Couper le son des mèmes ({hotkey})'),

@@ -10,7 +10,7 @@ from src.core.own_perks import load_matchers, own_rect, read_own
 from src.core.match_reader import Geometry, fit_hud, load_layout, right_centre_x, supported_ui_scale, with_hud_fit
 from src.core.perk_catalog import load_catalog
 from src.core.screen_manager import Rect, ScreenError, WindowsBackend
-from src.gui.match_overlay import PerkOverlay, foreground_handle
+from src.gui.match_overlay import PerkOverlay, foreground_handle, overlay_in_front
 
 log=logging.getLogger(__name__)
 TICK_MS=100
@@ -110,7 +110,7 @@ class DsTimerController(QObject):
         self.ticks+=1
         if self.ticks%(READ_EVERY if self.hud_shown else IDLE_READ_EVERY)==0:
             window=self.backend.info()
-            if not window.foreground:
+            if not (window.foreground or overlay_in_front()):
                 self.overlay.hide();self.hud_shown=False;return
             client=window.client;x,y,w,h=column_rect(self.layout,client.width,client.height)
             image,_=self.backend.grab(Rect(client.x+x,client.y+y,w,h))

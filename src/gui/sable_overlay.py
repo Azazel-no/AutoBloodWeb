@@ -19,7 +19,7 @@ from src.core.match_reader import hud_portraits
 from src.core.sable_model import ModelFetcher
 from src.core.screen_manager import Rect, ScreenError
 from src.gui.chase_overlay import load_frame, place
-from src.gui.match_overlay import PerkOverlay, foreground_handle
+from src.gui.match_overlay import PerkOverlay, foreground_handle, game_in_front
 from src.gui.meme_audio import LoopSound
 from src.gui.meme_watch import MatchWatch
 
@@ -106,7 +106,7 @@ class SableController(QObject):
         return self.detector is not None and self.library is not None and self.library.ready
 
     def game_foreground(self):
-        return bool(self.watch.game_hwnd) and self.foreground() == self.watch.game_hwnd
+        return game_in_front(self.watch.game_hwnd, self.foreground)
 
     @property
     def alerting(self):

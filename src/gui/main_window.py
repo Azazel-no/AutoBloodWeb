@@ -426,6 +426,11 @@ class MainWindow(QMainWindow):
         self.recalibrate_action=self.settings_menu.addAction('');self.recalibrate_action.triggered.connect(self.open_calibration)
         self.session_action=self.settings_menu.addAction('');self.session_action.triggered.connect(self.open_session_check)
         self.overlay_key_action=self.settings_menu.addAction('');self.overlay_key_action.triggered.connect(self.choose_overlay_key)
+        self.recording_action=self.settings_menu.addAction('');self.recording_action.setCheckable(True)
+        self.recording_action.setChecked(self.prefs.settings.get('recording_friendly') is True)
+        self.recording_action.toggled.connect(self.set_recording_friendly)
+        from src.gui.match_overlay import set_recording_friendly
+        set_recording_friendly(self.prefs.settings.get('recording_friendly') is True,lambda:bool(self.auto_worker))
         self.logs_action=self.settings_menu.addAction('')
         self.logs_action.triggered.connect(lambda:QDesktopServices.openUrl(QUrl.fromLocalFile(str(self.root/'debug'))))
         self.developer_action=self.settings_menu.addAction('');self.developer_action.setCheckable(True)
@@ -703,6 +708,7 @@ class MainWindow(QMainWindow):
         self.level_limit_label.setText(t('level_limit_label'));self.level_limit.setSpecialValueText(t('level_limit_none'))
         self.level_limit.setToolTip(t('level_limit_hint'))
         self.start_with_dbd.setText(t('start_with_dbd'));self.start_with_dbd.setToolTip(t('start_with_dbd_hint'))
+        self.recording_action.setText(t('recording_friendly'));self.recording_action.setToolTip(t('recording_friendly_hint'))
         self.logs_action.setText(t('logs'));self.developer_action.setText(t('developer_mode'))
         self.hotkey_hint.setText(t('hotkey_hint',**self.prefs.settings['hotkeys']))
         self.experimental_persistent.setText(t('experimental_persistent'));self.experimental_persistent.setToolTip(t('experimental_persistent_hint'))
@@ -1175,6 +1181,10 @@ class MainWindow(QMainWindow):
         self.confirm_button.setEnabled(False); self.save_preferences()
         self.status_key='ready'; self.error_message=''; self.refresh_status()
 
+    def set_recording_friendly(self,enabled):
+        from src.gui.match_overlay import set_recording_friendly
+        self.prefs.settings['recording_friendly']=bool(enabled);set_recording_friendly(enabled);self.save_preferences()
+
     def set_developer_mode(self,enabled,save=True):
         """Engineering controls stay in code but appear only in developer mode.
 
@@ -1426,6 +1436,8 @@ class MainWindow(QMainWindow):
             self.setAttribute(Qt.WA_ShowWithoutActivating,True)
             self.topmost.setChecked(True)
         if not dry_run and not calibrate:self.keep_clear_of_web(engine);self.keep_clear_of_game_hud(engine)
+        from src.gui.match_overlay import hide_all_overlays
+        hide_all_overlays()   # blank recording-friendly overlays would cover the Bloodweb
         self.auto_worker=AutomationWorker(engine,calibrate,self)
         self.last_action_key='live_source'; self.last_analysis=None
         self.auto_worker.update.connect(self.automation_update)

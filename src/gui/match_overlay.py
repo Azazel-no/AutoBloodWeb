@@ -11,6 +11,7 @@ import json
 import logging
 import threading
 import time
+import weakref
 from datetime import datetime
 from pathlib import Path
 import cv2
@@ -79,6 +80,110 @@ class KeyWatcher:
 _FOREGROUND=None
 
 
+# J6 (14.11): NVIDIA recording stopped 1-1.5 s after it started, only with AutoBloodWeb running. NVIDIA's log
+# (C:\ProgramData\NVIDIA Corporation\ShadowPlay\CaptureCore.log) shows the cause every time: "Capture Proc HDR
+# state changed [1] -> [0]", then StopDVRCapture 1.5 s later. With HDR on, any of our windows appearing or
+# disappearing over DBD changes how the game is presented, which NVIDIA reads as an HDR change. Starting a
+# recording brings NVIDIA's own overlay to the front for a moment, and our overlays hid because "DBD is not in
+# front". Two fixes: NVIDIA's overlay (or the Xbox Game Bar) in front counts as DBD in front, and an optional
+# recording-friendly mode in which overlays never hide during play, they only go blank.
+OVERLAY_PROCESSES=frozenset(('nvidia overlay.exe','nvidia share.exe','gamebar.exe','gamebarftserver.exe'))
+GAME_PROCESS_PREFIX='deadbydaylight'
+
+
+_NAMES={};_NAMES_AT=[0.]
+
+
+def _process_name(pid):
+    """Executable name by process id from the system's process list (Toolhelp snapshot). No process is
+    opened, the game's least of all (anticheat): only the list Windows keeps for Task Manager is read."""
+    if pid not in _NAMES and time.monotonic()-_NAMES_AT[0]>2.:
+        _NAMES_AT[0]=time.monotonic()
+        try:
+            import ctypes.wintypes as W
+            class Entry(ctypes.Structure):
+                _fields_=[('dwSize',W.DWORD),('cntUsage',W.DWORD),('th32ProcessID',W.DWORD),('th32DefaultHeapID',ctypes.c_size_t),
+                          ('th32ModuleID',W.DWORD),('cntThreads',W.DWORD),('th32ParentProcessID',W.DWORD),('pcPriClassBase',W.LONG),
+                          ('dwFlags',W.DWORD),('szExeFile',ctypes.c_wchar*260)]
+            k=ctypes.WinDLL('kernel32',use_last_error=True);k.CreateToolhelp32Snapshot.restype=ctypes.c_void_p
+            k.CreateToolhelp32Snapshot.argtypes=[W.DWORD,W.DWORD];k.CloseHandle.argtypes=[ctypes.c_void_p]
+            k.Process32FirstW.argtypes=k.Process32NextW.argtypes=[ctypes.c_void_p,ctypes.POINTER(Entry)]
+            snap=k.CreateToolhelp32Snapshot(0x2,0)   # TH32CS_SNAPPROCESS
+            if snap and snap!=ctypes.c_void_p(-1).value:
+                try:
+                    entry=Entry();entry.dwSize=ctypes.sizeof(Entry);names={}
+                    ok=k.Process32FirstW(snap,ctypes.byref(entry))
+                    while ok:
+                        names[entry.th32ProcessID]=entry.szExeFile.lower();ok=k.Process32NextW(snap,ctypes.byref(entry))
+                    _NAMES.clear();_NAMES.update(names)
+                finally:k.CloseHandle(snap)
+        except Exception:
+            pass
+    return _NAMES.get(pid,'')
+
+
+def window_process(hwnd):
+    """Lower-case executable name of the process that owns a window ('' when unknown)."""
+    if not hwnd:return ''
+    u=ctypes.WinDLL('user32',use_last_error=True);u.GetWindowThreadProcessId.argtypes=[ctypes.c_void_p,ctypes.POINTER(ctypes.c_uint32)]
+    pid=ctypes.c_uint32();u.GetWindowThreadProcessId(ctypes.c_void_p(hwnd),ctypes.byref(pid))
+    return _process_name(pid.value) if pid.value else ''
+
+
+def overlay_in_front(hwnd=None):
+    """True while a recording/overlay tool (NVIDIA overlay, Game Bar) is the foreground window."""
+    hwnd=foreground_handle() if hwnd is None else hwnd
+    return window_process(hwnd) in OVERLAY_PROCESSES
+
+
+def game_in_front(game_hwnd,foreground=None):
+    """DBD is in front, or only an overlay tool sits in front of it for a moment."""
+    if not game_hwnd:return False
+    current=(foreground or foreground_handle)()
+    return current==game_hwnd or overlay_in_front(current)
+
+
+def dbd_or_overlay_in_front():
+    name=window_process(foreground_handle())
+    return name.startswith(GAME_PROCESS_PREFIX) or name in OVERLAY_PROCESSES
+
+
+class Recording:
+    """Recording-friendly mode (off by default): during play our overlay windows never hide or appear,
+    they only go blank, so nothing over DBD changes while NVIDIA records. Automation hides them for real."""
+    on=False
+    automation=staticmethod(lambda:False)
+
+
+RECORDING=Recording()
+_WINDOWS=weakref.WeakSet()
+
+
+def set_recording_friendly(on,automation=None):
+    RECORDING.on=bool(on)
+    if automation is not None:RECORDING.automation=automation
+    if not on:
+        for window in list(_WINDOWS):
+            if window.blank:window.hide()
+
+
+def hide_all_overlays():
+    """Before automation: every overlay window really hidden (they would count as covers of the Bloodweb)."""
+    for window in list(_WINDOWS):
+        try:window.blank=False;QWidget.hide(window)
+        except RuntimeError:pass
+
+
+def blank_aware(paint):
+    """Wraps a paintEvent: a blank overlay draws nothing, so its translucent window is fully clear."""
+    if getattr(paint,'blank_aware',False):return paint
+    def paintEvent(self,event):
+        if getattr(self,'blank',False):return
+        return paint(self,event)
+    paintEvent.blank_aware=True
+    return paintEvent
+
+
 def foreground_handle():
     """Handle of the foreground window; a private DLL object, so no argtypes are shared."""
     global _FOREGROUND
@@ -103,7 +208,7 @@ class PerkOverlay(QWidget):
         self.scale=1.           # The user's size setting, around each cluster's centre.
         self.setAttribute(Qt.WA_TranslucentBackground);self.setAttribute(Qt.WA_ShowWithoutActivating)
         self.setAttribute(Qt.WA_TransparentForMouseEvents);self.setFocusPolicy(Qt.NoFocus)
-        self.reported=False
+        self.reported=False;self.blank=False;_WINDOWS.add(self)
         # J5 (14.11): the native window is made now, at app start, with its final styles, not on the first
         # show() in the middle of a match start (the map overlay's first appearance coincided with NVIDIA
         # recording switching off); the first frame on screen already has no-activate/transparent/tool.
@@ -118,13 +223,41 @@ class PerkOverlay(QWidget):
         if old&WS_EX!=WS_EX:u.SetWindowLongPtrW(hwnd,-20,old|WS_EX)
         return hwnd
 
+    def __init_subclass__(cls,**kwargs):
+        super().__init_subclass__(**kwargs)
+        if 'paintEvent' in cls.__dict__:cls.paintEvent=blank_aware(cls.__dict__['paintEvent'])
+
+    def show(self):
+        if not self.isVisible():self.log_change('shown')
+        self.blank=False;super().show()
+
+    def hide(self):
+        if RECORDING.on and QWidget.isVisible(self) and not RECORDING.automation() and dbd_or_overlay_in_front():
+            if not self.blank:self.blank=True;self.update();self.log_change('blanked (recording-friendly)')
+            return
+        if QWidget.isVisible(self):self.log_change('hidden')
+        self.blank=False;super().hide()
+
+    def log_change(self,what):
+        """J6: every window appearing or disappearing over the game, with the foreground process, so a
+        recording that stops can be matched to the overlay that changed at that moment."""
+        try:logging.getLogger(__name__).info('Overlay window %s %s (foreground: %s)',type(self).__name__,what,window_process(foreground_handle()) or '?')
+        except Exception:pass
+
+    def isVisible(self):
+        return QWidget.isVisible(self) and not self.blank
+
     def showEvent(self,event):
         super().showEvent(event)
         hwnd=self.apply_styles()
         if not self.reported:
             self.reported=True
-            try:self.report(hwnd)
-            except Exception:pass
+            # Measured once Qt has moved the window into place (inside showEvent it still has its default rect).
+            QTimer.singleShot(0,lambda:self.safe_report(hwnd))
+
+    def safe_report(self,hwnd):
+        try:self.report(hwnd)
+        except Exception:pass
 
     def report(self,hwnd):
         """Once per window: its real size and styles, and whether showing it took the focus (J5 diagnostics)."""
@@ -175,6 +308,7 @@ class PerkOverlay(QWidget):
         pitch=min(b-a for a,b in zip(ys,ys[1:]))*self.client.height/self.layout_data['reference_height']/self.ratio
         return pitch/2-.5
 
+    @blank_aware
     def paintEvent(self,event):
         if not self.slots or not self.layout_data:return
         painter=QPainter(self);painter.setRenderHint(QPainter.Antialiasing);painter.setRenderHint(QPainter.SmoothPixmapTransform)
@@ -308,8 +442,8 @@ class MatchOverlayController(QObject):
             self.status.emit('overlay_locked')
 
     def game_foreground(self):
-        """Called from the key watcher thread: compares window handles only, no screen reads."""
-        return bool(self.game_hwnd) and self.foreground_window()==self.game_hwnd
+        """Called from the key watcher thread: window handles and process names only, no screen reads."""
+        return game_in_front(self.game_hwnd,self.foreground_window)
 
     def set_size(self,size):
         self.overlay.size_name=size
@@ -344,7 +478,7 @@ class MatchOverlayController(QObject):
     def grab(self):
         window=self.backend.info()
         self.game_hwnd=window.hwnd
-        if not window.foreground:raise ScreenError('game_focus_lost')
+        if not (window.foreground or overlay_in_front()):raise ScreenError('game_focus_lost')
         image,_=self.backend.grab(window.client);self.window=window
         return image
 
@@ -568,7 +702,7 @@ class MatchOverlayController(QObject):
         except ScreenError:
             self.game_hwnd=None;self.reset();return
         self.game_hwnd=window.hwnd
-        if not window.foreground:
+        if not (window.foreground or overlay_in_front()):
             self.overlay.hide();return
         if self.tab_open():
             self.overlay.hide();return  # The scoreboard needs no clusters over it.

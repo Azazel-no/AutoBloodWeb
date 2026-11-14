@@ -17,7 +17,7 @@ from src.core.map_images import CREDIT, Fetcher, cached
 from src.core.map_names import DEFAULT_KEY, MapMatcher, clean_settings, default_settings, load_maps, load_realms, ocr_lines  # noqa: F401
 from src.core.match_reader import is_lobby, load_layout
 from src.core.screen_manager import Rect, ScreenError, WindowsBackend
-from src.gui.match_overlay import KeyWatcher, PerkOverlay, foreground_handle, key_code
+from src.gui.match_overlay import KeyWatcher, PerkOverlay, foreground_handle, game_in_front, key_code
 from src.gui.widgets import ToggleSwitch
 
 log = logging.getLogger(__name__)
@@ -111,7 +111,7 @@ class MapController(QObject):
         if self.watcher: self.disable(); self.enable()
 
     def game_foreground(self):
-        return bool(self.game_hwnd) and foreground_handle() == self.game_hwnd
+        return game_in_front(self.game_hwnd)
 
     def on_key(self, action):
         if action == 'key_down': self.shown = not self.shown; self.tick()

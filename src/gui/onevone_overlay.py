@@ -130,8 +130,8 @@ class OneVOneController(QObject):
         if self.watcher: self.disable(); self.enable()
 
     def game_foreground(self):
-        from src.gui.match_overlay import foreground_handle
-        return bool(self.game_hwnd) and foreground_handle() == self.game_hwnd
+        from src.gui.match_overlay import game_in_front
+        return game_in_front(self.game_hwnd)
 
     # --- input ------------------------------------------------------------------------------
     def current_role(self):

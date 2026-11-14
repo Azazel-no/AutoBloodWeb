@@ -17,7 +17,7 @@ from PySide6.QtGui import QColor, QFont, QFontMetricsF, QGuiApplication, QImage,
 from src.core import chase_meme as cm
 from src.core.onevone import DOWN_STATES
 from src.core.screen_manager import Rect, ScreenError
-from src.gui.match_overlay import PerkOverlay, foreground_handle
+from src.gui.match_overlay import PerkOverlay, foreground_handle, game_in_front
 from src.gui.meme_audio import Sound
 from src.gui.meme_watch import MatchWatch
 
@@ -193,7 +193,7 @@ class ChaseController(QObject):
         return self.chase_at is not None
 
     def game_foreground(self):
-        return bool(self.watch.game_hwnd) and self.foreground() == self.watch.game_hwnd
+        return game_in_front(self.watch.game_hwnd, self.foreground)
 
     # --- loop -------------------------------------------------------------------------------
     def tick(self):

@@ -74,6 +74,7 @@ class Preferences:
         self.settings['overlay_key']=key if isinstance(key,str) and key.strip() else 'TAB'
         if self.settings.get('overlay_size') not in ('normal','large'):self.settings['overlay_size']='large'
         self.settings['ds_timer']=self.settings.get('ds_timer') is True
+        self.settings['recording_friendly']=self.settings.get('recording_friendly') is True
         expired=self.settings.get('ds_expired_seconds',15)
         self.settings['ds_expired_seconds']=expired if type(expired) in (int,float) and 10<=expired<=20 else 15
         levels=self.settings.get('max_levels',0)

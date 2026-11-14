@@ -76,3 +76,44 @@ def test_content_sized_overlay_boxes_stay_well_inside_the_game():
         _, _, w, h = timer_box(width, height, 2.); assert w < width / 2 and h < height / 4
         rect = bar_rect(width, height, 1.5); assert rect.width() < width and rect.height() < height / 3
         _, _, w, h = dance_box(width, height, dict(dance_size=60, dance_x=80, dance_y=50), 1.); assert w < width and h < height
+
+
+def test_nvidia_overlay_in_front_still_counts_as_the_game_in_front(monkeypatch):
+    """J6 (14.11): starting a recording brings NVIDIA's overlay to the front; our overlays hid, which changed the
+    composition over the HDR game and NVIDIA stopped the recording 1.5 s later (its CaptureCore.log)."""
+    from src.gui import match_overlay as mo
+    names = {10: 'deadbydaylight-win64-shipping.exe', 20: 'nvidia overlay.exe', 30: 'explorer.exe'}
+    monkeypatch.setattr(mo, 'window_process', lambda hwnd: names.get(hwnd, ''))
+    assert mo.game_in_front(10, lambda: 10) and mo.game_in_front(10, lambda: 20)
+    assert not mo.game_in_front(10, lambda: 30) and not mo.game_in_front(None, lambda: 20)
+
+
+def test_recording_friendly_mode_blanks_instead_of_hiding(app, monkeypatch):
+    from src.gui import match_overlay as mo
+    from src.gui.map_overlay import MapWindow
+    from PySide6.QtWidgets import QWidget
+    monkeypatch.setattr(mo, 'dbd_or_overlay_in_front', lambda: True)
+    busy = [False]; mo.set_recording_friendly(True, lambda: busy[0])
+    try:
+        window = MapWindow(ROOT); window.setGeometry(0, 0, 50, 50); window.show()
+        assert window.isVisible() and not window.blank
+        window.hide()                                   # in play: stays on screen, clear
+        assert QWidget.isVisible(window) and window.blank and not window.isVisible()
+        window.show(); assert window.isVisible() and not window.blank
+        window.hide(); busy[0] = True; window.hide()     # automation: really hidden
+        assert not QWidget.isVisible(window)
+        busy[0] = False; window.show(); window.hide(); mo.hide_all_overlays()
+        assert not QWidget.isVisible(window)
+        window.show(); window.hide(); mo.set_recording_friendly(False)   # switching the mode off hides blank windows
+        assert not QWidget.isVisible(window)
+        assert getattr(MapWindow.paintEvent, 'blank_aware', False) and getattr(mo.PerkOverlay.paintEvent, 'blank_aware', False)
+    finally:
+        mo.set_recording_friendly(False, lambda: False)
+
+
+def test_without_the_mode_hide_really_hides(app):
+    from src.gui import match_overlay as mo
+    from src.gui.crosshair_overlay import CrosshairWindow
+    from PySide6.QtWidgets import QWidget
+    window = CrosshairWindow(ROOT); window.setGeometry(0, 0, 20, 20); window.show(); window.hide()
+    assert not QWidget.isVisible(window) and not window.blank
