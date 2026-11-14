@@ -27,6 +27,15 @@ from src.core.screen_manager import ScreenError, WindowsBackend
 
 log=logging.getLogger(__name__)
 WS_EX=0x00000020|0x00080000|0x08000000|0x00000080  # Transparent, layered, no-activate, tool window.
+# J4 (14.11): NVIDIA instant replay/recording switched off while the overlays ran. A topmost window exactly the
+# size of the monitor reads as a fullscreen application, and ours is not a game. The HUD overlays now cover only
+# the left part of the game, where they draw (the HUD column and the perks beside it).
+HUD_OVERLAY_SHARE=.5
+
+
+def hud_overlay_rect(client,ratio):
+    """Logical (x, y, w, h) of a HUD overlay: the client's left half, never the whole monitor."""
+    return round(client.x/ratio),round(client.y/ratio),max(1,round(client.width*HUD_OVERLAY_SHARE/ratio)),round(client.height/ratio)
 NAMED_KEYS={'TAB':0x09,'CAPSLOCK':0x14,'SHIFT':0x10,'CTRL':0x11,'ALT':0x12,'SPACE':0x20}
 OFFSETS={'top':(0,-1),'left':(-1,0),'right':(1,0),'bottom':(0,1)}
 
@@ -109,7 +118,7 @@ class PerkOverlay(QWidget):
         screen=QGuiApplication.screenAt(QPointF(client.x,client.y).toPoint()) or QGuiApplication.primaryScreen()
         self.ratio=screen.devicePixelRatio() if screen else 1.
         r=self.ratio
-        self.setGeometry(round(client.x/r),round(client.y/r),round(client.width/r),round(client.height/r))
+        self.setGeometry(*hud_overlay_rect(client,r))
         self.show();self.update()
 
     def clear(self):

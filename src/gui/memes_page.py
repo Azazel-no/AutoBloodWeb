@@ -124,6 +124,10 @@ class FeatureSection(QWidget):
         layout.addLayout(grid)
         if previewable:
             self.preview_button = BloodButton(t('meme_preview')); self.preview_button.setToolTip(t('meme_preview_hint')); self.preview_button.clicked.connect(self.preview.emit); layout.addWidget(self.preview_button)
+        if name == 'sable':   # J3: training frames from real matches and a labelling tool
+            self.collect = ToggleSwitch(t('meme_sable_collect')); self.collect.setToolTip(t('meme_sable_collect_hint')); self.collect.setChecked(settings.get('collect') is True)
+            self.collect.toggled.connect(self.toggle_collect); layout.addWidget(self.collect)
+            self.label_button = BloodButton(t('meme_sable_label')); self.label_button.clicked.connect(self.open_labeler); layout.addWidget(self.label_button)
         self.pack_note = QLabel(); self.pack_note.setObjectName('notice'); self.pack_note.setWordWrap(True); layout.addWidget(self.pack_note)
         self.state = QLabel(); self.state.setWordWrap(True); layout.addWidget(self.state)
         layout.addStretch(); hub.pack_changed.connect(self.show_pack); self.show_pack()
@@ -137,6 +141,14 @@ class FeatureSection(QWidget):
 
     def toggle_enabled(self, value):
         self.settings['enabled'] = bool(value); self.hub.save(); self.enabled_changed.emit(bool(value))
+
+    def toggle_collect(self, value):
+        self.settings['collect'] = bool(value); self.hub.save()
+
+    def open_labeler(self):
+        from src.gui.sable_labeler import LabelerDialog
+        from src.core.runtime_paths import project_root
+        LabelerDialog(project_root() / 'debug/sable_frames', self.t, self).exec()
 
 
 class MemesPage(QWidget):

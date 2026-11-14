@@ -132,6 +132,7 @@ def main():
     parser.add_argument('--every', type=float, default=.25, help='seconds between sampled frames')
     parser.add_argument('--no-eval', action='store_true')
     parser.add_argument('--hud-frame', type=Path); parser.add_argument('--hud-slot', type=int, default=0)
+    parser.add_argument('--labels', type=Path, help='debug/sable_frames: frames labelled in the tool (Sable / not Sable boxes)')
     args = parser.parse_args(); rng = np.random.default_rng(31)
     if args.hud_frame:
         from src.core.match_reader import Geometry, fit_hud, load_layout, with_hud_fit
@@ -148,6 +149,16 @@ def main():
     for kind, path in sources:
         positives[path] = collect(path, kind, detector, args.every); print(f'{kind:<8} {path.name}: {len(positives[path])} Sable figures')
     negatives = []
+    if args.labels:
+        from src.core.sable_frames import labelled
+        frames = labelled(args.labels); found = 0
+        for index, (jpg, record) in enumerate(frames):
+            image = cv2.imread(str(jpg))
+            for entry, label in zip(record['boxes'], record['labels']):
+                if label not in ('sable', 'not_sable'): continue
+                item = (float(index * BLOCK), sd.part_crops(image, entry["box"]))   # even frames build, odd frames test
+                (positives.setdefault(Path(f'labelled_{jpg.parent.name}'), []) if label == 'sable' else negatives).append(item); found += 1
+        print(f'labelled {args.labels}: {len(frames)} frames, {found} boxes ({sum(len(v) for k, v in positives.items() if k.name.startswith("labelled"))} Sable)')
     for path in args.negative:
         found = collect(path, 'negative', detector, args.every); negatives += found; print(f'negative {path.name}: {len(found)} people')
     threshold = None

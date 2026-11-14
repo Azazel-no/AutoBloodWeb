@@ -17,6 +17,11 @@
 - **Sable Detector:** Sable's HUD portraits (normal, Obsession, killer view) are included, so the detector switches on only in matches with Sable.
 - **Teammate perks:** every Tab press that is ignored is written to the overlay log with its reason, to find why perks were not read in a match against The Nightmare.
 
+- **Prestige rewards no longer hidden by the app window.** Right after a prestige the window grew back over the bottom-right OK of the "... UNLOCKED" reward screen, so the reward could not be seen and the run paused. The window now stays compact until an ordinary level 1–49 is read again.
+- **Chase meme: no more false starts.** Animated horns start a chase only when the red heart on your back is also seen within 2 s; a bright, moving background behind the portrait no longer counts.
+- **Sable Detector:** optional collection of training frames from real matches (off by default) and a labelling tool.
+- **NVIDIA recording:** the teammate-perks and Decisive Strike overlays now cover only the left half of the game and no overlay window is the size of the whole screen, which NVIDIA could take for a fullscreen non-game application.
+
 ## 1.0.1 — 2026-11-11
 
 Hotfix.

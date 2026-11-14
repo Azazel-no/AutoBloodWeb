@@ -351,3 +351,49 @@ def test_gate_stays_closed_in_every_other_sample_match():
             gate.feed(portraits, role); assert not gate.feed(portraits, role), (path, gate.best)
         checked += 1
     assert checked >= 20
+
+
+# --- J3 (14.11): training-frame collection and labelling ---------------------------------------------
+def test_collector_saves_positives_often_negatives_rarely_and_stays_capped(tmp_path, monkeypatch):
+    import json
+    from src.core import sable_frames as sf
+    clock = [0.]; stamps = iter(range(10 ** 6))
+    from datetime import datetime, timedelta
+    c = sf.FrameCollector(tmp_path, clock=lambda: clock[0], now=lambda: datetime(2026, 11, 14) + timedelta(milliseconds=next(stamps)))
+    image = np.full((1080, 1920, 3), 90, np.uint8); people = [((800, 300, 120, 360), .7)]
+    saved = []
+    for i in range(100):                                  # 10 s at 0.1 s
+        clock[0] = i * .1
+        saved += [c.offer(image, people, True)] + [c.offer(image, people, False)]
+    pos = [p for p in saved if p and p.name.startswith('pos')]; neg = [p for p in saved if p and p.name.startswith('neg')]
+    assert 12 <= len(pos) <= 14 and 1 <= len(neg) <= 2
+    record = json.loads(pos[0].with_suffix('.json').read_text(encoding='utf-8'))
+    assert record['boxes'][0]['box'] == [400, 150, 60, 180] and record['size'] == [960, 540] and record['labels'] is None
+    monkeypatch.setattr(sf, 'MAX_FILES', 5); c.prune()
+    assert len(list((tmp_path / 'debug/sable_frames').glob('*/*.jpg'))) == 5 and len(list((tmp_path / 'debug/sable_frames').glob('*/*.json'))) == 5
+
+
+def test_collection_is_off_by_default():
+    from src.core.memes import clean_settings, default_settings
+    assert default_settings()['sable']['collect'] is False and clean_settings({})['sable']['collect'] is False
+    assert clean_settings(dict(sable=dict(collect=True)))['sable']['collect'] is True
+
+
+def test_labeller_writes_labels_and_drawn_boxes(tmp_path):
+    import json
+    from PySide6.QtCore import Qt
+    from PySide6.QtWidgets import QApplication
+    from src.core.sable_frames import labelled
+    from src.gui.sable_labeler import LabelerDialog
+    app = QApplication.instance() or QApplication([])
+    folder = tmp_path / '2026-11-14'; folder.mkdir()
+    for name in ('pos_1', 'neg_2'):
+        cv2.imwrite(str(folder / f'{name}.jpg'), np.full((540, 960, 3), 80, np.uint8))
+        (folder / f'{name}.json').write_text(json.dumps(dict(sable_in_match=name.startswith('pos'), boxes=[dict(box=[10, 10, 50, 150]), dict(box=[300, 40, 40, 120])], labels=None)), encoding='utf-8')
+    d = LabelerDialog(tmp_path)
+    d.key(Qt.Key_S); d.key(Qt.Key_N)                              # first box Sable, second not
+    from src.gui.sable_labeler import add_box
+    add_box(d.record, (500, 100, 40, 130)); d.store()           # a box the detector missed
+    d.key(Qt.Key_Right); d.key(Qt.Key_A)                          # the next frame: everything 'not Sable'
+    labels = {p.stem: r['labels'] for p, r in labelled(tmp_path)}
+    assert sorted(labels) == ['neg_2', 'pos_1'] and sorted(labels.values()) == [['not_sable', 'not_sable'], ['sable', 'not_sable', 'sable']]

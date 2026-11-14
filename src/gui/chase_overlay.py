@@ -228,9 +228,10 @@ class ChaseController(QObject):
         if watch.hud_visible and now >= self.next_horn:
             self.next_horn = now + HORN_EVERY; x, y, w, h = cm.horn_rect(watch.layout, client.width, client.height)
             region, _ = self.backend.grab(Rect(client.x + x, client.y + y, w, h)); event = self.detector.horns(self.horns.read(region), now)
-        if event is None and self.detector.state == cm.CHASE and now >= self.next_heart:
+        if event is None and (watch.hud_visible or self.detector.state == cm.CHASE) and now >= self.next_heart:   # also before a chase: it confirms the start (J1)
             self.next_heart = now + HEART_EVERY; x, y, w, h = cm.heart_rect(client.width, client.height)
-            region, _ = self.backend.grab(Rect(client.x + x, client.y + y, w, h)); event = self.detector.heart(cm.heart_seen(region, client.height), now)
+            region, _ = self.backend.grab(Rect(client.x + x, client.y + y, w, h)); area = cm.heart_area(region)
+            event = self.detector.heart(area >= cm.HEART_MIN * (client.height / cm.HEART_REFERENCE) ** 2, now, area)
         if event is None and self.detector.state == cm.CHASE and watch.hud_visible and now >= self.next_down:
             self.next_down = now + DOWN_EVERY; state = self.down.feed(self.own_status(client))
             if state: event = self.detector.stop(now, f'own portrait shows {state}')

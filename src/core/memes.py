@@ -14,7 +14,7 @@ SABLE_RANGES = (('photo_size', 10, 40, 22), ('threshold', 60, 99, 90))   # thres
 def default_settings():
     return dict(volume=60, muted=False, mute_key=DEFAULT_MUTE_KEY, section='randomizer',
                 chase=dict(enabled=False, **{name: default for name, _, _, default in CHASE_RANGES}),
-                sable=dict(enabled=False, **{name: default for name, _, _, default in SABLE_RANGES}))
+                sable=dict(enabled=False, collect=False, **{name: default for name, _, _, default in SABLE_RANGES}))
 
 
 def valid_mute_key(text):
@@ -40,6 +40,7 @@ def clean_settings(data):
     out['mute_key'] = valid_mute_key(data.get('mute_key')) or DEFAULT_MUTE_KEY
     if data.get('section') in SECTIONS: out['section'] = data['section']
     out['chase'] = _block(data.get('chase'), CHASE_RANGES); out['sable'] = _block(data.get('sable'), SABLE_RANGES)
+    out['sable']['collect'] = isinstance(data.get('sable'), dict) and data['sable'].get('collect') is True   # J3: training frames, off by default
     return out
 
 

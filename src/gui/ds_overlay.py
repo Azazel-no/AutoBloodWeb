@@ -41,7 +41,8 @@ class DsOverlay(PerkOverlay):
         self.layout_data=layout;self.client=client;self.shown=shown
         screen=QGuiApplication.screenAt(QPointF(client.x,client.y).toPoint()) or QGuiApplication.primaryScreen()
         self.ratio=r=screen.devicePixelRatio() if screen else 1.
-        self.setGeometry(round(client.x/r),round(client.y/r),round(client.width/r),round(client.height/r))
+        from src.gui.match_overlay import hud_overlay_rect
+        self.setGeometry(*hud_overlay_rect(client,r))   # J4: never the whole monitor
         if not self.isVisible():self.show()
         self.update()
 

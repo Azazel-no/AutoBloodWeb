@@ -39,7 +39,9 @@ class SableWindow(PerkOverlay):
 
     def present(self, client, polygon, ellipse, circle_on, photo, photo_rect):
         self.polygon, self.ellipse, self.circle_on, self.photo, self.photo_rect = polygon, ellipse, circle_on, photo, photo_rect
-        place(self, client, (0, 0, client.width, client.height)); self.ratio = client.width / max(1, self.width())
+        # J4: one row short of the whole client, so the window is never taken for a fullscreen application
+        # (NVIDIA recording switches itself off for those); the circle and the photo never reach the last row.
+        place(self, client, (0, 0, client.width, client.height - 2)); self.ratio = client.width / max(1, self.width())
 
     def paintEvent(self, event):
         p = QPainter(self); p.setRenderHint(QPainter.Antialiasing); p.setRenderHint(QPainter.SmoothPixmapTransform); r = self.ratio
@@ -66,6 +68,8 @@ class SableController(QObject):
         self.fetcher = fetcher or ModelFetcher(root, lambda path: self.model_ready.emit())
         self.polygon = None; self.photo = QImage(); self.photo_rect = None; self.enabled = False; self.preview_until = None
         self.next_poll = self.next_detect = 0.; self.worker = None; self.stop_worker = threading.Event(); self.want = threading.Event(); self.last_scores = ''
+        from src.core.sable_frames import FrameCollector
+        self.collector = FrameCollector(root, clock); self.next_negative = 0.
         self.timer = QTimer(self); self.timer.setInterval(TICK_IDLE); self.timer.timeout.connect(self.tick)
         self.detected.connect(self.on_result); self.model_ready.connect(self.load_model); hub.volume_changed.connect(self.apply_volume)
 
@@ -123,6 +127,9 @@ class SableController(QObject):
         people = [(tuple(round(v / scale) for v in box), confidence) for box, confidence in people]
         ignore = [self.photo_rect] if self.photo_rect else []
         hit, hits = sd.find_sable(image, people, self.library, self.settings['threshold'] / 100, self.watch.current_role(), ignore)
+        if self.settings.get('collect'):
+            try: self.collector.offer(image, people, True, hits, self.watch.current_role())
+            except OSError: log.exception('Sable Detector: a training frame could not be saved')
         self.detected.emit((hit, hits, now))
 
     def work(self):
@@ -202,13 +209,27 @@ class SableController(QObject):
             elif watch.hud_visible and not self.gate.open and self.gate.templates: self.read_gate()
             if was != (watch.in_match, self.gate.open): self.changed.emit()
         if not watch.game_hwnd or not self.game_foreground(): self.stop_alert('DBD is not in front'); return self.set_interval(TICK_IDLE)
-        if not (watch.in_match and self.gate.open and self.ready): self.stop_alert('no Sable in this match'); return self.set_interval(TICK_IDLE)
+        if not (watch.in_match and self.gate.open and self.ready):
+            self.stop_alert('no Sable in this match')
+            if self.settings.get('collect') and watch.in_match and watch.hud_visible and self.detector is not None and now >= self.next_negative:
+                self.next_negative = now + 6.; self.collect_negative()
+            return self.set_interval(TICK_IDLE)
         self.want.set()
         if not self.threaded and now >= self.next_detect: self.next_detect = now + DETECT_EVERY; self.detect_once()
         if self.alert.state == sd.ALERT:
             if self.alert.check(now) == 'hide': self.hide('Sable not seen for %.1f s' % sd.GONE_SECONDS)
             else: self.paint(now, self.alert.shown_at)
         self.set_interval(TICK_ALERT if self.alert.state == sd.ALERT else TICK_WATCH)
+
+    def collect_negative(self):
+        """A match without Sable: now and then a frame with its person boxes, as 'not Sable' training data."""
+        client = self.watch.client
+        image, _ = self.backend.grab(Rect(client.x, client.y, client.width, client.height))
+        scale = min(1., DETECT_WIDTH / image.shape[1])
+        people = self.detector.detect(image if scale == 1. else cv2.resize(image, None, fx=scale, fy=scale))
+        people = [(tuple(round(v / scale) for v in box), confidence) for box, confidence in people]
+        try: self.collector.offer(image, people, False, (), self.watch.current_role())
+        except OSError: log.exception('Sable Detector: a training frame could not be saved')
 
     def read_gate(self):
         client = self.watch.client

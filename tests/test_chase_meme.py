@@ -117,6 +117,7 @@ NONE = cm.HornSample()
 
 def test_chase_starts_on_animated_horns_and_stops_when_the_heart_is_gone_for_1_5_s():
     d = cm.ChaseDetector(); t = 10.
+    assert d.heart(True, t - .5, 900) is None                                   # the heart confirms the horns (J1)
     assert d.horns(MOVING, t) is None and d.horns(MOVING, t + .1) is None
     event = d.horns(MOVING, t + .2); assert event[0] == 'start' and 'animated horns' in event[1] and d.state == cm.CHASE
     for i in range(50):                                     # Horns fade, the heart keeps the chase alive.
@@ -135,13 +136,15 @@ def test_static_obsession_horns_never_start_a_chase_and_slow_changes_do_not_coun
     assert d.state == cm.IDLE
 
 
-def test_chase_without_a_heart_stops_when_the_horns_stop_and_says_so():
+def test_animated_horns_without_the_heart_never_start_a_chase():
+    """J1 (14.11): a brightness pulse on the portrait frame / a bright moving background looked like horns."""
     d = cm.ChaseDetector()
-    for i in range(3): event = d.horns(MOVING, i * .1)
-    assert event[0] == 'start'
-    assert d.horns(NONE, 1.0) is None
-    event = d.horns(NONE, 1.8); assert event[0] == 'stop' and 'never seen' in event[1]
-    assert d.stop(5., 'x') is None                           # Already idle.
+    for i in range(60): assert d.horns(MOVING, i * .1) is None
+    assert d.state == cm.IDLE and d.rejected > 0
+    assert d.heart(True, 10., 300) is None or d.state == cm.IDLE                 # a heart long after the horns: still nothing
+    for i in range(3): d.horns(MOVING, 20 + i * .1)
+    event = d.heart(True, 20.5, 900); assert event[0] == 'start' and 'heart 0.0 s ago (900 px)' in event[1]
+    assert d.stop(25., 'x')[0] == 'stop' and d.stop(26., 'x') is None
 
 
 def test_timer_text_and_glitch():
@@ -438,7 +441,7 @@ def test_my_portrait_going_down_ends_the_chase(chase, name, state, caplog):
     c = start_chase(chase.make(), chase); c.watch.in_match = True; c.watch.hud_visible = True; c.watch.hud_seen_at = 50.; c.watch.role = 'survivor'
     c.watch.poll = lambda: setattr(c.watch, 'hud_seen_at', chase.clock.now)
     c.detector.state = cm.CHASE; c.detector.started_at = 50.; c.detector.heart_at = 1e9; c.detector.heart_ever = True
-    c.detector.horns = lambda sample, now: None; c.detector.heart = lambda seen, now: None   # Only the portrait decides here.
+    c.detector.horns = lambda sample, now: None; c.detector.heart = lambda seen, now, area=0: None   # Only the portrait decides here.
     chase.backend.image = healthy
     for i in range(10):
         chase.clock.now = 51. + i * .35; c.step()
@@ -450,3 +453,20 @@ def test_my_portrait_going_down_ends_the_chase(chase, name, state, caplog):
             if not c.active: break
     assert not c.active and c.fading is not None
     assert any(f'own portrait shows {state}' in r.message for r in caplog.records if 'Chase meme STOP' in r.message)
+
+
+# --- J1 (14.11): false starts from a brightness pulse --------------------------------------------------
+FALSE_STARTS = ROOT / 'debug/match_samples/chase_2026-11-14'
+
+
+@pytest.mark.skipif(not FALSE_STARTS.is_dir(), reason='local samples')
+@pytest.mark.parametrize('name', ['false_chase_start_timer_running_01', 'false_chase_start_02'])
+def test_brightness_pulses_on_the_false_start_frames_never_start_a_chase(chase, name):
+    frame = cv2.imread(str(FALSE_STARTS / f'{name}.png'))
+    hud = (slice(380, 820), slice(0, 400))
+    c = chase.make(); c.enabled = True; c.watch.role_reader = lambda own, w, h, s: (True, 'survivor')
+    for i in range(30 * 8):                                      # 8 s of the portrait frame pulsing brighter and darker
+        pulse = frame.copy(); gain = 1. + .45 * np.sin(i / 3.)
+        pulse[hud] = np.clip(pulse[hud].astype(np.float32) * gain, 0, 255).astype(np.uint8)
+        chase.backend.image = pulse; chase.clock.now = 2000 + i / 30; c.step()
+    assert not c.active and not c.timer_window.shown

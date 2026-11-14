@@ -86,6 +86,19 @@ QToolButton { color: #d5c8c9; border: none; }
 '''
 
 
+def reward_layout_needed(result):
+    """Keep the compact window (bottom-right OK free) unless a confidently read ordinary level 1-49 is on screen.
+
+    Live 14.11 (The Mastermind, prestige 4 -> 5): the frames right after the prestige press read as an
+    unknown level, the window grew back over the OK button of the "CONTAMINATED JACKET UNLOCKED" reward,
+    the reward could not be seen (covered pixels are blanked) and the run paused with
+    purchase_result_unknown."""
+    from src.core.models import ScreenState
+    ordinary=(result.screen_state==ScreenState.BLOODWEB and type(result.level) is int and 1<=result.level<50
+              and (result.level_confidence or 0)>=.95)
+    return not ordinary
+
+
 class AnalysisWorker(QThread):
     completed=Signal(object)
     capture_checked=Signal(object)
@@ -1492,6 +1505,8 @@ class MainWindow(QMainWindow):
         if getattr(self,'_closing',False):return
         log.info('Automation state=%s reason=%s',state,message)
         if self.auto_worker:self.update_runtime_summary(self.auto_worker.engine)
+        if self.auto_worker and not self.auto_worker.engine.settings.dry_run and state in (State.PRESTIGE_ACTIVATION,State.PRESTIGE_ANIMATION,State.REWARD):
+            self.set_reward_layout(True)   # Free the bottom-right OK before the reward screen arrives.
         if getattr(self,'live_session',None) and self.auto_worker:
             self.live_session.status(self.auto_worker.engine,state.value,message)
         if message in ('direct_burst_fallback','direct_burst_ready'):
@@ -1529,8 +1544,7 @@ class MainWindow(QMainWindow):
             frame,result,plan=packet
             if self.auto_worker and not self.auto_worker.engine.settings.dry_run:
                 from src.core.models import ScreenState
-                self.set_reward_layout(result.screen_state in (ScreenState.REWARD,ScreenState.PRESTIGE_READY)
-                    or result.level==50)
+                self.set_reward_layout(reward_layout_needed(result))
             result.live_frame=frame
             detector=self.auto_worker.engine.detector
             result.renderer=detector; result.raw_image=frame.image

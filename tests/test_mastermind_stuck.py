@@ -202,3 +202,32 @@ def test_native_only_search_answers_a_glyphless_frame_fast_and_keeps_full_result
 def test_screen_manager_runs_a_full_search_every_few_native_misses():
     from src.core.screen_manager import NATIVE_MISSES
     assert 2 <= NATIVE_MISSES <= 6
+
+
+# --- J2 (14.11): prestige reward popup hidden behind the app window ------------------------------------
+REWARD = ROOT / 'debug/match_samples/bloodweb_2026-11-14/mastermind_reward_popup_ok_not_clicked.png'
+
+
+@pytest.mark.skipif(not REWARD.is_file(), reason='local sample')
+def test_unlocked_reward_is_recognised_while_the_compact_window_sits_beside_it():
+    from src.core.bloodweb_detector import BloodwebDetector
+    from src.core.icon_library import IconLibrary
+    from src.core.models import ScreenState
+    image = cv2.imread(str(REWARD)); detector = BloodwebDetector(IconLibrary(ROOT).build(), 'killer', character='mastermind'); detector.prepare()
+    compact = image.copy(); compact[round(1080 * .31):round(1080 * .79), 1310:] = 0       # the compact window: between title and OK
+    result = detector.analyze(compact)
+    assert result.screen_state == ScreenState.REWARD and result.ok_box is not None
+    expanded = image.copy(); expanded[160:1030, 1280:] = 0                                # the full window of the live pause
+    assert detector.analyze(expanded).ok_box is None                                     # this is what hid the OK button
+
+
+def test_the_window_stays_compact_until_an_ordinary_level_is_read():
+    from src.core.models import Analysis, ScreenState
+    from src.gui.main_window import reward_layout_needed
+    def scene(state, level, confidence=.98):
+        a = Analysis(400, 400, state); a.level = level; a.level_confidence = confidence; return a
+    assert reward_layout_needed(scene(ScreenState.REFRESH, None, 0))      # right after the prestige press
+    assert reward_layout_needed(scene(ScreenState.UNKNOWN, None, 0))
+    assert reward_layout_needed(scene(ScreenState.REWARD, None, 0)) and reward_layout_needed(scene(ScreenState.PRESTIGE_READY, 50))
+    assert reward_layout_needed(scene(ScreenState.BLOODWEB, 50)) and reward_layout_needed(scene(ScreenState.BLOODWEB, 12, .5))
+    assert not reward_layout_needed(scene(ScreenState.BLOODWEB, 12))

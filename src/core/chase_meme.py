@@ -37,6 +37,7 @@ HORN_MOVING = .15            # Share of the white shape that must change between
 START_WINDOW = 1.0           # seconds
 START_READS = 3              # animated reads inside the window
 STOP_SECONDS = 1.5
+HEART_CONFIRM = 2.0           # J1 (14.11): animated horns start a chase only with the heart seen within this many seconds
 HEART_ROI = (.30, .33, .40, .52)      # x, y, w, h as fractions of the client: wherever the camera puts the character's back
 HEART_MIN = 400              # px of the largest warm blob at 1080p (real hearts: 700+); scales with the height squared
 HEART_REFERENCE = 1080
@@ -119,18 +120,34 @@ class ChaseDetector:
 
     def reset(self):
         self.state = IDLE; self.started_at = None; self.moving = []; self.horns_at = None; self.heart_at = None; self.heart_ever = False
+        self.last_heart = None; self.last_heart_area = 0; self.last_sample = None
+        if not hasattr(self, 'rejected'): self.rejected = 0
 
     def horns(self, sample, now):
         self.moving = [t for t in self.moving if now - t <= START_WINDOW]
         if sample.moving:
-            self.moving.append(now); self.horns_at = now
+            self.moving.append(now); self.horns_at = now; self.last_sample = sample
         if self.state == IDLE and len(self.moving) >= START_READS:
-            self.state = CHASE; self.started_at = self.moving[0]; self.heart_ever = False
-            return 'start', f'animated horns on {len(self.moving)} reads in {START_WINDOW:.0f} s (left {sample.left} px, right {sample.right} px, change {sample.change:.0%})'
+            return self.try_start(now)
         return self.check(now)
 
-    def heart(self, seen, now):
-        if seen and self.state == CHASE: self.heart_at = now; self.heart_ever = True
+    def try_start(self, now):
+        """Animated horns alone are not a chase: a brightness pulse of the portrait frame or a bright,
+        moving background behind it looked the same (live 14.11, the timer ran with no chase). The red
+        heart on the character's back must be seen within HEART_CONFIRM seconds as well."""
+        if self.last_heart is None or abs(now - self.last_heart) > HEART_CONFIRM:
+            self.rejected += 1; return None
+        sample = self.last_sample or HornSample()
+        self.state = CHASE; self.started_at = self.moving[0]; self.heart_at = self.last_heart; self.heart_ever = True
+        return 'start', (f'animated horns on {len(self.moving)} reads in {START_WINDOW:.0f} s (left {sample.left} px, right {sample.right} px, '
+                         f'change {sample.change:.0%}) and the heart {now - self.last_heart:.1f} s ago ({self.last_heart_area} px)')
+
+    def heart(self, seen, now, area=0):
+        if seen:
+            self.last_heart = now; self.last_heart_area = area
+            if self.state == CHASE: self.heart_at = now; self.heart_ever = True
+        if self.state == IDLE and len(self.moving) >= START_READS and seen and now - self.moving[-1] <= HEART_CONFIRM:
+            return self.try_start(now)
         return self.check(now)
 
     def check(self, now):

@@ -33,3 +33,16 @@ def test_right_cluster_starts_after_the_nicknames_and_clears_the_portrait(app,he
 def test_right_timer_uses_the_same_column_rule():
     layout=load_layout(ROOT)
     assert right_centre_x(layout,30)-30>layout['hud']['right_x']
+
+
+def test_no_overlay_window_is_the_size_of_the_whole_game():
+    """J4 (14.11): NVIDIA recording turned itself off while a monitor-sized topmost overlay was up."""
+    from types import SimpleNamespace
+    from src.gui.match_overlay import hud_overlay_rect
+    for width, height, ratio in ((1920, 1080, 1.), (2560, 1440, 1.25), (3840, 2160, 1.5)):
+        client = SimpleNamespace(x=0, y=0, width=width, height=height)
+        x, y, w, h = hud_overlay_rect(client, ratio)
+        assert w * ratio <= width * .5 + 1 and h * ratio == pytest.approx(height, abs=1)
+    import inspect
+    from src.gui import sable_overlay
+    assert 'client.height - 2' in inspect.getsource(sable_overlay.SableWindow.present)
