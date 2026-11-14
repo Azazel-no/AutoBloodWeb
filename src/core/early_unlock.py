@@ -34,7 +34,7 @@ def center_level(engine,result):
     """Levels 1-9 always; above 9 once per level when nothing on it is a priority."""
     if type(result.level) is not int or result.level<1:return False
     if result.level<=9:return True
-    if not engine.settings.center_auto_above_9 or getattr(engine,'center_auto_unavailable',False):return False
+    if not engine.settings.center_auto_above_9 or getattr(engine,'center_auto_unavailable',None) in (True,result.level):return False
     # Re-evaluated on every read: once the last priority node is bought (or taken by the
     # Entity) the rest of the level goes to the game's own auto-purchase. Logged on change only.
     use=not has_priority_target(engine,result)
@@ -103,7 +103,14 @@ def purchase_level(engine,frame,result):
         deadline=time.monotonic()+min(15,engine.settings.refresh_timeout)
         clicked_at=time.monotonic();high=result.level>9;unchanged=0
         while time.monotonic()<deadline:
-            engine.gate();engine.poll();fresh,web,plan=engine.recover_read(deadline,retry_stale=True)
+            engine.gate();engine.poll()
+            try:fresh,web,plan=engine.recover_read(deadline,retry_stale=True)
+            except ScreenError as exc:
+                # Live 13.11 (The Mastermind, level 50): a slow read came back older than 2 s
+                # three times and aborted this wait before the "bought nothing" check below
+                # could run. Keep reading until the deadline instead; no input is sent here.
+                if exc.code!='stale_frame':raise
+                engine.trace('automatic_unlock_stale_read',paid_inputs=0);continue
             if (not fresh.live or fresh.probe_only or not fresh.window.foreground or
                     fresh.window.signature!=frame.window.signature):raise ScreenError('live_frame_required')
             if fresh.captured_at<=last_stamp:continue
@@ -140,6 +147,13 @@ def purchase_level(engine,frame,result):
             if web.screen_state!=ScreenState.BLOODWEB:continue
             if not high and any(n.state==NodeState.ABSORBED for n in web.nodes):raise ScreenError('automatic_unlock_entity')
             from src.core.purchase_outcome import physical_node
+            if not (type(web.level) is int and web.level==result.level and web.level_confidence>=.95):
+                # Live 14.11 (The Mastermind, level 35 -> 36): the next web was already drawn
+                # while its header was still unreadable; its fresh ring of buyable nodes was
+                # taken for "bought nodes buyable again" and the run paused. Only a confidently
+                # read same level can contradict; anything else is read again.
+                engine.trace('automatic_unlock_level_unread',level=web.level,confidence=round(float(web.level_confidence or 0),3),paid_inputs=0)
+                continue
             for original in result.nodes:
                 if original.state!=NodeState.PURCHASED and original.id not in confirmed:continue
                 found=physical_node(fresh,web,frame.to_screen(original.x,original.y),original.radius)
@@ -161,7 +175,11 @@ def purchase_level(engine,frame,result):
                 unchanged=unchanged+1 if still else 0
                 if unchanged>=2 and time.monotonic()-clicked_at>=UNAVAILABLE_SECONDS:
                     # Verified on fresh frames that the centre bought nothing: retire the click, buy node by node.
-                    engine.center_auto_unavailable=True
+                    # One silent press (live 13.11, level 50) is not proof that the game never
+                    # auto-buys: this level goes node by node, the next level tries the centre
+                    # again. Two levels in one run without effect switch it off for good.
+                    failed=getattr(engine,'center_failed_levels',set())|{result.level};engine.center_failed_levels=failed
+                    engine.center_auto_unavailable=True if len(failed)>=2 else result.level
                     engine.pending_action=False;reference['pending']=None;engine.scene_record=reference
                     if point in engine.attempted:engine.attempted.remove(point)
                     reference['attempted']=[list(p) for p in engine.attempted]

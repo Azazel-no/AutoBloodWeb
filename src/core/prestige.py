@@ -68,6 +68,31 @@ def native_ready_center(image,root,hint=None):
     return None
 
 
+def ready_center(image,root):
+    """The prestige emblem on a level-50 screen, hovered (native wreath) or not (video wreath).
+
+    The emblem carries the next prestige number. Live check 14.11: with two digits
+    (P10-P99) or P100 the not-hovered emblem no longer matched the central-glyph
+    templates well enough, the centre search settled on another spot and the
+    prestige screen went unrecognised. Here the wreath itself is found first."""
+    native=native_ready_center(image,root)
+    if native:return native
+    from src.core.bloodweb_header import read_level
+    level,confidence=read_level(image,root)
+    if level!=50 or confidence<.95:return None
+    h,w=image.shape[:2];s=h/1080
+    hsv=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
+    observed=((hsv[:,:,1]<100)&(hsv[:,:,2]>130)).astype(np.uint8)
+    count,labels,stats,centroids=cv2.connectedComponentsWithStats(observed)
+    points=[point for stat,point in zip(stats[1:],centroids[1:]) if
+        25*s<=stat[2]<=180*s and 25*s<=stat[3]<=180*s and stat[4]>=150*s*s
+        and point[0]<w*.64 and h*.14<point[1]<h*.91]
+    for x,y in sorted(points,key=lambda p:abs(p[0]-w*.356)+abs(p[1]-h*.52))[:12]:
+        found=video_ready_evidence(image,root,(round(x),round(y),round(40*s)))
+        if found:return found
+    return None
+
+
 def reviewed_price_region(root,record):
     """Load an explicitly reviewed native price crop; never infer one from HUD."""
     from src.core.chain_plan import PriceRegion

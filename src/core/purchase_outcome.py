@@ -4,6 +4,17 @@ from src.core.models import NodeState,ScreenState
 from src.core.geometry import purchasable
 
 
+# The detector gives every locked node the fixed confidence 0.78 (and absorbed 0.78, bought 0.93,
+# available 0.90). A 0.8 bar for 'still locked' could never be met: a missed click on a locked
+# node stayed unresolved for ever (live 13.11, The Mastermind level 49: pause, then Start refused).
+UNTAKEN_CONFIDENCE={'available':.8,'locked':.75}
+
+
+def untaken(node):
+    """The node is confidently still there and not bought: available or locked."""
+    return node is not None and node.state.value in UNTAKEN_CONFIDENCE and node.state_confidence>=UNTAKEN_CONFIDENCE[node.state.value]
+
+
 def physical_node(frame,result,point,radius):
     candidates=[n for n in result.nodes if n.state!=NodeState.CENTER and
                 math.dist(frame.to_screen(n.x,n.y),point)<max(8,radius*.4)]

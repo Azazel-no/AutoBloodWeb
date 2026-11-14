@@ -219,6 +219,10 @@ class MatchOverlayController(QObject):
         if self.own_matchers is None:self.own_matchers=load_matchers(self.root)
         return read_own(*crop_own(image,scale),{self.match_role:self.own_matchers[self.match_role]} if self.match_role else self.own_matchers,scale)
 
+    def tab_ignored(self,reason):
+        """Every ignored press is in the overlay log: a Freddy match (13.11) left no trace of why nothing was read."""
+        self.record('tab_ignored',reason=reason,phase=self.phase,role=self.match_role)
+
     def killer_match(self):
         return self.match_role=='killer' or (self.match_role is None and self.is_killer())
 
@@ -314,16 +318,17 @@ class MatchOverlayController(QObject):
     def handle_action(self,action):
         if self.mode=='off':return
         if self.automation_active():
-            if action in ('key_down','capture'):self.status.emit('overlay_blocked_automation')
+            if action in ('key_down','capture'):self.status.emit('overlay_blocked_automation');self.tab_ignored('automation')
             return
         if action=='key_down':self.overlay.hide()
         if action in ('key_down','capture'):
             # Locked for this match, or in the lobby: a Tab press does nothing, not even a capture.
-            if self.phase in ('locked','lobby'):return
-            if self.killer_match():return  # Killers can't see survivor perks on Tab.
-            if exclusive_fullscreen():return self.status.emit('overlay_exclusive_fullscreen')
+            if self.phase in ('locked','lobby'):return self.tab_ignored(self.phase)
+            if self.killer_match():return self.tab_ignored('killer_match')  # Killers can't see survivor perks on Tab.
+            if exclusive_fullscreen():self.tab_ignored('exclusive_fullscreen');return self.status.emit('overlay_exclusive_fullscreen')
             try:self.hud_before=self.grab()  # Taken as the key goes down, before Tab covers the HUD.
-            except ScreenError:return self.status.emit('overlay_game_not_focused')
+            except ScreenError:self.tab_ignored('game_not_focused');return self.status.emit('overlay_game_not_focused')
+            self.record('tab_pressed',phase=self.phase,role=self.match_role)
             self.followup.stop();self.session=None
             self.key_down_at=time.monotonic();self.wait_until=self.key_down_at+self.scoreboard_seconds;self.wait_frames=0
             self.last_scoreboard=None;self.scoreboard_wait.start()

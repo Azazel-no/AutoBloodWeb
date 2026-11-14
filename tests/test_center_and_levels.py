@@ -101,7 +101,10 @@ def test_when_the_game_does_not_auto_buy_above_level_9_it_buys_node_by_node(monk
     assert center_mode(engine, level)
     fresh, web_after, plan = purchase_level(engine, frame, level)
     assert len(device.presses) == 1 and engine.center_auto_unavailable and not engine.pending_action
-    assert not center_mode(engine, wide_web(level=21))  # From now on: node by node.
+    assert not center_mode(engine, wide_web(level=20))  # This level: node by node.
+    assert center_mode(engine, wide_web(level=21))  # One silent press is not proof: the next level tries again.
+    engine.center_failed_levels = {20, 21}; engine.center_auto_unavailable = True
+    assert not center_mode(engine, wide_web(level=22))  # Two levels without effect: off for the run.
     assert [e for e in engine.report.entries if e['stage'] == 'center_auto_unavailable']
 
 

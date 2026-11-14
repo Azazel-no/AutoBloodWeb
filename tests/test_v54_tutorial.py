@@ -208,8 +208,15 @@ def test_saved_automatic_scene_requires_two_strict_next_level_proofs(monkeypatch
         assert not r.recheck_saved_scene(frame,scene) and r.persisted_scene;return
     later=replace(frame,captured_at=frame.captured_at+.1)
     if negative:
-        with pytest.raises(ScreenError):r.recheck_saved_scene(later,scene)
-        assert r.persisted_scene and r.attempted and r.actions==0
+        # 14.11: an unprovable click is no longer an immediate pause; it is watched read-only, then retired with no credit.
+        assert r.recheck_saved_scene(later,scene) is False and r.persisted_scene and r.attempted and r.actions==0
+        from src.core.automation import UNRESOLVED_RETIRE_SECONDS
+        settled=None
+        for step in range(1,12):
+            settled=r.recheck_saved_scene(replace(frame,captured_at=frame.captured_at+.1+step*.5),scene)
+            if settled:break
+        assert settled and r.persisted_scene is None and r.actions==0 and not d.presses
+        assert [e for e in r.report.entries if e.get('stage')=='unresolved_click_retired'][0]['purchase_credit']==0
     else:
         assert r.recheck_saved_scene(later,scene) and not r.attempted and r.persisted_scene is None
         assert r.actions==0 and r.unconfirmed_level_actions==1 and not d.presses

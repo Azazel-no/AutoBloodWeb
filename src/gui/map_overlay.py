@@ -14,7 +14,7 @@ from PySide6.QtGui import QGuiApplication, QImage, QPainter
 from PySide6.QtWidgets import QComboBox, QGridLayout, QLabel, QSlider, QVBoxLayout, QWidget
 
 from src.core.map_images import CREDIT, Fetcher, cached
-from src.core.map_names import DEFAULT_KEY, MapMatcher, clean_settings, default_settings, load_maps, ocr_lines  # noqa: F401
+from src.core.map_names import DEFAULT_KEY, MapMatcher, clean_settings, default_settings, load_maps, load_realms, ocr_lines  # noqa: F401
 from src.core.match_reader import is_lobby, load_layout
 from src.core.screen_manager import Rect, ScreenError, WindowsBackend
 from src.gui.match_overlay import KeyWatcher, PerkOverlay, foreground_handle, key_code
@@ -86,7 +86,7 @@ class MapController(QObject):
         super().__init__()
         self.root = root; self.settings = settings; self.automation_active = automation_active
         self.backend = backend or WindowsBackend(); self.window = window or MapWindow(root); self.clock = clock
-        maps, base, _ = load_maps(root); self.matcher = MapMatcher(maps)
+        maps, base, _ = load_maps(root); self.matcher = MapMatcher(maps, load_realms(root))
         self.fetcher = Fetcher(root, base, lambda m, path: self.image_ready.emit())
         self.layout = load_layout(root); self.ocr = ocr; self.in_match_check = in_match; self.key_reader = key_reader
         self.detected = None; self.manual = None; self.matched = False; self.match_seen_at = None

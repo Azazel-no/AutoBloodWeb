@@ -279,9 +279,13 @@ def scoreboard_signature(image,layout):
     return tuple(tile_kind(crop(image,*g.tab(x,y),half)) for y in t['rows_y'] for x in t['perk_x'])
 
 
-def save_unknown_tile(matcher,tile,result):
-    """The unrecognised tile only (never a nickname) and its top candidates, once per image."""
+LOW_MARGIN=.05   # H3 (14.11): an accepted perk this close to the runner-up is saved for review
+
+
+def save_unknown_tile(matcher,tile,result,accepted=False):
+    """The unrecognised (or barely recognised) tile only, never a nickname, and its scores, once per image."""
     folder=getattr(matcher,'unknown_dir',None)
+    if folder is not None and accepted:folder=Path(folder)/'close_calls'
     if folder is None:return
     import hashlib,json
     from pathlib import Path
@@ -291,7 +295,7 @@ def save_unknown_tile(matcher,tile,result):
         if path.exists():return
         folder.mkdir(parents=True,exist_ok=True);write_image(path,tile)
         path.with_suffix('.json').write_text(json.dumps(dict(reason=result.reason,score=result.score,margin=result.margin,
-            candidates=result.candidates),ensure_ascii=False),encoding='utf-8')
+            candidates=result.candidates,accepted_as=list(result.names) if accepted else None),ensure_ascii=False),encoding='utf-8')
     except (OSError,ValueError,TypeError):pass  # A diagnostic file must never disturb the overlay.
 
 
@@ -312,6 +316,8 @@ def read_tab(image,matcher,layout):
                 result=matcher.identify(candidate) if candidate is not None else None
                 if result is not None and result.icon_id:break
             if result is not None and not result.icon_id and tile is not None:save_unknown_tile(matcher,tile,result)
+            elif result is not None and result.icon_id and result.margin<LOW_MARGIN and tile is not None:
+                save_unknown_tile(matcher,tile,result,accepted=True)   # A close call: kept with its scores to find look-alikes.
             slots.append(result or SlotResult(None,None,(),0.,0.,'outside_frame'))
         px,py=g.tab(t['portrait_x'],y+t['portrait_dy'])
         rows.append(TabRow(index,index==own_index,tuple(slots),tuple(tiles),portrait_feature(image,(px,py),g.size(t['portrait_radius']))))

@@ -77,9 +77,26 @@ def load_maps(root):
     return tuple(maps), data['images_base'], tuple(realm['key'] for realm in data['realms'])
 
 
+@functools.lru_cache(maxsize=2)
+def load_realms(root):
+    """{realm key: (its names in every language)}."""
+    data = json.loads((Path(root) / 'assets/maps/map_names.json').read_text(encoding='utf-8'))
+    return {realm['key']: tuple(dict.fromkeys([realm['key'], *realm.get('names', {}).values()])) for realm in data['realms']}
+
+
+SEPARATORS = re.compile(r'\s+[-–—:]+\s+|\s*[–—]\s*')
+MIN_PREFIX = 5   # folded letters of a cut-off map name after its realm
+
+
 class MapMatcher:
-    def __init__(self, maps):
+    def __init__(self, maps, realms=None):
         self.maps = maps; self.names = []   # (folded name, map)
+        self.realms = {}                     # folded realm name -> realm key
+        for key, names in (realms or {}).items():
+            for name in names:
+                folded = fold(name)
+                for variant in {folded, folded[4:] if folded.startswith('the ') else folded}:
+                    self.realms[variant] = key; self.realms[variant.translate(CYRILLIC_LOOKALIKES)] = key
         for m in maps:
             for folded in {fold(name) for _, name in m.names} | {fold(m.key)}:
                 self.names.append((folded, m)); self.names.append((folded.translate(CYRILLIC_LOOKALIKES), m))
@@ -104,10 +121,51 @@ class MapMatcher:
         if len(ranked) > 1 and ranked[1][0] <= ranked[0][0]: return None   # Two maps equally close.
         return Match(ranked[0][1], ranked[0][0], text)
 
+    def realm_of(self, text):
+        """Realm key for a realm name read with at most one OCR slip per eight letters, else None."""
+        raw = fold(text)
+        if len(raw) < 4 or not self.realms: return None
+        best = sorted((levenshtein(c, name), key) for name, key in self.realms.items() for c in {raw, raw.translate(CYRILLIC_LOOKALIKES)}
+                      if abs(len(c) - len(name)) <= max(1, len(name) // 8))
+        if not best or best[0][0] > max(1, len(raw) // 8): return None
+        if len({key for d, key in best if d == best[0][0]}) > 1: return None
+        return best[0][1]
+
+    def match_realm_prefix(self, text):
+        """'YAMAOKA ESTATE - FAMILY RE': a confidently read realm, then the start of exactly one of its maps.
+
+        Live 12.11: the long Yamaoka line came out cut at 'FAMILY RE' and no map was shown."""
+        parts = [part for part in SEPARATORS.split(str(text)) if part.strip()]
+        if len(parts) < 2: return None
+        realm = self.realm_of(parts[0])
+        if realm is None: return None
+        rest = fold(' '.join(parts[1:]))
+        if len(rest.replace(' ', '')) < MIN_PREFIX: return None
+        hits = {}
+        for name, m in self.names:
+            if m.realm != realm: continue
+            for c in {rest, rest.translate(CYRILLIC_LOOKALIKES)}:
+                if len(name) < len(c): continue
+                d = levenshtein(c, name[:len(c)])
+                if d <= len(c) // 8 and (m.key not in hits or d < hits[m.key][0]): hits[m.key] = (d, m)
+        ranked = sorted(hits.values(), key=lambda pair: pair[0])
+        if not ranked or (len(ranked) > 1 and ranked[1][0] - ranked[0][0] < 2): return None   # 'Ala este' vs 'Ala oeste': two edits apart is enough.
+        d, m = ranked[0]
+        return Match(m, d, text)
+
     def match_lines(self, lines):
         """Single lines first, then two or three joined lines (long names wrap on the loading screen)."""
         lines = [l for l in (str(x).strip() for x in lines) if l]
         found = []
+        for line in lines:   # 'Realm - Map' on one line: each part on its own, then a cut-off map name.
+            parts = [part for part in SEPARATORS.split(line) if part.strip()]
+            if len(parts) > 1:
+                found += [hit for part in parts if (hit := self.match_text(part))]
+                if not found and (hit := self.match_realm_prefix(line)): found.append(hit)
+        if found:
+            found.sort(key=lambda h: h.distance)
+            if len({h.map.key for h in found if h.distance == found[0].distance}) > 1: return None
+            return found[0]
         for size in (1, 2, 3):
             for i in range(len(lines) - size + 1):
                 hit = self.match_text(' '.join(lines[i:i + size]))

@@ -188,10 +188,10 @@ class NavButton(Hover,QPushButton):
         elif self.kind=='match':
             for dx,dy in ((0,-7),(-7,0),(7,0),(0,7)):
                 p.drawPolygon(QPolygonF([QPointF(24+dx,24+dy-5.5),QPointF(24+dx+5.5,24+dy),QPointF(24+dx,24+dy+5.5),QPointF(24+dx-5.5,24+dy)]))
-        elif self.kind=='randomizer':
-            p.drawRoundedRect(QRectF(14,14,20,20),4,4);p.setBrush(p.pen().color())
-            for x,y in ((19,19),(29,19),(24,24),(19,29),(29,29)):p.drawEllipse(QPointF(x,y),1.6,1.6)
-            p.setBrush(Qt.NoBrush)
+        elif self.kind=='memes':  # Laughing face: ring, two squinting eyes and an open grin.
+            p.drawEllipse(c,12,12)
+            for x in (19.5,28.5):p.drawArc(QRectF(x-3,18,6,6),20*16,140*16)
+            p.drawChord(QRectF(17,19,14,14),200*16,140*16)
         elif self.kind=='crosshair':
             p.drawEllipse(c,9,9)
             for a,b in (((24,11),(24,19)),((24,29),(24,37)),((11,24),(19,24)),((29,24),(37,24))):p.drawLine(QPointF(*a),QPointF(*b))

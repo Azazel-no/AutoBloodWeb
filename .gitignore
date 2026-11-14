@@ -23,6 +23,7 @@ data/action_outcomes.lock
 data/review_annotations.json
 data/match_overlay_own_name.png
 data/map_cache/
+data/models/
 
 # --- Match samples (other players' nicknames), design references, saved web pages ---
 debug/match_samples/
@@ -69,6 +70,16 @@ assets/app_icon_original.ico
 !/scripts/inspect_preview_v52.py
 !/scripts/live_optimize_v55.py
 !/scripts/replay_production_v53.py
+!/scripts/build_meme_pack.py
+!/scripts/build_sable_library.py
+
+# --- Meme media: third-party voice, likeness, music and images; lives only in the user's meme pack folder ---
+assets/mamba/
+meme_pack/
+/assets/**/*.mp3
+/assets/**/*.mp4
+/assets/**/*.webm
+/assets/**/*.wav
 
 # --- Editors / OS ---
 .vscode/

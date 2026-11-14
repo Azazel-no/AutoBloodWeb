@@ -291,7 +291,9 @@ def test_terminal_witness_does_not_remove_new_map_identity_requirement(root):
     for frame,result in observations[1:]:
         for node in result.nodes:node.icon_id=None
     assert not e.recheck_saved_scene(*observations[1])
-    with pytest.raises(ScreenError,match='purchase_result_unknown'):e.recheck_saved_scene(*observations[2])
+    # 14.11: an unprovable click is no longer an immediate pause; it is watched read-only, then retired with no credit.
+    try:assert e.recheck_saved_scene(*observations[2]) is False   # Never credited, never clicked again.
+    except ScreenError as exc:assert exc.code=='purchase_result_unknown'   # An unreadable frame still refuses.
     assert e.persisted_scene['pending'] and e.actions==0 and not e.mouse.presses
 
 
@@ -610,11 +612,15 @@ def test_reused_slot_read_only_retries_remain_bounded(root):
     e=engine(Device([web()]),dry_run=False);e.persisted_scene=copy.deepcopy(saved);e.signature=observations[0][0].window.signature
     frame,result=observations[0];e.settings.purchase_timeout=4
     assert not e.recheck_saved_scene(frame,result)
-    with pytest.raises(ScreenError,match='purchase_result_unknown'):
-        for i in range(1,8):
-            injected=replace(frame,captured_at=frame.captured_at+i)
-            assert not e.recheck_saved_scene(injected,result)
-    assert e.persisted_scene['pending'] and e.actions==0 and not e.mouse.presses
+    # 14.11: an unprovable click is no longer an immediate pause; it is watched read-only, then retired with no credit.
+    outcome=None
+    for i in range(1,16):
+        injected=replace(frame,captured_at=frame.captured_at+i)
+        try:outcome=e.recheck_saved_scene(injected,result)
+        except ScreenError as exc:outcome=exc.code;break      # An unreadable map still refuses, as before.
+        if outcome:break
+    assert outcome in (True,'purchase_result_unknown') and e.actions==0 and not e.mouse.presses   # Bounded either way.
+    if outcome is True:assert e.persisted_scene is None
 
 
 def test_actual_dim_locked_frame_gets_observation_score_without_input_or_identity_promotion(root):

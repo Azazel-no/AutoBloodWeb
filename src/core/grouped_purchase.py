@@ -7,7 +7,7 @@ from src.core.scene_memory import record_scene
 from src.core.action_outcomes import operation_id
 from src.core.fast_opening import OpeningFallback
 from src.core.screen_manager import ScreenError
-from src.core.purchase_outcome import physical_node
+from src.core.purchase_outcome import physical_node,untaken
 
 
 def candidates(engine,frame,result,validate):
@@ -172,7 +172,7 @@ def execute_group(engine,frame,result,targets,reserve,prepared=None):
                 node=physical_node(f,r,point,original.radius)
                 observed.append(dict(point=point,state=node.state.value if node else 'missing',
                     confidence=node.state_confidence if node else None,icon=node.icon_id if node else None))
-                missed=(node is not None and node.state in (NodeState.AVAILABLE,NodeState.LOCKED) and node.state_confidence>=.8
+                missed=(untaken(node)
                     and node.geometry_confidence>=.7 and (node.state==NodeState.LOCKED or purchasable(node,r.nodes,r.edges))
                     and f.captured_at-engine.scene_record['pending']['batch']['inputs_completed_at']>=1.5)
                 if (node is None or (original.icon_id and node.icon_id and original.icon_id!=node.icon_id)

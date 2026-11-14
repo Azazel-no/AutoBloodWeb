@@ -420,6 +420,8 @@ class MainWindow(QMainWindow):
         self.logs_button.hide()
         self.buttons['start'].primary=True
         self.menuBar().hide()
+        from src.gui.memes_page import MemeHub
+        self.meme_hub=MemeHub(self.prefs.settings['memes'],self.save_preferences,None if preferences_path is None else self.preferences_path.parent/'meme_pack')
         self.build_navigation()
         self.session_button.hide()
         for button in (self.scan_button,self.test_button):button.setFixedHeight(34);button.setMinimumHeight(34);button.setStyleSheet('font-size: 14px;')
@@ -436,6 +438,8 @@ class MainWindow(QMainWindow):
         self.apply_crosshair(self.prefs.settings['crosshair']['enabled'])
         self.apply_onevone(self.prefs.settings['onevone']['enabled'])
         self.apply_map_overlay(self.prefs.settings['map_overlay']['enabled'])
+        self.apply_chase(self.prefs.settings['memes']['chase']['enabled'])
+        self.apply_sable(self.prefs.settings['memes']['sable']['enabled'])
         from PySide6.QtCore import QTimer
         QTimer.singleShot(0,self.refresh_autostart_action)
 
@@ -443,7 +447,7 @@ class MainWindow(QMainWindow):
         """Sidebar: the top action panel stays; pages replace only the area below it."""
         self.nav_group=QButtonGroup(self);self.nav_group.setExclusive(True);self.nav_buttons={}
         column=QVBoxLayout(self.sidebar);column.setContentsMargins(10,16,10,16);column.setSpacing(10)
-        for index,kind in ((0,'bloodweb'),(2,'randomizer'),(3,'crosshair'),(4,'onevone'),(5,'maps'),(1,'settings')):  # Page index in the stack.
+        for index,kind in ((0,'bloodweb'),(3,'crosshair'),(4,'onevone'),(5,'maps'),(2,'memes'),(1,'settings')):  # Page index in the stack.
             button=NavButton(kind);self.nav_group.addButton(button,index);column.addWidget(button);self.nav_buttons[kind]=button
         column.addStretch()
         self.nav_buttons['log']=NavButton('log');self.nav_buttons['log'].setCheckable(False)
@@ -485,7 +489,7 @@ class MainWindow(QMainWindow):
         self.support_box.hide();inner.addWidget(self.support_box)
         layout.addWidget(card);layout.addStretch()
 
-        self.randomizer_host=QWidget();QVBoxLayout(self.randomizer_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.randomizer_host);self.randomizer_page=None
+        self.memes_host=QWidget();QVBoxLayout(self.memes_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.memes_host);self.memes_page=None;self.randomizer_page=None
         self.crosshair_host=QWidget();QVBoxLayout(self.crosshair_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.crosshair_host);self.crosshair_page=None
         self.onevone_host=QWidget();QVBoxLayout(self.onevone_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.onevone_host);self.onevone_page=None
         self.map_host=QWidget();QVBoxLayout(self.map_host).setContentsMargins(0,0,0,0);self.pages.addWidget(self.map_host);self.map_page=None
@@ -502,13 +506,18 @@ class MainWindow(QMainWindow):
         QDesktopServices.openUrl(QUrl(ISSUES_URL));QDesktopServices.openUrl(QUrl.fromLocalFile(str(folder)))
 
     def open_page(self,index):
-        """Randomizer and Crosshair are built on first use and get the whole height of the window."""
-        if index==2 and self.randomizer_page is None:
+        """Memes (with the Randomizer), Crosshair, 1v1 and Map are built on first use and get the whole height of the window."""
+        if index==2 and self.memes_page is None:
             from src.core.randomizer import Pool
             from src.gui.randomizer_page import RandomizerPage
             pool=Pool(self.root,self.library,lambda c:self.locale.text('character_'+c))
             self.randomizer_page=RandomizerPage(self.root,pool,self.prefs.settings['randomizer'],self.save_preferences,self.locale.text)
-            self.randomizer_host.layout().addWidget(self.randomizer_page)
+            from src.gui.memes_page import MemesPage
+            self.memes_page=MemesPage(self.meme_hub,self.locale.text,self.randomizer_page)
+            self.memes_page.chase.enabled_changed.connect(self.apply_chase);self.memes_page.chase.preview.connect(lambda:self.chase_meme(True).preview())
+            self.memes_page.sable.enabled_changed.connect(self.apply_sable);self.memes_page.sable.preview.connect(lambda:self.sable_detector(True).preview())
+            self.memes_host.layout().addWidget(self.memes_page);self.chase_state();self.sable_state()
+        if index==2:self.meme_hub.reload()  # Files added while the app runs show up on the next visit.
         if index==3 and self.crosshair_page is None:
             from src.gui.crosshair_overlay import CrosshairPage
             self.crosshair_page=CrosshairPage(self.prefs.settings['crosshair'],self.save_preferences,self.locale.text)
@@ -559,6 +568,43 @@ class MainWindow(QMainWindow):
             controller.changed.connect(self.map_state)
         if controller:(controller.enable if enabled else controller.disable)()
         self.map_state()
+
+    def chase_meme(self,create=False):
+        controller=getattr(self,'chase_controller',None)
+        if controller is None and create:
+            from src.gui.chase_overlay import ChaseController
+            controller=self.chase_controller=ChaseController(self.root,self.prefs.settings['memes']['chase'],self.meme_hub,lambda:self.current_role=='killer',lambda:bool(self.auto_worker))
+            controller.changed.connect(self.chase_state)
+        return controller
+
+    def apply_chase(self,enabled):
+        controller=self.chase_meme(create=enabled)
+        if controller:(controller.enable if enabled else controller.disable)()
+        self.chase_state()
+
+    def chase_state(self):
+        if not self.memes_page:return
+        controller=self.chase_meme()
+        if controller and (controller.enabled or controller.active):key,values=controller.state();self.memes_page.chase.state.setText(self.locale.text(key,**values))
+        else:self.memes_page.chase.state.setText(self.locale.text('meme_chase_off'))
+
+    def sable_detector(self,create=False):
+        controller=getattr(self,'sable_controller',None)
+        if controller is None and create:
+            from src.gui.sable_overlay import SableController
+            controller=self.sable_controller=SableController(self.root,self.prefs.settings['memes']['sable'],self.meme_hub,lambda:self.current_role=='killer',lambda:bool(self.auto_worker))
+            controller.changed.connect(self.sable_state)
+        return controller
+
+    def apply_sable(self,enabled):
+        controller=self.sable_detector(create=enabled)
+        if controller:(controller.enable if enabled else controller.disable)()
+        self.sable_state()
+
+    def sable_state(self):
+        if not self.memes_page:return
+        controller=self.sable_detector()
+        self.memes_page.sable.state.setText(self.locale.text(controller.state() if controller and controller.enabled else 'meme_sable_off'))
 
     def map_picked(self,key):
         controller=getattr(self,'map_controller',None)
@@ -1512,7 +1558,7 @@ class MainWindow(QMainWindow):
         worker=self.auto_worker; self.auto_worker=None
         if worker:
             self.save_purchase_scene(worker.engine)
-            if getattr(worker.engine,'center_auto_unavailable',False) and not self.prefs.settings.get('center_auto_unavailable'):
+            if getattr(worker.engine,'center_auto_unavailable',None) is True and not self.prefs.settings.get('center_auto_unavailable'):
                 # Verified in the game: the centre does not auto-buy above level 9. Remember it.
                 self.prefs.settings['center_auto_unavailable']=True;self.save_preferences()
             self.last_action_report=worker.engine.report
@@ -1565,9 +1611,11 @@ class MainWindow(QMainWindow):
             layout.addWidget(QLabel(self.locale.text('vs_key_'+action)));vs_fields[action]=QLineEdit(self.prefs.settings['onevone']['keys'][action]);layout.addWidget(vs_fields[action])
         from src.core.map_names import DEFAULT_KEY as MAP_DEFAULT
         layout.addWidget(QLabel(self.locale.text('map_key_prompt')));map_key=QLineEdit(self.prefs.settings['map_overlay']['key']);layout.addWidget(map_key)
+        from src.core.memes import DEFAULT_MUTE_KEY,valid_mute_key
+        layout.addWidget(QLabel(self.locale.text('meme_mute_key_prompt')));mute_key=QLineEdit(self.prefs.settings['memes']['mute_key']);layout.addWidget(mute_key)
         error=QLabel(); error.setWordWrap(True); layout.addWidget(error)
         reset=BloodButton(self.locale.text('reset_defaults')); layout.addWidget(reset)
-        reset.clicked.connect(lambda:[fields[k].setText(v) for k,v in DEFAULT_BINDINGS.items()]+[vs_fields[k].setText(v) for k,v in VS_DEFAULTS.items()]+[map_key.setText(MAP_DEFAULT)])
+        reset.clicked.connect(lambda:[fields[k].setText(v) for k,v in DEFAULT_BINDINGS.items()]+[vs_fields[k].setText(v) for k,v in VS_DEFAULTS.items()]+[map_key.setText(MAP_DEFAULT),mute_key.setText(DEFAULT_MUTE_KEY)])
         check=BloodButton(self.locale.text('hotkey_diagnostics')); layout.addWidget(check)
         check.clicked.connect(self.open_hotkey_diagnostics)
         apply=BloodButton(self.locale.text('apply')); layout.addWidget(apply)
@@ -1584,8 +1632,8 @@ class MainWindow(QMainWindow):
             vs_keys={}
             for action,field in vs_fields.items():
                 vs_keys[action]=valid_key(field.text())
-            map_value=valid_key(map_key.text())
-            if cross is None or details is None or map_value is None or None in vs_keys.values() or extra_keys_conflict(bindings,cross,details,list(vs_keys.values())+[map_value]):
+            map_value=valid_key(map_key.text());mute_value=valid_mute_key(mute_key.text())
+            if cross is None or details is None or map_value is None or mute_value is None or None in vs_keys.values() or extra_keys_conflict(bindings,cross,details,list(vs_keys.values())+[map_value,mute_value]):
                 error.setText(self.locale.text('hotkey_conflict'));return
             if vs_keys!=self.prefs.settings['onevone']['keys']:
                 self.prefs.settings['onevone']['keys']=vs_keys
@@ -1595,6 +1643,9 @@ class MainWindow(QMainWindow):
                 self.prefs.settings['map_overlay']['key']=map_value
                 if getattr(self,'map_controller',None):self.map_controller.restart_key()
                 if self.map_page:self.map_page.publish()
+            if mute_value!=self.prefs.settings['memes']['mute_key']:
+                self.prefs.settings['memes']['mute_key']=mute_value;self.meme_hub.restart_key()
+                if self.memes_page:self.memes_page.publish()
             if cross!=self.prefs.settings['crosshair']['key']:
                 self.prefs.settings['crosshair']['key']=cross
                 if getattr(self,'crosshair_controller',None):self.crosshair_controller.set_key(cross)
@@ -1650,6 +1701,9 @@ class MainWindow(QMainWindow):
         if getattr(self,'crosshair_controller',None):self.crosshair_controller.disable()
         if getattr(self,'onevone_controller',None):self.onevone_controller.disable()
         if getattr(self,'map_controller',None):self.map_controller.disable()
+        if getattr(self,'chase_controller',None):self.chase_controller.disable()
+        if getattr(self,'sable_controller',None):self.sable_controller.disable()
+        self.meme_hub.close()
         if getattr(self,'tray',None):self.tray.hide()
         if self.session_check:self.session_check.close()
         if self.auto_worker:

@@ -303,6 +303,9 @@ class WindowsBackend:
                 g.DeleteObject(bitmap); g.DeleteDC(memory); u.ReleaseDC(None,dc)
 
 
+NATIVE_MISSES=4   # native-only negative answers in a row before one full centre search
+
+
 class ScreenManager:
     def __init__(self, backend=None, detector=None, clock=time.monotonic):
         self.backend=backend or WindowsBackend(); self.detector=detector; self.clock=clock
@@ -413,7 +416,10 @@ class ScreenManager:
             if not valid_hint and automatic_hover():raise ScreenError('item_tooltip','automatic_unlock_hover_card')
             if valid_hint and any(r.intersects(Rect(client.x+hint[1][0]-hint[1][2],client.y+hint[1][1]-hint[1][2],hint[1][2]*2,hint[1][2]*2)) for r in occlusions):
                 raise ScreenError('bloodweb_occluded','central_anchor_covered')
-            started=time.perf_counter();center=find_center(visible,hint=hint[1] if valid_hint else None,local_only=bool(valid_hint),observed_level=(level,level_confidence))
+            # A live window whose glyph was found at its own scale: a frame without it (a level
+            # transition) is answered from the native scales only; every 4th miss runs the full search.
+            native_known=getattr(self,'_native_center',None)==window.signature and getattr(self,'_native_misses',0)<NATIVE_MISSES
+            started=time.perf_counter();center=find_center(visible,hint=hint[1] if valid_hint else None,local_only=bool(valid_hint),observed_level=(level,level_confidence),native_only=native_known)
             if context:context.stats['center_local_searches' if valid_hint else 'center_global_searches']=1
             if center is None and valid_hint:
                 if context:context.mode='SCENE_TRANSITION_CHECK'
@@ -427,10 +433,15 @@ class ScreenManager:
                     # local captures; a 2s global negative search would stale
                     # this very frame. No input is permitted without a glyph.
                     raise ScreenError('frame_unstable','fresh_center_not_yet_visible')
-                center=find_center(visible,observed_level=(level,level_confidence))
+                center=find_center(visible,observed_level=(level,level_confidence),native_only=native_known)
                 if context:context.stats['center_global_searches']=context.stats.get('center_global_searches',0)+1
-            if center is not None:self._local_center_missing_since=None
-            else:self.dialog_check_needed=True
+            from src.core import bloodweb_detector as _detector
+            if center is not None:
+                self._local_center_missing_since=None;self._native_misses=0
+                if _detector.last_center_native and not valid_hint:self._native_center=window.signature   # only a global find at the native scale proves it
+            else:
+                self.dialog_check_needed=True
+                self._native_misses=0 if not native_known else getattr(self,'_native_misses',0)+1
             self._timing('capture_center',started)
             if center is None:
                 self._center_hint=None

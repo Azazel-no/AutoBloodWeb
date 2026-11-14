@@ -51,10 +51,18 @@ Development only, not shipped: pytest (MIT).
 
 AutoBloodWeb uses Qt through PySide6 and links it dynamically. In the release builds the Qt and PySide6 libraries are ordinary files in `_internal\PySide6\` and `_internal\shiboken6\` next to `AutoBloodWeb.exe`, so you can replace them with your own compatible build (for example a PySide6 6.12 you compiled yourself). Qt source code: <https://code.qt.io>; PySide6 source code: <https://code.qt.io/cgit/pyside/pyside-setup.git/>. If you need the exact sources used for a release, open an issue.
 
+## Memes tab
+
+**Meme pack.** The chase meme and the Sable Detector play media that the user supplies: voice lines, music, dance clips, photos and a siren in the meme pack folder (`%APPDATA%\AutoBloodWeb\meme_pack`). None of it is in this repository or in the release builds, and the app never uploads it. `scripts/build_meme_pack.py` is a developer tool that prepares such a pack from the user's own files; it uses Demucs (MIT) for voice/music separation and ffmpeg, which are installed separately and are not bundled.
+
+**YOLOX** by Megvii Inc. — <https://github.com/Megvii-BaseDetection/YOLOX> — Apache License 2.0. The Sable Detector finds people on screen with the `yolox_tiny.onnx` model, run through OpenCV. The model file is **not** in this repository or in the release builds: on first use of the Sable Detector the app downloads it once from the YOLOX GitHub release (`github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_tiny.onnx`), checks its SHA-256 and caches it in `data/models`. No AGPL-licensed detector (such as Ultralytics YOLO) is used.
+
+`assets/sable/library.npz` holds only numeric colour features computed from the user's own screen recordings of the game; it contains no images.
+
 ## Fonts
 
 No fonts are bundled. The interface uses Windows system fonts (Segoe UI, Bahnschrift).
 
 ## Privacy
 
-The app sends nothing over the network while running. It reads screen pixels locally. The only network use is the optional wiki data refresh run by hand from the command line (`--sync-wiki`, `--sync-perks`, `--sync-items`), which downloads public pages from the wiki and uploads nothing.
+The app uploads nothing. It reads screen pixels locally. Downloads happen only for the map overlay images and the Sable Detector model described above (each fetched once, when that feature is first used), and for the optional wiki data refresh run by hand from the command line (`--sync-wiki`, `--sync-perks`, `--sync-items`), which downloads public pages from the wiki and uploads nothing.

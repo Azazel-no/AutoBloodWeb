@@ -181,7 +181,7 @@ def chain_state_signature(record,frame,result):
         elif (pending.get('batch',{}).get('deferred_verification') is True and
                 type(pending['batch'].get('inputs_completed_at')) in (int,float) and
                 frame.captured_at-pending['batch']['inputs_completed_at']>=1.5 and
-                node.state in (NodeState.AVAILABLE,NodeState.LOCKED) and node.state_confidence>=.8 and node.geometry_confidence>=.7):
+                __import__('src.core.purchase_outcome',fromlist=['untaken']).untaken(node) and node.geometry_confidence>=.7):
             from src.core.geometry import purchasable
             if node.state==NodeState.AVAILABLE and not purchasable(node,result.nodes,result.edges):return None
             observations.append(node.state.value)

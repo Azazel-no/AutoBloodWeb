@@ -17,6 +17,10 @@ from src.core.performance import measured
 from src.core.click_lifecycle import ClickLifecycle,transaction
 
 
+# Read-only look at a stable web before an unprovable earlier click is dropped (no credit).
+UNRESOLVED_RETIRE_SECONDS=4.
+
+
 class State(StrEnum):
     SCANNING='scanning'
     WAIT_STABLE='wait_stable'
@@ -923,6 +927,35 @@ class Automation:
             original_reason=original_reason,paid_inputs=0,reservation_refunded=False,certificates=certificates)
         return True
 
+    def retire_unresolved(self,frame,result,memory,count,cause):
+        """True: an unprovable earlier click is retired; False: keep reading; None: refuse as before.
+
+        Live 13.11 (The Mastermind): a click whose result the screen could not prove (a
+        locked outer node read at 0.78, a centre press that bought nothing while every
+        frame came too late) paused the run, and every later Start refused at once until
+        the user bought several levels by hand. Every further input still needs fresh,
+        twice-confirmed availability, and a bought or taken node is never buyable again,
+        so after a bounded read-only look at a stable, readable web the old click is
+        dropped with no purchase credit (reservations are kept) and the run goes on."""
+        if not (frame.live and not frame.probe_only and frame.window.foreground and not frame.confirmation_only
+                and result.screen_state==ScreenState.BLOODWEB and type(result.level) is int and result.level_confidence>=.95
+                and not getattr(self,'calibrating',False)):
+            return None
+        pending=memory.get('pending') or {}
+        key=pending.get('operation_id') or repr(pending.get('point') or pending.get('chain') or pending.get('batch'))
+        watch=getattr(self,'unresolved_watch',None)
+        if watch is None or watch[0]!=key:watch=self.unresolved_watch=(key,frame.captured_at)
+        observed=frame.captured_at-watch[1]
+        if count<2 or (pending and observed<UNRESOLVED_RETIRE_SECONDS):return False
+        self.trace('unresolved_click_retired',cause=cause,operation_id=pending.get('operation_id'),
+            automatic=bool(pending.get('automatic')),batch=bool(pending.get('batch')),chain=bool(pending.get('chain')),
+            saved_level=memory.get('level'),level=result.level,observed_seconds=round(observed,2),observations=count,
+            purchase_credit=0,reservation_refunded=False,paid_inputs=0,analysis_id=result.analysis_id)
+        self.scene_record=None;self.persisted_scene=None;self.pending_action=False;self.attempted.clear()
+        self.saved_scene_observation=None;self.saved_scene_stable_count=0;self.pending_scene_confirmations=0
+        self.unresolved_watch=None;self.emit(State.RECOVERING,'pending_purchase_resolved')
+        return True
+
     def recheck_saved_scene(self,frame,result):
         from src.core.scene_memory import same_window,layout_changed
         from src.core.purchase_outcome import physical_node
@@ -1031,6 +1064,8 @@ class Automation:
                     self.scene_record=None;self.persisted_scene=None;self.pending_action=False;self.attempted.clear()
                     self.saved_scene_observation=None;self.saved_scene_stable_count=0
                     return True
+                settled=self.retire_unresolved(frame,result,memory,count,'saved_scene_in_new_game_window')
+                if settled is not None:return settled
                 raise ScreenError('window_changed','saved_purchase_scene_not_proven_new')
             self.trace('saved_scene_replaced',old_pid=memory['window'].get('pid'),new_pid=frame.window.pid,
                 observations=count,previous_purchase_confirmed=False,analysis_id=result.analysis_id)
@@ -1116,6 +1151,8 @@ class Automation:
                         if frame.captured_at-retry[1]<min(4,self.settings.purchase_timeout) and retry[2]<6:
                             self.trace('saved_chain_evidence_retry',operation_id=key,attempt=retry[2],paid_inputs=0)
                             return False
+                    settled=self.retire_unresolved(frame,result,memory,count,'outcome_not_provable')
+                    if settled is not None:return settled
                     raise ScreenError('purchase_result_unknown','previous_start_unresolved')
                 return False
             self.scene_record=memory

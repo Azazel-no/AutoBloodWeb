@@ -30,7 +30,7 @@ RELEASE = BUILD / 'release'
 RUNTIME_SCRIPTS = ('live_test_v47', 'live_test_v48', 'live_test_v53', 'live_test_v54', 'native_chain_v55', 'native_price_v55')
 EXCLUDES = ('tkinter', 'pytest', '_pytest', 'IPython', 'matplotlib', 'scipy', 'pandas', 'PyInstaller',
             'PySide6.QtNetwork', 'PySide6.QtQml', 'PySide6.QtQuick', 'PySide6.QtPdf', 'PySide6.QtOpenGL',
-            'PySide6.QtOpenGLWidgets', 'PySide6.QtWebEngineCore', 'PySide6.QtWebEngineWidgets', 'PySide6.QtMultimedia',
+            'PySide6.QtOpenGLWidgets', 'PySide6.QtWebEngineCore', 'PySide6.QtWebEngineWidgets',
             'PySide6.Qt3DCore', 'PySide6.QtCharts', 'PySide6.QtDataVisualization', 'PySide6.QtSql', 'PySide6.QtTest',
             'PySide6.QtDBus', 'PySide6.QtDesigner', 'PySide6.QtHelp', 'PySide6.QtPrintSupport', 'PySide6.QtXml',
             'PySide6.QtConcurrent', 'PySide6.QtStateMachine', 'PySide6.QtUiTools')

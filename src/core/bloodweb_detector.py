@@ -48,6 +48,11 @@ def _component_center(image: np.ndarray) -> tuple[int,int,int] | None:
 
 from functools import lru_cache
 
+last_center_native=False   # the last accepted glyph came from the client's own scale
+FOCUS_SCORE=.86   # a native-scale match already acceptable on its own fixes where the other scales are searched
+FOCUS_REACH=2.    # ...within this many glyph sizes of it
+
+
 @lru_cache(maxsize=4)
 def _center_templates(root):
     # Visual anchors from the user's original references. Test annotations are
@@ -95,19 +100,19 @@ def _center_templates(root):
     return templates
 
 
-def find_center(image: np.ndarray, root=None, hint=None, local_only=False,observed_level=None) -> tuple[int,int,int] | None:
+def find_center(image: np.ndarray, root=None, hint=None, local_only=False,observed_level=None,native_only=False) -> tuple[int,int,int] | None:
     """Find the central glyph even when red branches merge with its border.
 
     A red notification or purchased ring cannot replace the anchor. No stale
     position or absolute game coordinate is used as a fallback.
     """
     root=Path(root) if root else project_root()
-    from src.core.prestige import native_ready_center
+    from src.core.prestige import native_ready_center,ready_center
     # A confident header read from these same pixels rules out a prestige
     # wreath on levels 1–49. Unknown/50 retain the original wreath search.
     ordinary=(observed_level is not None and type(observed_level[0]) is int
               and 1<=observed_level[0]<50 and observed_level[1]>=.95)
-    native=None if ordinary else native_ready_center(image,root,hint)
+    native=None if ordinary else (native_ready_center(image,root,hint) if hint is not None else ready_center(image,root))
     if native:return tuple(native['center'])
     h,w=image.shape[:2]; shrink=min(1.,1080/h)
     gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
@@ -141,7 +146,23 @@ def find_center(image: np.ndarray, root=None, hint=None, local_only=False,observ
     # Try the native scale of every genuine reference before costly resize
     # sweeps of the first historical reference. Early-web glyphs have their
     # own reference; the former order could age a fresh capture before scan.
-    for scale in scales:
+    # Speed (live 13.11, The Mastermind): a hovered or red centre scores 0.86-0.93,
+    # below the early exit, and the full sweep of every scale over the whole web
+    # took 2.7-3.1 s, so every capture aged past the 2 s freshness limit
+    # (stale_frame, 558 s lost in one evening). Once the native scales have found
+    # the glyph, the remaining scales are matched only around that point: the
+    # same templates, scales and threshold, a smaller search window.
+    native_count=len(dict.fromkeys(scales[:2]));focus=None
+    global last_center_native
+    last_center_native=False
+    for index,scale in enumerate(scales):
+        if index==native_count and native_only and (best is None or best[0]<.86):
+            # The caller already knows this window's glyph scale (a live session): no glyph at
+            # the native scales is no glyph at all, e.g. between two levels (live 14.11: 30
+            # such reads cost 102 s at 2.7-3 s each). The caller still runs a full search now and then.
+            return None
+        if index==native_count and best is not None and best[0]>=FOCUS_SCORE:
+            focus=(best[1][0]+(best[2]-1)/2,best[1][1]+(best[2]-1)/2,max(best[2],49)*FOCUS_REACH)
         for template,r,name in _center_templates(str(root)):
             size=round(49*scale)
             if size>=min(gray.shape): continue
@@ -152,16 +173,22 @@ def find_center(image: np.ndarray, root=None, hint=None, local_only=False,observ
             top=round(gray.shape[0]*.14)
             bottom=min(gray.shape[0],round(gray.shape[0]*.91)+size-1)
             right=min(gray.shape[1],round(gray.shape[1]*.64)+size-1) if w/h>1.5 else gray.shape[1]
-            search=gray[top:bottom,:right]
+            left=0
+            if focus is not None:
+                fx,fy,reach=focus
+                left=max(0,round(fx-(size-1)/2-reach));right=min(right,round(fx-(size-1)/2+reach)+size)
+                top=max(top,round(fy-(size-1)/2-reach));bottom=min(bottom,round(fy-(size-1)/2+reach)+size)
+            search=gray[top:bottom,left:right]
             if min(search.shape)<size:continue
             scores=cv2.matchTemplate(search,tile,cv2.TM_CCOEFF_NORMED)
             _,score,_,point=cv2.minMaxLoc(scores)
-            point=(point[0],point[1]+top)
+            point=(point[0]+left,point[1]+top)
             if best is None or score>best[0]:best=(score,point,size,r,scale,name)
             if score>=.94:break
         if best is not None and best[0]>=.94:break
     if best is None or best[0]<.86:return None
     score,point,size,r,scale,name=best
+    last_center_native=scale in scales[:native_count]
     return (round((point[0]+(size-1)/2)/shrink),round((point[1]+(size-1)/2)/shrink),radius(scale,name))
 
 def ring_fractions(hsv: np.ndarray, x: int,y: int,r: int) -> tuple[float,float]:

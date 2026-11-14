@@ -1,0 +1,30 @@
+{
+ "note": "Sable Ward HUD portraits for the Sable Detector gate: crops of 2 x portrait radius around the portrait centre, scaled to 96 px. Nicknames are not included.",
+ "portraits": [
+  {
+   "file": "sable_ward_1.png",
+   "source": "survivor POV, HUD 100 %, default portrait (sample sable_hud 2026-11-14, left crop, slot 1)",
+   "sha256": "be92dbbc6b54a862344a5e78122ae8336807cd008a8495b2694baf62a857a9cc"
+  },
+  {
+   "file": "sable_ward_2.png",
+   "source": "survivor POV, Obsession (left crop, slot 2)",
+   "sha256": "175d52ef29156e84e2aa441570ecac8c3ae4b484ea02feca4dfd4c6115fc0dca"
+  },
+  {
+   "file": "sable_ward_3.png",
+   "source": "survivor POV (right crop, slot 1)",
+   "sha256": "150c9d5893ec12ca6fb46d3e0da569d222600a8760e6b607379785d9a1c39c70"
+  },
+  {
+   "file": "sable_ward_4.png",
+   "source": "survivor POV, Obsession (right crop, slot 2)",
+   "sha256": "4a0bc2b097db3d16ecc1e22e24c4b95c631b1408ddca269fce4ffc7d4108198c"
+  },
+  {
+   "file": "sable_ward_5.png",
+   "source": "killer POV, Obsession (killer_ds sample, slot 3)",
+   "sha256": "ad2a304f2c348c4eb10d599778116a24a9fd39bfd537a50d620b1b54824f7ba6"
+  }
+ ]
+}

@@ -333,8 +333,8 @@ def test_chain_saved_scene_requires_each_point_twice_and_never_counts_tip_alone(
     after=copy.deepcopy(result);after.nodes[2].state=NodeState.PURCHASED
     assert not engine.recheck_saved_scene(replace(frame,captured_at=frame.captured_at+.1),after)
     engine.saved_chain_retry=(memory['pending']['operation_id'],frame.captured_at-5,0)
-    with pytest.raises(ScreenError,match='purchase_result_unknown'):
-        engine.recheck_saved_scene(replace(frame,captured_at=frame.captured_at+.2),after)
+    # 14.11: an unprovable click is no longer an immediate pause; it is watched read-only, then retired with no credit.
+    assert engine.recheck_saved_scene(replace(frame,captured_at=frame.captured_at+.2),after) is False
     assert engine.persisted_scene['pending'] is not None and engine.actions==0
     after.nodes[1].state=NodeState.PURCHASED
     assert not engine.recheck_saved_scene(replace(frame,captured_at=frame.captured_at+.3),after)

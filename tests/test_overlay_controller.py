@@ -272,3 +272,31 @@ def test_tab_does_nothing_in_a_killer_match(controller):
     x.c.match_role = 'killer'
     x.c.handle_action('key_down')
     assert not x.c.scoreboard_wait.isActive()
+
+
+# --- H1 (14.11): matches against The Nightmare ------------------------------------------------------
+FREDDY = Path(__file__).resolve().parents[1] / 'debug/match_samples/freddy_2026-11-13'
+
+
+@pytest.mark.skipif(not FREDDY.is_dir(), reason='local samples')
+@pytest.mark.parametrize('name', ['freddy_match_01', 'freddy_match_02'])
+def test_freddy_match_hud_is_read_like_any_other(root, name):
+    """The samples are 1456x819 screenshots; scaled to the 1080p client they came from."""
+    from src.core.match_reader import fit_hud, hud_portraits, hud_visible, with_hud_fit
+    from src.core.own_perks import crop_own, load_matchers, read_own
+    from src.gui.crosshair_overlay import in_match
+    image = cv2.resize(cv2.imread(str(FREDDY / f'{name}.png')), (1920, 1080), interpolation=cv2.INTER_CUBIC)
+    base = load_layout(root); fitted = with_hud_fit(base, *fit_hud(image, base)[:2])
+    assert hud_visible(image, fitted) and in_match(image, base, root)
+    assert read_own(*crop_own(image), load_matchers(root)) == (True, 'survivor')
+    assert all(p is not None for p in hud_portraits(image, fitted))
+
+
+def test_every_ignored_tab_press_is_logged(controller):
+    import json
+    controller.c.match_role = 'killer'; controller.c.phase = 'match'
+    controller.c.handle_action('key_down')
+    controller.c.phase = 'lobby'; controller.c.handle_action('key_down')
+    rows = [json.loads(l) for f in controller.log.glob('*.jsonl') for l in f.read_text(encoding='utf-8').splitlines()]
+    ignored = [r['reason'] for r in rows if r['event'] == 'tab_ignored']
+    assert ignored == ['killer_match', 'lobby']

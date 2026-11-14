@@ -235,3 +235,7 @@ for key,(ru,en) in NOTICE_PAIRS.items():
 from src.core.ui_strings import PAIRS as UI_PAIRS
 for key,(ru,en) in UI_PAIRS.items():
     STRINGS['ru'][key]=ru;STRINGS['en'][key]=en
+
+from src.core.meme_strings import LANGUAGES as MEME_LANGUAGES,TEXT as MEME_TEXT
+for key,values in MEME_TEXT.items():
+    for code,value in zip(MEME_LANGUAGES,values):STRINGS[code][key]=value

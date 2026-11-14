@@ -60,3 +60,42 @@ def test_conflicting_reads_show_nothing():
 
 def test_fold():
     assert fold('Léry’s Memorial') == fold("lerys memorial") == 'lerys memorial'
+
+
+# --- H2 (14.11): 'Realm - Map' lines and map names cut off at the end -------------------------------
+def realm_matcher():
+    from src.core.map_names import load_realms
+    maps, _, _ = load_maps(ROOT)
+    return MapMatcher(maps, load_realms(ROOT)), maps
+
+
+def test_live_yamaoka_line_cut_after_family_re():
+    """Live 12.11: 'YAMAOKA ESTATE - FAMILY RE:' (and its Cyrillic-lookalike twin) showed no map."""
+    matcher, _ = realm_matcher()
+    for line in ('YAMAOKA ESTATE - FAMILY RE:', 'УАМАОКА ESTATE - FAMILY RE:'):
+        assert matcher.match_lines([line, 'BACK [ESC]']).map.key == 'Family Residence'
+    assert matcher.match_lines(['YAMAOKA ESTATE - SANCTUM OF WR']).map.key == 'Sanctum of Wrath'
+
+
+def test_every_map_with_its_realm_and_a_cut_name_in_every_language():
+    import json
+    from src.core.map_names import fold
+    matcher, maps = realm_matcher(); checked = 0
+    realms = {r['key']: r['names'] for r in json.loads((ROOT / 'assets/maps/map_names.json').read_text(encoding='utf-8'))['realms']}
+    for m in maps:
+        for language, name in m.names:
+            realm = realms[m.realm].get(language, m.realm)
+            cut = name[:max(8, round(len(name) * .7))]
+            others = [o for o in maps if o.realm == m.realm and o.key != m.key and any(fold(n).startswith(fold(cut)) for _, n in o.names)]
+            if others: continue   # Two maps of the realm start the same way: nothing must be guessed.
+            hit = matcher.match_lines([f'{realm} - {cut}'])
+            assert hit and hit.map.key == m.key, (language, realm, cut, hit and hit.map.key)
+            checked += 1
+    assert checked >= 200
+
+
+def test_a_realm_alone_or_a_too_short_cut_still_shows_nothing():
+    matcher, _ = realm_matcher()
+    for line in ('YAMAOKA ESTATE', 'YAMAOKA ESTATE - FAM', 'YAMAOKA T E', 'THE MACMILLAN ESTATE - ', 'BACK [ESC]'):
+        assert matcher.match_lines([line]) is None, line
+    assert matcher.match_lines(['MACMILLAN ESTATE - COAL TOW']).map.key == 'Coal Tower'
