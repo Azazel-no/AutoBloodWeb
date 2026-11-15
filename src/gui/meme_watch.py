@@ -11,6 +11,7 @@ from src.core.killer_status import HUD_GONE_SECONDS, column_rect, read_column
 from src.core.match_reader import fit_hud, load_layout, with_hud_fit
 from src.core.own_perks import load_matchers, own_rect, read_own
 from src.core.screen_manager import Rect, WindowsBackend
+from src.core.overlay_capture import OverlayBackend
 
 log = logging.getLogger(__name__)
 ROLE_EVERY = 10      # polls between the costly own-perk reads once the role is known
@@ -18,7 +19,7 @@ ROLE_EVERY = 10      # polls between the costly own-perk reads once the role is 
 
 class MatchWatch:
     def __init__(self, root, backend=None, is_killer=lambda: False, clock=time.monotonic, role_reader=None, name='meme'):
-        self.root = root; self.backend = backend or WindowsBackend(); self.is_killer = is_killer; self.clock = clock
+        self.root = root; self.backend = backend or OverlayBackend(); self.is_killer = is_killer; self.clock = clock
         self.role_reader = role_reader; self.name = name; self.matchers = None
         self.layout = self.base_layout = load_layout(root); self.hud_scale = 1.; self.hud_fitted = False; self.fit_polls = 0
         self.game_hwnd = None; self.client = None; self.foreground = False
@@ -56,6 +57,8 @@ class MatchWatch:
         if self.hud_visible:
             if not self.in_match: log.info('%s: match HUD found (%s, HUD scale %.2f)', self.name, self.current_role(), self.hud_scale)
             self.in_match = True; self.hud_seen_at = now
+            from src.gui.match_overlay import MATCH
+            MATCH.note_hud()
         elif self.hud_seen_at is not None and now - self.hud_seen_at > HUD_GONE_SECONDS:
             log.info('%s: match HUD gone', self.name); self.reset()
 

@@ -163,6 +163,7 @@ class ChaseController(QObject):
 
     def disable(self):
         self.enabled = False; self.timer.stop(); self.end('switched off', fade=False); self.hub.use('chase', False); self.close_sounds()
+        getattr(self.timer_window,'retire',self.timer_window.hide)(); getattr(self.dance_window,'retire',self.dance_window.hide)()
 
     def close_sounds(self):
         for sound in [*self.voices.values(), *self.dance_sounds.values()] + (self.music.players if self.music else []): sound.close()

@@ -25,6 +25,7 @@ from src.core.match_reader import EMPTY, SLOTS, Geometry, right_centre_x, hud_po
 from src.core.match_state import HudCache, MatchState
 from src.core.nicknames import NicknameOcr, hud_strips, name_scores, read_hud_names, read_tab_names
 from src.core.screen_manager import ScreenError, WindowsBackend
+from src.core.overlay_capture import OverlayBackend
 
 log=logging.getLogger(__name__)
 WS_EX=0x00000020|0x00080000|0x08000000|0x00000080  # Transparent, layered, no-activate, tool window.
@@ -159,18 +160,71 @@ RECORDING=Recording()
 _WINDOWS=weakref.WeakSet()
 
 
+class Match:
+    """J7 (15.11): while a match is on, no overlay window appears or disappears over DBD (any change of our
+    windows over the game is an "HDR change" for NVIDIA, which then stops recording). A match is on while any
+    overlay saw the match HUD in the last HOLD seconds (Tab, a downed screen or a short HUD gap stay inside
+    it) and no lobby was seen since."""
+    HOLD=60.
+    def __init__(self,clock=time.monotonic):
+        self.clock=clock;self.hud_at=None;self.epoch=0
+
+    def note_hud(self):
+        if not self.active():self.epoch+=1;log.info('Overlay windows: match on (no show/hide until it ends)')
+        self.hud_at=self.clock()
+
+    def note_lobby(self):
+        if self.hud_at is not None:log.info('Overlay windows: match over (lobby)')
+        self.hud_at=None
+
+    def active(self):
+        return self.hud_at is not None and self.clock()-self.hud_at<=self.HOLD
+
+
+MATCH=Match()
+
+
+def keep_mapped():
+    """A window over DBD stays mapped (it only goes blank): during a match, or always in recording-friendly mode.
+    Bloodweb automation, and DBD not in front, hide windows for real."""
+    return (RECORDING.on or MATCH.active()) and not RECORDING.automation() and dbd_or_overlay_in_front()
+
+
+_SWEEP={}
+
+
+def sweep_windows():
+    """Once a second, on the GUI thread: blank windows that no longer need to stay mapped are hidden; at the
+    start of a match the overlays that were in use are mapped (blank) at once, so none appears later in it."""
+    try:keep=keep_mapped()
+    except Exception:return
+    epoch=MATCH.epoch;start=keep and MATCH.active() and _SWEEP.get('epoch')!=epoch
+    if MATCH.active():_SWEEP['epoch']=epoch
+    for window in list(_WINDOWS):
+        try:
+            if window.blank and not keep and QWidget.isVisible(window):window.blank=False;QWidget.hide(window);window.log_change('hidden (match over)')
+            elif start and window.armed and not QWidget.isVisible(window):window.map_blank('match start')
+        except RuntimeError:pass
+
+
+def start_sweeper():
+    if _SWEEP.get('timer') is None and QGuiApplication.instance() is not None:
+        timer=QTimer(QGuiApplication.instance());timer.setInterval(1000);timer.timeout.connect(sweep_windows);timer.start()
+        _SWEEP['timer']=timer
+
+
 def set_recording_friendly(on,automation=None):
     RECORDING.on=bool(on)
     if automation is not None:RECORDING.automation=automation
-    if not on:
-        for window in list(_WINDOWS):
-            if window.blank:window.hide()
+    sweep_windows()
 
 
 def hide_all_overlays():
     """Before automation: every overlay window really hidden (they would count as covers of the Bloodweb)."""
     for window in list(_WINDOWS):
-        try:window.blank=False;QWidget.hide(window)
+        try:
+            if QWidget.isVisible(window):window.log_change('hidden (automation)')
+            window.blank=False;QWidget.hide(window)
         except RuntimeError:pass
 
 
@@ -209,6 +263,9 @@ class PerkOverlay(QWidget):
         self.setAttribute(Qt.WA_TranslucentBackground);self.setAttribute(Qt.WA_ShowWithoutActivating)
         self.setAttribute(Qt.WA_TransparentForMouseEvents);self.setFocusPolicy(Qt.NoFocus)
         self.reported=False;self.blank=False;_WINDOWS.add(self)
+        self.armed=False      # Shown by its controller and not switched off: mapped blank at the next match start.
+        self.origin=(0,0)     # Client-relative logical point of the window's top-left (the perk window is small).
+        start_sweeper()
         # J5 (14.11): the native window is made now, at app start, with its final styles, not on the first
         # show() in the middle of a match start (the map overlay's first appearance coincided with NVIDIA
         # recording switching off); the first frame on screen already has no-activate/transparent/tool.
@@ -228,15 +285,33 @@ class PerkOverlay(QWidget):
         if 'paintEvent' in cls.__dict__:cls.paintEvent=blank_aware(cls.__dict__['paintEvent'])
 
     def show(self):
-        if not self.isVisible():self.log_change('shown')
-        self.blank=False;super().show()
+        from src.core.overlay_capture import windows_allowed
+        if not windows_allowed():return self.suppressed()
+        if not QWidget.isVisible(self):self.log_change('shown')
+        self.armed=True;self.blank=False;super().show();self.update()
 
     def hide(self):
-        if RECORDING.on and QWidget.isVisible(self) and not RECORDING.automation() and dbd_or_overlay_in_front():
-            if not self.blank:self.blank=True;self.update();self.log_change('blanked (recording-friendly)')
+        if QWidget.isVisible(self) and keep_mapped():
+            if not self.blank:self.blank=True;self.update()
             return
         if QWidget.isVisible(self):self.log_change('hidden')
         self.blank=False;super().hide()
+
+    def suppressed(self):
+        """J8 capture test 'no_windows': the overlay reads as usual but its window never appears."""
+        if not getattr(self,'_suppressed_logged',False):self._suppressed_logged=True;self.log_change('not shown (capture test: no windows)')
+
+    def map_blank(self,why):
+        """Mapped with nothing drawn, so a later show only paints."""
+        from src.core.overlay_capture import windows_allowed
+        if not windows_allowed():return self.suppressed()
+        self.blank=True;QWidget.show(self);self.log_change(f'shown blank ({why})')
+
+    def retire(self):
+        """The feature is switched off: hidden for real and not mapped again at match starts."""
+        self.armed=False
+        if QWidget.isVisible(self):self.log_change('hidden (switched off)')
+        self.blank=False;QWidget.hide(self)
 
     def log_change(self,what):
         """J6: every window appearing or disappearing over the game, with the foreground process, so a
@@ -274,13 +349,31 @@ class PerkOverlay(QWidget):
 
     def present(self,client,layout,slots):
         """client: physical client rect. Qt geometry is logical, hence the device ratio."""
-        self.layout_data=layout;self.client=client
         self.slots={slot:(perks.slots,[to_qimage(t) if t is not None else None for t in perks.tiles]) for slot,perks in slots.items()}
-        screen=QGuiApplication.screenAt(QPointF(client.x,client.y).toPoint()) or QGuiApplication.primaryScreen()
-        self.ratio=screen.devicePixelRatio() if screen else 1.
-        r=self.ratio
-        self.setGeometry(*hud_overlay_rect(client,r))
+        self.place(client,layout)
         self.show();self.update()
+
+    def place(self,client,layout):
+        """J7: the window is only as large as the three clusters (about 100x330 px at 1080p), not half the screen."""
+        self.layout_data=layout;self.client=client
+        screen=QGuiApplication.screenAt(QPointF(client.x,client.y).toPoint()) or QGuiApplication.primaryScreen()
+        self.ratio=r=screen.devicePixelRatio() if screen else 1.
+        x0,y0,x1,y1=self.cluster_bounds()
+        self.origin=(x0,y0)
+        self.setGeometry(round(client.x/r)+x0,round(client.y/r)+y0,x1-x0,y1-y0)
+
+    def cluster_bounds(self,margin=3):
+        """Client-relative logical (x0, y0, x1, y1) around every slot's backdrop and diamonds."""
+        import math
+        xs=[];ys=[]
+        for slot in SLOTS:
+            (cx,cy),size,centres=self.cluster_geometry(slot);half=min(size*1.15,self.backdrop_limit())
+            xs+=[cx-half,cx+half]+[x+s*size/2 for x,_ in centres.values() for s in (-1,1)]
+            ys+=[cy-half,cy+half]+[y+s*size/2 for _,y in centres.values() for s in (-1,1)]
+        r=self.ratio;width=self.client.width/r;height=self.client.height/r
+        x0=max(0,math.floor(min(xs))-margin);y0=max(0,math.floor(min(ys))-margin)
+        x1=min(math.ceil(width),math.ceil(max(xs))+margin);y1=min(math.ceil(height),math.ceil(max(ys))+margin)
+        return x0,y0,max(x0+1,x1),max(y0+1,y1)
 
     def clear(self):
         self.slots={};self.hide()
@@ -312,6 +405,7 @@ class PerkOverlay(QWidget):
     def paintEvent(self,event):
         if not self.slots or not self.layout_data:return
         painter=QPainter(self);painter.setRenderHint(QPainter.Antialiasing);painter.setRenderHint(QPainter.SmoothPixmapTransform)
+        painter.translate(-self.origin[0],-self.origin[1])
         for slot,(results,images) in self.slots.items():
             (cx,cy),size,centres=self.cluster_geometry(slot)
             half=min(size*1.15,self.backdrop_limit())  # Never into the neighbouring slot.
@@ -363,7 +457,7 @@ class MatchOverlayController(QObject):
     def __init__(self,root,automation_active,backend=None,matcher_factory=None,overlay=None,key='TAB',key_reader=None,log_dir=None,
                  size='large',ocr=None,foreground_window=None,is_killer=lambda:False,own_reader=None):
         super().__init__()
-        self.root=Path(root);self.automation_active=automation_active;self.backend=backend or WindowsBackend()
+        self.root=Path(root);self.automation_active=automation_active;self.backend=backend or OverlayBackend()
         self.matcher_factory=matcher_factory;self.overlay=overlay or PerkOverlay(root);self.key=key;self.key_reader=key_reader
         self.overlay.size_name=size
         self.state=MatchState();self.cache=HudCache();self.layout=load_layout(self.root);self.matcher=None;self.window=None
@@ -377,6 +471,7 @@ class MatchOverlayController(QObject):
         self.presence=QTimer(self);self.presence.setInterval(500);self.presence.timeout.connect(self.poll)
         self.scoreboard_wait=QTimer(self);self.scoreboard_wait.setInterval(50);self.scoreboard_wait.timeout.connect(self.look_for_scoreboard)
         self.followup=QTimer(self);self.followup.setInterval(150);self.followup.timeout.connect(self.followup_tick)
+        self.test_hide=QTimer(self);self.test_hide.setSingleShot(True);self.test_hide.timeout.connect(lambda:self.overlay.clear())
         self.wait_until=0.;self.wait_frames=0;self.key_down_at=0.
         self.phase='unknown'  # 'lobby', 'match' (reading perks) or 'locked'; 'unknown' until the first frame.
         self.last_scoreboard=None;self.lobby_ticks=0
@@ -431,6 +526,7 @@ class MatchOverlayController(QObject):
     def enter_lobby(self):
         """Lobby or loadout: unlock, hide and forget everything; wait for the next match."""
         if self.phase!='lobby':self.record('lobby_seen',previous=self.phase)
+        MATCH.note_lobby()
         self.phase='lobby';self.reset();self.cache.clear();self.scoreboard_wait.stop();self.match_role=None
         self.hud_fitted=False;self.hud_scale=1.;self.layout=self.base_layout  # The UI scale can change between matches.
         self.status.emit('overlay_lobby')
@@ -463,7 +559,7 @@ class MatchOverlayController(QObject):
     def disable(self):
         if self.watcher:self.watcher.close();self.watcher=None
         if hasattr(self.ocr,'close'):self.ocr.close()
-        self.presence.stop();self.scoreboard_wait.stop();self.followup.stop();self.reset()
+        self.presence.stop();self.scoreboard_wait.stop();self.followup.stop();self.reset();getattr(self.overlay,'retire',self.overlay.hide)()
         if self.mode!='off':self.record('overlay_stopped')
         self.mode='off'
 
@@ -492,6 +588,11 @@ class MatchOverlayController(QObject):
             if action in ('key_down','capture'):self.status.emit('overlay_blocked_automation');self.tab_ignored('automation')
             return
         if action=='key_down':self.overlay.hide()
+        from src.core.overlay_capture import POLICY
+        if POLICY.mode=='no_capture':
+            # J8 capture test: no pixels are read, but the perk window appears as after a real read.
+            if action=='key_up':self.show_test_cluster()
+            return
         if action in ('key_down','capture'):
             # Locked for this match, or in the lobby: a Tab press does nothing, not even a capture.
             if self.phase in ('locked','lobby'):return self.tab_ignored(self.phase)
@@ -505,6 +606,19 @@ class MatchOverlayController(QObject):
             self.last_scoreboard=None;self.scoreboard_wait.start()
         elif action=='key_up' and self.session is not None and not self.followup.isActive():
             self.start_followup()
+
+    def show_test_cluster(self,seconds=8.):
+        """J8 'no_capture' test: '?' clusters for every slot after Tab, hidden again after a few seconds."""
+        from src.core.match_state import SlotPerks
+        from src.core.perk_matcher import SlotResult
+        try:window=self.backend.info()
+        except ScreenError:return
+        if not (window.foreground or overlay_in_front()):return
+        unknown=SlotResult(None,None,(),0,0,'capture_test')
+        slots={slot:SlotPerks((unknown,)*4,(None,)*4,None) for slot in SLOTS}
+        self.record('capture_test_cluster')
+        self.overlay.present(window.client,self.layout,slots)
+        self.test_hide.start(round(seconds*1000))
 
     @guarded
     def look_for_scoreboard(self):
@@ -722,7 +836,7 @@ class MatchOverlayController(QObject):
             self.hud_missing=getattr(self,'hud_missing',0)+1
             if not present or self.hud_missing>=2:self.overlay.hide()
             return
-        self.hud_missing=0
+        self.hud_missing=0;MATCH.note_hud()
         if self.match_role is None and role:
             self.match_role=role;self.record('match_role',role=role)
         if self.killer_match():
@@ -730,6 +844,9 @@ class MatchOverlayController(QObject):
         if self.phase in ('lobby','unknown'):
             self.record('match_detected',previous=self.phase);self.phase='match'
             self.status.emit('overlay_reading')
+            # J7: the perk window is mapped (blank) now, at match start, not on the first Tab read later in it.
+            if isinstance(self.overlay,QWidget) and not QWidget.isVisible(self.overlay) and keep_mapped():
+                self.overlay.place(window.client,self.layout);self.overlay.map_blank('match start')
         if self.phase!='locked':self.cache.add(hud_portraits(image,self.layout),hud_strips(image,self.layout))
         # The perks stay until the lobby is seen again: no portrait-based 'match ended' guess.
         if self.state.slots and not self.overlay.isVisible():self.window=window;self.show()

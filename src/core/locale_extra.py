@@ -130,6 +130,8 @@ TEXT={
  'page_report_bug':('Informar de un error…', 'Fehler melden…', 'Signaler un bug…'),
  'report_bug_tip':('Abre el formulario de GitHub y la carpeta con app.log. Revisa el registro por si contiene datos personales antes de adjuntarlo.', 'Öffnet das GitHub-Formular und den Ordner mit app.log. Prüfe das Protokoll vor dem Anhängen auf persönliche Daten.', "Ouvre le formulaire GitHub et le dossier contenant app.log. Vérifiez que le journal ne contient pas de données personnelles avant de le joindre."),
  'page_developer':('Modo desarrollador', 'Entwicklermodus', 'Mode développeur'),
+ 'recalibrate':('Recalibrar', 'Neu kalibrieren', 'Recalibrer'),
+ 'session_check':('Comprobación rápida de F9', 'Schneller F9-Test', 'Vérification rapide de F9'),
  'overlay_position':('Posición de la superposición','Overlay-Position','Position de la superposition'),
  'overlay_position_left':('A la izquierda del retrato','Links vom Porträt','À gauche du portrait'),
  'overlay_position_right':('A la derecha del apodo','Rechts vom Namen','À droite du pseudo'),

@@ -17,6 +17,7 @@ from src.core.map_images import CREDIT, Fetcher, cached
 from src.core.map_names import DEFAULT_KEY, MapMatcher, clean_settings, default_settings, load_maps, load_realms, ocr_lines  # noqa: F401
 from src.core.match_reader import is_lobby, load_layout
 from src.core.screen_manager import Rect, ScreenError, WindowsBackend
+from src.core.overlay_capture import OverlayBackend
 from src.gui.match_overlay import KeyWatcher, PerkOverlay, foreground_handle, game_in_front, key_code
 from src.gui.widgets import ToggleSwitch
 
@@ -85,7 +86,7 @@ class MapController(QObject):
     def __init__(self, root, settings, automation_active, backend=None, window=None, ocr=None, clock=time.monotonic, in_match=None, key_reader=None):
         super().__init__()
         self.root = root; self.settings = settings; self.automation_active = automation_active
-        self.backend = backend or WindowsBackend(); self.window = window or MapWindow(root); self.clock = clock
+        self.backend = backend or OverlayBackend(); self.window = window or MapWindow(root); self.clock = clock
         maps, base, _ = load_maps(root); self.matcher = MapMatcher(maps, load_realms(root))
         self.fetcher = Fetcher(root, base, lambda m, path: self.image_ready.emit())
         self.layout = load_layout(root); self.ocr = ocr; self.in_match_check = in_match; self.key_reader = key_reader
@@ -104,7 +105,7 @@ class MapController(QObject):
             self.watcher = KeyWatcher(key_code(self.settings['key']), self.game_foreground, self.key_event.emit, read=self.key_reader); self.watcher.start()
 
     def disable(self):
-        self.timer.stop(); self.window.hide()
+        self.timer.stop(); getattr(self.window,'retire',self.window.hide)()
         if self.watcher: self.watcher.close(); self.watcher = None
 
     def restart_key(self):

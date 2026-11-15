@@ -75,6 +75,8 @@ class Preferences:
         if self.settings.get('overlay_size') not in ('normal','large'):self.settings['overlay_size']='large'
         self.settings['ds_timer']=self.settings.get('ds_timer') is True
         self.settings['recording_friendly']=self.settings.get('recording_friendly') is True
+        if self.settings.get('capture_test') not in ('normal','no_capture','no_windows'):self.settings['capture_test']='normal'
+        if self.settings.get('overlay_capture') not in ('gdi','wgc'):self.settings['overlay_capture']='gdi'
         expired=self.settings.get('ds_expired_seconds',15)
         self.settings['ds_expired_seconds']=expired if type(expired) in (int,float) and 10<=expired<=20 else 15
         levels=self.settings.get('max_levels',0)

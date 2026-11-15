@@ -83,7 +83,7 @@ class SableController(QObject):
     def disable(self):
         self.enabled = False; self.timer.stop(); self.want.clear(); self.stop_worker.set()
         if self.worker and self.worker.is_alive(): self.worker.join(1.5)
-        self.worker = None; self.hide('switched off'); self.alert.reset(); self.gate.reset(); self.hub.use('sable', False)
+        self.worker = None; self.hide('switched off'); getattr(self.window,'retire',self.window.hide)(); self.alert.reset(); self.gate.reset(); self.hub.use('sable', False)
         if self.siren: self.siren.close(); self.siren = None
         self.changed.emit()
 

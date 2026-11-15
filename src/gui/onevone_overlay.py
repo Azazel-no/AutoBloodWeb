@@ -17,6 +17,7 @@ from src.core.match_reader import fit_hud, load_layout, with_hud_fit
 from src.core.onevone import ACTIONS, ARMED, DEFAULT_KEYS, RUNNING, OneVOne, clean_settings, default_settings, downed, format_time, load_down_templates  # noqa: F401
 from src.core.own_perks import load_matchers, own_rect, read_own
 from src.core.screen_manager import Rect, ScreenError, WindowsBackend
+from src.core.overlay_capture import OverlayBackend
 from src.gui.match_overlay import PerkOverlay, key_code
 from src.gui.widgets import BloodButton, ToggleSwitch
 
@@ -106,7 +107,7 @@ class OneVOneController(QObject):
     def __init__(self, root, settings, is_killer, automation_active, backend=None, window=None, clock=time.monotonic, key_reader=None):
         super().__init__()
         self.root = root; self.settings = settings; self.is_killer = is_killer; self.automation_active = automation_active
-        self.backend = backend or WindowsBackend(); self.window = window or ScoreWindow(root); self.clock = clock; self.key_reader = key_reader
+        self.backend = backend or OverlayBackend(); self.window = window or ScoreWindow(root); self.clock = clock; self.key_reader = key_reader
         self.model = OneVOne(list(settings['names'])); self.shown = True; self.watcher = None; self.game_hwnd = None
         self.layout = self.base_layout = load_layout(root); self.hud_scale = 1.; self.hud_fitted = False; self.fit_reads = 0
         self.templates = load_down_templates(root); self.matchers = None
@@ -123,7 +124,7 @@ class OneVOneController(QObject):
             self.watcher = KeysWatcher(keys, self.game_foreground, self.key_event.emit, read=self.key_reader); self.watcher.start()
 
     def disable(self):
-        self.timer.stop(); self.window.hide()
+        self.timer.stop(); getattr(self.window,'retire',self.window.hide)()
         if self.watcher: self.watcher.close(); self.watcher = None
 
     def restart_keys(self):

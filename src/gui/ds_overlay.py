@@ -10,6 +10,7 @@ from src.core.own_perks import load_matchers, own_rect, read_own
 from src.core.match_reader import Geometry, fit_hud, load_layout, right_centre_x, supported_ui_scale, with_hud_fit
 from src.core.perk_catalog import load_catalog
 from src.core.screen_manager import Rect, ScreenError, WindowsBackend
+from src.core.overlay_capture import OverlayBackend
 from src.gui.match_overlay import PerkOverlay, foreground_handle, overlay_in_front
 
 log=logging.getLogger(__name__)
@@ -72,7 +73,7 @@ class DsTimerController(QObject):
     status=Signal(str)
     def __init__(self,root,is_killer,automation_active,backend=None,overlay=None,foreground_window=None,clock=time.monotonic,expired_seconds=15.):
         super().__init__()
-        self.is_killer=is_killer;self.automation_active=automation_active;self.backend=backend or WindowsBackend()
+        self.is_killer=is_killer;self.automation_active=automation_active;self.backend=backend or OverlayBackend()
         self.overlay=overlay or DsOverlay(root);self.foreground_window=foreground_window or foreground_handle;self.clock=clock
         self.layout=self.base_layout=load_layout(root);self.hud_scale=1.;self.hud_fitted=False;self.fit_reads=0;self.templates=load_templates(root);self.tracker=DsTracker(expired_seconds)
         self.ticks=0;self.hud_seen_at=None;self.client=None;self.hud_shown=False;self.own_reads=0;self.own_present=False
@@ -83,7 +84,7 @@ class DsTimerController(QObject):
         self.timer.start()
 
     def disable(self):
-        self.timer.stop();self.tracker.clear();self.overlay.hide()
+        self.timer.stop();self.tracker.clear();getattr(self.overlay,'retire',self.overlay.hide)()
 
     def tick(self):
         try:self.step()
@@ -136,6 +137,8 @@ class DsTimerController(QObject):
             self.hud_shown=visible=visible and present and killer
             if visible:
                 self.hud_seen_at=now;self.tracker.update(statuses,now)
+                from src.gui.match_overlay import MATCH
+                MATCH.note_hud()
             elif self.hud_seen_at is not None and now-self.hud_seen_at>HUD_GONE_SECONDS:
                 self.tracker.clear();self.hud_seen_at=None;self.match_role=None
                 self.layout=self.base_layout;self.hud_scale=1.;self.hud_fitted=False  # The UI scale can change between matches.

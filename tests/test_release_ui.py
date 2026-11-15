@@ -53,11 +53,14 @@ def test_engineering_controls_appear_only_in_developer_mode(make_window):
     hidden = (w.buttons['pause'], w.scan_button, w.test_button, w.run_mode, w.dry_run, w.turbo_burst,
               w.native_chain, w.counters_card, w.preview_card, w.debug_card, w.logs_button)
     assert not any(x.isVisible() for x in hidden)
-    assert not w.recalibrate_action.isVisible() and w.logs_action.isVisible() and w.developer_action.isVisible()
-    w.developer_action.trigger()
-    assert w.prefs.settings['developer_mode'] is True
+    w.nav_buttons['settings'].click()
+    assert not w.page_buttons['recalibrate'].isVisible() and not w.page_buttons['session_check'].isVisible()
+    assert w.page_developer.isVisible() and w.recording_friendly.isVisible()
+    w.page_developer.click()
+    assert w.prefs.settings['developer_mode'] is True and w.page_buttons['recalibrate'].isVisible()
+    w.nav_buttons['bloodweb'].click()
     assert w.buttons['pause'].isVisible() and w.run_mode.isVisible() and w.dry_run.isVisible() and w.debug_card.isVisible()
-    w.developer_action.trigger()
+    w.page_developer.click()
     assert not w.run_mode.isVisible() and w.prefs.settings['developer_mode'] is False
 
 
@@ -160,3 +163,48 @@ def test_support_qr_code_encodes_the_same_address():
     from PIL import Image
     image = np.array(Image.open(Path(__file__).resolve().parents[1] / 'docs/screenshots/usdt_trc20_qr.png').convert('RGB'))[:, :, ::-1]
     assert cv2.QRCodeDetector().detectAndDecode(image)[0] == SUPPORT
+
+
+def test_no_hidden_menu_actions_and_settings_reach_every_former_menu_action(make_window):
+    """15.11: the menu bar was hidden, so its actions (recording-friendly mode first of all) could not be reached."""
+    w = make_window()
+    assert not w.menuBar().actions()
+    assert 'page_notice' not in w.page_buttons and not hasattr(w, 'warnings_button')
+    settings = w.pages.widget(1)
+    for widget in (w.recording_friendly, w.recording_note, w.page_developer, *w.page_buttons.values()):
+        assert settings.isAncestorOf(widget)
+    assert 'NVIDIA' in w.recording_note.text() and 'HDR' in w.recording_note.text()
+    from src.gui import match_overlay as mo
+    try:
+        w.recording_friendly.click()
+        assert w.prefs.settings['recording_friendly'] is True and mo.RECORDING.on
+        w.recording_friendly.click()
+        assert w.prefs.settings['recording_friendly'] is False and not mo.RECORDING.on
+    finally:
+        mo.set_recording_friendly(False)
+
+
+@pytest.mark.parametrize('language', ['ru', 'en', 'es', 'de', 'fr'])
+def test_new_settings_texts_exist_in_every_language(language):
+    from src.core.localization import Localization
+    t = Localization(language).text
+    for key in ('recording_friendly', 'recording_friendly_hint', 'recording_friendly_note', 'nav_log_tip', 'recalibrate', 'session_check'):
+        assert t(key) != key, key
+
+
+def test_startup_notice_opens_lists_every_section_and_is_one_time(make_window):
+    """Before 15.11 the dialog raised NameError (QCheckBox not imported): it never opened."""
+    from PySide6.QtCore import QTimer
+    from PySide6.QtWidgets import QApplication, QDialog, QLabel
+    from src.core.notice_strings import NOTICE_SECTIONS
+    w = make_window()
+    assert w.notice_due()
+    seen = []
+    def answer():
+        dialog = next(d for d in QApplication.topLevelWidgets() if isinstance(d, QDialog) and d.isVisible())
+        seen.extend(label.text() for label in dialog.findChildren(QLabel))
+        dialog.findChildren(type(w.buttons['start']))[0].click()
+    QTimer.singleShot(200, answer)
+    w.show_notices()
+    assert len(seen) == 2 * len(NOTICE_SECTIONS) and all(seen)
+    assert not w.notice_due()

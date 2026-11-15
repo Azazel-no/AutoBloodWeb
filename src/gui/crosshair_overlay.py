@@ -9,6 +9,7 @@ from src.core.crosshair import DEFAULT_KEY, FORBIDDEN_KEYS, PALETTE, PRESETS, ce
 from src.core.match_reader import hud_visible, is_end_scoreboard, is_lobby, is_scoreboard, load_layout
 from src.core.own_perks import crop_own, load_matchers, read_own
 from src.core.screen_manager import ScreenError, WindowsBackend
+from src.core.overlay_capture import OverlayBackend
 from src.gui.match_overlay import KeyWatcher, PerkOverlay, foreground_handle, game_in_front, key_code, overlay_in_front
 from src.gui.widgets import BloodButton, ToggleSwitch
 
@@ -50,7 +51,7 @@ class CrosshairController(QObject):
     key_event = Signal(str)
 
     def __init__(self, root, automation_active, key=DEFAULT_KEY, backend=None, window=None, key_reader=None):
-        super().__init__();self.automation_active = automation_active;self.backend = backend or WindowsBackend();self.window = window or CrosshairWindow(root)
+        super().__init__();self.automation_active = automation_active;self.backend = backend or OverlayBackend();self.window = window or CrosshairWindow(root)
         self.root = root;self.layout = load_layout(root);self.key = key;self.key_reader = key_reader;self.shown = True;self.game_hwnd = None;self.watcher = None
         self.timer = QTimer(self);self.timer.setInterval(LOOK_MS);self.timer.timeout.connect(self.look);self.key_event.connect(self.toggle)
 
@@ -63,7 +64,7 @@ class CrosshairController(QObject):
             self.watcher = KeyWatcher(key_code(self.key), self.game_foreground, self.key_event.emit, read=self.key_reader);self.watcher.start()
 
     def disable(self):
-        self.timer.stop();self.window.hide()
+        self.timer.stop();getattr(self.window,'retire',self.window.hide)()
         if self.watcher:
             self.watcher.close();self.watcher = None
 
@@ -92,7 +93,8 @@ class CrosshairController(QObject):
             return self.window.hide()
         image, _ = self.backend.grab(window.client)
         if in_match(image, self.layout, self.root):
-            self.window.place(window.client)
+            from src.gui.match_overlay import MATCH
+            MATCH.note_hud();self.window.place(window.client)
         else:
             self.window.hide()
 

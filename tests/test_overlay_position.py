@@ -117,3 +117,66 @@ def test_without_the_mode_hide_really_hides(app):
     from PySide6.QtWidgets import QWidget
     window = CrosshairWindow(ROOT); window.setGeometry(0, 0, 20, 20); window.show(); window.hide()
     assert not QWidget.isVisible(window) and not window.blank
+
+
+@pytest.fixture
+def match_clock(monkeypatch):
+    from src.gui import match_overlay as mo
+    now = [1000.]
+    monkeypatch.setattr(mo, 'MATCH', mo.Match(clock=lambda: now[0]))
+    monkeypatch.setattr(mo, 'dbd_or_overlay_in_front', lambda: True)
+    mo.set_recording_friendly(False, lambda: False)
+    return now
+
+
+def test_in_a_match_windows_never_hide_and_go_away_only_after_it(app, match_clock):
+    """J7 (15.11): no overlay window appears or disappears over DBD during a match (NVIDIA + HDR stops recording)."""
+    from src.gui import match_overlay as mo
+    from src.gui.map_overlay import MapWindow
+    from PySide6.QtWidgets import QWidget
+    window = MapWindow(ROOT); window.setGeometry(0, 0, 50, 50)
+    window.show(); window.hide()                      # outside a match: really hidden
+    assert not QWidget.isVisible(window) and window.armed
+    mo.MATCH.note_hud(); mo.sweep_windows()           # match start: the window in use is mapped blank at once
+    assert QWidget.isVisible(window) and window.blank and not window.isVisible()
+    window.show(); window.hide()                      # in the match only the drawing changes
+    assert QWidget.isVisible(window) and window.blank
+    match_clock[0] += 30; mo.sweep_windows(); assert QWidget.isVisible(window)
+    match_clock[0] += 31; mo.sweep_windows()          # no HUD for over a minute: the match is over
+    assert not QWidget.isVisible(window) and not window.blank
+    mo.MATCH.note_hud(); mo.sweep_windows(); assert QWidget.isVisible(window)
+    mo.MATCH.note_lobby(); mo.sweep_windows(); assert not QWidget.isVisible(window)
+    window.retire(); mo.MATCH.note_hud(); mo.sweep_windows()   # switched off: not mapped at match starts
+    assert not QWidget.isVisible(window)
+    window.show(); mo.hide_all_overlays(); assert not QWidget.isVisible(window)   # automation still hides for real
+    window.deleteLater()
+
+
+def test_dbd_not_in_front_hides_even_in_a_match(app, match_clock, monkeypatch):
+    from src.gui import match_overlay as mo
+    from src.gui.crosshair_overlay import CrosshairWindow
+    from PySide6.QtWidgets import QWidget
+    window = CrosshairWindow(ROOT); window.setGeometry(0, 0, 20, 20)
+    mo.MATCH.note_hud(); window.show(); window.hide(); assert window.blank
+    monkeypatch.setattr(mo, 'dbd_or_overlay_in_front', lambda: False)
+    mo.sweep_windows(); assert not QWidget.isVisible(window)
+    window.deleteLater()
+
+
+@pytest.mark.parametrize('width,height,ratio', [(1920, 1080, 1.), (2560, 1440, 1.25), (3840, 2160, 1.5), (1280, 720, 1.)])
+@pytest.mark.parametrize('size', ['normal', 'large'])
+def test_perk_window_is_only_as_large_as_its_clusters(app, width, height, ratio, size):
+    """J7: the perk window is a small strip around the three clusters, not half the screen."""
+    from src.gui.match_overlay import PerkOverlay
+    from src.core.match_reader import SLOTS
+    o = PerkOverlay(ROOT); o.size_name = size
+    client = SimpleNamespace(x=0, y=0, width=width, height=height)
+    o.layout_data = load_layout(ROOT); o.client = client; o.ratio = ratio
+    x0, y0, x1, y1 = o.cluster_bounds()
+    logical_w, logical_h = width / ratio, height / ratio
+    assert (x1 - x0) < logical_w * .12 and (y1 - y0) < logical_h * .45
+    for slot in SLOTS:
+        (cx, cy), d, centres = o.cluster_geometry(slot)
+        for x, y in centres.values():
+            assert x0 <= x - d / 2 and x + d / 2 <= x1 and y0 <= y - d / 2 and y + d / 2 <= y1
+    o.deleteLater()

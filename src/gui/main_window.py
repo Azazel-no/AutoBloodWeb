@@ -368,7 +368,6 @@ class MainWindow(QMainWindow):
         self.run_mode.setCurrentIndex(1 if self.prefs.settings['run_mode']=='continuous' else 0)
         self.run_mode.currentIndexChanged.connect(self.automation_settings_changed);row.addWidget(self.run_mode);self.action_panel.layout().insertLayout(1,row)
         self.hotkeys_button=BloodButton(); self.hotkeys_button.clicked.connect(self.configure_hotkeys); layout.addWidget(self.hotkeys_button)
-        self.warnings_button=BloodButton(); self.warnings_button.clicked.connect(self.show_notices); layout.addWidget(self.warnings_button)
         layout.addLayout(priority_mode_row)  # Developer panel only: normal users get one behaviour.
         self.dry_run.toggled.connect(self.automation_settings_changed)
         self.auto_prestige.toggled.connect(self.automation_settings_changed)
@@ -422,22 +421,11 @@ class MainWindow(QMainWindow):
         height=min(screen.height()-130,max(600,screen.height()-142))
         self.resize(width,height); self.move(screen.right()-width+1,screen.top()+130)
         self.setMinimumSize(min(420,screen.width()),min(600,screen.height()))
-        self.settings_menu=self.menuBar().addMenu('')
-        self.recalibrate_action=self.settings_menu.addAction('');self.recalibrate_action.triggered.connect(self.open_calibration)
-        self.session_action=self.settings_menu.addAction('');self.session_action.triggered.connect(self.open_session_check)
-        self.overlay_key_action=self.settings_menu.addAction('');self.overlay_key_action.triggered.connect(self.choose_overlay_key)
-        self.recording_action=self.settings_menu.addAction('');self.recording_action.setCheckable(True)
-        self.recording_action.setChecked(self.prefs.settings.get('recording_friendly') is True)
-        self.recording_action.toggled.connect(self.set_recording_friendly)
+        # The old menu bar (hidden, so nothing opened it) is gone: its useful actions live on the Settings page.
         from src.gui.match_overlay import set_recording_friendly
         set_recording_friendly(self.prefs.settings.get('recording_friendly') is True,lambda:bool(self.auto_worker))
-        self.logs_action=self.settings_menu.addAction('')
-        self.logs_action.triggered.connect(lambda:QDesktopServices.openUrl(QUrl.fromLocalFile(str(self.root/'debug'))))
-        self.developer_action=self.settings_menu.addAction('');self.developer_action.setCheckable(True)
-        self.developer_action.triggered.connect(self.set_developer_mode)
         self.logs_button.hide()
         self.buttons['start'].primary=True
-        self.menuBar().hide()
         from src.gui.memes_page import MemeHub
         self.meme_hub=MemeHub(self.prefs.settings['memes'],self.save_preferences,None if preferences_path is None else self.preferences_path.parent/'meme_pack')
         self.build_navigation()
@@ -469,7 +457,7 @@ class MainWindow(QMainWindow):
             button=NavButton(kind);self.nav_group.addButton(button,index);column.addWidget(button);self.nav_buttons[kind]=button
         column.addStretch()
         self.nav_buttons['log']=NavButton('log');self.nav_buttons['log'].setCheckable(False)
-        self.nav_buttons['log'].clicked.connect(self.logs_action.trigger);column.addWidget(self.nav_buttons['log'])
+        self.nav_buttons['log'].clicked.connect(self.open_logs);column.addWidget(self.nav_buttons['log'])
         self.nav_group.idClicked.connect(self.open_page);self.nav_buttons['bloodweb'].setChecked(True)
         scroll=QScrollArea();scroll.setWidgetResizable(True);scroll.setFrameShape(QFrame.NoFrame);self.pages.addWidget(scroll)
         page=QWidget();scroll.setWidget(page);layout=QVBoxLayout(page);layout.setContentsMargins(0,0,3,0);layout.setSpacing(10)
@@ -486,12 +474,31 @@ class MainWindow(QMainWindow):
         self.overlay_scale=QSlider(Qt.Horizontal);self.overlay_scale.setRange(50,200);self.overlay_scale.setSingleStep(5);self.overlay_scale.setValue(self.prefs.settings['overlay_scale'])
         self.overlay_scale_value=QLabel();self.overlay_scale_value.setFixedWidth(40);self.overlay_scale.valueChanged.connect(self.overlay_scale_changed)
         row.addWidget(self.overlay_scale,1);row.addWidget(self.overlay_scale_value);inner.addLayout(row)
+        self.recording_friendly=ToggleSwitch();self.recording_friendly.setChecked(self.prefs.settings.get('recording_friendly') is True)
+        self.recording_friendly.toggled.connect(self.set_recording_friendly);inner.addWidget(self.recording_friendly)
+        self.recording_note=QLabel();self.recording_note.setObjectName('muted');self.recording_note.setWordWrap(True);inner.addWidget(self.recording_note)
         layout.addWidget(card)
         card,inner=self.card();self.page_buttons={}
-        for key,action in (('page_hotkeys',self.configure_hotkeys),('page_notice',self.show_notices),('page_report_bug',self.report_bug)):
+        for key,action in (('page_hotkeys',self.configure_hotkeys),('page_report_bug',self.report_bug),
+                           ('recalibrate',self.open_calibration),('session_check',self.open_session_check)):
             button=BloodButton();button.setMinimumHeight(42);button.clicked.connect(action);inner.addWidget(button);self.page_buttons[key]=button
         self.page_developer=ToggleSwitch();self.page_developer.setChecked(self.prefs.settings['developer_mode'])
-        self.page_developer.clicked.connect(lambda:self.developer_action.trigger());inner.addWidget(self.page_developer)
+        self.page_developer.toggled.connect(self.set_developer_mode);inner.addWidget(self.page_developer)
+        # J8 (developer mode): which of our two suspects stops NVIDIA recording, the windows or the captures.
+        from src.core import overlay_capture
+        overlay_capture.configure(self.prefs.settings['capture_test'],self.prefs.settings['overlay_capture'])
+        self.capture_test_row=QWidget();row=QHBoxLayout(self.capture_test_row);row.setContentsMargins(0,0,0,0)
+        self.capture_test_label=QLabel();row.addWidget(self.capture_test_label);row.addStretch()
+        self.capture_test=QComboBox()
+        for mode in overlay_capture.MODES:self.capture_test.addItem('',mode)
+        self.capture_test.setCurrentIndex(self.capture_test.findData(self.prefs.settings['capture_test']))
+        self.capture_test.currentIndexChanged.connect(self.capture_settings_changed);row.addWidget(self.capture_test);inner.addWidget(self.capture_test_row)
+        self.overlay_capture_row=QWidget();row=QHBoxLayout(self.overlay_capture_row);row.setContentsMargins(0,0,0,0)
+        self.overlay_capture_label=QLabel();row.addWidget(self.overlay_capture_label);row.addStretch()
+        self.overlay_capture=QComboBox()
+        for method in overlay_capture.METHODS:self.overlay_capture.addItem('',method)
+        self.overlay_capture.setCurrentIndex(self.overlay_capture.findData(self.prefs.settings['overlay_capture']))
+        self.overlay_capture.currentIndexChanged.connect(self.capture_settings_changed);row.addWidget(self.overlay_capture);inner.addWidget(self.overlay_capture_row)
         inner.addWidget(self.topmost)
         layout.addWidget(card)
         self.ui_scale_note=QLabel();self.ui_scale_note.setObjectName('notice');self.ui_scale_note.setWordWrap(True);layout.addWidget(self.ui_scale_note)
@@ -676,8 +683,6 @@ class MainWindow(QMainWindow):
         self.page_buttons['page_report_bug'].setToolTip(t('report_bug_tip'))
         self.support_link.setText(f'<a href="#support" style="color:#ff7a86">{t("support_link")}</a>');self.support_text.setText(t('support_text'))
         self.support_copy.setText(t('support_copy'));self.support_warning.setText(t('support_warning'))
-        self.settings_menu.setTitle(t('settings_menu'));self.recalibrate_action.setText(t('recalibrate'))
-        self.session_action.setText(t('session_check'))
         self.overlay_position_label.setText(t('overlay_position'));self.overlay_scale_label.setText(t('overlay_scale'));self.overlay_scale.setToolTip(t('overlay_scale_hint'));self.overlay_scale_value.setText(f'{self.overlay_scale.value()} %')
         for index,key in enumerate(('left','right')):self.overlay_position.setItemText(index,t('overlay_position_'+key))
         self.ui_scale_note.setText(t('ui_scale_note'));self.about_title.setText(t('about_title'));self.about_text.setText((t('about_text')+'<br>'+t('about_otz')).replace('<a ','<a style="color:#ff7a86" '));self.reset_button.setToolTip(t('reset_recommended'));self.reset_button.setAccessibleName(t('reset_recommended'));self.language_label.setText(t('language'));self.clear_button.setToolTip(t('clear'));self.clear_button.setAccessibleName(t('clear'))
@@ -694,7 +699,7 @@ class MainWindow(QMainWindow):
         self.purchase_mode.setItemText(2,t('repeat_clicks'))
         self.hold_duration.setToolTip(t('hold_seconds'))
         self.mode_label.setText(t('hotkeys_v3',**self.prefs.settings['hotkeys'])); self.mode_label.setWordWrap(True)
-        self.hotkeys_button.setText(t('hotkey_settings')); self.warnings_button.setText(t('warnings_button'))
+        self.hotkeys_button.setText(t('hotkey_settings'))
         self.session_button.setText(t('restore_input_method' if not self.calibration and self.prefs.recovery_calibration() else 'session_check'));self.delay_label.setText(t('startup_delay'))
         self.transition_timeout_label.setText(t('transition_timeout'))
         self.detailed_diagnostics.setText(t('detailed_diagnostics'))
@@ -703,13 +708,17 @@ class MainWindow(QMainWindow):
         self.turbo_burst.setText(t('turbo_burst'));self.turbo_burst.setToolTip(t('turbo_burst_hint'))
         self.native_chain.setText(t('native_chain'));self.native_chain.setToolTip(t('native_chain_hint'))
         self.match_overlay.setText(t('match_overlay'));self.match_overlay.setToolTip(t('match_overlay_hint'))
-        self.overlay_key_action.setText(t('overlay_key'))
         self.overlay_size_label.setText(t('overlay_size'));self.overlay_size.setItemText(0,t('overlay_size_large'));self.overlay_size.setItemText(1,t('overlay_size_normal'))
         self.level_limit_label.setText(t('level_limit_label'));self.level_limit.setSpecialValueText(t('level_limit_none'))
         self.level_limit.setToolTip(t('level_limit_hint'))
         self.start_with_dbd.setText(t('start_with_dbd'));self.start_with_dbd.setToolTip(t('start_with_dbd_hint'))
-        self.recording_action.setText(t('recording_friendly'));self.recording_action.setToolTip(t('recording_friendly_hint'))
-        self.logs_action.setText(t('logs'));self.developer_action.setText(t('developer_mode'))
+        self.recording_friendly.setText(t('recording_friendly'));self.recording_friendly.setToolTip(t('recording_friendly_hint'))
+        self.recording_note.setText(t('recording_friendly_note'))
+        self.capture_test_label.setText(t('capture_test'));self.capture_test.setToolTip(t('capture_test_hint'))
+        for index,mode in enumerate(('normal','no_capture','no_windows')):self.capture_test.setItemText(index,t('capture_test_'+mode))
+        self.overlay_capture_label.setText(t('overlay_capture'));self.overlay_capture.setToolTip(t('overlay_capture_hint'))
+        for index,method in enumerate(('gdi','wgc')):self.overlay_capture.setItemText(index,t('overlay_capture_'+method))
+        self.nav_buttons['log'].setToolTip(t('nav_log_tip'))
         self.hotkey_hint.setText(t('hotkey_hint',**self.prefs.settings['hotkeys']))
         self.experimental_persistent.setText(t('experimental_persistent'));self.experimental_persistent.setToolTip(t('experimental_persistent_hint'))
         self.shadow_planner.setText(t('shadow_planner'));self.shadow_planner.setToolTip(t('shadow_planner_hint'))
@@ -945,8 +954,8 @@ class MainWindow(QMainWindow):
 
     def set_busy(self,busy):
         if busy and self.info_card is not None:self.info_card.hide()  # Must not cover the Bloodweb.
-        self.recalibrate_action.setEnabled(not busy)
-        self.session_action.setEnabled(not busy)
+        self.page_buttons['recalibrate'].setEnabled(not busy)
+        self.page_buttons['session_check'].setEnabled(not busy)
         for widget in (self.test_button,self.scan_button,self.sample_button,self.samples,self.role,self.transition_timeout,self.fast_early_levels,self.fast_opening,self.experimental_persistent,self.shadow_planner,self.physical_f9_check,self.auto_prestige): widget.setEnabled(not busy)
         self.buttons['stop'].setEnabled(busy)
         self.buttons['start'].setEnabled(not busy)
@@ -1181,6 +1190,11 @@ class MainWindow(QMainWindow):
         self.confirm_button.setEnabled(False); self.save_preferences()
         self.status_key='ready'; self.error_message=''; self.refresh_status()
 
+    def capture_settings_changed(self):
+        from src.core import overlay_capture
+        self.prefs.settings['capture_test']=self.capture_test.currentData();self.prefs.settings['overlay_capture']=self.overlay_capture.currentData()
+        overlay_capture.configure(self.prefs.settings['capture_test'],self.prefs.settings['overlay_capture']);self.save_preferences()
+
     def set_recording_friendly(self,enabled):
         from src.gui.match_overlay import set_recording_friendly
         self.prefs.settings['recording_friendly']=bool(enabled);set_recording_friendly(enabled);self.save_preferences()
@@ -1191,12 +1205,12 @@ class MainWindow(QMainWindow):
         A normal user's Start must buy: the hidden dry-run and test-run choices
         are reset whenever developer mode is off."""
         enabled=bool(enabled)
-        self.developer_action.setChecked(enabled)
         if hasattr(self,'page_developer'):self.page_developer.setChecked(enabled)
         for widget in (self.topmost,self.buttons['pause'],self.scan_button,self.test_button,self.run_mode_label,self.run_mode,
                 self.display_card,self.counters_card,self.preview_card,self.debug_card,self.mode_label,self.library_count):
             widget.setVisible(enabled)
-        self.recalibrate_action.setVisible(enabled);self.session_action.setVisible(enabled)
+        self.page_buttons['recalibrate'].setVisible(enabled);self.page_buttons['session_check'].setVisible(enabled)
+        if hasattr(self,'capture_test_row'):self.capture_test_row.setVisible(enabled);self.overlay_capture_row.setVisible(enabled)
         if not enabled and not (self.worker or self.auto_worker):
             self.dry_run.setChecked(False);self.run_mode.setCurrentIndex(self.run_mode.findData('continuous'))
         if save:
@@ -1252,17 +1266,10 @@ class MainWindow(QMainWindow):
         if not (game_running() if running is None else running):
             log.info('DBD closed: exiting the tray app');self.exit_app()
 
-    def choose_overlay_key(self):
-        from PySide6.QtWidgets import QInputDialog
-        from src.gui.match_overlay import key_code
-        key,ok=QInputDialog.getText(self,self.locale.text('overlay_key'),self.locale.text('overlay_key_prompt'),text=self.prefs.settings['overlay_key'])
-        if not ok:return
-        try:key_code(key)
-        except (ValueError,KeyError):return self.diagnostics.setText(self.locale.text('overlay_key_invalid'))
-        self.prefs.settings['overlay_key']=key.strip().upper();self.save_preferences()
-        controller=getattr(self,'overlay_controller',None)
-        if controller and controller.mode!='off':
-            controller.disable();controller.key=self.prefs.settings['overlay_key'];controller.enable()
+    def open_logs(self):
+        """The sidebar's ≡ button: the folder with app.log and the run reports."""
+        folder=self.root/'debug';folder.mkdir(parents=True,exist_ok=True)
+        QDesktopServices.openUrl(QUrl.fromLocalFile(str(folder)))
 
     def level_limit_changed(self,value):
         self.prefs.settings['max_levels']=int(value);self.save_preferences()
@@ -1691,9 +1698,9 @@ class MainWindow(QMainWindow):
         apply.clicked.connect(commit); dialog.exec()
 
     def notice_due(self):
-        """A dismissed notice comes back when its content version changes."""
+        """One-time notice (ban risk etc.): shown until acknowledged, again only when its content version changes."""
         from src.core.notice_strings import NOTICE_VERSION
-        return not self.prefs.data.get('hide_notices') or self.prefs.data.get('notice_version')!=NOTICE_VERSION
+        return self.prefs.data.get('notice_version')!=NOTICE_VERSION
 
     def show_notices(self):
         dialog=QDialog(self); dialog.setWindowTitle(self.locale.text('startup_notice')); layout=QVBoxLayout(dialog)
@@ -1701,10 +1708,11 @@ class MainWindow(QMainWindow):
         for key in NOTICE_SECTIONS:
             title=QLabel(self.locale.text(key+'_title')); title.setStyleSheet('font-weight:700;font-size:15px;'); layout.addWidget(title)
             label=QLabel(self.locale.text(key)); label.setWordWrap(True); layout.addWidget(label)
-        hide=QCheckBox(self.locale.text('warning_hide')); hide.setChecked(bool(self.prefs.data.get('hide_notices'))); layout.addWidget(hide)
+        # Until 15.11 a QCheckBox here (never imported) raised NameError, so this dialog never opened, from the
+        # Settings button or at first launch. The notice is now one-time: "I understand" records its version.
         ack=BloodButton(self.locale.text('warning_ack')); layout.addWidget(ack)
         def accept():
-            self.prefs.data['hide_notices']=hide.isChecked(); self.prefs.data['notice_version']=NOTICE_VERSION; self.save_preferences(); dialog.accept()
+            self.prefs.data['hide_notices']=True; self.prefs.data['notice_version']=NOTICE_VERSION; self.save_preferences(); dialog.accept()
         ack.clicked.connect(accept); dialog.resize(620,640); dialog.exec()
 
     def review_node(self,row,column=0):
