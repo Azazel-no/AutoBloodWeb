@@ -184,7 +184,7 @@ def test_retention_cache_notices_new_pin_and_missing_addon_sources(library,tmp_p
     store.max_runs=1;store.prune()
     assert pinned.is_file()
     extras=[e for e in library.entries if e.id.startswith('wiki_survivor_common_addons_')]
-    assert len(extras)==22 and len({e.fingerprint for e in extras})==22
+    assert len(extras)==43 and len({e.fingerprint for e in extras})==43   # 22 + 21 activated in 1.0.1
     assert all(e.id in library.display_images for e in extras)
 
 

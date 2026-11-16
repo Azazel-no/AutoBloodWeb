@@ -207,7 +207,7 @@ def test_event_catalog_scope_hashes_and_preserved_ids(root,library):
     catalog=json.loads((root/'assets/event_catalog.json').read_text(encoding='utf-8'))
     assert len(catalog['records'])==34
     assert {category:sum(r['category']==category for r in catalog['records']) for category in ('items','addons','offerings')}=={'items':16,'addons':3,'offerings':15}
-    assert len(library.entries)==1114 and len(library.event_metadata)==49  # 1094 + 20 Terrifier add-ons.
+    assert len(library.entries)==1135 and len(library.event_metadata)==49  # 1094 + 20 Terrifier add-ons + 21 survivor add-ons (1.0.1).
     snapshot=json.loads((root/'debug/v48/baseline_sources.json').read_text(encoding='utf-8'));current={e.id:e for e in library.entries}
     from dataclasses import asdict
     assert all(asdict(current[entry['id']])==entry for entry in snapshot['entries'])

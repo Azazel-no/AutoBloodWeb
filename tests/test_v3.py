@@ -24,7 +24,8 @@ def test_manual_icon_precision_and_geometry_preserved(detector,root):
     assert report['counts']['false_positives']==0
     assert report['counts']['correct_ids']>=26
     # Four formerly unlabelled slots now have visually confirmed Wiki IDs.
-    assert report['counts']['known_icons']==32 and report['counts']['labeled_icons']==39
+    # 1.0.1 added the missing survivor add-ons: three formerly unknown slots are Rubber Gloves (x2) and a green add-on.
+    assert report['counts']['known_icons']==35 and report['counts']['labeled_icons']==39
 
 
 def test_ring_order_adapts_and_starts_at_twelve():
@@ -138,8 +139,9 @@ def test_per_node_debug_contains_original_normalized_and_acceptance_reason(root,
     for n in result.nodes:
         assert Path(n.crop_path).is_file() and Path(n.normalized_path).is_file()
         assert n.match_reason and len(n.candidates)<=3
-    false_hand=min(result.nodes,key=lambda n:np.hypot(n.x-357,n.y-593))
-    assert false_hand.icon_id is None and false_hand.match_reason=='contour_mismatch'
+    # Once called a false hand: it is Rubber Gloves, in the library since 1.0.1 (its 21 survivor add-ons).
+    gloves=min(result.nodes,key=lambda n:np.hypot(n.x-357,n.y-593))
+    assert gloves.icon_id=='wiki_survivor_common_addons_c32d6f22f564' and gloves.match_reason=='accepted'
 
 
 def test_mouse_release_survives_a_failed_audit_callback():
