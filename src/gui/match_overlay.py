@@ -21,7 +21,8 @@ from PySide6.QtGui import QColor, QFont, QGuiApplication, QImage, QPainter, QPai
 from PySide6.QtWidgets import QWidget
 from src.core.display_mode import exclusive_fullscreen
 from src.core.hotkey_config import parse_hotkey
-from src.core.match_reader import EMPTY, SLOTS, Geometry, right_centre_x, hud_portraits, hud_visible, supported_ui_scale, is_end_scoreboard, is_lobby, is_scoreboard, find_scoreboard, fit_hud, with_hud_fit, scoreboard_evidence, load_layout, read_tab, score_rows, scoreboard_signature
+from src.core import match_identity
+from src.core.match_reader import EMPTY, SLOTS, Geometry, right_centre_x, hud_portraits, hud_visible, supported_ui_scale, is_end_scoreboard, is_lobby, is_scoreboard, find_scoreboard, fit_hud, with_hud_fit, lobby_evidence, scoreboard_evidence, load_layout, read_tab, score_rows, scoreboard_signature, tab_rows_identity
 from src.core.match_state import HudCache, MatchState
 from src.core.nicknames import NicknameOcr, hud_strips, name_scores, read_hud_names, read_tab_names
 from src.core.screen_manager import ScreenError, WindowsBackend
@@ -54,14 +55,22 @@ class KeyWatcher:
         user=ctypes.windll.user32
         self.read=read or (lambda code:bool(user.GetAsyncKeyState(code)&0x8000))
         self.stop=threading.Event();self.down=False;self.failures=0;self.backoff=1.
+        self.presses=0;self.steps=0;self.away=0  # K1 diagnostics: presses seen in DBD; reads while DBD was not in front
         self.thread=threading.Thread(target=self.run,name='OverlayKey',daemon=True)
 
     def start(self):self.thread.start()
 
     def step(self):
-        down=self.is_game_foreground() and self.read(self.vk)
+        front=self.is_game_foreground();down=front and self.read(self.vk)
+        self.steps+=1;self.away+=not front
         if down!=self.down:
-            self.down=down;self.callback('key_down' if down else 'key_up')
+            self.down=down;self.presses+=down;self.callback('key_down' if down else 'key_up')
+
+    def stats(self):
+        return dict(alive=self.thread.is_alive(),presses=self.presses,dbd_not_in_front=f'{self.away/max(1,self.steps):.0%}',errors=self.failures)
+
+    def restart_stats(self):
+        self.presses=0;self.steps=0;self.away=0
 
     def run(self):
         """Never dies on an error: each new error is logged once, then it waits 1 s and goes on."""
@@ -168,14 +177,20 @@ class Match:
     HOLD=60.
     def __init__(self,clock=time.monotonic):
         self.clock=clock;self.hud_at=None;self.epoch=0
+        self.role=None   # L2/L3 (16.11): 'survivor' or 'killer' from the player's own perks, once any overlay read them.
 
     def note_hud(self):
-        if not self.active():self.epoch+=1;log.info('Overlay windows: match on (no show/hide until it ends)')
+        if not self.active():self.epoch+=1;self.role=None;log.info('Overlay windows: match on (no show/hide until it ends)')
         self.hud_at=self.clock()
+
+    def note_role(self,role):
+        """The role read from the player's own perks (no capture of its own); the first one of a match counts."""
+        if role and self.role is None and self.active():
+            self.role=role;log.info('Overlay windows: %s match',role)
 
     def note_lobby(self):
         if self.hud_at is not None:log.info('Overlay windows: match over (lobby)')
-        self.hud_at=None
+        self.hud_at=None;self.role=None
 
     def active(self):
         return self.hud_at is not None and self.clock()-self.hud_at<=self.HOLD
@@ -193,17 +208,30 @@ def keep_mapped():
 _SWEEP={}
 
 
+def role_allows(window):
+    """L2/L3: a window made for one role (map: survivor, crosshair: killer) is never mapped in the other's match."""
+    roles=getattr(window,'roles',None)
+    return roles is None or MATCH.role in roles
+
+
 def sweep_windows():
     """Once a second, on the GUI thread: blank windows that no longer need to stay mapped are hidden; at the
-    start of a match the overlays that were in use are mapped (blank) at once, so none appears later in it."""
+    start of a match the overlays that were in use are mapped (blank) at once, so none appears later in it.
+    A window for one role waits until the match's role is known (about a second) and then maps or stays away."""
     try:keep=keep_mapped()
     except Exception:return
     epoch=MATCH.epoch;start=keep and MATCH.active() and _SWEEP.get('epoch')!=epoch
     if MATCH.active():_SWEEP['epoch']=epoch
     for window in list(_WINDOWS):
         try:
-            if window.blank and not keep and QWidget.isVisible(window):window.blank=False;QWidget.hide(window);window.log_change('hidden (match over)')
-            elif start and window.armed and not QWidget.isVisible(window):window.map_blank('match start')
+            roles=getattr(window,'roles',None)
+            if window.blank and QWidget.isVisible(window) and (not keep or not role_allows(window) and MATCH.role is not None):
+                window.blank=False;QWidget.hide(window);window.log_change('hidden (match over)' if not keep else f'hidden ({MATCH.role} match)')
+            elif roles is None:
+                if start and window.armed and not QWidget.isVisible(window):window.map_blank('match start')
+            elif (keep and MATCH.active() and window.armed and not QWidget.isVisible(window) and MATCH.role in roles
+                  and getattr(window,'mapped_epoch',None)!=epoch):
+                window.mapped_epoch=epoch;window.map_blank(f'{MATCH.role} match start')
         except RuntimeError:pass
 
 
@@ -287,6 +315,7 @@ class PerkOverlay(QWidget):
     def show(self):
         from src.core.overlay_capture import windows_allowed
         if not windows_allowed():return self.suppressed()
+        if MATCH.role is not None and not role_allows(self):return self.hide()   # Controllers wait for the role; this is the backstop.
         if not QWidget.isVisible(self):self.log_change('shown')
         self.armed=True;self.blank=False;super().show();self.update()
 
@@ -449,10 +478,13 @@ class MatchOverlayController(QObject):
     status=Signal(str)
     finished_read=Signal(object,object)
     finished_score=Signal(object)
+    finished_identity=Signal(object)
     key_event=Signal(str)
     scoreboard_seconds=1.5  # How long after the key goes down the scoreboard may take to appear.
     followup_seconds=3.     # How long after Tab closes fresh HUD frames are tried.
     error_seconds=10.       # An error is shown this long unless the overlay works again.
+    identity_seconds=3.     # K1: while locked, the HUD is compared with the locked match this often (on the poll's frame).
+    absent_report=10.       # K1: while the HUD is gone, its lobby evidence is logged this often.
 
     def __init__(self,root,automation_active,backend=None,matcher_factory=None,overlay=None,key='TAB',key_reader=None,log_dir=None,
                  size='large',ocr=None,foreground_window=None,is_killer=lambda:False,own_reader=None):
@@ -468,6 +500,10 @@ class MatchOverlayController(QObject):
         self.game_hwnd=None;self.last_error=None;self.last_error_at=-1e9;self.errors_seen=set();self.restarts=0
         self.log_dir=Path(log_dir) if log_dir else self.root/'debug/overlay'
         self.finished_read.connect(self.read_done);self.finished_score.connect(self.score_done);self.key_event.connect(self.handle_action)
+        self.finished_identity.connect(self.identity_done)
+        # K1 (15.11): the locked match's identity; a new match unlocks without the lobby.
+        self.identity=None;self.identity_busy=False;self.identity_strikes=0;self.identity_unknown=0;self.next_identity=0.
+        self.suspect=False;self.tab_check=False;self.away_since=None;self.hud_gone_since=None;self.next_absent_report=0.
         self.presence=QTimer(self);self.presence.setInterval(500);self.presence.timeout.connect(self.poll)
         self.scoreboard_wait=QTimer(self);self.scoreboard_wait.setInterval(50);self.scoreboard_wait.timeout.connect(self.look_for_scoreboard)
         self.followup=QTimer(self);self.followup.setInterval(150);self.followup.timeout.connect(self.followup_tick)
@@ -525,8 +561,8 @@ class MatchOverlayController(QObject):
 
     def enter_lobby(self):
         """Lobby or loadout: unlock, hide and forget everything; wait for the next match."""
-        if self.phase!='lobby':self.record('lobby_seen',previous=self.phase)
-        MATCH.note_lobby()
+        if self.phase!='lobby':self.record('lobby_seen',previous=self.phase,key_watcher=self.watcher_stats(restart=True))
+        MATCH.note_lobby();self.forget_identity()
         self.phase='lobby';self.reset();self.cache.clear();self.scoreboard_wait.stop();self.match_role=None
         self.hud_fitted=False;self.hud_scale=1.;self.layout=self.base_layout  # The UI scale can change between matches.
         self.status.emit('overlay_lobby')
@@ -534,8 +570,109 @@ class MatchOverlayController(QObject):
     def check_lock(self):
         teammates=sum(not r.own for r in self.session['rows']) if self.session else 3
         if self.phase!='locked' and self.state.all_known(teammates):
-            self.phase='locked';self.record('perks_locked',assigned=self.assigned_log())
+            self.phase='locked';self.lock_identity()
+            self.record('perks_locked',assigned=self.assigned_log(),identity=self.identity_log())
             self.status.emit('overlay_locked')
+
+    # --- K1: a new match is recognised without the lobby ---------------------------------------------
+    def watcher_stats(self,restart=False):
+        stats=self.watcher.stats() if self.watcher is not None and hasattr(self.watcher,'stats') else None
+        if restart and stats is not None:self.watcher.restart_stats()
+        return stats
+
+    def forget_identity(self):
+        self.identity=None;self.identity_strikes=0;self.identity_unknown=0;self.suspect=False;self.tab_check=False
+
+    def lock_identity(self):
+        self.identity=match_identity.identity_from_session(self.state.slots,self.session)
+        self.identity['epoch']=MATCH.epoch;self.identity_strikes=0;self.identity_unknown=0;self.suspect=False
+        self.next_identity=time.monotonic()+self.identity_seconds
+
+    def identity_log(self):
+        if not self.identity:return None
+        return dict(hud={f'slot{s+1}':v[:2] for s,v in sorted(self.identity['names'].items())},
+                    tab={f'row{r+1}':v[:1] for r,v in sorted(self.identity['tab_names'].items())},
+                    looks={f'slot{s+1}':len(v) for s,v in sorted(self.identity['looks'].items())})
+
+    def unlock(self,event,**evidence):
+        """The locked perks belong to another match: forget them and read the next Tab normally."""
+        self.record(event,previous_identity=self.identity_log(),key_watcher=self.watcher_stats(),**evidence)
+        log.info('Teammate perks: %s, the previous match\'s perks are cleared',event.replace('_',' '))
+        self.reset();self.cache.clear();self.forget_identity();self.phase='match';self.match_role=None
+        self.hud_fitted=False;self.hud_scale=1.;self.layout=self.base_layout
+        self.status.emit('overlay_reading')
+
+    def match_over(self,why):
+        """K1.4: the end-game scoreboard: the perks are cleared at once; Tab does nothing until the next HUD."""
+        self.record('match_over',why=why,previous=self.phase,key_watcher=self.watcher_stats(restart=True))
+        self.reset();self.cache.clear();self.forget_identity();self.scoreboard_wait.stop();self.phase='ended'
+
+    def check_identity(self,image,force=False):
+        """Every few seconds while locked, on the frame poll() already has: nicknames (OCR) and portraits of the HUD."""
+        now=time.monotonic()
+        if self.identity is None or self.identity_busy or (now<self.next_identity and not force):return
+        self.next_identity=now+self.identity_seconds;self.identity_busy=True
+        looks=hud_portraits(image,self.layout);strips=hud_strips(image,self.layout) if getattr(self.ocr,'ready',False) else None
+        threading.Thread(target=self.identity_worker,args=('hud',looks,strips,self.identity),name='OverlayIdentity',daemon=True).start()
+
+    def identity_worker(self,kind,looks,strips,identity,image=None):
+        try:
+            if kind=='hud':
+                names=read_hud_names(self.ocr,strips) if strips is not None else {}
+                verdict,evidence=match_identity.compare_hud(identity,names,looks)
+            else:
+                own,portraits=tab_rows_identity(image,self.layout)
+                rows=[r for r in range(len(self.layout['tab']['rows_y'])) if r!=own and r not in identity.get('own_rows',())]
+                names=read_tab_names(self.ocr,image,self.layout,rows) if getattr(self.ocr,'ready',False) else {}
+                verdict,evidence=match_identity.compare_tab(identity,{r:v for r,v in names.items() if r in rows},{r:portraits[r] for r in rows})
+            result=(kind,identity,verdict,evidence,image)
+        except Exception as exc:
+            log.exception('Overlay identity check failed');result=exc
+        self.finished_identity.emit(result)
+
+    @guarded
+    def identity_done(self,result):
+        self.identity_busy=False
+        if isinstance(result,Exception):return self.failed('identity',result)
+        kind,identity,verdict,evidence,image=result
+        if identity is not self.identity or self.phase!='locked' or self.automation_active():return
+        if kind=='tab':return self.tab_identity_done(verdict,evidence,image)
+        if verdict=='different':
+            self.identity_strikes+=1;self.identity_unknown=0
+            self.record('identity_check',verdict=verdict,strike=self.identity_strikes,slots=evidence)
+            if self.identity_strikes>=match_identity.CHECKS_TO_UNLOCK:self.unlock('new_match_without_lobby',slots=evidence)
+        elif verdict=='same':
+            if self.suspect:
+                self.record('identity_check',verdict=verdict,after='hud_gap',slots=evidence);self.suspect=False
+                if self.state.slots and self.window is not None:self.show()
+            self.identity_strikes=0;self.identity_unknown=0
+        else:
+            self.identity_strikes=0;self.identity_unknown+=1
+            if self.suspect:
+                self.record('identity_check',verdict=verdict,after='hud_gap',slots=evidence)
+                # After a long HUD gap nothing confirms the old match: a re-read costs one Tab press, stale perks cost more.
+                if self.identity_unknown>=match_identity.CHECKS_TO_UNLOCK:self.unlock('new_match_identity_unknown',slots=evidence)
+
+    def check_tab_locked(self,window):
+        """K1.3: a Tab press while locked: the poll's own frame (no burst) is compared with the locked scoreboard."""
+        try:image,_=self.backend.grab(window.client)
+        except ScreenError:return
+        if not is_scoreboard(image,self.layout):return
+        self.tab_check=False;self.identity_busy=True;self.window=window
+        threading.Thread(target=self.identity_worker,args=('tab',None,None,self.identity,image.copy()),name='OverlayIdentity',daemon=True).start()
+
+    def tab_identity_done(self,verdict,evidence,image):
+        if verdict=='same' or (verdict=='unknown' and not self.suspect):
+            self.record('tab_locked_same_match',verdict=verdict,rows=evidence)
+            if verdict=='same' and self.suspect:self.suspect=False
+            return
+        # This match's recent HUD looks only (the cache may still hold the previous match's for a while).
+        candidates=self.cache.candidates(max_age=20.);strips=self.cache.name_strips()
+        self.unlock('new_match_at_tab',verdict=verdict,rows=evidence)
+        if self.busy:return
+        self.record('tab_pressed',phase=self.phase,role=self.match_role,after='unlock');self.key_down_at=time.monotonic()
+        self.busy=True;self.session=None
+        threading.Thread(target=self.read_worker,args=(image,candidates,strips),name='OverlayRead',daemon=True).start()
 
     def game_foreground(self):
         """Called from the key watcher thread: window handles and process names only, no screen reads."""
@@ -594,8 +731,9 @@ class MatchOverlayController(QObject):
             if action=='key_up':self.show_test_cluster()
             return
         if action in ('key_down','capture'):
-            # Locked for this match, or in the lobby: a Tab press does nothing, not even a capture.
-            if self.phase in ('locked','lobby'):return self.tab_ignored(self.phase)
+            # Locked for this match, in the lobby or after the end scoreboard: a Tab press reads no perks.
+            if self.phase=='locked' and action=='key_down' and self.identity is not None:self.tab_check=True   # K1.3: same match?
+            if self.phase in ('locked','lobby','ended'):return self.tab_ignored(self.phase)
             if self.killer_match():return self.tab_ignored('killer_match')  # Killers can't see survivor perks on Tab.
             if exclusive_fullscreen():self.tab_ignored('exclusive_fullscreen');return self.status.emit('overlay_exclusive_fullscreen')
             try:self.hud_before=self.grab()  # Taken as the key goes down, before Tab covers the HUD.
@@ -817,9 +955,15 @@ class MatchOverlayController(QObject):
             self.game_hwnd=None;self.reset();return
         self.game_hwnd=window.hwnd
         if not (window.foreground or overlay_in_front()):
+            if self.away_since is None and self.phase in ('match','locked'):
+                self.away_since=time.monotonic();self.record('game_not_in_front',phase=self.phase,foreground=window_process(foreground_handle()) or '?')
             self.overlay.hide();return
+        if self.away_since is not None:
+            self.record('game_in_front_again',phase=self.phase,seconds=round(time.monotonic()-self.away_since,1));self.away_since=None
         if self.tab_open():
-            self.overlay.hide();return  # The scoreboard needs no clusters over it.
+            self.overlay.hide()  # The scoreboard needs no clusters over it.
+            if self.phase=='locked' and self.tab_check and not self.identity_busy and not self.automation_active():self.check_tab_locked(window)
+            return
         if self.phase=='lobby':  # Nothing changes here: look every 1.5 s instead of 0.5 s.
             self.lobby_ticks=(self.lobby_ticks+1)%3
             if self.lobby_ticks:return
@@ -830,23 +974,47 @@ class MatchOverlayController(QObject):
         self.update_hud_fit(image)
         # Escaped or dead, or the end-game table: hide, but keep the perks until the lobby.
         ended=is_end_scoreboard(image);visible=not ended and hud_visible(image,self.layout)
+        if ended and self.phase in ('match','locked'):return self.match_over('end_scoreboard')
         # The costly perk check is skipped when there are no nicknames and nothing to hide.
         present,role=(False,None) if ended or not (visible or self.overlay.isVisible()) else self.read_own(image)
         if not present or not visible:
             self.hud_missing=getattr(self,'hud_missing',0)+1
             if not present or self.hud_missing>=2:self.overlay.hide()
+            self.report_absent(image)
             return
-        self.hud_missing=0;MATCH.note_hud()
+        self.hud_missing=0;self.hud_gone_since=None;MATCH.note_hud()
+        if self.phase=='locked' and self.identity is not None:
+            if MATCH.epoch!=self.identity['epoch'] and not self.suspect:
+                # K1.2/K1.4: the match HUD was gone longer than Match.HOLD and is back: no stale perks over it, even
+                # for a second, until the HUD's nicknames say whether it is still the same match.
+                self.suspect=True;self.identity_unknown=0;self.identity['epoch']=MATCH.epoch
+                self.record('locked_hud_back_after_gap',hold=Match.HOLD);self.overlay.clear();self.cache.clear()
+                self.check_identity(image,force=True)
+            else:self.check_identity(image)
         if self.match_role is None and role:
             self.match_role=role;self.record('match_role',role=role)
+        MATCH.note_role(self.match_role)
         if self.killer_match():
             self.overlay.hide();return
-        if self.phase in ('lobby','unknown'):
-            self.record('match_detected',previous=self.phase);self.phase='match'
+        if self.phase in ('lobby','unknown','ended'):
+            self.record('match_detected',previous=self.phase,key_watcher=self.watcher_stats());self.phase='match'
             self.status.emit('overlay_reading')
             # J7: the perk window is mapped (blank) now, at match start, not on the first Tab read later in it.
             if isinstance(self.overlay,QWidget) and not QWidget.isVisible(self.overlay) and keep_mapped():
                 self.overlay.place(window.client,self.layout);self.overlay.map_blank('match start')
-        if self.phase!='locked':self.cache.add(hud_portraits(image,self.layout),hud_strips(image,self.layout))
-        # The perks stay until the lobby is seen again: no portrait-based 'match ended' guess.
-        if self.state.slots and not self.overlay.isVisible():self.window=window;self.show()
+        # K1: kept while locked too (cheap crops of this frame), so a Tab that unlocks can pair at once.
+        self.cache.add(hud_portraits(image,self.layout),hud_strips(image,self.layout))
+        # The perks stay until the lobby, the end scoreboard or another match's HUD is seen.
+        if self.state.slots and not self.suspect and not self.overlay.isVisible():self.window=window;self.show()
+
+    def report_absent(self,image):
+        """K1: while the HUD is gone after a match, how close the frame is to the lobby (is_lobby's evidence), every 10 s."""
+        if self.phase not in ('match','locked'):return
+        now=time.monotonic()
+        if self.hud_gone_since is None:self.hud_gone_since=now;self.next_absent_report=now+self.absent_report;return
+        if now<self.next_absent_report:return
+        self.next_absent_report=now+self.absent_report
+        try:evidence=lobby_evidence(image,self.layout)
+        except Exception:evidence=None
+        self.record('hud_absent',phase=self.phase,seconds=round(now-self.hud_gone_since),
+                    lobby={k:round(v,2) for k,v in evidence.items()} if evidence else None)

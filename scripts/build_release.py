@@ -34,6 +34,12 @@ EXCLUDES = ('tkinter', 'pytest', '_pytest', 'IPython', 'matplotlib', 'scipy', 'p
             'PySide6.Qt3DCore', 'PySide6.QtCharts', 'PySide6.QtDataVisualization', 'PySide6.QtSql', 'PySide6.QtTest',
             'PySide6.QtDBus', 'PySide6.QtDesigner', 'PySide6.QtHelp', 'PySide6.QtPrintSupport', 'PySide6.QtXml',
             'PySide6.QtConcurrent', 'PySide6.QtStateMachine', 'PySide6.QtUiTools')
+# L4 (v1.1.0): the Sable Detector stays in the repository for v1.2 but is not shipped. src.core.features
+# keeps it off in frozen builds; its modules, its outfit library and its HUD portraits are left out here,
+# and its person model (data/models, downloaded on first use) was never bundled.
+NOT_SHIPPED_MODULES = ('src.gui.sable_overlay', 'src.gui.sable_labeler', 'src.core.sable_detector',
+                       'src.core.sable_frames', 'src.core.sable_model')
+NOT_SHIPPED_ASSETS = ('assets/sable/', 'assets/ui/hud_portraits/')
 # Files shipped beside the executable (the app reads them relative to its folder).
 DATA_FILES = ('data/native_price_locator.json', 'data/native_total_price_locator.json', 'data/wiki_sources.json',
               'src/core/ocr_helper.ps1', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'README.md')
@@ -140,7 +146,7 @@ def pyinstaller():
             '--collect-binaries', 'windows_capture', '--hidden-import', 'PySide6.QtSvg', '--noupx']
     for module in RUNTIME_SCRIPTS:
         args += ['--hidden-import', f'scripts.{module}']
-    for module in EXCLUDES:
+    for module in EXCLUDES + NOT_SHIPPED_MODULES:
         args += ['--exclude-module', module]
     args.append(str(ROOT / 'scripts/windows_entry.py'))
     subprocess.run(args, cwd=ROOT, check=True)
@@ -198,7 +204,7 @@ def copy_data():
     skip = unreferenced_icon_files()
     for folder in DATA_DIRS:
         for rel in tracked(folder):
-            if rel in skip:
+            if rel in skip or rel.startswith(NOT_SHIPPED_ASSETS):
                 continue
             target = APP / rel
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -210,6 +216,19 @@ def copy_data():
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / rel, target)
     return refs
+
+
+def check_not_shipped():
+    """Fails the build if any part of the Sable Detector made it into the app folder."""
+    import re
+    found = [str(p.relative_to(APP)) for p in APP.rglob('*')
+             if re.match(r'sable(?!_ward\.png$)', p.name.lower()) or p.suffix.lower() == '.onnx']
+    # Python modules are packed into the PYZ archive: its table of contents lists them.
+    toc = BUILD / 'work' / NAME / 'PYZ-00.toc'
+    if toc.is_file():
+        found += re.findall(r"'(src\.(?:gui|core)\.sable_\w+)'", toc.read_text(encoding='utf-8', errors='replace'))
+    if found:
+        raise SystemExit(f'Not shipped in this release, but found in the build: {found[:10]}')
 
 
 def folder_size(path):
@@ -252,6 +271,7 @@ def main():
     pyinstaller()
     print(f'Dropped unused binaries: {drop_unused() / 1e6:.1f} MB')
     refs = copy_data()
+    check_not_shipped()
     size = folder_size(APP)
     print(f'App folder: {size / 1e6:.1f} MB, {len(refs)} reference files')
     if size > 300e6:

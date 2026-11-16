@@ -54,3 +54,77 @@ def test_tab_opens_with_real_strings_and_saves_per_preset(tmp_path):
     page.sliders['gap'][0].setValue(9)
     assert seen[-1]['gap']==9 and settings['overrides']['classic_gap']['gap']==9 and 'F10' in page.key_label.text()
     page.reset_preset();assert 'classic_gap' not in settings['overrides'] and page.sliders['gap'][0].value()==4
+
+
+# L3 (16.11): the crosshair is for killer matches only; the same own-perk read gives the role.
+class FakeBackend:
+    def info(self):return N(hwnd=1,foreground=True,client=N(x=0,y=0,width=1920,height=1080))
+    def grab(self,rect):return np.zeros((1080,1920,3),np.uint8),None
+
+
+class FakeWindow:
+    visible=False;placed=0
+    def place(self,client):self.visible=True;self.placed+=1
+    def hide(self):self.visible=False
+
+
+@pytest.fixture
+def fresh_match():
+    from src.gui.match_overlay import MATCH
+    MATCH.hud_at=None;MATCH.role=None
+    yield MATCH
+    MATCH.hud_at=None;MATCH.role=None
+
+
+def crosshair(monkeypatch,state):
+    import src.gui.crosshair_overlay as co
+    QApplication.instance() or QApplication([])
+    monkeypatch.setattr(co,'match_state',lambda image,layout,root:(state['match'],state['role'] if state['match'] else None))
+    return co.CrosshairController(ROOT,lambda:False,backend=FakeBackend(),window=FakeWindow())
+
+
+def test_l3_survivor_match_never_shows_the_crosshair(monkeypatch,fresh_match):
+    state={'match':True,'role':'survivor'};c=crosshair(monkeypatch,state)
+    for _ in range(3):c.step()
+    assert not c.window.visible and c.window.placed==0 and fresh_match.role=='survivor'
+
+
+def test_l3_killer_match_shows_it_and_unknown_role_waits(monkeypatch,fresh_match):
+    state={'match':True,'role':None};c=crosshair(monkeypatch,state)
+    c.step();assert not c.window.visible
+    state['role']='killer';c.step();assert c.window.visible
+    state['match']=False;c.step();assert not c.window.visible      # Tab, menu: hidden as before
+
+
+def test_l3_first_role_of_a_match_counts_until_the_lobby(monkeypatch,fresh_match):
+    state={'match':True,'role':'killer'};c=crosshair(monkeypatch,state)
+    c.step();state['role']='survivor';c.step();assert c.window.visible   # one odd read does not flip the match
+    fresh_match.note_lobby();assert fresh_match.role is None
+    c.step();assert not c.window.visible and fresh_match.role=='survivor'
+
+
+def test_l2_l3_windows_are_mapped_blank_only_in_their_role(monkeypatch,fresh_match):
+    """NVIDIA rule J7: armed windows are mapped blank at match start, but a map never in a killer match and a
+    crosshair never in a survivor one."""
+    import src.gui.match_overlay as mo
+    from PySide6.QtWidgets import QWidget
+    from src.gui.map_overlay import MapWindow
+    from src.gui.crosshair_overlay import CrosshairWindow
+    QApplication.instance() or QApplication([])
+    monkeypatch.setattr(mo,'dbd_or_overlay_in_front',lambda:True)
+    windows=[MapWindow(ROOT),CrosshairWindow(ROOT)]
+    try:
+        for w in windows:w.armed=True
+        for role in ('killer','survivor'):
+            fresh_match.note_lobby();mo.sweep_windows()
+            fresh_match.note_hud();mo.sweep_windows()
+            assert not any(QWidget.isVisible(w) for w in windows)       # role not known yet: nothing mapped
+            fresh_match.note_role(role);mo.sweep_windows()
+            mapped={type(w).__name__ for w in windows if QWidget.isVisible(w)}
+            assert mapped=={'killer':{'CrosshairWindow'},'survivor':{'MapWindow'}}[role]
+            for w in windows:w.show()                                       # a controller asking to show
+            assert {type(w).__name__ for w in windows if w.isVisible()}=={'killer':{'CrosshairWindow'},'survivor':{'MapWindow'}}[role]
+            fresh_match.note_lobby();mo.sweep_windows()
+            for w in windows:w.hide()
+    finally:
+        for w in windows:w.retire();w.deleteLater()

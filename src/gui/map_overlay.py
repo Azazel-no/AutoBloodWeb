@@ -57,6 +57,8 @@ def to_qimage(path):
 
 
 class MapWindow(PerkOverlay):
+    roles = frozenset({'survivor'})   # L2 (16.11): never over a killer match, not even mapped blank.
+
     def __init__(self, root):
         super().__init__(root); self.image = QImage(); self.alpha = .85; self.scale = 1.; self.key = None
 
@@ -92,6 +94,7 @@ class MapController(QObject):
         self.layout = load_layout(root); self.ocr = ocr; self.in_match_check = in_match; self.key_reader = key_reader
         self.detected = None; self.manual = None; self.matched = False; self.match_seen_at = None
         self.last_ocr = -1e9; self.shown = True; self.watcher = None; self.game_hwnd = None; self.client = None; self.uncertain = set()
+        self.role = None
         self.images = {}
         self.timer = QTimer(self); self.timer.setInterval(TICK_MS); self.timer.timeout.connect(self.tick)
         self.key_event.connect(self.on_key); self.image_ready.connect(self.tick)
@@ -132,17 +135,21 @@ class MapController(QObject):
             log.exception('Map overlay step failed'); self.window.hide()
 
     def match_now(self, image):
+        """(match HUD on screen, role or None) from the same own-perk read."""
         if self.in_match_check: return self.in_match_check(image)
-        from src.gui.crosshair_overlay import in_match
-        return in_match(image, self.layout, self.root)
+        from src.gui.crosshair_overlay import match_state
+        return match_state(image, self.layout, self.root)
 
     def step(self):
         if self.automation_active(): return self.window.hide()
         window = self.backend.info(); self.game_hwnd = window.hwnd; self.client = window.client
         if not window.foreground: return self.window.hide()
         image, _ = self.backend.grab(window.client); now = self.clock()
-        if self.match_now(image):
-            self.matched = True; self.match_seen_at = now
+        present, role = self.match_now(image)
+        if present:
+            from src.gui.match_overlay import MATCH
+            self.matched = True; self.match_seen_at = now; self.role = role or self.role
+            MATCH.note_hud(); MATCH.note_role(role)
         else:
             if self.matched and now - self.match_seen_at > MATCH_GONE_SECONDS: self.end_match()
             if not self.matched and now - self.last_ocr >= OCR_EVERY and not is_lobby(image, self.layout):
@@ -151,7 +158,7 @@ class MapController(QObject):
 
     def end_match(self):
         log.info('Map overlay: match over, %s cleared', self.current.key if self.current else 'nothing')
-        self.matched = False; self.detected = None; self.manual = None; self.changed.emit()
+        self.matched = False; self.detected = None; self.manual = None; self.role = None; self.changed.emit()
 
     def read_name(self, image):
         results = self.ocr.recognize([prepare(name_region(image))])[0] if self.ocr else []
@@ -170,7 +177,8 @@ class MapController(QObject):
     def show_map(self, now=None):
         m = self.current; now = self.clock() if now is None else now
         live = self.matched and self.match_seen_at is not None and now - self.match_seen_at <= HIDE_SECONDS
-        if not (self.shown and live and m and self.game_foreground()): return self.window.hide()
+        # L2 (16.11): the map is for survivor matches only; a killer match never gets the window.
+        if not (self.shown and live and m and self.role == 'survivor' and self.game_foreground()): return self.window.hide()
         image = self.images.get(m.key)
         if image is None:
             path = cached(self.root, m) or self.fetcher.request(m)

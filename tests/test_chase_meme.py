@@ -492,7 +492,7 @@ def test_strong_horn_animation_starts_without_the_heart_within_a_second_or_so(sa
     """The heart is often hidden by the camera, grass or a wall: sustained horn animation must be enough."""
     frames, layouts = sample
     starts = [e for e in run_rules(frames, layouts, heart=False) if e[1] == 'start']
-    assert starts and 3.0 <= starts[0][0] <= 4.5 and 'strong horn animation' in starts[0][2]   # the horns brighten at ~3.0 s
+    assert starts and 3.0 <= starts[0][0] <= 4.5 and 'my horns by shape' in starts[0][2]   # the horns brighten at ~3.0 s (K2: by shape)
 
 
 @needs_video
@@ -528,3 +528,81 @@ def test_a_down_portrait_never_starts_a_chase():
     d = cm.ChaseDetector(); d.down = True; strong = cm.HornSample(80, 80, True, True, .5, .06)
     events = [d.horns(strong, i * .1) for i in range(30)]
     assert d.state == cm.IDLE and any(e and e[0] == 'rejected' and 'down state' in e[1] for e in events)
+
+
+# --- K2 (15.11): a teammate's horns and bright backgrounds started the chase meme ---------------------
+K2 = ROOT / 'debug/match_samples/chase_2026-11-15'
+needs_k2 = pytest.mark.skipif(not K2.is_dir(), reason='local samples')
+# Each false start of the 13:49-13:59 match (+ 14:03 'Echo') with the refused read just before it: slot 2's
+# Obsession brackets animate, my portrait has no horns, the heart is not lit.
+K2_FALSE = [('134955_759_rejected', '134956_659_start'), ('135028_349_rejected', '135028_505_start'),
+            ('135238_072_rejected', '135238_396_start'), ('135345_841_rejected', '135346_264_start'),
+            ('135534_857_rejected', '135536_486_start'), ('135606_270_rejected', '135606_378_start'),
+            ('135615_812_start', '135615_812_start'), ('135724_724_rejected', '135724_882_start'),
+            ('140320_001_rejected', '140321_013_start')]
+
+
+@needs_k2
+@pytest.mark.parametrize('pair', K2_FALSE, ids=[p[1][:10] for p in K2_FALSE])
+def test_k2_a_teammates_horns_never_start_my_chase_without_the_heart(pair):
+    """2 s of reads 0.1 s apart, alternating the two frames and pulsing the brightness (J1): no start."""
+    a, b = (cv2.imread(str(K2 / f'{n}.jpg')) for n in pair); layout = load_layout(ROOT)
+    x, y, w, h = cm.portrait_rect(layout, 1920, 1080); d = cm.ChaseDetector(); reader = cm.HornReader(); events = []
+    for i in range(20):
+        frame = (a if i % 2 == 0 else b)[y:y + h, x:x + w].astype(np.float32) * (1. + .2 * np.sin(i))
+        sample = reader.read(np.clip(frame, 0, 255).astype(np.uint8)); assert not sample.pair
+        event = d.horns(sample, i * .1) or d.heart(False, i * .1 + .05)
+        if event: events.append(event)
+    assert d.state == cm.IDLE and all(e[0] == 'rejected' for e in events)
+    assert all('shape L' in e[1] and 'teammate horns' in e[1] for e in events)   # the log says why, with the shape scores
+
+
+@needs_k2
+@pytest.mark.parametrize('name', ['121944_873_start', '131203_014_start', '135410_468_start', '135831_771_start'])
+def test_k2_my_own_horns_are_found_by_shape_on_the_real_chase_frames(name):
+    """The heart-confirmed starts of the same day (real chases of mine): both horns by template, at their place."""
+    image = cv2.imread(str(K2 / f'{name}.jpg')); x, y, w, h = cm.portrait_rect(load_layout(ROOT), 1920, 1080)
+    sample = cm.HornReader().read(image[y:y + h, x:x + w])
+    assert sample.pair and min(sample.left_score, sample.right_score) >= cm.SHAPE_MIN, sample.shape_text()
+
+
+def test_k2_my_horn_region_never_reaches_slot_2():
+    """Slot 2 is 89 px (2.47 r) below me; its horns start ~1.5 r below my centre. Nothing below 1.15 r is read."""
+    size = 145; zone = cm._sectors(size); c = (size - 1) / 2; r = size / (2 * cm.PORTRAIT_REACH)
+    rows = np.nonzero(zone.any(axis=1))[0]
+    assert (rows.max() - c) / r < cm.HORN_CUT and (rows.max() - c) / r > .9      # my horns (to 0.95 r) are still inside
+    region = np.zeros((size, size, 3), np.uint8)
+    for dx in (-1, 1):                                                         # bright 'horn tips' 1.3-1.9 r down
+        cv2.line(region, (round(c + dx * .6 * r), round(c + 1.3 * r)), (round(c + dx * .9 * r), round(c + 1.9 * r)), (255, 255, 255), 3)
+    sample = cm.HornReader().read(region)
+    assert sample.share == 0 and not sample.present and not sample.pair
+
+
+PAIR = cm.HornSample(60, 60, True, True, .5, .06, .6, .6, (0., 0., 0., 0.), True, True, .4)   # my horns by shape, animating
+
+
+def test_k2_my_horns_by_shape_start_alone_but_need_the_heart_while_a_teammates_horns_animate():
+    d = cm.ChaseDetector(); events = [d.horns(PAIR, i * .1) for i in range(12)]
+    starts = [e for e in events if e and e[0] == 'start']                       # (a weak-path refusal before 6 reads is fine)
+    assert d.state == cm.CHASE and len(starts) == 1 and 'my horns by shape' in starts[0][1]
+    d = cm.ChaseDetector(); d.teammates([1]); events = [d.horns(PAIR, i * .1) for i in range(12)]
+    refused = [e for e in events if e]
+    assert d.state == cm.IDLE and any('teammate horns animate too (slot 2)' in e[1] for e in refused)
+    d.heart(True, 1.2, 900); event = d.heart(True, 1.3, 900)
+    assert event[0] == 'start' and 'confirmed by the heart' in event[1]
+    weak = cm.HornSample(60, 60, True, True, .6, .2)                          # white in the sectors, no horn shape
+    d = cm.ChaseDetector(); assert all(e is None or e[0] == 'rejected' for e in (d.horns(weak, i * .1) for i in range(20)))
+
+
+@needs_k2
+def test_k2_the_obsession_brackets_of_slot_2_are_flagged_only_while_they_animate():
+    from src.core.match_reader import Geometry
+    layout = load_layout(ROOT); g = Geometry(layout, (1080, 1920)); hud = layout['hud']; r = g.size(hud['portrait_radius'])
+    centres = {s: g.hud(hud['portrait_x'], hud['portrait_y'][s]) for s in (1, 2, 3)}
+    a, b = (cv2.imread(str(K2 / f'{n}.jpg')) for n in ('134955_759_rejected', '134956_659_start'))
+    mates = cm.MateHorns()
+    for i in range(4): mates.read(a if i % 2 == 0 else b, centres, r, i * .3)
+    assert mates.active(1.) == [1]                                             # HUD slot index 1 = the second portrait
+    still = cv2.imread(str(K2 / '135831_771_start.jpg')); mates.reset()
+    for i in range(4): mates.read(still, centres, r, i * .3)
+    assert mates.active(1.) == []                                              # the same brackets standing still

@@ -18,15 +18,22 @@ LOOK_MS = 500
 SLIDERS = (('length', 1, 40), ('thickness', 1, 8), ('gap', 0, 24), ('dot', 0, 10), ('circle', 0, 30), ('outline_width', 1, 4), ('opacity', 10, 100))
 
 
-def in_match(image, layout, root):
-    """The match HUD is on screen: not a lobby, menu, loading screen, scoreboard or end-game table."""
+def match_state(image, layout, root):
+    """(match HUD on screen, role or None): not a lobby, menu, loading screen, scoreboard or end-game table.
+    The role comes from the same own-perk read, so it costs no capture of its own."""
     if is_lobby(image, layout) or is_scoreboard(image, layout) or is_end_scoreboard(image) or not hud_visible(image, layout):
-        return False
-    return read_own(*crop_own(image), load_matchers(root))[0]  # Menus can look like the nickname column; own perks can't.
+        return False, None
+    return read_own(*crop_own(image), load_matchers(root))  # Menus can look like the nickname column; own perks can't.
+
+
+def in_match(image, layout, root):
+    return match_state(image, layout, root)[0]
 
 
 class CrosshairWindow(PerkOverlay):
     """A small transparent square around the game's centre; repaints only when asked."""
+    roles = frozenset({'killer'})   # L3 (16.11): never over a survivor match, not even mapped blank.
+
     def __init__(self, root):
         super().__init__(root);self.config = preset_config('classic_gap');self.placed = None
 
@@ -47,7 +54,7 @@ class CrosshairWindow(PerkOverlay):
 
 
 class CrosshairController(QObject):
-    """Shows the crosshair only while the switch is on, the hotkey has not hidden it, and DBD runs a match."""
+    """Shows the crosshair only while the switch is on, the hotkey has not hidden it, and DBD runs a killer match."""
     key_event = Signal(str)
 
     def __init__(self, root, automation_active, key=DEFAULT_KEY, backend=None, window=None, key_reader=None):
@@ -92,11 +99,13 @@ class CrosshairController(QObject):
         if not self.shown or not (window.foreground or overlay_in_front()):
             return self.window.hide()
         image, _ = self.backend.grab(window.client)
-        if in_match(image, self.layout, self.root):
+        present, role = match_state(image, self.layout, self.root)
+        if present:
             from src.gui.match_overlay import MATCH
-            MATCH.note_hud();self.window.place(window.client)
-        else:
-            self.window.hide()
+            MATCH.note_hud();MATCH.note_role(role)
+            if MATCH.role == 'killer':
+                return self.window.place(window.client)
+        self.window.hide()
 
 
 class Preview(QWidget):

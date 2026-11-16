@@ -156,17 +156,22 @@ class IconMatcher:
                         rendered=cv2.resize(display,(size,size),interpolation=cv2.INTER_LINEAR)
                         feature_at_size=node_glyph(rendered,size//2)
                         if feature_at_size is not None:refs.append(feature_at_size)
+                # L1 (16.11): a library may add references rendered the way its screen shows the icon.
+                refs.extend(getattr(library,'rendered_features',{}).get(entry.id,()))
                 self.references[entry.id]=refs
         self.variants={}
+        transforms=getattr(library,'variant_transforms',((-6,1),(6,1),(0,.94),(0,1.06)))
         for entry,feature in self.features:
             variants=[]
             refs=self.references[entry.id]
             # Both references come from the same original crop; retain the native
             # source detail as well as the cached 96px GUI tile under the same ID.
             unique_refs={r.tobytes():r for r in refs}
-            for reference in unique_refs.values():
+            # Rendered references already have the screen's size: they need no warped copies.
+            rendered={r.tobytes() for r in getattr(library,'rendered_features',{}).get(entry.id,())}
+            for key,reference in unique_refs.items():
                 variants.append(reference)
-                for angle,scale in ((-6,1),(6,1),(0,.94),(0,1.06)):
+                for angle,scale in (() if key in rendered else transforms):
                     transform=cv2.getRotationMatrix2D((31.5,31.5),angle,scale)
                     variants.append(cv2.warpAffine(reference,transform,(64,64),flags=cv2.INTER_LINEAR,borderValue=0))
             self.variants[entry.id]=[cv2.GaussianBlur(v,(3,3),.7).astype(np.float32)/255 for v in variants]

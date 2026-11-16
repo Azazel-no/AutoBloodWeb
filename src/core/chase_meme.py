@@ -56,6 +56,30 @@ HEART_MIN = 400               # px of the heart blob at 1080p (real hearts 700-6
 HEART_MAX = 9000              # bigger warm blobs are fire, blood pools or a red light, not the heart (a 15025 px "heart" started a chase on 14.11)
 HEART_FILL = .3               # the heart is a compact blob: its share of its bounding box
 HEART_REFERENCE = 1080
+# --- K2 (15.11): my horns by shape and place --------------------------------------------------
+# A match (2026-11-15 13:49-13:59) had 9 chase starts without the heart, none of them a chase of mine. In every
+# one the teammate in slot 2 (the Obsession) had their big bracket horns animating: their top tips lie ~1.5 r
+# below MY portrait's centre, inside my old horn sectors, and bright backgrounds (a lit generator, pale sand)
+# filled the sectors too. My own chase horns are small white sickles from 0.1 to 0.95 r below my centre, |dx|
+# 1.0-1.6 r (measured on the 2026-11-12 video). So: nothing below HORN_CUT is read (the midline to slot 2 is
+# 1.24 r), and a start without the heart needs a left AND a right horn matching the template of my horns at
+# their place, mirror-symmetric, changing shape in place.
+HORN_CUT = 1.15               # radii below my centre: no pixel further down belongs to me
+SHAPE_SIZE = 144              # the portrait region is normalised to this size (radius 36 px, as at 1080p 100 %)
+SHAPE_BOX = (.85, 1.62, -.15, 1.10)   # |dx| from-to, dy from-to (radii) of one horn; the nickname starts at 1.44 r, low
+SHAPE_SEARCH = .25            # radii the template may slide around its place
+SHAPE_MIN = .40               # normalised correlation of each horn (real 0.44-0.79, the false starts' best spots < 0.4 or off place)
+SHAPE_OFFSET = .15            # the best match must sit this close to the horn's place (radii)
+SHAPE_SYMMETRY = .2           # left and right offsets mirror each other within this (radii)
+SHAPE_MOVING = .15            # share of the matched horn shapes that changed since the previous read
+SIDES = ('left', 'right')
+TEMPLATE_FILES = dict(left='assets/ui/hud/chase_horn_left.png', right='assets/ui/hud/chase_horn_right.png')
+MATE_BANDS = ((-1.25, -.8), (.85, 1.4))   # a teammate's bracket horns hug their portrait at about +-1 r (radii)
+MATE_ROWS = 1.45              # ...from this far above to this far below its centre
+MATE_COVER = .35              # share of those rows with a white pixel, on both sides (brackets 0.35-0.99, most backgrounds < 0.35)
+MATE_MOVING = .2              # share of the band pixels changed between two reads (animated brackets 0.27-0.6)
+MATE_SECONDS = 1.5            # a teammate horn animation this recent makes the heart necessary
+DEFAULT_ROOT = __import__('pathlib').Path(__file__).resolve().parents[2]
 
 
 def portrait_rect(layout, width, height, slot=OWN_SLOT):
@@ -73,8 +97,58 @@ horn_rect = portrait_rect     # the old name, kept for callers
 def _sectors(size):
     yy, xx = np.mgrid[:size, :size]; c = (size - 1) / 2; r = size / (2 * PORTRAIT_REACH)
     dx, dy = (xx - c) / r, (yy - c) / r; d = np.hypot(dx, dy); angle = np.degrees(np.arctan2(-dy, dx)) % 360
-    ring = (d > SECTOR_RING[0]) & (d < SECTOR_RING[1])
+    ring = (d > SECTOR_RING[0]) & (d < SECTOR_RING[1]) & (dy < HORN_CUT)   # K2: never into slot 2's portrait
     return ring & np.logical_or.reduce([(angle > a) & (angle < b) for a, b in HORN_SECTORS])
+
+
+def normalise_region(region):
+    """portrait_rect pixels at SHAPE_SIZE x SHAPE_SIZE (any HUD scale), BGR."""
+    return cv2.resize(np.ascontiguousarray(region[..., :3]), (SHAPE_SIZE, SHAPE_SIZE), interpolation=cv2.INTER_AREA)
+
+
+def horn_whiteness(region):
+    """0-1 per pixel: white and brighter than its surroundings (J1: a brightness change of the whole area does not
+    count), not coloured. Rows below HORN_CUT are zero. `region` is a normalised portrait region."""
+    hsv = cv2.cvtColor(region, cv2.COLOR_BGR2HSV); value = hsv[..., 2].astype(np.float32); r = SHAPE_SIZE / (2 * PORTRAIT_REACH)
+    local = cv2.blur(value, (int(r * 1.2) | 1,) * 2)
+    white = np.clip((value - local - 10) / 40, 0, 1) * (hsv[..., 1] < 90) * (value > 110)
+    white[int(round((SHAPE_SIZE - 1) / 2 + HORN_CUT * r)):] = 0
+    return white.astype(np.float32)
+
+
+def shape_box(side, margin=0.):
+    """(x0, x1, y0, y1) of one horn's box in the normalised region, grown by `margin` radii."""
+    r = SHAPE_SIZE / (2 * PORTRAIT_REACH); c = (SHAPE_SIZE - 1) / 2; a, b, top, bottom = SHAPE_BOX
+    dx0, dx1 = (-b, -a) if side == 'left' else (a, b)
+    x0, x1 = round(c + (dx0 - margin) * r), round(c + (dx1 + margin) * r)
+    y0, y1 = round(c + (top - margin) * r), round(c + (bottom + margin) * r)
+    return max(0, x0), min(SHAPE_SIZE, x1), max(0, y0), min(SHAPE_SIZE, y1)
+
+
+@functools.lru_cache(maxsize=4)
+def load_horn_templates(root):
+    """{'left', 'right'}: float 0-1 templates of my horns, or None when the files are missing."""
+    found = {}
+    for side, rel in TEMPLATE_FILES.items():
+        path = __import__('pathlib').Path(root) / rel
+        image = cv2.imdecode(np.fromfile(str(path), np.uint8), cv2.IMREAD_GRAYSCALE) if path.is_file() else None
+        if image is None: return None
+        found[side] = image.astype(np.float32) / 255
+    return found
+
+
+def match_horns(white, templates):
+    """Per side: (score, dx offset, dy offset in radii, patch) of the best template match near the horn's place."""
+    r = SHAPE_SIZE / (2 * PORTRAIT_REACH); out = {}
+    for side in SIDES:
+        template = templates[side]; x0, _, y0, _ = shape_box(side); sx0, sx1, sy0, sy1 = shape_box(side, SHAPE_SEARCH)
+        window = white[sy0:sy1, sx0:sx1]
+        if window.shape[0] < template.shape[0] or window.shape[1] < template.shape[1] or not window.any():
+            out[side] = (0., 0., 0., None); continue
+        result = cv2.matchTemplate(window, template, cv2.TM_CCOEFF_NORMED); _, best, _, (bx, by) = cv2.minMaxLoc(result)
+        px, py = sx0 + bx, sy0 + by; h, w = template.shape
+        out[side] = (float(best) if np.isfinite(best) else 0., (px - x0) / r, (py - y0) / r, white[py:py + h, px:px + w].copy())
+    return out
 
 
 @dataclass(frozen=True)
@@ -85,22 +159,54 @@ class HornSample:
     moving: bool = False      # ...and they changed since the previous read
     change: float = 0.
     share: float = 0.         # white share of the horn sectors
+    left_score: float = 0.    # K2: template correlation of my left / right horn
+    right_score: float = 0.
+    offset: tuple = (0., 0., 0., 0.)   # where they matched: left dx, dy, right dx, dy (radii from their place)
+    pair: bool = False        # both horns by shape, at their place, mirror-symmetric
+    pair_moving: bool = False # ...and their shape changed in place since the previous read
+    pair_change: float = 0.
 
     @property
     def strong(self):
         return self.share >= HORN_STRONG
 
+    def shape_text(self):
+        return (f'shape L {self.left_score:.2f} R {self.right_score:.2f} at ({self.offset[0]:+.2f},{self.offset[1]:+.2f})/'
+                f'({self.offset[2]:+.2f},{self.offset[3]:+.2f}) r, pair {"yes" if self.pair else "no"}, change {self.pair_change:.0%}')
+
+
+def pair_found(match):
+    (ls, ldx, ldy, _), (rs, rdx, rdy, _) = match['left'], match['right']
+    return (ls >= SHAPE_MIN and rs >= SHAPE_MIN and max(abs(ldx), abs(ldy), abs(rdx), abs(rdy)) <= SHAPE_OFFSET
+            and abs(ldx + rdx) <= SHAPE_SYMMETRY and abs(ldy - rdy) <= SHAPE_SYMMETRY)
+
 
 class HornReader:
     """Turns the pixels of portrait_rect into a HornSample; keeps the previous mask to see motion."""
-    def __init__(self):
-        self.previous = None
+    def __init__(self, root=None):
+        self.previous = None; self.previous_pair = None
+        self.templates = load_horn_templates(str(root or DEFAULT_ROOT))
 
     def reset(self):
-        self.previous = None
+        self.previous = None; self.previous_pair = None
+
+    def read_shape(self, region):
+        """K2: (scores, offsets, pair, pair moving, change) of my horns by template."""
+        if self.templates is None: self.previous_pair = None; return dict()
+        match = match_horns(horn_whiteness(normalise_region(region)), self.templates)
+        pair = pair_found(match); change = 0.
+        patches = tuple(match[s][3] for s in SIDES)
+        if pair and self.previous_pair is not None and all(a is not None and b is not None and a.shape == b.shape for a, b in zip(patches, self.previous_pair)):
+            now = np.concatenate([p.ravel() for p in patches]) > .5; before = np.concatenate([p.ravel() for p in self.previous_pair]) > .5
+            change = float((now ^ before).sum()) / max(1, (now | before).sum())
+        self.previous_pair = patches if pair else None
+        return dict(left_score=round(match['left'][0], 3), right_score=round(match['right'][0], 3),
+                    offset=tuple(round(v, 2) for v in (match['left'][1], match['left'][2], match['right'][1], match['right'][2])),
+                    pair=pair, pair_moving=pair and change >= SHAPE_MOVING, pair_change=round(change, 3))
 
     def read(self, region):
-        if region is None or region.size == 0 or min(region.shape[:2]) < 8: self.previous = None; return HornSample()
+        if region is None or region.size == 0 or min(region.shape[:2]) < 8: self.reset(); return HornSample()
+        shape = self.read_shape(region)
         size = min(region.shape[:2]); region = cv2.resize(region[..., :3], (size, size)) if region.shape[0] != region.shape[1] else region[..., :3]
         hsv = cv2.cvtColor(np.ascontiguousarray(region), cv2.COLOR_BGR2HSV); value = hsv[..., 2].astype(np.float32)
         r = size / (2 * PORTRAIT_REACH); local = cv2.blur(value, (max(3, int(r * 1.2) | 1),) * 2)
@@ -113,7 +219,46 @@ class HornReader:
         if present and self.previous is not None and self.previous.shape == mask.shape:
             change = float((mask ^ self.previous).sum()) / max(1, (mask | self.previous).sum())
         self.previous = mask if present else None
-        return HornSample(left, right, present, present and change >= HORN_MOVING, round(change, 3), round(share, 4))
+        return HornSample(left, right, present, present and change >= HORN_MOVING, round(change, 3), round(share, 4), **shape)
+
+
+class MateHorns:
+    """K2: whether a teammate's horns animate (they are being chased). Read from the HUD column frame the chase
+    meme already grabs for the down states, so no capture is added. A teammate's static Obsession brackets are
+    present but not moving; animated ones make the heart necessary for a start (a teammate chase explains them)."""
+    def __init__(self):
+        self.previous = {}; self.seen_at = {}
+
+    def reset(self):
+        self.previous = {}; self.seen_at = {}
+
+    @staticmethod
+    def mask(image, cx, cy, r):
+        """Both side bands of one teammate portrait: (white mask, coverage left, coverage right) or None."""
+        y0, y1 = int(cy - MATE_ROWS * r), int(cy + MATE_ROWS * r)
+        x0, x1 = int(cx + MATE_BANDS[0][0] * r), int(cx + MATE_BANDS[1][1] * r)
+        if y0 < 0 or x0 < 0 or y1 > image.shape[0] or x1 > image.shape[1]: return None
+        area = np.ascontiguousarray(image[y0:y1, x0:x1, :3]); hsv = cv2.cvtColor(area, cv2.COLOR_BGR2HSV); value = hsv[..., 2].astype(np.float32)
+        local = cv2.blur(value, (int(r * 1.2) | 1,) * 2); white = (value - local > 20) & (hsv[..., 1] < 90) & (value > 110)
+        bands = [white[:, int((a - MATE_BANDS[0][0]) * r):int((b - MATE_BANDS[0][0]) * r)] for a, b in MATE_BANDS]
+        return np.concatenate(bands, axis=1), float(bands[0].any(axis=1).mean()), float(bands[1].any(axis=1).mean())
+
+    def read(self, image, centres, r, now):
+        """centres: {slot: (x, y)} of the teammate portraits inside `image`. Returns {slot: True} for animated horns."""
+        flags = {}
+        for slot, (cx, cy) in centres.items():
+            found = self.mask(image, cx, cy, r)
+            if found is None: self.previous.pop(slot, None); continue
+            mask, left, right = found; present = min(left, right) >= MATE_COVER; before = self.previous.get(slot)
+            if present and before is not None and before.shape == mask.shape:
+                change = float((mask ^ before).sum()) / max(1, (mask | before).sum())
+                if change >= MATE_MOVING: self.seen_at[slot] = now
+            self.previous[slot] = mask if present else None
+            flags[slot] = slot in self.seen_at and now - self.seen_at[slot] <= MATE_SECONDS
+        return flags
+
+    def active(self, now):
+        return sorted(slot for slot, t in self.seen_at.items() if now - t <= MATE_SECONDS)
 
 
 # --- heart ------------------------------------------------------------------------------------
@@ -168,43 +313,65 @@ class ChaseDetector:
         self.state = IDLE; self.started_at = None; self.moving = []; self.horns_at = None; self.heart_at = None; self.heart_ever = False
         self.reads = []; self.hearts = []; self.last_heart = None; self.last_heart_area = 0; self.last_sample = None; self.down = False
         if not hasattr(self, 'rejected'): self.rejected = 0
-        self.last_rejection = None
+        if not hasattr(self, 'mates'): self.mates = []
+        self.last_rejection = None; self.last_evidence = None
+
+    def teammates(self, slots):
+        """K2: HUD slots (1-3) whose horns animate right now (MateHorns.active)."""
+        self.mates = list(slots)
 
     def horns(self, sample, now):
         self.reads = [r for r in self.reads if now - r[0] <= STRONG_WINDOW] + [(now, sample)]
         self.moving = [t for t in self.moving if now - t <= START_WINDOW]
+        if sample.moving or sample.pair_moving: self.last_sample = sample
         if sample.moving:
-            self.moving.append(now); self.horns_at = now; self.last_sample = sample
-        if self.state == IDLE and sample.moving:
+            self.moving.append(now); self.horns_at = now
+        if sample.pair_moving: self.horns_at = now
+        if self.state == IDLE and (sample.moving or sample.pair_moving):
             return self.try_start(now)
         return self.check(now)
 
     def evidence(self, now):
         reads = [s for t, s in self.reads if now - t <= STRONG_WINDOW]
-        strong = len(reads) >= 6 and sum(s.strong for s in reads) >= STRONG_PRESENT * len(reads) and sum(s.moving for s in reads) >= STRONG_MOVING * len(reads)
+        # K2: without the heart only my horns by shape count: both present on most reads, changing in place.
+        pairs = sum(s.pair for s in reads); pair_moving = sum(s.pair_moving for s in reads)
+        strong = len(reads) >= 6 and pairs >= STRONG_PRESENT * len(reads) and pair_moving >= STRONG_MOVING * len(reads)
         hearts = [seen for t, seen, _ in self.hearts[-3:] if now - t <= HEART_CONFIRM]
         heart = sum(hearts) >= HEART_READS
         weak = len(self.moving) >= START_READS
+        sample = self.last_sample or (reads[-1] if reads else HornSample())
         return dict(strong=strong, weak=weak, heart=heart, reads=len(reads), strong_reads=sum(s.strong for s in reads),
-                    moving_reads=sum(s.moving for s in reads), share=self.last_sample.share if self.last_sample else 0., heart_area=self.last_heart_area)
+                    moving_reads=sum(s.moving for s in reads), share=sample.share, heart_area=self.last_heart_area,
+                    pair_reads=pairs, pair_moving_reads=pair_moving, left_score=sample.left_score, right_score=sample.right_score,
+                    offset=list(sample.offset), pair_change=sample.pair_change, teammate_horns=[s + 1 for s in self.mates])
 
     def try_start(self, now):
-        e = self.evidence(now)
+        e = self.evidence(now); self.last_evidence = e
         if self.down: return self.reject(now, 'own portrait shows a down state', e)
         if not e['weak'] and not e['strong']: return None        # too little to judge yet: not a refusal
+        if e['strong'] and e['teammate_horns'] and not e['heart']:
+            return self.reject(now, f"my horns by shape, but teammate horns animate too (slot {', '.join(map(str, e['teammate_horns']))}) and no heart", e)
         if not (e['strong'] or e['heart']):
-            return self.reject(now, 'weak horn animation without the heart', e)
+            return self.reject(now, 'horn animation without my horn shape and without the heart', e)
         sample = self.last_sample or HornSample()
         self.state = CHASE; self.started_at = (self.moving[0] if self.moving else now); self.heart_at = self.last_heart; self.heart_ever = e['heart']
-        how = 'strong horn animation' if e['strong'] else 'horn animation confirmed by the heart'
+        how = 'my horns by shape' if e['strong'] and not e['heart'] else 'horn animation confirmed by the heart'
         return 'start', (f"{how}: {e['moving_reads']}/{e['reads']} reads moving, {e['strong_reads']} strong (share {sample.share:.3f}, "
-                         f"change {sample.change:.0%}); heart {'seen' if e['heart'] else 'not seen'} ({self.last_heart_area} px)")
+                         f"change {sample.change:.0%}); {self.shape_text(e)}; heart {'seen' if e['heart'] else 'not seen'} ({self.last_heart_area} px)")
+
+    @staticmethod
+    def shape_text(e):
+        o = e['offset']
+        return (f"shape L {e['left_score']:.2f} R {e['right_score']:.2f} at ({o[0]:+.2f},{o[1]:+.2f})/({o[2]:+.2f},{o[3]:+.2f}) r, "
+                f"pair {e['pair_reads']}/{e['reads']}, pair moving {e['pair_moving_reads']}/{e['reads']}, "
+                f"teammate horns {', '.join(f'slot {s}' for s in e['teammate_horns']) or 'none'}")
 
     def reject(self, now, why, evidence):
         self.rejected += 1
         if self.last_rejection is None or now - self.last_rejection[0] >= 3. or self.last_rejection[1] != why:
             self.last_rejection = (now, why)
-            return 'rejected', f"{why}: {evidence['moving_reads']}/{evidence['reads']} reads moving, {evidence['strong_reads']} strong, share {evidence['share']:.3f}, heart {'seen' if evidence['heart'] else 'not seen'} ({evidence['heart_area']} px)"
+            return 'rejected', (f"{why}: {evidence['moving_reads']}/{evidence['reads']} reads moving, {evidence['strong_reads']} strong, "
+                                f"share {evidence['share']:.3f}, {self.shape_text(evidence)}, heart {'seen' if evidence['heart'] else 'not seen'} ({evidence['heart_area']} px)")
         return None
 
     def heart(self, seen, now, area=0):

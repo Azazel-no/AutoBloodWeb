@@ -61,9 +61,9 @@ class HudCache:
             else:entries.append((now,feature))
             self.entries[slot]=entries[-self.per_slot:]
 
-    def candidates(self):
-        now=self.clock()
-        return [[f for t,f in entries if now-t<=self.keep] for entries in self.entries]
+    def candidates(self,max_age=None):
+        now=self.clock();keep=self.keep if max_age is None else min(self.keep,max_age)
+        return [[f for t,f in entries if now-t<=keep] for entries in self.entries]
 
     def name_strips(self,max_age=10.):
         """Latest HUD nickname strip per slot (names do not change; the background does)."""

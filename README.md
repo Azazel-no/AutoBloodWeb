@@ -16,10 +16,10 @@ AutoBloodWeb levels the Dead by Daylight Bloodweb for you. You pick the items, a
 - **Crosshair** overlay (off by default).
 - **1v1 timer** (off by default): a scoreboard at the top centre that times each survivor's chase and keeps the score of the pair.
 - **Map overlay** (off by default): the current map's callouts in the top-left corner during a match, read from the loading screen. Map callouts by Hens333.
-- **Memes** (off by default): a chase meme for your survivor (timer, music, voice lines, dance) and an experimental Sable Detector, played from your own media in a meme pack folder. No meme media ships with the app.
+- **Memes** (off by default): a chase meme for your survivor (timer, music, voice lines, dance), played from your own media in a meme pack folder. No meme media ships with the app.
 - **Start with DBD**: an optional logon task that opens the app in the tray when the game starts.
 - Five interface languages: English, Russian, Spanish, German, French.
-- Works only with screen pixels and normal mouse clicks. It never reads or changes game memory or files and does not touch the anti-cheat. Nothing is sent over the network; the only downloads are the map overlay's images and the Sable Detector's person model, once each, when you turn those features on.
+- Works only with screen pixels and normal mouse clicks. It never reads or changes game memory or files and does not touch the anti-cheat. Nothing is sent over the network; the only download is the map overlay's images, once, when you turn that feature on.
 
 ![Settings page](docs/screenshots/settings.png)
 

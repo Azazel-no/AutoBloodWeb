@@ -13,7 +13,7 @@ from PySide6.QtGui import QDesktopServices
 from PySide6.QtWidgets import QButtonGroup, QFrame, QGridLayout, QHBoxLayout, QLabel, QSlider, QStackedWidget, QVBoxLayout, QWidget
 
 from src.core import meme_pack
-from src.core.memes import CHASE_RANGES, SABLE_RANGES, SECTIONS, combo_down, effective_volume
+from src.core.memes import CHASE_RANGES, SABLE_RANGES, combo_down, effective_volume, sections
 from src.gui.widgets import BloodButton, ToggleSwitch
 
 log = logging.getLogger(__name__)
@@ -169,19 +169,23 @@ class MemesPage(QWidget):
         self.pack_status = QLabel(); self.pack_status.setObjectName('muted'); self.pack_status.setWordWrap(True); box.addWidget(self.pack_status)
         layout.addWidget(card)
         row = QHBoxLayout(); row.setSpacing(6); self.tabs = QButtonGroup(self); self.tabs.setExclusive(True); self.tab_buttons = {}
-        for index, name in enumerate(SECTIONS):
+        self.sections = sections()   # L4: release builds have no Sable Detector section
+        for index, name in enumerate(self.sections):
             button = BloodButton(t('meme_section_' + name)); button.setCheckable(True); self.tabs.addButton(button, index); row.addWidget(button, 1); self.tab_buttons[name] = button
         layout.addLayout(row)
         self.stack = QStackedWidget(); layout.addWidget(self.stack, 1)
         self.randomizer = randomizer; self.stack.addWidget(randomizer)
         self.chase = FeatureSection('chase', settings['chase'], CHASE_RANGES, hub, t, lambda pack: pack.chase_ready, previewable=True); self.stack.addWidget(self.chase)
-        self.sable = FeatureSection('sable', settings['sable'], SABLE_RANGES, hub, t, lambda pack: pack.sable_ready, previewable=True); self.stack.addWidget(self.sable)
+        self.sable = None
+        if 'sable' in self.sections:
+            self.sable = FeatureSection('sable', settings['sable'], SABLE_RANGES, hub, t, lambda pack: pack.sable_ready, previewable=True); self.stack.addWidget(self.sable)
         self.tabs.idClicked.connect(self.open_section)
         hub.volume_changed.connect(self.show_volume); hub.pack_changed.connect(self.show_pack)
-        self.publish(); self.show_pack(); self.open_section(SECTIONS.index(settings['section']), save=False)
+        section = settings['section'] if settings['section'] in self.sections else self.sections[0]
+        self.publish(); self.show_pack(); self.open_section(self.sections.index(section), save=False)
 
     def open_section(self, index, save=True):
-        name = SECTIONS[index]; self.stack.setCurrentIndex(index)
+        name = self.sections[index]; self.stack.setCurrentIndex(index)
         for key, button in self.tab_buttons.items(): button.primary = key == name; button.setChecked(key == name); button.update()
         if save and self.hub.settings['section'] != name: self.hub.settings['section'] = name; self.hub.save()
 

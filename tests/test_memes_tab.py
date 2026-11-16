@@ -137,3 +137,40 @@ def test_memes_tab_holds_the_randomizer_and_the_shared_controls(window):
         assert not section.enabled.isChecked() and not section.pack_note.isHidden() and section.pack_note.text() == w.locale.text('meme_pack_empty')
     page.open_section(0); w.randomizer_page.roll(); assert w.randomizer_page.result   # The Randomizer still rolls inside the tab.
     w.randomizer_page.skip()
+
+
+# L4 (v1.1.0): the Sable Detector is not in release builds.
+def test_release_build_has_no_sable_detector(window, monkeypatch, tmp_path):
+    from src.core import features, memes
+    monkeypatch.setattr(features, 'frozen', lambda: True)
+    assert features.sable_detector() is False and memes.sections() == ('randomizer', 'chase')
+    w = window; w.prefs.settings['memes']['section'] = 'sable'; w.prefs.settings['memes']['sable']['enabled'] = True
+    w.memes_page = None; w.open_page(2); page = w.memes_page
+    assert page.sable is None and set(page.tab_buttons) == {'randomizer', 'chase'} and page.stack.count() == 2
+    assert page.stack.currentIndex() == 0                                  # a saved 'sable' section falls back
+    w.apply_sable(True); w.sable_state()
+    assert getattr(w, 'sable_controller', None) is None and w.sable_detector(create=True) is None   # never started
+    folder = meme_pack.ensure(tmp_path / 'pack')
+    assert not (folder / 'sable').exists() and 'Sable' not in (folder / 'README.txt').read_text(encoding='utf-8')
+
+
+def test_source_runs_keep_the_sable_detector_for_v12(monkeypatch):
+    from src.core import features, memes
+    monkeypatch.delenv('AUTOBLOODWEB_SABLE', raising=False)
+    assert features.sable_detector() and 'sable' in memes.sections()
+    monkeypatch.setenv('AUTOBLOODWEB_SABLE', '0'); assert not features.sable_detector()
+
+
+def test_release_build_leaves_out_the_sable_files_and_public_texts_do_not_mention_it():
+    from pathlib import Path
+    import importlib.util
+    root = Path(__file__).resolve().parents[1]
+    spec = importlib.util.spec_from_file_location('build_release', root / 'scripts/build_release.py')
+    build = importlib.util.module_from_spec(spec); spec.loader.exec_module(build)
+    assert 'assets/sable/library.npz'.startswith(build.NOT_SHIPPED_ASSETS)
+    assert 'assets/ui/hud_portraits/sable_ward_1.png'.startswith(build.NOT_SHIPPED_ASSETS)
+    assert not 'assets/ui/survivors/sable_ward.png'.startswith(build.NOT_SHIPPED_ASSETS)   # the survivor's own portrait stays
+    assert {'src.gui.sable_overlay', 'src.core.sable_model', 'src.core.sable_detector'} <= set(build.NOT_SHIPPED_MODULES)
+    for name in ('README.md', 'CHANGELOG.md', 'THIRD_PARTY_NOTICES.md'):
+        text = (root / name).read_text(encoding='utf-8')
+        assert 'Sable' not in text and 'YOLOX' not in text, name

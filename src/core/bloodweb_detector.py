@@ -46,6 +46,17 @@ def _component_center(image: np.ndarray) -> tuple[int,int,int] | None:
 
 
 
+def square_crop(image,x,y,r):
+    """The (2r+1)-square around (x,y); parts outside the frame are filled black, never an empty or short patch."""
+    h,w=image.shape[:2];size=2*r+1
+    top,left=y-r,x-r
+    if 0<=top and 0<=left and top+size<=h and left+size<=w:return image[top:top+size,left:left+size]
+    out=np.zeros((size,size)+image.shape[2:],image.dtype)
+    y0,y1,x0,x1=max(top,0),min(top+size,h),max(left,0),min(left+size,w)
+    if y0<y1 and x0<x1:out[y0-top:y1-top,x0-left:x1-left]=image[y0:y1,x0:x1]
+    return out
+
+
 from functools import lru_cache
 
 last_center_native=False   # the last accepted glyph came from the client's own scale
@@ -610,7 +621,7 @@ class BloodwebDetector:
         for i,(x,y,r) in enumerate(unique,1):
             started=time.perf_counter()
             red,gold=ring_fractions(hsv,x,y,r)
-            patch=image[y-r:y+r+1,x-r:x+r+1]
+            patch=square_crop(image,x,y,r)
             mask=node_mask(r,patch.shape[:2])
             pgray=cv2.cvtColor(patch,cv2.COLOR_BGR2GRAY)
             interior=float(np.percentile(pgray[mask>0],95))
@@ -626,7 +637,7 @@ class BloodwebDetector:
             else:
                 state,certainty=NodeState.UNCERTAIN,.40
             content_r=max(r,round(base_r*.90))
-            content_patch=image[y-content_r:y+content_r+1,x-content_r:x+content_r+1]
+            content_patch=square_crop(image,x,y,content_r)   # 16.11: a node at the frame edge gave an empty patch
             category=classify_category(content_patch,content_r)
             diamond=self._is_perk(content_patch,content_r)
             is_perk=diamond and category.category!='offering' and self._perk_marker(content_patch,content_r)

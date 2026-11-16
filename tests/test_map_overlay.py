@@ -56,9 +56,9 @@ def word(text, x, y): return dict(text=text, x=x, y=y, w=20 * len(text), h=30)
 
 
 def controller():
-    state = {'match': False, 'now': 0.}
+    state = {'match': False, 'now': 0., 'role': 'survivor'}
     c = MapController(ROOT, default_settings(), lambda: False, backend=Backend(), window=Window(), ocr=Ocr(),
-                      clock=lambda: state['now'], in_match=lambda image: state['match'])
+                      clock=lambda: state['now'], in_match=lambda image: (state['match'], state['role'] if state['match'] else None))
     c.game_foreground = lambda: True
     from PySide6.QtGui import QImage
     for m in c.matcher.maps: c.images[m.key] = QImage(4, 4, QImage.Format_RGBA8888)   # no downloads in tests
@@ -95,6 +95,27 @@ def test_manual_pick_wins_and_lasts_until_the_match_ends():
 def test_nothing_is_drawn_while_the_game_is_not_in_front():
     c, state = controller(); c.detected = c.matcher.by_key('The Game'); state['match'] = True
     c.game_foreground = lambda: False; c.step(); assert not c.window.visible
+
+
+def test_l2_killer_match_never_shows_the_map():
+    c, state = controller(); c.detected = c.matcher.by_key('The Game'); state['match'] = True; state['role'] = 'killer'
+    for now in (1., 2., 3.): state['now'] = now; c.step(); assert not c.window.visible
+    c.on_key('key_down'); c.on_key('key_down'); assert not c.window.visible      # the hotkey does not bring it either
+
+
+def test_l2_survivor_match_shows_the_map_and_unknown_role_waits():
+    c, state = controller(); c.detected = c.matcher.by_key('The Game'); state['match'] = True; state['role'] = None
+    c.step(); assert not c.window.visible                                            # own perks not read yet
+    state['role'] = 'survivor'; state['now'] = 1.; c.step(); assert c.window.visible
+    state['role'] = None; state['now'] = 2.; c.step(); assert c.window.visible       # one frame without a role keeps it
+
+
+def test_l2_role_is_forgotten_with_the_match():
+    c, state = controller(); c.detected = c.matcher.by_key('The Game'); state['match'] = True
+    c.step(); assert c.window.visible
+    state['match'] = False; state['now'] = MATCH_GONE_SECONDS + 1; c.step(); assert c.role is None
+    c.detected = c.matcher.by_key('The Game'); state['match'] = True; state['role'] = 'killer'; state['now'] += 1; c.step()
+    assert not c.window.visible
 
 
 def test_ocr_words_are_grouped_into_lines():

@@ -138,7 +138,7 @@ class DsTimerController(QObject):
             if visible:
                 self.hud_seen_at=now;self.tracker.update(statuses,now)
                 from src.gui.match_overlay import MATCH
-                MATCH.note_hud()
+                MATCH.note_hud();MATCH.note_role(self.match_role)
             elif self.hud_seen_at is not None and now-self.hud_seen_at>HUD_GONE_SECONDS:
                 self.tracker.clear();self.hud_seen_at=None;self.match_role=None
                 self.layout=self.base_layout;self.hud_scale=1.;self.hud_fitted=False  # The UI scale can change between matches.

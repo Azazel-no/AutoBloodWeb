@@ -137,14 +137,14 @@ def test_in_a_match_windows_never_hide_and_go_away_only_after_it(app, match_cloc
     window = MapWindow(ROOT); window.setGeometry(0, 0, 50, 50)
     window.show(); window.hide()                      # outside a match: really hidden
     assert not QWidget.isVisible(window) and window.armed
-    mo.MATCH.note_hud(); mo.sweep_windows()           # match start: the window in use is mapped blank at once
+    mo.MATCH.note_hud(); mo.MATCH.note_role('survivor'); mo.sweep_windows()   # match start (L2: the map waits for the role): mapped blank
     assert QWidget.isVisible(window) and window.blank and not window.isVisible()
     window.show(); window.hide()                      # in the match only the drawing changes
     assert QWidget.isVisible(window) and window.blank
     match_clock[0] += 30; mo.sweep_windows(); assert QWidget.isVisible(window)
     match_clock[0] += 31; mo.sweep_windows()          # no HUD for over a minute: the match is over
     assert not QWidget.isVisible(window) and not window.blank
-    mo.MATCH.note_hud(); mo.sweep_windows(); assert QWidget.isVisible(window)
+    mo.MATCH.note_hud(); mo.MATCH.note_role('survivor'); mo.sweep_windows(); assert QWidget.isVisible(window)
     mo.MATCH.note_lobby(); mo.sweep_windows(); assert not QWidget.isVisible(window)
     window.retire(); mo.MATCH.note_hud(); mo.sweep_windows()   # switched off: not mapped at match starts
     assert not QWidget.isVisible(window)

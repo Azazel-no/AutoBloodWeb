@@ -149,7 +149,7 @@ class ChaseController(QObject):
         self.watch = watch or MatchWatch(root, backend, is_killer, clock, name='Chase meme'); self.backend = self.watch.backend
         self.timer_window = timer_window or TimerWindow(root); self.dance_window = dance_window or DanceWindow(root)
         self.sound = sound; self.loader = loader; self.frames = None; self.rng = rng or random.Random(); self.foreground = foreground or foreground_handle
-        self.detector = cm.ChaseDetector(); self.horns = cm.HornReader(); self.show = cm.ChaseShow(rng=self.rng)
+        self.detector = cm.ChaseDetector(); self.horns = cm.HornReader(root); self.mates = cm.MateHorns(); self.show = cm.ChaseShow(rng=self.rng)
         self.music = None; self.voices = {}; self.dance_sounds = {}; self.dance = None; self.dance_at = None; self.dance_sound = None
         self.next_poll = self.next_horn = self.next_heart = self.next_down = 0.; self.preview_until = None; self.enabled = False; self.chase_at = None; self.last_reason = ''
         self.fading = None            # (fade started at, the timer's last value) while the sound and the windows fade out
@@ -223,7 +223,7 @@ class ChaseController(QObject):
         if not watch.game_hwnd or not self.game_foreground():
             self.end('DBD is not in front'); return self.set_interval(TICK_IDLE)
         if not watch.survivor_match:
-            self.end('not a survivor match'); self.horns.reset(); return self.set_interval(TICK_IDLE)
+            self.end('not a survivor match'); self.horns.reset(); self.mates.reset(); return self.set_interval(TICK_IDLE)
         if self.active and (watch.hud_seen_at is None or now - watch.hud_seen_at > HUD_LOST):
             self.end(f'match HUD not seen for {HUD_LOST} s (menu, scoreboard or end screen)')
         client = watch.client; event = None
@@ -255,19 +255,31 @@ class ChaseController(QObject):
             client = self.watch.client; image, _ = self.backend.grab(Rect(client.x, client.y, client.width, client.height))
             folder = self.root / 'debug/chase_events' / datetime.now().strftime('%Y-%m-%d'); folder.mkdir(parents=True, exist_ok=True)
             stem = f"{datetime.now():%H%M%S_%f}"[:-3] + '_' + kind; write_image(folder / (stem + '.jpg'), image)
-            (folder / (stem + '.json')).write_text(json.dumps(dict(kind=kind, reason=reason, rejected_total=self.detector.rejected), ensure_ascii=False, indent=1), encoding='utf-8')
+            (folder / (stem + '.json')).write_text(json.dumps(dict(kind=kind, reason=reason, rejected_total=self.detector.rejected,
+                evidence=self.detector.last_evidence), ensure_ascii=False, indent=1, default=str), encoding='utf-8')
             for old in sorted(folder.parent.glob('*/*.jpg'))[:-400]: old.unlink(); old.with_suffix('.json').unlink(missing_ok=True)
         except Exception:
             log.exception('Chase meme: the event screenshot could not be saved')
 
     def own_status(self, client):
-        """The top HUD portrait's status (dying, carried, hooked, dead, other), as the 1v1 timer reads it."""
+        """The top HUD portrait's status (dying, carried, hooked, dead, other), as the 1v1 timer reads it.
+
+        K2: the same grab, a little wider on the left, also shows whether a teammate's horns animate (MateHorns)."""
         from src.core.killer_status import column_rect, read_column
+        from src.core.match_reader import Geometry
         from src.core.onevone import load_down_templates
         if self.down_templates is None: self.down_templates = load_down_templates(self.root)
         layout = self.watch.layout; x, y, w, h = column_rect(layout, client.width, client.height)
-        image, _ = self.backend.grab(Rect(client.x + x, client.y + y, w, h))
-        return read_column(image, layout, client.width, client.height, self.down_templates)[0][0]
+        g = Geometry(layout, (client.height, client.width)); hud = layout['hud']; r = g.size(hud['portrait_radius'])
+        reach = g.hud(hud['portrait_x'], 0)[0] + (cm.MATE_BANDS[0][0] - .05) * r     # left edge of a teammate's left horn band
+        extra = max(0, min(x, round(x - reach))); below = min(round(.6 * r), max(0, client.height - y - h))   # slot 4's band ends 1.45 r down
+        image, _ = self.backend.grab(Rect(client.x + x - extra, client.y + y, w + extra, h + below))
+        try:
+            centres = {slot: (g.hud(hud['portrait_x'], hud['portrait_y'][slot])[0] - x + extra, g.hud(0, hud['portrait_y'][slot])[1] - y) for slot in (1, 2, 3)}
+            self.mates.read(image, centres, r, self.clock()); self.detector.teammates(self.mates.active(self.clock()))
+        except Exception:
+            log.exception('Chase meme: the teammate horn check failed; it is skipped')
+        return read_column(image[:h, extra:], layout, client.width, client.height, self.down_templates)[0][0]
 
     # --- the show ---------------------------------------------------------------------------
     def begin(self, started_at, reason):

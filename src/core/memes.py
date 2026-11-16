@@ -7,6 +7,12 @@ from src.core.hotkey_config import parse_hotkey
 
 DEFAULT_MUTE_KEY = 'CTRL+M'   # A combination: it works in any window, so a bare letter would fire while typing.
 SECTIONS = ('randomizer', 'chase', 'sable')
+
+
+def sections():
+    """The sections this build shows: the Sable Detector only where features.sable_detector() allows it."""
+    from src.core.features import sable_detector
+    return SECTIONS if sable_detector() else tuple(s for s in SECTIONS if s != 'sable')
 CHASE_RANGES = (('size', 50, 200, 100), ('opacity', 30, 100, 100), ('dance_x', 50, 97, 86), ('dance_y', 5, 75, 52), ('dance_size', 15, 60, 34), ('fade', 30, 50, 40))   # fade: tenths of a second
 SABLE_RANGES = (('photo_size', 10, 40, 22), ('threshold', 60, 99, 90))   # threshold: the 0..1 identity score in percent
 

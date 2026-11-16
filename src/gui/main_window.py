@@ -25,6 +25,7 @@ from src.gui.automation_worker import AutomationWorker, make_engine
 from html import escape
 from PySide6.QtCore import QUrl
 from src.core.item_info import load_item_info
+from src.core.features import sable_detector
 from src.core import tierlist
 from src.gui.info_card import InfoCard
 from src.gui.priority_list import PriorityList
@@ -445,7 +446,7 @@ class MainWindow(QMainWindow):
         self.apply_onevone(self.prefs.settings['onevone']['enabled'])
         self.apply_map_overlay(self.prefs.settings['map_overlay']['enabled'])
         self.apply_chase(self.prefs.settings['memes']['chase']['enabled'])
-        self.apply_sable(self.prefs.settings['memes']['sable']['enabled'])
+        if sable_detector():self.apply_sable(self.prefs.settings['memes']['sable']['enabled'])   # L4: never started in release builds
         from PySide6.QtCore import QTimer
         QTimer.singleShot(0,self.refresh_autostart_action)
 
@@ -540,7 +541,8 @@ class MainWindow(QMainWindow):
             from src.gui.memes_page import MemesPage
             self.memes_page=MemesPage(self.meme_hub,self.locale.text,self.randomizer_page)
             self.memes_page.chase.enabled_changed.connect(self.apply_chase);self.memes_page.chase.preview.connect(lambda:self.chase_meme(True).preview())
-            self.memes_page.sable.enabled_changed.connect(self.apply_sable);self.memes_page.sable.preview.connect(lambda:self.sable_detector(True).preview())
+            if self.memes_page.sable:
+                self.memes_page.sable.enabled_changed.connect(self.apply_sable);self.memes_page.sable.preview.connect(lambda:self.sable_detector(True).preview())
             self.memes_host.layout().addWidget(self.memes_page);self.chase_state();self.sable_state()
         if index==2:self.meme_hub.reload()  # Files added while the app runs show up on the next visit.
         if index==3 and self.crosshair_page is None:
@@ -615,7 +617,7 @@ class MainWindow(QMainWindow):
 
     def sable_detector(self,create=False):
         controller=getattr(self,'sable_controller',None)
-        if controller is None and create:
+        if controller is None and create and sable_detector():
             from src.gui.sable_overlay import SableController
             controller=self.sable_controller=SableController(self.root,self.prefs.settings['memes']['sable'],self.meme_hub,lambda:self.current_role=='killer',lambda:bool(self.auto_worker))
             controller.changed.connect(self.sable_state)
@@ -627,7 +629,7 @@ class MainWindow(QMainWindow):
         self.sable_state()
 
     def sable_state(self):
-        if not self.memes_page:return
+        if not self.memes_page or not self.memes_page.sable:return
         controller=self.sable_detector()
         self.memes_page.sable.state.setText(self.locale.text(controller.state() if controller and controller.enabled else 'meme_sable_off'))
 

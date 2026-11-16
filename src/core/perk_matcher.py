@@ -5,6 +5,7 @@ to draw that icon, so sharing is not treated as ambiguity. Anything not accepted
 stays None and is drawn as "?", never guessed.
 """
 from dataclasses import dataclass
+from pathlib import Path
 import cv2
 import numpy as np
 from src.core.models import IconEntry
@@ -12,13 +13,50 @@ from src.core.node_classifier import IconMatcher,glyph
 from src.core.perk_catalog import load_catalog
 
 
+# L1 (16.11): how a perk icon looks on the Tab scoreboard. The icon covers 48.5 of the 52 px
+# tile at 100 % UI scale and is drawn brighter than the Wiki art (gain fitted on real tiles).
+TAB_TILES=(52,47,112)    # Tab tiles at 100 % and 90 % UI scale, and the own HUD perks
+ICON_SHARE=48.5/52
+ICON_GAIN=1.6
+RENDER_BACKGROUND=(70,45,70)  # A flat dark diamond; the rarity colour itself is not modelled.
+
+
+def render_tab_tile(icon,tile,background=None):
+    """The perk icon (BGRA Wiki art) drawn on a background the size of a Tab tile."""
+    if background is None:
+        base=np.empty((tile,tile,3),np.float32);base[:]=RENDER_BACKGROUND
+    else:base=cv2.resize(background[:,:,:3],(tile,tile),interpolation=cv2.INTER_AREA).astype(np.float32)
+    size=round(tile*ICON_SHARE);art=cv2.resize(icon,(size,size),interpolation=cv2.INTER_AREA).astype(np.float32)
+    alpha=art[:,:,3:4]/255 if art.shape[2]==4 else np.ones((size,size,1),np.float32);at=(tile-size)//2+1
+    base[at:at+size,at:at+size]=np.minimum(255,art[:,:,:3]*ICON_GAIN)*alpha+base[at:at+size,at:at+size]*(1-alpha)
+    return np.clip(base,0,255).astype(np.uint8)
+
+
+def tile_feature(tile):
+    """The glyph of a square perk tile crop, normalised to 128 px the way identify reads it."""
+    size=max(tile.shape[:2])
+    resized=cv2.resize(tile[:,:,:3],(128,128),interpolation=cv2.INTER_AREA if size>128 else cv2.INTER_CUBIC)
+    return resized,glyph(resized,diamond_mask(128))
+
+
 class PerkLibrary:
     """The small IconLibrary surface IconMatcher reads, for perks only."""
+    # Perk tiles are never rotated; the Wiki art keeps small scale variants, the renders need none.
+    variant_transforms=((0,.94),(0,1.06))
+
     def __init__(self,root,role):
         self.root=root;self.perks_by_icon={}
         for perk in load_catalog(root,role):self.perks_by_icon.setdefault('perk_icon_'+perk.sha256[:16],[]).append(perk)
         self.entries=[IconEntry(ident,role,'perks',None,perks[0].icon,perks[0].original,[],'unknown',perks[0].sha256)
                       for ident,perks in sorted(self.perks_by_icon.items())]
+        self.rendered_features={}
+        for entry in self.entries:
+            path=Path(root)/entry.source
+            icon=cv2.imdecode(np.fromfile(path,np.uint8),cv2.IMREAD_UNCHANGED) if path.is_file() else None
+            if icon is None or icon.ndim!=3:continue
+            if icon.shape[2]==3:icon=cv2.cvtColor(icon,cv2.COLOR_BGR2BGRA)
+            features=[tile_feature(render_tab_tile(icon,tile))[1] for tile in TAB_TILES]
+            self.rendered_features[entry.id]=[f for f in features if f is not None]
 
     def filter(self,role,character=None):
         return [e for e in self.entries if e.role==role]
@@ -58,9 +96,7 @@ class PerkMatcher:
 
     def identify(self,tile):
         """tile: square BGR crop of one perk diamond, at any scale."""
-        size=max(tile.shape[:2])
-        resized=cv2.resize(tile[:,:,:3],(128,128),interpolation=cv2.INTER_AREA if size>128 else cv2.INTER_CUBIC)
-        feature=glyph(resized,diamond_mask(128))
+        resized,feature=tile_feature(tile)
         if feature is None:return SlotResult(None,None,(),0.,0.,'no_glyph')
         match=self.matcher.match(resized,64,use_cache=False,prepared_feature=feature,prepared_rarity=('unknown',0.))
         icon_id,reason=match.icon_id,'accepted'

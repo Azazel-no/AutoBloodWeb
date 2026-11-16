@@ -302,7 +302,21 @@ def _save_tile(matcher,tile,result,accepted):
         folder.mkdir(parents=True,exist_ok=True);write_image(path,tile)
         path.with_suffix('.json').write_text(json.dumps(dict(reason=result.reason,score=result.score,margin=result.margin,
             candidates=result.candidates,accepted_as=list(result.names) if accepted else None),ensure_ascii=False),encoding='utf-8')
+        if not accepted:   # L1 (16.11): say where the "?" tile went, so it can be found by the match time.
+            import logging;logging.getLogger(__name__).info('Unknown perk tile saved: %s (%s, best %s)',path,result.reason,list(result.candidates[:2]))
     except (OSError,ValueError,TypeError):pass  # A diagnostic file must never disturb the overlay.
+
+
+def tab_rows_identity(image,layout):
+    """K1: (own row index or None, {row: character portrait feature}) of a Tab frame, as read_tab finds them,
+    without reading any perk (a press while the perks are locked only asks: is this still the same match?)."""
+    g=Geometry(layout,image.shape);t=layout['tab']
+    gold=[gold if blue<.2 else 0. for blue,gold in (band_colours(image,g,y) for y in t['rows_y'])]
+    own=int(np.argmax(gold)) if max(gold)>=.25 else None
+    portraits={}
+    for index,y in enumerate(t['rows_y']):
+        px,py=g.tab(t['portrait_x'],y+t['portrait_dy']);portraits[index]=portrait_feature(image,(px,py),g.size(t['portrait_radius']))
+    return own,portraits
 
 
 def read_tab(image,matcher,layout):

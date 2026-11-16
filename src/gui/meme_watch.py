@@ -58,7 +58,7 @@ class MatchWatch:
             if not self.in_match: log.info('%s: match HUD found (%s, HUD scale %.2f)', self.name, self.current_role(), self.hud_scale)
             self.in_match = True; self.hud_seen_at = now
             from src.gui.match_overlay import MATCH
-            MATCH.note_hud()
+            MATCH.note_hud(); MATCH.note_role(self.role)
         elif self.hud_seen_at is not None and now - self.hud_seen_at > HUD_GONE_SECONDS:
             log.info('%s: match HUD gone', self.name); self.reset()
 

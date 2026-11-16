@@ -59,13 +59,23 @@ def pack_dir(base=None):
     return Path(os.environ.get('APPDATA') or Path.home() / 'AppData/Roaming') / 'AutoBloodWeb' / 'meme_pack'
 
 
+def readme_text():
+    """The README; release builds have no Sable Detector (L4), so its lines are left out there."""
+    from src.core.features import sable_detector
+    if sable_detector(): return README
+    return ''.join(line for line in README.splitlines(keepends=True) if not line.startswith('sable/'))
+
+
 def ensure(folder):
     """Creates the folder tree and its README; never touches existing media."""
-    folder = Path(folder)
-    for name in FOLDERS: (folder / name).mkdir(parents=True, exist_ok=True)
+    from src.core.features import sable_detector
+    folder = Path(folder); text = readme_text()
+    for name in FOLDERS:
+        if name.startswith('sable/') and not sable_detector(): continue
+        (folder / name).mkdir(parents=True, exist_ok=True)
     readme = folder / 'README.txt'
-    if not readme.is_file() or readme.read_text(encoding='utf-8', errors='replace') != README:
-        readme.write_text(README, encoding='utf-8')
+    if not readme.is_file() or readme.read_text(encoding='utf-8', errors='replace') != text:
+        readme.write_text(text, encoding='utf-8')
     return folder
 
 
