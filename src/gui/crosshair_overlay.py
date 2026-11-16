@@ -82,29 +82,37 @@ class CrosshairController(QObject):
 
     def toggle(self, action):
         if action == 'key_down':
-            self.shown = not self.shown;self.look()
+            self.shown = not self.shown;log.info('Crosshair: %s by %s', 'on' if self.shown else 'hidden', self.key);self.look()
 
     def look(self):
         try:
             self.step()
         except ScreenError:
-            self.game_hwnd = None;self.window.hide()
+            self.why('no game window');self.game_hwnd = None;self.window.hide()
         except Exception:
             log.exception('Crosshair step failed');self.window.hide()
 
+    def why(self, reason):
+        """16.11: the crosshair hid silently; each change of the reason it is (not) shown goes to app.log."""
+        if getattr(self, 'reason', None) != reason:
+            self.reason = reason;log.info('Crosshair: %s', reason)
+
     def step(self):
         if self.automation_active():  # Any window over the game counts as a cover for purchase checks.
-            return self.window.hide()
+            self.why('hidden while Bloodweb runs');return self.window.hide()
         window = self.backend.info();self.game_hwnd = window.hwnd
         if not self.shown or not (window.foreground or overlay_in_front()):
-            return self.window.hide()
+            self.why('hidden by hotkey' if not self.shown else 'game not in front');return self.window.hide()
         image, _ = self.backend.grab(window.client)
         present, role = match_state(image, self.layout, self.root)
         if present:
             from src.gui.match_overlay import MATCH
             MATCH.note_hud();MATCH.note_role(role)
             if MATCH.role == 'killer':
-                return self.window.place(window.client)
+                self.why('shown (killer match)');return self.window.place(window.client)
+            self.why(f'not shown ({MATCH.role or "role not known yet"})')
+        else:
+            self.why('no match HUD in its read')
         self.window.hide()
 
 

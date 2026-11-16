@@ -229,6 +229,8 @@ def check_not_shipped():
         found += re.findall(r"'(src\.(?:gui|core)\.sable_\w+)'", toc.read_text(encoding='utf-8', errors='replace'))
     if found:
         raise SystemExit(f'Not shipped in this release, but found in the build: {found[:10]}')
+    print(f'Sable Detector check: nothing from it in the build (no sable_* modules in {toc.name if toc.is_file() else "PYZ"}, '
+          'no assets/sable, no .onnx model)')
 
 
 def folder_size(path):
