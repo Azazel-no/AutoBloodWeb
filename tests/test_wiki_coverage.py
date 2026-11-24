@@ -59,3 +59,26 @@ def test_survivor_addons_have_item_compatibility_for_the_randomizer():
     for row in REFERENCE:
         if row['role'] == 'survivor' and row['category'] == 'addons':
             assert types.get(row['name']) == expected[row['group']], row['name']
+
+
+def test_every_survivor_bloodweb_entry_is_selectable_in_priorities(tmp_path):
+    """User reports (24.11): items "missing in the priorities list". The catalogue alone is not
+    enough: each entry must also appear in the survivor icon grid (its own category and "all",
+    whatever killer was last chosen), carry a rarity, and survive a save/reload of priorities."""
+    from src.core.preferences import Preferences
+    library, entries, by_url, info = coverage()
+    rows = [r for r in REFERENCE if r['role'] == 'survivor' and r['bloodweb']]
+    wanted = [by_url[unquote(r['url'])] for r in rows]
+    for character in ('blight', 'nurse', 'terrifier'):
+        everything = {e.id for e in library.filter('survivor', None, character)}
+        for row, ident in zip(rows, wanted):
+            assert ident in everything, f"{row['name']} hidden from the survivor list (killer {character})"
+            assert ident in {e.id for e in library.filter('survivor', row['category'], character)}, row['name']
+    for row, ident in zip(rows, wanted):
+        rarity = info[ident].rarity if ident in info else library.event_metadata[ident].get('availability')
+        assert rarity, f"{row['name']}: no rarity"
+    path = tmp_path / 'preferences.json'
+    prefs = Preferences(path, library.entries)
+    prefs.priorities['survivor'] = list(wanted)
+    prefs.save('ru', 'survivor')
+    assert Preferences(path, library.entries).priorities['survivor'] == wanted
