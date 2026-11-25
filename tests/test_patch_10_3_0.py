@@ -85,3 +85,17 @@ def test_unknown_node_is_logged_once_with_a_crop_and_never_pauses(monkeypatch,tm
     for _ in range(2):Automation.note_unknown_nodes(engine,frame,result)
     assert [d['node'] for s,d in traces if s=='unknown_node']==[1]
     assert list((tmp_path/'debug/unknown_nodes').glob('*_L12_01.png'))
+
+
+def test_red_ringed_centre_is_found_locally_at_its_own_place_and_size(root):
+    """Live 25.11 (Cheryl, P10 level 48): a centre ringed by purchased nodes scores 0.87, under the
+    local 0.94 threshold; every read fell to the 0.6 s global search and aged past 2 s."""
+    import cv2,time
+    from src.core.bloodweb_detector import find_center
+    from src.core.bloodweb_header import read_level
+    image=cv2.imread(str(root/'tests/fixtures/patch_10_3_0_center/cheryl_level48_red_center.png'))
+    level=read_level(image,root);assert level[0]==48
+    started=time.perf_counter()
+    assert find_center(image,root,hint=(680,530,33),local_only=True,observed_level=level)==(680,530,33)
+    assert time.perf_counter()-started<.5
+    assert find_center(image,root,hint=(680,530,40),local_only=True,observed_level=level) is None   # another size is not this glyph

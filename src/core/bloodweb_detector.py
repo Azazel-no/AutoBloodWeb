@@ -167,6 +167,11 @@ def find_center(image: np.ndarray, root=None, hint=None, local_only=False,observ
         local=gray[top:min(gray.shape[0],sy+half),left:min(gray.shape[1],sx+half)]
         # A hint narrows the search only after the original central glyph is
         # independently found in today's pixels at the stricter threshold.
+        # Live 25.11 (Cheryl, P10 level 48, patch 10.3.0): a centre ringed by purchased red
+        # nodes scored 0.87 at its own place and size, every local read fell through to the
+        # global search (0.6 s) and each capture aged past 2 s (preparation_recovery_limit).
+        # The global search accepts 0.86 anywhere; at the hinted place and radius it is no weaker.
+        same=None
         for template,r,name in _center_templates(str(root)):
             for scale in scales:
                 size=round(49*scale)
@@ -175,8 +180,11 @@ def find_center(image: np.ndarray, root=None, hint=None, local_only=False,observ
                 scores=cv2.matchTemplate(local,tile,cv2.TM_CCOEFF_NORMED)
                 _,score,_,point=cv2.minMaxLoc(scores)
                 x,y=(left+point[0]+(size-1)/2)/shrink,(top+point[1]+(size-1)/2)/shrink
-                if score>=.94 and np.hypot(x-hx,y-hy)<hr*.25:
-                    return round(x),round(y),radius(scale,name)
+                if np.hypot(x-hx,y-hy)<hr*.25:
+                    if score>=.94:return round(x),round(y),radius(scale,name)
+                    if score>=.86 and abs(radius(scale,name)-hr)<=2 and (same is None or score>same[0]):
+                        same=(score,round(x),round(y),radius(scale,name))
+        if same:return same[1:]
         if local_only:return None
     # Try the native scale of every genuine reference before costly resize
     # sweeps of the first historical reference. Early-web glyphs have their
