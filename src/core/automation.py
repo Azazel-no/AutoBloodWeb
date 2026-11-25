@@ -1082,7 +1082,13 @@ class Automation:
             previous_proof=getattr(self,'saved_chain_transition_proven',None)
             self.saved_chain_transition_proven=(key,changed)
             if changed and previous_proof!=(key,True):count=1;self.saved_scene_stable_count=1
-        if pending and pending.get('batch') and changed:raise ScreenError('purchase_result_unknown','group_transition_unresolved')
+        if pending and pending.get('batch') and changed:
+            # Live 25.11 (The Terrifier, level 15): a group finished the level, the next web put another node
+            # where a target had been, and the run paused. The group's inputs are spent; like any other
+            # unprovable click it is retired without purchase credit on a stable, readable next web.
+            settled=self.retire_unresolved(frame,result,memory,count,'group_transition_to_next_level')
+            if settled is None:raise ScreenError('purchase_result_unknown','group_transition_unresolved')
+            return settled
         if replacement:
             # Both independent observations must prove the transition. Similar
             # geometry alone must not lend an unproven first frame its count.

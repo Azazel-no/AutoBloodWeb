@@ -122,6 +122,14 @@ ROI_REACH_OLD=10.5  # ...and before 10.3.0: a wider region would only catch more
 P1030_RADIUS=34.5   # node radius at 1080p: 10.3.0 webs 30-35 (centre template 33), older ones 36 (UI 90 %) - 40
 
 
+WEB_REACH_P1030=12.  # 10.3.0: outer nodes at 10.6-10.7 r; live 25.11 an outer node at 352 px with r 32-33 fell just outside 11 r
+
+
+def web_reach(base_r):
+    """Node-centre limit in centre radii: the 10.3.0 web (native radius <= P1030_RADIUS) reaches further."""
+    return WEB_REACH_P1030 if base_r<=P1030_RADIUS else WEB_REACH
+
+
 def roi_reach(radius,client_height):
     """Capture reach in node radii for a web whose centre radius is `radius` on a client this tall."""
     return ROI_REACH if radius*1080/max(1,client_height)<=P1030_RADIUS else ROI_REACH_OLD
@@ -568,7 +576,7 @@ class BloodwebDetector:
             if any(tx-r<x<tx+tw+r and ty-r<y<ty+th+r for tx,ty,tw,th in tooltips):
                 audit['reason']='item_tooltip';continue
             distance=np.hypot(x-cx,y-cy)
-            if distance<max(base_r*1.5,base_r+r) or distance>base_r*WEB_REACH or x<r or y<r or x+r>=w or y+r>=h:
+            if distance<max(base_r*1.5,base_r+r) or distance>base_r*web_reach(base_r) or x<r or y<r or x+r>=w or y+r>=h:
                 continue
             patch=gray[y-r:y+r+1,x-r:x+r+1]
             yy,xx=np.ogrid[-r:r+1,-r:r+1]
