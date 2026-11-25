@@ -79,7 +79,9 @@ def _native_ready_match(image,white,mask,sha,hint,fixed=None):
     for cx,cy in points:
         half=max(96,round(h*.1));left=max(0,round(cx)-half);top=max(0,round(cy)-half)
         local=observed[top:min(h,round(cy)+half),left:min(w,round(cx)+half)]
-        for scale in ((fixed*h/1080,) if fixed else dict.fromkeys((h/1080,1.,.75,1.25,1.5))):
+        # A fixed-scale reference is native pixels: scale by the client height only on a full landscape client;
+        # the live detector passes a native square crop of the web (live 25.11: 550 px crop, scale was 0.28).
+        for scale in ((fixed*(h/1080 if w/h>1.5 else 1.),) if fixed else dict.fromkeys((h/1080,1.,.75,1.25,1.5))):
             size=round(121*scale)
             if size>=min(local.shape):continue
             tile=cv2.resize(white,(size,size),interpolation=cv2.INTER_NEAREST)
