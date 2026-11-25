@@ -4,6 +4,8 @@ import numpy as np
 
 _ANGLES=np.arange(96)*2*np.pi/96
 _COS=np.cos(_ANGLES);_SIN=np.sin(_ANGLES);_RADII=np.arange(.72,1.36,.04)
+GOLD_RIM_ACCEPT=.85  # ...and inside a gold ring (ring_fractions already demands a narrow bright ridge), an available one
+RED_RIM_ACCEPT=.9    # a linked candidate inside an almost unbroken red ring is a purchased node (real 0.94-1.0)
 
 
 def tile_polygon(hsv,x,y,r):
@@ -34,7 +36,7 @@ def framing(gray,x,y,r):
     return dict(valley=float(np.max(np.mean(valley,axis=1))),regular=float(np.max(np.mean(edge,axis=1))),dark_ring=float(dark.max()),opposite_dark=float(opposite.max()))
 
 
-def validate_candidates(gray,circles,center,edges,previous=(),hsv=None,confirmed_graph=False,only_last=False,framing_cache=None):
+def validate_candidates(gray,circles,center,edges,previous=(),hsv=None,confirmed_graph=False,only_last=False,framing_cache=None,fallback_radius=None):
     """Edges support framing, but a missing edge cannot reject a strong frame.
 
     Independent of glyph whiteness, library matches, hue, and screen height.
@@ -71,8 +73,23 @@ def validate_candidates(gray,circles,center,edges,previous=(),hsv=None,confirmed
         # Texture on a bright sleeve can have radial valleys and apparent
         # links to real nodes. Without a tile polygon, the secondary graph
         # must still observe part of the game's dark circular outline.
-        valid=strong(evidence) or structured(evidence,linked,polygon) or (confirmed_graph and linked and evidence['regular']>=.35 and (polygon or evidence['valley']>=.25 and evidence['regular']>=.6 and evidence['dark_ring']>=.08))
+        # Patch 10.3.0: a purchased tile is dimmed and framed by a continuous glowing red
+        # ring instead of a dark outline; an available tile's gold ring can hide the thin
+        # dark frame. Either ring counts only as part of the connected web, before the
+        # framing-only refinement below can drag the circle off the tile.
+        if hsv is not None and linked:
+            from src.core.bloodweb_detector import ring_fractions
+            red,gold=ring_fractions(hsv,x,y,r)
+            evidence=dict(evidence,red_rim=red,gold_rim=gold)
+        colour_rim=linked and evidence['regular']>=.7 and (evidence.get('red_rim',0)>=RED_RIM_ACCEPT or evidence.get('gold_rim',0)>=GOLD_RIM_ACCEPT)
+        valid=colour_rim or strong(evidence) or structured(evidence,linked,polygon) or (confirmed_graph and linked and evidence['regular']>=.35 and (polygon or evidence['valley']>=.25 and evidence['regular']>=.6 and evidence['dark_ring']>=.08))
         origin=(x,y)
+        if not valid and fallback_radius and (x,y,r) in fallback_radius:
+            # A radius grown to a red rim (fresh_red_radius) that does not prove itself falls back to
+            # the circle Hough found; the old-layout purchased frame is proven at that radius.
+            original=fallback_radius[(x,y,r)];e=current_frame(x,y,original)
+            if strong(e) or structured(e,linked,tile_polygon(hsv,x,y,original) if hsv is not None else False):
+                r,evidence,valid=original,e,True
         if not valid and linked:
             # A partial/offset Hough circle can miss the real lower frame.
             # Refine locally using framing only, never using item templates.

@@ -181,6 +181,10 @@ class Automation:
         if stage=='cursor_api' and 'seconds' in details:
             self.performance.add('cursor_movement_api',details['seconds'],action=self.actions,api=details.get('api'))
             self.input_api_seconds=getattr(self,'input_api_seconds',0)+details['seconds']
+        summary=getattr(self,'run_summary',None)
+        if summary is not None:
+            try:summary.observe(stage,details,self.state.value)
+            except Exception:logging.getLogger(__name__).exception('run summary')
         with self.performance.span('action_audit','io',action=self.actions,analysis_id=details.get('analysis_id')):
             self.report.add(stage,state=self.state.value,**details)
 
@@ -633,6 +637,7 @@ class Automation:
             if name!='detector_total':self.performance.add(name,seconds,'aggregate' if name in ('geometry_cache_check','recognition_stage1','recognition_stage2','memory_update') else 'compute',analysis_id=result.analysis_id,action=self.actions)
         for sample in self.performance.samples:
             if sample['sequence']>=first_sample:sample['analysis_id']=result.analysis_id
+        self.note_unknown_nodes(frame,result)
         self.trace('analysis',frame=frame.metadata(),screen=result.screen_state.value,next_node=plan.next_node,
                 scan_kind=result.details['scan_kind'],route_update=result.details['route_update'],
                 local_library_matches=getattr(self.opening,'local_library_matches',0)-matches_before,
@@ -640,6 +645,38 @@ class Automation:
                     geometry=n.geometry_confidence,state_score=n.state_confidence,icon=n.icon_id,reason=n.match_reason) for n in result.nodes],analysis_id=result.analysis_id)
         self.event(self.state,'',(frame,result,plan))
         return frame,result,plan
+
+    UNKNOWN_NODE_LIMIT=200   # crops saved per run
+
+    def note_unknown_nodes(self,frame,result):
+        """Log every unrecognised item once per position and level, with a crop in
+        debug/unknown_nodes/. Logging only: an unknown icon never pauses the run; the
+        planner treats it as a filler node and the centre automatic unlock stays available."""
+        if result.screen_state!=ScreenState.BLOODWEB:return
+        seen=self.__dict__.setdefault('unknown_nodes_seen',set())
+        for n in result.nodes:
+            if (n.icon_id or n.type in (NodeType.CENTER,NodeType.PRESTIGE,NodeType.PERK)
+                    or n.state not in (NodeState.AVAILABLE,NodeState.LOCKED)):continue
+            key=(result.level,round(n.x/max(8,n.radius*.5)),round(n.y/max(8,n.radius*.5)))
+            if key in seen:continue
+            seen.add(key);count=len(seen)
+            crop=None
+            if count<=self.UNKNOWN_NODE_LIMIT and getattr(getattr(self,'report',None),'path',None):
+                from src.core.runtime_paths import project_root
+                stamp=time.strftime('%Y%m%d_%H%M%S')
+                crop=project_root()/'debug/unknown_nodes'/f'{stamp}_L{result.level}_{n.id:02d}.png'
+                r=max(n.radius,n.content_radius or 0)+4
+                patch=frame.image[max(0,n.y-r):n.y+r+1,max(0,n.x-r):n.x+r+1].copy()
+                def write(path=crop,patch=patch):
+                    from src.utils.images import write_image
+                    path.parent.mkdir(parents=True,exist_ok=True);write_image(path,patch)
+                if self.evidence_writer:self.evidence_writer.submit(('unknown_node',count),write)
+                else:
+                    try:write()
+                    except OSError:crop=None
+            self.trace('unknown_node',level=result.level,node=n.id,node_state=n.state.value,rarity=n.rarity,
+                category=n.category_hint,status=n.recognition_status.value,best=[(c,round(float(v),3)) for c,v in n.candidates[:3]],
+                crop=str(crop) if crop else None,analysis_id=result.analysis_id,paid_inputs=0)
 
     def keep_fallback_frame(self,frame,reason):
         """Optional background PNG of a fallback frame, at most 40 per run."""
@@ -1616,6 +1653,8 @@ class Automation:
             from src.core.evidence_writer import EvidenceWriter
             self.evidence_writer=EvidenceWriter()
         start=time.monotonic()
+        from src.core.run_summary import RunSummary
+        self.run_summary=RunSummary(getattr(self.detector,'role',None),getattr(self.detector,'character',None))
         self.runtime_deadline=start+self.settings.max_runtime if self.settings.max_runtime is not None else float('inf')
         try:
             self.trace('run_settings',settings=asdict(self.settings))
@@ -1695,6 +1734,12 @@ class Automation:
                 turbo_suppressed=getattr(self,'turbo_suppressed',0),visual_pipeline=dict(getattr(self.screen,'pipeline_counts',{})))
             try:self.performance.save()
             except OSError as exc:self.trace('performance_write_error',detail=str(exc))
+            if self.report.path and not self.settings.dry_run:
+                try:
+                    from src.core.runtime_paths import project_root
+                    path=self.run_summary.write(project_root(),self.state.value)
+                    import logging;logging.getLogger(__name__).info('Run report %s',path)
+                except Exception as exc:self.trace('run_report_write_error',detail=str(exc))
 
     def _main_loop(self,calibrate,start):
         waiting=None;stable=None;stable_count=0;stable_since=time.monotonic()

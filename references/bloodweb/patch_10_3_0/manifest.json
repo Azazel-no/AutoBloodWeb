@@ -1,0 +1,10 @@
+{
+  "centers": [
+    {
+      "file": "center_cheryl_level34.png",
+      "sha256": "3935071dac097604b33727e06f4ca0441c6b0bf4639896f7e871f7faf5d962e3",
+      "radius": 33,
+      "note": "native pixels, DBD patch 10.3.0, HUD/UI 100 %, Cheryl Mason level 34, glyph centre (680,530) of 1920x1080; node radius 30-35 px"
+    }
+  ]
+}

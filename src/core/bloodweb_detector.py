@@ -100,15 +100,31 @@ def _center_templates(root):
             if tile.shape[:2]==(49,49) and np.array_equal(original,tile):
                 templates.append((cv2.cvtColor(tile,cv2.COLOR_BGR2GRAY),record['radius'],'reviewed_native_early_center'))
     except (OSError,ValueError,KeyError):pass
-    # Native centre glyphs at DBD's 90 % UI scale, with that scale's smaller radius.
-    folder=Path(root)/'references/bloodweb/ui90'
-    try:
-        for record in json.loads((folder/'manifest.json').read_text(encoding='utf-8'))['centers']:
-            path=folder/record['file']
-            if hashlib.sha256(path.read_bytes()).hexdigest()==record['sha256']:
-                templates.append((cv2.cvtColor(read_image(path),cv2.COLOR_BGR2GRAY),record['radius'],'ui90_'+record['file']))
-    except (OSError,ValueError,KeyError):pass
+    # Native centre glyphs with their own node radius: DBD's 90 % UI scale, and the
+    # patch 10.3.0 web (smaller nodes and glyph, centre ~32 px higher; 2026-11-25).
+    for prefix,folder in RADIUS_TEMPLATES.items():
+        folder=Path(root)/folder
+        try:
+            for record in json.loads((folder/'manifest.json').read_text(encoding='utf-8'))['centers']:
+                path=folder/record['file']
+                if hashlib.sha256(path.read_bytes()).hexdigest()==record['sha256']:
+                    templates.append((cv2.cvtColor(read_image(path),cv2.COLOR_BGR2GRAY),record['radius'],prefix+record['file']))
+        except (OSError,ValueError,KeyError):pass
     return templates
+
+
+RADIUS_TEMPLATES={'ui90_':'references/bloodweb/ui90','p1030_':'references/bloodweb/patch_10_3_0'}
+# Patch 10.3.0: nodes shrank more than the web did. The outer ring now sits ~10.6 node
+# radii from the centre (was ~9.2), so the web reaches further in units of the radius.
+WEB_REACH=11.0      # node centres farther than this many centre radii are scenery (old SPEND BLOODPOINTS button: 11.5)
+ROI_REACH=12.5      # the live capture region: the centre +- this many node radii (10.3.0 web)
+ROI_REACH_OLD=10.5  # ...and before 10.3.0: a wider region would only catch more windows on the right as cover
+P1030_RADIUS=34.5   # node radius at 1080p: 10.3.0 webs 30-35 (centre template 33), older ones 36 (UI 90 %) - 40
+
+
+def roi_reach(radius,client_height):
+    """Capture reach in node radii for a web whose centre radius is `radius` on a client this tall."""
+    return ROI_REACH if radius*1080/max(1,client_height)<=P1030_RADIUS else ROI_REACH_OLD
 
 
 def find_center(image: np.ndarray, root=None, hint=None, local_only=False,observed_level=None,native_only=False) -> tuple[int,int,int] | None:
@@ -130,7 +146,7 @@ def find_center(image: np.ndarray, root=None, hint=None, local_only=False,observ
     if shrink<1: gray=cv2.resize(gray,None,fx=shrink,fy=shrink,interpolation=cv2.INTER_AREA)
     best=None
     def radius(scale,name=''):
-        if name.startswith('ui90_'):return next(r for _,r,n in _center_templates(str(root)) if n==name)
+        if name.startswith(tuple(RADIUS_TEMPLATES)):return next(r for _,r,n in _center_templates(str(root)) if n==name)
         nominal=round(h*(.037 if w/h>1.5 else .047))
         # A cropped landscape screenshot may retain the original game pixels.
         # Its height cannot shrink the known visual scale of the central glyph.
@@ -245,6 +261,38 @@ def fresh_gold_radius(hsv,x,y,r,base_r):
         if all(ring_fractions(hsv,x,y,value)[1]>.65 for value in (candidate-1,candidate,candidate+1)):
             return candidate
     return r
+
+
+def fresh_red_radius(hsv,x,y,r,base_r):
+    """Patch 10.3.0 purchased node: a glowing red ring at ~0.8-0.9 of the node radius
+    around a dimmed tile, no dark frame. Hough often takes the ring's inner edge
+    (~0.65 r), which shrinks the node below the edge-length limits. Grow the
+    proposal to the outermost radius where the ring is still continuous."""
+    if r>=base_r*.8 or ring_fractions(hsv,x,y,r)[0]<RED_RIM:return r
+    best=r
+    for candidate in range(r+1,round(base_r*.95)+1):
+        if ring_fractions(hsv,x,y,candidate)[0]>=RED_RIM:best=candidate
+        else:break
+    return best
+
+
+def fresh_gold_center(hsv,x,y,r,base_r):
+    """A Hough circle off the real tile by a few pixels (10.3.0 Art level 6: 8 px low on a
+    white offering glyph) misses the gold ring and reads an available node as locked.
+    Move it only onto three fresh strong gold annuli nearby, as fresh_gold_radius does."""
+    red,gold=ring_fractions(hsv,x,y,r)
+    if red>.42 or gold>.42:return x,y,r
+    reach=max(2,round(base_r*.3));best=None
+    for dx in range(-reach,reach+1,2):
+        for dy in range(-reach,reach+1,2):
+            if dx==dy==0:continue   # the radius alone is fresh_gold_radius's job
+            for candidate in (round(base_r*.9),round(base_r*.95),base_r):
+                score=[ring_fractions(hsv,x+dx,y+dy,value)[1] for value in (candidate-1,candidate,candidate+1)]
+                if min(score)>.65 and (best is None or sum(score)>best[0]):best=(sum(score),x+dx,y+dy,candidate)
+    return (best[1],best[2],best[3]) if best else (x,y,r)
+
+
+RED_RIM=.9   # share of a continuous red ring: a purchased node's rim (real 0.93-1.0)
 
 
 def fresh_dark_radius(hsv,gray,x,y,r,base_r):
@@ -520,7 +568,7 @@ class BloodwebDetector:
             if any(tx-r<x<tx+tw+r and ty-r<y<ty+th+r for tx,ty,tw,th in tooltips):
                 audit['reason']='item_tooltip';continue
             distance=np.hypot(x-cx,y-cy)
-            if distance<max(base_r*1.5,base_r+r) or distance>base_r*10.0 or x<r or y<r or x+r>=w or y+r>=h:
+            if distance<max(base_r*1.5,base_r+r) or distance>base_r*WEB_REACH or x<r or y<r or x+r>=w or y+r>=h:
                 continue
             patch=gray[y-r:y+r+1,x-r:x+r+1]
             yy,xx=np.ogrid[-r:r+1,-r:r+1]
@@ -558,25 +606,32 @@ class BloodwebDetector:
         # Enlarge only that proposal, with a continuous fresh gold annulus at
         # the normal node scale. The usual framing/graph validation follows;
         # no new centre, remembered node or lower state threshold is added.
-        radius_corrections=[];dark_radius_corrections=[];corrected=[]
+        radius_corrections=[];dark_radius_corrections=[];red_radius_corrections=[];red_fallback={};corrected=[]
         for x,y,r in unique:
             candidate=fresh_gold_radius(hsv,x,y,r,base_r)
             if candidate!=r:radius_corrections.append(dict(x=x,y=y,before=r,after=candidate))
             r=candidate
+            moved=fresh_gold_center(hsv,x,y,r,base_r)   # only when the ring is still not found at this centre
+            if moved!=(x,y,r):radius_corrections.append(dict(x=x,y=y,before=r,after=moved[2],moved_to=list(moved[:2])));x,y,r=moved
             candidate=fresh_dark_radius(hsv,gray,x,y,r,base_r)
             if candidate!=r:dark_radius_corrections.append(dict(x=x,y=y,before=r,after=candidate))
+            r=candidate
+            candidate=fresh_red_radius(hsv,x,y,r,base_r)
+            if candidate!=r:red_radius_corrections.append(dict(x=x,y=y,before=r,after=candidate));red_fallback[(x,y,candidate)]=r
             r=candidate
             corrected.append((x,y,r))
         unique=corrected
         analysis.details['gold_radius_corrections']=radius_corrections
         analysis.details['dark_radius_corrections']=dark_radius_corrections
+        analysis.details['red_radius_corrections']=red_radius_corrections
         provisional=[Node(0,cx,cy,base_r,NodeState.CENTER,NodeType.CENTER)]
         for ident,(x,y,r) in enumerate(unique,1):
             red,gold=ring_fractions(hsv,x,y,r)
             provisional.append(Node(ident,x,y,r,NodeState.PURCHASED if red>.42 else NodeState.LOCKED))
         from src.core.node_validation import validate_candidates
         unique,evidence=validate_candidates(gray,unique,(cx,cy),self._edges(image,provisional),
-            previous[2] if live and previous and previous[0]==image.shape and np.hypot(previous[1][0]-cx,previous[1][1]-cy)<base_r*.25 else (),hsv,framing_cache=framing_cache)
+            previous[2] if live and previous and previous[0]==image.shape and np.hypot(previous[1][0]-cx,previous[1][1]-cy)<base_r*.25 else (),hsv,framing_cache=framing_cache,
+            fallback_radius=red_fallback)
         analysis.details['node_validation']=evidence
         # Faint content must not obstruct the initial graph. Verify each
         # deferred proposal against the already accepted web independently.
@@ -630,7 +685,9 @@ class BloodwebDetector:
                 state,certainty=NodeState.PURCHASED,.93
             elif gold>.42:
                 state,certainty=NodeState.AVAILABLE,.90
-            elif ring_dark>.40:
+            elif ring_dark>.40 and self._dark_rim(gray,x,y,r,scales=(.9,1.))>.40:
+                # Patch 10.3.0: a square/hexagonal tile's own dark border reaches 0.4-0.55 at
+                # 0.8 r on ordinary locked nodes; the Entity's black rim covers the whole rim.
                 state,certainty=NodeState.ABSORBED,.78
             elif interior>75:
                 state,certainty=NodeState.LOCKED,.78
@@ -734,7 +791,7 @@ class BloodwebDetector:
         regions=[]
         for x,y,bw,bh,area in stats[1:]:
             if not (bw>radius*5 and radius*.35<bh<radius*2 and bw/bh>4):continue
-            if abs(x-center[0])>radius*10 or abs(y-center[1])>radius*10:continue
+            if abs(x-center[0])>radius*WEB_REACH or abs(y-center[1])>radius*WEB_REACH:continue
             body=hsv[y+bh:min(h,y+bh+radius*4),x:x+bw,2]
             if body.size==0 or float(np.mean(body<40))<.5:continue
             if any(abs(int(x)-a)<radius and abs(int(y)-b)<radius*2 for a,b,_,_ in regions):continue
@@ -753,10 +810,10 @@ class BloodwebDetector:
         return float(max(np.mean(v) for v in votes) if consistent else np.mean(np.any(votes,axis=0)))
 
     @staticmethod
-    def _dark_rim(gray: np.ndarray,x:int,y:int,r:int) -> float:
+    def _dark_rim(gray: np.ndarray,x:int,y:int,r:int,scales=(.8,.9,1.0)) -> float:
         a=np.linspace(0,2*np.pi,96,endpoint=False)
         fractions=[]
-        for scale in (.8,.9,1.0):
+        for scale in scales:
             xs=np.clip(np.round(x+np.cos(a)*r*scale).astype(int),0,gray.shape[1]-1)
             ys=np.clip(np.round(y+np.sin(a)*r*scale).astype(int),0,gray.shape[0]-1)
             fractions.append(float(np.mean(gray[ys,xs]<20)))

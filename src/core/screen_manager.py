@@ -476,7 +476,8 @@ class ScreenManager:
             # Purchased rings shrink. They must not shrink the capture region
             # and clip still-unpurchased nodes on the outer rim.
             radius=max(base,float(np.quantile(radii,.75)) if radii else base)
-            reach=radius*10.5
+            from src.core.bloodweb_detector import roi_reach
+            reach=radius*roi_reach(base,client.height)
             x1=max(0,int(cx-reach)); y1=max(0,int(cy-reach)); x2=min(client.width,int(cx+reach)); y2=min(client.height,int(cy+reach))
             roi=Rect(x1,y1,x2-x1,y2-y1)
             if self._region and self._region[0]==window.signature:
