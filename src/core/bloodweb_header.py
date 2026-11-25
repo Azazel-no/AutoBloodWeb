@@ -43,6 +43,14 @@ def label_references(root):
     records=json.loads(extra.read_text(encoding='utf-8'))['labels'] if extra.is_file() else []
     return [original]+[verified_text(root,record) for record in records]
 
+@lru_cache(maxsize=4)
+def digit_variants(root):
+    """Extra native digit masks (patch 10.3.0 draws some digits slightly differently: its '7' scored 0.94)."""
+    extra=root/'assets/ui/bloodweb_header/label_variants_v58.json'
+    if not extra.is_file():return {}
+    data=json.loads(extra.read_text(encoding='utf-8')).get('digit_variants',{})
+    return {k:[verified_text(root,r) for r in v] for k,v in data.items()}
+
 # DBD's 90 % UI scale draws the same header smaller. These are native pixels from that
 # scale, used as they are; each match reads its digits at the scale of its own reference.
 UI90_SCALE=.9
@@ -124,12 +132,16 @@ def read_level_mask(image,root,strict):
     for x,y,bw,bh in boxes:
         tile=np.pad(strip[y:y+bh,x:x+bw],round(2*scale))
         ranked=[]
+        try:variants=digit_variants(root) if factor==1 else {}
+        except (OSError,ValueError,KeyError):variants={}
         for digit,reference in digits.items():
-            candidate=cv2.resize(tile,(reference.shape[1],reference.shape[0]),interpolation=cv2.INTER_NEAREST)>0
-            target=reference>0
-            # Different aspect ratios are not silently stretched into matches.
-            aspect=(bw/bh)/((reference.shape[1]-4)/(reference.shape[0]-4))
-            value=2*np.count_nonzero(candidate&target)/max(1,np.count_nonzero(candidate)+np.count_nonzero(target)) if .8<aspect<1.25 else 0.
+            value=0.
+            for reference in [reference]+variants.get(digit,[]):
+                candidate=cv2.resize(tile,(reference.shape[1],reference.shape[0]),interpolation=cv2.INTER_NEAREST)>0
+                target=reference>0
+                # Different aspect ratios are not silently stretched into matches.
+                aspect=(bw/bh)/((reference.shape[1]-4)/(reference.shape[0]-4))
+                value=max(value,2*np.count_nonzero(candidate&target)/max(1,np.count_nonzero(candidate)+np.count_nonzero(target)) if .8<aspect<1.25 else 0.)
             ranked.append((value,digit))
         ranked.sort(reverse=True)
         if ranked[0][0]<.95 or len(ranked)>1 and ranked[0][0]-ranked[1][0]<.07:return None,0.

@@ -792,6 +792,9 @@ class BloodwebDetector:
         for x,y,bw,bh,area in stats[1:]:
             if not (bw>radius*5 and radius*.35<bh<radius*2 and bw/bh>4):continue
             if abs(x-center[0])>radius*WEB_REACH or abs(y-center[1])>radius*WEB_REACH:continue
+            # The game draws a hover card whole: a "body" cut off by the bottom edge is scenery
+            # (10.3.0 menu: the mall's blue floor above the dark bottom bar, live 2026-11-25).
+            if y+bh+radius*4>h:continue
             body=hsv[y+bh:min(h,y+bh+radius*4),x:x+bw,2]
             if body.size==0 or float(np.mean(body<40))<.5:continue
             if any(abs(int(x)-a)<radius and abs(int(y)-b)<radius*2 for a,b,_,_ in regions):continue

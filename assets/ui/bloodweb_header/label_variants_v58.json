@@ -12,6 +12,36 @@
         18
       ],
       "unchanged_native_pixels": true
+    },
+    {
+      "path": "assets\\ui\\bloodweb_header\\label_terrifier_native_p1030.png",
+      "sha256": "275e15c428fbe718b8c128a54f6b5d6f9f5feb9d576eb553b99e554763c98458",
+      "source": "debug\\patch_10_3_0\\bloodweb\\terrifier_level6.png (user screenshot, patch 10.3.0, HUD 100 %)",
+      "source_sha256": "6f9878c2d5965322ad70b92534a4b1cbea059ba309e97174a70a6e90a145304f",
+      "source_rect": [
+        380,
+        76,
+        164,
+        18
+      ],
+      "unchanged_native_pixels": true
     }
-  ]
+  ],
+  "digit_variants": {
+    "7": [
+      {
+        "path": "assets\\ui\\bloodweb_header\\digit_7_p1030.png",
+        "sha256": "0a9e5bbf88fd1af4874e1744d1b12e8dfa7a5fcbde29002f5d278b6b110190a0",
+        "source": "debug\\patch_10_3_0\\live_level7.png (live capture, patch 10.3.0, The Terrifier level 7, HUD 100 %)",
+        "source_sha256": "d4ee093b7564481dbcf48b3bc00b54b9290cd95caa85f9f58a05a374fbbdcfb4",
+        "source_rect": [
+          550,
+          75,
+          14,
+          18
+        ],
+        "unchanged_native_pixels": true
+      }
+    ]
+  }
 }
