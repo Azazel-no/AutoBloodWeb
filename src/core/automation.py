@@ -1790,6 +1790,7 @@ class Automation:
                     self.trace('external_prestige_reward_resolved',previous_scene=memory,
                         paid_retry=False,purchase_credit=0,analysis_id=nr.analysis_id)
                     stable=None;stable_count=0;continue
+            if result.screen_state==ScreenState.BLOODWEB:self.saved_scene_transition_since=None
             if self.persisted_scene and not self.settings.dry_run and result.screen_state==ScreenState.BLOODWEB:
                 if not self.recheck_saved_scene(frame,result):
                     self.emit(State.RECOVERING,'purchase_recheck');self.poll();continue
@@ -1812,6 +1813,15 @@ class Automation:
                         self.poll();continue
                     self.trace('terminal_scene_restored',previous_purchase_confirmed=False,observations=2)
                     self.persisted_scene=self.scene_record=None;self.attempted.clear()
+                elif result.screen_state in (ScreenState.REFRESH,ScreenState.UNKNOWN):
+                    # Live 25.11 (The Terrifier P3 level 10): a group finished the level and the read caught the
+                    # transition (refresh, no web yet); this paused at once. Keep reading the transition for a
+                    # bounded time: the next web goes through the saved-scene recheck above.
+                    since=getattr(self,'saved_scene_transition_since',None)
+                    if since is None:self.saved_scene_transition_since=since=time.monotonic()
+                    if time.monotonic()-since>2*self.settings.purchase_timeout:
+                        self.saved_scene_transition_since=None;raise ScreenError('purchase_result_unknown','scene_validation_required')
+                    self.emit(State.RECOVERING,'purchase_recheck');stable=None;stable_count=0;self.poll();continue
                 else:raise ScreenError('purchase_result_unknown','scene_validation_required')
             if self.scene_record and self.attempted and not self.pending_action and not self.settings.dry_run:
                 from src.core.level_transition import header_transition
