@@ -30,27 +30,56 @@ def native_reference(root):
     except (OSError,KeyError,ValueError):return None
 
 
+def native_reference_p1030(root):
+    """Patch 10.3.0 wreath: about half the old size and drawn differently (best old-template score 0.72).
+    The reviewed native crop is enlarged to the 121 px grid of the shared matcher; it is matched at
+    record['scale'] (its native size), so the same mask leaves out the numeral."""
+    import json
+    folder=root/'references/bloodweb/patch_10_3_0'
+    try:
+        record=json.loads((folder/'prestige_manifest.json').read_text(encoding='utf-8'))
+        path=root/record['source']
+        if not record['reviewed'] or hashlib.sha256(path.read_bytes()).hexdigest()!=record['source_sha256']:return None
+        x,y,w,h=record['box'];patch=read_image(path)[y:y+h,x:x+w]
+        hsv=cv2.cvtColor(patch,cv2.COLOR_BGR2HSV)
+        white=cv2.resize(((hsv[:,:,1]<100)&(hsv[:,:,2]>165)).astype(np.uint8)*255,(121,121),interpolation=cv2.INTER_NEAREST)
+        yy,xx=np.ogrid[-60:61,-60:61]
+        mask=(((xx*xx+yy*yy)>20**2)&((xx*xx+yy*yy)<55**2)).astype(np.uint8)*255
+        return white,mask,record['source_sha256'],float(record['scale'])
+    except (OSError,KeyError,ValueError,TypeError):return None
+
+
 def native_ready_center(image,root,hint=None):
     """Locate the reviewed wreath in fresh pixels; its numeral is masked out."""
     if hint is None:
         from src.core.bloodweb_header import read_level
         level,confidence=read_level(image,root)
         if level!=50 or confidence<.95:return None
+    references=[]
     reference=native_reference(root)
-    if reference is None:return None
-    white,mask,sha=reference;h,w=image.shape[:2]
+    if reference is not None:references.append(reference+(None,))
+    p1030=native_reference_p1030(root)
+    if p1030 is not None:references.append(p1030)
+    for white,mask,sha,fixed in references:
+        found=_native_ready_match(image,white,mask,sha,hint,fixed)
+        if found:return found
+    return None
+
+
+def _native_ready_match(image,white,mask,sha,hint,fixed=None):
+    h,w=image.shape[:2]
     hsv=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
     observed=((hsv[:,:,1]<100)&(hsv[:,:,2]>165)).astype(np.uint8)*255
     if hint is not None:points=[hint[:2]]
     else:
         count,labels,stats,centroids=cv2.connectedComponentsWithStats(observed)
         points=[point for stat,point in zip(stats[1:],centroids[1:]) if
-            40<=stat[2]<=180 and 40<=stat[3]<=180 and stat[4]>=300
+            (20 if fixed else 40)<=stat[2]<=180 and (20 if fixed else 40)<=stat[3]<=180 and stat[4]>=(150 if fixed else 300)
             and point[0]<w*.64 and h*.14<point[1]<h*.91]
     for cx,cy in points:
         half=max(96,round(h*.1));left=max(0,round(cx)-half);top=max(0,round(cy)-half)
         local=observed[top:min(h,round(cy)+half),left:min(w,round(cx)+half)]
-        for scale in dict.fromkeys((h/1080,1.,.75,1.25,1.5)):
+        for scale in ((fixed*h/1080,) if fixed else dict.fromkeys((h/1080,1.,.75,1.25,1.5))):
             size=round(121*scale)
             if size>=min(local.shape):continue
             tile=cv2.resize(white,(size,size),interpolation=cv2.INTER_NEAREST)

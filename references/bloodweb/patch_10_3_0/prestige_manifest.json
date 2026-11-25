@@ -1,0 +1,17 @@
+{
+  "source": "references/bloodweb/patch_10_3_0/prestige_ready_terrifier50.png",
+  "source_sha256": "b8be608ecb9b66474c7bcf6a42c4a156f1c8df15862c8fedb75a0d5305630d36",
+  "reviewed": true,
+  "review": "Visual review: patch 10.3.0 The Terrifier level 50, prestige emblem with numeral 3 at (680,529); live WGC capture 2026-11-25; no input; own name/portrait blacked out",
+  "box": [
+    647,
+    496,
+    67,
+    67
+  ],
+  "scale": 0.55,
+  "client_size": [
+    1920,
+    1080
+  ]
+}
