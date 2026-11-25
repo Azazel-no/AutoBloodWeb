@@ -194,9 +194,10 @@ def test_saved_final_single_can_retire_on_two_positive_terminal_maps_without_cre
     assert not e.retire_terminal_single(f,r)
     assert not e.retire_terminal_single(f,r)
     fresh=replace(f,captured_at=time.monotonic())
-    assert e.retire_terminal_single(fresh,r)==(blocked is None)
+    retires=blocked in (None,'automatic')   # 25.11: the emblem is also the terminal result of an automatic centre press
+    assert e.retire_terminal_single(fresh,r)==retires
     assert e.actions==0 and not d.presses
-    assert bool(e.persisted_scene)==(blocked is not None)
+    assert bool(e.persisted_scene)==(not retires)
 
 
 @pytest.mark.parametrize('case',['ignored_first','debit','command_cap','focus','stop','unknown','first_web'])

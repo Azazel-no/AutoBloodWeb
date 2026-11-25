@@ -897,7 +897,10 @@ class Automation:
         """A positive terminal web retires a saved single without purchase credit."""
         from dataclasses import asdict
         memory=self.persisted_scene or {};pending=memory.get('pending') or {}
-        if (not pending or any(pending.get(k) for k in ('chain','batch','automatic','chain_blocked_reason')) or
+        # Live 25.11 (The Terrifier): the centre's automatic unlock finished level 50 and the prestige emblem
+        # appeared; that saved press blocked every Start (scene_validation_required). The emblem is the
+        # expected terminal result of an automatic centre press too.
+        if (not pending or any(pending.get(k) for k in ('chain','batch','chain_blocked_reason')) or
                 memory.get('level')!=50 or memory.get('level_confidence',0)<.95 or
                 result.screen_state!=ScreenState.PRESTIGE_READY or result.level!=50 or result.level_confidence<.95 or
                 not result.details.get('prestige_ready') or not frame.live or frame.probe_only or not frame.window.foreground or
