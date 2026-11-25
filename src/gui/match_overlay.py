@@ -495,6 +495,7 @@ class MatchOverlayController(QObject):
         self.state=MatchState();self.cache=HudCache();self.layout=load_layout(self.root);self.matcher=None;self.window=None
         self.base_layout=self.layout;self.next_tab_search=0.;self.last_reject=None;self.hud_fitted=False;self.hud_ticks=0;self.hud_scale=1.
         self.ocr=ocr if ocr is not None else NicknameOcr(self.root)
+        self.own_row=None   # B2 (25.11): src.core.own_row.OwnRowLock shared with the chase meme, set by the main window
         self.foreground_window=foreground_window or foreground_handle
         self.watcher=None;self.mode='off';self.busy=False;self.hud_before=None;self.session=None
         self.game_hwnd=None;self.last_error=None;self.last_error_at=-1e9;self.errors_seen=set();self.restarts=0
@@ -582,6 +583,18 @@ class MatchOverlayController(QObject):
 
     def forget_identity(self):
         self.identity=None;self.identity_strikes=0;self.identity_unknown=0;self.suspect=False;self.tab_check=False
+        if getattr(self,'own_row',None) is not None:self.own_row.reset('perks overlay: new match or match over')
+
+    def share_own_row(self,rows,looks,hud_names):
+        """B2: hand the chase meme the evidence of my HUD row: the gold-stripe Tab row's portrait against the
+        HUD portraits, and the HUD nicknames (all four rows) against the nickname in the settings."""
+        if self.own_row is None:return
+        try:
+            own=next((r for r in rows if r.own),None)
+            if own is not None:self.own_row.observe_tab(own.portrait,looks)
+            if hud_names:self.own_row.observe_names(hud_names,looks)
+        except Exception:
+            log.exception('Own row evidence failed; the chase meme stays on its last answer')
 
     def lock_identity(self):
         self.identity=match_identity.identity_from_session(self.state.slots,self.session)
@@ -816,7 +829,7 @@ class MatchOverlayController(QObject):
             names={}
             def read_names():
                 tab=read_tab_names(self.ocr,image,self.layout,range(len(self.layout['tab']['rows_y'])))
-                hud=read_hud_names(self.ocr,strips) if strips else {}
+                hud=read_hud_names(self.ocr,strips,(0,)+tuple(SLOTS)) if strips else {}   # row 1 too: the chase meme's own row (B2)
                 names.update(tab=tab,hud=hud)
             ocr_thread=None
             if getattr(self.ocr,'ready',False):
@@ -832,7 +845,8 @@ class MatchOverlayController(QObject):
             if ocr_thread is not None:ocr_thread.join(5)
             teammates={r.index for r in rows if not r.own}
             tab_names={k:v for k,v in names.get('tab',{}).items() if k in teammates}
-            hud_names=names.get('hud',{})
+            all_hud_names=names.get('hud',{});hud_names={k:v for k,v in all_hud_names.items() if k in SLOTS}
+            self.share_own_row(rows,candidates or [[] for _ in range(4)],all_hud_names)
             result=(rows,scores,best,name_scores(tab_names,hud_names) if tab_names and hud_names else {},
                     dict(tab=tab_names,hud=hud_names),candidates or [[] for _ in range(4)])
         except Exception as exc:

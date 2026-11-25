@@ -142,14 +142,21 @@ class ChaseController(QObject):
     """Watches for a chase in a survivor match and plays the timer, music, voice lines and dances."""
     changed = Signal()
 
+    feedback_pressed = Signal(str)   # 'false' / 'missed' from the key watcher thread; handled on the GUI thread
+
     def __init__(self, root, settings, hub, is_killer, automation_active, backend=None, timer_window=None, dance_window=None,
-                 clock=time.monotonic, sound=Sound, rng=None, watch=None, foreground=None, loader=FrameLoader):
+                 clock=time.monotonic, sound=Sound, rng=None, watch=None, foreground=None, loader=FrameLoader, own_row=None):
         super().__init__()
+        # B2: the player's own HUD row, shared with the perks overlay (gold stripe on Tab, nickname OCR).
+        # None (tests, no overlay): the legacy top-row behaviour without the row comparison.
+        self.own_row = own_row; self.own_logged = None; self.last_rows = None; self.feedback_watchers = []
+        self.feedback_pressed.connect(self.feedback)
         self.root = root; self.settings = settings; self.hub = hub; self.automation_active = automation_active; self.clock = clock
         self.watch = watch or MatchWatch(root, backend, is_killer, clock, name='Chase meme'); self.backend = self.watch.backend
         self.timer_window = timer_window or TimerWindow(root); self.dance_window = dance_window or DanceWindow(root)
         self.sound = sound; self.loader = loader; self.frames = None; self.rng = rng or random.Random(); self.foreground = foreground or foreground_handle
         self.detector = cm.ChaseDetector(); self.horns = cm.HornReader(root); self.mates = cm.MateHorns(); self.show = cm.ChaseShow(rng=self.rng)
+        self.detector.require_rows = own_row is not None
         self.music = None; self.voices = {}; self.dance_sounds = {}; self.dance = None; self.dance_at = None; self.dance_sound = None
         self.next_poll = self.next_horn = self.next_heart = self.next_down = 0.; self.preview_until = None; self.enabled = False; self.chase_at = None; self.last_reason = ''
         self.fading = None            # (fade started at, the timer's last value) while the sound and the windows fade out
@@ -159,10 +166,11 @@ class ChaseController(QObject):
 
     # --- lifecycle --------------------------------------------------------------------------
     def enable(self):
-        self.enabled = True; self.hub.use('chase', True); self.hub.reload(); self.timer.start()
+        self.enabled = True; self.hub.use('chase', True); self.hub.reload(); self.timer.start(); self.start_feedback_keys()
 
     def disable(self):
         self.enabled = False; self.timer.stop(); self.end('switched off', fade=False); self.hub.use('chase', False); self.close_sounds()
+        self.stop_feedback_keys()
         getattr(self.timer_window,'retire',self.timer_window.hide)(); getattr(self.dance_window,'retire',self.dance_window.hide)()
 
     def close_sounds(self):
@@ -196,6 +204,89 @@ class ChaseController(QObject):
     def game_foreground(self):
         return game_in_front(self.watch.game_hwnd, self.foreground)
 
+    # --- B5: "not a chase" / "it was a chase" keys ------------------------------------------
+    def start_feedback_keys(self):
+        """Read-only key polling (GetAsyncKeyState), like the mute key; only while the chase meme is on."""
+        from src.gui.memes_page import ComboWatcher
+        self.stop_feedback_keys()
+        keys = self.hub.settings
+        for kind, name in (('false', 'not_chase_key'), ('missed', 'was_chase_key')):
+            combo = keys.get(name)
+            if not combo: continue
+            watcher = ComboWatcher(combo, lambda kind=kind: self.feedback_pressed.emit(kind), read=getattr(self.hub, 'key_reader', None))
+            watcher.thread.name = 'ChaseFeedbackKey'; watcher.start(); self.feedback_watchers.append(watcher)
+
+    def stop_feedback_keys(self):
+        for watcher in self.feedback_watchers: watcher.close()
+        self.feedback_watchers = []
+
+    def restart_feedback_keys(self):
+        if self.enabled: self.start_feedback_keys()
+
+    def feedback(self, kind):
+        """'false': stop the meme at once and keep the frame and all row scores in debug/chase_false/;
+        'missed': keep them in debug/chase_missed/ (a chase the meme did not start)."""
+        was_active = self.active
+        if kind == 'false' and (self.active or self.fading is not None):
+            self.end('the player pressed "not a chase"', fade=False)
+        log.info('Chase meme: "%s" key pressed (meme %s)', 'not a chase' if kind == 'false' else 'it was a chase', 'running' if was_active else 'idle')
+        self.save_feedback(kind, was_active)
+
+    def save_feedback(self, kind, was_active):
+        try:
+            import json
+            from datetime import datetime
+            from src.utils.images import write_image
+            client = self.watch.client
+            folder = self.root / ('debug/chase_false' if kind == 'false' else 'debug/chase_missed') / datetime.now().strftime('%Y-%m-%d')
+            folder.mkdir(parents=True, exist_ok=True); stem = f"{datetime.now():%H%M%S_%f}"[:-3]
+            record = dict(kind=kind, meme_was_running=was_active, last_reason=self.last_reason, rows=self.last_rows,
+                          own_row=self.own_row.current() if self.own_row else None, evidence=self.detector.last_evidence,
+                          rejected_total=self.detector.rejected)
+            if client is not None:
+                image, _ = self.backend.grab(Rect(client.x, client.y, client.width, client.height)); write_image(folder / (stem + '.png'), image)
+                if self.watch.layout is not None:
+                    own = self.own_row.current()[0] if self.own_row else cm.OWN_SLOT
+                    record['frame_rows'] = [round(v, 3) for v in cm.row_scores(image, self.watch.layout, own=own if own is not None else cm.OWN_SLOT)]
+            (folder / (stem + '.json')).write_text(json.dumps(record, ensure_ascii=False, indent=1, default=str), encoding='utf-8')
+            log.info('Chase meme feedback saved: %s', folder / stem)
+        except Exception:
+            log.exception('Chase meme: the feedback frame could not be saved')
+
+    # --- B2/B3: my row and every row's score -----------------------------------------------
+    def own_slot(self):
+        """My HUD row, or None (the meme stays idle). Logs each change of the answer once."""
+        if self.own_row is None: return cm.OWN_SLOT
+        for event in self.own_row.take_events(): log.info('Chase meme own row: %s', event)
+        row, method, why = self.own_row.current()
+        if (row, why) != self.own_logged:
+            self.own_logged = (row, why); log.info('Chase meme: %s', why if row is None else f'own row {row + 1} ({method})')
+        return row
+
+    def read_rows(self, client, now):
+        """One grab of the HUD column: my horns (HornReader, with motion), every row's score, teammates' animation."""
+        layout = self.watch.layout; own = self.own_slot()
+        if own is None:
+            self.detector.rows([0.] * len(layout['hud']['portrait_y']), None, now); return cm.HornSample()
+        x, y, w, h = cm.column_rect(layout, client.width, client.height)
+        image, _ = self.backend.grab(Rect(client.x + x, client.y + y, w, h))
+        from src.core.match_reader import Geometry
+        g = Geometry(layout, (client.height, client.width)); hud = layout['hud']; r = g.size(hud['portrait_radius'])
+        centres = {slot: (g.hud(hud['portrait_x'], hud['portrait_y'][slot])[0] - x, g.hud(0, hud['portrait_y'][slot])[1] - y)
+                   for slot in range(len(hud['portrait_y'])) if slot != own}
+        self.mates.read(image, centres, r, now); animated = set(self.mates.active(now)); self.detector.teammates(sorted(animated))
+        scores = cm.row_scores(image, layout, own=own, origin=(x, y), size=(client.height, client.width), animated=animated)
+        self.detector.rows(scores, own, now); self.last_rows = [round(v, 3) for v in scores]
+        if now >= getattr(self, 'next_track', 0.):   # B2: cheap identity re-check, rows tracked by portrait, not by index
+            from src.core.match_reader import portrait_feature
+            self.next_track = now + 1.
+            looks = [portrait_feature(image, (cx, cy), r) for cx, cy in
+                     ((g.hud(hud['portrait_x'], hud['portrait_y'][slot])[0] - x, g.hud(0, hud['portrait_y'][slot])[1] - y) for slot in range(len(hud['portrait_y'])))]
+            moved = self.own_row.track(looks)
+            if moved is not None and moved != own: own = moved   # used from the next read on
+        px, py, pw, ph = cm.portrait_rect(layout, client.width, client.height, own)
+        return self.horns.read(image[max(0, py - y):py - y + ph, max(0, px - x):px - x + pw])
+
     # --- loop -------------------------------------------------------------------------------
     def tick(self):
         try: self.step()
@@ -224,12 +315,17 @@ class ChaseController(QObject):
             self.end('DBD is not in front'); return self.set_interval(TICK_IDLE)
         if not watch.survivor_match:
             self.end('not a survivor match'); self.horns.reset(); self.mates.reset(); return self.set_interval(TICK_IDLE)
+        if self.own_row is not None and not self.active and self.own_slot() is None:
+            return self.set_interval(TICK_MATCH)   # B2 fail safe: without my row the meme stays idle (logged in own_slot)
         if self.active and (watch.hud_seen_at is None or now - watch.hud_seen_at > HUD_LOST):
             self.end(f'match HUD not seen for {HUD_LOST} s (menu, scoreboard or end screen)')
         client = watch.client; event = None
         if watch.hud_visible and now >= self.next_horn:
-            self.next_horn = now + HORN_EVERY; x, y, w, h = cm.horn_rect(watch.layout, client.width, client.height)
-            region, _ = self.backend.grab(Rect(client.x + x, client.y + y, w, h)); event = self.detector.horns(self.horns.read(region), now)
+            self.next_horn = now + HORN_EVERY
+            if self.own_row is not None: event = self.detector.horns(self.read_rows(client, now), now)
+            else:
+                x, y, w, h = cm.horn_rect(watch.layout, client.width, client.height)
+                region, _ = self.backend.grab(Rect(client.x + x, client.y + y, w, h)); event = self.detector.horns(self.horns.read(region), now)
         if event is None and (watch.hud_visible or self.detector.state == cm.CHASE) and now >= self.next_heart:   # also before a chase: it confirms the start (J1)
             self.next_heart = now + HEART_EVERY; x, y, w, h = cm.heart_rect(client.width, client.height)
             region, _ = self.backend.grab(Rect(client.x + x, client.y + y, w, h)); blob = cm.heart_blob(region)
@@ -238,6 +334,10 @@ class ChaseController(QObject):
             self.next_down = now + DOWN_EVERY; status = self.own_status(client); state = self.down.feed(status)
             self.detector.down = status in DOWN_STATES
             if state and self.detector.state == cm.CHASE: event = self.detector.stop(now, f'own portrait shows {state}')
+        if event and event[0] in ('start', 'rejected') and self.own_row is not None:
+            e = self.detector.last_evidence or {}
+            log.info('Chase meme decision %s: rows %s, own row %s, winner row %s, margin %s, held %s s, winning reads %s',
+                     event[0], e.get('row_scores'), e.get('own_row'), e.get('winner'), e.get('margin'), e.get('held'), e.get('winning_reads'))
         if event and event[0] == 'start': self.begin(now, event[1]); self.save_event('start', event[1])
         elif event and event[0] == 'stop': self.end(event[1], detector=False)
         elif event and event[0] == 'rejected':
@@ -274,12 +374,17 @@ class ChaseController(QObject):
         reach = g.hud(hud['portrait_x'], 0)[0] + (cm.MATE_BANDS[0][0] - .05) * r     # left edge of a teammate's left horn band
         extra = max(0, min(x, round(x - reach))); below = min(round(.6 * r), max(0, client.height - y - h))   # slot 4's band ends 1.45 r down
         image, _ = self.backend.grab(Rect(client.x + x - extra, client.y + y, w + extra, h + below))
-        try:
-            centres = {slot: (g.hud(hud['portrait_x'], hud['portrait_y'][slot])[0] - x + extra, g.hud(0, hud['portrait_y'][slot])[1] - y) for slot in (1, 2, 3)}
-            self.mates.read(image, centres, r, self.clock()); self.detector.teammates(self.mates.active(self.clock()))
-        except Exception:
-            log.exception('Chase meme: the teammate horn check failed; it is skipped')
-        return read_column(image[:h, extra:], layout, client.width, client.height, self.down_templates)[0][0]
+        own = cm.OWN_SLOT
+        if self.own_row is None:   # with the shared own row, read_rows checks the teammates on every horn read
+            try:
+                centres = {slot: (g.hud(hud['portrait_x'], hud['portrait_y'][slot])[0] - x + extra, g.hud(0, hud['portrait_y'][slot])[1] - y) for slot in (1, 2, 3)}
+                self.mates.read(image, centres, r, self.clock()); self.detector.teammates(self.mates.active(self.clock()))
+            except Exception:
+                log.exception('Chase meme: the teammate horn check failed; it is skipped')
+        else:
+            own = self.own_row.current()[0]
+            if own is None: own = cm.OWN_SLOT
+        return read_column(image[:h, extra:], layout, client.width, client.height, self.down_templates)[0][own]
 
     # --- the show ---------------------------------------------------------------------------
     def begin(self, started_at, reason):

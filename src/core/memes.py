@@ -6,6 +6,9 @@ layer), never blocked or sent.
 from src.core.hotkey_config import parse_hotkey
 
 DEFAULT_MUTE_KEY = 'CTRL+M'   # A combination: it works in any window, so a bare letter would fire while typing.
+DEFAULT_NOT_CHASE_KEY = 'CTRL+J'   # B5 (25.11): stop the chase meme now, keep the frame for tuning (debug/chase_false)
+DEFAULT_WAS_CHASE_KEY = 'CTRL+K'   # ...and a chase the meme missed (debug/chase_missed)
+NICKNAME_MAX = 40
 SECTIONS = ('randomizer', 'chase', 'sable')
 
 
@@ -19,6 +22,7 @@ SABLE_RANGES = (('photo_size', 10, 40, 22), ('threshold', 60, 99, 90))   # thres
 
 def default_settings():
     return dict(volume=60, muted=False, mute_key=DEFAULT_MUTE_KEY, section='randomizer',
+                not_chase_key=DEFAULT_NOT_CHASE_KEY, was_chase_key=DEFAULT_WAS_CHASE_KEY, nickname='',
                 chase=dict(enabled=False, save_events=False, **{name: default for name, _, _, default in CHASE_RANGES}),
                 sable=dict(enabled=False, collect=False, **{name: default for name, _, _, default in SABLE_RANGES}))
 
@@ -44,6 +48,9 @@ def clean_settings(data):
     if type(data.get('volume')) is int and 0 <= data['volume'] <= 100: out['volume'] = data['volume']
     out['muted'] = data.get('muted') is True
     out['mute_key'] = valid_mute_key(data.get('mute_key')) or DEFAULT_MUTE_KEY
+    out['not_chase_key'] = valid_mute_key(data.get('not_chase_key')) or DEFAULT_NOT_CHASE_KEY
+    out['was_chase_key'] = valid_mute_key(data.get('was_chase_key')) or DEFAULT_WAS_CHASE_KEY
+    out['nickname'] = data['nickname'].strip()[:NICKNAME_MAX] if isinstance(data.get('nickname'), str) else ''
     if data.get('section') in SECTIONS: out['section'] = data['section']
     out['chase'] = _block(data.get('chase'), CHASE_RANGES); out['sable'] = _block(data.get('sable'), SABLE_RANGES)
     out['chase']['save_events'] = isinstance(data.get('chase'), dict) and data['chase'].get('save_events') is True   # screenshots of starts/refusals, off by default

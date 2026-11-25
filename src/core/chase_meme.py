@@ -80,6 +80,16 @@ MATE_COVER = .35              # share of those rows with a white pixel, on both 
 MATE_MOVING = .2              # share of the band pixels changed between two reads (animated brackets 0.27-0.6)
 MATE_SECONDS = 1.5            # a teammate horn animation this recent makes the heart necessary
 DEFAULT_ROOT = __import__('pathlib').Path(__file__).resolve().parents[2]
+# --- B (25.11): only my own row may start the meme --------------------------------------------
+# Saved starts 15.-24.11 (debug/chase_events, 91 starts): most false starts were a teammate's chase. Their row
+# shows big animated brackets (coverage 0.5-0.86 of the band rows) or the small chase sickles, while my heart
+# glows anyway (the killer is near), so "weak horns + heart" started the meme. Every row is now scored the same
+# way and only my row may win. Scores are normalised: 1.0 = the threshold of a present horn pair / bracket pair.
+ROW_MARGIN = .25              # my row must beat every other row by this much (normalised score)
+ROW_SHARE = .7                # ...on this share of the reads of the hold window
+# Timing of a start and of the next one, in one place (B4).
+START_HOLD = 1.2              # seconds my row must keep winning before a start (1.0-1.5 s asked)
+REARM_SECONDS = 7.            # after a chase ends no new start for this long (5-10 s asked)
 
 
 def portrait_rect(layout, width, height, slot=OWN_SLOT):
@@ -261,6 +271,58 @@ class MateHorns:
         return sorted(slot for slot, t in self.seen_at.items() if now - t <= MATE_SECONDS)
 
 
+# --- B3: every row measured the same way ------------------------------------------------------
+def column_rect(layout, width, height):
+    """(x, y, w, h) inside the client: one grab that holds the horn regions and bracket bands of all 4 rows."""
+    rects = [portrait_rect(layout, width, height, slot) for slot in range(len(layout['hud']['portrait_y']))]
+    g = Geometry(layout, (height, width)); r = g.size(layout['hud']['portrait_radius'])
+    x0 = max(0, min(x for x, _, _, _ in rects) - int(r)); y0 = max(0, min(y for _, y, _, _ in rects))
+    x1 = min(width, max(x + w for x, _, w, _ in rects) + int(r)); y1 = min(height, max(y + h for _, y, _, h in rects) + int(r))
+    return x0, y0, max(1, x1 - x0), max(1, y1 - y0)
+
+
+def row_signal(image, layout, slot, width, height, origin=(0, 0), templates=None):
+    """(sickle, bracket) of one HUD row in `image`, a grab whose top-left is `origin` in client pixels.
+    sickle: min left/right horn template score / SHAPE_MIN when the pair sits at its place, else 0.
+    bracket: min left/right band coverage / MATE_COVER."""
+    templates = templates or load_horn_templates(str(DEFAULT_ROOT))
+    x, y, w, h = portrait_rect(layout, width, height, slot); x -= origin[0]; y -= origin[1]
+    region = image[max(0, y):max(0, y + h), max(0, x):max(0, x + w)]
+    sickle = 0.
+    if templates is not None and region.size and min(region.shape[:2]) >= 8:
+        match = match_horns(horn_whiteness(normalise_region(region)), templates)
+        if pair_found(match): sickle = min(match['left'][0], match['right'][0]) / SHAPE_MIN
+    g = Geometry(layout, (height, width)); hud = layout['hud']; r = g.size(hud['portrait_radius'])
+    cx, cy = g.hud(hud['portrait_x'], hud['portrait_y'][slot])
+    band = MateHorns.mask(image, cx - origin[0], cy - origin[1], r)
+    bracket = min(band[1], band[2]) / MATE_COVER if band else 0.
+    return sickle, bracket
+
+
+def row_scores(image, layout, own=OWN_SLOT, origin=(0, 0), size=None, animated=None):
+    """Normalised chase signal of every HUD row. My row counts only my chase sickles (my own Obsession
+    brackets are static and are not a chase); another row counts its sickles or its brackets, the
+    brackets only while they animate when `animated` (a set of rows) is given; offline, with single
+    frames, brackets always count (the cautious side)."""
+    height, width = size or image.shape[:2]; templates = load_horn_templates(str(DEFAULT_ROOT)); scores = []
+    for slot in range(len(layout['hud']['portrait_y'])):
+        sickle, bracket = row_signal(image, layout, slot, width, height, origin, templates)
+        if slot == own: scores.append(sickle)
+        else: scores.append(max(sickle, bracket if animated is None or slot in animated else 0.))
+    return scores
+
+
+def own_row_wins(scores, own=OWN_SLOT):
+    """(allowed, why) for one read: my row present and ahead of every other row by ROW_MARGIN."""
+    if own is None: return False, 'own row not established'
+    mine = scores[own]; others = [(v, i) for i, v in enumerate(scores) if i != own]
+    top, row = max(others) if others else (0., None)
+    if mine < 1.: return False, f'my row {own + 1} below threshold ({mine:.2f})'
+    if top >= mine: return False, f'row {row + 1} at least as strong ({top:.2f} >= {mine:.2f})'
+    if mine - top < ROW_MARGIN: return False, f'margin {mine - top:.2f} < {ROW_MARGIN} over row {row + 1}'
+    return True, f'my row {own + 1} leads by {mine - top:.2f}'
+
+
 # --- heart ------------------------------------------------------------------------------------
 def heart_rect(width, height):
     x, y, w, h = HEART_ROI
@@ -307,9 +369,12 @@ class ChaseDetector:
     shows in the terror radius); my portrait showing dying/carried/hooked/dead never starts one.
     Every transition and every refused start returns its reason so the caller can log it."""
     def __init__(self):
+        self.require_rows = False   # B2/B3: the live controller always passes my row and every row's score
+        self.ended_at = None
         self.reset()
 
     def reset(self):
+        self.row_reads = []
         self.state = IDLE; self.started_at = None; self.moving = []; self.horns_at = None; self.heart_at = None; self.heart_ever = False
         self.reads = []; self.hearts = []; self.last_heart = None; self.last_heart_area = 0; self.last_sample = None; self.down = False
         if not hasattr(self, 'rejected'): self.rejected = 0
@@ -319,6 +384,34 @@ class ChaseDetector:
     def teammates(self, slots):
         """K2: HUD slots (1-3) whose horns animate right now (MateHorns.active)."""
         self.mates = list(slots)
+
+    def rows(self, scores, own, now):
+        """B3: every row's normalised score on this read and my row (None when not established)."""
+        allowed, why = own_row_wins(scores, own) if own is not None else (False, 'own row not established')
+        self.row_reads = [r for r in self.row_reads if now - r[0] <= START_HOLD + .5] + [(now, list(scores), own, allowed, why)]
+
+    def row_gate(self, now):
+        """(allowed, why, details) from the reads of the hold window."""
+        reads = [r for r in self.row_reads if now - r[0] <= START_HOLD]
+        last = self.row_reads[-1] if self.row_reads else None
+        details = dict(row_scores=[round(v, 2) for v in last[1]] if last else None,
+                       own_row=(last[2] + 1) if last and last[2] is not None else None,
+                       winner=(max(range(len(last[1])), key=lambda i: last[1][i]) + 1) if last else None)
+        if last is None: return False, 'no row scores yet', details
+        if last[2] is None: return False, 'own row not established', details
+        own = last[2]; mine = last[1][own]; top = max((v for i, v in enumerate(last[1]) if i != own), default=0.)
+        details['margin'] = round(mine - top, 2)
+        blocked = [r for r in reads if not r[3] and r[4].startswith('row ')]
+        if blocked: return False, blocked[-1][4], details
+        winning = [r for r in reads if r[3]]
+        streak = 0.
+        for r in reversed(self.row_reads):
+            if not r[3]: break
+            streak = now - r[0]
+        details['held'] = round(streak, 2); details['winning_reads'] = f'{len(winning)}/{len(reads)}'
+        if not reads or len(winning) < ROW_SHARE * len(reads): return False, f'my row won only {len(winning)}/{len(reads)} reads ({last[4]})', details
+        if streak + .05 < START_HOLD: return False, f'my row has led for {streak:.1f} s of {START_HOLD} s', details
+        return True, last[4], details
 
     def horns(self, sample, now):
         self.reads = [r for r in self.reads if now - r[0] <= STRONG_WINDOW] + [(now, sample)]
@@ -349,6 +442,13 @@ class ChaseDetector:
         e = self.evidence(now); self.last_evidence = e
         if self.down: return self.reject(now, 'own portrait shows a down state', e)
         if not e['weak'] and not e['strong']: return None        # too little to judge yet: not a refusal
+        if self.ended_at is not None and now - self.ended_at < REARM_SECONDS:
+            return self.reject(now, f'the last chase ended {now - self.ended_at:.1f} s ago (re-arm {REARM_SECONDS:.0f} s)', e)
+        if self.require_rows:
+            allowed, why, details = self.row_gate(now); e.update(details)
+            if not allowed:
+                if why.startswith('my row has led for'): return None   # still holding: judged again on the next read
+                return self.reject(now, why, e)
         if e['strong'] and e['teammate_horns'] and not e['heart']:
             return self.reject(now, f"my horns by shape, but teammate horns animate too (slot {', '.join(map(str, e['teammate_horns']))}) and no heart", e)
         if not (e['strong'] or e['heart']):
@@ -394,7 +494,7 @@ class ChaseDetector:
 
     def stop(self, now, reason):
         if self.state != CHASE: return None
-        seconds = now - self.started_at; self.reset()
+        seconds = now - self.started_at; self.reset(); self.ended_at = now
         return 'stop', f'{reason}; chase lasted {seconds:.1f} s'
 
     def elapsed(self, now):

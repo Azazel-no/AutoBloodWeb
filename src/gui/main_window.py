@@ -600,9 +600,20 @@ class MainWindow(QMainWindow):
         controller=getattr(self,'chase_controller',None)
         if controller is None and create:
             from src.gui.chase_overlay import ChaseController
-            controller=self.chase_controller=ChaseController(self.root,self.prefs.settings['memes']['chase'],self.meme_hub,lambda:self.current_role=='killer',lambda:bool(self.auto_worker))
+            controller=self.chase_controller=ChaseController(self.root,self.prefs.settings['memes']['chase'],self.meme_hub,lambda:self.current_role=='killer',lambda:bool(self.auto_worker),
+                own_row=self.own_row_lock())
             controller.changed.connect(self.chase_state)
         return controller
+
+    def own_row_lock(self):
+        """B2 (25.11): the player's own HUD row, shared by the perks overlay (evidence) and the chase meme (reader)."""
+        lock=getattr(self,'_own_row',None)
+        if lock is None:
+            from src.core.own_row import OwnRowLock
+            lock=self._own_row=OwnRowLock(nickname_source=lambda:self.prefs.settings['memes'].get('nickname',''))
+        controller=getattr(self,'overlay_controller',None)
+        if controller is not None:controller.own_row=lock
+        return lock
 
     def apply_chase(self,enabled):
         controller=self.chase_meme(create=enabled)
@@ -1301,6 +1312,7 @@ class MainWindow(QMainWindow):
                 expired_seconds=self.prefs.settings['ds_expired_seconds'])
             controller.overlay.position=self.prefs.settings['overlay_position'];controller.overlay.scale=self.prefs.settings['overlay_scale']/100
             controller.status.connect(self.overlay_status_received)
+            if getattr(self,'_own_row',None) is not None:controller.own_row=self._own_row
         if controller:(controller.enable if enabled else controller.disable)()
 
     def match_overlay_toggled(self,enabled):
@@ -1648,9 +1660,12 @@ class MainWindow(QMainWindow):
         layout.addWidget(QLabel(self.locale.text('map_key_prompt')));map_key=QLineEdit(self.prefs.settings['map_overlay']['key']);layout.addWidget(map_key)
         from src.core.memes import DEFAULT_MUTE_KEY,valid_mute_key
         layout.addWidget(QLabel(self.locale.text('meme_mute_key_prompt')));mute_key=QLineEdit(self.prefs.settings['memes']['mute_key']);layout.addWidget(mute_key)
+        from src.core.memes import DEFAULT_NOT_CHASE_KEY,DEFAULT_WAS_CHASE_KEY
+        layout.addWidget(QLabel(self.locale.text('meme_not_chase_key_prompt')));not_chase_key=QLineEdit(self.prefs.settings['memes']['not_chase_key']);layout.addWidget(not_chase_key)
+        layout.addWidget(QLabel(self.locale.text('meme_was_chase_key_prompt')));was_chase_key=QLineEdit(self.prefs.settings['memes']['was_chase_key']);layout.addWidget(was_chase_key)
         error=QLabel(); error.setWordWrap(True); layout.addWidget(error)
         reset=BloodButton(self.locale.text('reset_defaults')); layout.addWidget(reset)
-        reset.clicked.connect(lambda:[fields[k].setText(v) for k,v in DEFAULT_BINDINGS.items()]+[vs_fields[k].setText(v) for k,v in VS_DEFAULTS.items()]+[map_key.setText(MAP_DEFAULT),mute_key.setText(DEFAULT_MUTE_KEY)])
+        reset.clicked.connect(lambda:[fields[k].setText(v) for k,v in DEFAULT_BINDINGS.items()]+[vs_fields[k].setText(v) for k,v in VS_DEFAULTS.items()]+[map_key.setText(MAP_DEFAULT),mute_key.setText(DEFAULT_MUTE_KEY),not_chase_key.setText(DEFAULT_NOT_CHASE_KEY),was_chase_key.setText(DEFAULT_WAS_CHASE_KEY)])
         check=BloodButton(self.locale.text('hotkey_diagnostics')); layout.addWidget(check)
         check.clicked.connect(self.open_hotkey_diagnostics)
         apply=BloodButton(self.locale.text('apply')); layout.addWidget(apply)
@@ -1668,7 +1683,9 @@ class MainWindow(QMainWindow):
             for action,field in vs_fields.items():
                 vs_keys[action]=valid_key(field.text())
             map_value=valid_key(map_key.text());mute_value=valid_mute_key(mute_key.text())
-            if cross is None or details is None or map_value is None or mute_value is None or None in vs_keys.values() or extra_keys_conflict(bindings,cross,details,list(vs_keys.values())+[map_value,mute_value]):
+            not_chase_value=valid_mute_key(not_chase_key.text());was_chase_value=valid_mute_key(was_chase_key.text())
+            if (cross is None or details is None or map_value is None or mute_value is None or not_chase_value is None or was_chase_value is None
+                    or None in vs_keys.values() or extra_keys_conflict(bindings,cross,details,list(vs_keys.values())+[map_value,mute_value,not_chase_value,was_chase_value])):
                 error.setText(self.locale.text('hotkey_conflict'));return
             if vs_keys!=self.prefs.settings['onevone']['keys']:
                 self.prefs.settings['onevone']['keys']=vs_keys
@@ -1678,6 +1695,9 @@ class MainWindow(QMainWindow):
                 self.prefs.settings['map_overlay']['key']=map_value
                 if getattr(self,'map_controller',None):self.map_controller.restart_key()
                 if self.map_page:self.map_page.publish()
+            if (not_chase_value,was_chase_value)!=(self.prefs.settings['memes']['not_chase_key'],self.prefs.settings['memes']['was_chase_key']):
+                self.prefs.settings['memes'].update(not_chase_key=not_chase_value,was_chase_key=was_chase_value)
+                if getattr(self,'chase_controller',None):self.chase_controller.restart_feedback_keys()
             if mute_value!=self.prefs.settings['memes']['mute_key']:
                 self.prefs.settings['memes']['mute_key']=mute_value;self.meme_hub.restart_key()
                 if self.memes_page:self.memes_page.publish()

@@ -127,6 +127,12 @@ class FeatureSection(QWidget):
         if name == 'chase':   # 14.11: bad cases for review
             self.save_events = ToggleSwitch(t('meme_chase_save_events')); self.save_events.setToolTip(t('meme_chase_save_events_hint')); self.save_events.setChecked(settings.get('save_events') is True)
             self.save_events.toggled.connect(lambda v: (self.settings.__setitem__('save_events', bool(v)), self.hub.save())); layout.addWidget(self.save_events)
+            from PySide6.QtWidgets import QLineEdit
+            from src.core.memes import NICKNAME_MAX
+            nick = QLabel(t('meme_chase_nickname')); nick.setToolTip(t('meme_chase_nickname_hint')); layout.addWidget(nick)
+            self.nickname = QLineEdit(hub.settings.get('nickname', '')); self.nickname.setMaxLength(NICKNAME_MAX); self.nickname.setToolTip(t('meme_chase_nickname_hint'))
+            self.nickname.editingFinished.connect(lambda: (hub.settings.__setitem__('nickname', self.nickname.text().strip()), hub.save())); layout.addWidget(self.nickname)
+            hint = QLabel(t('meme_chase_nickname_hint')); hint.setObjectName('muted'); hint.setWordWrap(True); layout.addWidget(hint)
         if name == 'sable':   # J3: training frames from real matches and a labelling tool
             self.collect = ToggleSwitch(t('meme_sable_collect')); self.collect.setToolTip(t('meme_sable_collect_hint')); self.collect.setChecked(settings.get('collect') is True)
             self.collect.toggled.connect(self.toggle_collect); layout.addWidget(self.collect)
