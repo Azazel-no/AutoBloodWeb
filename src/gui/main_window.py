@@ -479,6 +479,10 @@ class MainWindow(QMainWindow):
         self.recording_friendly.toggled.connect(self.set_recording_friendly);inner.addWidget(self.recording_friendly)
         self.recording_note=QLabel();self.recording_note.setObjectName('muted');self.recording_note.setWordWrap(True);inner.addWidget(self.recording_note)
         layout.addWidget(card)
+        # C (25.11): 'match found' alert for everybody, the queue probe in developer mode.
+        from src.gui.match_alert_page import MatchAlertSection
+        card,inner=self.card();self.match_alert=MatchAlertSection(self.root,self.prefs.settings['match_alert'],self.save_preferences,self.locale.text);inner.addWidget(self.match_alert)
+        layout.addWidget(card)
         card,inner=self.card();self.page_buttons={}
         for key,action in (('page_hotkeys',self.configure_hotkeys),('page_report_bug',self.report_bug),
                            ('recalibrate',self.open_calibration),('session_check',self.open_session_check)):
@@ -727,6 +731,7 @@ class MainWindow(QMainWindow):
         self.start_with_dbd.setText(t('start_with_dbd'));self.start_with_dbd.setToolTip(t('start_with_dbd_hint'))
         self.recording_friendly.setText(t('recording_friendly'));self.recording_friendly.setToolTip(t('recording_friendly_hint'))
         self.recording_note.setText(t('recording_friendly_note'))
+        if hasattr(self,'match_alert'):self.match_alert.retranslate(t)
         self.capture_test_label.setText(t('capture_test'));self.capture_test.setToolTip(t('capture_test_hint'))
         for index,mode in enumerate(('normal','no_capture','no_windows')):self.capture_test.setItemText(index,t('capture_test_'+mode))
         self.overlay_capture_label.setText(t('overlay_capture'));self.overlay_capture.setToolTip(t('overlay_capture_hint'))
@@ -1224,6 +1229,7 @@ class MainWindow(QMainWindow):
             widget.setVisible(enabled)
         self.page_buttons['recalibrate'].setVisible(enabled);self.page_buttons['session_check'].setVisible(enabled)
         if hasattr(self,'capture_test_row'):self.capture_test_row.setVisible(enabled);self.overlay_capture_row.setVisible(enabled)
+        if hasattr(self,'match_alert'):self.match_alert.set_developer(enabled)
         if not enabled and not (self.worker or self.auto_worker):
             self.dry_run.setChecked(False);self.run_mode.setCurrentIndex(self.run_mode.findData('continuous'))
         if save:
@@ -1758,6 +1764,7 @@ class MainWindow(QMainWindow):
         if getattr(self,'onevone_controller',None):self.onevone_controller.disable()
         if getattr(self,'map_controller',None):self.map_controller.disable()
         if getattr(self,'chase_controller',None):self.chase_controller.disable()
+        if hasattr(self,'match_alert'):self.match_alert.close()
         if getattr(self,'sable_controller',None):self.sable_controller.disable()
         self.meme_hub.close()
         if getattr(self,'tray',None):self.tray.hide()

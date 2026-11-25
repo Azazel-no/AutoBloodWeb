@@ -239,3 +239,7 @@ for key,(ru,en) in UI_PAIRS.items():
 from src.core.meme_strings import LANGUAGES as MEME_LANGUAGES,TEXT as MEME_TEXT
 for key,values in MEME_TEXT.items():
     for code,value in zip(MEME_LANGUAGES,values):STRINGS[code][key]=value
+
+from src.core.alert_strings import LANGUAGES as ALERT_LANGUAGES,TEXT as ALERT_TEXT
+for key,values in ALERT_TEXT.items():
+    for code,value in zip(ALERT_LANGUAGES,values):STRINGS[code][key]=value
