@@ -291,6 +291,10 @@ def fresh_gold_center(hsv,x,y,r,base_r):
     red,gold=ring_fractions(hsv,x,y,r)
     if red>.42 or gold>.42:return x,y,r
     reach=max(2,round(base_r*.3));best=None
+    # Cheap gate (live 25.11: the full search over every locked node cost 6.4 s per frame): a nearby gold
+    # ring shows at least partly from the centre or from a coarse shift; locked tiles show none.
+    probe=max(ring_fractions(hsv,x+dx,y+dy,round(base_r*.92))[1] for dx,dy in ((0,0),(reach,0),(-reach,0),(0,reach),(0,-reach)))
+    if probe<.25:return x,y,r
     for dx in range(-reach,reach+1,2):
         for dy in range(-reach,reach+1,2):
             if dx==dy==0:continue   # the radius alone is fresh_gold_radius's job
@@ -639,7 +643,7 @@ class BloodwebDetector:
         from src.core.node_validation import validate_candidates
         unique,evidence=validate_candidates(gray,unique,(cx,cy),self._edges(image,provisional),
             previous[2] if live and previous and previous[0]==image.shape and np.hypot(previous[1][0]-cx,previous[1][1]-cy)<base_r*.25 else (),hsv,framing_cache=framing_cache,
-            fallback_radius=red_fallback)
+            fallback_radius=red_fallback,polygon_tiles=base_r<=P1030_RADIUS)
         analysis.details['node_validation']=evidence
         # Faint content must not obstruct the initial graph. Verify each
         # deferred proposal against the already accepted web independently.
@@ -877,7 +881,9 @@ class BloodwebDetector:
         return float(np.mean(np.min(vertices,axis=1)))<r*.18
 
     @staticmethod
-    def _edges(image:np.ndarray,nodes:list[Node],structure_only=False,focus_node=None,allowed_pairs=None) -> list[tuple[int,int]]:
+    def _edges(image:np.ndarray,nodes:list[Node],structure_only=False,focus_node=None,allowed_pairs=None,tolerant=None) -> list[tuple[int,int]]:
+        # tolerant: also accept a connection a few pixels beside the centre line (10.3.0 web only; None = by node size).
+        if tolerant is None:tolerant=any((n.state==NodeState.CENTER or n.type==NodeType.CENTER) and n.radius<=P1030_RADIUS for n in nodes)
         hsv=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
         gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
         edges=[]
@@ -913,9 +919,17 @@ class BloodwebDetector:
                     yy=np.clip(np.round(a.y+(b.y-a.y)*t+(b.x-a.x)/distance*offset).astype(int),0,image.shape[0]-1)
                     return gray[yy,xx].astype(np.float32)
                 offsets=np.linspace(-radius*.15,radius*.15,13)
-                stripe=np.min(np.stack([sample(off) for off in offsets]),axis=0)
-                contrast=(sample(radius*.32)+sample(-radius*.32))/2-stripe
-                outlined=np.mean(contrast>15)>.75 and np.mean(contrast)>20
+                def border(shift):
+                    stripe=np.min(np.stack([sample(off+shift) for off in offsets]),axis=0)
+                    contrast=(sample(shift+radius*.32)+sample(shift-radius*.32))/2-stripe
+                    return contrast,np.mean(contrast>15)>.75 and np.mean(contrast)>20
+                contrast,outlined=border(0.)
+                # Live 25.11 (10.3.0 level 44): a Hough centre 5 px off its tile put the sampled line beside
+                # the real grey connection (0.63 instead of 0.93) and the outer perk flickered out of the
+                # graph. A parallel line a few pixels aside is the same connection.
+                for shift in ((3.,-3.,6.,-6.) if tolerant and not outlined else ()):
+                    shifted,found=border(shift)
+                    if found:contrast,outlined=shifted,True;break
                 # On light scenery a purchased red line can be brighter than
                 # its surroundings. Gray dark-stripe contrast then fails even
                 # though the narrow saturated red connection is continuous.

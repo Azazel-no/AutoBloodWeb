@@ -36,7 +36,7 @@ def framing(gray,x,y,r):
     return dict(valley=float(np.max(np.mean(valley,axis=1))),regular=float(np.max(np.mean(edge,axis=1))),dark_ring=float(dark.max()),opposite_dark=float(opposite.max()))
 
 
-def validate_candidates(gray,circles,center,edges,previous=(),hsv=None,confirmed_graph=False,only_last=False,framing_cache=None,fallback_radius=None):
+def validate_candidates(gray,circles,center,edges,previous=(),hsv=None,confirmed_graph=False,only_last=False,framing_cache=None,fallback_radius=None,polygon_tiles=False):
     """Edges support framing, but a missing edge cannot reject a strong frame.
 
     Independent of glyph whiteness, library matches, hue, and screen height.
@@ -82,7 +82,10 @@ def validate_candidates(gray,circles,center,edges,previous=(),hsv=None,confirmed
             red,gold=ring_fractions(hsv,x,y,r)
             evidence=dict(evidence,red_rim=red,gold_rim=gold)
         colour_rim=linked and evidence['regular']>=.7 and (evidence.get('red_rim',0)>=RED_RIM_ACCEPT or evidence.get('gold_rim',0)>=GOLD_RIM_ACCEPT)
-        valid=colour_rim or strong(evidence) or structured(evidence,linked,polygon) or (confirmed_graph and linked and evidence['regular']>=.35 and (polygon or evidence['valley']>=.25 and evidence['regular']>=.6 and evidence['dark_ring']>=.08))
+        # Live 25.11 (The Terrifier, level 44): an outer perk tile with a clear polygon but a frame just under the
+        # strong limits (regular 0.69) flickered in and out between reads, and the target flipped with it.
+        polygon_tile=polygon_tiles and polygon and evidence['valley']>=.3 and evidence['regular']>=.6
+        valid=colour_rim or polygon_tile or strong(evidence) or structured(evidence,linked,polygon) or (confirmed_graph and linked and evidence['regular']>=.35 and (polygon or evidence['valley']>=.25 and evidence['regular']>=.6 and evidence['dark_ring']>=.08))
         origin=(x,y)
         if not valid and fallback_radius and (x,y,r) in fallback_radius:
             # A radius grown to a red rim (fresh_red_radius) that does not prove itself falls back to
