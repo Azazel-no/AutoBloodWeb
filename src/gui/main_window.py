@@ -479,10 +479,13 @@ class MainWindow(QMainWindow):
         self.recording_friendly.toggled.connect(self.set_recording_friendly);inner.addWidget(self.recording_friendly)
         self.recording_note=QLabel();self.recording_note.setObjectName('muted');self.recording_note.setWordWrap(True);inner.addWidget(self.recording_note)
         layout.addWidget(card)
-        # C (25.11): 'match found' alert for everybody, the queue probe in developer mode.
-        from src.gui.match_alert_page import MatchAlertSection
-        card,inner=self.card();self.match_alert=MatchAlertSection(self.root,self.prefs.settings['match_alert'],self.save_preferences,self.locale.text);inner.addWidget(self.match_alert)
-        layout.addWidget(card)
+        # C (25.11): 'match found' alert for everybody, the queue probe in developer mode. Not in release
+        # builds (v1.1.1): no card, no controller thread, no marker key.
+        from src.core.features import match_alert
+        if match_alert():
+            from src.gui.match_alert_page import MatchAlertSection
+            card,inner=self.card();self.match_alert=MatchAlertSection(self.root,self.prefs.settings['match_alert'],self.save_preferences,self.locale.text);inner.addWidget(self.match_alert)
+            layout.addWidget(card)
         card,inner=self.card();self.page_buttons={}
         for key,action in (('page_hotkeys',self.configure_hotkeys),('page_report_bug',self.report_bug),
                            ('recalibrate',self.open_calibration),('session_check',self.open_session_check)):

@@ -240,6 +240,8 @@ from src.core.meme_strings import LANGUAGES as MEME_LANGUAGES,TEXT as MEME_TEXT
 for key,values in MEME_TEXT.items():
     for code,value in zip(MEME_LANGUAGES,values):STRINGS[code][key]=value
 
-from src.core.alert_strings import LANGUAGES as ALERT_LANGUAGES,TEXT as ALERT_TEXT
-for key,values in ALERT_TEXT.items():
-    for code,value in zip(ALERT_LANGUAGES,values):STRINGS[code][key]=value
+from src.core.features import match_alert as _match_alert
+if _match_alert():   # Not in release builds (v1.1.1): src.core.alert_strings is not shipped.
+    from src.core.alert_strings import LANGUAGES as ALERT_LANGUAGES,TEXT as ALERT_TEXT
+    for key,values in ALERT_TEXT.items():
+        for code,value in zip(ALERT_LANGUAGES,values):STRINGS[code][key]=value

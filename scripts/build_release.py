@@ -40,6 +40,10 @@ EXCLUDES = ('tkinter', 'pytest', '_pytest', 'IPython', 'matplotlib', 'scipy', 'p
 # and its person model (data/models, downloaded on first use) was never bundled.
 NOT_SHIPPED_MODULES = ('src.gui.sable_overlay', 'src.gui.sable_labeler', 'src.core.sable_detector',
                        'src.core.sable_frames', 'src.core.sable_model')
+# v1.1.1: the 'Match found' alert and the queue probe are not shipped either (src.core.features.match_alert).
+MATCH_ALERT_MODULES = ('src.gui.match_alert_page', 'src.core.match_alert', 'src.core.queue_probe',
+                       'src.core.queue_signals', 'src.core.alert_strings')
+NOT_SHIPPED_MODULES += MATCH_ALERT_MODULES
 NOT_SHIPPED_ASSETS = ('assets/sable/', 'assets/ui/hud_portraits/')
 # Files shipped beside the executable (the app reads them relative to its folder).
 DATA_FILES = ('data/native_price_locator.json', 'data/native_total_price_locator.json', 'data/wiki_sources.json',
@@ -229,18 +233,22 @@ def copy_data():
 
 
 def check_not_shipped():
-    """Fails the build if any part of the Sable Detector made it into the app folder."""
+    """Fails the build if any part of the Sable Detector or the match alert made it into the app folder."""
     import re
     found = [str(p.relative_to(APP)) for p in APP.rglob('*')
              if re.match(r'sable(?!_ward\.png$)', p.name.lower()) or p.suffix.lower() == '.onnx']
     # Python modules are packed into the PYZ archive: its table of contents lists them.
     toc = BUILD / 'work' / NAME / 'PYZ-00.toc'
     if toc.is_file():
-        found += re.findall(r"'(src\.(?:gui|core)\.sable_\w+)'", toc.read_text(encoding='utf-8', errors='replace'))
+        listing = toc.read_text(encoding='utf-8', errors='replace')
+        found += re.findall(r"'(src\.(?:gui|core)\.sable_\w+)'", listing)
+        found += [m for m in MATCH_ALERT_MODULES if f"'{m}'" in listing]
+    found += [str(p.relative_to(APP)) for p in APP.rglob('*') if p.name in ('queue_signals.json', 'alert_strings.py')]
     if found:
         raise SystemExit(f'Not shipped in this release, but found in the build: {found[:10]}')
     print(f'Sable Detector check: nothing from it in the build (no sable_* modules in {toc.name if toc.is_file() else "PYZ"}, '
           'no assets/sable, no .onnx model)')
+    print(f'Match alert / queue probe check: nothing from it in the build (none of {", ".join(MATCH_ALERT_MODULES)})')
 
 
 def folder_size(path):

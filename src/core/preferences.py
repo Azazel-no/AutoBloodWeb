@@ -96,8 +96,11 @@ class Preferences:
         self.settings['map_overlay']=map_settings(self.settings.get('map_overlay'))
         from src.core.memes import clean_settings as meme_settings
         self.settings['memes']=meme_settings(self.settings.get('memes'))
-        from src.core.match_alert import clean_settings as alert_settings
-        self.settings['match_alert']=alert_settings(self.settings.get('match_alert'))
+        from src.core.features import match_alert
+        if match_alert():
+            from src.core.match_alert import clean_settings as alert_settings
+            self.settings['match_alert']=alert_settings(self.settings.get('match_alert'))
+        # Release builds keep whatever a development build saved, unread: nothing starts from it.
         scale=self.settings.get('overlay_scale',100);self.settings['overlay_scale']=scale if type(scale) is int and 50<=scale<=200 else 100
         if self.settings.get('overlay_position') not in ('left','right'):self.settings['overlay_position']='left'
         if self.settings.get('priority_mode') not in ('top_first','smart','strict') or not self.settings.get('priority_top_first_v1'):
