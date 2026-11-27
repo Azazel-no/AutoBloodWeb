@@ -5,12 +5,16 @@ to draw that icon, so sharing is not treated as ambiguity. Anything not accepted
 stays None and is drawn as "?", never guessed.
 """
 from dataclasses import dataclass
+from hashlib import sha256
+import logging
 from pathlib import Path
 import cv2
 import numpy as np
 from src.core.models import IconEntry
 from src.core.node_classifier import IconMatcher,glyph
-from src.core.perk_catalog import load_catalog
+from src.core.perk_catalog import TAB_REFERENCES, load_catalog
+
+log = logging.getLogger(__name__)
 
 
 # L1 (16.11): how a perk icon looks on the Tab scoreboard. The icon covers 48.5 of the 52 px
@@ -45,21 +49,37 @@ class PerkLibrary:
     variant_transforms=((0,.94),(0,1.06))
 
     def __init__(self,root,role):
-        self.root=root;self.perks_by_icon={}
+        self.root=Path(root);self.perks_by_icon={}
         for perk in load_catalog(root,role):self.perks_by_icon.setdefault('perk_icon_'+perk.sha256[:16],[]).append(perk)
         self.entries=[IconEntry(ident,role,'perks',None,perks[0].icon,perks[0].original,[],'unknown',perks[0].sha256)
                       for ident,perks in sorted(self.perks_by_icon.items())]
         self.rendered_features={}
         for entry in self.entries:
-            path=Path(root)/entry.source
+            path=self.root/entry.source
             icon=cv2.imdecode(np.fromfile(path,np.uint8),cv2.IMREAD_UNCHANGED) if path.is_file() else None
-            if icon is None or icon.ndim!=3:continue
-            if icon.shape[2]==3:icon=cv2.cvtColor(icon,cv2.COLOR_BGR2BGRA)
-            features=[tile_feature(render_tab_tile(icon,tile))[1] for tile in TAB_TILES]
+            features = []
+            if icon is not None and icon.ndim == 3:
+                features.extend(tile_feature(render_tab_tile(icon, size))[1] for size in TAB_TILES)
+            for perk in self.perks_by_icon[entry.id]:
+                if perk.id in TAB_REFERENCES:
+                    features.append(native_tab_feature(self.root, *TAB_REFERENCES[perk.id]))
             self.rendered_features[entry.id]=[f for f in features if f is not None]
 
     def filter(self,role,character=None):
         return [e for e in self.entries if e.role==role]
+
+
+def native_tab_feature(root, path, expected_sha):
+    try:
+        data = (root / path).read_bytes()
+        if sha256(data).hexdigest() == expected_sha:
+            image = cv2.imdecode(np.frombuffer(data, np.uint8), cv2.IMREAD_COLOR)
+            if image is not None and image.shape[:2] == (52, 52):
+                return tile_feature(image)[1]
+    except OSError:
+        pass
+    log.warning('Perk Tab reference unavailable or invalid: %s', path)
+    return None
 
 
 def diamond_mask(size,margin=.2):

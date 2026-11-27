@@ -19,6 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from src import __version__ as VERSION  # noqa: E402
+from src.core.perk_catalog import TAB_REFERENCES  # noqa: E402
 
 NAME = 'AutoBloodWeb'
 BUILD = ROOT / 'build'
@@ -53,6 +54,10 @@ RUNTIME_REFERENCES = (
     'references/bloodweb/bloodweb_prestige_node.png',
     'references/bloodweb/bloodweb_prestige_reward_ok.png',
     'references/bloodweb/prestige_node_example.png',
+    'references/bloodweb/patch_10_3_0/center_cheryl_level34.png',
+    'references/bloodweb/patch_10_3_0/manifest.json',
+    'references/bloodweb/patch_10_3_0/prestige_manifest.json',
+    'references/bloodweb/patch_10_3_0/prestige_ready_terrifier50.png',
     'references/bloodweb/ui90/center_level11.png',
     'references/bloodweb/ui90/manifest.json',
     'references/bloodweb/v54_dark_lord/tutorial_unpredictability.png',
@@ -93,6 +98,11 @@ def runtime_references():
         raise SystemExit(f'Runtime references missing from git: {sorted(missing)}')
     for folder in REFERENCE_DIRS:
         need |= {p for p in files if p.startswith(folder + '/')}
+    for rel, expected_sha in TAB_REFERENCES.values():
+        source = ROOT / rel
+        if not source.is_file() or hashlib.sha256(source.read_bytes()).hexdigest() != expected_sha:
+            raise SystemExit(f'Missing or invalid perk Tab reference: {rel}')
+        need.add(rel)
     return sorted(need)
 
 

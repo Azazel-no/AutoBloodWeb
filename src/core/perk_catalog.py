@@ -10,6 +10,15 @@ from pathlib import Path
 
 CATALOG='assets/perk_catalog.json'
 
+# Reviewed Tab tile captured in DBD 10.3.0, 2026-11-26. The glyph differs
+# from the rendered Wiki reference at this size. Keep the original crop.
+TAB_REFERENCES = {
+    'perk_survivor_valkyrie_s_rage': (
+        'references/perks/valkyries_rage_tab.png',
+        '299a4749af38b484f1731beec51947c0f31865832487ba1a889c17096af983a5',
+    ),
+}
+
 
 @dataclass(frozen=True)
 class PerkRecord:

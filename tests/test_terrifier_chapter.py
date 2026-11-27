@@ -1,4 +1,4 @@
-"""Terrifier chapter (PTB data): library, catalogs and recognition from the wiki icons."""
+"""Terrifier chapter catalogs and recognition of the live Tab tile."""
 from pathlib import Path
 
 import cv2
@@ -28,6 +28,16 @@ def test_new_perks_are_recognised_from_their_wiki_icons(role):
         # acceptance score here, so the check is that the perk is the best candidate.
         result=matcher.identify(on_black(ROOT/perk.icon))
         assert perk.name in (result.names or result.candidates[0][:1])
+
+
+def test_live_valkyries_rage_tile_is_accepted_at_the_normal_threshold():
+    # Independent Tier II capture, separate from the Tier III reference.
+    tile = cv2.imread(str(ROOT / 'tests/fixtures/perk_tiles/terrifier/valkyries_rage_tab_holdout.png'))
+    matcher = PerkMatcher(ROOT)
+    result = matcher.identify(tile[2:-2, 2:-2])  # First crop tried by read_tab.
+    assert result.names == ("Valkyrie's Rage",)
+    assert result.reason == 'accepted'
+    assert result.score >= matcher.matcher.threshold
 
 
 def test_library_has_all_twenty_add_ons_with_descriptions(library):

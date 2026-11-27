@@ -57,7 +57,7 @@ def test_watcher_launches_once_when_the_game_appears_and_only_if_no_app_runs(roo
 
 def test_tray_app_is_launched_without_purchases_or_console(root):
     calls = []
-    autostart.launch_tray_app(root, popen=lambda args, **kw: calls.append((args, kw)))
+    autostart.launch_tray_app(root, popen=lambda args, **kw: calls.append((args, kw)), admin=True)
     args, kw = calls[0]
     assert args[1:] == ['-m', 'src.app', '--tray'] and 'pythonw' in args[0].lower() and kw['cwd'] == str(root)
 
@@ -122,5 +122,5 @@ def test_packaged_exe_runs_its_own_watcher_and_tray(monkeypatch, tmp_path):
     monkeypatch.setattr(sys, 'executable', exe)
     assert task_command(tmp_path) == f'"{exe}" --watcher'
     calls = []
-    autostart.launch_tray_app(tmp_path, popen=lambda args, **kw: calls.append((args, kw)))
+    autostart.launch_tray_app(tmp_path, popen=lambda args, **kw: calls.append((args, kw)), admin=True)
     assert calls[0][0] == [exe, '--tray'] and calls[0][1]['cwd'] == str(tmp_path)

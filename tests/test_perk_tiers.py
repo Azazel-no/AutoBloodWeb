@@ -12,7 +12,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 import pytest
-from src.core.perk_catalog import load_catalog
+from src.core.perk_catalog import TAB_REFERENCES, load_catalog
 from src.core.perk_matcher import PerkMatcher, render_tab_tile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -87,7 +87,11 @@ def test_killer_perks_never_accepted_as_another_perk_on_the_hud(matchers, backgr
 
 
 def test_rendered_references_cost_no_warped_copies(matchers):
-    """The renders are added without the rotation/scale copies: the template count stays bounded."""
+    """Each extra live tile adds at most the five translations, like a rendered tile."""
     library = matchers['survivor'].library
     assert len(library.rendered_features) == len(library.entries)
-    assert matchers['survivor'].matcher.templates.shape[0] <= 30 * len(library.entries)
+    matcher = matchers['survivor'].matcher
+    offsets = [*matcher.template_offsets, len(matcher.templates)]
+    for (entry, _), first, end in zip(matcher.features, offsets, offsets[1:]):
+        live_tiles = sum(perk.id in TAB_REFERENCES for perk in library.perks_by_icon[entry.id])
+        assert end - first <= 30 + 5 * live_tiles

@@ -192,19 +192,20 @@ def test_new_settings_texts_exist_in_every_language(language):
         assert t(key) != key, key
 
 
-def test_startup_notice_opens_lists_every_section_and_is_one_time(make_window):
+def test_startup_notice_opens_lists_every_section_and_is_one_time(make_window, monkeypatch):
     """Before 15.11 the dialog raised NameError (QCheckBox not imported): it never opened."""
-    from PySide6.QtCore import QTimer
-    from PySide6.QtWidgets import QApplication, QDialog, QLabel
+    from PySide6.QtWidgets import QDialog, QLabel
     from src.core.notice_strings import NOTICE_SECTIONS
     w = make_window()
     assert w.notice_due()
     seen = []
-    def answer():
-        dialog = next(d for d in QApplication.topLevelWidgets() if isinstance(d, QDialog) and d.isVisible())
+    def answer(dialog):
+        assert dialog.parent() is w
         seen.extend(label.text() for label in dialog.findChildren(QLabel))
         dialog.findChildren(type(w.buttons['start']))[0].click()
-    QTimer.singleShot(200, answer)
+        return dialog.result()
+
+    monkeypatch.setattr(QDialog, 'exec', answer)
     w.show_notices()
     assert len(seen) == 2 * len(NOTICE_SECTIONS) and all(seen)
     assert not w.notice_due()
