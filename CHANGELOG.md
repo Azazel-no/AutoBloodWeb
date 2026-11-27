@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.1.1 — 2026-11-27
+
+Dead by Daylight patch 10.3.0 (The Terrifier chapter).
+
+- **Bloodweb on patch 10.3.0.** The new, smaller web is read again for killers and survivors: the centre (also with a red ring), the "BLOODWEB LEVEL" header and its digits, the outer ring of nodes, bought nodes inside their glowing red ring, and the screen between two levels. The item tooltip check no longer mistakes the new blue mall background for a tooltip.
+- **Prestige on patch 10.3.0.** The new level-50 prestige emblem is recognised, and a centre press saved at level 50 no longer blocks the prestige.
+- **Chase meme reacts only to your own portrait.** Your HUD row is found from your portrait on the Tab scoreboard or from your nickname (Memes → Chase), and a chase starts only when your own row clearly leads; a teammate's chase, the Obsession's brackets and status effects on portraits no longer start it. New hotkeys: **Ctrl+J** "this is not a chase" stops the meme at once, **Ctrl+K** "this was a chase" marks a missed one; both save the frame for tuning.
+- **Teammate perks of the new chapter.** Shared Trauma, Best Gift Ever and Valkyrie's Rage are recognised on the Tab scoreboard (Valkyrie's Rage from a real in-game tile).
+- **Run reports.** Every Start writes a short report to `debug\run_reports\`: levels and time per level, prestiges, purchases, pauses with their reason, errors and recoveries. Unrecognised Bloodweb icons are logged and saved to `debug\unknown_nodes\` instead of being guessed.
+
+Known limitations:
+
+- Some new Art the Clown add-on icons may not be recognised yet. They are bought by the normal fallback when nothing from your list is left; the run does not pause.
+- The first levels after a prestige can be slower than usual (up to about 40 s per level) while each purchase is confirmed.
+
 ## 1.1.0 — 2026-11-16
 
 - **Teammate perks: a new match without the lobby.** When the app missed the lobby (for example while another window was in front), the previous match's perks stayed locked into the next one. A new match is now recognised by the teammates' nicknames on the HUD (portraits when a nickname cannot be read): two of three changed on two checks in a row clear the old perks. A Tab press while the perks are locked compares the scoreboard's nicknames, the end-game scoreboard clears the perks at once, and after a long HUD gap nothing is drawn until the nicknames say it is the same match. Two players on the same character are told apart by nickname.

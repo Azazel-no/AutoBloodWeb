@@ -16,8 +16,9 @@ AutoBloodWeb levels the Dead by Daylight Bloodweb for you. You pick the items, a
 - **Crosshair** overlay (off by default).
 - **1v1 timer** (off by default): a scoreboard at the top centre that times each survivor's chase and keeps the score of the pair.
 - **Map overlay** (off by default): the current map's callouts in the top-left corner during a match, read from the loading screen. Map callouts by Hens333.
-- **Memes** (off by default): a chase meme for your survivor (timer, music, voice lines, dance), played from your own media in a meme pack folder. No meme media ships with the app.
+- **Memes** (off by default): a chase meme for your survivor (timer, music, voice lines, dance), played from your own media in a meme pack folder. It reacts only to your own HUD portrait, not to a teammate's chase. No meme media ships with the app.
 - **Start with DBD**: an optional logon task that opens the app in the tray when the game starts.
+- **Run reports**: every Start writes a short report (levels, time per level, purchases, pauses and their reason) to `debug\run_reports\`.
 - Five interface languages: English, Russian, Spanish, German, French.
 - Works only with screen pixels and normal mouse clicks. It never reads or changes game memory or files and does not touch the anti-cheat. Nothing is sent over the network; the only download is the map overlay's images, once, when you turn that feature on.
 
@@ -42,17 +43,18 @@ AutoBloodWeb levels the Dead by Daylight Bloodweb for you. You pick the items, a
 - Dead by Daylight in **borderless** or **windowed fullscreen** mode.
 - In-game **UI scale and HUD scale at 100% or 90%**. Other sizes may not be recognised.
 - Tested at 1920×1080. Other resolutions are scaled and may be less accurate.
+- Made for Dead by Daylight **patch 10.3.0** (The Terrifier chapter). The Bloodweb layout of earlier patches is still recognised.
 
 ## Install
 
 Download from the [Releases](../../releases) page. Check the file against `SHA256SUMS.txt` if you like:
 
 ```powershell
-Get-FileHash .\AutoBloodWeb-1.0.1-setup.exe -Algorithm SHA256
+Get-FileHash .\AutoBloodWeb-1.1.1-setup.exe -Algorithm SHA256
 ```
 
-- **Installer:** run `AutoBloodWeb-1.0.1-setup.exe`. It installs to `Program Files\AutoBloodWeb` and adds a Start menu shortcut.
-- **Portable:** unzip `AutoBloodWeb-1.0.1-portable.zip` anywhere and run `AutoBloodWeb.exe` from the `AutoBloodWeb` folder. Keep the folder together: the exe needs the `assets`, `data`, `references` and `_internal` folders next to it.
+- **Installer:** run `AutoBloodWeb-1.1.1-setup.exe`. It installs to `Program Files\AutoBloodWeb` and adds a Start menu shortcut.
+- **Portable:** unzip `AutoBloodWeb-1.1.1-portable.zip` anywhere and run `AutoBloodWeb.exe` from the `AutoBloodWeb` folder. Keep the folder together: the exe needs the `assets`, `data`, `references` and `_internal` folders next to it.
 
 The builds are not code-signed yet, so Windows SmartScreen may say "Windows protected your PC". Click **More info → Run anyway**, or build from source.
 
@@ -68,7 +70,7 @@ Windows will ask for administrator permission each time the app starts (UAC prom
 4. Press **Start** (or **F8**) and switch to the game within 3 seconds. Don't move the mouse while it works.
 5. Press **F9** at any time to stop. The app also stops on its own when the game loses focus, a dialog it doesn't know appears, or it runs out of Bloodpoints.
 
-Settings, priorities and logs are stored next to the app: `data\preferences.json` and the `debug\` folder.
+Settings, priorities and logs are stored next to the app: `data\preferences.json` and the `debug\` folder. Each run's report is in `debug\run_reports\`.
 
 ## Hotkeys
 
@@ -82,6 +84,8 @@ Settings, priorities and logs are stored next to the app: `data\preferences.json
 | **F5 / F2 / F3 / F4 / F11** | 1v1 timer: stop manually / restart round / undo last round / swap sides / reset match |
 | **F1** | Map overlay: show or hide |
 | **Ctrl+M** | Memes: mute or unmute (works in any window) |
+| **Ctrl+J** | Chase meme: "this is not a chase" (stops it now and saves the frame for tuning) |
+| **Ctrl+K** | Chase meme: "this was a chase" (marks a chase it missed) |
 
 All of these keys can be changed in **Settings → Hotkeys…**. The overlay keys work only while DBD is the foreground window.
 

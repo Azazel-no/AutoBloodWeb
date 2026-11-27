@@ -2,7 +2,7 @@
 ; AppVersion, SourceDir (the PyInstaller one-folder app) and OutputDir.
 
 #ifndef AppVersion
-  #define AppVersion "1.0.1"
+  #define AppVersion "1.1.1"
 #endif
 #ifndef SourceDir
   #define SourceDir "..\build\dist\AutoBloodWeb"
